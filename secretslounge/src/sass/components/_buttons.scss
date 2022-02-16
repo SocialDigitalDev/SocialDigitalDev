@@ -1,0 +1,176 @@
+@import "../utils/variables";
+@import "../base/typography";
+button {
+  border: 0;
+}
+.btn {
+  width: 230px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+}
+
+.btn__primary {
+  background-color: #e7b2a5;
+  transition: background-color 0.3s;
+  border: none;
+  font: normal normal 300 12px/19px "Nexa";
+  letter-spacing: 1.2px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $color-brown-dark;
+    transition: background-color 0.3s;
+  }
+}
+.btn__rounded {
+  cursor: pointer;
+  border-radius: 16px;
+  height: 32px;
+  color: $color-brown-dark;
+  border: 1px solid;
+  border-radius: 16px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+}
+.btn__outline {
+  background-color: transparent;
+  transition: background-color 0.3s;
+  border: 2px solid $color-brown-dark;
+  color: $color-brown-dark;
+  text-transform: uppercase;
+  font-family: $font-family-nexa;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+
+  &:hover {
+    background-color: $color-brown-dark;
+    color: $color-white;
+    transition: background-color 0.3s;
+  }
+}
+
+.btn-color {
+  appearance: none;
+  border: none;
+  max-width: 24px;
+  max-height: 24px;
+  padding: 10px;
+  border-radius: 20px;
+  transition: all 0.4s;
+  overflow: hidden;
+  font-size: 0;
+  box-shadow: inset 0 0 0 1px rgba(205, 205, 200, 0.5);
+
+  &.Preto {
+    background: #000000;
+  }
+
+  &.Chocolate {
+    background: #8b4513;
+  }
+
+  &.MARINHO {
+    background: #191970;
+  }
+
+  &.DOURADO {
+    background: #f0e68c;
+  }
+
+  &.BEGE {
+    background: #d2b48c;
+  }
+
+  &.BRANCO {
+    background: #ffffff;
+  }
+
+  &.ROSE {
+    background: #bc8f8f;
+  }
+
+  &.PRETO.ESTAMPA.ESTRELA {
+    background: url("~@assets/colors/color-star.png") no-repeat center center;
+    background-size: 24px 24px;
+  }
+
+  &.TYE.DYE {
+    background: url("~@assets/colors/tye-dye.png") no-repeat center center;
+    background-size: 24px 24px;
+  }
+
+  &.COLORIDO {
+    background: linear-gradient(
+      to right,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    );
+  }
+
+  &.CASTANHO {
+    background: #8b4513;
+  }
+
+  &.MARROM {
+    background: #8b4513;
+  }
+
+  &.MESCLA {
+    background: #c0c0c0;
+  }
+
+  &.OFF.WHITE {
+    background: #fff5ee;
+  }
+
+  &.MILITAR {
+    background: #555b2f;
+  }
+
+  &.CARBONO {
+    background: #708090;
+  }
+
+  &.ANIMAL.PRINT {
+    background: url("~@assets/colors/color-animal.png") no-repeat center center;
+    background-size: 24px 24px;
+  }
+
+  &.VERDE {
+    background: #555b2f;
+  }
+
+  &.NUDE {
+    background: #deb887;
+  }
+
+  &.POA {
+    background: url("~@assets/colors/color-poa.png") no-repeat;
+    background-size: 24px 24px;
+  }
+  &.CAQUI {
+    background: #d2b48c;
+  }
+
+  &.CRU {
+    background: #ffebcd;
+  }
+
+  @media (min-width: 768px) {
+    &:hover {
+      transition: all 0.4s;
+    }
+  }
+}

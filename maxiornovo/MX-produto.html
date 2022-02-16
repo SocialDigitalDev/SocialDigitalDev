@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+
+    <title> <vtex.cmc:productPageTitle /> </title>
+    <vtex:metaTags/>
+    <vtex:template id="MX-styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <vtex.cmc:productRichSnippets showFacebook="1" />
+
+</head>
+
+<body>
+
+    <vtex.cmc:productRichSnippets showGoogle="1" />
+
+    <!-- Chamada do cabeçalho da JB -->
+
+    <vtex:template id="MX-header" />
+
+    <main>
+
+        <!-- Estrutura Breadcrumb -->
+
+        <section>
+
+            <div class="container bread">
+                <div class="container-center">
+
+                    <vtex.cmc:BreadCrumb />
+
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="container produto-all">
+                <div class="container-center">
+
+                    <!-- Estrutura para imagem do produto -->
+
+                    <div id="produtoDiv-esquerda">
+
+                        <figure>
+
+                            <div class="img-produto">
+                                <vtex.cmc:ProductImage zoom="on" />
+                            </div>
+
+                        </figure>
+
+                    </div>
+
+                    <!-- Estrutura para as principais informações do produto -->
+
+                    <div id="produtoDiv-direita">
+
+                        <h1 class="nome-prod">
+                            <vtex.cmc:productName/>
+                        </h1>
+                        
+                        <span class="cod-prod">
+                            <vtex.cmc:skuReference/>	
+                        </span>
+
+                        <div class="variantes-sku">
+                            <vtex.cmc:skuSelection />
+                            <p class="guia-medidas">Guia de Medidas</p>
+                        </div>
+                        
+                        <div class="preco">
+                            <vtex.cmc:skuPrice/>
+                            <vtex.cmc:OtherPaymentMethod/>
+                        </div>
+                        <div class="produto-buy__container">
+                            <div class="MX-produto__buy-quant">
+                                <div class="qtdPrateleira">
+                                    <span class="btnDec"></span>
+                                    <input type="text" class="qtdVal" value="1" />
+                                    <span class="btnAcr"></span>
+                                </div>
+                            </div>
+                            <div class="MX-produto__buy-button">
+                                <vtex.cmc:BuyButton/>
+                                <div class="duvidas-contato">
+                                    <p class="text-duvidas">Dúvidas sobre a joia, tamanho ou encomendas?<br/>Fale com uma consultora digital</p>
+                                    <a href="https://api.whatsapp.com/send?phone=551132303514" class="icone-whatsapp">
+                                        <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px" viewBox="0 0 100 125"><g transform="translate(0,-952.36218)"><path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#000000;enable-background:accumulate;" d="m 34.31,976.374 a 1.0001,1.0001 0 0 0 -0.125,0.031 c -4.270301,1.3116 -7.15301,3.5735 -8.71875,6.4688 -1.56575,2.8953 -1.79435,6.3442 -1.09375,9.9375 1.401219,7.1867 6.50292,15.1363 12.96875,21.75 6.465829,6.6137 14.302989,11.8761 21.53125,13.375 3.614131,0.7495 7.09579,0.5385 10.09375,-1.0312 2.99797,-1.5698 5.425521,-4.485 6.96875,-8.8438 a 1.0001,1.0001 0 0 0 -0.40625,-1.1562 l -14.3125,-8.9688 a 1.0001,1.0001 0 0 0 -0.0937,-0.062 l -0.0625,-0.062 a 1.0001,1.0001 0 0 0 -0.0312,0 1.0001,1.0001 0 0 0 -0.0625,-0.031 1.0001,1.0001 0 0 0 -0.0312,0 1.0001,1.0001 0 0 0 -0.15625,-0.094 1.0001,1.0001 0 0 0 -0.0312,0 1.0001,1.0001 0 0 0 -0.0625,0 1.0001,1.0001 0 0 0 -0.0312,0 1.0001,1.0001 0 0 0 -0.1875,-0.031 1.0001,1.0001 0 0 0 -0.1875,0.031 1.0001,1.0001 0 0 0 -0.46875,0.2188 1.0001,1.0001 0 0 0 -0.0312,0.062 1.0001,1.0001 0 0 0 -0.15625,0.1875 l -3.687501,3.6562 c -6.40329,-3.014 -11.15368,-8.2967 -15.375,-15.4375 l 3.40625,-3.4063 0.15625,-0.1562 a 1.0001,1.0001 0 0 0 0.0625,-0.062 1.0001,1.0001 0 0 0 0.0312,0 1.0001,1.0001 0 0 0 0.0312,-0.062 1.0001,1.0001 0 0 0 0.0312,-0.031 1.0001,1.0001 0 0 0 0.0312,-0.062 1.0001,1.0001 0 0 0 0,-0.031 1.0001,1.0001 0 0 0 0.0312,-0.031 1.0001,1.0001 0 0 0 0.0312,-0.062 1.0001,1.0001 0 0 0 0.0312,-0.031 1.0001,1.0001 0 0 0 0,-0.062 1.0001,1.0001 0 0 0 0,-0.062 1.0001,1.0001 0 0 0 0.0312,-0.031 1.0001,1.0001 0 0 0 0,-0.062 1.0001,1.0001 0 0 0 0,-0.031 1.0001,1.0001 0 0 0 0,-0.062 1.0001,1.0001 0 0 0 0,-0.031 1.0001,1.0001 0 0 0 0,-0.062 1.0001,1.0001 0 0 0 0,-0.031 1.0001,1.0001 0 0 0 0,-0.062 1.0001,1.0001 0 0 0 0,-0.031 1.0001,1.0001 0 0 0 -0.0312,-0.062 1.0001,1.0001 0 0 0 0,-0.031 1.0001,1.0001 0 0 0 -0.0312,-0.062 1.0001,1.0001 0 0 0 0,-0.031 1.0001,1.0001 0 0 0 -0.0625,-0.062 1.0001,1.0001 0 0 0 0,-0.031 1.0001,1.0001 0 0 0 -0.0312,-0.031 1.0001,1.0001 0 0 0 -0.125,-0.1875 1.0001,1.0001 0 0 0 -0.0312,-0.031 l -8.78125,-14.5313 a 1.0001,1.0001 0 0 0 -0.8125,-0.4687 1.0001,1.0001 0 0 0 -0.21875,0 z m -0.25,2.1875 8.09375,13.4063 -3.5625,3.5312 a 1.0001,1.0001 0 0 0 -0.15625,1.2188 c 4.56792,7.9103 9.89019,13.9476 17.3125,17.2188 a 1.0001,1.0001 0 0 0 1.09375,-0.2188 l 3.78125,-3.7812 13.15625,8.2187 c -1.40761,3.5643 -3.38066,5.7758 -5.71875,7 -2.497579,1.3078 -5.48819,1.5266 -8.78125,0.8438 -6.586121,-1.3658 -14.26458,-6.4338 -20.53125,-12.8438 -6.266671,-6.41 -11.12809,-14.1632 -12.40625,-20.7188 -0.639081,-3.2777 -0.38371,-6.2084 0.90625,-8.5937 1.20661,-2.2312 3.34779,-4.0733 6.8125,-5.2813 z" fill="#000000" fill-opacity="1" fill-rule="evenodd" stroke="none" marker="none" visibility="visible" display="inline" overflow="visible"></path><path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#000000;enable-background:accumulate;" d="m 50,959.36217 c -23.73046,0 -43.0000005,19.25953 -43.0000005,43.00003 0,8.7872 2.648,16.9765 7.3168795,23.9844 l -5.0546895,16.8687 a 1.0001,1.0001 0 0 0 1.2840595,1.2322 l 16.52375,-5.7025 c 6.62275,4.1896 14.50034,6.6172 22.930001,6.6172 23.74023,0 43,-19.2598 43,-43 0,-23.7403 -19.25977,-43.00003 -43,-43.00003 z m 0,2 c 22.659771,0 41,18.34023 41,41.00003 0,22.6598 -18.340229,41 -41,41 -8.214201,0 -15.862871,-2.4108 -22.25562,-6.5588 a 1.0001,1.0001 0 0 0 -0.87063,-0.1062 l -15.13594,5.2237 4.63,-15.4515 a 1.0001,1.0001 0 0 0 -0.13156,-0.8503 c -4.62431,-6.785 -7.2362505,-14.7111 -7.2362505,-23.2569 0,-22.6595 18.3504605,-41.00003 41.0000005,-41.00003 z" fill="#000000" fill-opacity="1" fill-rule="evenodd" stroke="none" marker="none" visibility="visible" display="inline" overflow="visible"></path></g></svg>
+                                    </a>
+                                    <a href="mailto:contato@joiasbrasil.com.br" class="icone-email">
+                                        <svg xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Camada_1" x="0px" y="0px" viewBox="0 0 100 77" style="enable-background:new 0 0 100 77;" xml:space="preserve">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill: none;
+                                                    stroke: #000000;
+                                                    stroke-miterlimit: 10;
+                                                }
+                                            </style>
+                                            <g transform="translate(0,-952.36218)">
+                                                <path class="st0" d="M16,965.4c-0.8,0-1.5,0.2-2.2,0.4l33.9,29.7c1.5,1.3,3,1.3,4.5,0l34-29.7c-0.7-0.3-1.4-0.4-2.2-0.4H16z    M10.1,970.5c0,0.3-0.1,0.6-0.1,0.8v40c0,3.3,2.7,6,6,6h68c3.3,0,6-2.7,6-6v-40c0-0.3,0-0.6-0.1-0.8L56.2,1000   c-3.5,3.1-8.9,3.1-12.4,0L10.1,970.5z">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="shareWhats"></div>
+                                <div class="addWishList">
+                                    <vtex.cmc:GiftListInsertSkuV2 popup="true" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-frete">
+                            <div class="cep">
+                                <h3><span class="icon__frete"></span> Calcule o frete e prazo de entrega.</h3>
+                                <vtex.cmc:shippingValue/>
+                                <script type="text/javascript">
+                                    $(document).ready( function(){
+                                        ShippingValue();
+                                    });
+                                </script>
+                           </div>
+                        </div>
+                        <div class="institutional-texts">
+                            <div class="text-institutional">
+                                <h4 class="title garantia">Garantia</h4>
+                                <div class="conteudo-institucional">
+                                    <p>A Garantia Legal, prevista no Código de Defesa do Consumidor, é de 90 (noventa) dias contados a partir da data da compra da joia, e cobre eventuais defeitos de fabricação e vícios do produto adquirido, mediante apresentação deste Certificado. Na impossibilidade de reparar a joia, o cliente poderá escolher dentre as opções previstas no parágrafo primeiro do artigo 18 da Lei nº- 8.078/1990, ou, ainda, a utilização do crédito como parte do pagamento de outra joia de valor igual (considerando o valor efetivo na data da compra) ou como fonte de pagamento de outra joia de valor superior. A Garantia América Joias Brasil é válida por 01 (um) ano, contado a partir da data de compra da joia, e cobre eventuais defeitos técnicos de fabricação e vícios do produto adquirido, mediante apresentação deste Certificado, nas seguintes condições:</p>
+                                    <a href="/suporte">Ver Condições</a>
+                                </div>
+                            </div>
+                            <div class="text-institutional">
+                                <h4 class="title ">Entregas e Fretes</h4>
+                                <div class="conteudo-institucional">
+                                    <p>Pensando na sua comodidade, a América Joias Brasil disponibiliza 03 modalidades de entrega para os produtos adquiridos na loja online:<br/>
+                                        1) Entrega Normal via Correios para todo o Brasil;<br/>
+                                        2) Entrega Expressa no mesmo dia útil para cidade de SP e Grande SP; e<br/>
+                                        3) Entrega Expressa no dia útil seguinte para os estados de SP, RJ, MG e ES.</p>
+                                    <a href="/suporte">Ver mais detalhes</a>
+                                </div>
+                            </div>
+                            <div class="text-institutional">
+                                <h4 class="title">Aviso Legal</h4>
+                                <div class="conteudo-institucional">
+                                    <p>Ao acessar o site da América Joias Brasil no endereço www.joiasbrasil.com.br, você, usuário ou cliente, está de acordo com os termos e condições de uso do site. Note que a recusa ou não concordância destes Termos e Condições de Uso impede que você acesse e se cadastre em nosso site.</p>
+                                    <a href="/suporte">Ver mais detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Estrutura da descrição -->
+                    <section>
+                        <div class="container descricao-especificacao">
+                            <div class="container-center">
+                                <h2 class="titulo">Descrição</h2>
+                                <vtex.cmc:ProductDescription/>
+                                <vtex.cmc:productSpecification/>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Estrutura de compre junto -->
+                    <section>
+                        <div class="container slideCompreJunto">
+                            <div class="container-center">
+                                <div class="titulo-prateleira">
+                                    <h2 class="titulo"><b>Compre Junto</b>
+                                        <span class="box-heading-pneu"></span>
+                                    </h2>
+                                </div>  
+                                <vtex.cmc:BuyTogether/>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Estrutura de Quem viu, viu tbm -->
+                    <section>
+                        <div class="container slide-prod qvvt">
+                            <div class="container-center">
+                                <div class="titulo-prateleira">
+                                    <h2><b>Veja Também</b>
+                                        <span class="box-heading-pneu"></span>
+                                    </h2>
+                                </div>
+                                <vtex:contentPlaceHolder id="MX-qvvt" />
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="hide wrap-modal jn-size">
+        <a class="hide-modal">×</a>
+        <div class="inner-modal">
+            <div class="size-title">Guia de tamanho</div>
+            <div class="size-header">
+                <p>As dicas a seguir lhe orientarão a descobrir o tamanho aproximado do aro para o seu anel.</p>
+                <p>É importante seguir corretamente as instruções abaixo,caso ainda assim fique na dúvida, visite uma das lojas físicas para verificar a medida com mais precisão.</p>
+                <p>1. Pegue uma tira de papel</p>
+                <p>2. Dê a volta no dedo em que deseja usar o anel e marque no fio da medida exata da circunferência do dedo, de uma maneira que fique confortável.</p>
+                <p>3. Meça o fio com uma régua e veja o comprimento marcado na tabela abaixo:</p>
+            </div>
+            <div class="row size-content">
+                <ul class="size-table">
+                    <li>5,0 cm = Aro 10</li>
+                    <li>5,1 cm = Aro 11</li>
+                    <li>5,2 cm = Aro 12</li>
+                    <li>5,3 cm = Aro 13</li>
+                    <li>5,4 cm = Aro 14</li>
+                    <li>5,5 cm = Aro 15</li>
+                    <li>5,6 cm = Aro 16</li>
+                    <li>5,7 cm = Aro 17</li>
+                    <li>5,8 cm = Aro 18</li>
+                    <li>5,9 cm = Aro 19</li>
+                </ul>
+                <ul class="size-table">
+                    <li>6,0 cm = Aro 20</li>
+                    <li>6,1 cm = Aro 21</li>
+                    <li>6,2 cm = Aro 22</li>
+                    <li>6,3 cm = Aro 23</li>
+                    <li>6,4 cm = Aro 24</li>
+                    <li>6,5 cm = Aro 25</li>
+                    <li>6,6 cm = Aro 26</li>
+                    <li>6,7 cm = Aro 27</li>
+                    <li>6,8 cm = Aro 28</li>
+                    <li>6,9 cm = Aro 29</li>
+                </ul>
+                <ul class="size-table">
+                    <li>7,0 cm = Aro 30</li>
+                    <li>7,1 cm = Aro 31</li>
+                    <li>7,2 cm = Aro 32</li>
+                    <li>7,3 cm = Aro 33</li>
+                    <li>7,4 cm = Aro 34</li>
+                    <li>7,5 cm = Aro 35</li>
+                    <li>7,6 cm = Aro 36</li>
+                    <li>7,7 cm = Aro 37</li>
+                    <li>7,8 cm = Aro 38</li>
+                    <li>7,9 cm = Aro 39</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="comprar-flutuante">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-xs-1 visible-lg visible-md">
+    				<vtex.cmc:ProductImage zoom="off" />
+    			</div>
+    			<div class="col-nome col-xs-3 hidden-xs">
+					<vtex.cmc:productName/>
+        			<div class="col-precos col-xs-4 col-lg-5 hidden-xs">
+        				<vtex.cmc:skuPrice/>
+        			</div>
+    			</div>
+    			<div class="col-comprar col-xs-12 col-sm-5 col-md-4 col-lg-3">
+					<div class="buy-button-box">
+						<vtex.cmc:BuyButton />
+					</div><!-- .buy-button-box -->
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <!-- Chamada para o rodapé -->
+    <vtex:template id="MX-footer" />
+    <!-- Chamada para os scripts Js da JB -->
+    <vtex:template id="MX-scripts" />
+</body>
+
+</html>

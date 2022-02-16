@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+    <title>
+    <vtex.cmc:productPageTitle />
+    </title>
+    <vtex:metaTags />
+    <vtex:template id="4fit-css" />
+    <vtex.cmc:productRichSnippets showFacebook="1" />
+</head>
+
+<body>
+    <vtex.cmc:productRichSnippets showGoogle="1" />
+    <!-- Chamada do cabeçalho da loja -->
+    <vtex:template id="4fit-header" />
+    <main>
+        <!-- Estrutura Breadcrumb -->
+        <section class="produto-page__topo page-title-overlap bg-dark pt-4">
+            <div class="container-center_topo">
+                <div class="container d-lg-flex justify-content-between py-2 py-lg-3">
+
+                    <div class="produto-titulo text-left">
+                        <h1 class="nome-prod">
+                            <vtex.cmc:productName />
+                        </h1>
+                    </div>
+
+                    <div class="bread text-right">
+                        <vtex.cmc:BreadCrumb />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container produto-all">
+                <div class="container-center">
+                    <div class="produto-all__top-info rounded-lg px-4 py-3 mb-5">
+                        <div class="produto-desconto__flag">
+                            <vtex.cmc:discountHightLight/>
+                        </div>
+                        <!-- <div class="side-text">FOR FIT BOX</div> -->
+                        <!-- Estrutura para imagem do produto -->
+                        <div id="produtoDiv-esquerda">
+                            <figure>
+                                <div class="img-produto">
+                                    <vtex.cmc:ProductImage zoom="on" />
+                                </div>
+                            </figure>
+                        </div>
+                        <!-- Estrutura para as principais informações do produto -->
+                        <div id="produtoDiv-direita">
+                            <div id="product-details-wrapper">
+                                <span class="cod-prod">
+                                    <vtex.cmc:skuReference />
+                                </span>
+                                <div class="container detalhes-prod">
+                                    <!-- Estrutura descricao produto -->
+                                    <div id="descricao-produto">
+                                        <!-- <div class="container-center"> -->
+                                        <h2 class="titulo"> Descrição </h2>
+                                        <vtex.cmc:ProductDescription />
+
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <!--<span class="curta-descricao">
+                                        <h2> Informações do produto </h2>
+                                        <vtex.cmc:productDescriptionShort />
+                                    </span>-->
+
+                                <div class="variantes-sku">
+                                    <vtex.cmc:skuSelection />
+                                </div>
+
+                                <vtex.cmc:skuPrice />
+                                <div class="produto-buy__container">
+                                    <div class="forfit-produto__buy-quant">
+                                        <div class="qtdPrateleira">
+                                            <span class="btnDec"></span>
+                                            <input type="text" class="qtdVal" value="1" />
+                                            <span class="btnAcr"></span>
+                                        </div>
+                                    </div>
+                                    <div class="forfit-produto__buy-button">
+                                        <vtex.cmc:BuyButton />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-assinatura">
+                                <div class="product-assinatura-box">
+                                    <h3><b>ForFitBox recomenda </b><br />o Plano de Assinatura</h3>
+                                    <p>Selecione abaixo o plano que você deseja receber mensalmente</p>
+                                </div>
+                                <label class="product-assinatura-box assinatura-001">
+                                    <input type="radio" name="assinatura-valores" id="assinatura-0" class="assinatura-0" value="assinatura-0" />
+                                    <div class="product-assinatura-box-opc" for="assinatura-0">
+                                        <h4>Sem plano</h4>
+                                        <p>Continuar comprando</p>
+                                    </div>
+                                </label>
+                                    <label class="product-assinatura-box assinatura-002">
+                                        <input type="radio" name="assinatura-valores" id="assinatura-10" class="assinatura-10" value="assinatura-10" />
+                                        <div class="product-assinatura-box-opc" for="assinatura-10"><h4>Plano Assinatura</h4>
+                                        <!-- <p>Para compras de 5 a 10 unidades</p> -->
+                                        <p><b>Periodicidade:</b> Mensal</p>
+                                    </div>
+                                </label>
+                                <!--<label class="product-assinatura-box assinatura-003">-->
+                                <!--        <input type="radio" name="assinatura-valores" id="assinatura-25" class="assinatura-25" value="assinatura-25">-->
+                                <!--        <div class="product-assinatura-box-opc" for="assinatura-25">-->
+                                <!--        <h4>Plano 25% OFF</h4>-->
+                                <!--        <p>Para compras de 11 a 30 unidades</p><p><b>Periodicidade:</b> A cada 1 mês</p>-->
+                                <!--    </div>-->
+                                <!--</label>-->
+                            </div>
+                            
+                            <!-- <div class="compra-segura">
+                                    Compra <b>Segura</b>
+                                </div> -->
+
+                            <!-- <div class="retirada__loja">
+                                    <span class="retira__icon"></span><span class="retira__texto">Retire na loja</span>
+                                    <span class="retira__free">GRÁTIS</span>
+                                </div> -->
+
+                            <div class="calc-frete">
+                                <div class="cep">
+                                    <!-- <h3><span class="icon__frete"></span> Calcule o frete e prazo de entrega.</h3> -->
+                                    <vtex.cmc:shippingValue />
+                                    <script type="text/javascript">
+                                        $(document).ready(function () {
+                                            ShippingValue();
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <article class="container produto-especificacao prod-dica">
+                <section class="forfit-produto__informacoes-container">
+                    <section class="forfit-produto__informacoes-topo">
+                        <section class="forfit-produto__informacoes-esquerda">
+                            <h4 class="forfit-produto__detalhes-title"><span class="bold">Saiba mais</span> sobre estre
+                                produto</h4>
+                        </section>
+
+                        <section class="forfit-produto__informacoes-direita">
+                            <p data-id="sugestao" class="forfit-produto__detalhes-texto info-active">Sugestão de uso</p>
+                            <p data-id="ingredientes" class="forfit-produto__detalhes-texto">Ingredientes</p>
+                            <p data-id="nutricional" class="forfit-produto__detalhes-texto">Informação nutricional</p>
+                            <p data-id="modo" class="forfit-produto__detalhes-texto">Modo de preparo</p>
+                        </section>
+                    </section>
+
+                    <section class="forfit-produto__toggle-container">
+                        <section data-id="sugestao" class="forfit-produto__toggle-sugestao"></section>
+                        <section data-id="ingredientes" class="forfit-produto__toggle-ingredientes"
+                            style="display:none"></section>
+                        <section data-id="nutricional" class="forfit-produto__toggle-nutricional" style="display:none">
+                        </section>
+                        <section data-id="modo" class="forfit-produto__toggle-modo" style="display:none"></section>
+                    </section>
+                </section>
+            </article>
+
+            <section class="prod-tabela">
+                <vtex.cmc:productSpecification />
+            </section>
+
+            <section>
+                <div class="container bannerChamada">
+                    <vtex:contentPlaceHolder id="ForFit-BannerProduto" />
+                </div>
+            </section>
+
+            <!-- Estrutura de Quem viu, viu tbm -->
+            <section>
+                <div class="container slide-prod qvvt">
+                    <div class="container-center">
+                        <div class="titulo-prateleira">
+                            <h2>Quem viu, <b>viu também</b></h2>
+                        </div>
+                        <vtex:contentPlaceHolder id="4fit-qvvt" />
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Chamada para o rodapé -->
+    <vtex:template id="4fit-footer" />
+    <!-- Chamada para os scripts Js da loja -->
+    <vtex:template id="4fit-js" />
+    <!--<script src="/arquivos/sweetalert2.all.min.js"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>-->
+</body>
+
+</html>

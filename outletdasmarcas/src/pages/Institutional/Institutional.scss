@@ -1,0 +1,178 @@
+.pg-institucional-main{
+    @include flexbox;
+    @include flex-flow(column);
+    margin-top: 3.7em;
+    margin-bottom: 3.7em;
+    .sidebar-institucional{
+        width: 20%;
+        float: left;
+        background-color: var(--color-black);
+        border-radius: 16px;
+        @include d(hd){
+            width: 30%;
+        }
+        @include d(celularLarge){
+            width: 100%;
+        }
+        .menu-lateral-institucional{
+            padding: 30px 10px;
+            h3{
+                text-align:center;
+                color: var(--color-white);
+                font-weight: 700;
+                margin-bottom: 20px;
+                @include d(celularLarge){
+                    margin-bottom: 0;
+                    cursor: pointer;
+                }
+            }
+            ul{
+                @include d(celularLarge){
+                    display: none;
+                }
+                li{    
+                    float: left;
+                    width: 100%;
+                    border-bottom: 1px solid var(--color-gray);
+                    a{
+                        color: var(--color-white);
+                        font-size: 14px;
+                        line-height: 40px;
+                        padding: 8px;
+                        width: 100%;
+                        float: left;
+                        transition: all .2s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+    .conteudo-institucional{
+        width: 70%;
+        float: left;
+        margin: 10px 0 50px 40px;
+        @include d(hd){
+            width: 60%;
+        }
+        @include d(celularLarge){
+            width: 100%;
+            margin: 2em 0;
+        }
+        h2{
+            font-size: 20px;
+            color: var(--color-black);
+            margin-bottom: 10px;
+        }
+        h3{
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--color-gray);
+            margin-bottom: 20px;
+            @include d(ipad){
+                margin-bottom: 0;
+            }
+        }
+        p{
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 10px;
+        }
+        #formFC{
+            width: 100%;
+            float:left;
+            margin-top: 30px;
+            .first{
+                width: 100%;
+                float: left;
+                margin-bottom: 10px;
+               .boxCampo{
+                    width: 40%;
+                    margin: 0 20px;
+                    margin-left: 0;
+                    margin-right: 40px;
+                    @include d(celularLarge){
+                        margin-right: 0;
+                        width: 90%;
+                    }
+               }
+            }
+            .boxCampo{
+                width: 100%;
+                float: left;
+                margin: 0 20px;
+                margin-left: 0;
+                position: relative;
+                @include d(celularLarge){
+                    margin-right: 0;
+                    width: 100%;
+                }
+                label{
+                    font-size: 13px;
+                    color: var(--color-gray);
+                    width:100%;
+                    float: left;
+                    margin-bottom: 10px;
+                }
+                input, select{
+                    padding: 10px;
+                    color: var(--color-black);
+                    font-size: 16px;
+                    font-weight: 500;
+                    border: 1px solid var(--color-gray);;
+                    border-radius: 16px;
+                    width: 100%;
+                    float: left;
+                }
+                textarea{
+                    padding: 10px;
+                    color: var(--color-black);
+                    font-size: 16px;
+                    font-weight: 500;
+                    border: 1px solid var(--color-gray);;
+                    border-radius: 16px;
+                    width: 80%;
+                    float: left;
+                }
+                #msgSucesso{
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: var(--color-green);
+                }
+                .box-form-msg{
+                    text-transform: inherit;
+                    float: right;
+                    text-align: right;
+                    color: var(--color-red);
+                    font-weight: 500;
+                    font-size: 12px;
+                    position: absolute;
+                    right: 12px;
+                    top: 34px;
+                    width: auto;
+                    display: block;
+                }
+            }
+            .enviarForm{
+                background-color: var(--color-black);
+                padding: 10px 30px;
+                color: var(--color-white);
+                width: 250px;
+                border-radius: 12px;
+                float: left;
+                text-align: center;
+                margin-top: 30px;
+                
+            }
+        }
+    }
+    .banner-bottom-institucional{
+        .box-banner{
+            a{
+                img{
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+html
+  body
+    | #set($id = $product.Id)
+    | #set($idSku = $product.productVariantId)
+    | #set($uri = $product.Uri)
+    | #set($escapedName = $product.HtmlEscapedName)
+    | #set($validade = $product.ProductField(381))
+    | #set($marcas =$product.BrandName)
+    .om-product
+      input.om-id(type='hidden' value='$id')
+      input.om-sku(type='hidden' value='$idSku')
+      .om-image
+        a.om-productImage(title='$escapedName' href='$uri')
+          | $product.GetImageTag(310,465)
+       
+        // Flag Topo
+        | #if ($product.HasBestPrice)
+        .flag-desconto
+          span.porcentagem $product.ListPriceMinusBestPriceInPercent
+        | #end
+        | #if($product.DiscountHightLight != '')
+        .flags-promo
+          | $product.DiscountHightLight
+        | #end
+        .om-hover-content
+          .om-variations
+          .om-buy
+            a.om-buy-button(title='$escapedName') Comprar
+      | 
+      | #if ($product.IsInStock)
+      .om-produto-dados
+        p(class='marca')  $marcas 
+        h2
+          a(title='$escapedName' href='$uri')
+            | $product.Name
+        .om-price
+          a(title='$escapedName' href='$uri')
+            | #if ($product.HasBestPrice)
+            span.oldPrice
+              | De $product.ListPrice
+            span.om-bestPrice
+              strong  $product.BestPrice 
+            | #else
+            span.om-bestPrice
+              strong $product.BestPrice 
+            | 
+            | #end
+            span.om-installment
+              | #if ($product.NumbersOfInstallment > 1)
+              | ou  ${product.NumbersOfInstallment}x $product.InstallmentValue
+              | #else
+              span
+              | #end
+              | #else
+              p.om-outOfStock
+                a(title='$escapedName' href='$uri')
+                  span.om-icon
+                  span.om-text
+                    | Produto Esgotado
+                    small Avise-me quando chegar
+              | 
+              | #end
+             

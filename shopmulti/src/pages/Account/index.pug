@@ -1,0 +1,23 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'Account';
+    - var $templateClass = 'ls-account';
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content
+    section
+        .container.accountPage
+            .container-center
+                vtex(.cmc:accountUserProfile)/
+                vtex(.cmc:accountAddress)/
+                .orders-account
+                    h1  Meus pedidos 
+                    p
+                        a(href='/account/orders') Ir para os meus pedidos
+block append scripts
+    script(type='text/javascript', src=`/arquivos/${$templateName}.js`)

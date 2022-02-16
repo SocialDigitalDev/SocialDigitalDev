@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+    <title> JASMINE Alimentos </title>
+    <vtex:metaTags/>
+    <vtex:template id="Jasmine - Styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <vtex:template id="Jasmine - Header"/>
+    <main>      
+        <section>
+            <div class="container slide-home_principal desktop">
+                <div class="slide-principal">
+                    <vtex:contentPlaceHolder id="Banner Principal - Desktop" />
+                </div>
+            </div>
+        
+            <div class="container slide-mobile mobile">
+                <vtex:contentPlaceHolder id="Banner Principal - Mobile" />
+            </div>
+        </section>
+
+        <!-- Categorias -->
+        <section class="main_categorias">
+            <div class="wrapper">
+                <div class="titulo-prateleira">
+                    <h2> Categorias </h2>
+                </div>
+                <div class="categorias-section jasmine-prateleira">
+                    <ul class="categorias_box">
+                        <vtex.cmc:jasminecategoriasHome/>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mais vendidos -->
+         <section class="main_vendidos">
+            <div class="wrapper banner-vitrine-mais-vendidos">
+                <div class="titulo-prateleira">
+                    <h2> Mais vendidos </h2>
+                </div>
+                <!--
+                <div class="prod-left">
+                    <div class="banner_mais-desktop desktop">
+                        <vtex:contentPlaceHolder id="Banner - Mais Vendidos"/>
+                    </div>
+                    <div class="banner_mais-vendidos_mobile mobile">
+                        <vtex:contentPlaceHolder id="Banner - Mais Vendidos - Mobile"/>
+                    </div>
+                </div>
+                -->
+                <!-- Com o banner add a class="prod-right jasmine-prateleira"-->
+                <div class="jasmine-prateleira">
+                    <vtex:contentPlaceHolder id="Prateleira - Mais Vendidos"/>
+                </div>
+            </div>
+        </section>
+
+        <!--Banner Meio pagina -->
+        <section class="main_banner"> 
+            <div class="banner-meio_home">
+                <div class="banner-estatico banner-meio desktop">
+                    <vtex:contentPlaceHolder id="Banner Meio - Desktop"/>
+                </div>
+                <div class="banner-estatico banner-meio-m mobile">
+                    <vtex:contentPlaceHolder id="Banner Meio - Mobile"/>
+                </div>
+            </div>
+        </section>
+        
+         <!-- Prateleira Novidades -->
+         <section class="main_novidades">
+            <div class="wrapper prateleira-novidades ">
+                <div class="titulo-prateleira">
+                    <h2>Novidades</h2>
+                </div>
+                <div class="jasmine-prateleira">
+                    <vtex:contentPlaceHolder id="Prateleira - Novidades" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Ofertas Imperdiveis -->
+        <section class="main_ofertas jasmine-prateleira">
+            <div class="wrapper">
+                <div class="titulo-prateleira">
+                    <h2> Ofertas imperdíveis </h2>
+                </div>
+                <div class="jasmine-prateleira">
+                    <vtex:contentPlaceHolder id="Banners - Ofertas Imperdiveis"/>   
+                </div>
+            </div>
+        </section>
+        
+        <!-- Para cozinhar -->
+        <section class="main_cozinhar">
+            <div class="wrapper prateleira-cozinhar">
+                <div class="titulo-prateleira">
+                    <h2> Para cozinhar </h2>
+                </div>
+                <div class="jasmine-prateleira">
+                    <vtex:contentPlaceHolder id="Prateleira - Para Cozinhar" />
+                </div>
+            </div>
+        </section>
+        
+        <!--Receitas para cada momento -->
+        <section class="main_receitas" style="display: none;">
+            <div class="wrapper mosaico-receitas">
+                <div class="titulo-prateleira">
+                    <h2> Receitas para cada momento </h2>
+                </div>
+                <vtex:contentPlaceHolder id="Receitas para cada momento" />
+            </div>
+        </section>
+
+    </main>
+    <vtex:template id="Jasmine - Footer" />  
+    <vtex:template id="Jasmine - Scripts" />
+</body>
+</html>

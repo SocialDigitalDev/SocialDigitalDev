@@ -1,0 +1,1072 @@
+// Flexbox display
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  // Inline flex display
+  @mixin inline-flex {
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  
+  // The 'flex' shorthand
+  // - applies to: flex items
+  // <positive-number>, initial, auto, or none
+  @mixin flex($fg: 1, $fs: 0, $fb: auto) {
+  
+    // Set a variable to be used by box-flex properties
+    $fg-boxflex: $fg;
+  
+    // Box-Flex only supports a flex-grow value so lets grab the
+    // first item in the list and just return that.
+    @if type-of($fg) == 'list' {
+      $fg-boxflex: nth($fg, 1);
+    }
+  
+     -webkit-box: $fg-boxflex;
+        -moz-box: $fg-boxflex;
+    -webkit-flex: $fg $fs $fb;
+        -ms-flex: $fg $fs $fb;
+            flex: $fg $fs $fb;
+  }
+  
+  // Flex Flow Direction
+  // - applies to: flex containers
+  // row (default) | row-reverse | column | column-reverse
+  @mixin flex-direction($direction: row) {
+    @if $direction == row-reverse {
+      -webkit-box-direction: reverse;
+      -webkit-box-orient: horizontal;
+         -moz-box-direction: reverse;
+         -moz-box-orient: horizontal;
+    } @else if $direction == column {
+      -webkit-box-direction: normal;
+       -webkit-box-orient: vertical;
+         -moz-box-direction: normal;
+          -moz-box-orient: vertical;
+    } @else if $direction == column-reverse {
+      -webkit-box-direction: reverse;
+        -webkit-box-orient: vertical;
+         -moz-box-direction: reverse;
+           -moz-box-orient: vertical;
+    } @else {
+       -webkit-box-direction: normal;
+      -webkit-box-orient: horizontal;
+          -moz-box-direction: normal;
+         -moz-box-orient: horizontal;
+    }
+    -webkit-flex-direction: $direction;
+        -ms-flex-direction: $direction;
+            flex-direction: $direction;
+  }
+  
+  // Flex Line Wrapping
+  // - applies to: flex containers
+  // nowrap | wrap | wrap-reverse
+  @mixin flex-wrap($value: nowrap) {
+    // No Webkit/FF Box fallback.
+    -webkit-flex-wrap: $value;
+    @if $value == nowrap {
+      -ms-flex-wrap: none;
+    } @else {
+      -ms-flex-wrap: $value;
+    }
+    flex-wrap: $value;
+  }
+  
+  // Flex Direction and Wrap
+  // - applies to: flex containers
+  // <flex-direction> || <flex-wrap>
+  @mixin flex-flow($values: (row nowrap)) {
+    // No Webkit/FF Box fallback.
+    -webkit-flex-flow: $values;
+        -ms-flex-flow: $values;
+            flex-flow: $values;
+  }
+  
+  // Display Order
+  // - applies to: flex items
+  // <integer>
+  @mixin order($int: 0) {
+    -webkit-box-ordinal-group: $int + 1;
+       -moz-box-ordinal-group: $int + 1;
+                -webkit-order: $int;
+               -ms-flex-order: $int;
+                        order: $int;
+  }
+  
+  // Flex grow factor
+  // - applies to: flex items
+  // <number>
+  @mixin flex-grow($int: 1) {
+     -webkit-box-flex: $int;
+        -moz-box-flex: $int;
+    -webkit-flex-grow: $int;
+             -ms-flex: $int;
+            flex-grow: $int;
+  }
+  
+  // Flex shrink
+  // - applies to: flex item shrink factor
+  // <number> 
+  @mixin flex-shrink($int: 0) {
+    -webkit-flex-shrink: $int;
+       -moz-flex-shrink: $int;
+               -ms-flex: $int;
+            flex-shrink: $int;
+  }
+  
+  // Flex basis
+  // - the initial main size of the flex item
+  // - applies to: flex itemsnitial main size of the flex item
+  // <width> 
+  @mixin flex-basis($value: auto) {
+    -webkit-flex-basis: $value;
+            flex-basis: $value;
+  }
+  
+  // Axis Alignment
+  // - applies to: flex containers
+  // flex-start | flex-end | center | space-between | space-around 
+  @mixin justify-content($value: flex-start) {
+    @if $value == flex-start {
+      -webkit-box-pack: start;
+         -moz-box-pack: start;
+         -ms-flex-pack: start;
+    } @else if $value == flex-end {
+      -webkit-box-pack: end;
+         -moz-box-pack: end;
+         -ms-flex-pack: end;
+    } @else if $value == space-between {
+      -webkit-box-pack: justify;
+         -moz-box-pack: justify;
+         -ms-flex-pack: justify;
+    } @else if $value == space-around {
+         -ms-flex-pack: distribute;
+    } @else {
+      -webkit-box-pack: $value;
+         -moz-box-pack: $value;
+         -ms-flex-pack: $value;
+    }
+    -webkit-justify-content: $value;
+            justify-content: $value;
+  }
+  
+  // Packing Flex Lines
+  // - applies to: multi-line flex containers
+  // flex-start | flex-end | center | space-between | space-around | stretch 
+  @mixin align-content($value: stretch) {
+    // No Webkit Box Fallback.
+    -webkit-align-content: $value;
+    @if $value == flex-start {
+      -ms-flex-line-pack: start;
+    } @else if $value == flex-end {
+      -ms-flex-line-pack: end;
+    } @else {
+      -ms-flex-line-pack: $value;
+    }
+    align-content: $value;
+  }
+  
+  // Cross-axis Alignment
+  // - applies to: flex containers
+  // flex-start | flex-end | center | baseline | stretch 
+  @mixin align-items($value: stretch) {
+    @if $value == flex-start {
+      -webkit-box-align: start;
+         -moz-box-align: start;
+         -ms-flex-align: start;
+    } @else if $value == flex-end {
+      -webkit-box-align: end;
+         -moz-box-align: end;
+         -ms-flex-align: end;
+    } @else {
+      -webkit-box-align: $value;
+         -moz-box-align: $value;
+         -ms-flex-align: $value;
+    }
+    -webkit-align-items: $value;
+            align-items: $value;
+  }
+  
+  // Cross-axis Alignment
+  // - applies to: flex items
+  // auto | flex-start | flex-end | center | baseline | stretch 
+  @mixin align-self($value: auto) {
+    // No Webkit Box Fallback.
+    -webkit-align-self: $value;
+    @if $value == flex-start {
+      -ms-flex-item-align: start;
+    } @else if $value == flex-end {
+      -ms-flex-item-align: end;
+    } @else {
+      -ms-flex-item-align: $value;
+    }
+    align-self: $value;
+}
+
+// Fontes
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'arrows';
+    src: url(./arrows.css);
+    src: url(./arrows.css#iefix) format('embedded-opentype'), url(./arrows.woff.css) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Cores
+
+$branco: #ffffff;
+$brancotransparente: rgba(255, 255, 255, 0.61);
+$gelo: #f7f7f7;
+$geloescuro: #d6d6d6;
+$preto: #000000;
+$cinza: #292929;
+$vermelho: #ff9f9f;
+$amarelo: #fffec3;
+$verde: #b1ffc5;
+$azul: #b2d1ff;
+$roxo: #e8baff;
+$bege: #e1b075;
+$pretorodape: #1b1b1b;
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.hide{
+    display: none;
+}
+a:-webkit-any-link:focus {
+    outline-offset: 0;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0;
+}
+.slick-arrow{
+    position: absolute;
+    z-index: 9;
+    font-size: 0;
+    top: 45%;
+    background: $brancotransparente;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.slick-prev {
+    left: 0;
+    &:before{
+        content: '\e907';
+        font-family: 'arrows';
+        color: $preto;
+        font-size: 30px;            
+    }
+}
+.slick-next {
+    right: 0;
+    &:before{
+        content: '\e908';
+        font-family: 'arrows';
+        color: $preto;
+        font-size: 30px;            
+    }
+}
+p{
+  margin:0;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 9999;
+    .header-wrapper{
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(space-between);
+        background: $preto;
+        padding: 10px 2em;
+        .logo{
+            a{
+                img{
+                    transition: all .3s ease;
+                    max-width: 250px;
+                }
+            }
+        }
+    }
+    .menu-desk-wrapper{
+        .menu-desk{
+            @include flexbox;
+            @include align-items(center);
+            .menu-item{
+                text-decoration: none;
+                margin: 0 15px;
+                color: $branco;
+                list-style: none;
+            }
+        }
+    }
+}
+main{
+    padding-top: 86px;
+    background: $gelo;
+    .banner-desktop{
+        position: relative;
+        .slick-list{
+            .slick-track{
+                @include flexbox;
+                a{
+                    img{
+                        max-width: 100%;
+                    }
+                }
+            }
+        } 
+    }
+    .introducao-carrossel-motos{
+        text-align: center;
+        .texto-introducao{
+          line-height: 30px;
+          h2{
+            text-transform: uppercase;
+            font-size: 35px;
+            color: $bege;
+          }
+        }
+        .carrossel-motos{
+            position: relative;
+            .slick-list{
+                .slick-track{
+                    @include flexbox;
+                    @include align-items(center);
+                    height: 700px;
+                    .slick-slide{
+                        list-style: none;
+                        text-decoration: none;
+                        img{
+                            max-width: 300px;
+                            transition: all ease .3s
+                        }
+                        h2{
+                          font-size: 25px;
+                          color: $preto;
+                        }
+                        .item-carrossel{
+                          background: $branco;
+                          margin: 10px;
+                          padding: 15px 0;
+                          border-radius: 20px;
+                          box-shadow: 0 0 10px $geloescuro;
+                          .specs-wrapper{
+                              width: 80%;
+                              text-align: left;
+                              margin: auto;
+                              .progress-bar {
+                                padding: 5px;
+                                background: $gelo;
+                                margin: 4px 0;
+                                color: $preto;
+                                position: relative;
+                                p{
+                                  z-index: 99;
+                                  position: relative;
+                                }
+                                .progress-fill {
+                                  position: absolute;
+                                  left: 0;
+                                  display: block;
+                                  top: 0;
+                                  width: 0;
+                                  height: 29px;
+                                  transition: .4s all ease;
+                                }
+                              }
+                              .autonomia{
+                                .progress-fill{
+                                  background: $vermelho;
+                                }
+                              }
+                              .velocidade{
+                                .progress-fill{
+                                  background: $amarelo;
+                                }
+                              }
+                              .motor{
+                                .progress-fill{
+                                  background: $verde;
+                                }
+                              }
+                              .bateria{
+                                .progress-fill{
+                                  background: $azul;
+                                }
+                              }
+                              .peso{
+                                .progress-fill{
+                                  background: $roxo;
+                                }
+                              }
+                          }
+                        }
+                    }
+                    .slick-current{
+                        img{
+                            max-width: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .slick-arrow{
+              background: transparent;
+            }
+        }
+    }
+    .video{
+      background: $preto;
+      @include flexbox;
+      @include flex-flow(column);
+      @include align-items(center);
+      padding: 2em 0;
+      margin-top: 2em;
+      .title-video-wrapper{
+        text-align: center;
+        h2{
+          color: $bege;
+          font-size: 35px;
+          text-transform: uppercase;
+        }
+        p{
+          color: $branco;
+          margin-bottom: 2em;
+        }
+      }
+    }
+    .agende-test-ride{
+      background: $bege;
+      text-align: center;
+      padding: 5em 0;
+      color: $branco;
+      h2{
+        font-size: 35px;
+        text-transform: uppercase;
+        margin-top: 0;
+      }
+      p{
+        margin-bottom: 3em;
+      }
+      a{
+        text-decoration: none;
+        color: $bege;
+        background: $branco;
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 5px;
+      }
+    }
+    .quem-somos {
+      max-width: 1170px;
+      margin: auto;
+      .imagem-texto-wrapper {
+        @include flexbox;
+        @include align-items(center);
+        background: $branco;
+        padding: 50px 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px $geloescuro;
+        position: relative;
+        bottom: 25px;
+        .imagem-wrapper{
+          img{
+            max-width: 500px;
+          }
+        }
+        .texto-wrapper{
+          h2{
+            font-size: 25px;
+            text-transform: uppercase;
+            color: $bege;
+          }
+        }
+      }
+    }
+    .contato {
+      background: $cinza;
+      text-align: center;
+      padding: 3em 0;
+      h2{
+        color: $bege;
+        font-size: 35px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      p{
+        color: $branco;
+      }
+      .formulario{
+        form{
+          @include flexbox;
+          @include flex-flow(column);
+          max-width: 600px;
+          margin: auto;
+          .seletor-contato-testride{
+            margin: 2em 0;
+            label{
+              color: $branco;
+            }
+            select#seletor{
+              padding: 5px;
+              background: $cinza;
+              color: $branco;
+              border-radius: 5px;
+              margin: 0 10px;
+            }
+          }
+          input{
+            background: $cinza;
+            border: 1px solid $branco;
+            height: 30px;
+            color: $branco;
+            padding: 5px 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            &::placeholder{
+              color: $brancotransparente;
+            }
+          }
+          .formulario-telefone{
+            @include flexbox;
+            input[name="DDD"]{
+              width: 20%;
+            }
+            input[name="phone"]{
+              width: 80%;
+            }
+          }
+          textarea{
+            background: $cinza;
+            border: 1px solid $branco;
+            height: 50px;
+            color: $branco;
+            padding: 5px 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            &::placeholder{
+              color: $brancotransparente;
+            }
+          }
+          input[type="submit"] {
+            background: #fff !important;
+            color: #000 !important;
+            width: 200px;
+            height: 40px !important;
+          }
+        }
+      }
+    }
+}
+footer.footer {
+  background: $pretorodape;
+  color: $branco;
+  padding: 2em 0;
+  .footer-wrapper {
+    @include flexbox;
+    @include justify-content(space-around);
+    @include align-items(center);
+    .wrap {
+      max-width: 345px;
+      .footer-links{
+        color: #fff;
+        margin-top: 10px;
+        display: block;
+      }
+    }
+    .contato-whatsapp{
+      a{
+        color: $branco;
+        text-decoration: none;
+      }
+    }
+    .siga-nos {
+      @include flexbox;
+      @include align-items(center);
+      .icones-social-media {
+        @include flexbox;
+        svg{
+          max-width: 30px;
+          width: 100%;
+          margin-left: 10px;
+        }
+      }
+    }
+    .powered-by {
+      text-align: center;
+      svg{
+        max-width: 130px;
+        width: 100%;
+      }
+    }
+  }
+  .copyright {
+    margin: 2em 0;
+    p{
+      text-align: center;
+    }
+  } 
+}
+
+// Produto
+
+.produto-showroom{
+  text-align: center;
+  main{
+    .title-text-banner{
+      margin: 0 2em;
+      background: $branco;
+      border-radius: 10px;
+      box-shadow: 0 0 10px $geloescuro;
+      h2{
+        text-transform: uppercase;
+        font-size: 35px;
+        color: $bege;
+        padding-top: 1em;
+      }
+      p{
+        max-width: 550px;
+        padding: 0 1em;
+        margin: auto;
+      }
+      img{
+        max-width: 100%;
+      }
+      .parts-specs-wrapper{
+        @include flexbox;
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
+        padding: 2em;
+        .part-wrapper{
+          @include flexbox;
+          margin: 25px;
+          p{
+            max-width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Onde Comprar e Assistência Técnica
+
+main{
+  .contact-form-wrapper{
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-flow(column);
+    h1{
+      text-align: center;
+    }
+    a.link-whats{
+      @include flexbox();
+      @include align-items(center);
+      text-decoration: none;
+      color: #000;
+      font-size: 20px;
+      margin-bottom: 2em;
+      border: 2px solid #1bc24e;
+      padding: 10px;
+      border-radius: 5px;
+      transition: .3s all ease;
+      &:after{
+        content: "";
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z' style='&%2310; fill: %230dbf43;&%2310;'/%3E%3C/svg%3E") no-repeat;
+        background-size: contain;
+        width: 30px;
+        height: 30px;
+        display: block;
+        margin-left: 10px;
+      }
+      &:hover{
+        background: rgba(27, 194, 78, 0.349);
+      } 
+    }
+    .banner-topo{
+      img{
+        max-width: 100%;
+      }
+    }
+    .mapa{
+      iframe{
+        max-width: 1200px;
+        // width: 100%;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1440px){
+  main{
+    .introducao-carrossel-motos{
+      .carrossel-motos{
+        .slick-list{
+          .slick-track{
+            .slick-slide{  
+              .item-carrossel{
+                .specs-wrapper{
+                  width: 90%;
+                  .progress-bar{
+                    p{
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+            }  
+          }
+        }
+      }
+    }
+  }
+  // PRODUTO
+  .produto-showroom{
+    main{
+      .title-text-banner{
+        .parts-specs-wrapper{
+          padding: 0em;
+          .part-wrapper{
+            margin: 25px;
+          }
+        }
+      }
+      .video{
+        .title-video-wrapper{
+          .video-wrapper{
+            iframe{
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px){
+  main{
+    .video{
+      .title-video-wrapper{
+        .video-wrapper{
+          iframe{
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    .agende-test-ride{
+      p{
+        max-width: 500px;
+        margin: auto;
+        margin-bottom: 3em;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px){
+  main{
+    .banner-desktop{
+      overflow-x: hidden;
+    }
+    .introducao-carrossel-motos{
+      .carrossel-motos{
+        overflow-x: hidden;
+        .slick-list{
+          .slick-track{
+            .slick-slide{
+              img{
+                max-width: 80%;
+              }
+            }
+            .slick-current{
+              img{
+                max-width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .quem-somos{
+      padding: 0 1em;
+    }
+  }
+  footer{
+    .footer-wrapper{
+      @include flex-flow(column);
+      p{
+        text-align: center;
+      }
+      .wrap{
+        p{
+          margin-bottom: 2em;
+        }
+      }
+      .siga-nos{
+        margin: 2em 0;
+      }
+    }
+  }
+  // PRODUTO
+  .produto-showroom{
+    main{
+      .title-text-banner{
+        .parts-specs-wrapper{
+          .part-wrapper{
+            margin: 25px auto;
+          }
+        }
+      }
+    }
+  }
+  main{
+    .contact-form-wrapper{
+      .mapa{
+        iframe{
+          max-width: 900px;
+          // width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .hide{
+    @include flexbox;
+  }
+  header{
+    .header-wrapper{
+      .logo{
+        a{
+          img{
+            max-width: 150px;
+          }
+        }
+      }
+      .menu-desk-wrapper{
+        display: none;
+      }
+      .burger-menu{
+        width: 30px;
+        @include flex-flow(column);
+        cursor: pointer;
+        span{
+          background: $branco;
+          height: 2px;
+          width: 100%;
+          &:nth-child(2) {
+            margin: 5px;
+          }
+        }
+      }
+      .menu-mobile-wrapper{
+        position: absolute;
+        display: none;
+        background: $preto;
+        top: 61px;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid $branco;
+        .menu-mobile {
+          list-style: none;
+          padding: 0 30px;
+          @include flexbox;
+          @include flex-flow(column);
+          .menu-item {
+            color: $branco;
+            text-decoration: none;
+            li{
+              margin: 5px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  main{
+    padding-top: 61px;
+    .banner-desktop{
+      display: none;
+    }
+    .banner-mobile{
+      overflow-x: hidden;
+      .slick-list{
+        max-width: 100%;
+        .slick-track{
+          @include flexbox;
+          a{
+            img{
+              max-width: 100%;
+            }
+          }
+        }
+      }
+      .slick-arrow{
+        top: 30%;
+        &:before{
+          font-size: 13px;
+        }
+      }
+    }
+    .introducao-carrossel-motos{
+      .texto-introducao{
+        padding: 0 1em;
+      }
+      .carrossel-motos{
+        .slick-list{
+          .slick-track{
+            height: 520px;
+            .slick-current{
+              img{
+                max-width: 100%;
+              }
+            }
+            .slick-slide{
+              .item-carrossel{
+                .specs-wrapper{
+                  .progress-bar{
+                    .progress-fill{
+                      height: 25px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .quem-somos{
+      .imagem-texto-wrapper{
+        @include flex-flow(column);
+        .imagem-wrapper{
+          img{
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    .agende-test-ride{
+      padding: 5em 1em;
+    }
+    .contato{
+      padding: 3em 1em;
+      .formulario{
+        form{
+          .seletor-contato-testride{
+            select#seletor{
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  main{
+    .contact-form-wrapper{
+      .mapa{
+        iframe{
+          max-width: 600px;
+          // width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px){
+  .produto-showroom{
+    main{
+      .title-text-banner{
+        margin: 0 .5em;
+        .parts-specs-wrapper{
+          .part-wrapper{
+            @include align-items(center);
+            @include justify-content(space-between);
+            margin: 25px 0;
+            img{
+              height: 80px;
+            }
+            p{
+              padding: 0;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  main{
+    .contact-form-wrapper{
+      .mapa{
+        iframe{
+          max-width: 360px;
+          // width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 360px){
+  main{
+    .introducao-carrossel-motos{
+      .carrossel-motos{
+        .slick-list{
+          .slick-track{
+            .slick-slide{
+              .item-carrossel{
+                .specs-wrapper{
+                  .progress-bar.motor{
+                    .progress-fill{
+                      height: 40px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  main{
+    .contact-form-wrapper{
+      .mapa{
+        iframe{
+          max-width: 300px;
+          // width: 100%;
+        }
+      }
+    }
+  }
+}

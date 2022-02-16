@@ -1,0 +1,511 @@
+main.pg-produto-main {
+    section {
+        .om-departamento__topo {
+            .container-center {
+                .produto-titulo {
+                    .nome-prod {
+                        background-color: var(--color-black);
+                        @include flexbox;
+                        @include justify-content(center);
+                        @include align-items(center);
+                        padding: 0.5em 0;
+                        .productName {
+                            border-top: 2px dashed var(--color-yellow);
+                            border-bottom: 2px dashed var(--color-yellow);
+                            color: var(--color-yellow);
+                            text-align: center;
+                            font-size: 28px;
+                            padding: 1.5em 0;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .wrapper {
+            &.bread {
+                padding: 1em 2em;
+                background: var(--ice-white);
+            }
+            .container-center {
+                .bread-crumb {
+                    ul {
+                        @include flexbox;
+                        @include justify-content(flex-start);
+                        @include align-items(center);
+                        li {
+                            &:after {
+                                content: "/";
+                                margin: 0 3px;
+                            }
+                            a {
+                                font-size: 13px;
+                            }
+                            &:last-child {
+                                font-weight: 600;
+                                &:after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .produto-all {
+            @include flexbox;
+            @include flex-wrap(wrap);
+            margin: 2em 0;
+            .container-center {
+                width: 60%;
+                @include d(celularLarge){
+                    width: 100%;
+                }
+                figure {
+                    .img-produto {
+                        .apresentacao {
+                            #show {
+                                @include flexbox;
+                                @include d(ipad){
+                                    @include flex-flow(column);
+                                }
+                                #include {
+                                    order: 2;
+                                    width: 100%;
+                                    margin-left: 5em;
+                                    border-left: 1px solid var(--ice-white);
+                                    @include d(ipadPro){
+                                        margin-left: 2em;
+                                    }
+                                    @include d(ipad){
+                                        border-left: none;
+                                        margin-left: 0;
+                                        order: 1;
+                                        pointer-events: none;
+                                    }
+                                    #image {
+                                        text-align: center;
+                                        a.image-zoom {
+                                            .zoomPad {
+                                                width: 100%;
+                                                position: relative;
+                                                float: none;
+                                                z-index: 1;
+                                                cursor: crosshair;
+                                                overflow: hidden !important;
+                                                .zoomWindow {
+                                                    top: 0 !important;
+                                                    left: 0 !important;
+                                                    width: 1000px;
+                                                    height: 1000px;
+                                                    overflow: hidden;
+                                                }
+                                                img#image-main {
+                                                    max-width: 600px;
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                ul.thumbs {
+                                    order: 1;
+                                    @include d(ipad){
+                                        order: 2;
+                                    }
+                                    li {
+                                        a {
+                                            img {
+                                                max-width: 100px;
+                                                border: 2px solid var(--color-yellow);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #produtoDiv-direita {
+                width: 40%;
+                max-width: 650px;
+                @include flexbox;
+                @include flex-flow(column);
+                padding: 0 5em;
+                border-left: 1px solid var(--ice-white);
+                @include d(ipadPro){
+                    padding: 0px 2em;
+                }
+                @include d(ipad){
+                    width: 100%;
+                    padding: 0;
+                    padding-top: 2em;
+                    border-left: none;
+                    border-top: 1px solid var(--color-gray-line);
+                    margin-top: 2em;
+                }
+                h1.nome-prod {
+                    margin-bottom: 1em;
+                    order: 1;
+                    .productName {
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
+                }
+                span.cod-prod {
+                    order: 2;
+                    .skuReference {
+                        font-size: 13px;
+                        color: var(--color-gray-nav);
+                        margin-bottom: 1em;
+                    }
+                }
+                .detalhes-prod {
+                    padding: 0;
+                    order: 7;
+                    #descricao-produto{
+                        .container-center{
+                            h2{
+                                font-size: 14px;
+                            }
+                            .productDescription{
+                                font-size: 14px;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+                .variantes-sku {
+                    order: 3;
+                    .sku-selector-container {
+                        ul {
+                            li.specification {
+                                font-size: 13px;
+                                font-weight: 600;
+                                margin-bottom: 1em;
+                            }
+                            li.select {
+                                margin-bottom: 1em;
+                                span {
+                                    input {
+                                        display: none;
+                                    }
+                                    label {
+                                        position: relative;
+                                        min-width: 50px;
+                                        text-align: center;
+                                        border: 2px solid var(--color-yellow);
+                                        padding: 10px;
+                                        cursor: pointer;
+                                        margin-right: 10px;
+                                        border-radius: 10px;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        &.checked {
+                                            background: var(--color-yellow);
+                                        }
+                                        &.item_unavailable {
+                                            background: var(--color-bg-newsletter);
+                                            color: var(--color-black);
+                                            &:before {
+                                                content: "";
+                                                width: 1px;
+                                                height: 30px;
+                                                background: var(--color-red-clean);
+                                                transform: rotate(-45deg);
+                                                position: absolute;
+                                                top: 2px;
+                                                left: 50%;
+                                            }
+                                            &:after {
+                                                content: "";
+                                                width: 1px;
+                                                height: 30px;
+                                                background: var(--color-red-clean);
+                                                transform: rotate(45deg);
+                                                position: absolute;
+                                                top: 2px;
+                                                left: 50%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .plugin-preco {
+                    order: 4;
+                    .productPrice {
+                        .descricao-preco {
+                            margin: 1em 0;
+                            .valor-de {
+                                font-style: normal;
+                                font-size: 0;
+                                strong.skuListPrice {
+                                    font-size: 16px;
+                                    font-weight: 300;
+                                    text-decoration: line-through;
+                                    color: var(--color-gray);
+                                }
+                            }
+                            .valor-por {
+                                font-style: normal;
+                                font-size: 0;
+                                strong.skuBestPrice {
+                                    font-size: 26px;
+                                    font-weight: 600;
+                                }
+                            }
+                            .valor-dividido {
+                                span {
+                                    span {
+                                        font-size: 0;
+                                        font-style: normal;
+                                        label.skuBestInstallmentNumber {
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            color: var(--color-gray);
+                                            span.x {
+                                                font-size: 15px;
+                                                color: var(--color-gray);
+                                                &:after {
+                                                    content: "de";
+                                                    margin: 0 5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                strong {
+                                    font-size: 15px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    color: var(--color-gray);
+                                }
+                            }
+                        }
+                        .preco-a-vista,
+                        .economia-de {
+                            display: none !important;
+                        }
+                    }
+                }
+                .produto-buy__container {
+                    order: 5;
+                    @include flexbox;
+                    @include justify-content(flex-start);
+                    padding-bottom: 2em;
+                    margin-bottom: 2em;
+                    border-bottom: 1px solid var(--color-gray-nav);
+                    @include d(ipadPro){
+                        @include flex-flow(column);
+                    }
+                    @include d(ipad){
+                        @include flex-flow(row);
+                    }
+                    .om-produto__buy-quant {
+                        .qtdPrateleira {
+                            max-width: 100px;
+                            @include flexbox;
+                            @include flex-flow(center);
+                            @include justify-content(center);
+                            @include d(ipadPro){
+                                max-width: 100%;
+                                justify-content: left;
+                                @include justify-content(flex-start);
+                            }
+                            .btnDec {
+                                background: var(--ice-white);
+                                cursor: pointer;
+                                padding: 15px;
+                                padding-right: 0;
+                                &:before {
+                                    content: "-";
+                                    font-weight: 600;
+                                }
+                            }
+                            input.qtdVal {
+                                background: var(--ice-white);
+                                max-width: 65px;
+                                padding: 15px 0;
+                                text-align: center;
+                                font-weight: 600;
+                                @include d(ipadPro){
+                                    max-width: 80%;
+                                }
+                                @include d(ipad){
+                                    max-width: 65px;
+                                }
+                            }
+                            .btnAcr {
+                                background: var(--ice-white);
+                                cursor: pointer;
+                                padding: 15px;
+                                padding-left: 0;
+                                &:before {
+                                    content: "+";
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                    .om-produto__buy-button {
+                        margin-left: 5px;
+                        @include d(ipadPro){
+                            margin-left: 0;
+                            margin-top: 10px;
+                        }
+                        @include d(ipad){
+                            margin-left: 5px;
+                            margin-top: 0;
+                        }
+                        a.buy-button {
+                            width: 200px;
+                            background: var(--color-yellow);
+                            text-align: center;
+                            padding: 15px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            @include d(ipadPro){
+                                width: 100%;
+                            }
+                            @include d(ipad){
+                                width: 150px;
+                            }
+                        }
+                        .portal-notify-me-ref {
+                            width: 100%;
+                            padding: 0 1em;
+                            fieldset{
+                                position: relative;
+                                p{
+                                    font-size: 13px;
+                                }
+                                #notifymeClientName, #notifymeClientEmail {
+                                    padding: 5px;
+                                    border: 1px solid var(--color-gray-line);
+                                    margin-top: 5px;
+                                    font-size: 13px;
+                                    width: 98%;
+                                    padding-right: 0;
+                                }
+                                #notifymeButtonOK {
+                                    text-transform: uppercase;
+                                    font-size: 16px;
+                                    background: var(--color-black);
+                                    color: var(--color-white);
+                                    font-weight: 600;
+                                    padding: 10px;
+                                    height: auto;
+                                    cursor: pointer;
+                                    width: 100%;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .calc-frete {
+                    order: 6;
+                    padding-bottom: 1em;
+                    margin-bottom: 1em;
+                    border-bottom: 1px solid var(--color-gray-nav);
+                    .cep {
+                        h3 {
+                            font-size: 14px;
+                            color: var(--color-gray);
+                            font-weight: 600;
+                        }
+                        p.frete {
+                            display: none;
+                        }
+                        #calculoFrete {
+                            .contentWrapper {
+                                .header {
+                                    h1,
+                                    h2,
+                                    .close {
+                                        display: none;
+                                    }
+                                }
+                                #ctl00_Conteudo_upnlContent {
+                                    .content {
+                                        fieldset {
+                                            @include flexbox;
+                                            @include align-items(center);
+                                            @include flex-wrap(wrap);
+                                            margin: 0.8em 0;
+                                            label.prefixo {
+                                                @include flexbox;
+                                                flex-flow: column;
+                                                font-size: 0;
+                                                input {
+                                                    background: var(--ice-white);
+                                                    padding: 0.8em;
+                                                    font-size: 16px;
+                                                    @include d(ipad){
+                                                        max-width: 130px;
+                                                    }
+                                                }
+                                            }
+                                            .quantity {
+                                                display: none;
+                                            }
+                                            .frete-calcular {
+                                                input {
+                                                    padding: 0.9em;
+                                                    background: var(--color-black);
+                                                    cursor: pointer;
+                                                    font-size: 15px;
+                                                    color: var(--color-white);
+                                                    font-weight: 600;
+                                                }
+                                            }
+                                            .cep-busca {
+                                                display: block;
+                                                width: 100%;
+                                                a{
+                                                    font-size: 13px;
+                                                    font-weight: 600;
+                                                    text-decoration: underline;
+                                                    margin-top: 5px;
+                                                }
+                                            }
+                                        }
+                                        .freight-values{
+                                            th{
+                                                text-align: left;
+                                                font-size: 13px;
+                                                border-bottom: 1px solid var(--color-black);
+                                                padding: 5px;
+                                            }
+                                            td{
+                                                font-size: 13px;
+                                                padding: 5px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .footer{
+                                    .close{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section.quem-viu-viu-tambem {
+        width: 100%;
+        margin-top: 2em;
+        background: var(--ice-white);
+        @include d(celularLarge){
+            padding-bottom: 2em;
+        }
+    }
+}

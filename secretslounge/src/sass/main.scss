@@ -1,0 +1,43 @@
+@import './include.scss';
+
+/* ------------------------------------------------------------ *\
+	pages
+\* ------------------------------------------------------------ */
+@import './pages/_home.scss';
+@import './pages/_error.scss';
+@import './pages/_login.scss';
+
+/* ------------------------------------------------------------ *\
+	layout
+\* ------------------------------------------------------------ */
+@import './layout/_header.scss';
+@import './layout/_footer.scss';
+
+/* ------------------------------------------------------------ *\
+	themes
+\* ------------------------------------------------------------ */
+@import './themes/_institucional.scss';
+@import './themes/_btnDefault.scss';
+@import './themes/_account.scss';
+
+/* ------------------------------------------------------------ *\
+	components
+\* ------------------------------------------------------------ */
+
+@import './components/_breadcrumb.scss';
+@import './components/_overlay.scss';
+@import './components/_swal.scss';
+@import './components/bestCateg';
+@import './components/notifications';
+
+/* ------------------------------------------------------------ *\
+	base
+\* ------------------------------------------------------------ */
+@import './base/reset.scss';
+@import './base/grid.scss';
+@import './base/typography';
+
+/* ------------------------------------------------------------ *\
+	base
+\* ------------------------------------------------------------ */
+@import './utils/animations';

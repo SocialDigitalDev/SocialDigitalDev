@@ -1,0 +1,18 @@
+// form
+
+.checkoutExtends__input {
+    height: $inputHeight;
+    padding: 8px 16px;
+    border: 1px solid #9A7453;
+    border-radius: 32px;
+    box-shadow: none;
+    background-position: right center;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+
+.btn--dark {
+    background: #000;
+}

@@ -1,0 +1,84 @@
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+#set($colecao = $product.ProductField(166))
+    
+    <div class="mx-product">
+    
+        <input type="hidden" class="mx-id" value="$id" />
+        <input type="hidden" class="mx-sku" value="$idSku" />
+        <div class="mx-image js--lazyload has--lazyload" data-noscript="">
+            <a class="mx-productImage" title="$escapedName" href="$uri" loading="lazy">
+                <!--$product.GetImageTag(30)-->
+                $product.GetImageTag(550,695)
+            </a>
+             <!-- Flag Topo -->
+            #if ($product.HasBestPrice)
+                <div class="flag-desconto">
+                    <span class="porcentagem">$product.ListPriceMinusBestPriceInPercent</span>
+                    <span class="texto-flag">OFF</span>
+                </div>
+            #end
+            #if($product.DiscountHightLight != '')
+                <div class='flags-promo'>
+                    $product.DiscountHightLight
+                </div>
+            #end
+        </div>
+    
+        #if ($product.IsInStock)
+    		
+    	    <div class="mx-produto-dados">
+    	            <span class="prateleira-colecao">$colecao</span>
+    	            <h2>
+                        <a title="$escapedName" href="$uri">
+                            $product.Name
+                        </a>
+                    </h2>
+                    <div class="mx-price">
+            			<a title="$escapedName" href="$uri">
+                            #if ($product.HasBestPrice)
+            					<span class="oldPrice">
+                                    $product.ListPrice
+                                </span> 
+                                <span class="mx-bestPrice">
+                                    <strong> $product.BestPrice </strong>
+                                </span>
+                            #else
+                                <span class="mx-bestPrice">
+                                    <strong>$product.BestPrice </strong>
+                                </span>                    
+            				#end
+            				<span class="mx-installment">
+            					#if ($product.NumbersOfInstallment > 1)
+            					    ${product.NumbersOfInstallment}x $product.InstallmentValue
+            					#else
+            						<span></span>
+            					#end
+            				</em> 
+            			</a>
+        		    </div>
+    	            <div class="mx-hover-content">
+    		            <div class="mx-variations"></div>
+    		        </div>
+                    <div class="mx-buy"> 
+                        <a class="mx-buy-button" title="$escapedName">Comprar</a>
+                    </div>
+    		   
+
+    		</div>
+    	#else
+    		<p class="mx-outOfStock">
+    		     <a title="$escapedName" href="$uri">
+    		        <span class="mx-icon"></span>
+        		    <span class="mx-text">
+        		        Produto Esgotado
+        		        <small>Avise-me quando chegar</small>
+        		    </span>
+    		     </a>
+    		</p> 
+    	
+    	#end
+
+</div>

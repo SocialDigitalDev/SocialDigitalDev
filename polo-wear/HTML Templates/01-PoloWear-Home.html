@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+
+    <title> POLO WEAR </title>
+    <vtex:metaTags/>
+    <vtex:template id="01-PoloWear-css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <vtex:template id="01-PoloWear-Header" />
+
+    <main>
+
+        <!-- Estrutura para slide principal -->
+        <figure>
+            <div class="container slide">
+                <div class="slide-principal">
+                    <vtex:contentPlaceHolder id="PoloWear-slide-principal" />
+                </div>
+            </div>
+            
+            <div class="container slide-mobile">
+                <vtex:contentPlaceHolder id="PoloWear-slide-principal-mobile" />
+            </div>
+        </figure>
+
+        <!-- Estrutura para informativo -->
+        <section>
+            <div class="container informativos lazy">
+                <div class="container-center">
+                    <vtex.cmc:PoloInformativo/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prateleira Novidades por Categoria -->
+        <section>
+            <div class="container slide-prod prateleira-01">
+                <div class="container-center">
+                    <div class="titulo-prateleira">
+                        <h2>Novidades <b>por categoria</b></h2>
+                    </div>
+                    <div class="prateleira-tabs-titulo">
+                        <ul class="tabs-prateleira">
+                            <li class="tabs-links tab-ativo" data-tab="prat-1">MASCULINO</li>
+                            <li class="tabs-links" data-tab="prat-2">FEMININO</li>
+                        </ul>
+                    </div>
+                    <div id="prat-1" class="tab-content tab-ativo lazy">
+                        <vtex:contentPlaceHolder id="Categoria-Masculino" />
+                    </div>
+                    <div id="prat-2" class="tab-content lazy">
+                        <vtex:contentPlaceHolder id="Categoria-Feminino" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner Na Medida Certa -->
+        <section>
+            <div class="container banner-categoria lazy">
+                <div class="titulo-prateleira">
+                    <h2>Compra na <b>Medida Certa</b></h2>
+                </div>
+                <div class="container-center polo-prateleira">
+                    <vtex:contentPlaceHolder id="banners-Medida-Certa" />
+                </div>
+            </div>
+        </section>
+
+         <!-- Prateleira Mais Vendidos -->
+         <section>
+            <div class="container slide-prod prateleira-mais lazy">
+                <div class="titulo-prateleira">
+                    <h2><b>Mais</b> Vendidos</h2>
+                </div>
+                <div class="container-center polo-prateleira">
+                    <vtex:contentPlaceHolder id="Polo-Mais-Vendidos" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Mosaico de Banners -->
+        <section>
+            <div class="container mosaico-banner imageTitle lazy">
+                <div class="container-center">
+                    MOSAICO
+                </div>
+            </div>
+        </section>
+
+        <!-- Prateleira Para Elas -->
+        <section>
+            <div class="container slide-prod prateleira-elas lazy">
+                <div class="titulo-prateleira">
+                    <h2>Para <b>Elas</b></h2>
+                </div>
+                <div class="container-center polo-prateleira">
+                    <vtex:contentPlaceHolder id="Polo-Prateleira-Elas" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Prateleira Compre o Look -->
+        <section>   
+            <div class="container slide-prod prateleira-compre-look imageTitle">
+                <div class="container-full">
+                    <div class="prat-left__banner">
+                        <vtex:contentPlaceHolder id="Polo-Banner-Left" />
+                    </div>
+                    
+                    <div class="prat-right_Look polo-prateleira">
+                        <vtex:contentPlaceHolder id="Polo-Prateleira-right" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Prateleira Para Eles -->
+        <section>
+            <div class="container slide-prod prateleira-eles">
+                <div class="titulo-prateleira">
+                    <h2>Para <b>Eles</b></h2>
+                </div>
+                <div class="container-center polo-prateleira">
+                    <vtex:contentPlaceHolder id="Polo-Prateleira-Eles" />
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Chamada para o rodapé -->
+     <vtex:template id="01-PoloWear-Footer" />  
+    <!-- Chamada para os scripts Js da loja -->
+    <vtex:template id="01-PoloWear-js" />
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+    <title>Loja PIny - Carrinho Abandonado</title>   
+    <vtex:metaTags/> 
+    <style type="text/css">
+		ul{padding:0; margin:0;}
+	</style>
+</head>
+<body bgcolor="#f7f7f7" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+	<table align="center" bgcolor="#ffffff" id="Table_01" width="550"  border="0" cellpadding="0" cellspacing="0">
+        
+		<tr>
+			<td colspan="5" align="center" style="padding: 20px 0 20px 0;">
+                <img style="display:block" src="https://www.piny.com.br/arquivos/logo-piny.png" width="100" height="auto" alt="piny" />
+            </td>
+		</tr>
+		<tr>
+		
+			<td bgcolor="" colspan="5" style="padding:10px 30px;">
+				<font face="Arial" color="#333333" size="2">Olá, <strong>{!Nome}</strong>.<br /><br />
+	            <font>Notamos que você não finalizou sua compra. Aproveite enquanto os itens abaixo<br />
+	            ainda estão disponíveis e <a href="http://www.piny.com.br/checkout/cart/{!rclastcart}&amp;utm_source=VTEXCEM&amp;utm_medium=Abandono_carrinho&amp;utm_campaign=Abandono">
+	            <font color="#f45f1d">CLIQUE AQUI</font></a> para finalizar seu pedido.</font></font>
+			</td>
+			
+		</tr>
+		<tr>
+			<td colspan="5"><img style="display:block" src="http://www.piny.com.br/arquivos/carrinho-abandonado_06.png" width="550" height="65" alt="" /></td>
+		</tr>
+		<tr>
+			<td colspan="5">
+				<table width="550" cellspacing="0">
+	                <tr>
+	                    <td width="160" align="center" bgcolor="#ffffff" height="20"><font face="Arial" size="2" color="#666666">Produto</font></td>
+	                    <td width="276" bgcolor="#ffffff" height="20"></td>
+	                    <td width="104" bgcolor="#ffffff" height="20"><font face="Arial" size="2" color="#666666">Valor Un.</font></td>
+	                </tr>
+	                <tr>
+	                    <td colspan="3">
+	                        <div style="color:#FFF;">
+	                            <vtex.cmc:ProductQueryStringReferenceShelf layout="d9d76394-1813-44ac-9552-dd19a603566d" itemCount="50" columnCount="100" showUnavailable="true"/>
+	                        </div>
+	                    </td>
+	                </tr>
+	                
+	            </table>  
+			</td>
+		</tr>
+		<tr>
+			<td colspan="5" align="center" style="padding:30px 0;">
+				<a href="http://www.piny.com.br/checkout/cart/{!rclastcart}&amp;utm_source=VTEXCEM&amp;utm_medium=Abandono_carrinho&amp;utm_campaign=Abandono" style="background-color:#ff5f1a;border-radius:10px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">FINALIZAR PEDIDO
+				
+				</a>
+			</td>
+		</tr>
+        <tr>
+            <td align="center" colspan="5">
+				<font size="1" color="#2f2f2f" face="Arial">Precisa de ajuda? Fale com a 
+					<a href="http://www.piny.com.br/atendimento?utm_source=VTEXCEM&amp;utm_medium=Abandono_carrinho&amp;utm_campaign=Abandono">
+					<font size="1" color="#2f2f2f" face="Arial">central de atendimento</font></a>
+				</font>
+			</td>
+        </tr>
+        <tr>
+			<td colspan="5"><img style="display:block" src="http://www.piny.com.br/arquivos/carrinho-abandonado_10.png" width="550" height="46" alt="" /></td>
+		</tr>
+		<tr>
+			<td colspan="5"><img style="display:block" src="http://www.piny.com.br/arquivos/carrinho-abandonado_11.png" width="550" height="130" alt="" /></td>
+		</tr>
+		<tr>
+			<td><img style="display:block" src="http://www.piny.com.br/arquivos/spacer.gif" width="19" height="1" alt="" /></td>
+			<td><img style="display:block" src="http://www.piny.com.br/arquivos/spacer.gif" width="255" height="1" alt="" /></td>
+			<td><img style="display:block" src="http://www.piny.com.br/arquivos/spacer.gif" width="36" height="1" alt="" /></td>
+			<td><img style="display:block" src="http://www.piny.com.br/arquivos/spacer.gif" width="218" height="1" alt="" /></td>
+			<td><img style="display:block" src="http://www.piny.com.br/arquivos/spacer.gif" width="22" height="1" alt="" /></td>
+		</tr>
+	</table>
+</body>
+</html>

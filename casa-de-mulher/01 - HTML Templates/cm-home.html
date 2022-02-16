@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+
+    <title>Casa de Mulher - Loja Oficial</title>
+    <vtex:metaTags/>
+    <vtex:template id="cm-css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <vtex:template id="cm-header" />
+
+    <main>
+
+        <!-- Estrutura para slide principal -->
+        <figure>
+            <div class="container slide">
+                <div class="slide-principal">
+                    <vtex:contentPlaceHolder id="banner-principal-desktop" />
+                </div>
+            </div>
+            
+            <div class="container slide-mobile">
+                <vtex:contentPlaceHolder id="banner-principal-mobile" />
+            </div>
+        </figure>
+        
+        <!-- Estrutura para informativo -->
+        <section>
+            <div class="container informativos">
+                <div class="container-center">
+                    <vtex.cmc:informativoHome />
+                </div>
+            </div>
+        </section>
+        
+        <!-- Prateleira Produtos em Destaque -->
+        <section>   
+            <div class="container slide-prod prateleira-mais">
+                <div class="container-center">
+                    <div class="prat-left">
+                        <div class="titulo-prateleira">
+                            <h2>Produtos em <span>Destaque</span></h2>
+                        </div>
+                    </div>
+                    <div class="prat-right">
+                        <vtex:contentPlaceHolder id="prateleira-produtos-em-destaque" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Prateleira Confira os Lançamentos -->
+        <section>   
+            <div class="container slide-prod prateleira-mais">
+                <div class="container-center">
+                    <div class="prat-left">
+                        <div class="titulo-prateleira">
+                            <h2>Confira os <span>Lançamentos</span></h2>
+                        </div>
+                    </div>
+                    <div class="prat-right">
+                        <vtex:contentPlaceHolder id="prateleira-confira-os-lancamentos" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Estrutura para banners de categoria -->
+        <section>
+            <div class="container banner-categoria">
+                <div class="container-center">
+                    <vtex:contentPlaceHolder id="banners-categoria" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Estrutura para prateleira fixa -->
+        <section>
+            <div class="container slide-prod prateleira-01">
+                <div class="container-center">
+                    <vtex:contentPlaceHolder id="prateleira-fixa" />
+                </div>
+            </div>
+        </section>
+        
+        <!--Estrutura de Tabs para IMPERDÍVEIS (EM CONSTRUÇÃO)-->
+        
+        <!--Estrutura para banners de marca-->
+        <section>
+            <div class="container banner-categoria">
+                <div class="container-center">
+                    <vtex:contentPlaceHolder id="banners-categoria" />
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Chamada para o rodapé -->
+     <vtex:template id="cm-footer" />  
+    <!-- Chamada para os scripts Js da loja -->
+    <vtex:template id="cm-js" />
+</body>
+</html>

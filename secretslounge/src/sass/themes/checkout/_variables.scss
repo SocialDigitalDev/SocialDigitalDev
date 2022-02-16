@@ -1,0 +1,106 @@
+// colors
+
+
+$checkoutColorPrimary: #3D2B1C;  
+$checkoutColorSecondary: #DDA69D;
+
+$checkoutBodyBackground: #FFFCF7;
+
+$checkoutBorderColor: #e0e0e0;
+
+
+// typography
+$checkoutFontFamily: 'Nexa', sans-serif;
+$checkoutBaseFontSize: 14px;
+
+//container
+$containerWidth: 1266px;
+
+//buttons
+$buttonBorderRadius: 16px;
+$buttonHeight: 40px;
+
+// header
+
+$logoHeight: 24px;
+
+$headerPadding: 36px 0;
+$headerBackground: #fff;
+$headerColor: inherit;
+
+// modal
+
+$defaultModalBackground:  #FFFCF7;
+$defaultModalColor: $checkoutColorPrimary;
+ 
+
+// titles
+
+$titleFontFamily: $checkoutFontFamily;
+$titleFontWeight: 700;
+$titleColor: inherit;
+$titleFontSizeMobile: 18px;
+$titleFontSizeDesktop: 18px;
+$titleAlign: center;
+
+// Form
+
+$inputHeight: 32px;
+$inputHeightMedium: 42px;
+$inputHeightLarge: 48px;
+
+// Cart Empty
+
+$cartEmptyColor: #544d4c;
+// ======== Cart Items
+ 
+$cartIconRemove: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='21' viewBox='0 0 19 21'%3E%3Cg id='trash-2' transform='translate(-2.5 -1.5)'%3E%3Cpath id='Path_529' data-name='Path 529' d='M3,6H21' fill='none' stroke='%233D2B1C'  stroke-linecap='square' stroke-linejoin='round' stroke-width='1'/%3E%3Cpath id='Path_530' data-name='Path 530' d='M19,6V20a2,2,0,0,1-2,2H7a2,2,0,0,1-2-2V6M8,6V4a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2V6' fill='none' stroke='%233D2B1C'  stroke-linecap='square' stroke-linejoin='round' stroke-width='1'/%3E%3Cline id='Line_272' data-name='Line 272' y2='6' transform='translate(10 11)' fill='none' stroke='%233D2B1C'  stroke-linejoin='round' stroke-width='1'/%3E%3Cline id='Line_273' data-name='Line 273' y2='6' transform='translate(14 11)' fill='none' stroke='%233D2B1C' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+
+$cartIconRemoveHover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='21' viewBox='0 0 19 21'%3E%3Cg id='trash-2' transform='translate(-2.5 -1.5)'%3E%3Cpath id='Path_529' data-name='Path 529' d='M3,6H21' fill='none' stroke='%23dd4f44' stroke-linecap='square' stroke-linejoin='round' stroke-width='1'/%3E%3Cpath id='Path_530' data-name='Path 530' d='M19,6V20a2,2,0,0,1-2,2H7a2,2,0,0,1-2-2V6M8,6V4a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2V6' fill='none' stroke='%23dd4f44' stroke-linecap='square' stroke-linejoin='round' stroke-width='1'/%3E%3Cline id='Line_272' data-name='Line 272' y2='6' transform='translate(10 11)' fill='none' stroke='%23dd4f44' stroke-linejoin='round' stroke-width='1'/%3E%3Cline id='Line_273' data-name='Line 273' y2='6' transform='translate(14 11)' fill='none' stroke='%23dd4f44' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+
+
+
+// Image
+
+$cartImageSize: 80px;
+
+// Name
+$cartNameFontSize: 14px;
+$cartNameFontWeight: 700;
+
+//Brand
+$cartBrandDisplay: none;
+$sellerBrandDisplay: none;
+
+// Quantity
+$quantityFontFamily: $checkoutFontFamily;
+$quantityFontWeight: 700;
+$quantityColor: $checkoutColorPrimary;
+$quantityFontSize: 14px;
+
+ 
+ 
+$quantityIconPlus:url("data:image/svg+xml,%3Csvg viewBox='0 0 13 13' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Path_7886' d='M11.375,4.813L7.437,4.813L7.437,0.875C7.437,0.395 7.042,0 6.562,0L5.687,0C5.207,0 4.812,0.395 4.812,0.875L4.812,4.812L0.875,4.812C0.395,4.812 0,5.207 0,5.687L0,6.562C0,7.042 0.395,7.437 0.875,7.437L4.812,7.437L4.812,11.375C4.812,11.855 5.207,12.25 5.687,12.25L6.562,12.25C7.042,12.25 7.437,11.855 7.437,11.375L7.437,7.438L11.375,7.438C11.855,7.438 12.25,7.043 12.25,6.563L12.25,5.688C12.25,5.208 11.855,4.813 11.375,4.813Z' fill='%233D2B1C' /%3E%3C/svg%3E%0A");
+
+$quantityIconMinus: url("data:image/svg+xml,%3Csvg viewBox='0 0 13 13' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Path_7887' d='M11.375,4.813L0.875,4.813C0.395,4.813 0,5.207 0,5.688L0,6.563C0,7.043 0.395,7.438 0.875,7.438L11.375,7.438C11.855,7.438 12.25,7.043 12.25,6.563L12.25,5.688C12.25,5.207 11.855,4.813 11.375,4.813Z' fill='%233D2B1C' /%3E%3C/svg%3E%0A");
+
+// Price
+
+$cartPriceFontFamily: inherit;
+// List Price
+$cartListPriceFontSize: 12px;
+$cartListPriceFontWeight: normal;
+$cartListPriceLetterSpacing: 0.03em;
+$cartListPriceColor: #999;
+// Best Price
+$cartBestPriceFontSize: 14px;
+$cartBestPriceFontWeight: bold;
+$cartBestPriceLetterSpacing: 0.02em;
+$cartBestPriceColor: inherit;
+
+// ========= Sidebar
+
+$checkoutIconCoupon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.213' height='21.213' viewBox='0 0 21.213 21.213'%3E%3Cpath id='Path_816' data-name='Path 816' d='M4-9v6H14V-9ZM16.5-6A1.5,1.5,0,0,1,18-7.5v-3A1.5,1.5,0,0,0,16.5-12H1.5A1.5,1.5,0,0,0,0-10.5v3A1.5,1.5,0,0,1,1.5-6,1.5,1.5,0,0,1,0-4.5v3A1.5,1.5,0,0,0,1.5,0h15A1.5,1.5,0,0,0,18-1.5v-3A1.5,1.5,0,0,1,16.5-6ZM15-9.25v6.5a.75.75,0,0,1-.75.75H3.75A.75.75,0,0,1,3-2.75v-6.5A.75.75,0,0,1,3.75-10h10.5A.75.75,0,0,1,15-9.25Z' transform='translate(8.485 21.213) rotate(-45)' fill='%233D2B1C'/%3E%3C/svg%3E%0A");
+
+// Minicart
+$minicartBackground: none;

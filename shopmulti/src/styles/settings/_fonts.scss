@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Font Family
+$roboto: 'Roboto', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+
+@font-face{
+    font-family: 'shopmulti-icon';
+    src:url(/arquivos/shopmulti-icon.css);
+    src:url(/arquivos/shopmulti-icon.css#iefix) format('embedded-opentype'), url(/arquivos/shopmulti-icon.woff.css) format('woff');
+    font-weight:normal;
+    font-style:normal;
+}
+
+// Font base em px.
+$font-base: 16;
+
+// Cálcula fonte de px para rem.
+@mixin f($fontSize, $lineHeight: ($fontSize + 2)) {
+
+	$font-rem: ($fontSize / $font-base);
+
+	@if $fontSize == $fontSize{
+		font-size: $fontSize + px; // Para IE6, IE7, IE8
+		font-size: $font-rem + rem;
+		line-height: $lineHeight + px;
+	}
+
+}

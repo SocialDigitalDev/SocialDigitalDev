@@ -1,0 +1,105 @@
+header
+  .minicart__overlay
+  .top-bar
+    #bar-prog
+      .prog-bar
+      p
+  .wrapper
+    .container-center.header-top
+      span.btn-menu-mobile
+        a(href='#menuPrincipal')
+      #logo-top
+        h1.item-logo
+          a(href='/')
+            img(src='/arquivos/logo-lightsweet-header.png' alt='LightSweet')
+      .busca-mobile-ico.desktop
+        .busca-topo__busca-container
+          vtex(.cmc:fulltextsearchbox)/
+      .header-user-links
+        ul.header-user
+          li.user-login
+            .user-name__account
+              .link-help
+                vtex(.cmc:welcomemessage)/
+          li.wishlist
+            a.lista-desejos(href='/giftlist')
+              span.icon-wishlist
+          li.header-cart.carrinho
+            span.icon-cart  
+            .info-cart
+              span.qtd-cart
+          // MINI CART
+          .header-minicart
+            .header-minicart-header
+              .minicart__header-links
+                button.header-minicart-close
+                  // <img src="/arquivos/close.svg" />
+                  | voltar
+                p.header-minicart_topo CARRINHO
+              .header-minicart-title.qtd-minicart(style='margin-left: 0px;')
+                | Seu carrinho possui: 
+                span.header-minicart-badge(style='display: flex;')
+                span.header-minicart-itens
+            .header-minicart-navigation
+              // customMiniCart
+              .portal-totalizers-ref
+                .amount-items-in-cart
+                  .cartInfoWrapper
+                    span.title
+                      span#MostraTextoXml1
+                        | Resumo do
+                        | Carrinho
+                    ul.cart-info
+                      li.amount-products
+                        strong
+                          span#MostraTextoXml2
+                            | Total de
+                            | Produtos:
+                        em.amount-products-em 1
+                      li.amount-items
+                        strong
+                          span#MostraTextoXml3 Itens:
+                        em.amount-items-em
+                      li.total-cart
+                        strong
+                          span#MostraTextoXml5
+                            | Valor
+                            | Total:
+                        em.total-cart-em
+              script.
+                $('.portal-totalizers-ref').minicart({ showMinicart: false, showTotalizers: true, showShippingOptions: false });
+              .header-minicart-list
+                .list-prod
+                  .list-prod-image  
+                  .list-prod-info
+                    .list-prod-name
+                    .list-prod-price
+                      .list-prod-qtd
+                        p.qtd-remove -
+                        p.qtd-value
+                        p.qtd-adiciona +
+                      .list-prod-total
+                  span.list-prod-remove
+              .header-minicart-empty(style='display: none;')
+                p Carrinho Vazio
+                button Continuar comprando
+            .header-minicart-footer(style='display: block;')
+              // footerMiniCart
+              .header-minicart-total
+                // totalCart
+                p.header-minicart-subtotal
+                  | Subtotal
+                  span.header-minicart-value
+              .header-minicart-actions
+                // actionMiniCart
+                a.goToCart(href='/checkout') Finalizar Compra
+                button.continueToBuy Continuar Comprando
+          // MINI CART
+    .menu-bar
+      .wrapper.menu-topo
+        .container-center
+          #menuPrincipal.menu-principal
+            vtex(.cmc:menuprincipal)/
+    .busca-mobile-ico.mobile
+      .busca-topo__busca-container
+        vtex(.cmc:fulltextsearchbox)/

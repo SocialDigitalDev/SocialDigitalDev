@@ -1,0 +1,114 @@
+.body-cart,
+.body-order-form {
+    .step {
+        border-radius: 0;
+        border: 1px solid $checkoutBorderColor;
+        padding: 16px;
+
+        .accordion-toggle-active {
+            font-size: 16px;
+            font-weight: bold;
+            color: inherit;
+        }
+
+        .accordion-toggle {
+            width: 100%;
+            color: $checkoutColorPrimary;
+        }
+
+        .link-box-edit {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            min-height: 0;
+            padding: 0;
+            border-radius: 50%;
+            background: transparent;
+            color: $checkoutColorPrimary;
+            .icon-edit {
+                margin: auto;
+            }
+            &:hover {
+                background: #F5EFE6;
+                color: $checkoutColorPrimary;
+            }
+        }
+    }
+
+    .client-profile-data {
+        .client-profile-data input[type='text'] {
+            @media (max-width: 490px) {
+                width: 100% !important;
+            }
+        }
+        .newsletter {
+            margin: 24px 0;
+        }
+    }
+
+    // PJ
+
+    .box-client-info-pj {
+        float: none;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $checkoutBorderColor;
+        .links {
+            margin: 16px auto;
+            display: block;
+        }
+        .link.pf-pj {
+            height: $inputHeightMedium;
+        }
+        .state-inscription-box {
+            margin-top: 16px;
+        }
+    }
+
+    p.submit {
+        margin-top: 48px;
+    }
+
+    // Shipping
+
+    .shipping-container {
+        .ship-postalCode {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            label {
+                width: 100%;
+            }
+            input {
+                flex: 1 1 auto;
+                width: auto;
+                max-width: none;
+            }
+            .shp-option-icon {
+                svg {
+                    path {
+                        fill: $checkoutColorPrimary !important;
+                    }
+                }
+            }
+        }
+
+        .ship-receiverName {
+            clear: both;
+        }
+    }
+    .vtex-omnishipping-1-x-addressSummaryActive .address-summary {
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='24' height='24'><path fill='%23efefef' d='M15.998,5.951L4,16.237V30c0,0.552,0.448,1,1,1h8v-8h6v8h8c0.552,0,1-0.448,1-1V16.238L15.998,5.951z M19,19 h-6v-5h6V19z'></path> <polygon fill='%23efefef' points='15.998,0.683 9,6.682 9,3 5,3 5,10.111 0.59,13.892 1.892,15.41 15.998,3.317 30.108,15.41 31.41,13.892 '></polygon></svg>")
+            no-repeat 14px 50%;
+    }
+    .vtex-omnishipping-1-x-summaryChange {
+        color: $checkoutColorPrimary;
+        border-color: $checkoutColorPrimary;
+    }
+
+    // Coupon
+}
+
+// iframe

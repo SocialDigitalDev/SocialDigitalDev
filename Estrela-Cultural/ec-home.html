@@ -1,0 +1,139 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+    <head>
+        <title> Estrela Cultural </title>
+        <vtex:metaTags />
+        <vtex:template id="ec-styles" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+        <vtex:template id="ec-header" />
+        
+        <section id="principal">
+            <div class="topo-esquerda">
+                <div class="logo header-left-items">
+                    <span id="logo">
+                        <a href="index.html">
+                            <img src="/arquivos/logo_Estrela_Cultural.png" alt="Estrela Cultural"/>
+                        </a>
+                    </span>
+                    <span class="logo-texto">
+                        Nossas obras proporcionam novas experiências de leitura e prestigiam autores nacionais e as raízes culturais do Brasil.
+                    </span>
+                </div>
+                <div class="prateleira-produto_principal">
+                    <vtex:contentPlaceHolder id="prateleira_esquerda" />
+                </div>
+            </div>
+            <div class="topo-direita">
+                <div class="slide slide-principal">
+                    <vtex:contentPlaceHolder id="ec-slider_principal" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Escolha por Faixa Etaria -->
+        <section id="faixa-etaria">
+            <div class="container">
+                <div class="titulo">
+                    <h2 class="faixa-etaria"> Escolha por faixa etária: </h2>
+                </div>
+                <div class="faixa-content">
+                    <vtex.cmc:ecfiltroIdade />
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- A Historia da semana -->
+        <section id="historia-semana">
+            <div class="container">
+                <div class="titulo">
+                    <h2 class="historia-semana"> A História da Semana: </h2>
+                </div>
+                <div class="historia_produto">
+
+                </div>
+                <div class="historia_video">
+                    <img src="/arquivos/ec-video-banner.jpg" alt="Assistir vídeos" class="btn-modal" aria-haspopup="true"/>
+
+                    <!-- Modal Box -->
+                    <div class="mask" role="dialog"></div>
+                    <div class="elegant-modal" role="alert">
+                        <button class="close" role="button">X</button>
+                        <!-- Content -->
+                        <h1 class="title-modal"></h1>
+                       
+                        <div class="paragraph-modal">
+                            <iframe width="1198" height="674" src="https://www.youtube.com/embed/tL6S6o4XuKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        </div>
+                        <button class="content-button-close">FECHAR (:</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selecione por -->
+        <section id="selecione-por">
+            <div class="container">
+                <h2 class="selecione-por"> Selecione por:</h2>
+                <div class="trem-container">
+                    <vtex:contentPlaceHolder id="trem-animado" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Lancamentos -->
+        <section id="lancamentos">
+            <div class="container">
+                <div class="titulo">
+                    <h2 class="lancamentos"> Lançamentos: </h2>
+                </div>
+
+                <div class="slide prateleira-lancamentos">
+                    <vtex:contentPlaceHolder id="lancamentos" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Didaticos -->
+        <section id="didaticos">
+            <div class="container">
+                <div class="titulo">
+                    <h2 class="didaticos"> Didáticos: </h2>
+                </div>
+                <div class="slide prateleira-didaticos">
+                    <vtex:contentPlaceHolder id="didaticos" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Colecoes -->
+        <section id="colecoes">
+            <div class="container">
+                <div class="titulo">
+                    <h2 class="colecoes"> Coleções: </h2>
+                </div>
+                <div class="slide prateleira-colecoes">
+                    <vtex:contentPlaceHolder id="colecoes" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section id="depoimentos">
+            <div class="container">
+                <div class="titulo">
+                    <h2 class="depoimentos"> Depoimento dos Autores: </h2>
+                </div>
+                <div class="depoimentos">
+                    <vtex:contentPlaceHolder id="depoimentos" />
+                </div>
+            </div>
+        </section>
+
+        <!--<vtex:template id="ec-footer" />-->
+    </body>
+
+    <vtex:template id="ec-scripts" />
+</html>

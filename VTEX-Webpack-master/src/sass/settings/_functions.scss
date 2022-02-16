@@ -1,0 +1,4 @@
+// Transitions
+@mixin t($time) {
+	transition: all $time ease-in-out;
+}

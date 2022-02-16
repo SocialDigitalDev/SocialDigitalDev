@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<meta name="msapplication-TileColor" content="#EEE809"/>
+	<meta name="theme-color" content="#3F3948"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/arquivos/favicon-180x180.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/arquivos/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/arquivos/favicon-16x16.png" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="/arquivos/secrets.app.css" />
+	<link rel="stylesheet" href="/arquivos/secrets.plugins.css" />
+</head>
+
+<body class="product">
+	<div class="wrapper" id="app">
+		<header class="header">
+			<header-store />
+		</header><!-- /.header -->
+		
+		<div class="main">
+			<div class="breadcrumb">
+				<div class="shell">
+					<ul class="breadcrumb__list">
+						<li>
+							<a href="/" title="Home">
+								Home
+							</a>
+						</li>
+
+						<li>
+							<a href="#" title="Wishlist">
+								Wishlist
+							</a>
+						</li>
+					</ul><!-- /.breadcrumb__list -->
+				</div><!-- /.shell -->
+			</div><!-- /.breadcrumb -->
+			
+			<div class="wishlist__main">
+				<div class="shell">
+					<Wishlist />
+				</div><!-- /.shell -->
+			</div><!-- /.wishlist__main -->
+		</div><!-- /.main -->
+
+		<footer class="footer">
+			<footer-store />
+		</footer><!-- /.footer -->
+
+		<notifications group="app" position="bottom center"/>
+	</div><!-- /.wrapper -->
+
+	<script src="https://io.vtex.com.br/front-libs/jquery/1.8.3/jquery-1.8.3.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script> 
+	<script src="//io.vtex.com.br/vtex.js/2.0.0/vtex.min.js"></script>
+	<script src="//io.vtex.com.br/vtex.js/2.0.0/extended-ajax.min.js"></script>
+	<script src="//io.vtex.com.br/vtex.js/2.0.0/checkout.min.js"></script>
+
+	<script src="/arquivos/secrets.plugins.js"></script>
+	<script src="/arquivos/secrets.app.js"></script>
+</body>
+
+</html>

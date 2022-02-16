@@ -1,0 +1,101 @@
+.body-cart,
+.body-order-form {
+    .summary-template-holder {
+        .srp-container, .accordion-group,  .summary-coupon {
+            padding: 8px 24px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            margin: 16px 0;
+            border-radius: 0;
+            @media (min-width: 980px) {
+                margin: 0 0 16px 0;
+            }
+        }
+       
+        .summary-totalizers {
+            tr {
+                border-bottom: 1px solid $checkoutBorderColor;
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+            
+        }
+
+        // Valores
+        .totalizers {
+            padding: 0;
+        }
+        .summary-totalizers .accordion-group,
+        .mini-cart {
+            display: block;
+            font-size: $checkoutBaseFontSize;
+            color: inherit;
+
+            .table {
+                .empty {
+                    display: none;
+                }
+                th,
+                td {
+                    vertical-align: middle;
+                    padding: 8px 0;
+
+                    &.monetary {
+                        white-space: nowrap;
+                        text-align: right;
+                        color: inherit;
+                    }
+
+                    &.info {
+                        text-align: left;
+                        color: inherit;
+                    }
+                }
+                tfoot td {
+                    font-weight: bold;
+                    font-size: 20px;
+                    padding-top: 16px;
+                    padding-bottom: 0;
+                    border-top: 1px solid;
+                    font-family: $titleFontFamily;
+                }
+            }
+        }
+    }
+
+    .mini-cart {
+        .info {
+            float: none;
+        }
+    }
+
+    .link-cart {
+        width: 100%;
+        padding: 8px 0;
+        color: $checkoutColorPrimary;
+    }
+}
+
+// Choose more
+
+.link-cart a,
+.link-choose-more-products {
+    @extend .checkoutBtn--outline;
+}
+.link-cart a {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+}
+.cart-links-bottom {
+    @media (min-width: 768px) and (max-width: 979px) {
+        width: 40.05524861878453%;
+    }
+    @media (min-width: 980px) {
+        display: block;
+        width: 33%;
+        margin: 0 0 0 auto;
+    }
+}
+ 

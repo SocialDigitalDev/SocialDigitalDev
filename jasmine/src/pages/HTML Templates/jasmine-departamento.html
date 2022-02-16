@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+    <vtex:metaTags/>
+    <vtex:template id="jasmine-styles" />
+    <link href="/arquivos/infinityScroll.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+    <vtex:template id="jasmine-header" />
+    <main>
+        <!-- Estrutura Breadcrumb -->
+        <section>
+            <div class="container bread">
+                <div class="wrapper">
+                    <vtex.cmc:BreadCrumb />
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorias -->
+        <section class="main_categorias">
+            <div class="wrapper">
+                <div class="categorias-section">
+                    <ul class="categorias_box">
+                        <vtex.cmc:jasminecategoriasHome/>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container pagDepartamento">
+                <div class="wrapper">
+                    <aside>
+                        <div class="filtrosDepartamento">
+                            <span class="btn-filtro"> Filtros </span>
+                            <vtex.cmc:searchNavigator/>
+                        </div>
+                    </aside>
+
+                    <div class="conteudo-categoria">
+                        <div class="resultadoDepartamento">
+                            <vtex.cmc:searchResult layout="7a2a2ab7-facb-4d5f-a4e4-263c4ce26b0a" itemCount="12" columnCount="12" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+         <!--Receitas para cada momento -->
+        <section class="main_receitas">
+            <div class="wrapper mosaico-receitas">
+                <div class="titulo-prateleira">
+                    <h2> Receitas para cada momento </h2>
+                </div>
+                <vtex:contentPlaceHolder id="Receitas para cada momento" />
+            </div>
+        </section>
+        
+        <!-- Descricao do Departamento para SEO -->
+        <section>
+            <div class="container descricaoDetalhada">
+                <div class="wrapper">
+                    <vtex:contentPlaceHolder id="Jasmine-TituloDescricaoDetalhada" />
+                    <vtex:contentPlaceHolder id="Jasmine-DescricaoDetalhada" />
+                </div>
+            </div>
+        </section>
+        
+    </main>
+     <vtex:template id="jasmine-footerr" />  
+    <vtex:template id="jasmine-scripts" />
+
+</body>
+
+</html>

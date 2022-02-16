@@ -1,0 +1,9 @@
+.footer .footer__copyright .cols .nav__list .nav__item{
+    &:first-child{
+        .logo{
+            img{
+                width: 90px;
+            }
+        }
+    }
+}

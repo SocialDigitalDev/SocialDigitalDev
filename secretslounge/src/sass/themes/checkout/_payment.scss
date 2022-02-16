@@ -1,0 +1,92 @@
+.body-cart,
+.body-order-form {
+ 
+    .payment-data {
+        .gift-card-section,
+        .steps-view {
+            background: #F5EFE6;
+        }
+        .gift-card-section {
+            margin-bottom: 24px;
+            margin-top: 0;
+            margin-left: 0; 
+        }
+    }
+
+    .payment-group,
+    .steps-view {
+        margin-top: 32px;
+    }
+
+    @media (min-width: 1024px) {
+        .payment-group {
+            width: 25%;
+        }
+        .steps-view {
+            width: 75%;
+        }
+    }
+
+    form[data-event='finishPayment'] .steps-view {
+        border: 1px solid $checkoutBorderColor;
+        border-radius: 0;
+        padding: 16px 24px;
+        background: $checkoutBodyBackground;
+    }
+
+    .payment-group {
+        .payment-group-list-btn {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            @media (min-width: 768px) {
+                display: block;
+            }
+        }
+
+        .payment-group-item {
+            width: 30%;
+            flex: 0 0 30%;
+            text-align: center;
+            margin: 4px 1%;
+            padding: 0 4px;
+            border-radius: 0;
+            border: 1px solid $checkoutBorderColor;
+            &:hover,
+            &:active {
+                text-decoration: none;
+                color: inherit;
+            }
+            &.active {
+                background: $checkoutBorderColor;
+            }
+            @media (min-width: 768px) {
+                width: 100%;
+                margin: 0 0 8px 0;
+            }
+        }
+
+        .payment-group-item-text {
+            background-position: 50% 4px;
+            background-size: auto 20px !important;
+            padding: 36px 0 8px 0;
+            text-align: center;
+            line-height: 1;
+            @media (min-width: 768px) {
+                text-align: left;
+                padding: 12px 4px 12px 42px;
+                background-position: 4px 50%;
+            }
+        }
+    }
+
+    .payment-submit-wrap {
+        button {
+            width: 100%;
+        }
+    }
+
+    .payment-billing-address-postalCode {
+        max-width: 160px;
+    }
+}

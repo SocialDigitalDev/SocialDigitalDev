@@ -1,0 +1,12 @@
+.body-cart,
+.body-order-form {
+    .mini-cart {
+        background: $minicartBackground;
+        text-shadow: none;
+        .summary-template-holder,
+        h2 {
+            color: $checkoutColorPrimary;
+            background: $minicartBackground;
+        }
+    }
+}

@@ -1,0 +1,343 @@
+/* GAMEFICATION - TEMPORÁRIO */
+
+@-webkit-keyframes rotating
+/* Safari and Chrome */
+
+    {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+div#quiz {
+    max-width: 548px;
+    background: url('/arquivos/background-game.jpg') no-repeat;
+    background-size: contain;
+    height: 600px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    top: 13%;
+    position: relative;
+    box-shadow: 0 0 20px 10px #fb86be;
+}
+
+.lightbox {
+    position: fixed;
+    background: rgb(0 0 0 / 74%);
+    width: 100%;
+    height: 102%;
+    top: -16px;
+    z-index: 9999;
+    left: 0;
+    display: none;
+}
+
+.estrelas:before {
+    width: 100px;
+    height: 100px;
+    content: "";
+    background: url('/arquivos/estrela-roxa.png') no-repeat;
+    background-size: contain;
+    display: block;
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+}
+
+.estrelas:after {
+    width: 100px;
+    height: 100px;
+    content: "";
+    background: url('/arquivos/estrela-azul.png') no-repeat;
+    background-size: contain;
+    display: block;
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+}
+
+.estrelas {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.estrelas.topo {
+    position: absolute;
+    top: 0;
+}
+
+.estrelas.fundo {
+    position: absolute;
+    bottom: 0;
+}
+
+#quiz-start-screen {
+    display: flex;
+    margin-top: 2em;
+}
+
+#quiz a.close-button {
+    cursor: pointer;
+    color: #000;
+    background: #00eff8;
+    padding: 25px 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#quiz-start-btn {
+    background: #b315d6;
+    border-radius: 0;
+    padding: 25px 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#quiz-start-screen {
+    display: flex;
+    margin-top: 2em;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+}
+
+#quiz-header img {
+    max-width: 250px;
+}
+
+#quiz-header h1 {
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-top: 21px;
+}
+
+#quiz-header img.blinker-img {
+    max-width: 400px;
+}
+
+div#quiz-counter {
+    color: #fff;
+}
+
+.answers a {
+    background: transparent;
+    border: 1px solid #fff;
+    box-shadow: 0 0 6px 0px #fff;
+    border-radius: 3px;
+    color: #fff;
+}
+
+div#quiz-controls {
+    background: #e5006d;
+}
+
+div#quiz-controls {
+    background: #e5006d;
+    position: relative;
+    z-index: 99999;
+    border-radius: 0;
+}
+
+#quiz-buttons a {
+    border-radius: 0;
+    margin-top: 15px;
+    color: #000;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px #fff;
+}
+
+.question-container {
+    max-width: 365px;
+    position: relative;
+    z-index: 99999;
+}
+
+p.question {
+    color: #fff;
+    text-align: center;
+    margin: 15px 0;
+}
+
+p.show-results {
+    color: #fff;
+    font-size: 17px;
+    background: #b315d6;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    box-shadow: 0 0 11px #e157ff;
+    cursor: pointer;
+}
+
+div#quiz-results-screen {
+    max-width: 350px;
+}
+
+#quiz-response {
+    color: #fff;
+}
+
+p.message-show {
+    color: #fff;
+    margin: 2em 0;
+    display: flex;
+    font-size: 13px;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+}
+
+span.cupom-show {
+    display: block;
+    color: #fff;
+    border: 2px solid;
+    padding: 10px;
+    font-size: 30px;
+    margin-top: 17px;
+    max-width: 270px;
+    box-shadow: 0 0 10px #fff;
+}
+
+#quiz-header img.blinker-img {
+    max-width: 400px;
+}
+
+p.fechar-game {
+    color: #000;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #00ecf5;
+    max-width: 115px;
+    margin: auto;
+    padding: 8px 0px;
+    box-shadow: 0 0 18px #00ecf5;
+    cursor: pointer;
+}
+
+#quiz-results {
+    font-size: 0;
+    margin-top: 10px;
+}
+
+@media (max-width: 500px) {
+    div#quiz {
+        height: 462px;
+    }
+    #quiz-start-btn {
+        padding: 15px 10px;
+    }
+    #quiz a.close-button {
+        padding: 15px 15px;
+    }
+    .answers {
+        max-width: 275px;
+        margin: auto;
+    }
+    .answers a {
+        font-size: 13px;
+    }
+    p.question {
+        font-size: 15px;
+        max-width: 250px;
+        margin: 5px 0;
+    }
+    #quiz-header img.blinker-img {
+        max-width: 280px;
+    }
+    #quiz-header h1 {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+    #quiz-header img {
+        max-width: 170px;
+    }
+    span.cupom-show {
+        font-size: 18px;
+        max-width: 145px;
+    }
+}
+
+@media (max-width: 360px) {
+    div#quiz {
+        height: 405px;
+    }
+    .estrelas:before {
+        width: 70px;
+        height: 70px;
+    }
+    .estrelas:after {
+        width: 70px;
+        height: 70px;
+    }
+    p.question {
+        font-size: 13px;
+    }
+    .answers a {
+        font-size: 12px;
+    }
+    #quiz-header img.blinker-img {
+        max-width: 240px;
+    }
+    #quiz-header h1 {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+    #quiz-buttons a {
+        font-size: 13px;
+    }
+    div#quiz-controls {
+        background: rgb(229 0 109 / 48%);
+    }
+    #quiz-response {
+        font-size: 12px;
+    }
+    div#quiz-counter {
+        font-size: 12px;
+    }
+    p.message-show {
+        font-size: 13px;
+    }
+    span.cupom-show {
+        font-size: 15px;
+        max-width: 124px;
+        padding: 5px;
+    }
+    p.show-results {
+        font-size: 14px;
+        padding: 5px 15px;
+    }
+}
+
+/* GAMEFICATION - TEMPORÁRIO - FIM */

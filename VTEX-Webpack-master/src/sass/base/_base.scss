@@ -1,0 +1,76 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+html{
+	@include f(16);
+}
+
+body {
+	font-family: $montserrat;
+	background-color: var(--color-primary);
+	overflow-x: hidden;
+}
+
+#ajaxBusy{
+	display: none !important;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	outline: 0;
+	color: initial;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+button{
+	outline: 0;
+}
+
+input{
+	outline: 0;
+	
+	&:focus{
+		box-shadow: none;
+	}
+}
+
+.wrapper{
+	padding: 0;
+	width: 100%;
+	padding: 0 15px;
+	min-height: initial;
+	
+	@include d(sm){
+		width: 100%;
+		max-width: 540px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	
+	@include d(md){
+		max-width: 720px;
+	}
+
+	@include d(lg){
+		max-width: 960px;
+	}
+
+	@include d(xl){
+		max-width: 1140px;
+	}
+
+	@include d(xxl){
+		max-width: 1320px;
+	}
+
+}

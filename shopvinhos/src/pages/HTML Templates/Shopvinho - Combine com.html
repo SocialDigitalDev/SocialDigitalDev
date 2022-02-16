@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+    <title> Shop Vinho </title>
+    <vtex:metaTags/>
+    <vtex:template id="Shopvinho - Styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <vtex:template id="Shopvinho - Header"/>
+    <main>
+        <section>
+            <div class="container bread">
+                <div class="wrapper">
+                    <ul>
+                        <li class="home"><a href="/"> Home </a></li>
+                        <li> <vtex:contentPlaceHolder id="Shopvinho - bread" /> </li>
+                    </ul>
+                </div>
+            </div>
+        </section>      
+        <section class="page_ofertas">
+            <div class="container">
+                <div class="wrapper ofertas_banners">
+                    <vtex:contentPlaceHolder id="Banners - Combinar Topo"/>
+                </div>
+            </div>
+        </section>      
+        <!-- Estrutura Breadcrumb -->
+        <section>
+            <div class="container bread">
+                <div class="wrapper">
+                    <vtex.cmc:BreadCrumb />
+                </div>
+            </div>
+        </section>
+
+        <!-- Ofertas Kits -->
+        <section class="main_ofertas-kits">
+            <div class="wrapper">
+                <div class="prod-left">
+                    <vtex:contentPlaceHolder id="Banner - Ofertas Kits"/>
+                </div>
+                <div class="prod-right shopvinho-prateleira">
+                    <vtex:contentPlaceHolder id="Prateleira - Ofertas Kits"/>   
+                </div>
+            </div>
+        </section>
+
+        <!-- Ofertas Combinar com -->
+        <section class="main_ofertas-combinar">
+            <div class="wrapper">
+                <div class="prod-left">
+                    <vtex:contentPlaceHolder id="Banner - Ofertas Combinar"/>
+                </div>
+                <div class="prod-right shopvinho-prateleira">
+                    <vtex:contentPlaceHolder id="Prateleira - Ofertas Combinar"/>   
+                </div>
+            </div>
+        </section>
+
+        <!-- Ofertas Ultimas garrafas -->
+        <section class="main_ultimas-garrafas">
+            <div class="wrapper">
+                <div class="prod-left">
+                    <vtex:contentPlaceHolder id="Banner - Ultimas Garrafas"/>
+                </div>
+                <div class="prod-right shopvinho-prateleira">
+                    <vtex:contentPlaceHolder id="Prateleira - Ultimas Garrafas"/>   
+                </div>
+            </div>
+        </section>    
+
+    </main>
+    <vtex:template id="Shopvinho - Footer" />  
+    <vtex:template id="Shopvinho - Scripts" />
+</body>
+</html>

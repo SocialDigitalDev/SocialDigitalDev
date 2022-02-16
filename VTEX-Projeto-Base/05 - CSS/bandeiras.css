@@ -1,0 +1,45 @@
+/* Bandeiras de Pagamento */
+		.icon-hiper, .pag-amex, .pag-aura, .pag-banrisul, .pag-bbrasil, 
+		.pag-boleto, .pag-boleto-banrisul, .pag-boleto-bbrasil, .pag-boleto-bradesco, .pag-boleto-itau, 
+		.pag-bradesco, .pag-caixa, .pag-correio, .pag-deposito, .pag-dinners, 
+		.pag-discover-card, .pag-elo, .pag-faturamento, .pag-hipercard, .pag-itau, 
+		.pag-jcb, .pag-master, .pag-mercadopago, .pag-moip, .pag-pagdigital, 
+		.pag-pagseguro, .pag-sorocred, .pag-thawte, .pag-unibanco, .pag-verifiedvisa, 
+		.pag-visa, .pag-visaelectron, .rodape-pag-cielo, .rodape-pag-maestro, .pag-gratuito
+		{ display: inline-block; background: url('/arquivos/pgto-sprite.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+		 
+		.icon-hiper { background-position: -0px -0px; width: 50px; height: 33px; }
+		.pag-amex { background-position: -0px -33px; width: 50px; height: 33px; }
+		.pag-aura { background-position: -0px -66px; width: 50px; height: 33px; }
+		.pag-banrisul { background-position: -0px -99px; width: 50px; height: 33px; }
+		.pag-bbrasil { background-position: -0px -132px; width: 50px; height: 33px; }
+		.pag-boleto { background-position: -0px -165px; width: 50px; height: 33px; }
+		.pag-boleto-banrisul { background-position: -0px -198px; width: 50px; height: 33px; }
+		.pag-boleto-bbrasil { background-position: -0px -231px; width: 50px; height: 33px; }
+		.pag-boleto-bradesco { background-position: -0px -264px; width: 50px; height: 33px; }
+		.pag-boleto-itau { background-position: -0px -297px; width: 50px; height: 33px; }
+		.pag-bradesco { background-position: -0px -330px; width: 50px; height: 33px; }
+		.pag-caixa { background-position: -0px -363px; width: 50px; height: 33px; }
+		.pag-correio { background-position: -0px -396px; width: 50px; height: 33px; }
+		.pag-deposito { background-position: -0px -429px; width: 50px; height: 33px; }
+		.pag-dinners { background-position: -0px -462px; width: 50px; height: 33px; }
+		.pag-discover-card { background-position: -0px -495px; width: 50px; height: 33px; }
+		.pag-elo { background-position: -0px -528px; width: 50px; height: 33px; }
+		.pag-faturamento { background-position: -0px -561px; width: 50px; height: 33px; }
+		.pag-hipercard { background-position: -0px -594px; width: 50px; height: 33px; }
+		.pag-itau { background-position: -0px -627px; width: 50px; height: 33px; }
+		.pag-jcb { background-position: -0px -660px; width: 50px; height: 33px; }
+		.pag-master { background-position: -0px -693px; width: 50px; height: 33px; }
+		.pag-mercadopago { background-position: -0px -726px; width: 50px; height: 33px; }
+		.pag-moip { background-position: -0px -759px; width: 50px; height: 33px; }
+		.pag-pagdigital { background-position: -0px -792px; width: 50px; height: 33px; }
+		.pag-pagseguro { background-position: -0px -825px; width: 50px; height: 33px; }
+		.pag-sorocred { background-position: -0px -858px; width: 50px; height: 33px; }
+		.pag-thawte { background-position: -0px -891px; width: 50px; height: 33px; }
+		.pag-unibanco { background-position: -0px -924px; width: 50px; height: 33px; }
+		.pag-verifiedvisa { background-position: -0px -957px; width: 50px; height: 33px; }
+		.pag-visa { background-position: -0px -990px; width: 50px; height: 33px; }
+		.pag-visaelectron { background-position: -0px -1023px; width: 50px; height: 33px; }
+		.rodape-pag-cielo { background-position: -0px -1056px; width: 50px; height: 33px; }
+		.rodape-pag-maestro { background-position: -0px -1089px; width: 50px; height: 33px; }
+		.pag-gratuito { background-position: -0px -1122px; width: 49px; height: 33px; }

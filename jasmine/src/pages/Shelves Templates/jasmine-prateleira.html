@@ -1,0 +1,104 @@
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+    
+<div class="jasmine-product">
+	<div class="shelf-item__flags">
+		<div class="flag-discount">
+			#if($product.DiscountHightLight != '')
+				<div class='flags-promo'>
+					$product.DiscountHightLight
+				</div>
+			#end
+		</div>
+
+		<div class="flag-promotion">
+			$product.HightLight
+		</div>
+
+		<div class="flag-percentage">
+			#if ($product.HasBestPrice)
+				<div class="flag-desconto">
+					<span class="porcentagem">$product.ListPriceMinusBestPriceInPercent</span>
+					<!--<span class="texto-flag">OFF</span>-->
+				</div>
+			#end
+		</div>
+	</div>
+	<div class="jasmine-image">
+		<a class="jasmine-productImage" title="$escapedName" href="$uri">
+			<!--$product.GetImageTag(30)-->
+			$product.GetImageTag(550,695)
+		</a>
+	</div>
+
+	#if ($product.IsInStock)
+		<div class="jasmine-produto-dados">
+				
+			$product.HightLight
+			
+			<!-- Flag Topo -->
+			#if ($product.HasBestPrice)
+				<div class="flag-desconto">
+						<span class="porcentagem">$product.ListPriceMinusBestPriceInPercent</span>
+					<!--<span class="texto-flag">OFF</span>-->
+				</div>
+				#end
+			#if($product.DiscountHightLight != '')
+				<div class='flags-promo'>
+					$product.DiscountHightLight
+				</div>
+				#end
+			<h2>
+				<a title="$escapedName" href="$uri">
+					$product.Name
+				</a>
+			</h2>
+			<div class="jasmine-price">
+				<a title="$escapedName" href="$uri">
+					#if ($product.HasBestPrice)
+						<span class="oldPrice">
+							$product.ListPrice
+						</span> 
+						<span class="jasmine-bestPrice">
+							<strong> $product.BestPrice </strong>
+						</span>
+					#else
+						<span class="jasmine-bestPrice">
+							<strong>$product.BestPrice </strong>
+						</span>                    
+					#end
+					<span class="jasmine-installment">
+						#if ($product.NumbersOfInstallment > 1)
+							ou ${product.NumbersOfInstallment}X de $product.InstallmentValue sem juros
+						#else
+							<span></span>
+						#end
+					</em> 
+				</a>
+			</div>
+			<div class="jasmine-hover-content">
+				<div class="qtdPrateleira">
+            		<span class="btnDec">  </span>
+            		<input class="qtdVal" value="1" type="text" tabindex="0">
+            		<span class="btnAcr">  </span>
+        		</div>
+				<div class="jasmine-buy"> 
+					$product.BottomBuyAsynchronous
+					<!-- <a class="jasmine-buy-button" title="$escapedName" href="$uri">Comprar</a> -->
+				</div>
+			</div>
+		</div>
+	#else
+	<p class="jasmine-outOfStock">
+			<a title="$escapedName" href="$uri">
+			<span class="jasmine-icon"></span>
+			<span class="jasmine-text">
+				Produto Esgotado
+				<small>Avise-me quando chegar</small>
+			</span>
+			</a>
+	</p> 
+	#end
+</div>

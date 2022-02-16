@@ -1,0 +1,1390 @@
+main.ls-produto-main {
+    section {
+        .wrapper {
+            margin: auto;
+            max-width: 1366px;
+            padding: 0 32px; 
+            @include d(celularLarge){
+                padding: 0;
+            }
+        }
+        .produto-all {
+            @include flexbox;
+            @include flex-wrap(wrap);
+            margin: 0 auto 30px;
+            padding: 45px 0 0 0;
+            @include d(hdplus){
+                padding: 45px 2em;
+            }
+            @include d(ipadPro){
+                padding: 45px 1em;
+            }
+            .bread{
+                width: 100%;
+                padding: 10px 20px;
+                margin-bottom: 20px;
+                @include d(celularLarge){
+                    padding: 10px 0;
+                }
+                .bread-crumb {
+                    ul {
+                        @include flexbox;
+                        @include justify-content(flex-start);
+                        @include align-items(center);
+                        li {
+                            &:after {
+                                // content: "/";
+                                // margin: 0 3px;
+                                color: var(--color-blue);
+                                content: "\e934";
+                                font-family: lightsweet;
+                                font-weight: bold;
+                                font-size:10px;
+                                display: inline-block;
+                                margin: 0;
+                                height: 10px;
+                                width: 10px;
+                                margin: 0 5px;
+                            }
+                            a {
+                                font-size: 13px;
+                                color: var(--color-blue);
+                            }
+                            &:last-child {
+                                font-weight: 600;
+                                &:after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #produtoDiv-esquerda{
+                width: 60%;
+                position: relative;
+                @include d(ipad){
+                    width: 100%;
+                }
+                figure {
+                    .img-produto {
+                        .apresentacao {
+                            #show {
+                                @include flexbox;
+                                @include d(ipad){
+                                    @include flex-flow(column);
+                                }
+                                #include {
+                                    order: 2;
+                                    width: 100%;
+                                    margin-left: 5em;
+                                    @include d(ipadPro){
+                                        margin-left: 2em;
+                                    }
+                                    @include d(ipad){
+                                        border-left: none;
+                                        margin-left: 0;
+                                        order: 1;
+                                        pointer-events: none;
+                                    }
+                                    #image {
+                                        text-align: center;
+                                        border: 1px solid #A5A5A5;
+                                        a.image-zoom {
+                                            .zoomPad {
+                                                width: 100%;
+                                                position: relative;
+                                                float: none;
+                                                z-index: 1;
+                                                cursor: crosshair;
+                                                overflow: hidden !important;
+                                                .zoomWindow {
+                                                    top: 0 !important;
+                                                    left: 0 !important;
+                                                    width: 1000px;
+                                                    height: 1000px;
+                                                    overflow: hidden;
+                                                    background: var(--color-white);
+                                                }
+                                                img#image-main {
+                                                    max-width: 600px;
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                ul.thumbs {
+                                    @include d(ipad){
+                                        order: 2;
+                                        margin-top: 15px;
+                                    }
+                                    li {
+                                        a {
+                                            img {
+                                                max-width: 130px;
+                                                height: 130px;
+                                                border: 1px solid #A5A5A5;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .value-field.Validade{
+                    font-size: 13px;
+                    width: 90px;
+                    text-align: center;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 9;
+                    background: var(--color-blue-dark);
+                    color: var(--color-white);
+                }
+            }
+            #produtoDiv-direita {
+                width: 40%;
+                max-width: 650px;
+                @include flexbox;
+                @include flex-flow(column);
+                padding: 0 0 0 2em;
+                margin: 0;
+                @include d(ipadPro){   
+                    padding: 0px 2em;
+                }
+                @include d(ipad){
+                    width: 100%;
+                    padding: 0;
+                    padding-top: 2em;
+                    border-left: none;
+                    border-top: 1px solid var(--color-gray-line);
+                    margin-top: 2em;
+                }
+                h1.nome-prod {
+                    margin-bottom: 1em;
+                    .productName {
+                        font-size: 25px;
+                        line-height: 30px;
+                        color: var(--color-black);
+                        text-transform: capitalize;
+                    }
+                }
+                .sep{
+                    height:3px;
+                    width: 100px;
+                    background-color: var(--color-gray);
+                }
+                span.cod-prod {
+                    .skuReference {
+                        font-size: 13px;
+                        color: var(--color-gray-nav);
+                        margin-bottom: 1em;
+                    }
+                }
+                .detalhes-prod {
+                    padding: 0;
+                    #descricao-produto{
+                        .container-center{
+                            h2{
+                                font-size: 14px;
+                            }
+                            .productDescription{
+                                font-size: 14px;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+                .variantes-sku {
+                    .sku-selector-container {
+                        ul {
+                            li.specification {
+                                font-size: 13px;
+                                font-weight: 600;
+                                margin-bottom: 1em;
+                            }
+                            li.select {
+                                margin-bottom: 1em;
+                                span {
+                                    input {
+                                        display: none;
+                                    }
+                                    label {
+                                        position: relative;
+                                        min-width: 50px;
+                                        text-align: center;
+                                        border: 2px solid var(--color-yellow);
+                                        padding: 10px;
+                                        cursor: pointer;
+                                        margin-right: 10px;
+                                        border-radius: 10px;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        &.checked {
+                                            background: var(--color-yellow);
+                                        }
+                                        &.item_unavailable {
+                                            background: var(--color-bg-newsletter);
+                                            color: var(--color-black);
+                                            &:before {
+                                                content: "";
+                                                width: 1px;
+                                                height: 30px;
+                                                background: var(--color-red-clean);
+                                                transform: rotate(-45deg);
+                                                position: absolute;
+                                                top: 2px;
+                                                left: 50%;
+                                            }
+                                            &:after {
+                                                content: "";
+                                                width: 1px;
+                                                height: 30px;
+                                                background: var(--color-red-clean);
+                                                transform: rotate(45deg);
+                                                position: absolute;
+                                                top: 2px;
+                                                left: 50%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .plugin-preco {
+                    .productPrice {
+                        .descricao-preco {
+                            margin: 1em 0;
+                            display: block;
+                            float: left;
+                            .valor-de {
+                                font-style: normal;
+                                font-size: 0;
+                                margin-bottom: 10px;
+                                strong.skuListPrice {
+                                    font-size: 26px;
+                                    font-weight: 700;
+                                    text-decoration: line-through;
+                                    color: #CFCFCF;
+                                }
+                            }
+                            .valor-por {
+                                font-style: normal;
+                                font-size: 0;
+                                strong.skuBestPrice {
+                                    font-size: 45px;
+                                    font-weight: 800;
+                                    color: var(--color-blue);
+                                    margin-top: 20px;
+                                }
+                            }
+                            .valor-dividido {
+                                span {
+                                    span {
+                                        font-size: 0;
+                                        font-style: normal;
+                                        margin-top: 10px;
+                                        label.skuBestInstallmentNumber {
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            color: var(--color-black);
+                                            span.x {
+                                                font-size: 15px;
+                                                color: var(--color-black);
+                                                &:after {
+                                                    content: "de";
+                                                    margin: 0 5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                strong {
+                                    font-size: 15px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    color: var(--color-black);
+                                }
+                            }
+                        }
+                        .preco-a-vista,
+                        .economia-de {
+                            display: none !important;
+                        }
+                    }
+                }
+                .produto-buy__container {
+                    @include flexbox;
+                    @include justify-content(flex-start);
+                    padding-bottom: 2em;
+                    margin-bottom: 2em;
+                    @include d(ipadPro){
+                        @include flex-wrap(wrap);
+                        @include align-items(center);
+                    }
+                    @include d(ipad){
+                        @include flex-wrap(nowrap);
+                        @include align-items(center);
+                    }
+                    .ls-produto__buy-quant {
+                        @include d(ipadPro){
+                            width: 30%;
+                        }
+                        @include d(ipad){
+                            width: 110px;
+                        }
+                        .qtdPrateleira {
+                            border: 1px solid var(--color-blue);
+                            max-width: 100px;
+                            @include flexbox;
+                            @include flex-flow(center);
+                            @include justify-content(center);
+                            @include d(ipadPro){
+                                max-width: 100%;
+                                justify-content: left;
+                                @include justify-content(flex-start);
+                            }
+                            @include d(ipad){
+                                max-width: 110px;
+                            }
+                            .btnDec {
+                                cursor: pointer;
+                                padding: 15px;
+                                padding-right: 0;
+                                &:before {
+                                    content: "-";
+                                    font-weight: 600;
+                                }
+                            }
+                            input.qtdVal {
+                                max-width: 65px;
+                                padding: 15px 0;
+                                text-align: center;
+                                font-weight: 600;
+                                @include d(ipadPro){
+                                    max-width: 50%;
+                                }
+                                @include d(ipad){
+                                    max-width: 65px;
+                                }
+                            }
+                            .btnAcr {
+                                cursor: pointer;
+                                padding: 15px;
+                                padding-left: 0;
+                                &:before {
+                                    content: "+";
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                    .ls-produto__buy-button {
+                        margin-left: 20px;
+                        @include d(ipadPro){
+                            margin-left: 0;
+                            margin-top: 10px;
+                            width: 80%;
+                        }
+                        @include d(ipad){
+                            margin-left: 5px;
+                            margin-top: 0;
+                            width: 230px;
+                        }
+                        a.buy-button {
+                            width: 215px;
+                            background: var(--color-blue);
+                            border-radius: 50px;
+                            text-align: center;
+                            padding: 15px;
+                            font-weight: 600;
+                            color: var(--color-white);
+                            @include d(ipadPro){
+                                width: 100%;
+                            }
+                            @include d(ipad){
+                                max-width: 300px;
+                            }
+                        }
+                        .portal-notify-me-ref {
+                            width: 100%;
+                            padding: 0 1em;
+                            fieldset{
+                                position: relative;
+                                p{
+                                    font-size: 13px;
+                                }
+                                #notifymeClientName, #notifymeClientEmail {
+                                    padding: 5px;
+                                    border: 1px solid var(--color-gray-line);
+                                    margin-top: 5px;
+                                    font-size: 13px;
+                                    width: 98%;
+                                    padding-right: 0;
+                                }
+                                #notifymeButtonOK {
+                                    text-transform: uppercase;
+                                    font-size: 16px;
+                                    background: var(--color-black);
+                                    color: var(--color-white);
+                                    font-weight: 600;
+                                    padding: 10px;
+                                    height: auto;
+                                    cursor: pointer;
+                                    width: 100%;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+                    }
+                    .add-wishlist{
+                        margin-left: 20px;
+                        display: none;
+                        @include d(ipadPro){
+                            margin-left: 10px;
+                        }
+                        .icon-favoritos {
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 50%;
+                            background-color: var(--color-blue);
+                            color: var(--color-white);
+                            display: flex;
+                            &:before {
+                                content: "\e931";
+                                font-family: lightsweet;
+                                line-height: 50px;
+                                font-size: 28px;
+                                font-style: normal;
+                                text-align: center;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .calc-frete {
+                    padding-bottom: 1em;
+                    margin-bottom: 1em;
+                    .cep {
+                        h3 {
+                            font-size: 14px;
+                            color: var(--color-gray);
+                            font-weight: 600;
+                        }
+                        p.frete {
+                            display: none;
+                        }
+                        #calculoFrete {
+                            .contentWrapper {
+                                .header {
+                                    h1,
+                                    h2,
+                                    .close {
+                                        display: none;
+                                    }
+                                }
+                                #ctl00_Conteudo_upnlContent {
+                                    .content {
+                                        fieldset {
+                                            border: 1px solid #81c3e9;
+                                            border-radius: 50px;
+                                            @include flexbox;
+                                            @include align-items(center);
+                                            margin: 0.8em 0;
+                                            width: 60%;
+                                            height: 50px;
+                                            @include d(ipad){
+                                                width: 100px;
+                                            }
+                                            label.prefixo {
+                                                @include flexbox;
+                                                flex-flow: column;
+                                                font-size: 0;
+                                                input {
+                                                    background: var(--color-white);
+                                                    padding: 0;
+                                                    font-size: 16px;
+                                                    margin-left: 15px;
+                                                    @include d(ipad){
+                                                        max-width: 130px;
+                                                    }
+                                                }
+                                            }
+                                            .quantity {
+                                                display: none;
+                                            }
+                                            .frete-calcular {
+                                                right: 0;
+                                                input {
+                                                    padding: 12px 40px;
+                                                    background: var(--color-blue);
+                                                    border-radius: 50px;
+                                                    cursor: pointer;
+                                                    font-size: 15px;
+                                                    color: var(--color-white);
+                                                    font-weight: 600;
+                                                    height: 50px;
+                                                }
+                                            }
+                                            .cep-busca {
+                                                display: none;
+                                                width: 100%;
+                                                float: left;
+                                                a{
+                                                    font-size: 13px;
+                                                    font-weight: 600;
+                                                    text-decoration: underline;
+                                                    margin-top: 5px;
+                                                }
+                                            }
+                                        }
+                                        .freight-values{
+                                            th{
+                                                text-align: left;
+                                                font-size: 13px;
+                                                border-bottom: 1px solid var(--color-black);
+                                                padding: 5px;
+                                            }
+                                            td{
+                                                font-size: 13px;
+                                                padding: 5px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .footer{
+                                    .close{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .detalhes-prods{
+                    .desc-prod{
+                        h2{
+                            margin-bottom: 20px;
+                        }
+                        .productDescription{
+                            color: var(--color-gray);
+                            font-size: 14px;
+                            line-height: 25px;
+                            max-height: 80px;
+                            height: 10%;
+                            @include t(.3s);
+                            overflow-y: hidden;
+                            &.descAberto{
+                                max-height: 900px;
+                                height: 100%;
+                            }
+                        }
+                        .seeMore {
+                            position: relative;
+                            top: 25px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .prod-tabela{
+                width: 100%;
+                @include flexbox;
+                @include flex-wrap(wrap);
+                margin: 0 auto 30px;
+                padding: 45px 0 0 0;
+                background-color: var(--color-white);
+                .tabelasCentral{
+                    border-collapse: collapse;
+                    .tabelaNutricional{
+                        th.name-field.Informacoes-Nutricionais,
+                        td.value-field.Informacoes-Nutricionais{
+                            display:none;
+                        }
+                        table.Informacoes-Nutricionais{
+                            width: 100%;
+                            tr{
+                                padding: 15px 10px;
+                            }
+                            th{
+                                padding: 15px 10px;
+                            }
+                            tr:nth-child(2n+1) {
+                                background: #f6f6f6;
+                            }
+                            tr:nth-child(2n) {
+                                background: #fff;
+                            }
+                        }
+                    }
+                }
+                #caracteristicas{
+                    @include flexbox;
+                    @include justify-content(center);
+                    h4.Especificacoes{
+                        display: none;
+                    }
+                    table.Especificacoes{
+                        tbody{
+                            tr.even{
+                                @include flexbox;
+                                @include flex-flow(column);
+                                max-width: 700px;
+                                th.Tabela-Nutricional{
+                                    display: none;
+                                }
+                                td.Tabela-Nutricional{
+                                    table{
+                                        tbody{
+                                            tr{
+                                                &:nth-of-type(1){
+                                                    td{
+                                                        border: none;
+                                                        padding: 0;
+                                                        p{
+                                                            &:nth-of-type(1){
+                                                                background: var(--color-blue);
+                                                                height: 50px;
+                                                                text-align: center;
+                                                                @include flexbox;
+                                                                @include align-items(center);
+                                                                @include justify-content(center);
+                                                                color: var(--color-white);
+                                                                font-size: 20px;
+                                                                font-weight: 600;
+                                                                @include d(celularMedium){
+                                                                    font-size: 16px;
+                                                                }
+                                                            }
+                                                            &:nth-of-type(2){
+                                                                border: 1px solid var(--color-gray-line);
+                                                                height: 50px;
+                                                                text-align: center;
+                                                                @include flexbox;
+                                                                @include align-items(center);
+                                                                @include justify-content(center);
+                                                                font-weight: 600;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                &:nth-of-type(2){
+                                                    td{
+                                                        &:nth-of-type(1){
+                                                            text-align: center;
+                                                            font-weight: 600;
+                                                            padding: 17px;
+                                                            font-size: 18px;
+                                                            @include d(celularMedium){
+                                                                font-size: 16px;
+                                                            }  
+                                                        }
+                                                    }
+                                                }
+                                                td{
+                                                    border: 1px solid var(--color-gray-line);
+                                                    padding: 10px;
+                                                    &:nth-of-type(2), &:nth-of-type(3){
+                                                        text-align: center;
+                                                    }
+                                                    @include d(celularLarge){
+                                                        font-size: 13px;
+                                                    }
+                                                }
+                                                &:last-child{
+                                                    td{
+                                                        p{
+                                                            text-align: center;
+                                                            font-size: 15px;
+                                                            @include d(celularMedium){
+                                                                font-size: 13px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section.receitas {
+        width: 100%;
+        @include flexbox;
+        @include flex-wrap(wrap);
+        margin: 30px 0;
+        padding: 40px 0;
+        background-color: var(--color-blue);
+        .veja-receitas {
+            .titulo-prateleira{
+                width: 100%;
+                margin-bottom: 30px;
+                h2{
+                    color: var(--color-white);
+                    font-style: italic;
+                    font-size: 28px;
+                    font-weight: 500; 
+                    text-align:center;
+                }
+            }    
+            .ls-receita-pdp{
+                h2{
+                    display:none;
+                }
+                ul{
+                    >div{
+                        margin: 0 30px;
+                        @include d(ipad){
+                            margin: 0;
+                        }
+                        li.receitas{
+                            .receitas-img-pdp{
+                                a {
+                                    img{
+                                        margin: 0 20px;
+                                        @include d(ipad){
+                                            margin: 0;
+                                        }
+                                    }
+                                }    
+                            }
+                        }
+                    }
+                    ul.slick-dots{
+                        @include d(ipad){
+                            @include flexbox;
+                            @include justify-content(center);
+                        }
+                        li{
+                            button{
+                                @include d(ipad){
+                                    font-size: 0;
+                                    width: 12px;
+                                    height: 12px;
+                                    border: 1px solid var(--color-white);
+                                    border-radius: 50%;
+                                    margin: 0 5px;
+                                    cursor: pointer;
+                                }
+                            }
+                            &.slick-active{
+                                button{
+                                    @include d(ipad){
+                                        background: var(--color-white);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .slick-prev {
+                font-size: 0;
+                cursor: pointer;
+                left: 0;
+                position: absolute;
+                top: 50%;
+                &:before{
+                    content: "\e933";
+                    font-family: lightsweet;
+                    font-size: 40px;
+                    color: var(--color-white);
+                    display: block;
+                }
+            }
+            .slick-next{
+                font-size: 0;
+                cursor: pointer;
+                right: 0;
+                position: absolute;
+                top: 50%;
+                &:before{
+                    content:"\e934";
+                    font-family: lightsweet;    
+                    font-size: 40px;
+                    color: var(--color-white);                
+                }
+            }         
+        }
+    }
+    section.prod-relacionados{
+        .wrapper{
+            max-width: 100%;
+            width: 100%;
+            padding: 0 6em;
+            @include d(hdplus){
+                padding:0 2em;
+            }
+            .ls-prateleira{
+                > ul{
+                    > li{
+                        padding: 0 20px;
+                    }
+                    ul.slick-dots{
+                        @include d(ipad){
+                            @include flexbox;
+                            @include justify-content(center);
+                        }
+                        li{
+                            button{
+                                @include d(ipad){
+                                    font-size: 0;
+                                    width: 12px;
+                                    height: 12px;
+                                    border: 1px solid var(--color-blue);
+                                    border-radius: 50%;
+                                    margin: 0 5px;
+                                    cursor: pointer;
+                                }
+                            }
+                            &.slick-active{
+                                button{
+                                    @include d(ipad){
+                                        background: var(--color-blue);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section.quem-viu-viu-tambem {
+        width: 100%;
+        margin-top: 2em;
+        background: var(--ice-white);
+        @include d(celularLarge){
+            padding-bottom: 2em;
+        }
+    }
+}
+main.ls-produto-especial-main {
+    section {
+        .ls-departamento__topo {
+            .container-center {
+                .produto-titulo {
+                    .nome-prod {
+                        background-color: var(--color-black);
+                        @include flexbox;
+                        @include justify-content(center);
+                        @include align-items(center);
+                        padding: 0.5em 0;
+                        .productName {
+                            border-top: 2px dashed var(--color-yellow);
+                            border-bottom: 2px dashed var(--color-yellow);
+                            color: var(--color-yellow);
+                            text-align: center;
+                            font-size: 28px;
+                            padding: 1.5em 0;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .wrapper {
+            &.bread {
+                padding: 1em 2em;
+                background: var(--ice-white);
+            }
+            .container-center {
+                .bread-crumb {
+                    ul {
+                        @include flexbox;
+                        @include justify-content(flex-start);
+                        @include align-items(center);
+                        li {
+                            &:after {
+                                content: "/";
+                                margin: 0 3px;
+                            }
+                            a {
+                                font-size: 13px;
+                            }
+                            &:last-child {
+                                font-weight: 600;
+                                &:after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .produto-all {
+            @include flexbox;
+            @include flex-wrap(wrap);
+            margin: 2em 0;
+            .container-center {
+                width: 60%;
+                @include d(celularLarge){
+                    width: 100%;
+                }
+                figure {
+                    position: sticky;
+                    position: -webkit-sticky;
+                    background: #f83d23;
+                    width: 100%;
+                    height: 100vh;
+                    top: 70px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 0 6px #000;
+                    color: #fff;
+                    .img-produto {
+                        .apresentacao {
+                            #show {
+                                @include flexbox;
+                                @include d(ipad){
+                                    @include flex-flow(column);
+                                }
+                                #include {
+                                    order: 2;
+                                    width: 100%;
+                                    margin-left: 5em;
+                                    border-left: 1px solid var(--ice-white);
+                                    @include d(ipadPro){
+                                        margin-left: 2em;
+                                    }
+                                    @include d(ipad){
+                                        border-left: none;
+                                        margin-left: 0;
+                                        order: 1;
+                                        pointer-events: none;
+                                    }
+                                    #image {
+                                        text-align: center;
+                                        a.image-zoom {
+                                            .zoomPad {
+                                                width: 100%;
+                                                position: relative;
+                                                float: none;
+                                                z-index: 1;
+                                                cursor: crosshair;
+                                                overflow: hidden !important;
+                                                .zoomWindow {
+                                                    top: 0 !important;
+                                                    left: 0 !important;
+                                                    width: 1000px;
+                                                    height: 1000px;
+                                                    overflow: hidden;
+                                                }
+                                                img#image-main {
+                                                    max-width: 600px;
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                ul.thumbs {
+                                    order: 1;
+                                    @include d(ipad){
+                                        order: 2;
+                                    }
+                                    li {
+                                        a {
+                                            img {
+                                                max-width: 100px;
+                                                border: 2px solid var(--color-yellow);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #produtoDiv-direita {
+                width: 40%;
+                max-width: 650px;
+                @include flexbox;
+                @include flex-flow(column);
+                padding: 0 5em;
+                border-left: 1px solid var(--ice-white);
+                @include d(ipadPro){
+                    padding: 0px 2em;
+                }
+                @include d(ipad){
+                    width: 100%;
+                    padding: 0;
+                    padding-top: 2em;
+                    border-left: none;
+                    border-top: 1px solid var(--color-gray-line);
+                    margin-top: 2em;
+                }
+                h1.nome-prod {
+                    margin-bottom: 1em;
+                    order: 1;
+                    .productName {
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
+                }
+                span.cod-prod {
+                    order: 2;
+                    .skuReference {
+                        font-size: 13px;
+                        color: var(--color-gray-nav);
+                        margin-bottom: 1em;
+                    }
+                }
+                .detalhes-prod {
+                    padding: 0;
+                    order: 7;
+                    #descricao-produto{
+                        .container-center{
+                            h2{
+                                font-size: 14px;
+                            }
+                            .productDescription{
+                                font-size: 14px;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+                .variantes-sku {
+                    order: 3;
+                    .sku-selector-container {
+                        ul {
+                            li.specification {
+                                font-size: 13px;
+                                font-weight: 600;
+                                margin-bottom: 1em;
+                            }
+                            li.select {
+                                margin-bottom: 1em;
+                                span {
+                                    input {
+                                        display: none;
+                                    }
+                                    label {
+                                        position: relative;
+                                        min-width: 50px;
+                                        text-align: center;
+                                        border: 2px solid var(--color-yellow);
+                                        padding: 10px;
+                                        cursor: pointer;
+                                        margin-right: 10px;
+                                        border-radius: 10px;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        &.checked {
+                                            background: var(--color-yellow);
+                                        }
+                                        &.item_unavailable {
+                                            background: var(--color-bg-newsletter);
+                                            color: var(--color-black);
+                                            &:before {
+                                                content: "";
+                                                width: 1px;
+                                                height: 30px;
+                                                background: var(--color-red-clean);
+                                                transform: rotate(-45deg);
+                                                position: absolute;
+                                                top: 2px;
+                                                left: 50%;
+                                            }
+                                            &:after {
+                                                content: "";
+                                                width: 1px;
+                                                height: 30px;
+                                                background: var(--color-red-clean);
+                                                transform: rotate(45deg);
+                                                position: absolute;
+                                                top: 2px;
+                                                left: 50%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .plugin-preco {
+                    order: 4;
+                    .productPrice {
+                        .descricao-preco {
+                            margin: 1em 0;
+                            .valor-de {
+                                font-style: normal;
+                                font-size: 0;
+                                strong.skuListPrice {
+                                    font-size: 16px;
+                                    font-weight: 300;
+                                    text-decoration: line-through;
+                                    color: var(--color-gray);
+                                }
+                            }
+                            .valor-por {
+                                font-style: normal;
+                                font-size: 0;
+                                strong.skuBestPrice {
+                                    font-size: 26px;
+                                    font-weight: 600;
+                                }
+                            }
+                            .valor-dividido {
+                                span {
+                                    span {
+                                        font-size: 0;
+                                        font-style: normal;
+                                        label.skuBestInstallmentNumber {
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            color: var(--color-gray);
+                                            span.x {
+                                                font-size: 15px;
+                                                color: var(--color-gray);
+                                                &:after {
+                                                    content: "de";
+                                                    margin: 0 5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                strong {
+                                    font-size: 15px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    color: var(--color-gray);
+                                }
+                            }
+                        }
+                        .preco-a-vista,
+                        .economia-de {
+                            display: none !important;
+                        }
+                    }
+                }
+                .produto-buy__container {
+                    order: 5;
+                    @include flexbox;
+                    @include justify-content(flex-start);
+                    padding-bottom: 2em;
+                    margin-bottom: 2em;
+                    border-bottom: 1px solid var(--color-gray-nav);
+                    .om-produto__buy-quant {
+                        .qtdPrateleira {
+                            max-width: 100px;
+                            @include flexbox;
+                            @include flex-flow(center);
+                            @include justify-content(center);
+                            @include d(ipadPro){
+                                max-width: 100%;
+                                justify-content: left;
+                                @include justify-content(flex-start);
+                            }
+                            .btnDec {
+                                background: var(--ice-white);
+                                cursor: pointer;
+                                padding: 15px;
+                                padding-right: 0;
+                                &:before {
+                                    content: "-";
+                                    font-weight: 600;
+                                }
+                            }
+                            input.qtdVal {
+                                background: var(--ice-white);
+                                max-width: 65px;
+                                padding: 15px 0;
+                                text-align: center;
+                                font-weight: 600;
+                                @include d(ipadPro){
+                                    max-width: 80%;
+                                }
+                                @include d(ipad){
+                                    max-width: 65px;
+                                }
+                            }
+                            .btnAcr {
+                                background: var(--ice-white);
+                                cursor: pointer;
+                                padding: 15px;
+                                padding-left: 0;
+                                &:before {
+                                    content: "+";
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                    .om-produto__buy-button {
+                        margin-left: 5px;
+                        @include d(ipadPro){
+                            margin-left: 0;
+                            margin-top: 10px;
+                        }
+                        @include d(ipad){
+                            margin-left: 5px;
+                            margin-top: 0;
+                        }
+                        a.buy-button {
+                            width: 200px;
+                            background: var(--color-yellow);
+                            text-align: center;
+                            padding: 15px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            @include d(ipadPro){
+                                width: 100%;
+                            }
+                            @include d(ipad){
+                                width: 150px;
+                            }
+                        }
+                        .portal-notify-me-ref {
+                            width: 100%;
+                            padding: 0 1em;
+                            fieldset{
+                                position: relative;
+                                p{
+                                    font-size: 13px;
+                                }
+                                #notifymeClientName, #notifymeClientEmail {
+                                    padding: 5px;
+                                    border: 1px solid var(--color-gray-line);
+                                    margin-top: 5px;
+                                    font-size: 13px;
+                                    width: 98%;
+                                    padding-right: 0;
+                                }
+                                #notifymeButtonOK {
+                                    text-transform: uppercase;
+                                    font-size: 16px;
+                                    background: var(--color-black);
+                                    color: var(--color-white);
+                                    font-weight: 600;
+                                    padding: 10px;
+                                    height: auto;
+                                    cursor: pointer;
+                                    width: 100%;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .calc-frete {
+                    order: 6;
+                    padding-bottom: 1em;
+                    margin-bottom: 1em;
+                    border-bottom: 1px solid var(--color-gray-nav);
+                    .cep {
+                        h3 {
+                            font-size: 14px;
+                            color: var(--color-gray);
+                            font-weight: 600;
+                        }
+                        p.frete {
+                            display: none;
+                        }
+                        #calculoFrete {
+                            .contentWrapper {
+                                .header {
+                                    h1,
+                                    h2,
+                                    .close {
+                                        display: none;
+                                    }
+                                }
+                                #ctl00_Conteudo_upnlContent {
+                                    .content {
+                                        fieldset {
+                                            @include flexbox;
+                                            @include align-items(center);
+                                            @include flex-wrap(wrap);
+                                            margin: 0.8em 0;
+                                            label.prefixo {
+                                                @include flexbox;
+                                                flex-flow: column;
+                                                font-size: 0;
+                                                input {
+                                                    background: var(--ice-white);
+                                                    padding: 0.8em;
+                                                    font-size: 16px;
+                                                    @include d(ipad){
+                                                        max-width: 130px;
+                                                    }
+                                                }
+                                            }
+                                            .quantity {
+                                                display: none;
+                                            }
+                                            .frete-calcular {
+                                                input {
+                                                    padding: 0.9em;
+                                                    background: var(--color-black);
+                                                    cursor: pointer;
+                                                    font-size: 15px;
+                                                    color: var(--color-white);
+                                                    font-weight: 600;
+                                                }
+                                            }
+                                            .cep-busca {
+                                                display: block;
+                                                width: 100%;
+                                                a{
+                                                    font-size: 13px;
+                                                    font-weight: 600;
+                                                    text-decoration: underline;
+                                                    margin-top: 5px;
+                                                }
+                                            }
+                                        }
+                                        .freight-values{
+                                            th{
+                                                text-align: left;
+                                                font-size: 13px;
+                                                border-bottom: 1px solid var(--color-black);
+                                                padding: 5px;
+                                            }
+                                            td{
+                                                font-size: 13px;
+                                                padding: 5px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .footer{
+                                    .close{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section.quem-viu-viu-tambem {
+        width: 100%;
+        margin-top: 2em;
+        background: var(--ice-white);
+        @include d(celularLarge){
+            padding-bottom: 2em;
+        }
+    }
+}
+.Tipo-de-Produto, .Marca, .Sabor, th.name-field.Validade{
+    display: none;
+}

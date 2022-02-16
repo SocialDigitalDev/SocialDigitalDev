@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  <Jonas> -- <Dev> -- <j.dipierro@socialfullcommerce.com.br>
+  <Guilherme> -- <Dev> -- <g.barbeiro@socialfullcommerce.com.br>
+
+# THANKS
+
+  <name>
+
+# TECHNOLOGY COLOPHON
+
+  HTML5, CSS3, JS, NODE.JS, GULP, PUG, SCSS

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+
+    <title> LOJA Pneus </title>
+    <vtex:metaTags/>
+    <vtex:template id="LOJA-styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <vtex:template id="LOJA-header" />
+
+    <main>
+
+        <!-- Estrutura para slide principal -->
+        <figure>
+            <div class="container slide">
+                <div class="slide-principal">
+                    <vtex:contentPlaceHolder id="LOJA-slide-principal" />
+                </div>
+            </div>
+            
+            <div class="container slide-mobile">
+                <vtex:contentPlaceHolder id="slide-principal-mobile" />
+            </div>
+        </figure>
+
+        <!-- Estrutura para banners 
+        <section>
+            <div class="container banner-categoria">
+                <div class="container-center">
+                    <vtex:contentPlaceHolder id="LOJA-banners-categoria" />
+                </div>
+            </div>
+        </section>-->
+
+        <!-- Estrutura para slide prateleira -->
+
+        <section>
+            <div class="container slide-prod prateleira-01">
+                <div class="container-center">
+                <div class="titulo-prateleira">
+                    <h2>Produtos em <b>Destaque</b> </h2>
+                </div>
+                    <vtex:contentPlaceHolder id="LOJA-prateleira01" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Estrutura para informativo -->
+        <section>
+            <div class="container informativos">
+                <div class="container-center">
+                    <vtex.cmc:LOJAInformativo/>
+                </div>
+            </div>
+        </section>
+        
+         <!-- Prateleira Oleos -->
+         <section>   
+            <div class="container slide-prod prateleira-oleos">
+                <div class="container-full">
+                    <div class="prat-left__img">
+                        <vtex:contentPlaceHolder id="LOJA-Img__Oleo" />
+                    </div>
+                   
+                    <div class="prat-right__oleo">
+                        <div class="titulo-prateleira">
+                            <h2>Óleos <b>Automotivos</b></h2>
+                        </div>
+                        <vtex:contentPlaceHolder id="LOJA-prateleiraOleo" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prateleira Mais Vendidos -->
+        <section>   
+            <div class="container slide-prod prateleira-mais">
+                <div class="container-center">
+                    <div class="prat-left">
+                        <div class="titulo-prateleira">
+                            <h2>Produtos mais <b>Vendidos</b></h2>
+                        </div>
+                    </div>
+                    <div class="prat-right">
+                        <vtex:contentPlaceHolder id="LOJA-prateleiraMaisVendidos" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Chamada para o rodapé -->
+     <vtex:template id="LOJA-footer" />  
+    <!-- Chamada para os scripts Js da loja -->
+    <vtex:template id="LOJA-scripts" />
+</body>
+</html>

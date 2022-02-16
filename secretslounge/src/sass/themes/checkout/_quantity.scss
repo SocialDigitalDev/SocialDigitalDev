@@ -1,0 +1,78 @@
+.body-cart,
+.body-order-form {
+    .full-cart .cart table tbody tr td.quantity {
+        position: relative;
+        padding: 3px 8px;
+        display: flex;
+        align-items: center;
+        border: 0;
+        justify-content: space-between;
+        flex: 0 1 110px;
+
+        @media (max-width: 767px) {
+            flex: 0 1 55%;
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        small:empty {
+            display: none;
+        }
+
+        input {
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+            flex-grow: 0;
+            width: 32px;
+            height: 32px;
+            padding: 0; 
+            border-radius: 50%;
+            border: 1px solid $checkoutColorSecondary;
+            font-family: $quantityFontFamily;
+            font-weight: $quantityFontWeight;
+            font-size: $quantityFontSize;
+            color: $quantityColor;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .item-quantity-change {
+            position: static;
+            height: auto;
+            width: auto;
+        }
+
+        .icon-plus-sign,
+        .icon-minus-sign {
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-size: 9px auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform .25s;
+            &::before {
+                content: '';
+            } 
+            &:hover {
+                transform: scale(1.5);
+            }
+            &:active {
+                transform: scale(1);
+            }
+            .hide {
+                opacity: 0.5;
+                filter: grayscale(1);
+            }
+        }
+
+        .icon-plus-sign {
+            background-image: $quantityIconPlus;
+        }
+        .icon-minus-sign {
+            background-image: $quantityIconMinus;
+        }
+    }
+}

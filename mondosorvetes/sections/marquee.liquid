@@ -1,0 +1,126 @@
+<section id="frase">
+  <div class="marquee feature-row text-center">
+    <div class="marquee__inner" aria-hidden="true">
+      <div class="content">
+      PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+        PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. PEGA O SEU MONDO E APERTA O PLAY. 
+      </div>
+	</div>
+  </div>
+</section>
+
+<style>
+.site-footer {
+  margin: 0px !important;
+}
+#frase {
+  margin-top: 50px;
+  position: relative;
+  background: #ed2024;
+  height: auto;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 5px #1a1443;
+}
+.main-content {
+  padding-top: 0px !important;
+}
+.text-center {
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+}
+#frase .content {
+  margin: 0px;
+  color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 30px;
+  text-transform: uppercase;
+   white-space: nowrap;
+  will-change: transform;
+}
+.marquee {
+    position: relative;
+    overflow: hidden;
+    --offset: 20vw;
+    --move-initial: calc(35% + var(--offset));
+    --move-final: calc(0% + var(--offset));
+}
+
+  /*
+.marquee__inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 5s linear infinite;
+    animation-play-state: paused;
+}
+  */
+  
+ .marquee__inner {
+    animation: marquee 420s linear infinite;
+}
+  
+.marquee .marquee__inner {
+  animation-play-state: running;
+  font-style: italic;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media(max-width:650px){
+.index-section--flush:first-child {
+  	padding: 0px !important;
+    margin-top: 0px !important;
+}
+.site-footer__item:first-of-type {
+  margin: 0px !important;
+}
+#frase {
+  height: auto;
+  margin-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#frase .content {
+  font-size: 18px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+#vitrine .itens {
+  flex-direction: column;
+}
+#vitrine .produto {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#vitrine img {
+   width: 150px !important;
+}
+#vitrine .ft {
+    left: 10px !important;
+}  
+}
+</style>

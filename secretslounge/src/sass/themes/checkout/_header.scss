@@ -1,0 +1,83 @@
+.checkoutHeader {
+    padding: $headerPadding;
+    border-bottom: 1px solid;
+    background: $headerBackground;
+    color: $headerColor;
+    .wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+        max-width: $containerWidth;
+    }
+}
+ 
+
+.checkoutLogo,
+.checkoutLogo__container img {
+    height: $logoHeight * 0.7;
+    @media (min-width:768px){
+        height: $logoHeight;
+    }
+}
+
+.checkoutLogo__container {
+    flex-shrink: 0;
+}
+
+
+.checkoutTitleBar {
+    background: #F5EFE6;
+    padding: 16px 0;
+    color: #3D2B1C;
+    position: relative;
+    font-size: 12px;
+    .container {
+        position: relative;
+    }
+}
+.checkoutTitleBar__title {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.checkoutTitleBar__voltar {
+    position: absolute;
+    top: 0; left: 0;
+    bottom: 0;
+    height: 1em;
+    margin: auto;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    @media (max-width:767px){
+      font-size: 0; 
+    }
+    i {
+        display:block;
+        width: 10px;
+        height: 10px;
+        margin-right: 8px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5.44' height='9.514' viewBox='0 0 5.44 9.514'%3E%3Cpath id='Path_701' data-name='Path 701' d='M4.969.556,5.395.131a.258.258,0,0,0,0-.365L1.512-4.125,5.395-8.016a.258.258,0,0,0,0-.365l-.425-.425a.258.258,0,0,0-.365,0l-4.5,4.5a.258.258,0,0,0,0,.365L4.6.556A.258.258,0,0,0,4.969.556Z' transform='translate(-0.03 8.882)' fill='%233d2b1c'/%3E%3C/svg%3E%0A");
+    }
+  
+      
+       
+    
+}
+
+.checkoutHeader__siteSeguro {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $checkoutColorSecondary;
+    margin-left: 12px;
+}

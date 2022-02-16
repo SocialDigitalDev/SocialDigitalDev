@@ -1,0 +1,32 @@
+.empty-cart-content {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    right: 0;
+    left: 0;
+    .btn {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 48px;
+    }
+
+    .empty-cart-title {
+        font-family: $titleFontFamily;
+        font-family: $titleFontWeight;
+        color: $titleColor;
+        font-size: $titleFontSizeMobile;
+        $titleAlign: center;
+        @media (min-width: 768px) {
+            font-size: $titleFontSizeDesktop;
+        }
+    }
+    .empty-cart-message {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #544d4c;
+        color: $cartEmptyColor;
+    }
+}

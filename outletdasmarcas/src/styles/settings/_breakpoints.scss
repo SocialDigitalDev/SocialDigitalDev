@@ -1,0 +1,72 @@
+// Breakpoints
+@mixin d($device) {
+	@if $device == celularSmall {
+		@media (max-width: 321px) {
+			@content;
+		}
+	} @else if $device == celularMedium {
+		@media (max-width: 361px) {
+			@content;
+		}
+	} @else if $device == celularLarge {
+		@media (max-width: 575.98px) {
+			@content;
+		}
+	} @else if $device == ipadMini {
+		@media (min-width: 576px) {
+			@content;
+		}
+	} @else if $device == ipadMiniMinMax {
+		@media (min-width: 576px) and (max-width: 767.98px) {
+			@content;
+		}
+	} @else if $device == ipadMax {
+		@media (max-width: 767.98px) {
+			@content;
+		}
+	} @else if $device == ipadMinMax {
+		@media (min-width: 768px) and (max-width: 991.98px) {
+			@content;
+		}
+	} @else if $device == ipad {
+		@media (max-width: 991.98px) {
+			@content;
+		}
+	} @else if $device == ipadProMinMax {
+		@media (min-width: 992px) and (max-width: 1199.98px) {
+			@content;
+		}
+	} @else if $device == ipadPro {
+		@media (max-width: 1199.98px) {
+			@content;
+		}
+	} @else if $device == hd {
+		@media (max-width: 1280px) {
+			@content;
+		}
+	} @else if $device == qhdMinMax {
+		@media (min-width: 1200px) and (max-width: 1399.98px) {
+			@content;
+		}
+	} @else if $device == qhd {
+		@media (max-width: 1366px) {
+			@content;
+		}
+	} @else if $device == hdplusMax {
+		@media (max-width: 1439.98px) {
+			@content;
+		}
+	} @else if $device == hdplus {
+		@media (min-width: 1440px) {
+			@content;
+		}
+	} @else if $device == fullhd {
+		@media (min-width: 1920px) {
+			@content;
+		}
+	} @else if $device == fullhdMax {
+		@media (max-width: 1919.98px) {
+			@content;
+		}
+	}
+}

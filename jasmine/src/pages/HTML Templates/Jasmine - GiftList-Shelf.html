@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+
+<head>
+    <title>Jasmine</title>
+    <vtex:metaTags />
+    <vtex:template id="Jasmine - Styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <vtex:template id="commonStyles" />
+    <link href="https://moralesltda.vteximg.com.br/arquivos/00-list-styles.css" rel="stylesheet" />
+    <link href="https://moralesltda.vteximg.com.br/arquivos/00-special-styles.css" rel="stylesheet" />
+
+
+
+    <style type="text/css">
+        .col-md-3 .navigation {
+            display: none;
+        }
+
+        ul.nav.nav-list.bs-docs-sidenav.giftlist-sidenav {
+            background-color: #80808014;
+        }
+
+        .giftlist-sidenav li {
+            border-bottom: 1px solid #0000002b;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body id="bd">
+    <div id="sns_wrapper">
+        <!--  SubTemplate: Header -->
+        <vtex:template id="Jasmine - Header" />
+        <!-- /SubTemplate: Header -->
+
+        <!-- CONTENT -->
+        <div class="container">
+            <div class="wrapper">
+                <div class="col-md-3 hidden">
+                    <vtex:template id="new-GiftList-Sidebar-nav" />
+                    <vtex.cmc:giftListNavigation />
+                </div>
+                <div class="col-md-12">
+                    <h2>Produtos en la lista</h2>
+                    <!-- Controle: Informações de uma Lista -->
+                    <vtex.cmc:GiftListInfoV2 />
+                    <!-- /Controle: informações de uma Lista -->
+                    <vtex.cmc:GiftListInsertSkuV2 popup="true" />
+                    <div class="collectionWrap">
+                        <vtex.cmc:giftListShelfPaged layout="1daabf0d-5f18-47a2-8b3f-709dc17dc522" itemCount="12"
+                            columnCount="12" />
+                    </div>
+                    <vtex.cmc:giftListSendToCartButton />
+                </div>
+            </div>
+        </div>
+        <!-- AND CONTENT -->
+    </div>
+    <div class="uio"></div>
+
+    <!--  SubTemplate: Footer -->
+    <vtex:template id="Jasmine - Footer" />
+    <!-- /SubTemplate: Footer -->
+
+    <!-- .container-fluid -->
+    <script src="https://moralesltda.vteximg.com.br/arquivos/00-morales-home.js"></script>
+    <script src="https://moralesltda.vteximg.com.br/arquivos/listas.js"></script>
+    <script src="/arquivos/lojavazia-general.js"></script>
+    <vtex:template id="Jasmine - Scripts" />
+
+
+
+
+</body>
+
+</html>

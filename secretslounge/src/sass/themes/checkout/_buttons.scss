@@ -1,0 +1,64 @@
+.checkoutBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background: #e7b2a5;
+  color: #fff;
+  height: 40px;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 32px;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  border: 0;
+  transition: background-color 0.2s;
+  padding: 0 12px;
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+  &:hover {
+    background: #956a64;
+  }
+  &:active {
+    background: #956a64;
+  }
+}
+
+.checkoutBtn--outline {
+  @extend .checkoutBtn;
+  background: #fff;
+  color: #956a64;
+  border: 1px solid #956a64;
+  &:hover {
+    color: #fff;
+    background: #956a64;
+  }
+  &:active {
+    color: #fff;
+    background: #7b4a2c;
+  }
+}
+
+.body-cart,
+.body-order-form,
+.body-checkout-confirmation {
+  .btn {
+    @extend .checkoutBtn;
+  }
+}
+
+.btn.underline {
+  text-decoration: none !important;
+}
+
+.cconf-continue-button,
+.cconf-myorders-button {
+  @extend .checkoutBtn;
+}

@@ -1,0 +1,23 @@
+.body-cart,
+.body-order-form {
+    .modal-footer {
+        display: flex;
+        a {
+            margin-right: 16px;
+        }
+    }
+
+    .payment-unauthorized-modal {
+
+    }
+
+    .default-modal {
+        background: $defaultModalBackground;
+        color: $defaultModalColor;
+    }
+    .payment-unauthorized-modal {
+        background: $defaultModalBackground;
+        color: $defaultModalColor;
+        border-top: 8px solid #DD4F44;
+    }
+}

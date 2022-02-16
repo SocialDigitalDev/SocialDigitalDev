@@ -1,0 +1,114 @@
+.body-cart,
+.body-order-form {
+    .srp-address-title {
+        &::after {
+            content: '(Alterar CEP)';
+            display: inline-block;
+            margin-left: 8px;
+            color: $checkoutColorSecondary;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .summary-template-holder {
+        .srp-container {
+            max-width: none;
+            .srp-main-title {
+                font-size: 1rem;
+                font-weight: bold;
+                color: inherit;
+            }
+            .srp-data {
+                margin-top: 0;
+                padding-top: 0.75rem;
+                border-top: 1px solid $checkoutBorderColor;
+            }
+
+            .shp-open-options,
+            .srp-pickup-my-location__button {
+                @extend .checkoutBtn;
+            }
+
+            .srp-pc-input {
+                @extend .checkoutBtn;
+                height: $inputHeight;
+                margin-bottom: 0;
+            }
+
+            .srp-postal-code__form {
+                width: 100%;
+            }
+            .vtex-shipping-preview-0-x-postalCodeForgotten {
+                width: 100%;
+                margin-top: 0;
+                justify-content: space-between;
+                align-items: flex-end;
+                padding-bottom: 12px;
+                .ship-postalCode {
+                    flex-grow: 1;
+                    margin-right: 16px;
+                    display: block;
+                    width: 200px;
+
+                    small {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        color: $checkoutColorPrimary;
+                    }
+                    input {
+                        width: 100%;
+                        margin-top: 8px;
+                        &.error {
+                            border-color: #dd4b39;
+                        }
+                    }
+                    span.error {
+                        position: absolute;
+                        bottom: -8px;
+                        left: 0;
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            .srp-delivery-header {
+                .f5 {
+                    font-size: 1em;
+                }
+            }
+
+            .srp-address-title.link {
+                font-weight: bold;
+                color: $checkoutColorPrimary;
+            }
+
+            .srp-delivery-info {
+                .f6 {
+                    font-size: 1em;
+                }
+                label {
+                    &.br2 {
+                        border-radius: 0;
+                    }
+                    &.b--light-gray {
+                        border: 1px solid $checkoutBorderColor;
+                    }
+
+                    .gray {
+                        color: inherit;
+                    }
+                }
+            }
+
+            .srp-shipping-current-single__bullet {
+                svg {
+                    path {
+                        fill: $checkoutColorPrimary !important;
+                    }
+                }
+            }
+        }
+    }
+}

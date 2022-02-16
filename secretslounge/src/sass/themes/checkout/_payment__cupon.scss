@@ -1,0 +1,58 @@
+.body-cart,
+.body-order-form {
+    .link-gift-card,
+    .payment-discounts-options label {
+        margin: 12px 0;
+    }
+    .link-gift-card {
+        left: 0;
+        position: relative;
+    }
+
+    .link-payment-discounts-cod,
+    .payment-discounts-options label {
+        flex: 0 0 100%;
+        font-family: $titleFontFamily;
+        font-weight: $titleFontWeight;
+        text-transform: uppercase;
+        color: $checkoutColorPrimary;
+        font-size: $checkoutBaseFontSize;
+    }
+    .payment-discounts-options {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        input,
+        button {
+            min-width: 0;
+            max-width: none;
+        }
+        input {
+            flex-basis: 60%;
+        }
+        button {
+            flex-basis: 36%; 
+            margin: 0 1%;
+            height: $inputHeight;
+        }
+    }
+
+
+    .payment-discounts-list {
+        margin: 12px 0;
+        table {
+            width: 100%;
+            margin: 12px 0;
+            td {
+                padding: 0 12px;
+            }
+            .remove a {
+                color: $checkoutColorSecondary;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

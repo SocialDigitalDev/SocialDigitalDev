@@ -1,0 +1,77 @@
+ 
+
+.body-cart,
+.body-order-form {
+    .full-cart .cart {
+        padding: 12px 16px;
+        @media (max-width: 480px) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        border-radius: 0;
+        border: 0;
+
+        table {
+            thead {
+                font-size: 14px;
+                border-bottom: 1px solid $checkoutBorderColor;
+                @media (max-width: 490px) {
+                    display: block;
+                    th {
+                        display: none;
+                    }
+                    th.product {
+                        display: block;
+                    }
+                }
+
+                th {
+                    padding-left: 0;
+                    padding-right: 0; 
+                }
+                tr {
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    width: 100%;
+                    .shipping-date,
+                    .item-remove {
+                        display: none;
+                    }
+                }
+
+                @media (min-width: 768px) {
+                    .product {
+                        flex: 0 0 calc(25% + 80px);
+                    }
+                    .quantity {
+                        flex: 0 1 110px;
+                        order: 1;
+                    }
+                    .quantity-price,
+                    .product-price {
+                        flex: 0 0 20%;
+                        order: 3;
+                    }
+                }
+                @media (min-width: 1024px) {
+                    .product {
+                        flex: 0 0 calc(30% + 80px);
+                        padding-left: 80px;
+                    }
+                }
+            }
+            tbody {
+                display: block;
+            }
+        }
+    }
+
+    .item-unavailable {
+        .item-unavailable-message {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    }
+}

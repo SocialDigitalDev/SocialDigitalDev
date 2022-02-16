@@ -1,0 +1,16 @@
+.free-shipping-bar {
+    background: transparent;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+    padding: .5em 0;
+}
+
+.color-bar {
+    position: absolute;
+    height: 35px;
+    background: linear-gradient(270deg, #00980c, transparent);
+    transition: all .3s ease;
+}
+
+/* Inserir no CSS do tema */

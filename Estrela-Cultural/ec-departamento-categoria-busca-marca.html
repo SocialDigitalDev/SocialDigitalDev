@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+    <vtex:metaTags/>
+    <vtex:template id="ec-styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+    <!-- Chamada do cabeçalho da ec -->
+
+    <vtex:template id="ec-header" />
+
+    <main>
+
+        <!-- Estrutura Breadcrumb -->
+
+        <section>
+            <div class="container bread">
+                <div class="container-center">
+                    <vtex.cmc:breadCrumb/>
+                </div>
+            </div>
+            <div class="ec-departamento__topo">
+                <div class="container-center">
+                    <div class="nomeDepartamento">
+                        <vtex.cmc:searchTitle />
+                        <vtex:contentPlaceHolder id="ec-DescricaoCurta"/>
+                    </div>
+                </div>
+                <!-- Imagem para o topo -->
+                <div class="bannerDepartamento">
+                    <vtex:contentPlaceHolder id="ec-ImagemBannerDepartamento" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Conteudo central de Departamento -->
+
+        <section>
+
+            <div class="container pagDepartamento">
+                <div class="container-center">
+
+                    <!-- Filtro de departamento -->
+
+                    <aside>
+                        <div class="filtrosDepartamento">
+                        
+                            <span class="btn-filtro"> Filtro </span>
+
+                            <vtex.cmc:searchNavigator/>
+                        </div>
+                    </aside>
+
+                    <div class="conteudo-categoria">
+
+                        <!-- Produtos resultantes do Departamento -->
+
+                        <div class="resultadoDepartamento">
+                            <vtex.cmc:searchResult layout="d9f669a5-982a-42d3-ad91-b3441b89c576" itemCount="12" columnCount="12" />
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Descricao do Departamento para SEO -->
+
+        <section>
+            <div class="container descricaoDetalhada">
+                <div class="container-center">
+                    <vtex:contentPlaceHolder id="ec-TituloDescricaoDetalhada" />
+                    <vtex:contentPlaceHolder id="ec-DescricaoDetalhada" />
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Chamada para o rodapé -->
+
+    <vtex:template id="ec-footer" />
+
+    <!-- Chamada para os scripts Js da ec -->
+
+    <vtex:template id="ec-scripts" />
+
+</body>
+
+</html>

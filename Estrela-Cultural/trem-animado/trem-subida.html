@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<head>
+<style>
+    @keyframes marquee {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(100%, 0);
+        }
+    }
+    @keyframes spin {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(-360deg);
+        }
+    }
+    @keyframes bounce-2 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-5px); }
+        100% { transform: translateY(0); }
+    }
+    @keyframes move-smoke {
+        0% {
+            -webkit-filter: blur(0);
+            -moz-filter: blur(0);
+            -o-filter: blur(0);
+            -ms-filter: blur(0);
+            filter: blur(0);
+            opacity: 1;
+        }
+        
+        50% {
+            -webkit-filter: blur(0.2rem);
+            -moz-filter: blur(0.2rem);
+            -o-filter: blur(0.2rem);
+            -ms-filter: blur(0.2rem);
+            filter: blur(0.2rem);
+            opacity: 0.6;
+            transform: translate(0, -3rem) scale(2);
+        }
+        
+        100% {
+            -webkit-filter: blur(0.3rem);
+            -moz-filter: blur(0.3rem);
+            -o-filter: blur(0.3rem);
+            -ms-filter: blur(0.3rem);
+            filter: blur(0.3rem);
+            opacity: 0;
+            transform: translate(2.5rem, -6rem) scale(3);
+        }
+    }
+    .trilho{
+        position: relative;
+        overflow: hidden;
+        width: 200%;
+        display: flex;
+        left: -100%;
+    }
+    .trilho svg.one{
+        display: flex;
+        position: relative;
+        animation: marquee 10s linear infinite;
+        margin-left: -2px;
+    }
+    .trilho svg.two{
+        display: flex;
+        position: relative;
+        animation: marquee 10s linear infinite;
+        margin-left: -2px;
+    }
+    .trem-wrapper .locomotiva-img{
+       max-width: 500px;
+    }
+    .rodas-locomotiva {
+        display: flex;
+        align-items: center;
+    }
+    .rodas-locomotiva .roda-locomotiva {
+        max-width: 80px;
+        width: 100%;
+        animation: spin 2s linear infinite;
+    }
+    .trem-wrapper {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .trem-wrapper svg .cls-2{
+        opacity: 1;
+    }
+    .eixos-locomotiva {
+        display: flex;
+        position: relative;
+        bottom: -20px;
+        z-index: 9;
+        max-width: 320px;
+        left: 115px;
+    }
+    .eixo-locomotiva {
+        animation: none;
+        margin-left: -50px;
+        margin-right: -50px;
+        width: 100px !important;
+        max-width: none;
+        position: relative;
+        z-index: 9;
+    }
+    .eixo-locomotiva .cls-2 {
+        fill: #ff0000;
+    }
+    .locomotiva {
+        max-width: 500px;
+    }
+    .eixo {
+        max-width: 130px;
+    }
+    img.eixovagao-img {
+        max-width: 130px;
+    }
+    .locomotiva > .locomotiva-img {
+        position: relative;
+        top: 85px;
+        animation: bounce-2 .3s linear infinite
+    }
+    .eixo {
+        max-width: 200px;
+        position: relative;
+        bottom: 30px;
+        right: 20px;
+        animation: bounce-2 .4s linear infinite;
+        z-index: 9;
+    }
+    img.vagao-img {
+        max-width: 285px;
+        animation: bounce-2 .25s linear infinite;
+    }
+    .vagao {
+        margin-left: -40px;
+        position: relative;
+        top: 45px;
+    }
+    .rodas-vagao {
+        position: relative;
+        right: 60px;
+        bottom: 45px;
+    }
+    .rodas-vagao .roda-vagao {
+        max-width: 65px;
+    }
+    .eixo-rodavagao {
+        width: 135px !important;
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+    .fumaca-animacao {
+        position: relative;
+        top: 75px;
+        left: 140px;
+    }
+    .smoke {
+        animation: move-smoke 0.4s linear infinite;
+        background: rgb(212 212 212 / 80%);
+        border-radius: 50%;
+        height: 2.4rem;
+        left: 0.2rem;
+        position: absolute;
+        top: -1.5rem;
+        width: 1.8rem;
+        z-index: -1;
+    }    
+    .smoke.smoke-2 {
+        animation-delay: 0.1s;
+        left: 0.4rem;
+    }
+    .smoke.smoke-3 {
+        animation-delay: 0.2s;
+        left: 0.6rem;
+    }   
+    .smoke.smoke-4 {
+        left: 0.8rem;
+    }
+</style>
+</head>
+<body>
+    <h1>TRENZINHO ANIMADO</h1>
+    <div class="trem-trilho-wrapper">
+        <div class="trem-wrapper">
+            <div class="locomotiva">
+                <div class="fumaca-animacao">
+                    <div class="smoke"></div>
+                    <div class="smoke smoke-2"></div>
+                    <div class="smoke smoke-3"></div>
+                    <div class="smoke smoke-4"></div>
+                </div>    
+                <img src="/arquivos/locomotiva.png" class="locomotiva-img" />
+                <div class="eixos-locomotiva">
+                    <div class="rodas-locomotiva">
+                        <img src="/arquivos/rodalocomotiva.png" class="roda-locomotiva" />
+                        <img src="/arquivos/eixorodalocomotiva.png" class="eixo-locomotiva" />
+                        <img src="/arquivos/rodalocomotiva.png" class="roda-locomotiva" />
+                    </div>
+                    <div class="rodas-locomotiva">
+                        <img src="/arquivos/rodalocomotiva.png" class="roda-locomotiva" />
+                        <img src="/arquivos/eixorodalocomotiva.png" class="eixo-locomotiva" />
+                        <img src="/arquivos/rodalocomotiva.png" class="roda-locomotiva" />
+                    </div>
+                </div>
+            </div>
+            <div class="eixo">
+                <img src="/arquivos/eixovagao.png" class="eixovagao-img" />
+            </div>
+            <div class="vagao">
+                <img src="/arquivos/vagao.png" class="vagao-img" />
+                <div class="eixos-locomotiva">
+                    <div class="rodas-locomotiva rodas-vagao">
+                        <img src="/arquivos/rodavagao.png" class="roda-locomotiva roda-vagao" />
+                        <img src="/arquivos/eixorodavagao.png" class="eixo-locomotiva eixo-rodavagao" />
+                        <img src="/arquivos/rodavagao.png" class="roda-locomotiva roda-vagao" />
+                    </div>    
+                </div>
+            </div>
+            <div class="eixo">
+                <img src="/arquivos/eixovagao.png" class="eixovagao-img" />
+            </div>
+            <div class="vagao">
+                <img src="/arquivos/vagao.png" class="vagao-img" />
+                <div class="eixos-locomotiva">
+                    <div class="rodas-locomotiva rodas-vagao">
+                        <img src="/arquivos/rodavagao.png" class="roda-locomotiva roda-vagao" />
+                        <img src="/arquivos/eixorodavagao.png" class="eixo-locomotiva eixo-rodavagao" />
+                        <img src="/arquivos/rodavagao.png" class="roda-locomotiva roda-vagao" />
+                    </div>    
+                </div>
+            </div>
+            <div class="eixo">
+                <img src="/arquivos/eixovagao.png" class="eixovagao-img" />
+            </div>
+            <div class="vagao">
+                <img src="/arquivos/vagao.png" class="vagao-img" />
+                <div class="eixos-locomotiva">
+                    <div class="rodas-locomotiva rodas-vagao">
+                        <img src="/arquivos/rodavagao.png" class="roda-locomotiva roda-vagao" />
+                        <img src="/arquivos/eixorodavagao.png" class="eixo-locomotiva eixo-rodavagao" />
+                        <img src="/arquivos/rodavagao.png" class="roda-locomotiva roda-vagao" />
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <div class="trilho-wrapper">
+            <div class="trilho">
+                <svg class="one" xmlns="http://www.w3.org/2000/svg" id="Camada_1" data-name="Camada 1" viewBox="0 0 862.99 12.47"><defs><style>.cls-1{fill:#583900;}.cls-2{fill:#fff;opacity:0.4;}.cls-3{fill:#3f3f3e;}</style></defs><title>Trilho</title><rect class="cls-1" width="862.85" height="4.69"></rect><rect class="cls-2" y="0.77" width="862.99" height="1.52"></rect><rect class="cls-3" x="455.21" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="455.72" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="425.47" y="3.29" width="4.47" height="7.15"></rect><rect class="cls-2" x="425.99" y="3.41" width="1.02" height="7.03"></rect><rect class="cls-3" x="395.73" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="396.25" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="366" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="366.51" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="336.26" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="336.77" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="306.51" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="307.03" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="276.78" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="277.29" y="3.41" width="1.02" height="7.03"></rect><rect class="cls-3" x="217.3" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="217.82" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="247.04" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="247.56" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="187.57" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="188.08" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="157.84" y="3.29" width="4.47" height="7.15"></rect><rect class="cls-2" x="158.34" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="128.09" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="128.6" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="98.35" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="98.87" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="68.62" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="69.13" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="38.88" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="39.39" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="9.14" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="9.65" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="841.8" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="842.31" y="3.41" width="1.02" height="7.03"></rect><rect class="cls-3" x="812.06" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="812.57" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="782.32" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="782.84" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="752.59" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="753.1" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="693.11" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="693.62" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="722.85" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="723.36" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="663.37" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="663.89" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="633.63" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="634.15" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="603.9" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="604.41" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="574.16" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="574.67" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="544.42" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="544.94" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="514.68" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="515.2" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="484.95" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="485.46" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-1" y="7.78" width="862.85" height="4.69"></rect><rect class="cls-2" y="8.56" width="862.99" height="1.51"></rect></svg> 
+                <svg class="two" xmlns="http://www.w3.org/2000/svg" id="Camada_1" data-name="Camada 1" viewBox="0 0 862.99 12.47"><defs><style>.cls-1{fill:#583900;}.cls-2{fill:#fff;opacity:0.4;}.cls-3{fill:#3f3f3e;}</style></defs><title>Trilho</title><rect class="cls-1" width="862.85" height="4.69"></rect><rect class="cls-2" y="0.77" width="862.99" height="1.52"></rect><rect class="cls-3" x="455.21" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="455.72" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="425.47" y="3.29" width="4.47" height="7.15"></rect><rect class="cls-2" x="425.99" y="3.41" width="1.02" height="7.03"></rect><rect class="cls-3" x="395.73" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="396.25" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="366" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="366.51" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="336.26" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="336.77" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="306.51" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="307.03" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="276.78" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="277.29" y="3.41" width="1.02" height="7.03"></rect><rect class="cls-3" x="217.3" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="217.82" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="247.04" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="247.56" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="187.57" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="188.08" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="157.84" y="3.29" width="4.47" height="7.15"></rect><rect class="cls-2" x="158.34" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="128.09" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="128.6" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="98.35" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="98.87" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="68.62" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="69.13" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="38.88" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="39.39" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="9.14" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="9.65" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="841.8" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="842.31" y="3.41" width="1.02" height="7.03"></rect><rect class="cls-3" x="812.06" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="812.57" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="782.32" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="782.84" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="752.59" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="753.1" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="693.11" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="693.62" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="722.85" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="723.36" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="663.37" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="663.89" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="633.63" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="634.15" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="603.9" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="604.41" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="574.16" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="574.67" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="544.42" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="544.94" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="514.68" y="3.29" width="4.49" height="7.15"></rect><rect class="cls-2" x="515.2" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-3" x="484.95" y="3.29" width="4.48" height="7.15"></rect><rect class="cls-2" x="485.46" y="3.41" width="1.03" height="7.03"></rect><rect class="cls-1" y="7.78" width="862.85" height="4.69"></rect><rect class="cls-2" y="8.56" width="862.99" height="1.51"></rect></svg> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

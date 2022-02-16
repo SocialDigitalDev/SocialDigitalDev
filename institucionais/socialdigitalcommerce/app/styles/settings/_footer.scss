@@ -1,0 +1,87 @@
+footer{
+    background: var(--full-darked-gray);
+    color: var(--white);
+    padding: 1em 0;
+    margin-top: 4em;
+    @include mq(r1024){
+        padding: 4em 2em;
+    }
+    .footer-wrapper{
+        .footer-itens-wrapper{
+            max-width: 1100px;
+            margin: 0 auto;
+            .footer-line{
+                @include flexbox;
+                @include justify-content(space-between);
+                @include align-items(center);
+                @include mq(r500){
+                    @include justify-content(center);
+                    @include flex-flow(column);
+                    text-align: center;
+                }
+                .line-column{
+                    @include mq(r500){
+                        margin-bottom: 2em
+                    }
+                    h4{
+                        font-weight: 600;
+                    }
+                    ul{
+                        @include flexbox;
+                        @include justify-content(space-between);
+                        @include mq(r980){
+                            @include flex-flow(column);
+                        }
+                        @include mq(r500){
+                            margin-top: 1em;
+                        }
+                        li{
+                            margin-right: 2em;
+                            @include mq(r500){
+                                margin: 0em;
+                            }
+                            a{
+                                color: var(--var-white);
+                            }
+                        }
+                    }
+                    &.redes-sociais{
+                        ul{
+                            @include flexbox;
+                            margin-top: initial;
+                            @include mq(r980){
+                                @include flex-flow(row);
+                            }
+                            li{
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                    &.lang-selector-footer{
+                        visibility: hidden;
+                        display: none;
+                        ul{
+                            @include flexbox;
+                            margin-top: initial;
+                            li{
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(2){
+                    @include align-items(center);
+                    @include justify-content(center);
+                    margin-top: 2em;
+                    p{
+                        font-weight: 300;
+                        font-size: 14px;
+                        @include mq(r500){
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

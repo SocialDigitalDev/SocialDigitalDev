@@ -1,0 +1,62 @@
+<header id="header">
+  <div class="ext topbar">
+    <div class="wrap">
+      <div class="box year">
+        Semana do Consumidor | Frete Grátis em todo o site para todo o Brasil até 15/03!
+      </div>
+    </div>
+  </div>
+  <div class="ext header">
+    <div class="wrap">
+      <div class="col-right box nav-store">
+        <a class="hide slide-hide close-menu" rev="left" rel="nav-store"><i class="ico">×</i></a>
+        <vtex.cmc:sfcMenu />          
+      </div>
+      <div class="hide col-left burger">
+        <a class="open-menu slide-show" rel="nav-store" rev="left"><i></i><i></i><i></i></a>
+      </div>
+      <div class="col-left box logo">
+        <h1><a href="/" title="home" class="header__logo"></a></h1>
+      </div>
+      <div class="icons-wrapper">
+        <div class="new-link-cadastro hide">
+            <a class="login-redir" rel="/account#">Cadastre-se aqui!</a>
+        </div>
+        <div class="hover-open col-right mini-cart">
+            <a class="btn-link open-minicart sub-open">
+                <span class="total-qty"></span>
+            </a>
+            <div class="drop resume-cart"></div>
+        </div>
+        <div class="col-right btn-search">
+            <a class="btn-link open-search show" rel="search"></a>
+        </div>
+        <div class="col-right hover-open nav-user">
+            
+            <div class="hide">
+            <vtex.cmc:welcomeMessage />
+            </div>
+            
+            <a class="btn-link sub-open">
+                
+            </a>
+            <div class="drop">
+            <ul>
+                <li class="hide msg-welcome">Olá, <span class="name"></span></li>
+                <li class="hide login"><a id="login">Entrar</a></li>
+                <li><a class="login-redir" rel="/account#">Minha conta</a></li>
+                <li><a class="login-redir" rel="/account#/orders">Meus pedidos</a></li>
+                <li><a class="login-redir" rel="/giftlist/manage">Meus Favoritos</a></li>          
+                <li class="hide logout"><a href="/no-cache/user/logout">Sair</a></li>
+            </ul>
+            </div>
+        </div>
+       </div>
+    </div>
+  </div>  
+</header>
+<div class="hide search">
+  <div class="wrap">
+    <vtex.cmc:fullTextSearchBox />
+  </div>
+</div>

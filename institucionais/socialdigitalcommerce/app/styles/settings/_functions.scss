@@ -1,0 +1,33 @@
+// Transitions
+@mixin t($time) {
+	transition: all $time ease-in-out;
+}
+// Transform Rotate
+@mixin r($degrees) {
+	transform: rotate($degrees);
+}
+// KEYFRAMES
+@keyframes typing{
+	from{
+		width: 0;
+	}
+	to{
+		width: 100%;
+	}
+}
+@keyframes blink-caret-end {
+	from, to {
+		border-color: var(--purple);
+	}
+	50% {
+		border-color: var(--purple);
+	}
+}
+@keyframes blink-caret {
+	from, to {
+		border-color: transparent
+	}
+	50% {
+		border-color: var(--purple); 
+	}
+}

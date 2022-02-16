@@ -1,0 +1,80 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'Home';
+    - var $templateClass = 'sm-home';
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content
+    section
+        figure
+            div.wrapper
+                div.banner-carousel.banner-principal.desktop
+                    vtex:contentPlaceHolder(id=`banner-principal-desktop`)/
+                div.banner-carousel.banner-principal.mobile
+                    vtex:contentPlaceHolder(id=`banner-principal-mobile`)/
+    section
+        div.section-categorias-gerais
+            div.wrapper
+                vtex:contentPlaceHolder(id=`categorias-gerais`)/
+    section
+        div.section-ofertas-relampago.vitrine-simples
+            div.vitrine-title.flags-promo
+                h2 Ofertas Relâmpago
+            div.wrapper
+                vtex:contentPlaceHolder(id=`vitrine-ofertas-relampago`)/                      
+    section
+        div.vitrines-duplas.produtos
+            div.wrapper
+                div.prod-left
+                    div.vitrine-title
+                        h2 Sugerido com base em preferencias de compra
+                    div.vitrine-content
+                        vtex:contentPlaceHolder(id=`vitrine-pref-compra`)/
+                div.prod-right
+                    div.vitrine-title
+                        h2 Oferta por até R$50
+                    div.vitrine-content
+                        vtex:contentPlaceHolder(id=`vitrine-ate-50-reais`)/
+    section
+        div.section-principais-produtos.vitrine-simples
+            div.vitrine-title
+                h2 Principais produtos
+            div.wrapper
+                vtex:contentPlaceHolder(id=`vitrine-principais-produtos`)/    
+    section
+        div.vitrines-duplas.ofertas
+            div.wrapper
+                div.prod-left
+                    div.vitrine-title
+                        h2 Pesquisas em alta
+                    div.vitrine-content
+                        vtex:contentPlaceHolder(id=`categorias-em-alta`)/
+                div.prod-right
+                    div.vitrine-title
+                        h2 Até 40% off em moda
+                    div.vitrine-content
+                        vtex:contentPlaceHolder(id=`categorias-com-desconto`)/
+    section
+        div.section-produtos-favoritos.vitrine-simples
+            div.vitrine-title
+                h2 Inspirado nos seus favoritos
+            div.wrapper
+                vtex:contentPlaceHolder(id=`vitrine-principais-produtos`)/
+    section
+        div.section-banners-triplos
+            div.wrapper
+                vtex:contentPlaceHolder(id=`vitrine-principais-produtos`)/
+    section
+        div.section-descobertas-diarias.vitrine-tripla
+            div.vitrine-title
+                h2 Inspirado nos seus favoritos
+            div.wrapper
+                vtex:contentPlaceHolder(id=`vitrine-principais-produtos`)/
+
+block append scripts
+    script(type='text/javascript', src=`/arquivos/${$templateName}.js`) 

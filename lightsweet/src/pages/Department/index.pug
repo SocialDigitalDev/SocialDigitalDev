@@ -1,0 +1,39 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'Department';
+    - var $templateClass = 'ls-departamento';
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content
+    section 
+        div.banner-departamento-promo
+            div.vitrine-title
+                h2
+    section.departamento-container
+        div.wrapper
+            .container.pagDepartamento
+                .container-grid
+                    aside.filtro-sticky#sticky
+                        .filtrosDepartamento
+                            span.btn-filtro  Filtros
+                                vtex(.cmc:searchNavigator)/
+                    .conteudo-categoria
+                        .resultadoDepartamento
+                            .order-main-container
+                                .order-main-container__left
+                                .order-main-container__center.center-top
+                                .order-main-container-right
+                            .outlet-departamento_vitrine-produtos
+                                vtex(.cmc:searchResult layout='b1f76d07-88da-4d57-9548-e6d1d04be34b' itemCount='16' columnCount='16')/
+    section 
+        div.banner-departamento-end
+            vtex:contentPlaceHolder(id=`banner-departamento-bottom`)/
+
+
+block append scripts
+    script(type='text/javascript', src=`/arquivos/${$templateName}.js`) 

@@ -1,0 +1,52 @@
+@mixin mq($resolution){
+    @if $resolution == r1600 {
+        @media (max-width: 1600px) {
+            @content;
+        }
+    }
+    @else if $resolution == r1440 {
+        @media (max-width: 1440px) {
+            @content;
+        }
+    }
+    @else if $resolution == r1366 {
+        @media (max-width: 1366px) {
+            @content;
+        }
+    }
+    @else if $resolution == r1280 {
+        @media (max-width: 1280px) {
+            @content;
+        }
+    }
+    @else if $resolution == r1024 {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $resolution == r980 {
+        @media (max-width: 980px) {
+            @content;
+        }
+    }
+    @else if $resolution == r670 {
+        @media (max-width: 670px) {
+            @content;
+        }
+    }
+    @else if $resolution == r500 {
+        @media (max-width: 500px) {
+            @content;
+        }
+    }
+    @else if $resolution == r375 {
+        @media (max-width: 375px) {
+            @content;
+        }
+    }
+    @else if $resolution == r360 {
+        @media (max-width: 360px) {
+            @content;
+        }
+    }
+}

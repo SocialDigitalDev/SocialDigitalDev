@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+
+    <title> <vtex.cmc:productPageTitle /> </title>
+    <vtex:metaTags/>
+    <vtex:template id="ec-styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <vtex.cmc:productRichSnippets showFacebook="1" />
+
+</head>
+
+<body>
+
+    <vtex.cmc:productRichSnippets showGoogle="1" />
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <vtex:template id="ec-header" />
+
+    <main>
+        <!-- Estrutura Breadcrumb -->
+        <section class="s-bread">
+            <div class="container bread">
+                <div class="container-center">
+                    <vtex.cmc:BreadCrumb />
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container produto-all">
+                <div class="ec-bg-img">
+                    <div class="ec-um"><img src="/arquivos/ec-sol-bg.png" /></div>
+                    <div class="ec-dois"><img src="/arquivos/ec-carro-bg.png" /></div>
+                    <div class="ec-tres"><img src="/arquivos/ec-boneca-bg.png" /></div>
+                    <div class="ec-quatro"><img src="/arquivos/ec-trem-bg.png" /></div>
+                    <div class="ec-cinco"><img src="/arquivos/ec-urso-bg.png" /></div>
+                </div>
+                <div class="container-center">
+
+                    <!-- Estrutura para imagem do produto -->
+
+                    <div id="produtoDiv-esquerda">
+                        <figure>
+                            <div class="img-produto">
+                                <vtex.cmc:ProductImage zoom="on" />
+                            </div>
+                        </figure>
+                    </div>
+
+                    <!-- Estrutura para as principais informações do produto -->
+
+                    <div id="produtoDiv-direita">
+
+                        <h1 class="nome-prod">
+                            <vtex.cmc:productName/>
+                        </h1>
+                        
+                        <span class="cod-prod">
+                            <vtex.cmc:skuReference/>	
+                        </span>
+                        <!-- Estrutura para detalhes do produto -->
+                        <div class="container detalhes-prod">
+                            <!-- Estrutura descricao produto -->
+                            <div id="descricao-produto">
+                                <div class="container-center">
+                                    <h2 class="titulo"> Descrição </h2>
+                                    <vtex.cmc:productDescriptionShort />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="variantes-sku">
+                            <vtex.cmc:skuSelection />
+                        </div>
+
+                        <vtex.cmc:skuPrice/>
+                        <div class="produto-buy__container">
+                            <div class="ec-produto__buy-quant">
+                                <div class="qtdPrateleira">
+                                    <span class="btnDec"></span>
+                                    <input type="text" class="qtdVal" value="1" />
+                                    <span class="btnAcr"></span>
+                                </div>
+                            </div>
+                            <div class="ec-produto__buy-button">
+                                <vtex.cmc:BuyButton/>
+                            </div>
+                        </div>
+
+                        <div class="calc-frete">
+                            <div class="cep">
+                                <h3><span class="icon__frete"></span> Calcule o frete e prazo de entrega.</h3>
+                                <vtex.cmc:shippingValue/>
+                                <script type="text/javascript">
+                                    $(document).ready( function(){
+                                        ShippingValue();
+                                    });
+                                </script>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="ec-product-end">
+                        <div class="ec-produto-descricao">
+                            <h2> Descrição </h2>
+                             <vtex.cmc:ProductDescription/>
+                        </div>
+                        <div class="ec-produto-info">
+                            <h2> Informações do produto </h2>
+                            <vtex.cmc:productSpecification/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- Estrutura de compre junto -->
+         <section>
+            <div class="container slideCompreJunto">
+                <div class="container-center">
+                    <div class="titulo-prateleira">
+                        <h2 class="titulo">Aproveite e <b>Compre Junto</b>
+                            <span class="box-heading-pneu"></span>
+                        </h2>
+                    </div>  
+                    <vtex.cmc:BuyTogether/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estrutura de Quem viu, viu tbm -->
+        <section>
+            <div class="container slide-prod qvvt">
+                <div class="container-center">
+                    <div class="titulo-prateleira">
+                        <h2>Quem viu, <b>viu também</b>
+                            <span class="box-heading-pneu"></span>
+                        </h2>
+                    </div>
+                    <vtex:contentPlaceHolder id="ec-qvvt" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chamada para o rodapé -->
+    <vtex:template id="ec-footer" />
+    <!-- Chamada para os scripts Js da loja -->
+    <vtex:template id="ec-scripts" />
+</body>
+
+</html>

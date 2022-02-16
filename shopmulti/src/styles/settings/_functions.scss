@@ -1,0 +1,8 @@
+// Transitions
+@mixin t($time) {
+	transition: all $time ease;
+}
+// Transform Rotate
+@mixin r($degrees) {
+	transform: rotate($degrees);
+}

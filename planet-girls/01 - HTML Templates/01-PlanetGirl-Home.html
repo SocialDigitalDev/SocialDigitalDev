@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+
+    <title> Planet Girls </title>
+    <vtex:metaTags/>
+    <vtex:template id="01-PlanetGirls-styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <vtex:template id="01-PlanetGirls-header" />
+
+    <main>
+         <!--Barra topo slider -->
+         <section>
+            <div class="container barraInformacoes">
+                <div class="container-center">
+                    <vtex.cmc:PgBarraSlider />
+                </div>
+            </div>
+        </section>
+        
+        <!-- Estrutura para slide principal -->
+        <figure>
+            <div class="container slide">
+                <div class="slide-principal">
+                    <vtex:contentPlaceHolder id="Pg-slide-principal" />
+                </div>
+            </div>
+            
+            <div class="container slide-mobile">
+                <vtex:contentPlaceHolder id="Pg-slide-principal-mobile" />
+            </div>
+        </figure>
+        
+        <!-- Estrutura para informativo -->
+        <section>
+            <div class="container informativos">
+                <div class="container-center">
+                    <vtex.cmc:Pg-Informativo/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estrutura para banners -->
+        <section>
+            <div class="container banner-categoria">
+                <div class="container-center">
+                    <vtex:contentPlaceHolder id="Pg-Banners-categoria" />
+                </div>
+            </div>
+        </section>
+
+        <!--Top Teen -->
+        <section>
+            <div class="container slide-prod prateleira-topteen">
+                <div class="container-center">
+                <div class="titulo-prateleira">
+                    <h2>top teen </h2>
+                </div>
+                    <vtex:contentPlaceHolder id="Pg-prateleira-topteen" />
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE BANNERS -->
+        <section>
+            <div class="container banner-departamentos">
+                <div class="container-center">
+                    <vtex:contentPlaceHolder id="Pg-Banners-departamentos" />
+                </div>
+            </div>
+        </section>
+        
+          <!--Camisetas -->
+          <section>
+            <div class="container slide-prod prateleira-camisetas">
+                <div class="container-center">
+                <div class="titulo-prateleira">
+                    <h2> camisetas </h2>
+                </div>
+                    <vtex:contentPlaceHolder id="Pg-prateleira-camisetas" />
+                </div>
+            </div>
+        </section>
+
+         <!-- Prateleira LEXA -->
+         <section>   
+            <div class="container slide-prod prateleira-lexa">
+                <div class="container-full">
+                    <div class="prat-left__img">
+                        <vtex:contentPlaceHolder id="Pg-banner__lexa" />
+                    </div>
+                   
+                    <div class="prat-right__lexa">
+                        <vtex:contentPlaceHolder id="Pg-prateleira_lexa" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Amor por nossas garotas -->
+        <section>   
+            <div class="container section-depoimentos">
+                <div class="container-center">
+                    <span class="icon-coracao"><vtex.cmc:iconDepoimentos /></span>
+                    <h3>O amor por nossas garotas</h3>
+                    <div class="depoimentos">
+                       <ul class="slide-dep">
+                           <li>
+                                <blockquote> 
+                                   <p>“Comprei um vestido lindo da Planet, fiquei com um super alto astral. Nunca mais compro de outra marca. A Planet sempre será a primeira no meu coração.”</p>
+                                   <cite>Paula Nogueira</cite>
+                                </blockquote>
+                            </li>
+                            
+                            <li>
+                                <blockquote>
+                                    <p>“As roupas são super top, vestem super bem e valorizam o meu corpo.”</p>
+                                    <cite>Sarah Gomes </cite>
+                                </blockquote>
+                            </li>
+                            
+                            <li>
+                                <blockquote>
+                                    <p>“Amei o look da Planet, sempre será a minha marca preferida!!! Show!”</p>
+                                    <cite>Ana Soares</cite>
+                                </blockquote>
+                            </li>
+                                <li>
+                                    <blockquote>
+                                        <p>“Comprei um vestido lindo da Planet, fiquei com um super alto astral. Nunca mais compro de outra marca. A Planet sempre será a primeira no meu coração.”</p>
+                                        <cite>Paula Nogueira</cite>
+                                    </blockquote>
+                                </li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instafeed -->
+        <section>
+            <div class="titulo-prateleira">
+                <div class="container section-instafeed">
+                    <div class="container-center">
+                        <h2> SHOP </h2><p>#meulookplanetgirls</p>
+                    </div>
+                    <div id="instafeed"></div>
+                </div>
+            </div>
+        </section>
+       
+
+    </main>
+    <!-- Chamada para o rodapé -->
+     <vtex:template id="01-PlanetGirls-footer" />  
+    <!-- Chamada para os scripts Js da loja -->
+    <vtex:template id="01-PlanetGirls-scripts" />
+</body>
+</html>

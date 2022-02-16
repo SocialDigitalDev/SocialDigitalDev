@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+    <title> FOR FIT BOX </title>
+    <vtex:metaTags />
+    <vtex:template id="4fit-css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2e2e2e" />
+</head>
+
+<body>
+
+    <a name="home"></a>
+    <div class="wrapper">
+        <div class="minicart__overlay"></div>
+        <header class="header">
+            <nav class="nav">
+                <span id="brand">
+                    <a href="/"><span class="icon-logo-4fitbox"></span></a>
+                </span>
+
+                <ul id="menu">
+                    <li><a href="#section1" data-number="1">O QUE É A FOR FIT BOX</a></li>
+                    <li><a href="#section2" data-number="2">ALTA PERFORMANCE</a></li>
+                    <li><a href="#section3" data-number="3">TREINOS FREQUENTES</a></li>
+                    <li><a href="#section4" data-number="4">SAUDÁVEIS</a></li>
+                    <li><a href="#section5" data-number="5">PRODUTOS AVULSOS</a></li>
+                </ul>
+
+                <div class="header-user-links">
+                    <div class="user-name__account">
+                        <div class="link-help">
+                            <vtex.cmc:welcomeMessage />
+                        </div>
+                    </div>
+                    <!-- <div class="saudacao-topo">
+                        <a href="/account#/orders" title="Meus Pedidos" class="item-orders">Meus Pedidos</a>
+                    </div> -->
+                    <div class="carrinho">
+                        <!--<a href="/checkout">-->
+                            <span class="icon-cart"></span>
+                            <div class="info-cart">
+                                <span class="qtd-cart"> </span>
+                            </div>
+                        <!--</a>-->
+                    </div>
+
+                    <!--MINI CART -->
+                    <div class="header-minicart">
+                        <div class="header-minicart-header">
+                            <div class="minicart__header-links">
+                                <button class="header-minicart-close">
+                                    <!-- <img src="/arquivos/close.svg" /> -->
+                                    voltar
+                                </button>
+                                <p class="header-minicart_topo">CARRINHO</p>
+                            </div>
+                            <div class="header-minicart-title qtd-minicart" style="margin-left: 0px;">
+                                Seu carrinho possui:
+                                <span class="header-minicart-badge" style="display: flex;"></span><span
+                                    class="header-minicart-itens"></span>
+                            </div>
+                        </div>
+                        <div class="header-minicart-navigation">
+                            <!--customMiniCart-->
+                            <div class="portal-totalizers-ref">
+                                <div class="amount-items-in-cart">
+                                    <div class="cartInfoWrapper"><span class="title"><span id="MostraTextoXml1">Resumo
+                                                do
+                                                Carrinho</span></span>
+                                        <ul class="cart-info">
+                                            <li class="amount-products"><strong><span id="MostraTextoXml2">Total de
+                                                        Produtos:</span></strong>
+                                                <em class="amount-products-em">1</em>
+                                            </li>
+                                            <li class="amount-items"><strong><span
+                                                        id="MostraTextoXml3">Itens:</span></strong>
+                                                <em class="amount-items-em"></em>
+                                            </li>
+                                            <li class="total-cart"><strong><span id="MostraTextoXml5">Valor
+                                                        Total:</span></strong>
+                                                <em class="total-cart-em"></em>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>$('.portal-totalizers-ref').minicart({ showMinicart: false, showTotalizers: true, showShippingOptions: false });</script>
+                            <div class="header-minicart-list">
+                                <div class="list-prod">
+                                    <div class="list-prod-image"> </div>
+                                    <div class="list-prod-info">
+                                        <div class="list-prod-name"></div>
+                                        <div class="list-prod-price">
+                                            <div class="list-prod-qtd">
+                                                <p class="qtd-remove">-</p>
+                                                <p class="qtd-value"></p>
+                                                <p class="qtd-adiciona">+</p>
+                                            </div>
+                                            <div class="list-prod-total"></div>
+                                        </div>
+                                    </div>
+                                    <span class="list-prod-remove"><img src="/arquivos/close.svg" /></span>
+                                </div>
+                            </div>
+                            <div class="header-minicart-empty" style="display: none;">
+                                <p>Carrinho Vazio</p><button>Continuar comprando</button>
+                            </div>
+                        </div>
+                        <div class="header-minicart-footer" style="display: block;">
+                            <!-- footerMiniCart -->
+                            <div class="header-minicart-total">
+                                <!-- totalCart -->
+                                <p class="header-minicart-subtotal">
+                                    Subtotal
+                                    <span class="header-minicart-value"></span>
+                                </p>
+                            </div>
+                            <div class="header-minicart-actions">
+                                <!-- actionMiniCart -->
+                                <a href="/checkout" class="goToCart">Finalizar Compra</a>
+                                <button class="continueToBuy">Continuar Comprando</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--MINI CART -->
+
+                </div>
+
+                <div id="toggle">
+                    <div class="span"></div>
+                </div>
+            </nav>
+        </header>
+
+        <div id="resize">
+            <div class="close-btn"></div>
+
+            <ul id="menu">
+                <li><a href="#section1" data-number="1">O QUE É A FOR FIT BOX</a></li>
+                <li><a href="#section2" data-number="2">ALTA PERFORMANCE</a></li>
+                <li><a href="#section3" data-number="3">TREINOS FREQUENTES</a></li>
+                <li><a href="#section4" data-number="4">SAUDÁVEIS</a></li>
+                <li><a href="#section5" data-number="5">PRODUTOS AVULSOS</a></li>
+            </ul>
+        </div>
+
+        <div id="main" class="content">
+            <nav id="cd-vertical-nav">
+                <ul>
+                    <li>
+                        <a href="#section1" data-number="1">
+                            <span class="cd-dot"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#section2" data-number="2">
+                            <span class="cd-dot"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#section3" data-number="3">
+                            <span class="cd-dot"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#section4" data-number="4">
+                            <span class="cd-dot"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#section5" data-number="5">
+                            <span class="cd-dot"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- <div class="dots"> 
+                <ul>
+                    <li><a href="#o-que"></a></li>
+                    <li><a href="#alta-performance"></a></li>
+                    <li><a href="#treinos"></a></li>
+                    <li><a href="#saudaveis"></a></li>
+                    <li><a href="#produtos-avulsos"></a></li>
+                </ul>
+            </div> -->
+            <!-- O QUE É -->
+            <a name="o-que"></a>
+            <section id="section1" class="o-que cd-section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8 m-a text-center">
+                            <h1 class="logo-section">
+                                <a href="index.html">
+                                    <span class="icon-logo-4fitbox" id="scene" data-relative-input="true"></span>
+                                </a>
+                            </h1>
+                            <h3 data-aos="fade-down"
+                            data-aos-easing="linear"
+                            data-aos-duration="1500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis dapibus vestibulum.
+                                Suspendisse nec sapien ac odio viverra vehicula a malesuada enim.
+                            </h3>
+                        </div>
+                    </div>
+                    <section id="process">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="steps-timeline text-center">
+                                    <ul>
+                                        <li>
+                                            <div class="steps-one">
+
+                                                <div class="step-wrap">
+                                                    <div class="steps-stops">
+                                                        <div class="verticle-line back-orange">1</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inverted-pane-warp back-blue">
+                                                    <div class="inverted-steps-pane">
+                                                        <p>ESCOLHA O PLANO QUE MAIS COMBINA COM VOCÊ DE ACORDO COM SEU
+                                                            TREINO</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="steps-two">
+                                                <div class="step-wrap">
+                                                    <div class="steps-stops">
+                                                        <div class="verticle-line back-orange">2</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inverted-pane-warp back-orange">
+                                                    <div class="inverted-steps-pane">
+                                                        <p>RECEBA POR E-MAIL EM ATÉ 24H ACONFIRMAÇÃO DO SEU BOX.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="steps-three">
+                                                <div class="step-wrap">
+                                                    <div class="steps-stops">
+                                                        <div class="verticle-line back-orange">3</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inverted-pane-warp back-blue">
+                                                    <div class="inverted-steps-pane">
+                                                        <p>COMPRE E RECEBA SEU BOX COM COMODIDADE NO ENDEREÇO DE SUA
+                                                            PREFERÊNCIA COM FRETE
+                                                            GRÁTIS.
+                                                            FIQUE A VONTADE PARA CANCELAR SUA ASSINATURA A QUALQUER
+                                                            MOMENTO</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="steps-four">
+                                                <div class="step-wrap">
+                                                    <div class="steps-stops">
+                                                        <div class="verticle-line back-orange">4</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inverted-pane-warp back-orange">
+                                                    <div class="inverted-steps-pane">
+                                                        <p>CASO PREFIRA, ASSINANTES DA FOR FIT BOX TAMBÉM PODEM COMPRAR
+                                                            PRODUTOS AVULSOS COM
+                                                            DESCONTO</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h3>ESCOLHA O PLANO QUE MAIS COMBINA COM VOCÊ DE ACORDO COM O SEU TREINO</h3>
+                        </div>
+                    </div>
+                    <div class="row down-section">
+                        <div class="arrow bounce">
+                            <a class="section-down" href="#section2"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Alta Performance -->
+            <a name="alta-performance"></a>
+            <section id="section2" class="cd-section alta-performance">
+                <div class="container">
+                    <div class="item__decor">
+                        <svg width="553" height="680" viewBox="0 0 553 680" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 309.438V101.379V3H550V763" stroke="#D74457" stroke-width="6" />
+                        </svg>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 section-heading">
+                            <h3>COMPRE AGORA O SEU BOX PARA TREINOS INTENSOS</h3>
+                            <span class="sep_title">
+                                <p>Ganho Extremo</p>
+                            </span>
+                        </div>
+                        <div class="col-md-7"></div>
+                    </div>
+
+                    <div class="row produto">
+                        <div class="col-md-2">
+                            <div class="preco-produto">
+                                <sup class="cifra-preco">R$</sup><span class="valor-preco">39,<sup>99</sup></span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 text-center box-produto" id="scene" data-relative-input="true">
+                            <img src="/arquivos/produto-box-alta-performance.png" data-depth='0.6' width="100%"
+                                class="img-1" />
+                        </div>
+
+                        <div class="col-md-2">
+                            <span class="btn-comprar" data-id="$idSku">
+                                <a href="$uri">
+                                    <span class="buy-icon carrinho"></span> Comprar Agora
+                                </a>
+                            </span>
+                        </div>
+
+                        <div class="col-md-3"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="title-section align-text-bottom text-right">ALTA PERFORMANCE</h1>
+                            <div class="subtitle text-right">
+                                PARA TREINOS PESADOS
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Treinos Frequentes -->
+            <a name="treinos"></a>
+            <section id="section3" class="cd-section treinos">
+                <div class="container">
+                    <div class="item__decor">
+                        <svg width="553" height="680" viewBox="0 0 553 680" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 355V116.007V3H550V800" stroke="#95BFFF" stroke-width="6" />
+                        </svg>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 section-heading">
+                            <h3>COMPRE AGORA O SEU BOX PARA TREINOS MODERADOS</h3>
+                            <span class="sep_title">
+                                <p>Ganho Moderado</p>
+                            </span>
+                        </div>
+                        <div class="col-md-7"></div>
+                    </div>
+
+                    <div class="row produto">
+                        <div class="col-md-2">
+                            <div class="preco-produto">
+                                <sup class="cifra-preco">R$</sup><span class="valor-preco">39,<sup>99</sup></span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 text-center box-produto">
+                            <img src="/arquivos/produto-box-treinos-moderados.png" />
+                        </div>
+
+                        <div class="col-md-2">
+                            <!-- <button class="btn-comprar">
+                                <span class="carrinho"></span>
+                                <p>COMPRE AGORA</p>
+                            </button> -->
+
+                            <span class="btn-comprar" data-id="$idSku">
+                                <a href="$uri">
+                                    <span class="buy-icon carrinho"></span> Comprar Agora
+                                </a>
+                            </span>
+                        </div>
+
+                        <div class="col-md-3"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="title-section align-text-bottom text-right">TREINOS FREQUENTES</h1>
+                            <div class="subtitle text-right">
+                                PARA TREINOS MODERADOS
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vida Saudável -->
+            <a name="saudaveis"></a>
+            <section id="section4" class="cd-section saudaveis">
+                <div class="container">
+                    <div class="item__decor">
+                        <svg width="553" height="680" viewBox="0 0 553 680" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 355V116.007V3H550V800" stroke="#59D744" stroke-width="6" />
+                        </svg>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 section-heading">
+                            <h3>COMPRE AGORA O SEU BOX PARA SE MANTER SAUDÁVEL</h3>
+                            <span class="sep_title">
+                                <p>Ganho Saudável</p>
+                            </span>
+                        </div>
+                        <div class="col-md-7"></div>
+                    </div>
+
+                    <div class="row produto">
+                        <div class="col-md-2">
+                            <div class="preco-produto">
+                                <sup class="cifra-preco">R$</sup><span class="valor-preco">39,<sup>99</sup></span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 text-center box-produto">
+                            <img src="/arquivos/produto-box-vida-saudavel.png" />
+                        </div>
+
+                        <div class="col-md-2">
+                            <span class="btn-comprar" data-id="$idSku">
+                                <a href="$uri">
+                                    <span class="buy-icon carrinho"></span> Comprar Agora
+                                </a>
+                            </span>
+                        </div>
+
+                        <div class="col-md-3"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="title-section align-text-bottom text-right">VIDA SAUDÁVEL</h1>
+                            <div class="subtitle text-right">
+                                PARA TREINOS LEVES
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Produtos Avulsos  -->
+            <a name="produtos-avulsos"></a>
+            <section id="section5" class="cd-section produtos-avulsos">
+                <div class="container-fluid">
+                    <div class="section-data">
+                        <div class="row">
+                            <div class="col-md-10 m-a">
+                                <div class="produtos-slider">
+
+                                    <vtex:contentPlaceHolder id="forfit-produtos-avulsos" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div><!-- Fim main Content -->
+    </div><!-- Fim Wrapper -->
+
+    <!-- Chamada para o rodapé -->
+    <vtex:template id="4fit-footer" />
+
+    <!-- Chamada para os scripts Js da loja -->
+    <vtex:template id="4fit-js" />
+
+</body>
+
+</html>

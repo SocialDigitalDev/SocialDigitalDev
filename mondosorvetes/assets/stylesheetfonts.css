@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@font-face {
+    font-family: 'Baloo Bhai';
+    src: url('BalooBhai-Regular.woff2') format('woff2'),
+        url('BalooBhai-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MuseoSansW01-Rounded1000';
+    src: url('MuseoSansW01-Rounded1000.woff2') format('woff2'),
+        url('MuseoSansW01-Rounded1000.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-HeavyItalic.woff2') format('woff2'),
+        url('GalanoGrotesque-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAlt';
+    src: url('GalanoGrotesqueAlt-Black.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAltHeavy';
+    src: url('GalanoGrotesqueAlt-Heavy.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAltHeavyLight';
+    src: url('GalanoGrotesqueAlt-Heavy.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+

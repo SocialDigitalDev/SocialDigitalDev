@@ -1,0 +1,43 @@
+.owl-nav {
+    button {
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        top: 35%;
+        display: inline-block;
+        text-indent: -9999%;
+        border-radius: 50%;
+
+        &.owl-prev {
+            background: #3f3948 url(~@assets/ico-arrow.svg) no-repeat center;
+            background-size: 15px;
+            left: 10px;
+            transform: rotate(180deg);
+        }
+
+        &.owl-next {
+            background: #3f3948 url(~@assets/ico-arrow.svg) no-repeat center;
+            background-size: 15px;
+            right: 15px;
+        }
+    }
+}
+
+.owl-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    .owl-dot {
+        width: 12px;
+        height: 12px;
+        display: block;
+        background: #3f3948;
+        border-radius: 50%;
+        margin-left: 10px;
+
+        &.active {
+            background: #EEE809;
+        }
+    }
+}

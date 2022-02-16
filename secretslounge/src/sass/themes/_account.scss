@@ -1,0 +1,232 @@
+$account__primaryColor: $color-brown-dark;
+$account__secondaryColor: #E7B2A5;
+$account__fontFamilyPrimary: 'Nexa', sans-serif;
+
+// overwrite
+
+.bg-muted-5 {
+    background: #F8F4EB;
+}
+
+.account {
+    * {
+        font-family: $account__fontFamilyPrimary, sans-serif;
+    }
+    color: $account__primaryColor;
+    font-family: $account__fontFamilyPrimary, sans-serif;
+    .vtex-modal__modal {
+        width: 100%;
+    }
+    .c-action-primary {
+        @extend .btnDefault--outline;
+    }
+    .c-link {
+        color: $account__primaryColor;
+        text-decoration: underline;
+    }
+    .bg-action-secondary {
+        background: $account__secondaryColor;
+        color: #fff;
+    }
+
+    .vtex-pageHeader__container {
+        @media (min-width: 39.999em) {
+            .mt7 {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .vtex-pageHeader__title {
+        font-weight: 900;
+    }
+
+    .vtex-account_menu-link {
+        display: flex;
+        align-items: center;
+        padding: 0.3rem 0;
+        border: 0;
+
+        &:hover {
+            color: $account__primaryColor;
+        }
+
+        @media (max-width: 39.999em) {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #F2F0F7;
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 2px;
+            min-height: 100%;
+            margin-right: 8px;
+            padding: 10px 0;
+            border-radius: 4px;
+        }
+        &.b--action-primary {
+            color: $account__primaryColor;
+            &::before {
+                background: $account__primaryColor;
+            }
+        }
+        @media (max-width: 39.999em) {
+            /* border-color: $account__primaryColor;
+            background: #f5f5f5; */
+        }
+    }
+
+    .myo-order-header {
+        background: #fff;
+        background: 1px solid #F2F0F7 !important;
+    }
+
+
+    .myo-details-btn {
+        @extend .btnDefault; 
+        
+        font-family: $account__fontFamilyPrimary, sans-serif;
+        text-decoration: none;
+    }
+
+    
+    .myo-reorder-btn {
+        @extend .btnDefault--outline; 
+        background: transparent;
+        color: $account__primaryColor;
+        font-family: $account__fontFamilyPrimary, sans-serif;
+        text-decoration: none;
+        svg {
+            fill: currentColor;
+        }
+    }
+
+    .myo-cancel-btn {
+        margin: 24px auto; 
+        justify-content: center;
+    }
+
+    .vtex-account__user-name {
+        white-space: initial;
+    }
+
+    button.b--action-primary {
+        background-color: $account__primaryColor;
+        color: #fff;
+    }
+
+    .c-on-base {
+        color: $account__primaryColor;
+    }
+
+    .vtex-button {
+        @extend .btnDefault--outline;  
+        min-height: 40px;
+        width: auto;
+    }
+
+    .vtex-account__page-body {
+        letter-spacing: 0;
+        padding: 0;
+        font-family: 'Nunito', sans-serif;
+        article {
+            background: #fff;
+            border-radius: 0;
+        }
+        @media (min-width: 40em) {
+            padding: 0 2rem;
+        }
+    }
+
+    .vtex-profile-form__profile-summary {
+        font-weight: 700;
+        label {
+            font-weight: normal;
+        }
+        .c-on-disabled {
+            color: inherit;
+        }
+    }
+
+    .vtex-pageHeader-link__container {
+        margin-bottom: 36px;
+    }
+
+    .vtex-profile-form__toggle-business-btn__wrapper,
+    .vtex-account__user-image {
+        display: none;
+    }
+
+    .vtex-account__menu.pv9 {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .vtex-account__menu {
+        align-self: flex-start; 
+        font-size: 13px;
+        border-radius: 8px;
+        padding: 28px 18px;
+        margin: 0;
+        padding: 28px;
+        @media (max-width: 39.999em) {
+            margin: 48px auto;
+        }
+    }
+
+    .vtex-account__menu-links {
+        .b--action-primary {
+            font-weight: bold;
+            border-color: $account__primaryColor;
+        }
+    }
+
+    .vtex-modal__modal {
+        .t-heading-5 {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .vtex-address-form__postalCode {
+        margin-bottom: 1rem;
+    }
+
+    .vtex-modal__confirmation.justify-end {
+        justify-content: center;
+    }
+
+    *[class*='b--muted'] {
+        border-color: transparent; 
+    }
+    *[class*='c-muted'] {
+        color: inherit; 
+    }
+
+    .vtex-account__user-info {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+         
+    }
+    .vtex-account__user-greeting { 
+        margin-bottom: 0;
+    }
+    .vtex-account__user-name {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    label[for="newsletterOptIn"] {
+        @extend .btnDefault--outline; 
+        height: auto;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+

@@ -1,0 +1,87 @@
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+    
+    <div class="planet-product">
+    
+        <input type="hidden" class="planet-id" value="$id" />
+        <input type="hidden" class="planet-sku" value="$idSku" />
+        <div class="planet-image js--lazyload has--lazyload" data-noscript=""">
+            <a class="planet-productImage" title="$escapedName" href="$uri" loading="lazy">
+                <!--$product.GetImageTag(30)-->
+                $product.GetImageTag(550,695)
+            </a>
+             <div class="planet-hover-content">
+    		        <div class="planet-variations"></div>
+    		        <div class="qtdPrateleira">
+        			    <span class="btnDec">  </span>
+        			    <input class="qtdVal" value="1" type="text" tabindex="0">
+        			    <span class="btnAcr">  </span>
+    			    </div>
+                    <div class="planet-buy"> 
+                        <a class="planet-buy-button" title="$escapedName" href="$uri">Comprar</a>
+                    </div>
+    		    </div>
+        </div>
+    
+        #if ($product.IsInStock)
+    		
+    	    <div class="planet-produto-dados">
+    	          <!-- Flag Topo -->
+                    #if ($product.HasBestPrice)
+                        <div class="flag-desconto">
+                            <span class="porcentagem">$product.ListPriceMinusBestPriceInPercent</span>
+                            <span class="texto-flag">OFF</span>
+                        </div>
+                    #end
+                    #if($product.DiscountHightLight != '')
+                        <div class='flags-promo'>
+                            $product.DiscountHightLight
+                        </div>
+                    #end
+    	            <h2>
+                        <a title="$escapedName" href="$uri">
+                            $product.Name
+                        </a>
+                    </h2>
+                    <div class="planet-price">
+            			<a title="$escapedName" href="$uri">
+                            #if ($product.HasBestPrice)
+            					<span class="oldPrice">
+                                    $product.ListPrice
+                                </span> 
+                                <span class="planet-bestPrice">
+                                    <strong> $product.BestPrice </strong>
+                                </span>
+                            #else
+                                <span class="planet-bestPrice">
+                                    <strong>$product.BestPrice </strong>
+                                </span>                    
+            				#end
+            				<span class="planet-installment">
+            					#if ($product.NumbersOfInstallment > 1)
+            					   ou ${product.NumbersOfInstallment}X de $product.InstallmentValue sem juros
+            					#else
+            						<span></span>
+            					#end
+            				</em> 
+            			</a>
+        		    </div>
+    		   
+
+    		</div>
+    	#else
+    		<p class="planet-outOfStock">
+    		     <a title="$escapedName" href="$uri">
+    		        <span class="planet-icon"></span>
+        		    <span class="planet-text">
+        		        Produto Esgotado
+        		        <small>Avise-me quando chegar</small>
+        		    </span>
+    		     </a>
+    		</p> 
+    	
+    	#end
+
+</div>

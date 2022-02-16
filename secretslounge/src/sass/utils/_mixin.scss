@@ -1,0 +1,184 @@
+%nexa-12px {
+  font-family: $font-family-nexa;
+  letter-spacing: 1.2px;
+  font-size: 12px;
+}
+
+%nexa-14px {
+  font-family: $font-family-nexa;
+  letter-spacing: 1.2px;
+  font-size: 14px;
+}
+
+%nexa-18px {
+  font-family: $font-family-nexa;
+  letter-spacing: 1.2px;
+  font-size: 18px;
+}
+
+%nexa-32px {
+  font-family: $font-family-nexa;
+  letter-spacing: 1.2px;
+  font-size: 32px;
+}
+
+%nexa-24px {
+  font-family: $font-family-nexa;
+  letter-spacing: 1.2px;
+  font-size: 32px;
+}
+
+%nexa-10px {
+  font-family: $font-family-nexa;
+  font-size: 10px;
+}
+
+%nexa-12px-bold {
+  @extend %nexa-12px;
+  font-weight: bold;
+}
+
+%nexa-10px-bold {
+  @extend %nexa-10px;
+  font-weight: bold;
+}
+
+%nexa-14px-bold {
+  @extend %nexa-14px;
+  font-weight: bold;
+}
+
+%nexa-18px-bold {
+  @extend %nexa-18px;
+  font-weight: bold;
+}
+
+%nexa-24px-bold {
+  @extend %nexa-24px;
+  font-weight: bold;
+}
+
+%nexa-32px-bold {
+  @extend %nexa-32px;
+  font-weight: bold;
+}
+
+%nexa-12px-white {
+  @extend %nexa-12px;
+  color: $color-white;
+}
+
+%nexa-12px-brownDark {
+  @extend %nexa-12px;
+  color: $color-brown-dark;
+  font-weight: 100;
+}
+
+%nexa-18px-brownDark {
+  @extend %nexa-18px;
+  color: $color-brown-dark;
+  font-weight: 100;
+}
+
+%nexa-14px-brownDark {
+  @extend %nexa-14px;
+  color: $color-brown-dark;
+  font-weight: 100;
+}
+
+%nexa-32px-brownDark {
+  @extend %nexa-32px;
+  color: $color-brown-dark;
+  font-weight: 100;
+}
+
+%nexa-12px-brownDark-bold {
+  @extend %nexa-12px-bold;
+  color: $color-brown-dark;
+}
+
+%nexa-24px-brownDark-bold {
+  @extend %nexa-24px-bold;
+  color: $color-brown-dark;
+}
+
+%nexa-32px-brownDark-bold {
+  @extend %nexa-32px-bold;
+  color: $color-brown-dark;
+}
+
+%nexa-12px-white-bold {
+  @extend %nexa-12px-bold;
+  color: $color-white;
+}
+
+%nexa-10px-brownDark-bold {
+  @extend %nexa-10px-bold;
+  color: $color-brown-dark;
+}
+
+%nexa-14px-brownDark {
+  @extend %nexa-14px;
+  color: $color-brown-dark;
+  font-weight: 100;
+}
+
+%nexa-14px-brownDark-bold {
+  @extend %nexa-14px-bold;
+  color: $color-brown-dark;
+}
+
+%transition-display-block {
+  pointer-events: initial;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.4s;
+}
+
+%transition-display-none {
+  // pointer-events: none; 
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+%dropdown-before {
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    top: -15px;
+    left: 0;
+  }
+}
+
+%dropdown-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @extend %dropdown-before;
+}
+
+%dropdown-left {
+  position: absolute;
+  left: 0;
+
+  @extend %dropdown-before;
+}
+
+%dropdown-right {
+  position: absolute;
+  right: 0;
+
+  @extend %dropdown-before;
+}
+
+%dropdown-complete {
+  position: fixed;
+  left: 0;
+
+  @extend %dropdown-before;
+}

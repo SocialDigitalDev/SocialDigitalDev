@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'polowear';
+  src:  url('fonts/polowear.eot?cudojy');
+  src:  url('fonts/polowear.eot?cudojy#iefix') format('embedded-opentype'),
+    url('fonts/polowear.ttf?cudojy') format('truetype'),
+    url('fonts/polowear.woff?cudojy') format('woff'),
+    url('fonts/polowear.svg?cudojy#polowear') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'polowear' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-entrega-icon:before {
+  content: "\e91b";
+}
+.icon-polo-menu-mobile-icon-right-2:before {
+  content: "\e91a";
+}
+.icon-polo-menu-mobile-icon-right:before {
+  content: "\e918";
+}
+.icon-polo-menu-mobile-icon-2:before {
+  content: "\e919";
+}
+.icon-polo-menu-mobile-icon:before {
+  content: "\e917";
+}
+.icon-check:before {
+  content: "\e916";
+}
+.icon-minus:before {
+  content: "\e914";
+}
+.icon-add:before {
+  content: "\e915";
+}
+.icon-delete:before {
+  content: "\e913";
+}
+.icon-208078 .path1:before {
+  content: "\e907";
+  color: rgb(43, 41, 122);
+}
+.icon-208078 .path2:before {
+  content: "\e90e";
+  margin-left: -3.736328125em;
+  color: rgb(43, 41, 122);
+}
+.icon-208078 .path3:before {
+  content: "\e90f";
+  margin-left: -3.736328125em;
+  color: rgb(43, 41, 122);
+}
+.icon-208078 .path4:before {
+  content: "\e910";
+  margin-left: -3.736328125em;
+  color: rgb(238, 45, 96);
+}
+.icon-208078 .path5:before {
+  content: "\e911";
+  margin-left: -3.736328125em;
+  color: rgb(43, 41, 122);
+}
+.icon-credit-card:before {
+  content: "\e912";
+}
+.icon-right-principal:before {
+  content: "\e905";
+}
+.icon-left-principal:before {
+  content: "\e906";
+}
+.icon-right-prateleira:before {
+  content: "\e90c";
+}
+.icon-left-prateleira:before {
+  content: "\e90d";
+}
+.icon-busca:before {
+  content: "\e901";
+}
+.icon-login:before {
+  content: "\e902";
+}
+.icon-sacola:before {
+  content: "\e903";
+}
+.icon-spotify:before {
+  content: "\e904";
+  color: #10bc4c;
+}
+.icon-informativo-02:before {
+  content: "\e908";
+  color: #053664;
+}
+.icon-informativo-03:before {
+  content: "\e909";
+  color: #053664;
+}
+.icon-informativo-04:before {
+  content: "\e90a";
+  color: #053664;
+}
+.icon-informativo-05:before {
+  content: "\e90b";
+  color: #053664;
+}
+.icon-Polo-Wear_logo:before {
+  content: "\e900";
+  color: #053664;
+}

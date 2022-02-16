@@ -1,0 +1,179 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'Receitas';
+    - var $templateClass = 'ls-departamento-receitas';
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content
+    section
+        figure
+            div.wrapper
+                div.banner-carousel.banner-receita.desktop
+                    vtex:contentPlaceHolder(id=`banner-receita-desktop`)/
+                div.banner-carousel.banner-receita.mobile
+                    vtex:contentPlaceHolder(id=`banner-receita-mobile`)/
+                
+    section
+        div.section-experimente
+            div.vitrine-title
+                h2 Experimente
+            div.wrapper.receitas
+                ul#filters.clearfix
+                    li
+                        span.filter.active(data-filter='.doces, .drinks, .cafes, .sucos, .vitaminas') Todas as receitas
+                    li
+                        span.filter(data-filter='.doces') Doces
+                    li
+                        span.filter(data-filter='.drinks') Drinks
+                    li
+                        span.filter(data-filter='.cafes') Cafés
+                    li
+                        span.filter(data-filter='.sucos') Sucos
+                    li
+                        span.filter(data-filter='.vitaminas') Vitaminas
+
+                #portfoliolist
+                    div.portfolio.doces(data-cat='doces')
+                        div.portfolio-wrapper
+                            img(src='/arquivos/dep-receita-01.jpg' alt='')/
+                            div.label
+                                div.label-text
+                                    div.titulo-receita
+                                        span.icone-receitas 
+                                        h3.titulo-receita Verrine Napolitano Zero Açúcar
+                                    div.preparar
+                                        div.tempo
+                                            p.tempo-txt Tempo de preparo:
+                                            p.tempo-qtd 3 horas e 20 minutos
+                                        div.porcao
+                                            p.porcao-txt Porção: 
+                                            p.porcao-qtd 14 poções de 80g
+                                div.label-bg
+                    div.portfolio.drinks(data-cat='drinks')
+                        div.portfolio-wrapper
+                            img(src='/arquivos/dep-receita-01.jpg' alt='')/
+                            div.label
+                                div.label-text
+                                    div.titulo-receita
+                                        span.icone-receitas 
+                                        h3.titulo-receita Verrine Napolitano Zero Açúcar
+                                    div.preparar
+                                        div.tempo
+                                            p.tempo-txt Tempo de preparo:
+                                            p.tempo-qtd 3 horas e 20 minutos
+                                        div.porcao
+                                            p.porcao-txt Porção: 
+                                            p.porcao-qtd 14 poções de 80g
+                                div.label-bg
+                    div.portfolio.cafes(data-cat='cafes')
+                        div.portfolio-wrapper
+                            img(src='/arquivos/dep-receita-01.jpg' alt='')/
+                            div.label
+                                div.label-text
+                                    div.titulo-receita
+                                        span.icone-receitas 
+                                        h3.titulo-receita Verrine Napolitano Zero Açúcar
+                                    div.preparar
+                                        div.tempo
+                                            p.tempo-txt Tempo de preparo:
+                                            p.tempo-qtd 3 horas e 20 minutos
+                                        div.porcao
+                                            p.porcao-txt Porção: 
+                                            p.porcao-qtd 14 poções de 80g
+                                div.label-bg
+                    div.portfolio.sucos(data-cat='sucos')
+                        div.portfolio-wrapper
+                            img(src='/arquivos/dep-receita-01.jpg' alt='')/
+                            div.label
+                                div.label-text
+                                    div.titulo-receita
+                                        span.icone-receitas 
+                                        h3.titulo-receita Verrine Napolitano Zero Açúcar
+                                    div.preparar
+                                        div.tempo
+                                            p.tempo-txt Tempo de preparo:
+                                            p.tempo-qtd 3 horas e 20 minutos
+                                        div.porcao
+                                            p.porcao-txt Porção: 
+                                            p.porcao-qtd 14 poções de 80g
+                                div.label-bg
+                    div.portfolio.vitaminas(data-cat='vitaminas')
+                        div.portfolio-wrapper
+                            img(src='/arquivos/dep-receita-01.jpg' alt='')/
+                            div.label
+                                div.label-text
+                                    div.titulo-receita
+                                        span.icone-receitas 
+                                        h3.titulo-receita Verrine Napolitano Zero Açúcar
+                                    div.preparar
+                                        div.tempo
+                                            p.tempo-txt Tempo de preparo:
+                                            p.tempo-qtd 3 horas e 20 minutos
+                                        div.porcao
+                                            p.porcao-txt Porção: 
+                                            p.porcao-qtd 14 poções de 80g
+                                div.label-bg
+                    div.portfolio.vitaminas(data-cat='vitaminas')
+                        div.portfolio-wrapper
+                            img(src='/arquivos/dep-receita-01.jpg' alt='')/
+                            div.label
+                                div.label-text
+                                    div.titulo-receita
+                                        span.icone-receitas 
+                                        h3.titulo-receita Verrine Napolitano Zero Açúcar
+                                    div.preparar
+                                        div.tempo
+                                            p.tempo-txt Tempo de preparo:
+                                            p.tempo-qtd 3 horas e 20 minutos
+                                        div.porcao
+                                            p.porcao-txt Porção: 
+                                            p.porcao-qtd 14 poções de 80g
+                                div.label-bg
+                    div.portfolio.cafe(data-cat='cafe')
+                        div.portfolio-wrapper
+                            img(src='/arquivos/dep-receita-01.jpg' alt='')/
+                            div.label
+                                div.label-text
+                                    div.titulo-receita
+                                        span.icone-receitas 
+                                        h3.titulo-receita Verrine Napolitano Zero Açúcar
+                                    div.preparar
+                                        div.tempo
+                                            p.tempo-txt Tempo de preparo:
+                                            p.tempo-qtd 3 horas e 20 minutos
+                                        div.porcao
+                                            p.porcao-txt Porção: 
+                                            p.porcao-qtd 14 poções de 80g
+                                div.label-bg
+                    div.portfolio.doces(data-cat='doces')
+                        div.portfolio-wrapper
+                            img(src='/arquivos/dep-receita-01.jpg' alt='')/
+                            div.label
+                                div.label-text
+                                    div.titulo-receita
+                                        span.icone-receitas 
+                                        h3.titulo-receita Verrine Napolitano Zero Açúcar
+                                    div.preparar
+                                        div.tempo
+                                            p.tempo-txt Tempo de preparo:
+                                            p.tempo-qtd 3 horas e 20 minutos
+                                        div.porcao
+                                            p.porcao-txt Porção: 
+                                            p.porcao-qtd 14 poções de 80g
+                                div.label-bg
+        
+    section
+        div.prod-relacionados
+            div.vitrine-title
+                h2 Produtos Relacionados
+            div.wrapper.slide-prod.qvvt
+                vtex:contentPlaceHolder(id=`produtos-relacionados`)/    
+
+block append scripts
+    script(type='text/javascript', src=`/arquivos/${$templateName}.js`) 
+    script(type='text/javascript', src=`/arquivos/jquery.mixitup.min.js`) 

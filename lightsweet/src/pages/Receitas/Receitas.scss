@@ -1,0 +1,373 @@
+.ls-departamento-receitas-main{
+    .wrapper{
+        padding: 0;
+        img{
+            width: 100%
+        }
+    }
+   
+    .section-experimente{
+        padding: 40px 0;
+        width: 100%;
+        @include flexbox;
+        @include flex-flow(column);
+        .vitrine-title{
+            h2{
+                color: var(--color-orange);
+                font-size: 50px;
+                font-style: normal;
+                text-transform: uppercase;
+                font-weight: 700;
+                @include d(celularLarge){
+                    font-size: 25px;
+                }
+                @include d(celularMedium){
+                    font-size: 20px;
+                }
+            }
+            &:after{
+                display: none;
+            }
+        }
+        .wrapper{
+            padding: 0;
+            max-width: 1366px;
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+            @include d(ipad){
+                padding: 0 1em;
+            }
+            .box-banner{
+                img{
+                    width: 100%;
+                }
+            }
+            #filters{
+                @include flexbox;
+                @include flex-wrap(wrap);
+                @include justify-content(center);
+                max-width: 1024px;
+                width: 100%;
+                margin: 0px auto;
+                background-color: var(--color-blue-dark);
+                border-radius: 50px;
+                padding: 10px;
+                box-shadow: 0 0 18px 0 #c2c2c2;
+                li{
+                    float: left;
+                    span{
+                        display: block;
+                        padding:5px 20px;		
+                        text-decoration:none;
+                        color:#fff;
+                        cursor: pointer;
+                        @include d(celularLarge){
+                            font-size: 13px;
+                        }
+                        &:active {
+                            background: #fff;
+                            color:var(--color-blue);
+                        }
+                    }
+                }
+            }
+        }
+        #portfoliolist{
+            position: relative;
+            width: 1366px;
+            margin: 0 auto;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+            @include d(hdplus){
+                width: 80%;
+            }
+            @include d(ipad){
+                width: 100%;
+                @include flexbox;
+                @include flex-wrap(wrap);
+                @include justify-content(center);
+            }
+            .portfolio {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                width:30%;
+                margin:1%;
+                display:none;
+                float:left;
+                overflow:hidden;
+                @include d(celularLarge){
+                    width: 100%;
+                }
+                @include d(celularMedium){
+                }
+                &:hover .label {
+                    bottom:0;
+                    opacity: 1;
+                }
+                &:hover img {
+                    filter: brightness(30%);
+                    position: relative;
+                    z-index: 1;
+                    -webkit-transform: scale(1.03);
+                    -khtml-transform: scale(1.03);
+                    -moz-transform: scale(1.03);
+                    -ms-transform: scale(1.03);
+                    -o-transform: scale(1.03);
+                    transform: scale(1.03);
+                    -webkit-transition: 0.3s ease;
+                    -khtml-transition: 0.3s ease;
+                    -moz-transition: 0.3s ease;
+                    -ms-transition: 0.3s ease;
+                    -o-transition: 0.3s ease;
+                    transition: 0.3s ease;
+                    @include d(ipad){
+                        filter: initial;
+                        transform: none;
+                    }
+                }  
+            }
+            .portfolio-wrapper {
+                overflow:hidden;
+                position: relative !important;
+                cursor: pointer;
+                @include d(celularLarge){
+                    @include flexbox;
+                    @include align-items(center);
+                }
+
+                img {
+                    max-width:100%;
+                    position: relative;
+                    top:0;
+                    -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+                    transition:         all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);	
+                    @include d(ipad){
+                        width: 50%;
+                    }	
+                }
+                .label {
+                    margin: auto;
+                    text-align: center;
+                    color: var(--color-white);
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    z-index: 2;
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                    width: 90%;
+                    height: 80%;
+                    position: absolute;
+                    top: 0px;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    -webkit-transition: 0.3s ease;
+                    -khtml-transition: 0.3s ease;
+                    -moz-transition: 0.3s ease;
+                    -ms-transition: 0.3s ease;
+                    -o-transition: 0.3s ease;
+                    transition: 0.3s ease;
+                    @include d(ipad){
+                        width: 50%;
+                        height: auto;
+                        position: relative;
+                        opacity: 1;
+                        color: var(--color-blue-dark);
+                    }
+                    @include d(celularLarge){
+                        padding-left: 10px;
+                        font-size: 11px;
+                    }
+                    @include d(celularMedium){
+                        font-size: 12px;
+                    }
+                    .label-text {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        @include d(ipad){
+                            position: relative;
+                        }
+                        .titulo-receita{
+                            .icone-receitas{
+                                &::before{
+                                    content: "\e92b";
+                                    font-family: lightsweet;
+                                    color: var(--color-white);
+                                    font-size: 60px;
+                                    margin-bottom: 10px;
+                                    @include d(hdplus){
+                                        font-size: 35px;
+                                    }
+                                    @include d(ipad){
+                                        color: var(--color-blue-dark);
+                                        position: relative;
+                                    }
+                                    @include d(celularLarge){
+                                        font-size: 25px;
+                                    }
+                                }
+                            }
+                            h3{
+                                color: var(--color-white);
+                                font-size: 18px;
+                                font-weight: 700;
+                                @include d(ipadPro){
+                                    font-size: 14px;
+                                }
+                                @include d(ipad){
+                                    color: var(--color-blue-dark);
+                                }
+                                @include d(celularLarge){
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                        .preparar{
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            padding: 0;
+                            width: 100%;
+                            @include d(ipad){
+                                position: relative;
+                                margin-top: 10px;
+                            }
+                            p{
+                                text-align: left;
+                            }
+                            .tempo{
+                                width: 100%;
+                                float: left;
+                                @include d(celularLarge){
+                                }
+                                &::before{
+                                    content: "\e92c";
+                                    font-family: lightsweet;
+                                    color: var(--color-white);
+                                    font-size: 40px;
+                                    float: left;
+                                    margin-right: 10px;
+                                    margin-top: -7px;
+                                    @include d(ipadPro){
+                                        font-size: 35px;
+                                    }
+                                    @include d(ipad){
+                                        color: var(--color-blue-dark);
+                                    }
+                                    @include d(celularLarge){
+                                        display: none;
+                                    }
+                                }
+                                .tempo-txt{
+                                    font-weight: bold;
+                                    @include d(celularLarge){
+                                        text-align: center;
+                                    }
+                                }
+                                .tempo-qtd{
+                                    @include d(celularLarge){
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                            .porcao{
+                                width: 100%;
+                                float: left;
+                                margin-top: 10px;
+                                @include d(celularLarge){
+                                }
+                                &::before{
+                                    content: "\e92a";
+                                    font-family: lightsweet;
+                                    color: var(--color-white);
+                                    font-size: 46px;
+                                    float: left;
+                                    margin-right: 10px;
+                                    margin-top: -7px;
+                                    @include d(ipadPro){
+                                        font-size: 35px;
+                                    }
+                                    @include d(ipad){
+                                        color: var(--color-blue-dark);
+                                    }
+                                    @include d(celularLarge){
+                                        display: none;
+                                    }
+                                }
+                                .porcao-txt{
+                                    font-weight: bold;
+                                    @include d(celularLarge){
+                                        text-align: center;
+                                    }
+                                }
+                                .porcao-qtd{
+                                    @include d(celularLarge){
+                                        text-align: center;
+                                    }
+                                }
+                            }
+
+                        }
+                        
+                    }
+                    .label-bg {
+                        width: 100%;
+                        height:100%;
+                        position: absolute;
+                        top:0;
+                        left:0;
+                    }
+                }
+            }
+        }
+    }
+    // .prod-relacionados{
+    //     .wrapper{
+    //         padding: 0 2em;
+    //         @include d(celularLarge){
+    //             padding: 0;
+    //         }
+    //         .ls-prateleira{
+    //             ul.slick-dots{
+    //                 @include d(ipad){
+    //                     @include flexbox;
+    //                     @include justify-content(center);
+    //                 }
+    //                 li{
+    //                     button{
+    //                         @include d(ipad){
+    //                             font-size: 0;
+    //                             width: 12px;
+    //                             height: 12px;
+    //                             border: 1px solid var(--color-blue-dark);
+    //                             border-radius: 50%;
+    //                             margin: 0 5px;
+    //                             cursor: pointer;
+    //                         }
+    //                     }
+    //                     &.slick-active{
+    //                         button{
+    //                             @include d(ipad){
+    //                                 background: var(--color-blue-dark);
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+}
+.section-relacionados{
+    width: 100%;
+    margin: 40px 0;
+    float: left;
+}

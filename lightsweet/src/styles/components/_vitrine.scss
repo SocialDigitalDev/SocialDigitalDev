@@ -1,0 +1,628 @@
+.ls-prateleira {
+    margin: 40px 0;
+    max-width: 100%;
+    > h2{
+        display: none;
+    }
+    @include d(celularLarge){
+        &:not(.otl){
+            .slick-list{
+                max-height: 310px;
+            }
+        }
+    }
+    @include d(celularMedium){
+        &:not(.otl){
+            .slick-list{
+                max-height: 100%;
+            }
+        }
+    }
+    > ul {
+        @include flexbox;
+        @include align-items(center);
+        @include d(celularLarge){
+            @include flex-wrap(wrap);
+            @include justify-content(center);
+        }
+        .slick-prev, .slick-next{
+            font-size: 0;
+            cursor: pointer;
+        }
+        .slick-prev{
+            &:before{
+                content: "\e933";
+                font-family: lightsweet;
+                font-size: 40px;
+                color: var(--color-blue);
+                display: block;
+            }
+        }
+        .slick-next{
+            &:before{
+                content: "\e934";
+                font-family: lightsweet;
+                font-size: 40px;
+                color: var(--color-blue);
+                display: block;
+            }
+        }
+        ul.slick-dots{
+            @include d(celularLarge){
+                width: 100%;
+                @include flexbox;
+                @include justify-content(center);
+                li{
+                    margin: 0 3px;
+                    @include d(celularLarge){
+                        margin: 0;
+                    }
+                    button{
+                        font-size: 0;
+                        width: 40px;
+                        height: 5px;
+                        background: var(--color-gray-nav);
+                        border-radius: 5px;
+                        cursor: pointer;
+                        @include d(celularLarge){
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            background: none;
+                            border: 1px solid var(--color-blue);
+                        }
+                    }
+                    &.slick-active{
+                        button{
+                            background: var(--color-blue);
+                        }
+                    }
+                }
+            }
+        }
+        .slick-track{
+            min-height: 400px;
+            @include d(qhd){
+                min-height: 340px;
+            }
+        }
+        li {
+            position: relative;
+            margin: 0px;
+            float: left;
+            padding: 0 26px;
+            @include d(hdplus){
+                padding: 0 1em;
+            }
+            @include d(ipadPro){
+                padding: 0 .5em;
+            }
+            @include d(ipad){
+                padding: 0 5px;
+            }
+            .ls-product {
+                @include flexbox;
+                @include flex-flow(column);
+                @include align-items(center);
+                border: 2px solid var(--color-blue-dark);
+                border-radius: 20px;
+                min-height: 370px;
+                max-width: 295px;
+                position: relative;
+                @include d(qhd){
+                    min-height: 290px;
+                }
+                @include d(celularLarge){
+                    min-height: 280px;
+                    padding: 0 5px;
+                }
+                .ls-image {
+                    position: relative;
+                    margin-bottom: 10px;
+                    .flags-promo{
+                        background: var(--color-yellow);
+                        padding: 3px;
+                        text-align: center;
+                        @include d(celularLarge){
+                            font-size: 12px;
+                            padding: 5px;
+                        }
+                    }
+                    a{
+                        img {
+                            border-radius: 16px;
+                            max-width: 200px;
+                            @include d(qhd){
+                                max-width: 150px;
+                            }
+                        }
+                    }
+                    .flag-desconto {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 60px;
+                        height: 30px;
+                        line-height: 30px;
+                        background-color: var(--color-red-price);
+                        -webkit-border-top-left-radius: 100px;
+                        -webkit-border-bottom-right-radius: 80px;
+                        -webkit-border-bottom-left-radius: 100px;
+                        -moz-border-radius-topleft: 100px;
+                        -moz-border-radius-bottomright: 80px;
+                        -moz-border-radius-bottomleft: 100px;
+                        border-top-left-radius: 100px;
+                        border-bottom-right-radius: 80px;
+                        border-bottom-left-radius: 100px;
+                        .porcentagem {
+                            color: var(--color-white);
+                            font-size: 14px;
+                            font-weight: 700;
+                            display: block;
+                            text-align: center;
+                            &:after {
+                                content: "%";
+                                font-size: 12px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+                .ls-actions {
+                    @include flexbox;
+                    @include align-items(center);
+                    @include justify-content(center);
+                    width: 100%;
+                    opacity: 1;
+                    @include t(.4s);
+                    position: absolute;
+                    bottom: -20px;
+                    @include d(celularLarge){
+                        bottom: -14px;
+                    }
+                    .wishlist{
+                        background-color: var(--color-blue-dark);
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        font-size: 0;
+                        text-align: center;
+                        opacity: 0;
+                        @include t(.3s);
+                        display: none;
+                        .add-wishlist{
+                            background-color: var(--color-blue-dark);
+                            color: var(--color-white);
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 50%;
+                            display: block;
+                            .icon-favoritos:before{
+                                content: '\e931';
+                                font-family: "lightsweet";
+                                line-height: 50px;
+                                font-size: 28px;
+                                font-style: normal;
+                            }
+                        }
+                    } 
+                    .ls-buy {
+                        margin: 0;
+                        text-align: center;
+                        overflow: visible;
+                        @include t(.3s);
+                        margin-right: 2em;
+                        @include d(ipad){
+                            margin: 0;
+                        }
+                        a {
+                            background-color: var(--color-blue-dark);
+                            color: var(--color-white);
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 50%;
+                            display: block;
+                            @include d(qhd){
+                                height: 40px;
+                                width: 40px;
+                            }
+                            @include d(celularLarge){
+                                height: 30px;
+                                width: 30px;
+                            }
+                            &:before{
+                                content: '\e930';
+                                font-family: "lightsweet";
+                                line-height: 46px;
+                                font-size: 22px;
+                                @include d(qhd){
+                                    line-height: 36px;
+                                    font-size: 17px;
+                                }
+                                @include d(celularLarge){
+                                    line-height: 28px;
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                    .quickView{
+                        background-color: var(--color-blue-dark);
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        font-size: 0;
+                        text-align: center;
+                        opacity: 1;
+                        @include t(.3s);
+                        @include d(qhd){
+                            height: 40px;
+                            width: 40px;
+                        }
+                        @include d(ipad){
+                            display: none;
+                        }
+                        a:before {
+                            content: '\e932';
+                            font-family: "lightsweet";
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: var(--color-white);
+                            line-height: 50px;
+                            @include d(qhd){
+                                line-height: 40px;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+                .data {
+                    text-align: left;
+                    width: 85%;
+                    padding: 0.5em 0;
+                    float: left;
+                    max-width: 310px;
+                    @include d(ipadPro){
+                        width: 100%;
+                        padding: .5em;
+                    }
+                   
+                    h3 {
+                        font-size: 13px;
+                        font-style: normal;
+                        font-weight: 700;
+                        margin-bottom: 2px;
+                        color: var(--color-black);
+                        height: 39px;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        line-height: 1.4;
+                        display: block;
+                        @include d(qhd){
+                            font-size: 11px;
+                            height: 30px;
+                        }
+                    }
+                    .campo-validade{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        .product_field_41{
+                            font-size: 0;
+                            padding: 0;
+                            margin: 0;
+                            ul{
+                                li{
+                                    margin: 0 !important;
+                                    padding: 0 !important;
+                                    font-size: 13px;
+                                    text-align: center;
+                                    width: 78px !important;
+                                    background: var(--color-blue-dark);
+                                    z-index: 9;
+                                    color: var(--color-white);
+                                }
+                            }
+                        }
+                    }
+                    .price {
+                        width: 100%;
+                        float: left;
+                        text-align: left;
+                        .oldPrice {
+                            font-size: 20px;
+                            text-decoration: line-through;
+                            margin-bottom: 10px;
+                            display: block;
+                            color: #CFCFCF;
+                            font-weight: 500;
+                        }
+                        .bestPrice, .newPrice {
+                            color: var(--color-blue-dark);
+                            font-size: 35px;
+                            font-weight: 700;
+                            margin-bottom: 10px;
+                            display: block;
+                            @include d(qhd){
+                                font-size: 25px;
+                            }
+                        }
+                        .installment {
+                            display: block;
+                            color: var(--color-black);
+                            font-weight: 700;
+                            font-size: 13px;
+                            font-style: normal;
+                            @include d(qhd){
+                                font-size: 10px;
+                            }
+                            @include d(hd){
+                                font-size: 9px;
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .ls-actions {
+                    .ls-buy, .quickView, .wishlist{
+                        transform: scale(1.2);
+                        @include d(ipad){
+                            transform: none;
+                        }
+                    }
+                }
+            }    
+        }
+    }
+    &.especial{
+        ul{
+            .slick-track{
+                min-height: initial;
+            }
+            li{
+                .ls-product{
+                    min-height: initial;
+                    border: none;
+                    max-width: 100%;
+                }
+            }
+            ul.slick-dots{
+                li{
+                    button{
+                        border: none;
+                        background: var(--color-gray-line);
+                    }
+                }
+                li.slick-active{
+                    button{
+                        border: none;
+                        background: var(--color-orange);
+                    }
+                }
+            }
+        }
+    }
+}
+.ls-prateleira-receitas{
+    h2{
+        display: none;
+    }
+    width: 100%;
+    ul{
+        width: 100%;
+        float: left;
+        display: block;
+        li.receita{
+            width: 100%;
+            float: left;
+            padding: 29px 0;
+            margin-bottom: 10px;
+            border: 1px solid var(--color-blue-dark);
+            overflow: hidden;
+            @include d(hdplus){
+                padding: 5px;
+            }
+            @include d(ipad){
+                max-width: 100%;
+            }
+            @include d(celularLarge){
+                padding: 1em;
+            }
+            .section-receitas{
+                width: 100%;
+                display: flex;
+                @include d(hdplus){
+                    @include align-items(center);
+                }
+                @include d(celularLarge){
+                    @include flex-flow(column);
+                }
+                .receitas-img{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    @include d(ipad){
+                        overflow: hidden;
+                        margin-bottom: 1em;
+                    }
+                    a{
+                        img{
+                            margin-bottom: 0;
+                            height: auto;
+                            transform: scale(1.5);
+                            position: relative;
+                            left: -10%;
+                            @include d(ipad){
+                                max-width: 100%;
+                                left: auto;
+                                transform: scale(1.8);
+                            }
+                        }
+                    }
+                }
+                .conteudo{
+                    width: 100%;
+                    float: left;
+                    text-align: center;
+                    padding: 2%;
+                    position: relative;
+                    .titulo-receita{
+                        width: 100%;
+                        margin-bottom: 20px;
+                        float: left;
+                        @include d(hdplus){
+                            margin-bottom: 0;
+                        }
+                        .icone-receitas{
+                            width: 100%;
+                            float: left;
+                            margin-bottom: 20px;
+                            @include d(hdplus){
+                                margin-bottom: 0;
+                            }
+                            &:before{
+                                content: "\e92b";
+                                font-family: 'lightsweet';
+                                color: var(--color-blue-dark);
+                                font-size: 50px;
+                                margin-bottom: 10px;
+                                @include d(hdplus){
+                                    font-size: 25px;
+                                }
+                            }
+                        }
+                        h3{
+                            a{
+                                font-size: 25px;
+                                color: var(--color-blue-dark);
+                                margin-bottom: 0px;
+                                line-height: 35px;
+                                @include d(hdplus){
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .preparar{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        padding: 10px 0;
+                        @include d(hdplus){
+                            @include flex-flow(column);
+                        }
+                        @include d(hd){
+                            padding: 3px 0;
+                        }
+                        .tempo{
+                            text-align: left;
+                            color: #78909c;
+                            padding: 10px 0;
+                            flex: 1;
+                            width: 52%;
+                            @include d(hdplus){
+                                padding: 0;
+                                width: auto;
+                            }
+                            &:before{
+                                content: "\e92c";
+                                font-family: 'lightsweet';
+                                color: var(--color-blue-dark);
+                                font-size: 40px;
+                                margin-top: 10px;
+                                float: left;
+                                margin-right: 10px;
+                                @include d(hdplus){
+                                    font-size: 25px;
+                                }
+                            }
+                            .product-field{
+                                display: flex;
+                                flex-flow: column;
+                                text-align: left;
+                                color: var(--color-blue-dark);
+                                font-weight: 900;
+                                margin-left: 10px;
+                                @include d(qhd){
+                                    font-size: 13px;
+                                }
+                                ul{
+                                    li{
+                                        font-weight: 400;
+                                        text-align: left;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                        .porcao{
+                            text-align: left;
+                            padding: 10px 0;
+                            width: 48%;
+                            @include d(hdplus){
+                                width: auto;
+                            }
+                            &:before{
+                                content: "\e92a";
+                                font-family: 'lightsweet';
+                                color: var(--color-blue-dark);
+                                font-size: 50px;
+                                margin-top: 10px;
+                                float: left;
+                                margin-right: 10px;
+                                @include d(hdplus){
+                                    font-size: 25px;
+                                }
+                            }
+                            .product-field{
+                                display: flex;
+                                flex-flow: column;
+                                text-align: left;
+                                color: var(--color-blue-dark);
+                                font-weight: 900;
+                                @include d(qhd){
+                                    font-size: 13px;
+                                }
+                                ul{
+                                    li{
+                                        font-weight: 400;
+                                        text-align: left;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .ver-receita{
+                        float: left;
+                        margin: 0 auto;
+                        text-align: center;
+                        width: 100%;
+                        margin-top: 20px;
+                        a{
+                            background: var(--color-blue-dark);
+                            border-radius: 50px;
+                            color: var(--color-white);
+                            font-weight:900;
+                            font-size: 12px;
+                            padding: 15px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.section-receitas-pdp{
+    @include d(celularLarge){
+        @include flexbox;
+        @include justify-content(center);
+    }
+}
+.ls-department .receita{
+    display: none !important;
+}

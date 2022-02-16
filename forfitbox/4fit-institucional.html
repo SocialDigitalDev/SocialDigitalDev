@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+    <head>
+
+        <vtex:contentPlaceHolder id="title"/>
+        <vtex:metaTags/>
+        <vtex:template id="4fit-css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            
+    </head>
+
+    <body>
+    
+        <!-- Chamada do cabeçalho da loja -->
+
+        <vtex:template id="4fit-header" />
+
+        <main>
+            <section class="produto-page__topo page-title-overlap bg-dark pt-4">
+                <div class="container-center_topo">
+                    <div class="container d-lg-flex justify-content-between py-2 py-lg-3">
+    
+                        <div class="produto-titulo text-left">
+                            <h1 class="nome-prod">
+                                <h1><vtex:contentPlaceHolder id="forfit-titulo" /></h1>
+                            </h1>
+                        </div>
+    
+                        <div class="bread text-right">
+                            <ul>
+                                <li class="home"><a href="/"> Home </a></li>
+                                <li> <vtex:contentPlaceHolder id="4fit-bread" /> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container produto-all institucional">
+                    <div class="container-center">
+                        <div class="produto-all__top-info rounded-lg px-4 py-3 mb-5">
+                            <aside>
+                                <vtex.cmc:ForFitMenuLateral/>
+                            </aside>
+                    
+                            <div class="conteudo-institucional">
+                                <vtex:contentPlaceHolder id="forfit-conteudo" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <!-- Chamada para o rodapé -->
+        <vtex:template id="4fit-footer" /> 
+        
+        <!-- Chamada para os scripts Js da loja -->
+        <vtex:template id="4fit-js" />
+
+    </body>
+</html>

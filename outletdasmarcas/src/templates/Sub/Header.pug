@@ -1,0 +1,89 @@
+header
+    div.minicart__overlay
+    div.top-bar
+        div.blockEmptyDivision
+        div.text-wrapper
+            vtex(.cmc:TopBarTextoRotativo)/
+        div.atendimento-login
+            div.atendimento-wrapper
+                a.atendimento-link(href=`#`) Atendimento
+            div.user-name__account
+                div.link-help
+                    vtex(.cmc:welcomeMessage)/
+    div.wrapper
+        div.container-center.menu-header
+            span.btn-menu-mobile
+                a(href=`#my-menu`)
+            div#logo-top
+                h1.item-logo
+                    a(href=`/`)
+                        img(src=`/arquivos/logo-outlet-header.png` alt=`Outlet das Marcas`)/
+            div.menu-bar
+                div.wrapper.menu-topo
+                    div.container-center
+                        div.menu-principal
+                            vtex(.cmc:menuPrincipal)/
+            div.header-user-links
+                ul.header-icons 
+                    li.busca-topo__busca-container
+                        span.icon-search
+                        vtex(.cmc:fullTextSearchBox)/
+                    li.wishlist
+                        a.lista-desejos(href=`/giftlist`) 
+                            span.icon-wishlist
+                           
+                    li.header-cart.carrinho
+                        span.icon-cart 
+                        div.info-cart
+                            span.qtd-cart
+                    //- MINI CART
+                    div.header-minicart
+                        div.header-minicart-header
+                            div.minicart__header-links
+                                button.header-minicart-close Voltar 
+                                p.header-minicart_topo Carrinho 
+                        div.header-minicart-title.qtd-minicart(style=`margin-left: 0px;`) Seu carrinho possui:
+                            span.header-minicart-badge(style=`display: flex;`)
+                            span.header-minicart-itens
+                        div.header-minicart-navigation
+                            div.portal-totalizers-ref
+                                div.amount-items-in-cart
+                                    div.cartInfoWrapper
+                                        span.title
+                                            span#MostraTextoXml1 Resumo do Carrinho
+                                    ul.cart-info 
+                                        li.amount-products
+                                            strong
+                                                span#MostraTextoXml2 Total de produtos:
+                                            em.amount-products-em 1
+                                        li.amount-items 
+                                            strong 
+                                                span#MostraTextoXml3 Itens:
+                                            em.amount-items-em
+                                        li.total-cart
+                                            strong 
+                                                span#MostraTextoXml5 Valor Total:
+                                            em.total-cart-em 
+                            script $('.portal-totalizers-ref').minicart({ showMinicart: false, showTotalizers: true, showShippingOptions: false });
+                            div.header-minicart-list
+                                div.list-prod
+                                    div.list-prod-image
+                                    div.list-prod-info
+                                        div.list-prod-name
+                                        div.list-prod-price
+                                            div.list-prod-qtd
+                                                p.qtd-remove -
+                                                p.qtd-value 
+                                                p.qtd-adiciona +
+                                            div.list-prod-total
+                                    span.list-prod-remove
+                                div.header-minicart-empty(style=`display: none;`)
+                                    p Carrinho Vazio
+                                    button Continuar comprando 
+                                div.header-minicart-footer(style=`display: none;`)
+                                    div.header-minicart-total
+                                        p.header-minicart-subtotal Subtotal
+                                            span.header-minicart-value
+                                    div.header-minicart-actions
+                                        a.goToCart(href=`/checkout`) Finalizar Compra 
+                                        button.continueToBuy Continuar Comprando

@@ -1,0 +1,417 @@
+@import "../settings/color";
+@import "../settings/fonts";
+
+html{
+	@include f(16);
+}
+
+::-webkit-scrollbar, ::-moz-scrollbar{
+	width: 5px;
+	height: 5px;
+}
+::-webkit-scrollbar-thumb, ::-moz-scrollbar-thumb{
+	background: #81C3E9;
+	border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover, ::-moz-scrollbar-thumb:hover{
+	background: #27AAE1;
+}
+::-webkit-scrollbar-track, ::-moz-scrollbar-track{
+	background: #FFFFFF;
+	border-radius: 0px;
+	box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
+
+body {
+	font-family: $montserrat;
+	background-color: var(--color-white);
+	overflow-x: hidden;
+}
+
+#ajaxBusy{
+	display: none !important;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#TB_overlay{
+	background: var(--color-black-transp);
+}
+#TB_window{
+	width: 100% !important;
+	height: 100% !important;
+	top: 0 !important;
+	left: 0 !important;
+	display: flex !important;
+	@include justify-content(center);
+	@include align-items(center);
+	margin: 0 !important;
+	#TB_closeWindowButton {
+		position: relative;
+		bottom: 200px;
+		left: 850px;
+		font-size: 0;
+		&:before{
+			content: "";
+			background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.311197 22.5859C0.447697 22.7224 0.626897 22.7903 0.806097 22.7903C0.985297 22.7903 1.1645 22.7217 1.3017 22.5852L11.3061 12.5689L21.3105 22.5852C21.447 22.7224 21.6262 22.7903 21.8061 22.7903C21.9853 22.7903 22.1645 22.7217 22.301 22.5859C22.5747 22.3129 22.5747 21.8698 22.3017 21.5961L12.3071 11.5903L22.301 1.58519C22.574 1.31149 22.574 0.868385 22.3003 0.595385C22.0259 0.321685 21.5835 0.321685 21.3105 0.596085L11.3054 10.6124L1.301 0.596085C1.0273 0.322385 0.584197 0.322385 0.311197 0.595385C0.0374973 0.868385 0.0374977 1.31149 0.310498 1.58519L10.3037 11.5903L0.310498 21.5961C0.0374977 21.8691 0.0374973 22.3129 0.311197 22.5859Z' fill='black'/%3E%3C/svg%3E%0A");
+			display: block;
+			width: 25px;
+			height: 25px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: relative;
+			top: 10px;
+		}
+	}
+}
+iframe#TB_iframeContent{
+	width: 890px !important;
+	height: 455px !important;
+	border-radius: 25px;
+	box-shadow: 0 0 10px #bfbfbf;
+}
+
+a {
+	text-decoration: none;
+	outline: 0;
+	color: initial;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+img {
+	max-width: 100%;
+	height:auto;
+}
+
+button{
+	outline: 0;
+}
+
+input{
+	outline: 0;
+	
+	&:focus{
+		box-shadow: none;
+	}
+}
+
+.desktop{
+	display: block;
+}
+.mobile{
+	display: none !important;
+}
+.ipadShow{
+	display: none !important;
+}
+.ipadHide{
+	display: block;
+}
+
+@include d(ipad){
+	.ipadHide{
+		display: none;
+	}
+	.ipadShow{
+		display: block;
+	}
+}
+@include d(celularLarge){
+	.desktop{
+		display: none !important;
+	}
+	.mobile{
+		display: block !important;
+	}
+}
+
+.vitrine-title{
+	max-width: 1600px;
+	margin: auto;
+	@include flexbox;
+	@include align-items(center);
+	color: var(--color-blue-dark);
+	h2{
+		text-align: center;
+		font-size: 32px;
+		font-weight: 500;
+		margin: 1em 0;
+		margin-top: 1.5em;
+		width: 100%;
+		position: relative;
+		font-style: italic;
+		@include d(qhd){
+			font-size: 24px;
+		}
+		@include d(ipadPro){
+			font-size: 20px;
+		}
+	}
+	&:after{
+		content: "\e92e";
+		font-family: "lightsweet";
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		display: block;
+		margin-top: 65px;
+		font-size: 39px;
+		text-align: center;
+		left: 0;
+		// @include d(celularLarge){
+		// 	width: 15%;
+		// }
+	}
+}
+
+.compra-na-medida-certa, .novidades-por-categoria, .marcas-que-amamos{
+	.vitrine-title{
+		h2{
+			font-weight: 300;
+			@include d(qhd){
+				font-size: 24px;
+			}
+			@include d(ipadPro){
+				font-size: 20px;
+			}
+			span{
+				font-weight: 600;
+			}
+
+		}
+		&:before, &:after{
+			content: "";
+			display: none !important;
+		}
+	}
+}
+
+.ls-produto{
+	main.ls-produto-main{
+		section{
+			.qvvt{
+				.container-center{
+					width: 100%;
+					.titulo-prateleira{
+						max-width: 1600px;
+						margin: 2em auto;
+						@include flexbox;
+						@include align-items(center);
+						h2{
+							text-align: center;
+							font-size: 32px;
+							color: var(--color-blue);
+							font-style: italic;
+							@include d(qhd){
+								font-size: 24px;
+							}
+							@include d(ipadPro){
+								font-size: 20px;
+							}
+							margin: 1em 0;
+							width: 100%;
+							font-weight: 500;
+							b{
+								margin-left: 10px;
+								font-weight: 700;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body{
+	> .ajax-content-loader{
+		.box-welcome{
+			display: none;
+		}
+	}
+	.mm-slideout{
+		.ajax-content-loader{
+			.box-welcome{
+				display: none;
+			}
+		}
+	}
+}
+
+.link-help{
+	z-index: 9;
+	&.loginOff{
+		display: block;
+	}
+	&.loginOn{
+		display: block;
+		.logado{
+			cursor: pointer;
+		}
+		.box-welcome {
+			position: absolute;
+			background: var(--color-white);
+			display: none;
+			@include flex-flow(column);
+			padding: 15px;
+			line-height: 30px;
+			font-size: 13px;
+			border-radius: 10px;
+			box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
+			width: 160px;
+			top: 135px;
+			right: 130px;
+			@include d(ipad){
+				@include flexbox;
+				position: initial;
+				width: auto;
+				padding: 0;
+				background: none;
+				box-shadow: none;
+				border-radius: 0;
+			}
+			&.ativo{
+				@include flexbox;
+			}
+		}
+	}
+}
+
+.wrapper{
+	padding: 0;
+	width: 100%;
+	padding: 0 2em;
+	min-height: initial;
+	@include d(ipad){
+		padding: 0 1em;
+	}
+}
+#vtexIdUI-global-loader{
+	background: rgb(0, 0, 0) scroll center 35% !important;
+}
+#vtexIdContainer{
+	position: fixed !important;
+	.vtexIdUI{
+		font-family: inherit !important;
+		border: none;
+		box-shadow: none;
+		background: var(--color-white);
+		.vtexId-link, a{
+			color: var(--color-white);
+		}
+		button.btn-success{
+			color: var(--color-white);
+			text-shadow: none;
+			background-color: var(--color-blue-dark);
+			background-repeat: no-repeat;
+			border-color: var(--color-blue-dark);
+			border-radius: 5px;
+			background-image: none !important;
+			box-shadow: none !important;
+			font-weight: 600;
+			i{
+				display: none !important;
+			}
+			&:hover{
+				background-color: var(--color-blue-dark);
+				color: var(--color-white);
+				border-color: var(--color-blue-dark);
+			}
+		}
+		.modal-footer{
+			background-color: var(--color-white);
+			box-shadow: none;
+			border-top: none;
+		}
+		.modal-header{
+			background: none;
+			border-bottom: none;
+			.close{
+				right: 5px;
+				top: 5px;
+				background: var(--color-blue-dark);
+				color: var(--color-white);
+				border-radius: 50%;
+				cursor: pointer;
+			}
+			.vtexIdUI-heading{
+				span{
+					font-size: 0;
+					@include flexbox;
+					@include justify-content(center);
+					&:before{
+						content: "Utilize uma das opções abaixo para fazer Login:";
+						font-size: 19px;
+						text-align: center;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+		.vtexIdUI-providers-list{
+			li{
+				button.btn-success.vtexIdUI-send-email{
+					color: var(--color-white);
+					text-shadow: none;
+					background-color: var(--color-blue);
+					background-repeat: no-repeat;
+					border-color: var(--color-blue);
+					border-radius: 5px;
+					background-image: none !important;
+					box-shadow: none !important;
+					font-weight: 600;
+					i{
+						display: none !important;
+					}
+					&:hover{
+						opacity: .8;
+					}
+				}
+				.vtexIdUI-others-send-email{
+					color: var(--color-blue);
+					border: 2px solid;
+					text-shadow: none;
+					background-color: var(--color-white);
+					background-image: none;
+					background-repeat: no-repeat;
+					border-radius: 5px;
+					font-weight: 600;
+					box-shadow: none;
+					&:hover{
+						background-color: var(--color-blue);
+						color: var(--color-white);
+						border-color: var(--color-blue);
+					}
+				}
+			}
+		}
+		.vtexIdUI-main-content{
+			.vtexIdUI-classic-login{
+				#vtexIdUI-form-classic-login{
+					.modal-header{
+						h4{
+							span.vtexIdUI-heading{
+								display: flex;
+								justify-content: center;
+								font-weight: 600;
+							}
+						}
+					}
+					.modal-footer{
+						background-color: var(--color-white);
+						box-shadow: none;
+						border-top: none;
+					}
+				}
+			}
+		}
+	}
+}

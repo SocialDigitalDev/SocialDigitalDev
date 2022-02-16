@@ -1,0 +1,77 @@
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: #0082FA;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #009DDE;
+}
+::-webkit-scrollbar-track{
+    background: #F0F0F0;
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+    background: var(--light-gray);
+}
+h1, h2, h3, h4, p, a {
+    display: block;
+    font-size: initial;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: normal;
+}
+.hide {
+    display: none !important;
+    @include mq(r980){
+        display: flex !important;
+    }
+}
+a {
+    text-decoration: none;
+}
+a:-webkit-any-link:focus {
+    outline-offset: 0;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0;
+}
+ul{
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+li {
+    list-style: none;
+}
+ul.slick-dots {
+    @include flexbox;
+    @include justify-content(center);
+}
+.mob{
+    display: none;
+    @include mq(r980){
+        display: block;
+    }
+}
+.desk{
+    display: block;
+    @include mq(r980){
+        display: none;
+    }
+}

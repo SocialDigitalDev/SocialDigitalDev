@@ -1,0 +1,51 @@
+// $color-white: #fff;
+// $color-black: #000;
+
+:root{
+    // PROJECT'S COLORS
+
+    // base colors
+	--color-white:                            #ffffff;
+	--color-white-transp:                     rgba(255, 255, 255, 0.8);
+	--ice-white:                              #EFEFEF;
+	--color-black:                            #000000;
+	--color-black-transp:                     rgba(0, 0, 0, 0.596);
+	--color-black-darker-t:                     rgba(0, 0, 0, 0.8);
+    // green colors
+	--color-green-clean:                      #3EDC81;
+	--color-green:                            #62DF00;
+	--color-green-dark:                       #21ba45;
+    // blue colors
+	--color-blue:                             #81C3E9;
+	--color-blue-dark:                        #27AAE1;
+    // yellow colors
+	--color-yellow:                           #EF9A47;
+	--color-yeloow-dark:                      #EF9A47;
+	--color-orange-light:                     #FFF1E0;
+	--color-orange:                      	  #FB8500;
+	--color-orange-clear:                     #FFB703;
+	--color-orange-dark:                      #F17250;
+	--color-brown:                            #977267;
+    // red colors
+	--color-red-price:                        #BC1A1A;
+	--color-red-clean:                        #fc2a58;
+	--color-red:                              #E71442;
+	--color-red-dark:                         #d6143e;
+    // silver colors
+	--color-silver-clean:                     #f1f1f1;
+	--color-silver-light:                     #f2f2f2;
+	--color-silver:                           #f9f9f9;
+	--color-silver-dark:                      #f5f5f5;
+    // gray colors
+	--color-light-gray:                       #DDDDDD;	
+	--color-gray-dark:                        #9B9B9B;	
+	--color-gray-heavy:                       #353535;	
+	--color-gray-clean:                       #909090;	
+	--color-gray:                             #808080;
+	--color-gray-letter:                      #737373;
+	--color-gray-nav:                         #c4c4c4;
+	--color-gray-line:						  #C6C6C6;
+	--color-gray-ice:						  #EBEBEB;
+    // graphite colors
+	--color-graphite:                         #353535;
+}

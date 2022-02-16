@@ -1,0 +1,494 @@
+.sm-prateleira {
+    margin: 40px 0;
+    max-width: 100%;
+    > h2{
+        display: none;
+    }
+    @include d(celularLarge){
+        &:not(.otl){
+            .slick-list{
+                max-height: 450px;
+            }
+        }
+    }
+    @include d(celularMedium){
+        &:not(.otl){
+            .slick-list{
+                max-height: 100%;
+            }
+        }
+    }
+    > ul {
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        @include d(celularLarge){
+            @include flex-wrap(wrap);
+            @include justify-content(center);
+        }
+        .slick-prev, .slick-next{
+            font-size: 0;
+            cursor: pointer;
+        }
+        .slick-prev{
+            &:before{
+                content: "";
+                background-image: url("data:image/svg+xml,%3Csvg width='29' height='59' viewBox='0 0 29 59' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.00488663 29.405C0.0319138 29.8611 0.211138 30.295 0.514591 30.6368L24.9851 57.8263H24.9847C25.3398 58.2497 25.8509 58.5104 26.4019 58.5498C26.9529 58.5892 27.4958 58.4033 27.9073 58.0354C28.3188 57.6669 28.5635 57.1473 28.5848 56.5959C28.6066 56.044 28.4037 55.5068 28.0225 55.1075L4.78399 29.2775L28.0225 3.44748C28.4037 3.04825 28.6066 2.51105 28.5848 1.9591C28.5635 1.40767 28.3188 0.888006 27.9073 0.519637C27.4957 0.151705 26.9528 -0.034166 26.4019 0.00518594C25.8509 0.0445403 25.3398 0.305326 24.9847 0.72873L0.514116 27.9182C0.15234 28.3255 -0.0311527 28.8613 0.0044136 29.4051L0.00488663 29.405Z' fill='%23353535'/%3E%3C/svg%3E");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 29px;
+                height: 59px;
+                display: block;
+            }
+        }
+        .slick-next{
+            &:before{
+                content: "";
+                background-image: url("data:image/svg+xml,%3Csvg width='29' height='59' viewBox='0 0 29 59' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.5815 29.15C28.5545 28.6939 28.3752 28.26 28.0718 27.9182L3.60124 0.728737H3.60171C3.24657 0.305321 2.73545 0.044548 2.18446 0.00519562C1.6335 -0.0341606 1.0906 0.151699 0.679084 0.519642C0.267528 0.888062 0.0228709 1.40772 0.001532 1.95911C-0.0202791 2.51102 0.182657 3.04823 0.563868 3.44749L23.8024 29.2775L0.563868 55.1075C0.182657 55.5067 -0.0202803 56.0439 0.001532 56.5959C0.0228685 57.1473 0.267528 57.667 0.679084 58.0354C1.09064 58.4033 1.63354 58.5892 2.18446 58.5498C2.73542 58.5105 3.24655 58.2497 3.60171 57.8263L28.0722 30.6368C28.434 30.2295 28.6175 29.6937 28.582 29.1499L28.5815 29.15Z' fill='%23353535'/%3E%3C/svg%3E");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 29px;
+                height: 59px;
+                display: block;
+            }
+        }
+        ul.slick-dots{
+            @include d(celularLarge){
+                width: 100%;
+                @include flexbox;
+                @include justify-content(center);
+                li{
+                    margin: 0 3px;
+                    @include d(celularLarge){
+                        margin: 0;
+                    }
+                    button{
+                        font-size: 0;
+                        width: 40px;
+                        height: 5px;
+                        background: var(--color-gray-nav);
+                        border-radius: 5px;
+                        cursor: pointer;
+                        @include d(celularLarge){
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            background: none;
+                            border: 1px solid var(--color-orange);
+                        }
+                    }
+                    &.slick-active{
+                        button{
+                            background: var(--color-orange);
+                        }
+                    }
+                }
+            }
+        }
+        // .slick-track{
+        //     min-height: 400px;
+        // }
+        li {
+            position: relative;
+            margin: 0px;
+            float: left;
+            padding: 0 1.2em;
+            .sm-product {
+                @include flexbox;
+                @include flex-flow(column);
+                @include align-items(center);
+                border: 1px solid var(--color-gray-line);
+                border-radius: 20px;
+                min-height: 310px;
+                width: 185px;
+                overflow: hidden;
+                background: var(--color-white);
+                .sm-image {
+                    position: relative;
+                    margin-bottom: 10px;
+                    .flags-promo{
+                        background: var(--color-yellow);
+                        padding: 3px;
+                        text-align: center;
+                        @include d(celularLarge){
+                            font-size: 12px;
+                            padding: 5px;
+                        }
+                    }
+                    a{
+                        img {
+                            border-radius: 16px;
+                            max-width: 200px;
+                            margin-top: 10px;
+                        }
+                    }
+                    .flag-desconto {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 60px;
+                        height: 30px;
+                        line-height: 30px;
+                        background-color: var(--color-red-price);
+                        -webkit-border-top-left-radius: 100px;
+                        -webkit-border-bottom-right-radius: 80px;
+                        -webkit-border-bottom-left-radius: 100px;
+                        -moz-border-radius-topleft: 100px;
+                        -moz-border-radius-bottomright: 80px;
+                        -moz-border-radius-bottomleft: 100px;
+                        border-top-left-radius: 100px;
+                        border-bottom-right-radius: 80px;
+                        border-bottom-left-radius: 100px;
+                        .porcentagem {
+                            color: var(--color-white);
+                            font-size: 14px;
+                            font-weight: 700;
+                            display: block;
+                            text-align: center;
+                            &:after {
+                                content: "%";
+                                font-size: 12px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+                .sm-actions {
+                    @include flexbox;
+                    @include align-items(center);
+                    @include justify-content(center);
+                    width: 100%;
+                    opacity: 1;
+                    @include t(.4s);
+                    position: relative;
+                    bottom: -12px;
+                    max-width: 185px;
+                    .wishlist{
+                        background-color: var(--color-orange-dark);
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        font-size: 0;
+                        text-align: center;
+                        opacity: 0;
+                        @include t(.3s);
+                        display: none;
+                        .add-wishlist{
+                            background-color: var(--color-orange-dark);
+                            color: var(--color-white);
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 50%;
+                            display: block;
+                            .icon-favoritos:before{
+                                content: '\e931';
+                                font-family: "lightsweet";
+                                line-height: 50px;
+                                font-size: 28px;
+                                font-style: normal;
+                            }
+                        }
+                    } 
+                    .sm-buy {
+                        margin: 0;
+                        text-align: center;
+                        overflow: visible;
+                        @include t(.3s);
+                        margin: 0;
+                        display: block;
+                        width: 100%;
+                        a {
+                            background-color: var(--color-green);
+                            color: var(--color-white);
+                            width: 100%;
+                            border-radius: 5px 5px 0 0;
+                            display: block;
+                            padding: 10px;
+                            font-size: 12px;
+                            font-family: 'Montserrat', sans-serif;
+                            font-weight: 700;
+                        }
+                    }
+                    .quickView{
+                        background-color: var(--color-orange);
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        font-size: 0;
+                        text-align: center;
+                        opacity: 1;
+                        @include t(.3s);
+                        @include d(ipad){
+                            display: none;
+                        }
+                        a:before {
+                            content: '\e932';
+                            font-family: "lightsweet";
+                            font-size: 22px;
+                            font-weight: 400;
+                            color: var(--color-white);
+                            line-height: 50px;
+                        }
+                    }
+                }
+                .data {
+                    text-align: left;
+                    width: 85%;
+                    padding: 0.5em 0;
+                    float: left;
+                    max-width: 310px;
+                    @include d(ipadPro){
+                        width: 100%;
+                        padding: .5em;
+                    }
+                   
+                    h3 {
+                        font-size: 11px;
+                        font-style: normal;
+                        font-weight: 500;
+                        margin-bottom: 13px;
+                        color: var(--color-black);
+                        height: 30px;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        line-height: 1.4;
+                        display: block;
+                        font-family: 'Montserrat', sans-serif;
+                        text-align: center;
+                    }
+                    .price {
+                        width: 100%;
+                        float: left;
+                        text-align: left;
+                        .oldPrice {
+                            font-size: 20px;
+                            text-decoration: line-through;
+                            margin-bottom: 10px;
+                            display: block;
+                            color: #CFCFCF;
+                            font-weight: 700;
+                        }
+                        .bestPrice, .newPrice {
+                            color: var(--color-black);
+                            font-size: 20px;
+                            font-weight: 400;
+                            margin-bottom: 10px;
+                            display: block;
+                            text-align: center;
+                        }
+                        .installment {
+                            display: block;
+                            color: var(--color-black);
+                            font-weight: 300;
+                            font-size: 13px;
+                            font-style: normal;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .sm-actions {
+                    .sm-buy, .quickView, .wishlist{
+                        opacity: .8;
+                        @include d(ipad){
+                            transform: none;
+                        }
+                    }
+                }
+            }    
+        }
+    }
+}
+.sm-prateleira-receitas{
+    h2{
+        display: none;
+    }
+    width: 100%;
+    ul{
+        width: 100%;
+        float: left;
+        display: block;
+        li.receitas{
+            width: 100%;
+            float: left;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid var(--color-orange);
+            @include d(hdplus){
+                padding: 5px;
+            }
+            @include d(ipad){
+                max-width: 100%;
+            }
+            @include d(celularLarge){
+                padding: 1em;
+            }
+            .section-receitas{
+                width: 100%;
+                display: flex;
+                @include d(hdplus){
+                    @include align-items(center);
+                }
+                @include d(celularLarge){
+                    @include flex-flow(column);
+                }
+                .receitas-img{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    a{
+                        img{
+                            margin-bottom: 0;
+                            /*max-width: 250px;*/
+                            height: auto;
+                            @include d(ipad){
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+                .conteudo{
+                    width: 100%;
+                    float: left;
+                    text-align: center;
+                    padding: 2%;
+                    .titulo-receita{
+                        width: 100%;
+                        margin-bottom: 20px;
+                        float: left;
+                        @include d(hdplus){
+                            margin-bottom: 0;
+                        }
+                        .icone-receitas{
+                            width: 100%;
+                            float: left;
+                            margin-bottom: 20px;
+                            @include d(hdplus){
+                                margin-bottom: 0;
+                            }
+                            &:before{
+                                content: "\e92b";
+                                font-family: 'lightsweet';
+                                color: var(--color-orange);
+                                font-size: 50px;
+                                margin-bottom: 10px;
+                                @include d(hdplus){
+                                    font-size: 25px;
+                                }
+                            }
+                        }
+                        h3{
+                            a{
+                                font-size: 30px;
+                                color: var(--color-orange);
+                                margin-bottom: 10px;
+                                line-height: 28px;
+                                @include d(hdplus){
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .preparar{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        padding: 10px 0;
+                        @include d(hdplus){
+                            @include flex-flow(column);
+                        }
+                        @include d(hd){
+                            padding: 3px 0;
+                        }
+                        .tempo{
+                            text-align: left;
+                            color: #78909c;
+                            padding: 10px 0;
+                            flex: 1;
+                            @include d(hdplus){
+                                padding: 0;
+                            }
+                            &:before{
+                                content: "\e92c";
+                                font-family: 'lightsweet';
+                                color: var(--color-orange);
+                                font-size: 40px;
+                                margin-top: 10px;
+                                float: left;
+                                margin-right: 10px;
+                                @include d(hdplus){
+                                    font-size: 25px;
+                                }
+                            }
+                            .product-field{
+                                display: flex;
+                                flex-flow: column;
+                                text-align: left;
+                                color: var(--color-orange);
+                                font-weight: 900;
+                                margin-left: 10px;
+                                ul{
+                                    li{
+                                        font-weight: 400;
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                        }
+                        .porcao{
+                            text-align: left;
+                            padding: 10px 0;
+                            &:before{
+                                content: "\e92a";
+                                font-family: 'lightsweet';
+                                color: var(--color-orange);
+                                font-size: 50px;
+                                margin-top: 10px;
+                                float: left;
+                                margin-right: 10px;
+                                @include d(hdplus){
+                                    font-size: 25px;
+                                }
+                            }
+                            .product-field{
+                                display: flex;
+                                flex-flow: column;
+                                text-align: left;
+                                color: var(--color-orange);
+                                font-weight: 900;
+                                ul{
+                                    li{
+                                        font-weight: 400;
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .ver-receita{
+                        float: left;
+                        margin: 0 auto;
+                        text-align: center;
+                        width: 100%;
+                        margin-top: 20px;
+                        a{
+                            background: var(--color-orange);
+                            border-radius: 50px;
+                            color: var(--color-white);
+                            font-weight:900;
+                            font-size: 12px;
+                            padding: 15px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// REMOVER ISTO QUANDO FOR USAR
+.flag{
+    display: none;
+}

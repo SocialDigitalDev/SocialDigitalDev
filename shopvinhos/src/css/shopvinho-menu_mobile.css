@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.header .menu > .menu-item {
+    position: relative;
+    display: inline-block;
+    margin: 0 0.75rem;
+}
+.header .menu > .menu-item > a {
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: inherit;
+    padding: 1rem 0;
+    border: none;
+    outline: none;
+    color: #000;
+    text-transform: capitalize;
+    text-rendering: optimizeLegibility;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+.header .menu > .menu-item > a .expand {
+    position: absolute;
+    right: 20px;
+    top: 28%;
+    margin-top: 0px;
+    display: inline-block;
+    height: 0.75rem;
+    width: 0.75rem;
+    margin-left: 0.35rem;
+    border: none;
+    outline: none;
+    pointer-events: none;
+}
+/* .header .menu > .menu-item > a .expand:before,  */
+.header .menu > .menu-item > a:after { 
+    font-family: 'shopvinho';
+    content: "\e9f8";
+    color: #000;
+    font-size: 20px;
+    transition: all 0.4s ease;
+    position: absolute;
+    right: 0;
+}
+.header .menu > .menu-item:hover > a {
+    color: #000;
+}
+.header .menu > .menu-item:hover > a .expand::before, 
+.header .menu > .menu-item:hover > a .expand::after {
+    background: transparent;
+}
+.header .menu > .menu-item > a .expand::after {
+    -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+.header .menu > .menu-item > .sub-menu {
+    position: absolute;
+    left: -1rem;
+    top: 100%;
+    width: 13rem;
+    height: auto;
+    padding: 0.75rem 0;
+    border: none;
+    outline: none;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+.header .menu > .menu-item > .sub-menu > .menu-item {
+    display: block;
+}
+.header .menu > .menu-item > .sub-menu > .menu-item > a {
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: inherit;
+    padding: 0.5rem 1.25rem;
+    color: #000;
+    text-transform: capitalize;
+    text-rendering: optimizeLegibility;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+.header .burger-menu {
+    position: relative;
+    display: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 1rem;
+    border: none;
+    outline: none;
+    opacity: 0;
+    visibility: hidden;
+    background: none;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+.header .burger-menu span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    border: none;
+    outline: none;
+    opacity: 1;
+    border-radius: 0.25rem;
+    background: #fff;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.header .burger-menu span:nth-child(1) {
+    top: 0;
+}
+.header .burger-menu span:nth-child(2), .header .burger-menu span:nth-child(3) {
+    top: 0.5rem;
+}
+.header .burger-menu span:nth-child(4) {
+    top: 1rem;
+}
+.header .overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.65);
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.menu .header-user {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.menu .header-user li{
+    margin: 0;
+    padding: 20px 0 20px 40px;
+}
+.menu .header-user li.saudacao{
+    background: #D4145A;
+    color: #fff;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px 0 20px 40px;
+    width: 80%;
+}
+.menu .header-user li.saudacao a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+.header-user .icon-user {
+    margin-right: 0px;
+    color: #fff;
+    margin-top: 0px;
+}
+.header-user .orders {
+    padding: 30px 10px;
+    border-bottom: 0px solid #e2e2e2;
+}
+.header-user .orders a:before {
+    content: "\e901";
+    float: left;
+    color: #D4145A;
+    font-family: "shopvinho";
+    font-size: 22px;
+    margin-right: 20px;
+}
+.header-user .orders a,
+.header-user .login a{
+    color: #D4145A;
+    font-size: 18px;
+    font-weight: 600;
+}
+.header-user .login a:before {
+    content: "\e902";
+    float: left;
+    color: #D4145A;
+    font-family: "shopvinho";
+    font-size: 22px;
+    margin-right: 20px;
+}
+.menu .header-user .saudacao a{
+    color: #D4145A;
+    font-size: 16px;
+    font-weight: 400;
+}
+.menu .header-user .saudacao a:before {
+    content: "\e902";
+    color: #fff;
+    float: left;
+    font-family: "shopvinho";
+    font-size: 24px;
+    font-weight: 100;
+    margin-right: 10px;
+    position: relative;
+    top: 0;
+}
+.menu .header-user .saudacao a:after{
+    content: '\e903';
+    font-family: "shopvinho";
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 8px;
+    transition: transform 0.3s ease-out;
+    display: inline-block;
+}
+.header-user .header-user__name {
+    color: #D4145A;
+    font-size: 18px;
+    background: #fff;
+    border-bottom: 1px solid #e2e2e2;
+}
+.header-user .icon-user:before {
+    content: "\e917";
+    font-family: "shopvinho";
+    color: #D4145A;
+    font-size: 18px;
+    font-weight: 100;
+    margin-right: 20px;
+}
+.header-user .icon-exit:before {
+    content: "\e91e";
+    font-family: "shopvinho";
+    font-size: 16px;
+    font-weight: 100;
+    color: #D4145A;
+    margin-right: 20px;
+}
+
+@media only screen and (min-width: 993px) {
+  .header .menu > .menu-item-child:hover > .sub-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .header .menu > .menu-item-child:hover > a .expand::after {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+@media only screen and (max-width: 992px) {
+    .header .overlay.active {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+    .header .navbar {
+        position: fixed;
+        top: 0;
+        left: -30rem;
+        width: 80%;
+        height: 100%;
+        z-index: 999;
+        opacity: 0;
+        overflow-y: auto;
+        visibility: hidden;
+        background: #fff;
+        -webkit-box-shadow: var(--shadow-medium);
+                box-shadow: var(--shadow-medium);
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .header .navbar.active {
+        left: 0rem;
+        opacity: 1;
+        visibility: visible;
+    }
+    .header .menu {
+        width: 80%;
+        height: auto;
+        margin: 2rem 0;
+    }
+    .header .menu > .menu-item{
+        display: block;
+        margin: 5px 0;
+        /* border-bottom: 1px solid #E5E5E5; */
+    }
+    .header .menu > .menu-item-child > a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .header .menu > .menu-item.m_integral > a,
+    .header .menu > .menu-item.m_organico > a,
+    .header .menu > .menu-item.m_gluten > a,
+    .header .menu > .menu-item.m_zeroacucar > a{
+        color: #000;
+    } 
+    .header .menu > .menu-item > a {
+        font-size: 1.25rem;
+        padding: 1rem 1.25rem;
+        color: #000;
+    }
+    .header .menu > .menu-item > a .expand::before, 
+    .header .menu > .menu-item > a .expand::after {
+        background: transparent;
+    }
+    .header .menu > .menu-item-child.active > a:after {
+        transform: rotate(90deg);
+    }
+    .header .menu > .menu-item > .sub-menu {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        max-height: 0;
+        padding: 0px;
+        border: none;
+        outline: none;
+        opacity: 1;
+        overflow: hidden;
+        visibility: visible;
+        background: #fff;;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+    .header .menu > .menu-item > .sub-menu > .menu-item > a {
+        padding: 0.625rem 2rem;
+        color: #666666;
+    }
+    .header .burger-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        left: 0em;
+        margin:0;
+        height: 40px;
+    }
+}
+
+/* Estilos */
+.micon{
+    margin: 0 10px 0 0;
+    width: 32px;
+    text-align: center;
+}
+.header .menu li.m_vinho > a span.micon::before {
+    font-family: 'shopvinho';
+    content: "\e9f9";
+    color: #000;
+    font-size: 36px;
+    font-weight: 100;
+}
+.header .menu li.m_acessorios > a span.micon::before {
+    font-family: 'shopvinho';
+    content: "\e9fa";
+    color: #000;
+    font-size: 36px;
+    font-weight: 100;
+}
+
+.header .menu li.m_clube > a span.micon::before {
+    font-family: 'shopvinho';
+    content: "\e9fb";
+    color: #000;
+    font-size: 36px;
+    font-weight: 100;
+}
+
+.header .menu li.m_promos > a span.micon::before {
+    content: "";
+    width: 27px;
+    height: 27px;
+    float: left;
+   background-image: url("data:image/svg+xml,%0A%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.9991 1.99759C15.3975 -0.665863 11.6025 -0.665863 11.0009 1.99759C10.6109 3.72378 8.63004 4.54429 7.13373 3.59941C4.82496 2.14148 2.14148 4.82496 3.59941 7.13373C4.54429 8.63004 3.72378 10.6109 1.99759 11.0009C-0.665863 11.6025 -0.665863 15.3975 1.99759 15.9991C3.72378 16.3891 4.54429 18.37 3.59941 19.8663C2.14148 22.175 4.82496 24.8585 7.13373 23.4006C8.63004 22.4557 10.6109 23.2762 11.0009 25.0024C11.6025 27.6659 15.3975 27.6659 15.9991 25.0024C16.3891 23.2762 18.37 22.4557 19.8663 23.4006C22.175 24.8585 24.8585 22.175 23.4006 19.8663C22.4557 18.37 23.2762 16.3891 25.0024 15.9991C27.6659 15.3975 27.6659 11.6025 25.0024 11.0009C23.2762 10.6109 22.4557 8.63004 23.4006 7.13373C24.8585 4.82496 22.175 2.14148 19.8663 3.59941C18.37 4.54429 16.3891 3.72378 15.9991 1.99759ZM9.04017 9.81587C8.64417 10.2029 8.44617 10.7384 8.44617 11.4224C8.44617 12.1154 8.64417 12.6554 9.04017 13.0424C9.44516 13.4294 9.96266 13.6229 10.5927 13.6229C11.2227 13.6229 11.7357 13.4294 12.1317 13.0424C12.5367 12.6554 12.7392 12.1154 12.7392 11.4224C12.7392 10.7384 12.5367 10.2029 12.1317 9.81587C11.7357 9.42887 11.2227 9.23537 10.5927 9.23537C9.96266 9.23537 9.44516 9.42887 9.04017 9.81587ZM11.8077 18.8474L17.1131 9.39737H15.2637L9.97166 18.8474H11.8077ZM9.83666 11.4224C9.83666 10.7204 10.0842 10.3694 10.5792 10.3694C11.0922 10.3694 11.3487 10.7204 11.3487 11.4224C11.3487 11.7824 11.2812 12.0524 11.1462 12.2324C11.0112 12.4034 10.8222 12.4889 10.5792 12.4889C10.0842 12.4889 9.83666 12.1334 9.83666 11.4224ZM14.9667 15.2024C14.5707 15.5804 14.3727 16.1159 14.3727 16.8089C14.3727 17.5019 14.5707 18.0419 14.9667 18.4289C15.3626 18.8159 15.8801 19.0094 16.5191 19.0094C17.1491 19.0094 17.6576 18.8159 18.0446 18.4289C18.4406 18.0419 18.6386 17.5019 18.6386 16.8089C18.6386 16.1159 18.4406 15.5804 18.0446 15.2024C17.6576 14.8154 17.1491 14.6219 16.5191 14.6219C15.8891 14.6219 15.3716 14.8154 14.9667 15.2024ZM15.7361 16.8089C15.7361 16.1069 15.9926 15.7559 16.5056 15.7559C17.0096 15.7559 17.2616 16.1069 17.2616 16.8089C17.2616 17.5199 17.0096 17.8754 16.5056 17.8754C15.9926 17.8754 15.7361 17.5199 15.7361 16.8089Z' fill='black'/%3E%3C/svg%3E%0A");
+}
+.header .menu > .menu-item > .sub-menu{
+    padding-left: 35px;
+}
+.sub-menu .menu-tipos h3{
+    font-weight: 800;
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+}
+.sub-menu .menu-tipos ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-flow: row nowrap;
+    margin: 12px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 0 30px 0 0;
+}
+.sub-menu .menu-tipos li{
+    background: #000000;
+    border-radius: 10px;
+    height: 60px;
+    line-height: 38px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    white-space: nowrap;
+    width: auto;
+
+}
+.sub-menu .menu-tipos li a {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Paises */
+.sub-menu .menu-paises h3{
+    margin-bottom: 20px;
+}
+.sub-menu .menu-paises .menu_paises{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-flow: row nowrap;
+    margin: 12px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 0 30px 0 0;
+    padding: 0 6px;
+}
+.sub-menu .menu-paises .menu_paises li{
+    margin: 0 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* Tipos de Uvas */
+.sub-menu .menu-uvas h3{
+    margin-bottom: 20px;
+}
+.sub-menu .menu-uvas li{
+    margin-bottom: 10px;
+}
+.sub-menu .menu-uvas li.menu-item a {
+    color: #979797;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.menu_mobile.mobile .menu .sub-menu ::-webkit-scrollbar{
+	width: 2px;
+	height: 2px;
+}
+.menu_mobile.mobile .menu .sub-menu ::-webkit-scrollbar-thumb{
+	background: #979797;
+	border-radius: 30px;
+}
+.menu_mobile.mobile .menu .sub-menu ::-webkit-scrollbar-track{
+	background: #FFFFFF;
+	border-radius: 0px;
+	box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}

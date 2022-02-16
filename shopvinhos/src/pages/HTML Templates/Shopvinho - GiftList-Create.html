@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+     xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+ 
+ <head>
+     <title>Jasmine</title>
+     <vtex:metaTags />
+     <vtex:template id="Shopvinho - Styles" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+     <style type="text/css">
+         .col-md-3 .navigation {
+             display: none;
+         }
+ 
+         ul.nav.nav-list.bs-docs-sidenav.giftlist-sidenav {
+             background-color: #80808014;
+         }
+ 
+         .giftlist-sidenav li {
+             border-bottom: 1px solid #0000002b;
+             font-size: 14px;
+             font-weight: bold;
+         }
+     </style>
+ 
+ </head>
+ 
+ <body id="bd">
+     <div id="sns_wrapper">
+         <!--  SubTemplate: Header -->
+         <vtex:template id="Shopvinho - Header" />
+         <!-- /SubTemplate: Header -->
+ 
+         <!-- CONTENT -->
+         <div class="container">
+             <div class="wrapper">
+                 <div class="col-md-3 hidden">
+                     <vtex:template id="new-GiftList-Sidebar-nav" />
+                 </div>
+                 <div class="col-md-12">
+                     <div class="cont-submenu"><button class="onsub"></button>
+                         <div class="menu-listas">
+                             <ul>
+                                 <li><a class="create" href="/giftlist/create">Criar Lista</a></li>
+                                 <li><a class="edit" href="/giftlist/manage">Administrar Listas</a></li>
+                             </ul>
+                         </div>
+                     </div>
+                     <h2>Criar lista</h2>
+                     <!-- Controle: Criar uma Lista -->
+                     <vtex.cmc:GiftListFormV2 />
+                     <!-- 
+                         os seguintes parâmtros são permitidos:
+                         types="1,2,3,..." especifica quais tipos de listas serão permitidos na criação. Por padrão, todos os tipos ativos são permitidos
+                         urlmanage="http://mysite.com/alternatefolder" caminho customizado nos links para a página de gerenciamento da lista
+                         urledit="http://mysite.com/alternatefolder" caminho customizado nos links para a página de edição da lista
+                          -->
+                     <!-- /Controle: Criar uma Lista -->
+ 
+                 </div>
+             </div>
+         </div>
+         <!-- AND CONTENT -->
+     </div>
+     <div class="uio"></div>
+ 
+     <!--  SubTemplate: Footer -->
+     <vtex:template id="Shopvinho - Footer" />
+     <!-- /SubTemplate: Footer -->
+ 
+     <vtex:template id="Shopvinho - Scripts" />
+  
+ </body>
+ 
+ </html>

@@ -1,0 +1,71 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'Product';
+    - var $templateClass = 'pg-produto';
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content
+    section
+        .om-departamento__topo
+            .container-center
+                .produto-titulo
+                    h1.nome-prod
+                        vtex(.cmc:productName)/
+    section
+        div.wrapper.bread
+            div.container-center
+                vtex(.cmc:BreadCrumb)/
+    section
+        div.wrapper.produto-all
+            div.container-center
+                figure
+                    div.img-produto
+                        vtex(.cmc:ProductImage zoom='on')/
+            div#produtoDiv-direita
+                h1.nome-prod
+                    vtex(.cmc:productName)/
+                span.cod-prod
+                    vtex(.cmc:skuReference)/
+                div.flags-promo
+                    vtex(.cmc:discountHighlight)/
+                div.wrapper.detalhes-prod
+                    div#descricao-produto
+                        div.container-center
+                            h2.titulo Descrição
+                            vtex(.cmc:ProductDescription)/
+                            vtex(.cmc:productSpecification)/
+                div.variantes-sku
+                    vtex(.cmc:skuSelection)/
+                vtex(.cmc:skuPrice)/
+                div.produto-buy__container
+                    div.om-produto__buy-quant
+                        div.qtdPrateleira
+                            span.btnDec
+                            input.qtdVal(type='text' value='1')/
+                            span.btnAcr
+                    div.om-produto__buy-button
+                        vtex(.cmc:buyButton)/
+                div.calc-frete
+                    div.cep
+                        h3
+                            span.icon__frete
+                            |  Calcule o frete e prazo de entrega.
+                        vtex(.cmc:shippingValue)/
+                        <script type='text/javascript'>$(document).ready(function(){ShippingValue();});</script>    
+            
+            section
+                div.wrapper.slide-prod.qvvt
+                    div.container-center
+                        div.titulo-prateleira
+                            h2
+                                | Quem viu,
+                                b viu também
+                        vtex:contentPlaceHolder(id=`om-qvvt`)/
+
+block append scripts
+    script(type='text/javascript', src=`/arquivos/${$templateName}.js`) 

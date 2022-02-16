@@ -1,0 +1,84 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'SubHomeInformatica';
+    - var $templateClass = 'sm-subhome-informatica';
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content
+    section
+        figure
+            div.wrapper
+                div.banner-carousel.banner-subhome.desktop
+                    vtex:contentPlaceHolder(id=`banner-subhome-desktop`)/
+                div.banner-carousel.banner-subhome.mobile
+                    vtex:contentPlaceHolder(id=`banner-subhome-mobile`)/
+        div.section-banners-triplos
+            div.wrapper
+                vtex:contentPlaceHolder(id=`banners-triplos-subhome`)/
+    section
+        div.section-categorias-subhome
+            div.wrapper
+                vtex:contentPlaceHolder(id=`categorias-subhome`)/
+    section
+        div.section-ofertas-subhome.vitrine-simples
+            div.vitrine-title
+                h2 Ofertas em destaque
+            div.wrapper
+                vtex:contentPlaceHolder(id=`vitrine-ofertas-subhome`)/
+    section
+        figure
+            div.wrapper
+                div.banner-carousel.banner-subhome.desktop
+                    vtex:contentPlaceHolder(id=`banner-subhome-secundario-desktop`)/
+                div.banner-carousel.banner-subhome.mobile
+                    vtex:contentPlaceHolder(id=`banner-subhome-secundario-mobile`)/
+    section
+        div.section-ofertas-subhome.vitrine-simples
+            div.vitrine-title
+                h2 Lançamentos
+            div.wrapper
+                vtex:contentPlaceHolder(id=`vitrine-lancamentos-subhome`)/
+    section
+        div.section-ofertas-subhome.vitrine-simples
+            div.vitrine-title
+                h2 Celulares e comunicação
+            div.wrapper
+                vtex:contentPlaceHolder(id=`vitrine-celulares-subhome`)/
+    section
+        div.section-ofertas-subhome.vitrine-simples
+            div.vitrine-title
+                h2 Áudio e som
+            div.wrapper
+                vtex:contentPlaceHolder(id=`vitrine-audio-subhome`)/
+    section
+        figure
+            div.wrapper
+                div.banner-carousel.banner-subhome.desktop
+                    vtex:contentPlaceHolder(id=`banner-subhome-middle-desktop`)/
+                div.banner-carousel.banner-subhome.mobile
+                    vtex:contentPlaceHolder(id=`banner-subhome-middle-mobile`)/
+    section
+        div.section-ofertas-subhome.vitrine-simples
+            div.vitrine-title
+                h2 TV, áudio e cinema em casa
+            div.wrapper
+                vtex:contentPlaceHolder(id=`vitrine-cinema-subhome`)/
+    section
+        div.section-ofertas-subhome.vitrine-simples
+            div.vitrine-title
+                h2 Acessórios eletrônicos
+            div.wrapper
+                vtex:contentPlaceHolder(id=`vitrine-acessorios-subhome`)/
+    section
+        div.section-mais-vendidos.vitrine-tripla
+            div.vitrine-title
+                h2 Mais vendidos
+            div.wrapper
+                vtex:contentPlaceHolder(id=`vitrine-principais-produtos`)/
+block append scripts
+    script(type='text/javascript', src=`/arquivos/${$templateName}.js`) 

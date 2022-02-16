@@ -1,0 +1,6 @@
+# dependencies
+/node_modules
+/.vscode
+
+/public/styles.min.css
+/public/scripts.min.js

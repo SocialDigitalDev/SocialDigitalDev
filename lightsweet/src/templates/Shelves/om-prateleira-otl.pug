@@ -1,0 +1,71 @@
+| #set($id = $product.Id)
+| #set($idSku = $product.productVariantId)
+| #set($uri = $product.Uri)
+| #set($escapedName = $product.HtmlEscapedName)
+| #set($validade = $product.ProductField(381))
+| #set($marcas =$product.BrandName)
+.ls-product
+    input.om-id(type='hidden' value='$id')
+    input.om-sku(type='hidden' value='$idSku')
+    .ls-image
+        a.ls-image(title='$escapedName' href='$uri')
+            // $product.GetImageTag(30)
+            | $product.GetImageTag(310,465)
+        //
+            WishList
+            <a class="btn-list btn-wishlist" rel="$product.Id">
+            Lista de Desejos
+            </a>
+            Wishlist
+        // Flag Topo
+        | #if($product.DiscountHightLight != '')
+        .flags-promo
+            | $product.DiscountHightLight
+        | #end
+        .om-hover-content
+            .om-variations
+            .om-buy
+                a.om-buy-button(title='$escapedName') Comprar
+    | 
+    | #if ($product.IsInStock)
+    .om-produto-dados
+        | #if ($product.HasBestPrice)
+        .flag-desconto
+            span.porcentagem $product.ListPriceMinusBestPriceInPercent
+            span.texto-flag
+        | #end
+        p(clas='marca')  $marcas 
+        h2
+            a(title='$escapedName' href='$uri')
+                | $product.Name
+        .om-price
+            a(title='$escapedName' href='$uri')
+                | #if ($product.HasBestPrice)
+                span.oldPrice
+                    | $product.ListPrice
+                span.om-bestPrice
+                    strong  $product.BestPrice 
+                | #else
+                span.om-bestPrice
+                    strong $product.BestPrice 
+                | 
+                | #end
+                span.om-installment
+                    | #if ($product.NumbersOfInstallment > 1)
+                    | ${product.NumbersOfInstallment}x $product.InstallmentValue
+                    | #else
+                    span
+                    | #end
+                    | #else
+                    p.om-outOfStock
+                        a(title='$escapedName' href='$uri')
+                            span.om-icon
+                            span.om-text
+                                | Produto Esgotado
+                                small Avise-me quando chegar
+                    | 
+                    | #end
+                    //
+                        <script>
+                        $('body').on('click', '.btn-list', function(){ var _idProduct = $(this).attr('rel'); var _lid = '{0a990872-c1d3-4017-9eab-213f824c5ffe}'; $('body').prepend( '<div class="wrap-modal">' + '<div class="container-modal">' + '<iframe id="addlist" src="/quick-view/?idproduto='+_idProduct+'&KeepThis=true&lid='+_lid+'" frameborder="0" scrolling="no"></iframe>' + '<a class="close-modal">Fechar</a>' + '</div>' + '</div>' ); });
+                        </script>

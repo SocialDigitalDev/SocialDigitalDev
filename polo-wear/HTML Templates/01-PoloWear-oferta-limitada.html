@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+    <vtex:contentPlaceHolder id="tagTitle"/>
+    <vtex:metaTags/>
+    <vtex:template id="01-PoloWear-css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+
+<body>
+    <main>        
+        <section class="logo-polo">
+            <div class="container">
+                <div class="container-center">
+                   
+                    <div id="logo-top">
+                        <h1 class="item-logo">
+                            <a href="/">
+                               <vtex.cmc:LogoPoloSvg />
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section_one">
+            <div class="container ofertas_limitadas">
+                <div class="container-center">
+                    <div class="polo_left">
+
+                        <p>Com este cupom ao invés de pagar R$ 129,99,<br/>
+                            você pagará apenas:</p>
+
+                        <div class="polo_price">
+                            <span class="cifra"> R$ </span><span class="price">99</span><span class="cents">,99</span>
+                        </div>
+
+                        <div class="cupom-section">
+                            <div class="btn-cupom">
+                                <span id="cupom"> OFERTALIMITADA </span>
+                            </div>
+                            <button onclick="copyToClipboard('#cupom')">
+                                <span>
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512">
+                                    <g id="Text-files">
+                                        <g>
+                                        <path d="M480.6,109.1h-87.5V31.4c0-11.3-9.1-20.4-20.4-20.4H31.4C20.1,11,11,20.1,11,31.4v351c0,11.3,9.1,20.4,20.4,20.4h87.5    v77.7c0,11.3,9.1,20.4,20.4,20.4h341.3c11.3,0,20.4-9.1,20.4-20.4v-351C501,118.3,491.9,109.1,480.6,109.1z M51.8,362V51.8h300.4    v57.3H139.3c-11.3,0-20.4,9.1-20.4,20.4V362H51.8z M460.2,460.2H159.7V150h300.4V460.2z"/>
+                                        <path d="m233.3,254.4h155.8c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-155.8c-11.3,0-20.4,9.1-20.4,20.4 0,11.2 9.1,20.4 20.4,20.4z"/>
+                                        <path d="m233.3,396.6h155.8c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-155.8c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4z"/>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                </span>
+                            Copiar</button>
+                        </div>
+                       
+                           
+                        <div class="polo_buy">
+                            <a href="#"> COMPRE AGORA </a>
+                        </div>
+                        <div class="oferta-condicoes">
+                            <p>1- Copie o cupom ofertalimitada</p>
+                            <p> 2- Adicione o produto no carrinho</p>
+                            <p> 3- No campo CUPOM DE DESCONTO Insira:</p>
+                        </div>
+                    </div>
+                    <div class="polo-right">
+                        <img src="/arquivos/bg-oferta_llimitada.jpg" class="img-categoria-pf" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section_two">
+            <div class="container polo_loja">
+                <div class="container-center">
+                    <p>Polo Wear é uma loja de Grife que está realizando um saldão imperdível apenas para clientes selecionados que aplicarem o cupom disponibilizado aqui.</p>
+
+                    <ul>
+                        <li>
+                            <span class="icon-oferta">
+                                <img src="/arquivos/polo-oferta_limitada_icon-1.png" />
+                            </span>
+                            <p>Confeccionadas<br/> em poliamida</p>
+                        </li>
+                        <li>
+                            <span class="icon-oferta">
+                                <img src="/arquivos/polo-oferta_limitada_icon-2.png" />
+                            </span>
+                            <p>Circulaçao de ar</p>
+                        </li>
+                        <li>
+                            <span class="icon-oferta">
+                                <img src="/arquivos/polo-oferta_limitada_icon-3.png" />
+                            </span>
+                            <p>conforto no dia a dia</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section_three">
+            <div class="container polo_kits">
+                <div class="titulo-prateleira">
+                    <h2> Outros <b>Kits</b> </h2>
+                </div>
+                <div class="container-center">
+                    <vtex:contentPlaceHolder id="outrosKits" />
+                </div>
+            </div>
+        </section>
+
+        <section class="section_four">
+            <div class="container polo_categorias">
+                <div class="container-center">
+                    <vtex.cmc:poloLimitadaCat />
+                    <vtex:contentPlaceHolder id="poloCategoriasBanners" />
+                </div>
+            </div>
+        </section>
+    </main>
+     <vtex:template id="01-PoloWear-Footer" />  
+    <vtex:template id="01-PoloWear-js" />
+    <script>
+        function copyToClipboard(element) {
+            var $temp = $("<input></input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+    </script>
+</body>
+</html>

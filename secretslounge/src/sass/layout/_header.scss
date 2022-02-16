@@ -1,0 +1,9 @@
+header {
+    &.header {
+        .header__inner {
+            &.scroll {
+                z-index: 9;
+            }
+        }
+    }
+}

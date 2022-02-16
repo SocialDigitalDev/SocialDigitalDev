@@ -1,0 +1,444 @@
+.ls-produto-especial-main{
+    section{
+        .bread{
+            width: 100%;
+            padding: 10px 20px;
+            margin-top: 3em;
+            margin-bottom: 20px;
+            .bread-crumb {
+                ul {
+                    @include flexbox;
+                    @include justify-content(flex-start);
+                    @include align-items(center);
+                    li {
+                        &:after {
+                            // content: "/";
+                            // margin: 0 3px;
+                            color: var(--color-blue);
+                            content: "\e934";
+                            font-family: lightsweet;
+                            font-weight: bold;
+                            font-size:10px;
+                            display: inline-block;
+                            margin: 0;
+                            height: 10px;
+                            width: 10px;
+                            margin: 0 5px;
+                        }
+                        a {
+                            font-size: 13px;
+                            color: var(--color-blue);
+                        }
+                        &:last-child {
+                            font-weight: 600;
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .wrapper.produto-all{
+            @include flexbox;
+            padding: 0;
+            @include d(ipad){
+                @include flex-flow(column);
+            }
+            > .container-center{
+                @include flexbox;
+                @include align-items(center);
+                width: 60%;
+                background-image: url("/arquivos/splash.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 850px;
+                position: sticky;
+                top: 0;
+                @include d(ipadPro){
+                    @include align-items(flex-start);
+                }
+                @include d(ipad){
+                    width: 100%;
+                    background-image: url("/arquivos/splash-mobile.png");
+                    @include align-items(center);
+                    @include justify-content(center);
+                    height: 700px;
+                    position: initial;
+                }
+                @include d(celularLarge){
+                    height: 380px;
+                }
+                @include d(celularMedium){
+                    height: 300px;
+                }
+                figure{
+                    .img-produto{
+                        .apresentacao{
+                            #show{
+                                #include{
+                                    #image{
+                                        a.image-zoom{
+                                            img#image-main{
+                                                max-width: 600px;
+                                                @include d(hdplus){
+                                                    max-width: 500px;
+                                                }
+                                                @include d(ipad){
+                                                    max-width: 490px;
+                                                }
+                                                @include d(celularLarge){
+                                                    max-width: 300px;
+                                                }
+                                            }
+                                            .zoomWindow{
+                                                display: none !important;
+                                            }
+                                        }
+                                    }
+                                }
+                                ul.thumbs{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #produtoDiv-direita{
+                width: 35%;
+                margin-top: 2em;
+                @include flexbox;
+                @include flex-flow(column);
+                @include align-items(center);
+                @include d(ipad){
+                    width: 100%;
+                }
+                @include d(celularLarge){
+                    padding: 0 1em;
+                }
+                h1.nome-prod{
+                    order: 1;
+                    .productName{
+                        font-size: 70px;
+                        font-family: "Dancing Script", cursive;
+                        color: var(--color-orange-dark);
+                        line-height: 1em;
+                        text-align: center;
+                        @include d(ipadPro){
+                            font-size: 50px;
+                        }
+                    }
+                }
+                span.cod-prod{
+                    .skuReference{
+                        display: none;
+                    }
+                }
+                .flags-promo{
+                    display: none;
+                }
+                .wrapper.detalhes-prod{
+                    order: 4;
+                    padding: 0;
+                    #descricao-produto{
+                        @include flexbox;
+                        @include justify-content(center);
+                        .container-center{
+                            h2{
+                                display: none;
+                            }
+                            .productDescription{
+                                text-align: center;
+                                max-width: 450px;
+                                font-size: 14px;
+                                line-height: 28px;
+                                margin-top: .5em;
+                                max-height: 115px;
+                                height: 10%;
+                                overflow-y: hidden;
+                                @include t(.3s);
+                                &.descAberto{
+                                    max-height: 1500px;
+                                    height: 100%;
+                                }
+                            }
+                            .seeMore {
+                                text-align: center;
+                                text-decoration: underline;
+                                cursor: pointer;
+                            }
+                            #caracteristicas{
+                                .Receitas{
+                                    display: none;
+                                }
+                                h4.PDP-Especial{
+                                    font-size: 0;
+                                    font-family: "Dancing Script", cursive;
+                                    color: var(--color-orange-dark);
+                                    line-height: 1em;
+                                    text-align: center;
+                                    &:before{
+                                        content: "Informações Complementares";
+                                        font-size: 40px;
+                                        line-height: 2em;
+                                    }
+                                    &:after{
+                                        content: "\e92e";
+                                        font-family: "lightsweet";
+                                        color: var(--color-orange-dark);
+                                        width: 100%;
+                                        display: block;
+                                        margin-top: 0;
+                                        font-size: 39px;
+                                        text-align: center;
+                                    }
+                                }
+                                table.PDP-Especial{
+                                    @include flexbox;
+                                    @include flex-flow(column);
+                                    @include align-items(center);
+                                    tbody{
+                                        @include flexbox;
+                                        @include flex-flow(column);
+                                        @include align-items(center);
+                                        width: 100%;
+                                        tr{
+                                            @include flexbox;
+                                            @include align-items(center);
+                                            @include justify-content(center);
+                                            width: 100%;
+                                            position: relative;
+                                            &:before{
+                                                content: "";
+                                                display: block;
+                                                background-image: url("data:image/svg+xml,%3Csvg width='72' height='44' viewBox='0 0 72 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.8713 27.5012L15.0232 19.493C12.4246 16.8416 7.25066 16.1853 3.52544 18.035H3.52532C-0.19984 19.8846 -1.12178 23.5673 1.47686 26.2189L16.0802 41.1201C18.6788 43.7717 23.8529 44.4278 27.5782 42.5783C28.6374 42.0523 29.4613 41.3752 30.0507 40.6187L30.0574 40.6211C30.0574 40.6211 30.0756 40.5919 30.0904 40.5683C30.2783 40.3216 30.4445 40.068 30.5805 39.8063C33.5855 35.2032 49.4992 11.9473 71.7255 0C71.7255 7.11779e-07 43.7369 0.503207 22.8713 27.5012Z' fill='%23F28466'/%3E%3C/svg%3E");
+                                                background-size: contain;
+                                                background-repeat: no-repeat;
+                                                width: 35px;
+                                                height: 25px;
+                                                position: absolute;
+                                                left: 0;
+                                            }
+                                            th{
+                                                display: none;
+                                            }
+                                            td{
+                                                font-size: 20px;
+                                                display: block;
+                                                padding: 1.5em 0;
+                                                text-align: center;
+                                                font-weight: 600;
+                                                max-width: 350px;
+                                                line-height: 35px;
+                                                @include d(celularLarge){
+                                                    font-size: 15px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .variantes-sku{
+                    display: none;
+                }
+                .plugin-preco{
+                    order: 2;
+                    margin-top: 2em;
+                    .productPrice{
+                        .descricao-preco{
+                            text-align: center;
+                            .valor-de{
+                                font-size: 0;
+                                strong{
+                                    margin: 1em 0;
+                                    font-size: 30px;
+                                    text-decoration: line-through;
+                                    color: var(--color-gray-line);
+                                    font-weight: 700;
+                                    font-style: normal;
+                                    display: block;
+                                }
+                            }
+                            .valor-por{
+                                font-size: 0;
+                                display: block;
+                                margin-bottom: 1em;
+                                strong{
+                                    @include flexbox;
+                                    font-size: 110px;
+                                    color: var(--color-orange-dark);
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    letter-spacing: 5px;
+                                    .font-little {
+                                        font-size: 60px;
+                                        font-weight: 500;
+                                        position: relative;
+                                        bottom: 15px;
+                                    }
+                                }
+                                &:after{
+                                    content: "\e92e";
+                                    font-family: "lightsweet";
+                                    color: var(--color-orange-dark);
+                                    width: 100%;
+                                    display: block;
+                                    margin-top: 50px;
+                                    font-size: 39px;
+                                    text-align: center;
+                                    left: 0;
+                                }
+                            }
+                            .valor-dividido{
+                                color: var(--color-blue);
+                                font-size: 25px;
+                                display: block;
+                                margin: .5em 0;
+                            }
+                        }
+                        .preco-a-vista{
+                            display: none !important;
+                        }
+                        .economia-de{
+                            display: none !important;
+                        }
+                    }
+                }
+                .produto-buy__container{
+                    order: 3;
+                    .ls-produto__buy-quant{
+                        .qtdPrateleira{
+                            display: none;
+                        }
+                    }
+                    .ls-produto__buy-button{
+                        display: block;
+                        margin: 1em 0;
+                        a{
+                            font-size: 0;
+                            display: flex !important;
+                            background: var(--color-orange-dark);
+                            color: var(--color-white);
+                            padding: 15px 30px;
+                            border-radius: 10px;
+                            font-weight: 600;
+                            @include t(.3s);
+                            &:before{
+                                content: "Compre aqui";
+                                font-size: 20px;
+                            }
+                            &:hover{
+                                opacity: .8;
+                            }
+                        }
+                    }
+                }
+                .calc-frete{
+                    display: none;
+                }
+                .wrapper.slide-prod.receitas{
+                    order: 5;
+                    @include flexbox;
+                    @include justify-content(center);
+                    margin: 1em 0;
+                    .container-center{
+                        max-width: 100%;
+                        .titulo-prateleira{
+                            h2{
+                                font-size: 40px;
+                                font-family: "Dancing Script", cursive;
+                                color: var(--color-orange-dark);
+                                line-height: 1em;
+                                text-align: center;
+                            }
+                        }
+                        .ls-receita-pdp{
+                            h2{
+                                display: none;
+                            }
+                            ul{
+                                li.receitas{
+                                    display: flex !important;
+                                    @include justify-content(center);
+                                }
+                            }
+                        }
+                    }
+                }
+                .wrapper.slide-prod.qvvt{
+                    order: 6;
+                    @include flexbox;
+                    @include justify-content(center);
+                    .container-center{
+                        max-width: 100%;
+                        .titulo-prateleira{
+                            h2{
+                                font-size: 40px;
+                                font-family: "Dancing Script", cursive;
+                                color: var(--color-orange-dark);
+                                line-height: 1em;
+                                text-align: center;
+                            }
+                        }
+                        .ls-prateleira{
+                            max-width: 100%;
+                            > ul{
+                                @include flex-flow(column);
+                                .slick-list{
+                                    max-width: 100%;
+                                    li{
+                                        padding: 0 5px;
+                                    }
+                                }
+                                ul.slick-dots{
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ornamento {
+                background: url(/arquivos/cacau.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 260px;
+                height: 850px;
+                position: sticky;
+                top: 0;
+                @include d(ipad){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+ul.slick-dots{
+    @include flexbox;
+    @include justify-content(center);
+    margin: 1em 0;
+    li{
+        padding: 0 5px !important;
+        button{
+            font-size: 0;
+            width: 12px;
+            height: 12px;
+            border: 1px solid var(--color-orange-dark);
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        &.slick-active{
+            button{
+                background: var(--color-orange-dark);
+            }
+        }
+    }
+}
+.Especificacoes{
+    display: none;
+}

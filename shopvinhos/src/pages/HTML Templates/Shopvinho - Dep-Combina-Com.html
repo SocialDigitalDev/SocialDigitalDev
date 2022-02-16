@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+    <vtex:metaTags/>
+    <vtex:template id="Shopvinho - Styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+    <vtex:template id="Shopvinho - Header" />
+    <main>
+        <div class="shopvinho-departamento__topo">
+            <div class="container pagDepartamento">
+                <div class="wrapper">
+                    <div class="nomeDepartamento">
+                        <vtex.cmc:searchTitle />
+                        <vtex:contentPlaceHolder id="Texto - Descrição Topo"/>
+                    </div>
+                </div>
+            </div>
+            <!-- Imagem para o topo -->
+            <div class="bannerDepartamento">
+                <vtex:contentPlaceHolder id="Banner - Topo Departamento" />
+            </div>
+        </div>
+        <!-- Estrutura Breadcrumb -->
+        <section>
+            <div class="container bread">
+                <div class="wrapper">
+                    <vtex.cmc:BreadCrumb />
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorias -->
+        <section class="main_categorias">
+            <div class="wrapper">
+                <div class="categorias-section">
+                    <ul class="categorias_box">
+                        <vtex.cmc:ShopvinhoCombinarCom />
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container pagDepartamento">
+                <div class="wrapper">
+                    <aside>
+                        <div class="filtrosDepartamento">
+                            <span class="btn-filtro"> Filtros </span>
+                            <vtex.cmc:searchNavigator/>
+                        </div>
+                    </aside>
+
+                    <div class="conteudo-categoria shopvinho-prateleira">
+                        <div class="resultadoDepartamento">
+                            <div class="order-main-container-right">
+                                <div class="optionList">
+                                    <div class="boxFiltroOrder filAtivo">
+                                        <h3 class=""> Ordenar por: </h3>
+                                        <ul class="contOrdenar">
+                                            <li><a data-href="OrderByPriceASC" href="#">Menor Preço</a></li>
+                                            <li><a data-href="OrderByPriceDESC" href="#">Maior Preço</a></li>
+                                            <li><a data-href="OrderByTopSaleDESC" href="#">Mais vendidos</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <vtex.cmc:searchResult layout="7a2a2ab7-facb-4d5f-a4e4-263c4ce26b0a" itemCount="16" columnCount="16" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>        
+    </main> 
+     <vtex:template id="Shopvinho - Footer" />  
+    <vtex:template id="Shopvinho - Scripts" />
+
+</body>
+
+</html>

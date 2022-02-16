@@ -1,0 +1,114 @@
+<header class="header">
+    <div class="minicart__overlay"></div>
+    <div class="container">
+        <div class="container-center">
+            <span class="btn-menu-mobile"> </span>
+            <div id="logo-top">
+                <h1 class="item-logo">
+                    <a href="/"><span class="icon-logo-4fitbox"></span></a>
+                </h1>
+            </div>
+            <div class="menu-topo">
+                <nav class="header-principal__menu">
+                    <ul class="menu-principal">
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-user-links">
+
+                <div class="user-name__account">
+                    <div class="link-help">
+                        <vtex.cmc:welcomeMessage />
+                    </div>
+                </div>
+
+                <div class="carrinho">
+                    <!--<a href="/checkout">-->
+                    <span class="icon-cart"></span>
+                    <div class="info-cart">
+                        <span class="qtd-cart"> </span>
+                    </div>
+                    <!--</a>-->
+                </div>
+                <!--MINI CART -->
+                <div class="header-minicart">
+                    <div class="header-minicart-header">
+                        <div class="minicart__header-links">
+                            <button class="header-minicart-close">
+                                <!-- <img src="/arquivos/close.svg" /> -->
+                                voltar
+                            </button>
+                            <p class="header-minicart_topo">CARRINHO</p>
+                        </div>
+                        <div class="header-minicart-title qtd-minicart" style="margin-left: 0px;">
+                            Seu carrinho possui: 
+                            <span class="header-minicart-badge" style="display: flex;"></span><span
+                                class="header-minicart-itens"></span>
+                        </div>
+                    </div>
+                    <div class="header-minicart-navigation">
+                        <!--customMiniCart-->
+                        <div class="portal-totalizers-ref">
+                            <div class="amount-items-in-cart">
+                                <div class="cartInfoWrapper"><span class="title"><span id="MostraTextoXml1">Resumo do
+                                            Carrinho</span></span>
+                                    <ul class="cart-info">
+                                        <li class="amount-products"><strong><span id="MostraTextoXml2">Total de
+                                                    Produtos:</span></strong> 
+                                                    <em class="amount-products-em">1</em>
+                                        </li>
+                                        <li class="amount-items"><strong><span
+                                                    id="MostraTextoXml3">Itens:</span></strong> 
+                                                    <em class="amount-items-em"></em>
+                                        </li>
+                                        <li class="total-cart"><strong><span id="MostraTextoXml5">Valor
+                                                    Total:</span></strong> 
+                                                    <em class="total-cart-em"></em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <script>$('.portal-totalizers-ref').minicart({ showMinicart: false, showTotalizers: true, showShippingOptions: false });</script>
+                        <div class="header-minicart-list">
+                            <div class="list-prod">
+                                <div class="list-prod-image"> </div>
+                                <div class="list-prod-info">
+                                    <div class="list-prod-name"></div>
+                                    <div class="list-prod-price">
+                                        <div class="list-prod-qtd">
+                                            <p class="qtd-remove">-</p>
+                                            <p class="qtd-value"></p>
+                                            <p class="qtd-adiciona">+</p>
+                                        </div>
+                                        <div class="list-prod-total"></div>
+                                    </div>
+                                </div>
+                                <span class="list-prod-remove"><img src="/arquivos/close.svg" /></span>
+                            </div>
+                        </div>
+                        <div class="header-minicart-empty" style="display: none;">
+                            <p>Carrinho Vazio</p><button>Continuar comprando</button>
+                        </div>
+                    </div>
+                    <div class="header-minicart-footer" style="display: block;">
+                        <!-- footerMiniCart -->
+                        <div class="header-minicart-total">
+                            <!-- totalCart -->
+                            <p class="header-minicart-subtotal">
+                                Subtotal
+                                <span class="header-minicart-value"></span>
+                            </p>
+                        </div>
+                        <div class="header-minicart-actions">
+                            <!-- actionMiniCart -->
+                            <a href="/checkout" class="goToCart">Finalizar Compra</a>
+                            <button class="continueToBuy">Continuar Comprando</button>
+                        </div>
+                    </div>
+                </div>
+                <!--MINI CART -->
+            </div>
+        </div>
+    </div>
+</header>

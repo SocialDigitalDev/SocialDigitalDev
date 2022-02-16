@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+// Settings
+@import url("https://use.fontawesome.com/releases/v5.10.2/css/all.css");
+@import "./settings/index.scss";
+
+// Base
+@import "./base/index.scss";
+
+// Components
+@import "./components/index.scss";
+
+// Pages
+@import "./pages/index.scss";

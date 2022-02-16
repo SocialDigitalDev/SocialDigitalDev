@@ -1,0 +1,310 @@
+.ls-quickview-main{
+    max-width: 890px;
+    margin: 0 auto;
+    .espiar-produto{
+        .ls-produto{
+            @include flexbox;
+            padding: 3em;
+            .quick-left{
+                width: 50%;
+                #productImages{
+                    .apresentacao{
+                        #show{
+                            @include flexbox;
+                            #include{
+                                order: 2;
+                                border: 2px solid var(--color-gray-line);
+                                margin: 0 1em;
+                                #image{
+                                    text-align: center;
+                                    a{
+                                        .zoomPad{
+                                            width: 100%;
+                                            position: relative;
+                                            float: none;
+                                            z-index: 1;
+                                            cursor: crosshair;
+                                            overflow: hidden !important;
+                                            #image-main{
+                                                max-width: 600px;
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            ul.thumbs{
+                                order: 1;
+                                li{
+                                    border: 2px solid var(--color-gray-line);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .quick-right{
+                width: 50%;
+                #productName{
+                    .productName{
+                        font-size: 18px;
+                        font-weight: 700;
+                        padding-bottom: 1em;
+                        border-bottom: 1px solid var(--color-gray-line);
+                    }
+                }
+                #productBuy{
+                    .plugin-preco{
+                        .productPrice{
+                            p.descricao-preco{
+                                em.valor-de{
+                                    font-size: 0;
+                                    strong{
+                                        color: var(--color-gray-line);
+                                        font-size: 20px;
+                                        font-weight: 700;
+                                        margin-top: 5px;
+                                        display: block;
+                                        font-style: normal;
+                                        text-decoration: line-through;
+                                    }
+                                }
+                                em.valor-por{
+                                    font-size: 0;
+                                    strong{
+                                        color: var(--color-blue-dark);
+                                        font-size: 35px;
+                                        font-weight: 700;
+                                        margin-bottom: 10px;
+                                        display: block;
+                                        font-style: normal;
+                                    }
+                                }
+                                em.valor-dividido{
+                                    span{
+                                        span{
+                                            font-style: normal;
+                                            font-size: 14px;
+                                            font-weight: 700;
+                                        }
+                                        strong{
+                                            label{
+                                                font-style: normal;
+                                                font-size: 14px;
+                                                font-weight: 700;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            p.preco-a-vista, em.economia-de{
+                                display: none !important;
+                            }
+                        }
+                    }
+                    .produto-buy__container{
+                        @include flexbox;
+                        @include justify-content(space-between);
+                        @include align-items(center);
+                        .ls-produto__buy-quant {
+                            .qtdPrateleira {
+                                border: 1px solid var(--color-blue-dark);
+                                max-width: 100px;
+                                @include flexbox;
+                                @include flex-flow(center);
+                                @include justify-content(center);
+                                @include d(ipadPro){
+                                    max-width: 100%;
+                                    justify-content: left;
+                                    @include justify-content(flex-start);
+                                }
+                                .btnDec {
+                                    cursor: pointer;
+                                    padding: 15px;
+                                    padding-right: 0;
+                                    &:before {
+                                        content: "-";
+                                        font-weight: 600;
+                                    }
+                                }
+                                input.qtdVal {
+                                    max-width: 65px;
+                                    padding: 15px 0;
+                                    text-align: center;
+                                    font-weight: 600;
+                                    @include d(ipadPro){
+                                        max-width: 80%;
+                                    }
+                                    @include d(ipad){
+                                        max-width: 65px;
+                                    }
+                                }
+                                .btnAcr {
+                                    cursor: pointer;
+                                    padding: 15px;
+                                    padding-left: 0;
+                                    &:before {
+                                        content: "+";
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                        }
+                        a.buy-button{
+                            background: var(--color-blue-dark);
+                            color: var(--color-white);
+                            margin: 1em 0;
+                            padding: 17px 10px;
+                            width: 200px;
+                            text-align: center;
+                            border-radius: 25px;
+                            font-weight: 600;
+                        }
+                        #productAddToList{
+                            display: none;
+                            a.add-wishlist{
+                                display: none;
+                            }
+                            .giftlist-insertsku-wrapper{
+                                a.add-wishlist{
+                                    display: none;
+                                }
+                                .glis-sku-single{
+                                    .glis-sku-single-item{
+                                        display: none;
+                                    }
+                                    .insert-sku-quantity{
+                                        display: none;
+                                    }
+                                }
+                                .glis-popup-link-add{
+                                    display: none;
+                                }
+                                a.glis-popup-link{
+                                    display: flex !important;
+                                    @include justify-content(center);
+                                    font-size: 0;
+                                    background-color: var(--color-blue-dark);
+                                    color: var(--color-white);
+                                    height: 50px;
+                                    width: 50px;
+                                    border-radius: 50%;
+                                    &:before{
+                                        content: "\e931";
+                                        font-family: 'lightsweet';
+                                        line-height: 50px;
+                                        font-size: 28px;
+                                        font-style: normal;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .calc-frete {
+                        padding-bottom: 1em;
+                        margin-bottom: 1em;
+                        .cep {
+                            h3 {
+                                font-size: 14px;
+                                color: var(--color-gray);
+                                font-weight: 600;
+                            }
+                            p.frete {
+                                display: none;
+                            }
+                            #calculoFrete {
+                                .contentWrapper {
+                                    .header {
+                                        h1,
+                                        h2,
+                                        .close {
+                                            display: none;
+                                        }
+                                    }
+                                    #ctl00_Conteudo_upnlContent {
+                                        .content {
+                                            fieldset {
+                                                border: 1px solid #81c3e9;
+                                                border-radius: 50px;
+                                                @include flexbox;
+                                                @include align-items(center);
+                                                margin: 0.8em 0;
+                                                width: 87%;
+                                                height: 50px;
+                                                label.prefixo {
+                                                    @include flexbox;
+                                                    flex-flow: column;
+                                                    font-size: 0;
+                                                    input {
+                                                        background: var(--color-white);
+                                                        padding: 0;
+                                                        font-size: 16px;
+                                                        margin-left: 15px;
+                                                        max-width: 100% ;
+                                                    }
+                                                }
+                                                .quantity {
+                                                    display: none;
+                                                }
+                                                .frete-calcular {
+                                                    right: 0;
+                                                    input {
+                                                        padding: 12px 40px;
+                                                        background: var(--color-blue-dark);
+                                                        border-radius: 50px;
+                                                        cursor: pointer;
+                                                        font-size: 15px;
+                                                        color: var(--color-white);
+                                                        font-weight: 600;
+                                                        height: 50px;
+                                                    }
+                                                }
+                                                .cep-busca {
+                                                    display: none;
+                                                    width: 100%;
+                                                    float: left;
+                                                    a{
+                                                        font-size: 13px;
+                                                        font-weight: 600;
+                                                        text-decoration: underline;
+                                                        margin-top: 5px;
+                                                    }
+                                                }
+                                            }
+                                            .freight-values{
+                                                th{
+                                                    text-align: left;
+                                                    font-size: 13px;
+                                                    border-bottom: 1px solid var(--color-black);
+                                                    padding: 5px;
+                                                }
+                                                td{
+                                                    font-size: 13px;
+                                                    padding: 5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .footer{
+                                        .close{
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                #productDescription{
+                    > strong{
+                        display: none;
+                    }
+                    .productDesctiption{
+                        font-size: 14px;
+                        color: var(--color-gray-clear);
+                    }
+                }
+            }
+        }
+    }
+}

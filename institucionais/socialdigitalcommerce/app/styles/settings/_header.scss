@@ -1,0 +1,272 @@
+header.header{
+    @include mq(r1600){
+        padding: 0 6em;
+    }
+    @include mq(r1024){
+        padding: 0 1em;
+    }
+    .header-wrapper{
+        .menu-desktop{
+            max-width: 1600px;
+            margin: 0 auto;
+            .lang-selector{
+                @include flexbox;
+                @include justify-content(flex-end);
+                padding: 0px;
+                padding-bottom: 0;
+                visibility: hidden;
+                div{
+                    margin: 0 5px;
+                    &.bra{
+                        a{
+                            i.flag-pt {
+                                background-image: url("../../images/assets/language-selector-pt.svg");
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                display: block;
+                                width: 35px;
+                                height: 25px;
+                            }
+                        }
+                    }
+                    &.spa{
+                        a{
+                            i.flag-sp {
+                                background-image: url("../../images/assets/language-selector-sp.svg");
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                display: block;
+                                width: 35px;
+                                height: 25px;
+                            }
+                        }
+                    }
+                    &.usa{
+                        a{
+                            i.flag-en {
+                                background-image: url("../../images/assets/language-selector-en.svg");
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                display: block;
+                                width: 35px;
+                                height: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+            .menu-nav{
+                @include flexbox;
+                @include justify-content(space-between);
+                @include align-items(center);
+                .logo-social{
+                    @include mq(r980){
+                        order: 2;
+                        margin-left: 20%;
+                        margin-right: auto;
+                    }
+                    @include mq(r670){
+                        margin-left: 30%;
+                    }
+                    @include mq(r500){
+                        margin-left: 20%;
+                    }
+                    a{
+                        img{
+                            max-width: 100%;
+                            @include mq(r1440){
+                                max-width: 150px;
+                                width: 100%;
+                            }
+                            @include mq(r500){
+                                max-width: 120px;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .burger-menu{
+                    @include flexbox;
+                    @include flex-flow(column);
+                    @include align-items(flex-end);
+                    margin-right: 1em;
+                    cursor: pointer;
+                    @include mq(r980){
+                        order: 1;
+                    }
+                    span{
+                        margin-bottom: 5px;
+                        width: 40px;
+                        height: 3px;
+                        background: var(--blue);
+                        @include t(.3s);
+                    }
+                    &.aberto{
+                        span{
+                            margin-bottom: 5px;
+                            &:nth-of-type(1){
+                                width: 40px;
+                                @include r(45deg);
+                            }
+                            &:nth-of-type(2){
+                                opacity: 0;
+                            }
+                            &:nth-of-type(3){
+                                width: 40px;
+                                transform: rotate(-45deg);
+                                position: relative;
+                                bottom: 16px;
+                            }
+                        }
+                    }
+                }
+                nav.menu-social-digital-commerce{
+                    width: 80%;
+                    position: relative;
+                    @include mq(r980){
+                        position: absolute;
+                        z-index: 999;
+                        @include flexbox;
+                        @include justify-content(flex-start);
+                        top: 0;
+                        width: 100%;
+                        left: -100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.561);
+                        @include t(.3s);
+                        &.aberto{
+                            left: 0;
+                        }
+                    }
+                    ul.menu-wrapper{
+                        @include flexbox;
+                        @include justify-content(flex-end);
+                        @include mq(r980){
+                            position: relative;
+                            top: 0px;
+                            @include justify-content(flex-start);
+                            @include flex-flow(column);
+                            background: var(--white);
+                            box-shadow: 0 0 10px #ccc;
+                            width: 50%;
+                            padding: 0;
+                            .logo-social{
+                                margin-left: auto;
+                                order: 1;
+                                margin-top: 2em;
+                            }
+                        }
+                        @include mq(r500){
+                            width: 85%;
+                        }
+                        li.menu-item{
+                            margin: 0 10px;
+                            @include mq(r980){
+                                order: 2;
+                            }
+                            a{
+                                border: 1px solid var(--blue);
+                                padding: 7px 0;
+                                border-radius: 25px;
+                                min-width: 170px;
+                                display: block;
+                                text-align: center;
+                                font-weight: 700;
+                                color: var(--blue);
+                                font-size: 18px;
+                                @include t(.3s);
+                                @include mq(r1366){
+                                    font-size: 13px;
+                                    min-width: 120px;
+                                }
+                                @include mq(r1024){
+                                    font-size: 14px;
+                                    min-width: 110px;
+                                }
+                                &:hover{
+                                    background: var(--blue);
+                                    color: var(--white);
+                                }
+                                @include mq(r980){
+                                    &:hover{
+                                        background: none;
+                                        color: var(--blue);
+                                    }
+                                }
+                            }
+                            @include mq(r980){
+                                margin: 5px 10px;
+                                &:hover{
+                                    background: none;
+                                    color: var(--blue);
+                                }
+                            }
+                            .submenu{
+                                opacity: 0;
+                                visibility: hidden;
+                                background-color: var(--blue);
+                                color: var(--white);
+                                border-radius: 25px;
+                                padding-top: 10px;
+                                position: absolute;
+                                z-index: 999;
+                                .sub-menu-item{
+                                    a{
+                                        color: var(--white)
+                                    }
+                                }
+                                @include mq(r980){
+                                    opacity: 1;
+                                    visibility: visible;
+                                    display: none;
+                                    background-color: var(--white);
+                                    color: var(--blue);
+                                    border-radius: 25px;
+                                    padding-top: 0px;
+                                    position: relative;
+                                    border: 1px solid var(--blue);
+                                    margin-top: 10px;
+                                    .sub-menu-item{
+                                        a{
+                                            color: var(--blue);
+                                            margin-top: 10px;
+                                            border: none;
+                                            &:first-child{
+                                                margin-top: 0;
+                                            }
+                                            &:hover{
+                                                background: none;
+                                                color: var(--blue);
+                                            }
+                                            
+                                        }
+                                    }
+                                    &:hover{
+                                        background: none;
+                                        color: initial;
+                                    }
+                                }
+                            }
+                            &:hover .submenu{
+                               opacity: 1;
+                               visibility: visible;
+                               transition: all ease-in-out .5s;
+                            }
+                        }
+                    }
+                    p.close-button{
+                        display: none;
+                        color: var(--white);
+                        position: relative;
+                        font-size: 28px;
+                        padding-left: 20px;
+                        cursor: pointer;
+                        @include mq(r980){
+                            @include flexbox;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

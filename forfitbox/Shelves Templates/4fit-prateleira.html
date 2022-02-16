@@ -1,0 +1,62 @@
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+#set($campoProduto = $product.ProductField(id))
+
+#if ($product.ListPriceMinusBestPriceInPercent > 0)
+	<div class="priceLabel">$product.ListPriceMinusBestPriceInPercent</div>
+#end
+
+<a class="productImage js--lazyload has--lazyload" data-noscript="" title="$escapedName" href="$uri">
+    <noscript>$product.GetImageTag(2)</noscript>
+</a>
+
+<a class="productImage js--lazyload has--lazyload" data-noscript="" title="$escapedName" href="$uri">
+    <div class="principal">$product.GetImageTag(255, 255)</div>
+    <div class="hover">$product.GetImageTag(255, 255, "hover")</div>
+</a>
+
+<div class="data" data-id="$id">
+    <h3 class="lead">
+        <a title="$escapedName" href="$uri">
+            $product.Name
+        </a>
+    </h3>        
+    
+    #if ($product.IsInStock)
+        <div class="price">
+            <a title="$escapedName" href="$uri">
+                #if ($product.HasBestPrice)
+                    <span class="oldPrice">
+                        De: <b>$product.ListPrice</b>
+                    </span>
+                    <span class="bestPrice">
+                        Por: $product.BestPrice
+                    </span>
+                #else
+                    <span class="oldPrice">
+                    </span>
+                    <span class="bestPrice">
+                        Por: $product.BestPrice
+                    </span>                    
+                #end
+                
+                <em class="installment">
+                    ou em até <b>$product.NumbersOfInstallment x</b> de <b>$product.InstallmentValue</b> sem juros*
+                </em>
+
+            </a>
+
+            <span class="bt-comprar" data-id="$idSku"> 
+                <a href="$uri">
+                    <span class="buy-icon"></span> Comprar 
+                </a>
+            </span>
+        </div>
+        
+    #else
+        <p class="outOfStock">Produto Esgotado</p> 
+    #end
+    
+</div>

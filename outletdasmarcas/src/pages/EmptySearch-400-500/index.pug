@@ -1,0 +1,41 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'EmptySearch-400-500';
+    - var $templateClass = 'om-busca-vazia';
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content
+    section
+        .wrapper.bread
+            .container-center
+                ul
+                    li.home
+                        a(href='/') Home 
+                    li
+                        vtex:contentPlaceHolder(id=`om-bread`)/  
+    section
+        .wrapper.page-erro
+            .container-center
+                .conteudo-page-erro
+                    h3
+                        vtex:contentPlaceHolder(id=`om-texto-erro`)/
+                    p O que acha de realizar uma nova busca? 
+                    .dicas
+                        p
+                            | Tente fazer sua busca seguindo estas dicas;
+                            br/
+                            | Verifique se ocorreu algum erro de digitação;
+                            br/
+                            | Tente utilizar uma única palavra;
+                            br/
+                            | Reescreva sua busca utilizando termos mais genéricos.
+                    a(href='/')
+                        span.voltar-home
+                            | Voltar para home
+block append scripts
+    script(type='text/javascript', src=`/arquivos/${$templateName}.js`)

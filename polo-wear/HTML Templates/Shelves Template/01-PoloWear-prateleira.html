@@ -1,0 +1,112 @@
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+    
+    
+    
+    <div class="polo-product">
+    
+        <input type="hidden" class="polo-id" value="$id" />
+        <input type="hidden" class="polo-sku" value="$idSku" />
+        <div class="polo-image">
+            <a class="polo-productImage" title="$escapedName" href="$uri">
+                $product.GetImageTag(30)
+            </a>
+        </div>
+    
+        #if ($product.IsInStock)
+    		<div class="polo-price">
+    			<a title="$escapedName" href="$uri">
+                    
+                    #if ($product.HasBestPrice)
+    					<span class="oldPrice">
+                            <span>De</span> $product.ListPrice
+                        </span> 
+
+                        <span class="polo-bestPrice">
+                            Por <strong>$product.BestPrice </strong>
+                        </span>
+                    #else
+                        <span class="polo-bestPrice">
+                            Por <strong>$product.BestPrice </strong>
+                        </span>                    
+    				#end
+
+    				<span class="polo-installment">
+    					#if ($product.NumbersOfInstallment > 1)
+    					    ou <strong>${product.NumbersOfInstallment}X </strong> de <strong>$product.InstallmentValue</strong> s/ juros
+    					#else
+    						<span></span>
+    					#end
+    				</em> 
+    			</a>
+               
+    		</div>
+    	
+    		<div class="polo-hover">
+    		
+    		    <div class="polo-hover-content">
+    		    
+    		        <div class="polo-image">
+                        <a class="polo-productImage" title="$escapedName" href="$uri">
+                            $product.GetImageTag(30)
+                        </a>
+                    </div>
+    		    
+    		        <div class="polo-variations"></div>
+    		
+            		<h2>
+                        <a title="$escapedName" href="$uri">
+                            $product.Name
+                        </a>
+                    </h2>
+                    
+                    <div class="polo-price">
+        			<a title="$escapedName" href="$uri">
+                        
+                        #if ($product.HasBestPrice)
+        					<span class="oldPrice">
+                                <span>De</span> $product.ListPrice
+                            </span> 
+    
+                            <span class="polo-bestPrice">
+                                Por <strong>$product.BestPrice </strong>
+                            </span>
+                        #else
+                            <span class="polo-bestPrice">
+                                Por <strong>$product.BestPrice </strong>
+                            </span>                    
+        				#end
+    
+        				<span class="polo-installment">
+        					#if ($product.NumbersOfInstallment > 1)
+        					    ou <strong>${product.NumbersOfInstallment}X </strong> de <strong>$product.InstallmentValue</strong> s/ juros
+        					#else
+        						<span></span>
+        					#end
+        				</em> 
+        			</a>
+                   
+        		</div>
+    		
+    		    <div class="polo-buy"> <a class="polo-productImage" title="$escapedName" href="$uri"> Comprar </a></div>
+                    
+    		    </div>
+
+    		</div>
+            
+    	#else
+    		<p class="polo-outOfStock">
+    		     <a title="$escapedName" href="$uri">
+    		        <span class="polo-icon"></span>
+        		    <span class="polo-text">
+        		        Produto Esgotado
+        		        <small>Avise-me quando chegar</small>
+        		    </span>
+    		     </a>
+    		</p> 
+    	
+    	#end
+
+</div>

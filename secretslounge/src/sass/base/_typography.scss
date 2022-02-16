@@ -1,0 +1,53 @@
+
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('https://tfcqav.vteximg.com.br/arquivos/Nexa-Bold.woff2.css') format('woff2'),
+        url('https://tfcqav.vteximg.com.br/arquivos/Nexa-Bold.woff.css') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('https://tfcqav.vteximg.com.br/arquivos/Nexa-Book.woff2.css') format('woff2'),
+        url('https://tfcqav.vteximg.com.br/arquivos/Nexa-Book.woff.css') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('https://tfcqav.vteximg.com.br/arquivos/Nexa-XBold.woff2.css') format('woff2'),
+        url('https://tfcqav.vteximg.com.br/arquivos/Nexa-XBold.woff.css') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @font-face {
+    font-family: 'Nexa';
+    src: url('https://tfcqav.vteximg.com.br/arquivos/Nexa-Regular.woff2.css') format('woff2'),
+        url('https://tfcqav.vteximg.com.br/arquivos/Nexa-Regular.woff.css') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+ */
+
+
+
+body {
+    font-family: 'Nexa', sans-serif;
+}
+
+
+.pageSubtitle{
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+}

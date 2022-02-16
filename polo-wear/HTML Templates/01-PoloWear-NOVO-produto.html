@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+    <title> <vtex.cmc:productPageTitle /> </title>
+    <vtex:metaTags/>
+    <vtex:template id="01-PoloWear-css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <vtex.cmc:productRichSnippets showFacebook="1" />
+</head>
+
+<body>
+    <vtex.cmc:productRichSnippets showGoogle="1" />
+    <vtex:template id="01-PoloWear-Header" />
+    <main>
+        <section>
+            <div class="container bread">
+                <div class="container-center">
+                    <vtex.cmc:BreadCrumb />
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container produto-all">
+                <div class="container-center">
+
+                    <div class="produto-wrap">
+                        <div class="polo-produto_imagem">
+                            <figure>
+                                <div class="img-produto">
+                                    <vtex.cmc:ProductImage />
+                                </div>
+                            </figure>
+                        </div>
+        
+                        <div class="polo-produto_infos">
+                            <div class="polo-produto_content">
+                                <h1 class="nome-prod">
+                                    <vtex.cmc:productName/>
+                                </h1>
+                            
+                                <span class="cod-prod">
+                                    <vtex.cmc:skuReference/>	
+                                </span>
+                                <div class="promo-flag-wrap">
+                                    <vtex.cmc:discountHightLight/>
+                                </div>
+                            
+                                <vtex.cmc:skuPrice/>
+                            
+                                <div class="pdp-similares">
+                                    <vtex:contentPlaceHolder id="Similares"/>
+                                </div>
+                                <div class="variantes-sku">
+                                    <vtex.cmc:skuSelection />
+                                </div>
+                                <div class="produto-buy__container">
+                                    <div class="01-PoloWear-produto__buy-button">
+                                        <vtex.cmc:BuyButton/>
+                                    </div>
+                                </div>
+    
+                                <div class="calc-frete">
+                                    <div class="cep">
+                                        <h3><span class="icon__frete"></span> Calcule o frete e prazo de entrega.</h3>
+                                        <vtex.cmc:shippingValue/>
+                                        <script type="text/javascript">
+                                            $(document).ready( function(){
+                                                ShippingValue();
+                                            });
+                                        </script>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="polo-descricao-produto">
+                         <div class="container detalhes-prod">
+                            <div id="descricao-produto">
+                                <div class="container-center">
+                                    <h2 class="titulo"> Descrição </h2>
+                                    <vtex.cmc:ProductDescription/>
+                                    <vtex.cmc:productSpecification/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<span class="curta-descricao">
+                            <h2> Informações do produto </h2>
+                            <vtex.cmc:productDescriptionShort />
+                        </span>-->
+                    </div>
+
+                    <!-- Estrutura de Quem viu, viu tbm -->
+                    <section>
+                        <div class="container slide-prod qvvt">
+                            <div class="container-center">
+                                <div class="titulo-prateleira">
+                                    <h2>Quem viu, <b>viu também</b>
+                                    </h2>
+                                </div>
+                                <vtex:contentPlaceHolder id="01-PoloWear-qvvt" />
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <vtex:template id="01-PoloWear-Footer" />
+
+    <div id="compraFixa" class="">
+        <div class="container">
+            <div class="container-center">
+                <div class="nome-produto-fixo">
+                    <vtex.cmc:productName/>
+                </div>
+                <div class="preco-fixo">
+                    <vtex.cmc:skuPrice/>
+                </div>
+                <div class="comprar-fixo">
+                    <div class="buy-button-box">
+                        <vtex.cmc:BuyButton />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <vtex:template id="01-PoloWear-js" />
+          <!-- Start of ohchat.me (www.ohchat.me) code -->
+        <script type="text/javascript">
+        window.__lc = window.__lc || {};
+        window.__lc.license = 11357227;
+        window.__lc.group = 144;
+        (function() {
+        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+        })();
+        </script>
+        <noscript>
+        <a href="https://www.livechatinc.com/chat-with/11357227/" rel="nofollow">Chat with us</a>,
+        powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+        </noscript>
+    <!-- End of ohchat.me code -->
+</body>
+
+</html>

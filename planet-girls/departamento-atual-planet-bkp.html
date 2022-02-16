@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+    <vtex:metaTags/>
+    <vtex:template id="01-PlanetGirls-styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <vtex:contentPlaceHolder id="metaDescriptions"/>
+</head>
+
+<body>
+    <vtex:template id="01-PlanetGirls-header" />
+    <main>
+        <section>
+            <div class="planet-departamento__topo">
+                <div class="container-center">
+                    <div class="nomeDepartamento">
+                        <vtex.cmc:searchTitle />
+                        <vtex:contentPlaceHolder id="Planet-DescricaoCurta"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container bread">
+                <div class="container-center">
+                    <vtex.cmc:breadCrumb/>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container pagDepartamento">
+                <div class="container-grid">
+                    <!-- Filtro de departamento -->
+                    <aside class="filtro-sticky" id="sticker">
+                        <div class="filtrosDepartamento">
+                            <!--<span class="btn-filtro"> Filtro </span>-->
+                            <vtex.cmc:searchNavigator/>
+                        </div>
+                    </aside>
+
+                    <div class="conteudo-categoria">
+                        <!-- Produtos resultantes do Departamento -->
+                        <div class="resultadoDepartamento">
+                            <div class="seletorVisualizacao">
+                                <div class="view-one">1</div>
+                                <div class="view-two selected">2</div>
+                                <div class="view-four">4</div>
+                            </div>
+                            <div class="order-main-container">
+                                <div class="order-main-container__left">
+                                    <p class="order-main-container__text">Mostrando</p>
+                                    <div class="order-main-container__numerador-clone"></div>
+                                    <span class="order-main-container__itens"></span>
+                                </div>
+                                
+                                <!-- Paginação Centro -->
+                                <div class="order-main-container__center center-top"></div>
+                                <!-- FIM Paginação Centro -->
+
+                                <div class="order-main-container-right">
+                                    <div class="optionList" style="display:none;">
+                                        <div class="boxFiltroOrder filAtivo">
+                                            <h3 class=""> Ordenar por: </h3>
+                                            <ul class="contOrdenar">
+                                                <li><a data-href="OrderByPriceASC" href="#">Menor Preço</a></li>
+                                                <li><a data-href="OrderByPriceDESC" href="#">Maior Preço</a></li>
+                                                <li><a data-href="OrderByTopSaleDESC" href="#">Mais vendidos</a></li>
+                                                <li><a data-href="OrderByNameASC" href="#">A - Z</a></li>
+                                                <li><a data-href="OrderByNameDESC" href="#">Z - A</a></li>
+                                                <li><a data-href="OrderByReleaseDateDESC" href="#">Data de lançamento</a></li>
+                                                <li><a data-href="OrderByBestDiscountDESC" href="#">Melhor Desconto</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                       
+                                    <div class="order-main-container-right-order">
+                                            <div class="order-main-container-right-order__item order-main-container-right-order__item--label">
+                                                Ordenar por
+                                            </div>
+                                            <ul class="order-main-container-right-order-list">
+                                                <li class="order-main-container-right-order__item" data-id="OrderByPriceASC">Menor Preço</li>
+                                                <li class="order-main-container-right-order__item" data-id="OrderByPriceDESC">Maior Preço</li>
+                                                <li class="order-main-container-right-order__item" data-id="OrderByTopSaleDESC">Mais Vendidos</li>
+                                                <li class="order-main-container-right-order__item" data-id="OrderByReviewRateDESC">Melhores avaliações</li>
+                                                <li class="order-main-container-right-order__item" data-id="OrderByNameASC">A - Z</li>
+                                                <li class="order-main-container-right-order__item" data-id="OrderByNameDESC">Z - A</li>
+                                                <li class="order-main-container-right-order__item" data-id="OrderByReleaseDateDESC">Data delançamento</li>
+                                                <li class="order-main-container-right-order__item" data-id="OrderByBestDiscountDESC">Melhor Desconto</li>
+                                            </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="planetgirls-departamento_vitrine-produtos">-->
+                                <vtex.cmc:searchResult layout="7a249e82-5ebe-456c-bff7-a6ff3d54ba37" itemCount="20" columnCount="20" />
+                            <!--</div>-->
+                            
+                            <!--Paginacao Bottom -->
+                            <div class="order-main-container">
+                                <div class="order-main-container__left">
+                                    <p class="order-main-container__text">Mostrando</p>
+                                    <div class="order-main-container__numerador-clone"></div>
+                                    <span class="order-main-container__itens"></span>
+                                </div>
+
+                                <!-- Centro Paginação -->
+                                <div class="order-main-container__center center-bottom"> </div>
+                                <!-- FIM Centro Paginação -->
+
+                                <div class="order-main-container-right">
+                                    <div class="order-main-container-right-order">
+                                        <div class="order-main-container-right-order__item order-main-container-right-order__item--label">
+                                            Ordenar por
+                                        </div>
+                                        <ul class="order-main-container-right-order-list">
+                                            <li class="order-main-container-right-order__item" data-id="OrderByPriceASC" >Menor Preço</li>
+                                                <li class="order-main-container-right-order__item" data-id="OrderByPriceDESC">Maior Preço</li>
+                                                <li class="order-main-container-right-order__item" data-id="OrderByTopSaleDESC">Mais Vendidos</li>
+                                                <li class="order-main-container-right-order__item" data-id="OrderByReviewRateDESC">Melhores avaliações</li>
+                                                <li
+                                                class="order-main-container-right-order__item" data-id="OrderByNameASC">
+                                                A - Z
+                                                </li>
+                                                <li class="order-main-container-right-order__item" data-id="OrderByNameDESC">
+                                                Z - A
+                                                </li>
+                                                <li
+                                                class="order-main-container-right-order__item" data-id="OrderByReleaseDateDESC">
+                                                Data de lançamento
+                                                </li>
+                                                <li class="order-main-container-right-order__item" data-id="OrderByBestDiscountDESC">
+                                                Melhor Desconto
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Paginacao Bottom -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Chamada para o rodapé -->
+    <vtex:template id="01-PlanetGirls-footer" />
+    <!-- Chamada para os scripts Js da loja -->
+    <vtex:template id="01-PlanetGirls-scripts" />
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+    <title> <vtex.cmc:productPageTitle /> </title>
+    <vtex:metaTags/>
+    <vtex:template id="Shopvinho - Styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <vtex.cmc:productRichSnippets showFacebook="1" />
+</head>
+
+<body>
+    <vtex.cmc:productRichSnippets showGoogle="1" />
+    <vtex:template id="Shopvinho - Header" />
+    <main>
+        <section>
+            <div class="container bread">
+                <div class="wrapper">
+                    <vtex.cmc:BreadCrumb />
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container produto-all">
+                <div class="wrapper">
+                    <div class="produto-wrap">
+                        <div id="produtoDiv-esquerda" class="x-image-product">
+                            <figure>
+                                 <!-- control listas  -->
+                                 <div class="agregar-lista">
+                                    <vtex.cmc:GiftListInsertSkuV2 />
+                                </div>
+                                <div class="img-produto">
+                                    <vtex.cmc:ProductImage zoom="on" />
+                                </div>
+                            </figure>
+                        </div>
+       
+                        <div id="produtoDiv-direita">
+                            <h1 class="nome-prod">
+                                <vtex.cmc:productName/>
+                            </h1>
+                           
+                            <span class="cod-prod">
+                                <vtex.cmc:skuReference/>	
+                            </span>
+                            <!-- <div class="pais-prod">
+                                <span class="bandeira-prod"></span>
+                                <span class="tipo-de-vinho"></span>
+                            </div> -->
+                            <div class="vinho_especificacoes">
+                                <ul>
+                                    <li class="tipo_de_vinho">
+                                        <span class="cor_vinho"></span>
+                                        <span class="nome_cor_vinho"></span>
+                                    </li>
+                                    <li class="pais_prod">
+                                        <span class="bandeira-pais"></span>
+                                        <span class="nome-pais-prod"></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="promo-flag-wrap">
+                                <vtex.cmc:discountHightLight/>
+                            </div>
+                            <!-- <div class="variantes-sku">
+                                <vtex.cmc:skuSelection />
+                            </div> -->
+                       
+                            <vtex.cmc:skuPrice/>
+                            
+                            <div class="produto-buy__container">
+                                <div class="shopvinho-produto__buy-quant">
+                                    <p> Quantidade: </p>
+                                    <div class="qtdPrateleira">
+                                        <span class="btnDec"></span>
+                                        <input type="text" class="qtdVal" value="1" />
+                                        <span class="btnAcr"></span>
+                                    </div>
+                                </div>
+                                <div class="shopvinho-produto__buy-button">
+                                    <vtex.cmc:BuyButton/>
+                                </div>
+                            </div>
+                               
+                            <div class="calc-frete">
+                                <div class="cep">
+                                    <h3><span class="icon__frete"></span> Calcule o frete e prazo de entrega.</h3>
+                                    <vtex.cmc:shippingValue/>
+                                    <script type="text/javascript">
+                                        $(document).ready( function(){
+                                            ShippingValue();
+                                        });
+                                    </script>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Estrutura de Especificação do produto -->
+                <section class="prod_details">
+                    <div class="wrapper detalhes-prod">
+                        <article class="shopvinho-description__descricao" id="description">
+                            <h2> Saiba mais sobre </h2>
+                            <vtex.cmc:ProductDescription/>
+                        </article>     
+                        <div class="descricao-left">
+                            <h2> Descrição </h2>
+                            <ul class="caracteristicas">
+                                <li class="docura">
+                                    <p class="titulo-caracteristicas"> Doçura </p>
+                                    <span class="img-caracteristicas">
+                                        <img src="" alt="" /> 
+                                    </span>
+                                    <span class="valor-caracteristicas"> </span>
+                                </li>
+                                <li class="acidez">
+                                    <p class="titulo-caracteristicas"> Acidez </p>
+                                    <span class="img-caracteristicas"> 
+                                        <img src="" alt="" />
+                                    </span>
+                                    <span class="valor-caracteristicas"> </span>
+                                </li>
+                                <li class="tanino">
+                                    <p class="titulo-caracteristicas"> Tanino </p>
+                                    <span class="img-caracteristicas">
+                                        <img src="" alt="" />
+                                    </span>
+                                    <span class="valor-caracteristicas"></span>
+                                </li>
+                                <li class="frutado">
+                                    <p class="titulo-caracteristicas"> Frutado </p>
+                                    <span class="img-caracteristicas"> 
+                                        <img src="" alt="" /> 
+                                    </span>
+                                    <span class="valor-caracteristicas"></span>
+                                </li>
+                                <!-- <li class="ibu">
+                                  <p class="titulo-caracteristicas"> IBU </p>
+                                  <span class="img-caracteristicas">
+                                    <img src="" alt="" />
+                                  </span>
+                                  <span class="valor-caracteristicas"></span>
+                                </li> -->
+                                <!-- <li class="abv">
+                                  <p class="titulo-caracteristicas"> ABV </p>
+                                  <span class="img-caracteristicas">
+                                    <img src="" alt="" />
+                                  </span>
+                                  <span class="valor-caracteristicas"></span>
+                                </li> -->
+                            </ul>
+                        </div>             
+                    </div>
+                </section>
+
+                <section class="prod_ficha_tecnica">
+                    <div class="wrapper ficha-prod">
+                        <article class="shopvinho-description__ficha-tecnica" id="specification">
+                            <h2> Ficha Técnica </h2>
+                            <vtex.cmc:productSpecification/>
+                        </article> 
+                    </div>     
+                </section>
+                  
+                <section>
+                    <div class="container shopvinho-prateleira combine-com">
+                        <div class="wrapper">
+                            <div class="titulo-prateleira">
+                                <h2> Sugestões para você </h2>
+                            </div>
+                            <vtex:contentPlaceHolder id="Prateleira - Sugestoes" />
+                        </div>
+                    </div>
+                </section>
+                    
+                <!-- 3 Banner Fim página -->
+                <section class="main_banner-bottom">
+                    <div class="wrapper pdp-banners">
+                        
+                        <vtex:contentPlaceHolder id="Banner Fim Pagina" />
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <vtex:template id="Shopvinho - Footer" />
+    <vtex:template id="Shopvinho - Scripts" />
+</body>
+</html>

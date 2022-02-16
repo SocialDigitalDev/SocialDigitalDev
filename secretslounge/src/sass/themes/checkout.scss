@@ -1,0 +1,59 @@
+
+
+@import './checkout/variables';
+
+@import './checkout/extends';
+
+@import './checkout/reset';
+
+// dependencies
+@import '../layout/footer';
+@import '../base/typography';
+
+@import './checkout/container';
+@import './checkout/header';
+@import './checkout/buttons';
+
+@import './checkout/titles';
+@import './checkout/cartGrid';
+@import './checkout/cart';
+@import './checkout/cartItem';
+@import './checkout/cartEmptyMessage';
+@import './checkout/quantity';
+@import './checkout/summary';
+@import './checkout/coupon';
+@import './checkout/shipping';
+@import './checkout/modal';
+@import './checkout/clientPre';
+@import './checkout/profile';
+@import './checkout/payment';
+@import './checkout/payment__cupon';
+@import './checkout/payment__creditCard';
+@import './checkout/miniCart';
+
+// custom
+
+.body-cart,
+.body-order-form {
+    /* ------------------------------------------------------------ *\
+        link-choose-more-products
+    \* ------------------------------------------------------------ */
+
+    // style btn--outline
+    .link-choose-more-products,
+    .vtex-shipping-preview-0-x-modalCancelButton,
+    .link.pf-pj a {
+      
+        min-height: 0;
+
+        &.disabled,
+        &[disabled] {
+            color: #999999;
+        }
+    }
+}
+
+
+.bg-washed-green {
+    background-color: #F5EFE6;
+}

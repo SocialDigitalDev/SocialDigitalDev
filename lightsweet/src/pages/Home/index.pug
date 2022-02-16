@@ -1,0 +1,77 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'Home';
+    - var $templateClass = 'ls-home';
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content
+    section
+        figure
+            div.wrapper
+                div.banner-carousel.banner-principal.desktop
+                    vtex:contentPlaceHolder(id=`banner-principal-desktop`)/
+                div.banner-carousel.banner-principal.mobile
+                    vtex:contentPlaceHolder(id=`banner-principal-mobile`)/
+    section
+        div.barra-informativo
+            div.wrapper
+                vtex(.cmc:Informativo)/
+    section
+        div.novidades-por-categoria
+            div.wrapper
+                div.prateleira-tabs-titulo
+                    ul.tabs-prateleira
+                        li.tabs-links.tab-ativo(data-tab=`prat-1`) Categorias
+                        li.tabs-links(data-tab=`prat-2`) Marcas
+                div#prat-1.tab-content.tab-ativo.imageTitle(tab-content=`categorias`)
+                    vtex:contentPlaceHolder(id=`categorias`)/
+                div#prat-2.tab-content.imageTitle(tab-content=`marcas`)
+                    vtex:contentPlaceHolder(id=`marcas`)/
+    section
+        div.section-mosaico-produtos
+            div.wrapper
+                vtex:contentPlaceHolder(id=`mosaico-banners`)/                    
+    section
+        div.section-acabou-sair
+            div.vitrine-title
+                h2 Acabou de sair!
+            div.wrapper
+                vtex:contentPlaceHolder(id=`acabou-de-sair`)/    
+    section
+        div.banner-vitrine-receitas
+            div.wrapper
+                div.prod-left
+                    vtex:contentPlaceHolder(id=`home-receitas`)/
+                div.prod-right
+                    vtex:contentPlaceHolder(id=`home-banner-receitas`)/
+    section
+        div.section-degustar
+            div.vitrine-title
+                h2 Para degustar
+            div.wrapper
+                vtex:contentPlaceHolder(id=`para-degustar`)/    
+    section 
+        figure
+            div.banner-desconto
+                div.banner-estatico.banner-desconto.desktop
+                    vtex:contentPlaceHolder(id=`banner-desconto-desktop`)/
+                div.banner-estatico.banner-desconto.mobile
+                    vtex:contentPlaceHolder(id=`banner-desconto-mobile`)/
+    section 
+        div.banners-departamentos
+            div.wrapper        
+                vtex:contentPlaceHolder(id=`bebidas-sobremesas-alimentos`)/  
+    section
+        div.section-outras-delicias
+            div.vitrine-title
+                h2 Outras delicias
+            div.wrapper
+                vtex:contentPlaceHolder(id=`outras-delicias`)/
+
+block append scripts
+    script(type='text/javascript', src=`/arquivos/${$templateName}.js`) 

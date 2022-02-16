@@ -1,0 +1,402 @@
+.ls-pdp-receitas-main {
+    .wrapper.produto-receita{
+        padding:0;
+        margin-top: 60px;
+        padding: 0;
+        h1.nome-prod{
+            text-align: center;
+            color: var(--color-blue-dark);
+            font-size: 63px;
+            font-weight: 500;
+            padding: 20px 0;
+            font-family: 'Dancing Script', sans-serif;
+            line-height: 2em;
+            @include flexbox;
+            @include flex-flow(column);
+            @include align-items(center);
+            @include justify-content(center);
+            .productName{
+                max-width: 800px;
+            }
+            &:before{
+                content: "";
+                background-image: url("data:image/svg+xml,%3Csvg width='64' height='88' viewBox='0 0 64 88' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M62.8629 51.525C62.7285 50.9875 62.3254 50.7188 61.7879 50.5844L42.0348 47.7625L34.241 32.4438H42.5723C43.3785 32.4438 43.916 31.9063 43.916 31.1C43.916 30.2938 43.3785 29.7563 42.5723 29.7563H35.1816L47.4098 17.3938C47.6785 17.125 47.8129 16.8563 47.8129 16.4531V2.34375C47.8129 1.5375 47.2754 1 46.4691 1H17.4441C16.6379 1 16.1004 1.5375 16.1004 2.34375V16.4531C16.1004 16.8563 16.2348 17.125 16.5035 17.3938L28.7316 29.7563H21.341C20.5348 29.7563 19.9973 30.2938 19.9973 31.1C19.9973 31.9063 20.5348 32.4438 21.341 32.4438H29.6723L21.8785 47.7625L2.25977 50.7188C1.72227 50.7188 1.31914 51.1219 1.05039 51.525C0.916016 52.0625 1.05039 52.6 1.45352 52.8688L15.6973 66.3063L12.3379 85.2531C12.2035 85.7906 12.4723 86.3281 12.8754 86.5969C13.2785 86.8656 13.816 87 14.2191 86.7313L31.9566 77.8625L49.5598 86.8656C49.6941 87 49.9629 87 50.2316 87C50.5004 87 50.7691 86.8656 51.0379 86.7313C51.441 86.4625 51.7098 85.925 51.5754 85.3875L48.216 66.4406L62.4598 53.0031C62.8629 52.6 62.9973 52.0625 62.8629 51.525ZM18.7879 3.6875H45.1254V15.9156L31.9566 29.2188L18.7879 15.9156V3.6875ZM45.7973 64.9625C45.5285 65.2313 45.2598 65.7688 45.3941 66.1719L48.3504 83.2375L32.4941 75.175C32.3598 75.0406 32.091 75.0406 31.8223 75.0406C31.5535 75.0406 31.4191 75.0406 31.1504 75.175L15.2941 83.2375L18.5191 66.1719C18.6535 65.7688 18.3848 65.2313 18.116 64.9625L5.35039 52.8688L22.9535 50.45C23.3566 50.45 23.7598 50.1813 24.0285 49.7781L31.9566 34.1906L39.8848 49.7781C40.0191 50.1813 40.4223 50.45 40.9598 50.45L58.5629 52.8688L45.7973 64.9625Z' fill='%2327AAE1' stroke='%231A75CF'/%3E%3Cpath d='M14.7569 53.9441C14.2194 53.4066 13.4132 53.4066 12.8757 53.9441C12.3382 54.4816 12.3382 55.2879 12.8757 55.8254L13.9507 56.9004C14.2194 57.1691 14.4882 57.3035 14.8913 57.3035C15.2944 57.3035 15.5632 57.1691 15.8319 56.9004C16.3694 56.3629 16.3694 55.5566 15.8319 55.0191L14.7569 53.9441Z' fill='%2327AAE1' stroke='%231A75CF'/%3E%3Cpath d='M18.9226 57.8406C18.3851 57.3031 17.5788 57.3031 17.0413 57.8406C16.5038 58.3781 16.5038 59.1844 17.0413 59.7219L21.4757 63.8875L19.3257 74.9063C19.1913 75.5781 19.7288 76.3844 20.4007 76.5188C20.5351 76.5188 20.5351 76.5188 20.6694 76.5188C21.3413 76.5188 21.8788 76.1156 22.0132 75.4438L24.2976 63.6188C24.4319 63.2156 24.2976 62.6781 23.8944 62.4094L18.9226 57.8406Z' fill='%2327AAE1' stroke='%231A75CF'/%3E%3C/svg%3E");
+                background-size: contain;
+                background-repeat: no-repeat;
+                display: block;
+                width: 61px;
+                height: 86px;
+            }
+            @include d(qhd){
+                font-size: 45px;
+            }
+        }
+        .receita-dados{
+            @include flexbox;
+            @include flex-flow(column);
+            display: flex;
+            flex-flow: wrap;
+            .receita_ingredientes{
+                background-color: var(--color-blue-dark);
+                flex: 0 0 50%;
+                @include d(hdplus){
+                    flex: 0 0 50%;
+                }
+                @include d(ipad){
+                    flex: 0 0 100%;
+                    order: 2;
+                }
+                .detalhes-prods{
+                    overflow-y: auto;
+                    padding: 4em;
+                    height: 100%;
+                    @include d(hdplus){
+                        order: 1;
+                        height: 100%;
+                    }
+                    @include d(ipadPro){
+                        order: 1;
+                        height: 100%;
+                    }
+                    @include d(celularLarge){
+                        padding: 1em;
+                    }
+                    .desc-prod{
+                        color: var(--color-white);
+                        h2{
+                            font-size: 63px;
+                            margin-top: 20px;
+                            margin-bottom: 30px;
+                            font-weight: 500;
+                            font-family: 'Dancing Script', sans-serif;
+                            @include d(celularLarge){
+                                font-size: 30px;
+                            }
+                        }
+                        .productDescription{
+                            font-size: 16px;
+                            line-height: 2em;
+                            @include d(celularLarge){
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            .receita_video{
+                width: 50%;
+                position: sticky;
+                top: 0;
+                height: 533px;
+                overflow: hidden;
+                @include d(ipad){
+                    margin: auto;
+                    position: initial;
+                    height: auto;
+                }
+                @include d(celularLarge){
+                    width: 100%;
+                }
+                .img-produto{
+                    .apresentacao{
+                        #show{
+                            #include{
+                                iframe{
+                                    max-width: 100%;
+                                    max-height: 533px;
+                                    @include d(celularLarge){
+                                        max-height: 400px;
+                                    }
+                                    @include d(celularSmall){
+                                        max-height: 300px;
+                                    }
+                                }
+                            }
+                            .thumbs{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .produtos-da-receita{
+        .wrapper{
+            padding: 0 2em;
+            @include d(celularLarge){
+                padding: 0;
+            }
+            .prod-receitas{
+                .ls-receita-pdp{
+                    h2{display:none;}
+                }
+                .slick-prev {
+                    font-size: 0;
+                    cursor: pointer;
+                    left: 0;
+                    position: absolute;
+                    top: 50%;
+                    &:before{
+                        content: "\e933";
+                        font-family: lightsweet;
+                        font-size: 40px;
+                        color: var(--color-blue);
+                        display: block;
+                    }
+                }
+                .slick-next{
+                    font-size: 0;
+                    cursor: pointer;
+                    right: 0;
+                    position: absolute;
+                    top: 50%;
+                    &:before{
+                        content:"\e934";
+                        font-family: lightsweet;    
+                        font-size: 40px;
+                        color: var(--color-blue);                
+                    }
+                }         
+            }
+            .ls-prateleira{
+                ul.slick-dots{
+                    @include d(ipad){
+                        @include flexbox;
+                        @include justify-content(center);
+                    }
+                    li{
+                        button{
+                            @include d(ipad){
+                                font-size: 0;
+                                width: 12px;
+                                height: 12px;
+                                border: 1px solid var(--color-blue-dark);
+                                border-radius: 50%;
+                                margin: 0 5px;
+                                cursor: pointer;
+                            }
+                        }
+                        &.slick-active{
+                            button{
+                                @include d(ipad){
+                                    background: var(--color-blue-dark);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .titulo-prateleira{
+        h2{
+            text-align: center;
+            font-size: 45px;
+            color: var(--color-blue-dark);
+            margin: 1em 0;
+            width: 100%;
+            font-weight: 500;
+            font-family: 'Dancing Script', sans-serif;
+        }
+    }
+    section.quick-info{
+        .container-center{
+            #caracteristicas{
+                @include flexbox;
+                @include justify-content(center);
+                margin: 2em 0;
+                > h4{
+                    display: none;
+                }
+                table.Dados-Receita{
+                    border: 2px solid var(--color-blue-dark);
+                    border-radius: 15px;
+                    tbody{
+                        @include flexbox;
+                        padding: 1em 2em;
+                        @include d(celularLarge){
+                            @include flex-wrap(wrap);
+                            @include justify-content(center);
+                        }
+                        tr{
+                            @include flexbox;
+                            @include flex-flow(column);
+                            @include align-items(center);
+                            color: var(--color-blue-dark);
+                            margin: 0 20px;
+                            @include d(celularLarge){
+                                margin: 20px;
+                            }
+                            th{
+                                @include flexbox;
+                                @include flex-flow(column);
+                                @include align-items(center);
+                                text-align: center;
+                                &.Tempo-de-Preparo{
+                                    &:before{
+                                        content: "\e92c";
+                                        font-family: lightsweet;
+                                        color: var(--color-blue-dark);
+                                        font-size: 40px;
+                                        margin: 15px 0;
+                                        font-weight: 400;
+                                    }
+                                }
+                                &.Porcao{
+                                    &:before{
+                                        content: "\e92a";
+                                        font-family: lightsweet;
+                                        color: var(--color-blue-dark);
+                                        font-size: 50px;
+                                        margin: 15px 0;
+                                        font-weight: 400;
+                                    }
+                                }
+                                &.Dificuldade{
+                                    &:before{
+                                        content: "";
+                                        background-image: url("data:image/svg+xml,%3Csvg width='57' height='30' viewBox='0 0 57 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.96037 18.9771L23.4571 29.1841C23.6061 29.2586 23.6806 29.3331 23.8296 29.4076C24.7981 29.7801 25.9157 29.3331 26.2882 28.4391C26.6607 27.4705 26.2137 26.353 25.3196 25.9804L8.03488 18.8281C7.88587 18.8281 7.81136 18.9771 7.96037 18.9771ZM25.6177 27.6195C25.6922 28.2155 25.2451 28.6626 24.6491 28.7371C24.0531 28.8116 23.6061 28.3645 23.5316 27.7685C23.4571 27.1725 23.9041 26.7255 24.5001 26.651C25.0961 26.651 25.6177 27.0235 25.6177 27.6195Z' fill='%2327AAE1'/%3E%3Cpath d='M21.5944 6.38605C21.6689 6.68406 22.0415 6.90757 22.3395 6.90757C23.01 6.83307 23.755 6.83307 24.4256 6.83307C25.5431 6.83307 26.5862 6.90757 27.6292 7.05658C28.0762 7.13108 28.5232 6.75856 28.5232 6.31154V1.17081C28.5232 0.723795 28.1507 0.425781 27.7782 0.425781C25.3941 0.500285 23.01 0.947305 20.8494 1.61783C20.4769 1.76684 20.2534 2.13936 20.4024 2.58638L21.5944 6.38605Z' fill='%2327AAE1'/%3E%3Cpath d='M29.6411 7.35467C31.2057 7.72719 32.7703 8.32321 34.2604 8.99374C34.6329 9.21725 35.1544 8.99374 35.3034 8.54672L37.315 2.43745C37.464 2.06493 37.2405 1.61791 36.868 1.46891C34.6329 0.798378 32.3233 0.351359 29.9392 0.276855C29.4921 0.276855 29.1941 0.574869 29.1941 1.02189V6.60964C29.1196 6.98215 29.3431 7.28017 29.6411 7.35467Z' fill='%2327AAE1'/%3E%3Cpath d='M51.2472 13.5384L44.9889 18.0831C44.6909 18.3066 44.6164 18.6791 44.7654 19.0517C45.436 20.2437 45.9575 21.4358 46.4045 22.7023C46.5535 23.0748 46.926 23.2984 47.2985 23.1493L54.5999 20.7652C54.9724 20.6162 55.1959 20.2437 55.0469 19.7967C54.3018 17.6361 53.3333 15.55 52.2158 13.6874C52.0667 13.3894 51.5452 13.2404 51.2472 13.5384Z' fill='%2327AAE1'/%3E%3Cpath d='M15.0382 8.99396C16.7518 8.17442 18.5399 7.50389 20.4025 7.13137C20.8495 7.05687 21.1475 6.60985 20.9985 6.16283L19.881 2.66117C19.7319 2.28866 19.2849 2.06515 18.9124 2.21415C16.7518 3.10819 14.6657 4.22575 12.8031 5.64131C12.5051 5.86482 12.4306 6.31184 12.6541 6.68435L14.1442 8.77045C14.2932 9.06846 14.7402 9.14296 15.0382 8.99396Z' fill='%2327AAE1'/%3E%3Cpath d='M37.7619 2.73546L35.6758 9.14275C35.6013 9.44076 35.6758 9.81328 35.9738 9.96229C37.2404 10.7073 38.5069 11.6014 39.6245 12.6444C39.9225 12.9424 40.444 12.8679 40.742 12.5699L44.9887 6.68414C45.2122 6.38613 45.1377 5.86461 44.8397 5.6411C42.9771 4.22553 40.891 3.10798 38.7304 2.21394C38.3579 2.06493 37.9109 2.28844 37.7619 2.73546Z' fill='%2327AAE1'/%3E%3Cpath d='M41.1146 14.06C42.0831 15.1031 42.9771 16.1461 43.7222 17.3382C43.9457 17.7107 44.3927 17.7852 44.7652 17.5617L50.949 13.0915C51.247 12.868 51.3215 12.421 51.098 12.0485C49.7569 10.1859 48.1924 8.47229 46.4788 6.98223C46.1808 6.68421 45.6593 6.75872 45.3612 7.13123L40.9656 13.166C40.8165 13.3895 40.8165 13.762 41.1146 14.06Z' fill='%2327AAE1'/%3E%3Cpath d='M8.70563 13.6878C10.0467 12.1977 11.6113 10.9312 13.3248 9.88814C13.6974 9.66463 13.7719 9.14311 13.5483 8.8451L12.2073 7.05702C11.9838 6.6845 11.4623 6.61 11.0897 6.90801C9.37616 8.39807 7.81159 10.1117 6.47053 11.9742C6.24702 12.2722 6.32153 12.7938 6.61954 13.0173L7.66259 13.7623C8.0351 13.9858 8.40762 13.9858 8.70563 13.6878Z' fill='%2327AAE1'/%3E%3Cpath d='M0.808128 20.0201L5.27833 21.5102C5.65084 21.6592 6.02336 21.4357 6.17237 21.0632C6.9919 19.1261 7.81144 17.8596 9.078 16.295C9.37601 15.997 9.30151 15.4754 8.92899 15.2519L4.53329 12.1228C4.16078 11.8993 3.71376 11.9738 3.49025 12.3463C2.29819 14.2089 1.10614 16.891 0.435611 19.0516C0.212101 19.4986 0.435611 19.9456 0.808128 20.0201Z' fill='%2327AAE1'/%3E%3Cpath d='M47.0003 24.5648C47.2983 25.8314 47.5218 27.1725 47.6708 28.5135C47.6708 28.886 48.0434 29.184 48.4159 29.184H56.0152C56.4622 29.184 56.7603 28.8115 56.7603 28.439C56.6857 26.1294 56.3877 23.9688 55.7917 21.8082C55.7172 21.3612 55.2702 21.1377 54.8232 21.2867L47.5218 23.6708C47.0748 23.8198 46.8513 24.1923 47.0003 24.5648Z' fill='%2327AAE1'/%3E%3Cpath d='M2.29813 29.184C2.37264 26.7999 2.81965 24.4903 3.56469 22.3297C3.71369 21.9572 3.49018 21.5102 3.11767 21.3612L2.81965 21.2867C2.44714 21.1377 2.00012 21.3612 1.85111 21.8082C1.25509 24.1923 0.882568 26.6509 0.882568 29.184H2.29813Z' fill='%2327AAE1'/%3E%3C/svg%3E%0A");
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        width: 50px;
+                                        height: 28px;
+                                        margin: 10px 0;
+                                        display: block;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                            td{
+                                @include flexbox;
+                                @include align-items(center);
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section.receitas {
+        width: 100%;
+        @include flexbox;
+        @include flex-wrap(wrap);
+        margin: 30px 0;
+        padding: 40px 0;
+        background-color: var(--color-blue-dark);
+        .wrapper{
+            margin: auto;
+            max-width: 1366px;
+            padding: 0 20px;
+            @include d(hdplus){
+                padding: 0 10px;
+            }
+            @include d(celularLarge){
+                padding: 0;
+            } 
+            .veja-receitas {
+                .titulo-prateleira{
+                    width: 100%;
+                    margin-bottom: 30px;
+                    h2{
+                        color: var(--color-white);
+                        font-size: 45px;
+                        font-weight: 500; 
+                        text-align:center;
+                    }
+                }    
+                .ls-receita-pdp{
+                    h2{
+                        display:none;
+                    }
+                    ul{
+                        >div{
+                            margin: 0 30px;
+                            li.receitas{
+                                .receitas-img-pdp{
+                                    a {
+                                        img{
+                                            margin: 0 20px;
+                                            @include d(celularLarge){
+                                                margin: auto;
+                                            }
+                                        }
+                                    }    
+                                }
+                            }
+                        }
+                    }
+                }
+                .slick-prev {
+                    font-size: 0;
+                    cursor: pointer;
+                    left: 0;
+                    position: absolute;
+                    top: 50%;
+                    &:before{
+                        content: "\e933";
+                        font-family: lightsweet;
+                        font-size: 40px;
+                        color: var(--color-white);
+                        display: block;
+                    }
+                }
+                .slick-next{
+                    font-size: 0;
+                    cursor: pointer;
+                    right: 0;
+                    position: absolute;
+                    top: 50%;
+                    &:before{
+                        content:"\e934";
+                        font-family: lightsweet;    
+                        font-size: 40px;
+                        color: var(--color-white);                
+                    }
+                }         
+            }
+        }
+    }
+    section.prod-relacionados{
+        .wrapper{
+            padding: 0 2em;
+            @include d(celularLarge){
+                padding: 0;
+            }
+            .container-center{
+                .ls-prateleira{
+                    ul.slick-dots{
+                        @include d(ipad){
+                            @include flexbox;
+                            @include justify-content(center);
+                        }
+                        li{
+                            button{
+                                @include d(ipad){
+                                    font-size: 0;
+                                    width: 12px;
+                                    height: 12px;
+                                    border: 1px solid var(--color-blue-dark);
+                                    border-radius: 50%;
+                                    margin: 0 5px;
+                                    cursor: pointer;
+                                }
+                            }
+                            &.slick-active{
+                                button{
+                                    @include d(ipad){
+                                        background: var(--color-blue-dark);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.name-field.VIDEO {
+    display: none;
+}

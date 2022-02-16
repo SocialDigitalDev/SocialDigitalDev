@@ -1,0 +1,12 @@
+#birthDate.input-small {
+  width:  150px;
+  padding: 0 10px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #000;
+    line-height: 33px;
+    height: 36px;
+    font-family: 'Open Sans', sans-serif;
+}

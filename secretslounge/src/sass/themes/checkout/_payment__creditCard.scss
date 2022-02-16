@@ -1,0 +1,139 @@
+#app-container .App {
+    > div .CardForm {
+        p {
+            margin-bottom: 0;
+        }
+        select,
+        textarea,
+        input[type='text'],
+        input[type='password'],
+        input[type='datetime'],
+        input[type='datetime-local'],
+        input[type='date'],
+        input[type='month'],
+        input[type='time'],
+        input[type='week'],
+        input[type='number'],
+        input[type='email'],
+        input[type='url'],
+        input[type='search'],
+        input[type='tel'],
+        input[type='color'],
+        .uneditable-input,
+        select {
+            @extend .checkoutExtends__input;
+            background-position: right center;
+            height: $inputHeightMedium;
+            &:focus {
+                outline: 0;
+            }
+        }
+
+        .PaymentCardHolderName input,
+        .PaymentCardHolderName input,
+        .PaymentCardHolderName input,
+        .PaymentCardNumber input,
+        .PaymentCardNumber select,
+        .PaymentInstallments input,
+        .PaymentInstallments select {
+            width: 100%;
+            width: -webkit-fill-available !important;
+        }
+
+        .card-flags.active label input[type='radio'] {
+            display: none;
+        }
+
+        .PaymentInstallments {
+            input,
+            select {
+                max-width: none;
+            }
+        }
+
+        .PaymentCardDueDate {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            label {
+                width: 100%;
+                padding-bottom: 4px;
+            }
+
+            .payment-card-due-month,
+            .payment-card-due-year {
+                width: 48%;
+                select {
+                    width: 100%;
+                }
+            }
+            .payment-card-lash {
+                display: none;
+            }
+        }
+
+        .PaymentCardCVV {
+            display: flex;
+            align-items: center;
+            input {
+                width: 80px;
+                margin: 0 8px;
+            }
+        }
+
+        .PaymentCardCVV,
+        .PaymentCardValue {
+            padding-top: 24px;
+        }
+
+        .PaymentCardCVV,
+        .PaymentCardDueDate,
+        .PaymentCardHolderDocument,
+        .PaymentCardHolderName,
+        .PaymentCardValue,
+        .PaymentInstallments,
+        .PaymentCardFlags {
+            padding-top: 12px;
+        }
+
+        .PaymentCardFlags {
+            padding-bottom: 16px;
+        }
+
+        .BillingAddress {
+            padding-top: 24px;
+        }
+
+        .PaymentCardValue {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-prepend {
+            display: flex;
+            .add-on {
+                height: auto;
+                display: flex;
+                align-items: center;
+                border-radius: 0;
+            }
+        }
+    }
+
+    .ChangeNumberOfPayments {
+        color: $checkoutColorPrimary;
+        text-decoration: underline;
+        text-align: center;
+        font-weight: bold;
+        margin: 24px auto;
+        text-align: left;
+        &:hover {
+            color: $checkoutColorSecondary;
+        }
+    }
+
+    .SecurityEnvironmentIcon {
+        display: none;
+    }
+}

@@ -1,0 +1,27 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+  - var $templateName = 'Institutional';
+  - var $templateClass = 'pg-institucional';
+//- Page styles
+block append styles
+  link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content
+    section 
+        div.wrapper
+            div.institucional
+                aside.sidebar-institucional
+                     vtex(.cmc:MenuInstitucional)/
+                div.conteudo-institucional
+                    vtex:contentPlaceHolder(id=`ls-titulo`)/    
+                    vtex:contentPlaceHolder(id=`ls-conteudo`)/ 
+    section
+        div.banner-bottom-institucional
+            vtex:contentPlaceHolder(id=`banner-bottom-insti`)/
+
+            
+block append scripts
+  script(type='text/javascript', src=`/arquivos/${$templateName}.js`) 

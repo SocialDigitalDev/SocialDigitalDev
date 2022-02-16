@@ -1,0 +1,30 @@
+.ls-account-main{
+    section{
+        .accountPage{
+            margin: auto;
+            @include d(ipad){
+                width: 100%;
+            }
+            .container-center{
+                .render-container{
+                    .vtex-account{
+                        .vtex-account__user-info{
+                            display: none;
+                        }
+                        .vtex-account__menu-links{
+                            a.vtex-account_menu-link{
+                                &.c-on-base{
+                                    background: var(--ice-white);
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .orders-account{
+            display: none;
+        }
+    }
+}

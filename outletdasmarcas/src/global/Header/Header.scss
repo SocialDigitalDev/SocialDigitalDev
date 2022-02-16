@@ -1,0 +1,458 @@
+header{
+    @include flexbox;
+    @include flex-flow(column);
+    position: relative;
+    z-index: 9;
+    .top-bar{
+        @include flexbox;
+        @include align-items(center);
+        border-bottom: 1px solid var(--color-black);
+        padding: 0 2em;
+        height: 35px;
+        background: var(--color-white);
+        @include d(ipad){
+            border: none;
+        }
+        .text-wrapper{
+            max-width: 40%;
+            margin: auto;
+            width: 100%;
+            display: block;
+            @include d(celularLarge){
+                max-width: 100%;
+            }
+            .texto{
+                max-width: 100%;
+                display: block;
+                text-align: center;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 13px;
+                @include d(celularSmall){
+                    font-size: 11px;
+                }
+                &:before{
+                    content: "<";
+                    margin-right: 5px;
+                }
+                &:after{
+                    content: ">";
+                    margin-left: 5px;
+                }
+            }
+        }
+        .blockEmptyDivision{
+            width: 30%;
+            display: block;
+            @include d(ipad){
+                display: none;
+            }
+        }
+        .atendimento-login{
+            @include flexbox;
+            width: 30%;
+            @include justify-content(flex-end);
+            .atendimento-wrapper{
+                a.atendimento-link{
+                    font-size: 13px;
+                    font-weight: 600;
+                    @include flexbox;
+                    @include align-items(center);
+                    margin-right: 10px;
+                    @include d(ipadPro){
+                        font-size: 11px;
+                    }
+                    &:before{
+                        content: "\e902";
+                        font-family: "outletdasmarcas";
+                        font-size: 25px;
+                        margin-right: 10px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            .user-name__account{
+                @include flexbox;
+                &:before{
+                    content: "\e900";
+                    font-family: "outletdasmarcas";
+                    font-size: 25px;
+                    margin-right: 10px;
+                }
+                p.welcome{
+                    font-size: 13px;
+                    font-weight: 600;
+                    @include d(ipadPro){
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+    .wrapper{
+        background-color: var(--ice-white);
+        @include d(ipad){
+            padding: 1em;
+        }
+        .menu-header{
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(space-between);
+            .btn-menu-mobile{
+                display: none;
+                @include d(ipad){
+                    @include flexbox;
+                }
+                a{
+                    &:before{
+                        content: "";
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='18' viewBox='0 0 26 18' fill='none'%3E%3Cpath d='M0 1.27986C0 0.940423 0.136964 0.614885 0.380761 0.374864C0.624558 0.134843 0.955218 0 1.3 0H24.7C25.0448 0 25.3754 0.134843 25.6192 0.374864C25.863 0.614885 26 0.940423 26 1.27986C26 1.6193 25.863 1.94484 25.6192 2.18486C25.3754 2.42488 25.0448 2.55973 24.7 2.55973H1.3C0.955218 2.55973 0.624558 2.42488 0.380761 2.18486C0.136964 1.94484 0 1.6193 0 1.27986Z' fill='black'/%3E%3Cpath d='M0 9.00002C0 8.66058 0.136964 8.33504 0.380761 8.09502C0.624558 7.855 0.955218 7.72015 1.3 7.72015H24.7C25.0448 7.72015 25.3754 7.855 25.6192 8.09502C25.863 8.33504 26 8.66058 26 9.00002C26 9.33946 25.863 9.665 25.6192 9.90502C25.3754 10.145 25.0448 10.2799 24.7 10.2799H1.3C0.955218 10.2799 0.624558 10.145 0.380761 9.90502C0.136964 9.665 0 9.33946 0 9.00002Z' fill='black'/%3E%3Cpath d='M1.3 15.4403C0.955218 15.4403 0.624558 15.5751 0.380761 15.8151C0.136964 16.0552 0 16.3807 0 16.7201C0 17.0596 0.136964 17.3851 0.380761 17.6251C0.624558 17.8652 0.955218 18 1.3 18H24.7C25.0448 18 25.3754 17.8652 25.6192 17.6251C25.863 17.3851 26 17.0596 26 16.7201C26 16.3807 25.863 16.0552 25.6192 15.8151C25.3754 15.5751 25.0448 15.4403 24.7 15.4403H1.3Z' fill='black'/%3E%3C/svg%3E");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+            #logo-top {
+                width: 20%;
+                @include d(ipad){
+                    width: 40%;
+                }
+                @include d(celularMedium){
+                    width: 45%;
+                    margin-left: -1.6em;
+                }
+                .item-logo{
+                    a{
+                        img{
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+            .menu-bar{
+                width: 60%;
+                @include d(ipad){
+                    display: none;
+                }
+                .menu-topo{
+                    margin-left: 0;
+                    .container-center{
+                        .menu-principal{
+                            .menu-level-1{
+                                @include flexbox();
+                                @include justify-content(center);
+                                .level-1{
+                                    margin: 0 2em;
+                                    padding: 2em 0;
+                                    text-transform: uppercase;
+                                    font-weight: 700;
+                                    position: relative;
+                                    @include d(ipadPro){
+                                        margin: 0 1em;
+                                    }
+                                    a{
+                                        @include d(ipadPro){
+                                            font-size: 13px;
+                                        }
+                                    }
+                                    &:after{
+                                        content: "";
+                                        height: 3px;
+                                        background: var(--color-black);
+                                        left: 0;
+                                        width: 0;
+                                        position: absolute;
+                                        bottom: 20px;
+                                        @include t(.3s);
+                                    }
+                                    &:hover{
+                                        &:after{
+                                            width: 100%;
+                                        }
+                                    }
+                                    &.destaque{
+                                       a.link-level-1{
+                                        color: red;
+                                       }
+                                    }
+                                    .menu-level-2{
+                                        .level-2{
+                                            display: none;
+                                            .menu-level-3{
+                                                .level-3{
+                                                    display: none;
+                                                    .menu-level-4{
+                                                        .level-4{
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }   
+            }
+            .header-user-links{
+                width: 20%;
+                @include flexbox;
+                @include justify-content(flex-end);
+                @include d(qhd){
+                    width: 11%;
+                }
+                .header-icons{
+                    @include flexbox;
+                    @include align-items(center);
+                    > li{
+                        margin: 0 10px;
+                    }
+                    .busca-topo__busca-container{
+                        span.icon-search{
+                            cursor: pointer;
+                            @include d(ipad){
+                                display: none;
+                            }
+                            &:before{
+                                content: "\e907";
+                                font-family: 'outletdasmarcas';
+                                font-size: 25px;
+                            }
+                        }
+                        fieldset.busca{
+                            @include flexbox;
+                            @include justify-content(center);
+                            opacity: 0;
+                            position: absolute;
+                            top: 117px;
+                            left: 0;
+                            width: 100%;
+                            padding: 1.5em 2em;
+                            background: var(--color-white-transp);
+                            pointer-events: none;
+                            @include t(.3s);
+                            &.busca-open{
+                                opacity: 1;
+                                pointer-events: fill;
+                            }
+                            legend, label, select{
+                                display: none;
+                            }
+                            .fulltext-search-box{
+                                max-width: 600px;
+                                width: 100%;
+                                border-bottom: 1px solid var(--color-black);
+                                padding: 5px 1.5em;
+                            }
+                            .btn-buscar{
+                                font-size: 0;
+                                width: 28px;
+                                content: "";
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.5763 17.5762C15.8125 19.3402 13.4661 20.3121 10.9709 20.3121C8.47564 20.3121 6.13093 19.3402 4.36708 17.5762C0.724847 13.9337 0.724847 8.00859 4.36708 4.36613C6.1882 2.5449 8.57872 1.6351 10.9709 1.6351C13.363 1.6351 15.7552 2.54653 17.5763 4.36613C21.2185 8.00859 21.2185 13.9337 17.5763 17.5762ZM25.7607 24.6042L19.2829 18.126C22.9938 13.8175 22.8171 7.29515 18.7331 3.20924C14.4544 -1.06975 7.48899 -1.06975 3.21027 3.20924C-1.07009 7.48988 -1.07009 14.4541 3.21027 18.7331C5.28337 20.8063 8.03876 21.9485 10.9709 21.9485C13.6281 21.9485 16.1364 21.0027 18.1261 19.2829L24.6039 25.7611C24.7642 25.9215 24.9737 26 25.1815 26C25.3909 26 25.6004 25.9215 25.7607 25.7611C26.0798 25.442 26.0798 24.9233 25.7607 24.6042Z' fill='black'/%3E%3C/svg%3E");
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                width: 20px;
+                                height: 20px;
+                                display: block;
+                                position: relative;
+                                left: -50px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .wishlist{
+                        .icon-wishlist{
+                            &:before{
+                                content: "\e90b";
+                                font-family: 'outletdasmarcas';
+                                font-size: 25px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                    .header-cart{
+                        position: relative;
+                        .icon-cart{
+                            cursor: pointer;
+                            &:before{
+                                content: "\e915";
+                                font-family: 'outletdasmarcas';
+                                font-size: 25px;
+                            }
+                        }
+                        .info-cart{
+                            position: absolute;
+                            top: -9px;
+                            right: -15px;
+                            span.qtd-cart{
+                                background-color: var(--color-yellow);
+                                color: var(--color-black);
+                                border: 1px solid var(--color-black);
+                                padding: 0px 7px;
+                                border-radius: 50%;
+                                font-size: 13px;
+                                width: 20px;
+                                height: 20px;
+                                display: block;
+                                @include d(qhd){
+                                    font-size: 8px
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include d(ipad){
+    .mm-wrapper__blocker{
+        background-color: var(--color-black) !important;
+        &:before{
+            content: "X";
+            color: var(--color-white);
+            font-size: 25px;
+            @include flexbox;
+            text-align: center;
+            border: 2px solid var(--color-white);
+            @include align-items(center);
+            width: 25px;
+            height: 25px;
+            @include justify-content(center);
+            border-radius: 50%;
+            padding: 3px;
+            position: absolute;
+            left: 10%;
+            top: 10px;
+        }
+    }
+    #menuPrincipal{
+        background-color: var(--color-black);
+        color: var(--color-white);
+        .mm-panels{
+            #mm-1.mm-panel{
+                background-color: var(--color-black);
+                .mm-navbar{
+                    background-color: var(--color-black);
+                    color: var(--color-white);
+                }
+                ul.mm-listview{
+                    li.mm-listitem{
+                        color: var(--color-white);
+                        background-size: auto;
+                        background-size: contain;
+                        padding: 4%;
+                        margin: 15px 0;
+                        &:nth-of-type(1){
+                            background: url('/arquivos/outlet-bg-marcas.jpg') no-repeat;
+                            background-size: auto;
+                            background-size: contain;
+                        }
+                        &:nth-of-type(2){
+                            background: url('/arquivos/outlet-bg-feminino.jpg') no-repeat;
+                            background-size: auto;
+                            background-size: contain;
+                        }
+                        &:nth-of-type(3){
+                            background: url('/arquivos/outlet-bg-masculino.jpg') no-repeat;
+                            background-size: auto;
+                            background-size: contain;
+                        }
+                        &:nth-of-type(4){
+                            background: url('/arquivos/outlet-bg-kids.jpg') no-repeat;
+                            background-size: auto;
+                            background-size: contain;
+                        }
+                        &:nth-of-type(5){
+                            background: url('/arquivos/outlet-bg-cosmeticos.jpg') no-repeat;
+                            background-size: auto;
+                            background-size: contain;
+                        }
+                        > a.mm-listitem__text{
+                            background: none;
+                        }
+                        a.mm-btn{
+                            border: none;
+                            &:after{
+                                border: 2px solid var(--color-white);
+                                border-bottom: none;
+                                border-right: none;
+                            }
+                        }
+                    }
+                }
+            }
+            a.mm-navbar__title{
+                display: none;
+            }
+        }
+        .atendimento-wrapper{
+            display: none;
+        }
+        .user-name__account{
+            padding: 4%;
+            @include flexbox;
+            &:before{
+                content: "\e900";
+                font-family: "outletdasmarcas";
+                font-size: 25px;
+                margin-right: 10px;
+            }
+            p.welcome{
+                font-size: 13px;
+                font-weight: 600;
+            }
+        }
+    }
+    header{
+        .wrapper{
+            .busca-topo__busca-container{
+                background: var(--ice-white);
+                margin-top: 10px;
+                fieldset.busca{
+                    @include flexbox;
+                    @include justify-content(center);
+                    opacity: 1;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: 101%;
+                    background: var(--ice-white);
+                    @include t(.3s);
+                    legend, label, select{
+                        display: none;
+                    }
+                    .fulltext-search-box{
+                        background: var(--color-white);
+                        width: 100%;
+                        border: 1px solid var(--color-gray-line);
+                        padding: 10px 1.5em;
+                        border-radius: 5px;
+                        font-size: 13px;
+                        color: var(--color-gray);
+                    }
+                    .btn-buscar{
+                        font-size: 0;
+                        width: 28px;
+                        content: "";
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.5763 17.5762C15.8125 19.3402 13.4661 20.3121 10.9709 20.3121C8.47564 20.3121 6.13093 19.3402 4.36708 17.5762C0.724847 13.9337 0.724847 8.00859 4.36708 4.36613C6.1882 2.5449 8.57872 1.6351 10.9709 1.6351C13.363 1.6351 15.7552 2.54653 17.5763 4.36613C21.2185 8.00859 21.2185 13.9337 17.5763 17.5762ZM25.7607 24.6042L19.2829 18.126C22.9938 13.8175 22.8171 7.29515 18.7331 3.20924C14.4544 -1.06975 7.48899 -1.06975 3.21027 3.20924C-1.07009 7.48988 -1.07009 14.4541 3.21027 18.7331C5.28337 20.8063 8.03876 21.9485 10.9709 21.9485C13.6281 21.9485 16.1364 21.0027 18.1261 19.2829L24.6039 25.7611C24.7642 25.9215 24.9737 26 25.1815 26C25.3909 26 25.6004 25.9215 25.7607 25.7611C26.0798 25.442 26.0798 24.9233 25.7607 24.6042Z' fill='black'/%3E%3C/svg%3E");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        width: 20px;
+                        height: 20px;
+                        display: block;
+                        position: relative;
+                        left: -50px;
+                        cursor: pointer;
+                        top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

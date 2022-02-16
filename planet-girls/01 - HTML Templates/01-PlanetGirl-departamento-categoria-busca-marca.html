@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+    <vtex:metaTags/>
+     <vtex:template id="01-PlanetGirls-styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <vtex:template id="01-PlanetGirls-header" />
+
+    <main>
+
+        <!-- Estrutura Breadcrumb -->
+
+        <section>
+            <div class="planet-departamento__topo">
+                <div class="container-center">
+                    <div class="nomeDepartamento">
+                        <vtex.cmc:searchTitle />
+                        <vtex:contentPlaceHolder id="Planet-DescricaoCurta"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container bread">
+                <div class="container-center">
+                    <vtex.cmc:breadCrumb/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conteudo central de Departamento -->
+
+        <section>
+
+            <div class="container pagDepartamento">
+                <div class="container-center">
+
+                    <!-- Filtro de departamento -->
+
+                    <aside>
+                        <div class="filtrosDepartamento">
+                        
+                            <span class="btn-filtro"> Filtro </span>
+
+                            <vtex.cmc:searchNavigator/>
+                        </div>
+                    </aside>
+
+                    <div class="conteudo-categoria">
+
+                        <!-- Produtos resultantes do Departamento -->
+
+                        <div class="resultadoDepartamento">
+                            <div class="order-main-container">
+                                <div class="order-main-container__left"></div>
+                                <div class="order-main-container__center center-top"></div>
+                                <div class="order-main-container-right"></div>
+                            </div>
+                            <div class="planetgirls-departamento_vitrine-produtos">
+                                <vtex.cmc:searchResult layout="7a249e82-5ebe-456c-bff7-a6ff3d54ba37" itemCount="16" columnCount="16" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        
+    </main>
+    
+    <!-- Chamada para o rodapé -->
+    <vtex:template id="01-PlanetGirls-footer" />
+    <!-- Chamada para os scripts Js da loja -->
+    <vtex:template id="01-PlanetGirls-scripts" />
+
+</body>
+
+</html>

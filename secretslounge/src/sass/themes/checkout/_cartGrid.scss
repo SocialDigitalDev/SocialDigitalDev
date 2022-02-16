@@ -1,0 +1,28 @@
+.body-cart,
+.body-order-form,
+.body-checkout-confirmation {
+    @media (min-width: 980px) {
+        .cart-template.full-cart { 
+
+            .cart-template-holder {
+                width: 66%;
+                padding-right: 24px;
+                float: left; 
+            }
+            .summary-template-holder {
+                width: 33%;
+                float: right;
+                .row-fluid {
+                    > div {
+                        width: 100%;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+            .cart-links-bottom {
+                clear: right;
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+    <vtex:metaTags/>
+    <vtex:template id="cm-css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <vtex:template id="cm-header" />
+
+    <main>
+
+        <!-- Estrutura Breadcrumb -->
+
+        <section>
+            <div class="container bread">
+                <div class="container-center">
+                    <vtex.cmc:breadCrumb/>
+                </div>
+            </div>
+            <div class="rwt-departamento__topo">
+                <div class="container-center">
+                    <div class="nomeDepartamento">
+                        <vtex.cmc:searchTitle />
+                        <vtex:contentPlaceHolder id="descricao-curta"/>
+                    </div>
+                </div>
+                <!-- Imagem para o topo -->
+                <figure>
+                    <div class="container slide">
+                        <div class="slide-principal">
+                            <vtex:contentPlaceHolder id="imagem-banner-departamento" />
+                        </div>
+                    </div>
+                    
+                    <div class="container slide-mobile">
+                        <vtex:contentPlaceHolder id="imagem-banner-departamento-mobile" />
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Conteudo central de Departamento -->
+
+        <section>
+
+            <div class="container pagDepartamento">
+                <div class="container-center">
+
+                    <!-- Filtro de departamento -->
+
+                    <aside>
+                        <div class="filtrosDepartamento">
+                        
+                            <span class="btn-filtro"> Filtro </span>
+
+                            <vtex.cmc:searchNavigator/>
+                        </div>
+                    </aside>
+
+                    <div class="conteudo-categoria">
+
+                        <!-- Produtos resultantes do Departamento -->
+
+                        <div class="resultadoDepartamento">
+                            <vtex.cmc:searchResult layout="504986e9-29b7-4841-9e02-e676f81cff0e" itemCount="12" columnCount="12" />
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Descricao do Departamento para SEO -->
+
+        <section>
+            <div class="container descricaoDetalhada">
+                <div class="container-center">
+                    <vtex:contentPlaceHolder id="titulo-descricao-detalhada" />
+                    <vtex:contentPlaceHolder id="descricao-detalhada" />
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Chamada para o rodapé -->
+
+    <vtex:template id="cm-footer" />
+
+    <!-- Chamada para os scripts Js da loja -->
+
+    <vtex:template id="cm-js" />
+
+</body>
+
+</html>

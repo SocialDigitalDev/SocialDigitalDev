@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+    <title> <vtex.cmc:productPageTitle /> </title>
+    <vtex:metaTags/>
+    <vtex:template id="Jasmine - Styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <vtex.cmc:productRichSnippets showFacebook="1" />
+</head>
+
+<body>
+    <vtex.cmc:productRichSnippets showGoogle="1" />
+    <vtex:template id="Jasmine - Header" />
+    <main>
+        <section>
+            <div class="container bread">
+                <div class="wrapper">
+                    <vtex.cmc:BreadCrumb />
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container produto-all">
+                <div class="wrapper">
+                    <div class="produto-wrap">
+                        <div id="produtoDiv-esquerda" class="x-image-product">
+                            <figure>
+                                 <!-- control listas  -->
+                                 <div class="agregar-lista">
+                                    <vtex.cmc:GiftListInsertSkuV2 />
+                                </div>
+                                <div class="img-produto">
+                                    <vtex.cmc:ProductImage zoom="on" />
+                                </div>
+                            </figure>
+                        </div>
+       
+                        <div id="produtoDiv-direita">
+                            <h1 class="nome-prod">
+                                <vtex.cmc:productName/>
+                            </h1>
+   
+                            <div class="promo-flag-wrap">
+                                <vtex.cmc:discountHightLight/>
+                            </div>
+
+                            <vtex.cmc:skuPrice/>
+                            <div class="produto-buy__container">
+                                <div class="jasmine-produto__buy-quant">
+                                    <p> Quantidade: </p>
+                                    <div class="qtdPrateleira">
+                                        <span class="btnDec"></span>
+                                        <input type="text" class="qtdVal" value="1" />
+                                        <span class="btnAcr"></span>
+                                    </div>
+                                </div>
+                                <div class="jasmine-produto__buy-button">
+                                    <vtex.cmc:BuyButton/>
+                                </div>
+                                <div class="bt-adicionar-carrinho">
+                                      Adicionar ao carrinho 
+                                </div>
+                            </div>
+                               
+                            <div class="calc-frete">
+                                <div class="cep">
+                                    <h3><span class="icon__frete"></span> Calcule o frete e prazo de entrega.</h3>
+                                    <vtex.cmc:shippingValue/>
+                                    <script type="text/javascript">
+                                        $(document).ready( function(){
+                                            ShippingValue();
+                                        });
+                                    </script>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Estrutura de Especificação do produto -->
+                   
+                    <section class="prod_details">
+                        <div class="wrapper detalhes-prod">
+                            <nav class="jasmine-description__navigation">
+                                <ul>
+                                    <li data-description="description" class="is--active">Descrição do produto</li>
+                                    <li data-description="specification" class="">Especificações</li>
+                                </ul>
+                            </nav>
+                            <div class="jasmine-description__contents">
+                                <article class="jasmine-description__item is--active" id="description">
+                                    <vtex.cmc:ProductDescription/>
+                                </article>
+                                <article class="jasmine-description__item" id="specification">
+                                    <vtex.cmc:productSpecification/>
+                                </article>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- <section class="prod_details">
+                        <div class="wrapper detalhes-prod">
+                            <div id="descricao-produto">
+                                <div class="container-center">
+                                    <h2 class="titulo"> Descrição </h2>
+                                    <vtex.cmc:ProductDescription/>
+                                    <vtex.cmc:productSpecification/>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <span class="curta-descricao">
+                            <h2> Informações do produto </h2>
+                            <vtex.cmc:productDescriptionShort />
+                        </span>
+                    </section> -->
+                    
+                    <section>
+                        <div class="container slide-prod qvvt jasmine-prateleira">
+                            <div class="wrapper">
+                                <div class="titulo-prateleira">
+                                    <h2>Você também vai amar </h2>
+                                </div>
+                                <vtex:contentPlaceHolder id="Jasmine - Qvvt" />
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!--Receitas para cada momento -->
+                    <section class="main_receitas" style="display: none;">
+                        <div class="wrapper mosaico-receitas">
+                            <div class="titulo-prateleira">
+                                <h2> Receitas para cada momento </h2>
+                            </div>
+                            <vtex:contentPlaceHolder id="Receitas para cada momento" />
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <vtex:template id="Jasmine - Footer" />
+    <vtex:template id="Jasmine - Scripts" />
+</body>
+</html>

@@ -1,0 +1,106 @@
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+#set($flagPais = $product.ProductField(39))
+#set($tipoVinho = $product.ProductField(40))
+    
+<div class="shopvinho-product">
+	<input type="hidden" class="shopvinho-id" value="$id" />
+    <input type="hidden" class="shopvinho-sku" value="$idSku" />
+	<div class="shelf-item__flags">
+		<span class="shopvinho-installment">
+			#if ($product.NumbersOfInstallment > 1)
+				<span class="parcelas">
+					até ${product.NumbersOfInstallment}x <!-- de $product.InstallmentValue sem juros-->
+				</span>
+			#else
+				<span></span>
+			#end
+		</span> 
+        <div class="shelf__seal__new">$flagPais</div>    
+		<div class="flag-promotion">
+			$product.HightLight
+		</div>
+
+		<div class="flag-promotion">
+			$product.HightLight
+		</div>
+		
+		<div class="flag-percentage">
+			#if ($product.HasBestPrice)
+				<div class="flag-desconto">
+					<span class="porcentagem">$product.ListPriceMinusBestPriceInPercent</span>
+					<!--<span class="texto-flag">OFF</span>-->
+				</div>
+			#end
+		</div>
+	</div>
+	<div class="shopvinho-image">
+		<span class="productWishlist">Salvar Favorito</span>
+		<a class="shopvinho-productImage" title="$escapedName" href="$uri">
+			<!--$product.GetImageTag(30)-->
+			$product.GetImageTag(550,695)
+		</a>
+	</div>
+
+	#if ($product.IsInStock)
+		<div class="shopvinho-produto-dados">
+				
+			$product.HightLight
+			
+			<!-- Flag Topo -->
+			#if ($product.HasBestPrice)
+				<div class="flag-desconto">
+						<span class="porcentagem">$product.ListPriceMinusBestPriceInPercent</span>
+					<!--<span class="texto-flag">OFF</span>-->
+				</div>
+				#end
+			#if($product.DiscountHightLight != '')
+				<div class='flags-promo'>
+					$product.DiscountHightLight
+				</div>
+				#end
+			<h2>
+				<a title="$escapedName" href="$uri">
+					$product.Name
+				</a>
+			</h2>
+			<div class="tipo_de_vinho">
+				$tipoVinho
+			</div>
+			<div class="shopvinho-price">
+				<a title="$escapedName" href="$uri">
+					#if ($product.HasBestPrice)
+						<span class="oldPrice">
+							$product.ListPrice
+						</span> 
+						<span class="shopvinho-bestPrice">
+							<strong> $product.BestPrice </strong>
+						</span>
+					#else
+						<span class="shopvinho-bestPrice">
+							<strong>$product.BestPrice </strong>
+						</span>                    
+					#end
+				</a>
+			</div>
+			<div class="shopvinho-hover-content">
+				<div class="shopvinho-buy"> 
+					$product.BottomBuyAsynchronous
+					<!-- <a class="shopvinho-buy-button" title="$escapedName" href="$uri">Comprar</a> -->
+				</div>
+			</div>
+		</div>
+	#else
+	<p class="shopvinho-outOfStock">
+			<a title="$escapedName" href="$uri">
+			<span class="shopvinho-icon"></span>
+			<span class="shopvinho-text">
+				Produto Esgotado
+				<small>Avise-me quando chegar</small>
+			</span>
+			</a>
+	</p> 
+	#end
+</div>

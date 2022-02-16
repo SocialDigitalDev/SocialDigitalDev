@@ -1,0 +1,46 @@
+.vue-notification-group {
+  /* Mobile */
+  @media (max-width: 767px) {
+    width: 100% !important;
+    bottom: 0px !important;
+    left: 0 !important;
+    .notification-title {
+      font-size: 12px;
+    }
+  }
+
+  .notification {
+    margin-bottom: 20px;
+    padding: 15px 2em;
+    border-radius: 5px;
+    border: 1px solid;
+    border-left: 3px solid;
+    background: #fffcf7;
+    /* Mobile */
+    @media (max-width: 767px) {
+      width: 90%;
+      margin: 0 auto 20px;
+    }
+
+    .notification-title {
+      font-weight: normal;
+      font-size: 14px;
+      background: transparent;
+      color: $color-brown-dark;
+      line-height: 1.5;
+      text-align: left;
+      letter-spacing: 0.04em;
+    }
+
+    &.warn {
+      color: #debf10;
+    }
+    &.error {
+      color: #dd4f44;
+    }
+
+    &.success {
+      color: #93b764;
+    }
+  }
+}

@@ -1,0 +1,292 @@
+main.sm-home-main{
+    background-color: var(--ice-white);
+    section{
+        figure{
+            .wrapper{
+                padding: 0;
+                position: relative;
+                .banner-carousel{
+                    position: relative;
+                    .box-banner{
+                        a{
+                            img{
+                                margin-bottom: -4px;
+                                width: 100%;
+                                max-width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                    ul.slick-dots{
+                        @include flexbox;
+                        @include justify-content(center);
+                        position: absolute;
+                        bottom: 10px;
+                        width: 100%;
+                        li{
+                            button{
+                                font-size: 0;
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 50%;
+                                background: var(--color-white);
+                                @include t(.3s);
+                                margin: 0 5px;
+                            }
+                            &.slick-active{
+                                button{
+                                    width: 45px;
+                                    height: 15px;
+                                    border-radius: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section-categorias-gerais{
+            max-width: 1600px;
+            margin: 2em auto;
+            @include d(hdplus){
+                padding: 0 4em;
+            }
+            @include d(ipadPro){
+                padding: 0 1em;
+            }
+            .wrapper{
+                @include flexbox;
+                @include justify-content(space-between);
+                @include align-items(center);
+                @include d(ipad){
+                    @include flex-wrap(wrap);
+                    @include justify-content(initial);
+                }
+                .box-banner{
+                    min-width: 150px;
+                    @include d(hdplus){
+                        min-width: 120px;
+                    }
+                    @include d(hd){
+                        min-width: 90px;
+                    }
+                    @include d(ipad){
+                        min-width: 140px;
+                        margin: 10px 0;
+                    }
+                    a{
+                        @include flexbox;
+                        @include align-items(center);
+                        @include flex-flow(column);
+                        img{
+                            max-width: 75px;
+                            @include d(hdplus){
+                                max-width: 50px;
+                            }
+                        }
+                        p{
+                            font-size: 12px;
+                            margin-top: 10px;
+                            font-family: 'Montserrat', sans-serif;
+                            @include d(hdplus){
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .vitrines-duplas{
+            max-width: 1600px;
+            margin: 2em auto;
+            @include d(hdplus){
+                margin: 2em 4em;
+            }
+            @include d(ipadPro){
+                margin: 1em 1em;
+            }
+            .wrapper{
+                @include flexbox;
+                @include justify-content(space-between);
+                .prod-left{
+                    padding: 1em 0;
+                    background: var(--color-white);
+                    width: 60%;
+                    margin-right: 2em;
+                    padding-bottom: 2em;
+                    @include d(ipadPro){
+                        margin-right: 1em;
+                    }
+                    .vitrine-content{
+                        @include flexbox;
+                        @include justify-content(space-between);
+                        margin-top: 4em;
+                        padding: 0 1em;
+                        .box-banner{
+                            @include t(.3s);
+                            &:hover{
+                                transform: scale(1.03);
+                            }
+                        }
+                    }
+                }
+                .prod-right{
+                    background: var(--color-white);
+                    padding: 1em 0;
+                    padding-bottom: 2em;
+                    width: 40%;
+                    .vitrine-content{
+                        .sm-prateleira{
+                            max-width: 400px;
+                            margin: auto;
+                            ul{
+                                li{
+                                    display: flex !important;
+                                    @include justify-content(center);
+                                    .sm-product{
+                                        min-height: 305px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.ofertas{
+                .wrapper{
+                    .prod-left{
+                        padding-bottom: 0;
+                        .vitrine-content{
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            padding: 0;
+                            margin: 0;
+                            .box-banner{
+                                border: 1px solid var(--color-gray-nav);
+                                padding: 3.6em 5em;
+                                @include d(hdplus){
+                                    padding: 2em;
+                                }
+                                a{
+                                    @include flexbox;
+                                    @include align-items(center);
+                                    @include justify-content(space-between);
+                                    p{
+                                        margin-right: 1em;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 25px;
+                                        @include d(hdplus){
+                                            font-size: 18px;
+                                        }
+                                        @include d(ipadPro){
+                                            font-size: 14px;
+                                        }
+                                        &:after{
+                                            content: "";
+                                            display: block;
+                                            width: 0%;
+                                            height: 3px;
+                                            background: var(--color-orange);
+                                            @include t(.3s);
+                                            margin-top: 5px;
+                                        }
+                                    }
+                                    &:hover{
+                                        p{
+                                            &:after{
+                                               width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(1){
+                                    border-bottom: none;
+                                    border-left: none;
+                                    border-right: none;
+                                }
+                                &:nth-of-type(2){
+                                    border-left: 1px solid var(--color-gray-nav);
+                                    border-right: none;
+                                }
+                                &:nth-of-type(3){
+                                    border-left: none;
+                                    border-right: none;
+                                    border-bottom: none;
+                                }
+                                &:nth-of-type(4){
+                                    border-top: none;
+                                    border-right: none;
+                                    border-bottom: none;
+                                }
+                                &:hover{
+                                    transform: none;
+                                }
+                            }
+                        }
+                    }
+                    .prod-right{
+                        .vitrine-content{
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            .box-banner{
+                                @include flexbox;
+                                @include flex-flow(column);
+                                @include align-items(center);
+                                a{
+                                    img{
+                                        @include d(hdplus){
+                                            max-width: 90px;
+                                        }
+                                    }
+                                    p{
+                                        margin: 19px auto;
+                                        font-family: 'Montserrat' ,sans-serif;
+                                        font-size: 15px;
+                                        max-width: 100px;
+                                        text-align: center;
+                                        @include d(hdplus){
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section-banners-triplos{
+            max-width: 1600px;
+            margin: auto;
+            @include d(hdplus){
+                margin: auto 4em;
+            }
+            @include d(ipadPro){
+                margin: auto 1em;
+            }
+            .wrapper{
+                @include flexbox;
+                @include justify-content(space-between);
+                .box-banner{
+                    max-width: 100%;
+                    @include d(hdplus){
+                        margin: auto 1em;
+                    }
+                    @include d(ipadPro){
+                        margin: auto .5em;
+                    }
+                    &:first-child{
+                        @include d(hdplus){
+                            margin-left: 0;
+                        }
+                    }
+                    &:last-child{
+                        @include d(hdplus){
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

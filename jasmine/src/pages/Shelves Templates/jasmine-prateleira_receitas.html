@@ -1,0 +1,27 @@
+#set($id = $product.Id)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+#set($tempo = $product.ProductField(18))
+#set($porcao = $product.ProductField(19))
+
+<div class="section-receitas">
+    <div class="receitas-img">
+        <div class="flag-promotion">
+			$product.HightLight
+		</div>
+        <a class="productImage" title="$escapedName" href="$uri">$product.GetImageTag(610, 345,'receita')</a>
+    </div>
+    <div class="conteudo">
+        <div class="titulo-receita">
+            <h3><a title="$escapedName" href="$uri">$product.SkuName</a></h3>
+        </div>
+        <div class="descricao-receita">
+            $product.DescriptionShort
+            <!-- Colocar campo produto para a descricao ou descricao??? -->
+        </div>
+
+        <div class="ver-receita">
+            <a class="btn btn-receita" title="$escapedName" href="$uri"> Ver agora + </a>
+        </div>
+    </div>
+</div>

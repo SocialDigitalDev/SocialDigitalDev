@@ -1,0 +1,322 @@
+.slider__main {
+  margin-top: 25px;
+
+  .cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .slider {
+      width: 75%;
+
+      /* Mobile */
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+
+      .owl-dots {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: -30px;
+
+        .owl-dot {
+          width: 12px;
+          height: 12px;
+          display: block;
+          background: #22566e;
+          border-radius: 50%;
+          margin-left: 10px;
+
+          &.active {
+            border: 1px solid #22566e;
+            background: #fff;
+          }
+        }
+      }
+
+      .owl-nav {
+        button {
+          width: 45px;
+          height: 45px;
+          position: absolute;
+          top: 42%;
+          display: inline-block;
+          text-indent: -9999%;
+          border-radius: 50%;
+
+          &.owl-prev,
+          &.owl-next {
+            background: #3f3948 url(~@assets/ico-arrow.svg) no-repeat center;
+            background-size: 15px;
+            transition: background 0.3s;
+
+            &:hover {
+              background-color: #eee809;
+              transition: background 0.3s;
+            }
+          }
+
+          &.owl-prev {
+            left: 10px;
+            transform: rotate(180deg);
+          }
+
+          &.owl-next {
+            right: 15px;
+          }
+        }
+      }
+    }
+
+    .banners {
+      width: 24%;
+      display: flex;
+      flex-wrap: wrap;
+
+      /* Mobile */
+      @media (max-width: 767px) {
+        width: 100%;
+
+        .box-banner {
+          width: 100%;
+          margin-bottom: 15px;
+
+          img {
+            min-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.banners__category {
+  .cols {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    /* Mobile */
+    @media (max-width: 767px) {
+      .box-banner {
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  .banner-revendedor,
+  .banner-principal {
+    .box-banner > a > img {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .banner-revendedor--desktop,
+    .banner-principal--desktop {
+      display: block;
+      @media (max-width: $screen-md) {
+        display: none;
+      }
+    }
+
+    .banner-revendedor--mobile,
+    .banner-principal--mobile {
+      display: none;
+      @media (max-width: $screen-md) {
+        display: block;
+      }
+    }
+  }
+
+  .banner-secundary.flex {
+    margin: 20px 0;
+
+    .bn-2 {
+      margin: 0 20px;
+    }
+
+    .bn-side {
+      .bn-4 {
+        align-items: flex-end;
+      }
+    }
+
+    @media (max-width: $screen-md) {
+      flex-direction: column;
+      padding: 0 15px;
+
+      .bn-1,
+      .bn-2,
+      .bn-3,
+      .bn-4,
+      .bn-side {
+        margin: 10px 0;
+
+        .bn-3,
+        .bn-4,
+        .box-banner,
+        .box-banner > a > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .banner-principal--desktop {
+    opacity: 0;
+    transition: 0.4s;
+
+    &.owl-carousel {
+      opacity: 1;
+      transition: 0.4s;
+    }
+  }
+
+  .owl-carousel {
+    z-index: 0;
+
+    .owl-dots {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      position: absolute;
+      bottom: 50px;
+
+      .owl-dot {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50px;
+        border: 1px solid #3d2b1c;
+        margin: 0 5px;
+        transition: 0.4s;
+
+        &.active {
+          background: #3d2b1c 0% 0% no-repeat padding-box;
+          transition: 0.4s;
+        }
+      }
+    }
+
+    .owl-nav {
+      width: 100%;
+      display: flex;
+      position: absolute;
+      top: 45%;
+
+      button {
+        width: 28px;
+        height: 62px;
+        background: #fdfdf9 0% 0% no-repeat padding-box !important;
+        opacity: 0.45;
+        font-size: 0 !important;
+        position: absolute;
+        transition: 0.4s;
+
+        &.owl-prev {
+          left: 0px;
+          &::before {
+            content: "";
+            background-image: url(~@assets/arrow-left.svg);
+            width: 21px;
+            height: 18px;
+            background-repeat: no-repeat;
+            display: block;
+            background-position: center center;
+            margin: 0 auto;
+          }
+        }
+        &.owl-next {
+          right: 5px;
+
+          &::before {
+            content: "";
+            background-image: url(~@assets/arrow-rigth.svg);
+            width: 21px;
+            height: 18px;
+            background-repeat: no-repeat;
+            display: block;
+            background-position: center center;
+            margin: 0 auto;
+          }
+
+          @media (max-width: 767px) {
+            right: 0px;
+          }
+        }
+        &:hover {
+          transition: 0.4s;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .best-categ {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    h2 {
+      font: normal normal bold 24px/67px "Nexa";
+      letter-spacing: 7.2px;
+      color: #3d2b1c;
+      text-transform: uppercase;
+
+      @media (max-width: 767px) {
+        line-height: 40px;
+        text-align: center;
+        margin-bottom: 60px;
+      }
+    }
+    .categ-items {
+      .box-banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 25px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        .title {
+          width: 100%;
+          margin-top: 25px;
+          text-align: center;
+          font: normal normal 300 20px/24px "Nexa";
+          letter-spacing: 0.4px;
+          text-transform: capitalize;
+          color: #3d2b1c;
+        }
+
+        &:hover {
+          img {
+            opacity: 0.7;
+          }
+          .title {
+            color: #956a64;
+          }
+        }
+      }
+    }
+  }
+
+  .banner-revendedor {
+    @media (max-width: 767px) {
+      padding: 0 15px;
+    }
+  }
+}

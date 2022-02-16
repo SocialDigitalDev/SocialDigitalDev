@@ -1,0 +1,159 @@
+<style>
+    .page-width{
+        max-width: 100%;
+    }
+    .main-content {
+        padding-top: 0px;
+    }
+    .img-topo {
+        background: #fdb913;
+        display: block;
+        text-align: center;
+    }
+    .content{
+        max-width: 1200px;
+        margin-bottom: 5em;
+        margin: auto;
+        justify-content: center;
+        padding-bottom: 5em;
+    }
+    .site-header{
+        display: none;
+    }
+    .site-footer{
+        display: none;
+    }
+    .page-title-lancamento{
+        display: none;
+    }
+    .side-a-side {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .txt-cta-wrapper p {
+        font-size: 19px;
+        font-family: -webkit-pictograph;
+        font-weight: 500;
+        line-height: 40px;
+    }
+    a.link-button {
+        font-size: 16px;
+        color: #fff;
+        background: #ed2024;
+        padding: 10px 30px;
+        padding-top: 7px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        box-shadow: -4px 4px 0 #401eff, -7px 8px 0 #ffafaf;
+        transition: .4s all ease;
+    }
+    a.link-button:hover {
+        opacity: .8;
+        color: #fff;
+    }
+    .txt-cta-wrapper {
+        max-width: 400px;
+    }
+    .ice-cream-canvas h2 {
+        text-align: center;
+    }
+    .mondo-combo .side-a-side {
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .ice-cream-canvas img {
+        max-width: 600px;
+    }
+    .mondo-combo .txt-cta-wrapper {
+        max-width: 100%;
+    }
+    @media (max-width: 900px){
+        .side-a-side{
+            flex-flow: column;
+        }
+        .ice-cream-canvas img{
+            width: 100%;
+            margin-top: 30px;
+        }
+        .ice-cream-canvas {
+            margin: 4em 0;
+        }
+        .mondo-blond-pote .img-wrapper {
+            order: 1;
+        }
+        .mondo-blond-pote .txt-cta-wrapper {
+            order: 2;
+        }
+    }    
+</style>
+<div class="img-topo">
+    <img src="https://cdn.shopify.com/s/files/1/0267/3855/6974/files/logo_300x300.png">
+</div>
+<div class="page-width">
+    <div class="grid">
+      <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+        <div class="section-header text-center">
+          <h1 class="page-title-lancamento">{{ page.title }}</h1>
+        </div>
+  
+        <div class="rte">
+          {{ page.content }}
+        </div>
+        <div class="content">
+            <div class="mondo-black-white ice-cream-canvas">
+                <h2>Mondo® Black & White</h2>
+                <div class="side-a-side">
+                    <div class="img-wrapper">
+                        <img src="https://cdn.shopify.com/s/files/1/0267/3855/6974/products/black_white_1024x1024@2x.jpg">
+                    </div>
+                    <div class="txt-cta-wrapper">
+                        <p>
+                            O primeiro Mondo dois em um. Apresentando Mondo Black & White.
+                            De um lado você tem Mondo Black, um sorvete de chocolate intenso feito com
+                            um blend de três tipos de cacau. Do outro Mondo White,
+                            feito com baunilha de verdade trazida da Itália
+                            somente para a Mondo.
+                        </p>
+                        <a href="/products/mondo-black-white-combo-2-unidades" class="link-button">Compre Já</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mondo-blond-pote ice-cream-canvas">
+                <h2>Mondo® Blond em Pote</h2>
+                <div class="side-a-side">
+                    <div class="txt-cta-wrapper">
+                        <p>
+                            Mondo Blond é o icônico picolé vegano de biscoito belga
+                            caramelizado que tem gostinho de doce de leite. Chega agora até você
+                            a tão aguardada versão de pote, com pinceladas de pasta de biscoito belga
+                            caramelizado pura e pedacinhos crocantes do famoso biscoito.
+                            O perigo é que quem toma uma vez, toma de novo.
+                            Então a qualquer sinal de Mondo® Blond, fuja!
+                        </p>
+                        <a href="/products/mondo-blond-combo-2-unidades" class="link-button">Compre Já</a>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="https://cdn.shopify.com/s/files/1/0267/3855/6974/products/blond_1024x1024@2x.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="mondo-combo ice-cream-canvas">
+                <h2>Combo Mondo® Black & White + Blond</h2>
+                <div class="side-a-side">
+                    <div class="txt-cta-wrapper">
+                        <p>
+                            Muito melhor do que comprar um sabor em lançamento, é comprar os dois.
+                        </p>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="https://cdn.shopify.com/s/files/1/0267/3855/6974/t/1/assets/combo-blond.jpg">
+                    </div>
+                    <a href="/products/combo-mondo-blond-black-white" class="link-button">Compre Já</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

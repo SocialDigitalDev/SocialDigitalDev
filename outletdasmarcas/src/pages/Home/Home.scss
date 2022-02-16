@@ -1,0 +1,844 @@
+@keyframes marquee {
+	0% {
+	  transform: translate(0, 0);
+	}
+	100% {
+	  transform: translate(-100%, 0);
+	}
+}
+main.pg-home-main{
+    background-color: var(--ice-white);
+    section{
+        figure{
+            .wrapper{
+                padding: 0;
+                position: relative;
+                .banner-carousel{
+                    .box-banner{
+                        a{
+                            img{
+                                margin-bottom: -4px;
+                                max-width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+                .banner-menu{
+                    @include flexbox;
+                    @include justify-content(space-between);
+                    padding: 0 10%;
+                    position: absolute;
+                    top: 30%;
+                    width: 100%;
+                    @include d(ipadPro){
+                        top: 18%;
+                    }
+                    @include d(ipad){
+                        display: none;
+                    }
+                    .banner-menu-masc, .banner-menu-fem{
+                        ul{
+                            text-transform: uppercase;
+                            h3{
+                                line-height: 25px;
+                                color: var(--color-white);
+                            }
+                            li{
+                                line-height: 25px;
+                                a{
+                                    color: var(--color-white);
+                                    position: relative;
+                                    &:after{
+                                        content: "";
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                        width: 0;
+                                        height: 2px;
+                                        background: var(--color-white);
+                                        @include t(.3s);
+                                    }
+                                    &:hover{
+                                        &:after{
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .banner-menu-fem{
+                        ul{
+                            text-align: right;
+                            li{
+                                a{
+                                    &:after{
+                                        left: initial;
+                                        right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .filtro-rapido{
+            background-color: var(--color-black);
+            height: 80px;
+            padding: 20px 0;
+            margin: 0;
+            @include d(celularLarge){
+                height: auto;
+                padding: 1em 0;
+                margin: 0;
+            }
+        }
+        .banner-vitrine-countdown{
+            .wrapper{
+                padding: 0;
+                @include flexbox;
+                @include align-items(center);
+                background-color: var(--color-white);
+                width: 100%;
+                @include d(ipadPro){
+                    @include flex-flow(column);
+                }
+                .prod-left{
+                    @include flexbox;
+                    @include align-items(center);
+                    background-color: var(--color-white);
+                    width: 45%;
+                    @include d(qhd){
+                        width: 55%;
+                    }
+                    @include d(ipadPro){
+                        width: 100%;
+                    }
+                    .box-banner{
+                        @include d(ipad){
+                            display: none;
+                        }
+                    }
+                    .vitrine-title{
+                        @include r(270deg);
+                        position: relative;
+                        left: -30px;
+                        width: 400px;
+                        @include d(qhd){
+                            left: 0;
+                            width: 245px;
+                            top: 80px;
+                        }
+                        @include d(ipadPro){
+                            @include r(0deg);
+                            left: 20px;
+                            top: 0px;
+                        }
+                        @include d(ipad){
+                            width: 100%;
+                            left: 0;
+                            padding: 2em 1em;
+                        }
+                        @include d(ipad){
+                            padding: .3em 1em;
+                        }
+                        h2{
+                            font-size: 60px;
+                            line-height: 50px;
+                            color: var(--color-black);
+                            text-transform: uppercase;
+                            width: 400px;
+                            @include d(ipad){
+                                width: 100%;
+                                @include flexbox;
+                                @include flex-wrap(wrap);
+                                font-size: 40px;
+                            }
+                            @include d(celularLarge){
+                                font-size: 37px;
+                                line-height: 40px;
+                            }
+                            span{
+                                display: block;
+                                color: var(--color-yellow);
+                                @include d(ipad){
+                                    @include flexbox;
+                                    @include flex-wrap(wrap);
+                                    margin: 0 .2em;
+                                }
+                                @include d(celularLarge){
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                    .box-banner{
+                        a{
+                            img{
+                                margin-bottom: -3px;
+                                max-width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+                .prod-right{
+                    background-color: var(--color-white);
+                    width: 55%;
+                    padding: 0 2em;
+                    @include d(qhd){
+                        width: 45%;
+                    }
+                    @include d(ipadPro){
+                        width: 100%;
+                        padding: 1.5em 0;
+                    }
+                }
+            }
+        }
+        .compre-por-categoria{
+            .wrapper{
+                @include flexbox;
+                @include justify-content(center);
+                margin: 4em 0;
+                @include d(ipadPro){
+                    margin: 2em 0;
+                }
+                @include d(ipad){
+                    @include flex-flow(column);
+                }
+                .slick-list{
+                    padding-left: 0 !important;
+                    padding-right: 120px !important;
+                }
+                ul.slick-dots{
+                    @include d(ipad){
+                        @include flexbox;
+                        @include justify-content(center);
+                    }
+                    li{
+                        button{
+                            @include d(ipad){
+                                font-size: 0;
+                                width: 12px;
+                                height: 12px;
+                                border: 1px solid var(--color-black);
+                                border-radius: 50%;
+                                margin: 0 5px;
+                                cursor: pointer;
+                            }
+                        }
+                        &.slick-active{
+                            button{
+                                @include d(ipad){
+                                    background: var(--color-black);
+                                }
+                            }
+                        }
+                    }
+                }
+                .box-banner{
+                    margin: 0 10px;
+                    @include d(ipad){
+                        margin: 0;
+                        padding: 5px;
+                    }
+                    a{
+                        img{
+                            max-width: 100%;
+                            @include t(.3s);
+                            height: auto;
+                        }
+                    }
+                    &:hover{
+                        a{
+                            img{
+                                transform: scale(1.05);
+                            }
+                        }
+                    }                    
+                }
+            }
+        }
+        .promocoes-por-marcas{
+            .wrapper{
+                @include flexbox;
+                @include justify-content(center);
+                @include d(ipad){
+                    @include flex-flow(column);
+                }
+                ul.slick-dots{
+                    @include d(ipad){
+                        @include flexbox;
+                        @include justify-content(center);
+                    }
+                    li{
+                        button{
+                            @include d(ipad){
+                                font-size: 0;
+                                width: 12px;
+                                height: 12px;
+                                border: 1px solid var(--color-black);
+                                border-radius: 50%;
+                                margin: 0 5px;
+                                cursor: pointer;
+                            }
+                        }
+                        &.slick-active{
+                            button{
+                                @include d(ipad){
+                                    background: var(--color-black);
+                                }
+                            }
+                        }
+                    }
+                }
+                .box-banner{
+                    margin: 0 10px;
+                    @include d(ipad){
+                        margin: 0;
+                        padding: 5px;
+                    }
+                    a{
+                        img{
+                            max-width: 100%;
+                            @include t(.3s);
+                            height: auto;
+                        }
+                    }
+                    &:hover{
+                        a{
+                            img{
+                                transform: scale(1.025);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .carrossel-marcas{
+            max-width: 1600px;
+            margin: 2em auto;
+            .wrapper{
+                @include flexbox;
+                @include align-items(center);
+                .slick-track{
+                    .box-banner{
+                        // @include flexbox;
+                        display: flex !important;
+                        @include justify-content(center);
+                    }
+                }
+                .slick-prev, .slick-next{
+                    font-size: 0;
+                    cursor: pointer;
+                }
+                .slick-prev{
+                    &:before{
+                        content: "";
+                        background: url('/arquivos/seta-esquerda.png') no-repeat;
+                        background-size: contain;
+                        display: block;
+                        width: 25px;
+                        height: 51px;
+                    }
+                }                    
+                .slick-next{
+                    &:before{
+                        content: "";
+                        background: url('/arquivos/seta-direita.png') no-repeat;
+                        background-size: contain;
+                        display: block;
+                        width: 25px;
+                        height: 51px;
+                    }
+                }                    
+            }
+        }
+        .compra-na-medida-certa{
+            .wrapper{
+                @include flexbox;
+                @include justify-content(center);
+                @include d(ipad){
+                    @include flex-flow(column);
+                }
+                ul.slick-dots{
+                    @include d(ipad){
+                        @include flexbox;
+                        @include justify-content(center);
+                    }
+                    li{
+                        button{
+                            @include d(ipad){
+                                font-size: 0;
+                                width: 12px;
+                                height: 12px;
+                                border: 1px solid var(--color-black);
+                                border-radius: 50%;
+                                margin: 0 5px;
+                                cursor: pointer;
+                            }
+                        }
+                        &.slick-active{
+                            button{
+                                @include d(ipad){
+                                    background: var(--color-black);
+                                }
+                            }
+                        }
+                    }
+                }
+                .box-banner{
+                    margin: 0 2em;
+                    @include d(ipadPro){
+                        margin: 0 1em;
+                    }
+                    @include d(ipad){
+                        margin: 0;
+                        padding: 5px;
+                    }
+                    a{
+                        img{
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                    p{
+                        background: var(--color-black);
+                        color: var(--color-yellow);
+                        text-align: center;
+                        width: 56%;
+                        height: 105px;
+                        text-transform: uppercase;
+                        font-weight: 800;
+                        font-size: 18px;
+                        margin: auto;
+                        padding: 0 10px;
+                        @include flexbox;
+                        @include flex-wrap(wrap);
+                        @include justify-content(center);
+                        @include align-items(flex-start);
+                        @include t(.3s);
+                        border-radius: 20px 20px 20px 0px;
+                        line-height: 30px;
+                        position: relative;
+                        bottom: 50px;
+                        @include d(hd){
+                            width: 75%;
+                        }
+                        @include d(celularLarge){
+                            margin-bottom: -35px;
+                        }
+                        @include d(celularSmall){
+                            font-size: 15px;
+                        }
+                        span.big-font{
+                            font-size: 80px;
+                            font-weight: 500;
+                            @include d(celularSmall){
+                                font-size: 50px;
+                            }
+                        }
+                        span.little-font{
+                            font-size: 55px;
+                            font-weight: 600;
+                            position: relative;
+                            top: -10px;
+                            @include d(celularSmall){
+                                font-size: 30px;
+                                top: -7px;
+                            }
+                        }
+                        
+                    }
+                    &:hover{
+                        p{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+        .novidades-por-categoria{
+            .wrapper{
+                .prateleira-tabs-titulo{
+                    .tabs-prateleira{
+                        @include flexbox;
+                        @include justify-content(center);
+                        margin: 1em 0;
+                        .tabs-links{
+                            font-size: 20px;
+                            @include flexbox;
+                            @include justify-content(center);
+                            @include align-items(center);
+                            cursor: pointer;
+                            @include d(celularLarge){
+                                font-size: 16px;
+                            }
+                            @include d(celularSmall){
+                                font-size: 13px;
+                            }
+                            &.tab-ativo{
+                                font-weight: 600;
+                            }
+                            &:before{
+                                content: "|";
+                                margin: 0 10px;
+                                font-weight: 300;
+                                @include d(celularLarge){
+                                    margin: 0 5px;
+                                }
+                            }
+                            &:nth-of-type(1){
+                                &:before{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .tab-content{
+                    @include justify-content(center);
+                    margin: 2em 0;
+                    display: none;
+                    @include d(ipad){
+                        @include flex-flow(column);
+                    }
+                    ul.slick-dots{
+                        @include d(ipad){
+                            @include flexbox;
+                            @include justify-content(center);
+                        }
+                        li{
+                            button{
+                                @include d(ipad){
+                                    font-size: 0;
+                                    width: 12px;
+                                    height: 12px;
+                                    border: 1px solid var(--color-black);
+                                    border-radius: 50%;
+                                    margin: 0 5px;
+                                    cursor: pointer;
+                                }
+                            }
+                            &.slick-active{
+                                button{
+                                    @include d(ipad){
+                                        background: var(--color-black);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .box-banner{
+                        margin: 0 1em;
+                        @include d(ipadPro){
+                            margin: 0 .3em;
+                        }
+                        @include d(ipad){
+                            margin: 0;
+                            padding: 5px;
+                            display: flex !important;
+                            @include justify-content(center);
+                        }
+                        a{
+                            img{
+                                border: 2px solid var(--color-yellow);
+                                padding: 10px;
+                                border-radius: 50%;
+                                @include t(.3s);
+                                max-width: 100%;
+                                height: auto;
+                            }
+                            h3.title-alt{
+                                text-align: center;
+                                font-weight: 400;
+                                font-size: 18px;
+                                margin-top: 10px;
+                                @include d(qhd){
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                        &:hover{
+                            a{
+                                img{
+                                    transform: scale(1.05);
+                                }
+                            }
+                        }
+                    }
+                    &.tab-ativo{
+                        @include flexbox;
+                    }
+                }
+            }
+        }
+        .marquee-rotativo{
+            background-color: var(--color-black);
+            .marquee-wrapper{
+                .wrapper{
+                    .marquee-rotativo-wrapper{
+                        @include flexbox;
+                        @include justify-content(center);
+                        padding: .6em 0;
+                        position: relative;
+                        width: 200%;
+                        @include d(celularLarge){
+                            width: 800%;
+                        }
+                        .wrapper-mq{
+                            overflow: hidden;
+                            @include flexbox;
+                            @include justify-content(center);
+                            position: relative;
+                            animation: marquee 15s linear infinite;
+                            left: -5%;
+                            span.marquee-text{
+                                margin: 0 6em;
+                                @include t(.5s);
+                                @include d(qhd){
+                                    margin: 0 3em;
+                                }
+                                @include d(hd){
+                                    margin: 0 2em;
+                                }
+                                @include d(ipadPro){
+                                    margin: 0 .5em;
+                                }
+                                @include d(ipad){
+                                    @include flexbox;
+                                }
+                                a{
+                                    font-weight: 600;
+                                    color: var(--color-yellow);
+                                    text-transform: uppercase;
+                                    @include d(qhd){
+                                        font-size: 13px;
+                                    }
+                                    @include d(ipadPro){
+                                        font-size: 12px;
+                                    }
+                                    @include d(ipad){
+                                        text-align: center;
+                                    }
+                                    @include d(celularLarge){
+                                        font-size: 19px;
+                                    }
+                                    @include d(celularMedium){
+                                        font-size: 15px;
+                                    }
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .amamos-combos{
+            .wrapper{
+                @include flexbox;
+                @include justify-content(center);
+                @include d(ipad){
+                    @include flex-flow(column);
+                }
+                ul.slick-dots{
+                    @include d(ipad){
+                        @include flexbox;
+                        @include justify-content(center);
+                    }
+                    li{
+                        button{
+                            @include d(ipad){
+                                font-size: 0;
+                                width: 12px;
+                                height: 12px;
+                                border: 1px solid var(--color-black);
+                                border-radius: 50%;
+                                margin: 0 5px;
+                                cursor: pointer;
+                            }
+                        }
+                        &.slick-active{
+                            button{
+                                @include d(ipad){
+                                    background: var(--color-black);
+                                }
+                            }
+                        }
+                    }
+                }
+                .box-banner{
+                    margin: 0 1.5em;
+                    @include d(ipad){
+                        margin: 0;
+                        padding: 5px;
+                    }
+                    a{
+                        img{
+                            @include t(.3s);
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                    &:hover{
+                        a{
+                            img{
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .marcas-que-amamos{
+            .wrapper{
+                @include flexbox;
+                @include justify-content(center);
+                max-width: 1547px;
+                margin: auto;
+                background: var(--color-white);
+                padding: 0;
+                border-radius: 80px 80px 80px 0px;
+                height: 500px;
+                margin-bottom: 2em;
+                @include d(qhd){
+                    max-width: 985px;
+                    height: auto;
+                }
+                @include d(ipad){
+                    max-width: 100%;
+                    @include flex-flow(column);
+                    padding: 0 1em;
+                    background: none;
+                }
+                .side-left{
+                    max-width: 780px;
+                    margin-right: 1em;
+                    @include d(qhd){
+                        max-width: 500px;
+                        height: auto;
+                    }
+                    @include d(ipad){
+                        max-width: 100%;
+                        margin: 0;
+                    }
+                    .slick-list{
+                        .slick-track{
+                            .box-banner{
+                                a{
+                                    img{
+                                        max-width: 100%;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .side-right{
+                    max-width: 750px;
+                    @include d(qhd){
+                        max-width: 470px;
+                        height: auto;
+                    }
+                    @include d(ipad){
+                        max-width: 100%;
+                    }
+                    .slick-list{
+                        .slick-track{
+                            .box-banner{
+                                a{
+                                    img{
+                                        max-width: 100%;
+                                        height: auto;
+                                    }
+                                    p{
+                                        padding: 0 1em;
+                                        margin-top: 10px;
+                                        font-size: 15px;
+                                        font-weight: 600;
+                                        @include d(celularMedium){
+                                            font-weight: 400;
+                                            font-size: 13px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .navigation-slick{
+                        @include flexbox;
+                        @include justify-content(center);
+                        @include align-items(center);
+                        margin-top: 10px;
+                        button.slick-prev{
+                            font-size: 0;
+                            cursor: pointer;
+                            &:before{
+                                content: "";
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='22' viewBox='0 0 12 22' fill='none'%3E%3Cpath d='M11 1L0.999998 11L11 21' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                width: 17px;
+                                height: 17px;
+                                display: block;
+                            }
+                        }
+                        button.slick-next{
+                            font-size: 0;
+                            cursor: pointer;
+                            &:before{
+                                content: "";
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='22' viewBox='0 0 12 22' fill='none'%3E%3Cpath d='M1 21L11 11L1 1' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                width: 17px;
+                                height: 17px;
+                                display: block;
+                            }
+                        }
+                        ul.slick-dots{
+                            display: flex !important;
+                            margin: 0 1em;
+                            li{
+                                margin: 0 .5em;
+                                button{
+                                    font-size: 0;
+                                    width: 12px;
+                                    height: 12px;
+                                    border: 1px solid var(--color-black);
+                                    border-radius: 50%;
+                                }
+                                &.slick-active{
+                                    button{
+                                        background: var(--color-black);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        figure{
+            .banner-final{
+                .banner-estatico{
+                    .box-banner{
+                        a{
+                            img{
+                                max-width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

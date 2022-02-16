@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'estrelacultural';
+  src:  url('fonts/estrelacultural.eot?973wmx');
+  src:  url('fonts/estrelacultural.eot?973wmx#iefix') format('embedded-opentype'),
+    url('fonts/estrelacultural.ttf?973wmx') format('truetype'),
+    url('fonts/estrelacultural.woff?973wmx') format('woff'),
+    url('fonts/estrelacultural.svg?973wmx#estrelacultural') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'estrelacultural' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-busca:before {
+  content: "\e900";
+  color: #5ca1c7;
+}
+.icon-carrinho:before {
+  content: "\e901";
+  color: #5ca1c7;
+}
+.icon-lista:before {
+  content: "\e902";
+  color: #5ca1c7;
+}
+.icon-login:before {
+  content: "\e903";
+  color: #5ca1c7;
+}

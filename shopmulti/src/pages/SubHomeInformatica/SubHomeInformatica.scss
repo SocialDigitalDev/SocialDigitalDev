@@ -1,0 +1,106 @@
+.sm-subhome-informatica-main{
+    background: var(--color-gray-ice);
+    section{
+        max-width: 1600px;
+        margin: auto;
+        @include d(hdplus){
+            margin: 0 4em;
+        }
+        h1{
+            text-align: left;
+            font-size: 25px;
+            font-weight: 600;
+            padding-top: 2em;
+            width: 100%;
+            position: relative;
+            font-style: normal;
+            font-family: Montserrat,sans-serif;
+        }
+        figure{
+            .wrapper{
+                .banner-subhome{
+                    padding: 3em 0;
+                    .box-banner{
+                        @include t(.4s);
+                        a{
+                            img{
+                                max-width: 100%;
+                            }
+                        }
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+        .section-banners-triplos{
+            .wrapper{
+                @include flexbox;
+                @include justify-content(space-between);
+                .box-banner{
+                    @include t(.4s);
+                    a{
+                        img{
+                            max-width: 100%;
+                        }
+                    }
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                    &:nth-of-type(2){
+                        @include d(hdplus){
+                            margin: 0 3.5em;
+                        }
+                    }
+                }
+            }
+        }
+        .section-categorias-subhome{
+            margin: 3em 0;
+            .wrapper{
+                @include flexbox;
+                @include justify-content(space-between);
+                .box-banner{
+                    @include t(.4s);
+                    @include d(hdplus){
+                        margin: 0px 1em;
+                    }
+                    a{
+                        img{
+                            max-width: 100%;
+                        }
+                        p{
+                            text-align: center;
+                            max-width: 100px;
+                            margin: 0 auto;
+                            margin-top: 10px;
+                            @include d(qhd){
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+        .vitrine-simples{
+            margin-bottom: 3em;
+            @include d(hdplus){
+                margin: auto 0;
+                margin-bottom: 3em;
+            }
+            &.ofertas-em-destaque, &.audio-e-som{
+                margin-bottom: 0em;
+            }
+        }
+        .vitrine-tripla{
+            @include d(hdplus){
+                margin: 2em 0;
+                margin-bottom: 0em;
+            }
+        }
+    }
+}

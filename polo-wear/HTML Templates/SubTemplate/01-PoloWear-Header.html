@@ -1,0 +1,55 @@
+<header class="header">
+    <div class="top-bar">
+        <vtex.cmc:TopBarTexto />
+    </div>
+    <div class="container">
+        <div class="container-center">
+            <span class="btn-menu-mobile"> </span>
+            <div id="logo-top">
+                <h1 class="item-logo">
+                    <a href="/">
+                        <img src="/arquivos/logo-polo-wear-black.png" alt="Polo Wear" />
+                    </a>
+                </h1>
+            </div>
+
+            <div class="header-user-links">
+                <ul class="header-icons">
+                    <li class="header-busca"></li>
+                    <li class="header-login"></li>
+                    <li class="header-cart carrinho">
+                        <a href="/checkout">
+                            <span class="icon-cart"></span>
+                            <div class="info-cart">
+                                <span class="qtd-cart"> </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="header-spotify"><span></span></li>
+                </ul>
+                <div class="user-name__account">
+                    <div class="link-help">
+                        <vtex.cmc:welcomeMessage />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estrutura menu 
+    <div class="container menu-topo">
+        <div class="container-center">
+            <nav class="header-principal__menu">
+                <ul class="menu-principal">
+                </ul>
+            </nav>
+            <div class="busca-topo">
+                <span class="busca-topo__busca-icon"></span>
+            </div>
+        </div>
+    </div>-->
+    <div class="busca-topo__busca-container">
+        <vtex.cmc:fullTextSearchBox/>
+    </div>
+
+</header>

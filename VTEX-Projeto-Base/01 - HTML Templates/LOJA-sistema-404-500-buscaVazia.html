@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+    <head>
+
+        <vtex:contentPlaceHolder id="title"/>
+        <vtex:metaTags/>
+        <vtex:template id="LOJA-styles"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            
+    </head>
+
+    <body>
+    
+        <!-- Chamada do cabeçalho da loja -->
+
+        <vtex:template id="LOJA-header" />
+
+        <main>
+
+            <!-- Trecho para breadCrumb -->
+
+            <section>
+            
+                <div class="container bread">
+                    <div class="container-center">
+                        <ul>
+                            <li class="home"><a href="/"> Home </a></li>
+                            <li> <vtex:contentPlaceHolder id="LOJA-bread" /> </li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </section>
+
+            <!-- Trecho para breadCrumb -->
+        
+            <section>
+                <div class="container page-erro">
+                    <div class="container-center">
+                        <div class="conteudo-page-erro">
+                            <h3>
+                                <vtex:contentPlaceHolder id="LOJA-texto-erro" />
+                            </h3>
+                            <p> O que acha de realizar uma nova busca? </p>
+                            
+                            <div class="dicas">
+                                <p>
+                                    Tente fazer sua busca seguindo estas dicas;<br/>
+                                    Verifique se ocorreu algum erro de digitação;<br/>
+                                    Tente utilizar uma única palavra;<br/>
+                                    Reescreva sua busca utilizando termos mais genéricos.
+                                </p>
+                            </div>
+                            
+                            <a href="/">
+                                <span class="voltar-home">
+                                    Voltar para home
+                                </span>
+                            </a>
+
+                            <p> Ou veja algum de nossos destaques abaixo: </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container slide-prod prateleira-01">
+                    <div class="container-center">
+                        <div class="titulo-prateleira">
+                            <h2>Recomendamos <b>para você</b></h2>
+                            <span class="box-heading-pneu"></span>
+                        </div>
+                        <vtex:contentPlaceHolder id="LOJA-recomendacoes" />
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <!-- Chamada para o rodapé -->
+
+        <vtex:template id="LOJA-footer" /> 
+        
+        <!-- Chamada para os scripts Js da loja -->
+
+        <vtex:template id="LOJA-scripts" />
+
+    </body>
+</html>

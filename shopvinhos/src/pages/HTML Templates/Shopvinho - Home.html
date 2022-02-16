@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+    <title> Shop Vinho </title>
+    <vtex:metaTags/>
+    <vtex:template id="Shopvinho - Styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <vtex:template id="Shopvinho - Header"/>
+    <main>      
+        <section class="slider_principal">
+            <div class="container slide">
+                <div class="slide-principal">
+                    <vtex:contentPlaceHolder id="Banner Principal - Desktop" />
+                </div>
+            </div>
+        
+            <div class="container slide-mobile">
+                <vtex:contentPlaceHolder id="Banner Principal - Mobile" />
+            </div>
+        </section>
+
+        <!-- Tipos de Vinhos -->
+        <section class="main_categorias">
+            <div class="wrapper">
+                <div class="titulo-prateleira">
+                    <h2> Tipos de vinhos </h2>
+                </div>
+                <div class="categorias-section">
+                    <ul class="categorias_box">
+                        <vtex.cmc:shopvinhoTiposVinhos/>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mais vendidos -->
+        <section class="main_vendidos">
+            <div class="wrapper">
+                <div class="titulo-prateleira">
+                    <h2> Mais vendidos </h2>
+                </div>
+                <div class="shopvinho-prateleira">
+                    <vtex:contentPlaceHolder id="Prateleira - Mais Vendidos"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Momentos / Paises -->
+        <section class="main_momentos-paises">
+            <div class="wrapper banner-momentos">
+                <div class="prod-left">
+                    <div class="titulo-prateleira">
+                        <h2> Momentos de consumo/promo </h2>
+                    </div>
+                    <vtex:contentPlaceHolder id="Banner - Melhores Marcas"/>
+                </div>
+                <div class="prod-right shopvinho-paises">
+                    <div class="titulo-prateleira">
+                        <h2> Países </h2>
+                    </div>
+                    <vtex:contentPlaceHolder id="Prateleira - Bandeira Paises"/>
+                </div>
+            </div>
+        </section>
+        
+         <!-- Prateleira Ofertas  -->
+         <section class="main_ofertas">
+            <div class="wrapper prateleira-ofertas ">
+                <div class="titulo-prateleira">
+                    <div class="contador_ofertas flags-promo">
+                        <h2> Ofertas </h2>
+                        <p class="flag tempo-regressivo-|28-12-2022-23-10">Tempo Regressivo |28/12/2022 23:10</p>
+                    </div>                
+                </div>
+                <div class="prod-left">
+                    <vtex:contentPlaceHolder id="Banner - Melhores Ofertas"/>
+                </div>
+                <div class="prod-right shopvinho-prateleira">
+                    <vtex:contentPlaceHolder id="Prateleira - Ofertas" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Combinar com -->
+        <section class="main_combina-com">
+            <div class="wrapper">
+                <div class="prod-left">
+                    <vtex:contentPlaceHolder id="Banner - Combinar Esquerda"/>
+                </div>
+                <div class="prod-right shopvinho-prateleira">
+                    <div class="titulo-prateleira">
+                        <h2> Combinar com </h2>
+                    </div>
+                    <vtex:contentPlaceHolder id="Banners - Combinar com"/>   
+                </div>
+            </div>
+        </section>
+        
+        <!-- Kits -->
+        <section class="main_kits">
+            <div class="wrapper prateleira-kits">
+                <div class="titulo-prateleira">
+                    <h2> Kits </h2>
+                </div>
+                <section class="prateleira02 prateleira">
+                    <div class="prateleiraTabsTitles">
+                        <span class="prateleiraTabsTitle01 active">Até R$ 100,00 </span>
+                        <span class="prateleiraTabsTitle02">Até R$ 150,00</span>
+                        <span class="prateleiraTabsTitle03">Até R$ 200,00</span>
+                        <span class="prateleiraTabsTitle04">Até R$ 250,00</span>
+                    </div>
+                
+                    <div class="shopvinho-prateleira prateleiraTabs prateleiraTabs01">
+                        <vtex:contentPlaceHolder id="Ate 100" />
+                    </div>
+                    <div class="shopvinho-prateleira prateleiraTabs prateleiraTabs02">
+                        <vtex:contentPlaceHolder id="Ate 150" />
+                    </div>
+                    <div class="shopvinho-prateleira prateleiraTabs prateleiraTabs03">
+                        <vtex:contentPlaceHolder id="Ate 200" />
+                    </div>
+                    <div class="shopvinho-prateleira prateleiraTabs prateleiraTabs04">
+                        <vtex:contentPlaceHolder id="Ate 250" />
+                    </div>
+                    
+                </section>
+            </div>
+        </section>
+        
+        <!-- Marcas -->
+        <section class="main_marcas">
+            <div class="wrapper marcas-mundo">
+                <div class="titulo-prateleira">
+                    <h2> Marcas do mundo </h2>
+                </div>
+                <vtex:contentPlaceHolder id="Marcas do mundo" />
+            </div>
+        </section>
+
+        <section class="teste_lazy">
+            <!-- Placeholder -->
+            <div class="your-class js--lazyload has--lazyload" data-noscript="">
+                <noscript><vtex:contentPlaceHolder id="Main-Banner" /></noscript>
+            </div>
+        </section>
+    </main>
+    <vtex:template id="Shopvinho - Footer" />  
+    <vtex:template id="Shopvinho - Scripts" />
+</body>
+</html>

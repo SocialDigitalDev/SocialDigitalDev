@@ -1,0 +1,25 @@
+.nk-cookie-banner {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 999;
+  border-radius: 0px;
+  display: none;
+  background: #F7F7F7;
+  padding: 10px;
+  box-shadow: 30px 2px 0 0 rgb(0 0 0 / 9%);
+  text-align: center;
+}
+
+.nk-cookie-banner button{
+  background-color: #39b54a;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  white-space: nowrap;
+  cursor: pointer;
+  margin-left: 30px;
+}

@@ -1,0 +1,141 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'Home';
+    - var $templateClass = 'pg-home';
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content
+    section
+        figure
+            div.wrapper
+                div.banner-carousel.banner-principal.desktop
+                    vtex:contentPlaceHolder(id=`banner-principal-desktop`)/
+                div.banner-carousel.banner-principal.mobile
+                    vtex:contentPlaceHolder(id=`banner-principal-mobile`)/
+                div.banner-menu
+                    div.banner-menu-masc
+                        ul.menu-masc-lista
+                            h3 Masculino
+                            vtex(.cmc:bannerMenuMascLi)/
+                    div.banner-menu-fem
+                        ul.menu-masc-lista
+                            h3 Feminino
+                            vtex(.cmc:bannerMenuFemLi)/
+
+    section
+        div.filtro-rapido
+            div.wrapper
+                vtex(.cmc:filtroRapido)/
+
+    section
+        div.banner-vitrine-countdown
+            div.wrapper
+                div.prod-left
+                    vtex:contentPlaceHolder(id=`banner-ofertas-tempo-limitado`)/
+                    div.vitrine-title
+                        h2 Ofertas<span> Por tempo </span>Limitado
+                div.prod-right
+                    vtex:contentPlaceHolder(id=`vitrine-ofertas-tempo-limitado`)/
+
+    section
+        div.compre-por-categoria
+            div.wrapper
+                vtex:contentPlaceHolder(id=`compre-por-categoria`)/    
+
+    section
+        div.promocoes-por-marcas
+            div.vitrine-title
+                h2 Promoções por Marcas
+            div.wrapper
+                vtex:contentPlaceHolder(id=`promocoes-por-marcas`)/    
+
+    section
+        div.carrossel-marcas
+            div.wrapper
+                vtex:contentPlaceHolder(id=`carrossel-marcas`)/
+
+    section
+        div.vitrine-full.leve-antes-que-acabe
+            div.vitrine-title
+                h2 Leve antes que acabe!
+            div.wrapper
+                vtex:contentPlaceHolder(id=`leve-antes-que-acabe`)/
+
+    section
+        div.compra-na-medida-certa
+            div.vitrine-title
+                h2 Compra na <span>medida certa</span>
+            div.wrapper
+                vtex:contentPlaceHolder(id=`compra-na-medida-certa`)/
+
+    section
+        div.novidades-por-categoria
+            div.vitrine-title
+                h2 Novidades por <span>categoria</span>
+            div.wrapper
+                div.prateleira-tabs-titulo
+                    ul.tabs-prateleira
+                        li.tabs-links(data-tab=`prat-1`) Masculino
+                        li.tabs-links.tab-ativo(data-tab=`prat-2`) Feminino
+                        li.tabs-links(data-tab=`prat-3`) Kids
+                        li.tabs-links(data-tab=`prat-4`) Cosméticos
+                div#prat-1.tab-content.imageTitle(tab-content=`masculino`)
+                    vtex:contentPlaceHolder(id=`categoria-masculino`)/
+                div#prat-2.tab-content.tab-ativo.imageTitle(tab-content=`feminino`)
+                    vtex:contentPlaceHolder(id=`categoria-feminino`)/
+                div#prat-3.tab-content.imageTitle(tab-content=`kids`)
+                    vtex:contentPlaceHolder(id=`categoria-kids`)/
+                div#prat-4.tab-content.imageTitle(tab-content=`cosmeticos`)
+                    vtex:contentPlaceHolder(id=`categoria-cosmeticos`)/
+
+    section
+        div.marquee-rotativo
+            div.marquee-wrapper
+                div.wrapper
+                    vtex:contentPlaceHolder(id=`textos-marquee`)/
+
+    section
+        div.ofertas-imperdiveis
+            div.vitrine-title
+                h2 Ofertas Imperdíveis
+            div.wrapper        
+                vtex:contentPlaceHolder(id=`ofertas-imperdiveis`)/
+
+    section 
+        div.amamos-combos
+            div.vitrine-title
+                h2 Amamos Combos
+            div.wrapper        
+                vtex:contentPlaceHolder(id=`amamos-combos-banner`)/  
+
+    section 
+        div.vitrine-final
+            div.vitrine-title
+                h2 Vitrine final
+            div.wrapper        
+                vtex:contentPlaceHolder(id=`vitrine-final`)/  
+
+    section 
+        div.marcas-que-amamos
+            div.vitrine-title
+                h2 Marcas que <span> amamos </span>
+            div.wrapper        
+                div.side-left  
+                    vtex:contentPlaceHolder(id=`marcas-que-amamos`)/
+                div.side-right  
+                    vtex:contentPlaceHolder(id=`marcas-que-amamos-direita`)/
+    section 
+        figure
+            div.banner-final
+                div.banner-estatico.banner-final.desktop
+                    vtex:contentPlaceHolder(id=`banner-final-desktop`)/
+                div.banner-estatico.banner-final.mobile
+                    vtex:contentPlaceHolder(id=`banner-final-mobile`)/
+
+block append scripts
+    script(type='text/javascript', src=`/arquivos/${$templateName}.js`) 

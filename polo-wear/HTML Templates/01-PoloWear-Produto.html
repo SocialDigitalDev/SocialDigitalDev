@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+
+    <title> <vtex.cmc:productPageTitle /> </title>
+    <vtex:metaTags/>
+    <vtex:template id="01-PoloWear-css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <vtex.cmc:productRichSnippets showFacebook="1" />
+
+</head>
+
+<body>
+
+    <vtex.cmc:productRichSnippets showGoogle="1" />
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <vtex:template id="01-PoloWear-Header" />
+
+    <main>
+
+        <!-- Estrutura Breadcrumb -->
+
+        <section>
+
+            <div class="container bread">
+                <div class="container-center">
+
+                    <vtex.cmc:BreadCrumb />
+
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="container produto-all">
+                <div class="container-center">
+
+                    <!-- Estrutura para imagem do produto -->
+
+                    <div id="produtoDiv-esquerda">
+
+                        <figure>
+
+                            <div class="img-produto">
+                                <vtex.cmc:ProductImage zoom="on" />
+                            </div>
+
+                        </figure>
+
+                    </div>
+
+                    <!-- Estrutura para as principais informações do produto -->
+
+                    <div id="produtoDiv-direita">
+
+                        <h1 class="nome-prod">
+                            <vtex.cmc:productName/>
+                        </h1>
+                        
+                        <span class="cod-prod">
+                            <vtex.cmc:skuReference/>	
+                        </span>
+                        <!-- Estrutura para detalhes do produto -->
+                        <div class="container detalhes-prod">
+                            <!-- Estrutura descricao produto -->
+                            <div id="descricao-produto">
+                                <div class="container-center">
+                                    <h2 class="titulo"> Descrição </h2>
+                                    <vtex.cmc:ProductDescription/>
+                                    <vtex.cmc:productSpecification/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<span class="curta-descricao">
+                            <h2> Informações do produto </h2>
+                            <vtex.cmc:productDescriptionShort />
+                        </span>-->
+
+                        <div class="variantes-sku">
+                            <vtex.cmc:skuSelection />
+                        </div>
+
+                        <vtex.cmc:skuPrice/>
+                        <div class="produto-buy__container">
+                            <div class="01-PoloWear-produto__buy-quant">
+                                <div class="qtdPrateleira">
+                                    <span class="btnDec"></span>
+                                    <input type="text" class="qtdVal" value="1" />
+                                    <span class="btnAcr"></span>
+                                </div>
+                            </div>
+                            <div class="01-PoloWear-produto__buy-button">
+                                <vtex.cmc:BuyButton/>
+                            </div>
+                        </div>
+                        <div class="compra-segura">
+                            Compra <b>Segura</b>
+                        </div>
+
+                        <div class="retirada__loja">
+                            <span class="retira__icon"></span><span class="retira__texto">Retire na loja</span>
+                            <span class="retira__free">GRÁTIS</span>
+                        </div>
+
+                        <div class="calc-frete">
+                            <div class="cep">
+                                <h3><span class="icon__frete"></span> Calcule o frete e prazo de entrega.</h3>
+                                <vtex.cmc:shippingValue/>
+                                <script type="text/javascript">
+                                    $(document).ready( function(){
+                                        ShippingValue();
+                                    });
+                                </script>
+                           </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Estrutura de compre junto -->
+                    <section>
+                        <div class="container slideCompreJunto">
+                            <div class="container-center">
+                                <div class="titulo-prateleira">
+                                    <h2 class="titulo">Aproveite e <b>Compre Junto</b>
+                                        <span class="box-heading-pneu"></span>
+                                    </h2>
+                                </div>  
+                                <vtex.cmc:BuyTogether/>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Estrutura de Quem viu, viu tbm -->
+                    <section>
+                        <div class="container slide-prod qvvt">
+                            <div class="container-center">
+                                <div class="titulo-prateleira">
+                                    <h2>Quem viu, <b>viu também</b>
+                                        <span class="box-heading-pneu"></span>
+                                    </h2>
+                                </div>
+                                <vtex:contentPlaceHolder id="01-PoloWear-qvvt" />
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chamada para o rodapé -->
+    <vtex:template id="01-PoloWear-Footer" />
+    <!-- Chamada para os scripts Js da loja -->
+    <vtex:template id="01-PoloWear-js" />
+</body>
+
+</html>

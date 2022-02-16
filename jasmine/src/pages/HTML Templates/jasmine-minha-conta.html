@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+    <head>
+        <vtex:contentPlaceHolder id="title"/>
+        <vtex:metaTags/>
+        <vtex:template id="jasmine-styles"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+        <vtex:template id="jasmine-header" />
+        <main>
+            <section>
+                <div class="container accountPage">
+                    <div class="container-center">
+                        <vtex.cmc:accountUserProfile />
+        
+                        <vtex.cmc:accountAddress/>
+    
+                        <div class="orders-account">
+                            <h1> Meus pedidos </h1>
+    
+                            <p> 
+                                <a href="/account/orders"> Ir para os meus pedidos </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <vtex:template id="jasmine-footer" /> 
+        <vtex:template id="jasmine-scripts" />    </body>
+</html>

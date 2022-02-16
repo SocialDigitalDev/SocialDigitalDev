@@ -1,0 +1,30 @@
+@import url("https://use.fontawesome.com/releases/v5.12.1/css/all.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+// Font Family
+$montserrat: "Montserrat", sans-serif;
+$fontawesome: "Font Awesome 5 Free";
+
+@font-face{
+    font-family: 'outletdasmarcas';
+    src:url(/arquivos/outletdasmarcas.css);
+    src:url(/arquivos/outletdasmarcas.css#iefix) format('embedded-opentype'), url(/arquivos/outletdasmarcas.woff.css) format('woff');
+    font-weight:normal;
+    font-style:normal;
+}
+
+// Font base em px.
+$font-base: 16;
+
+// Cálcula fonte de px para rem.
+@mixin f($fontSize, $lineHeight: ($fontSize + 2)) {
+
+	$font-rem: ($fontSize / $font-base);
+
+	@if $fontSize == $fontSize{
+		font-size: $fontSize + px; // Para IE6, IE7, IE8
+		font-size: $font-rem + rem;
+		line-height: $lineHeight + px;
+	}
+
+}

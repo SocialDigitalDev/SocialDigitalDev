@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+
+    <title>Maxior Joias</title>
+    <vtex:metaTags/>
+    <vtex:template id="MX-styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+</head>
+
+<body>
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <vtex:template id="MX-header" />
+
+    <main>        
+        <!-- Estrutura para slide principal -->
+        <figure>
+            <div class="container slide">
+                <div class="slide-principal">
+                    <vtex:contentPlaceHolder id="MX-slide-principal" />
+                </div>
+            </div>
+            
+            <div class="container slide-mobile">
+                <vtex:contentPlaceHolder id="MX-slide-principal-mobile" />
+            </div>
+        </figure>
+        
+        <!-- Estrutura para informativo -->
+        <section>
+            <div class="container informativos">
+                <div class="container-center">
+                    <vtex.cmc:JBInformativo/>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Destaques -->
+        <section>
+            <div class="container mx-destaques">
+                <div class="titulo-prateleira">
+                     <h2> Conheça as categorias </h2>
+                </div>
+                <div class="container-center slick-destaques">
+                    <vtex:contentPlaceHolder id="MX-Banners_Destaques" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Banners Coleções -->
+        <section>
+            <div class="container mx-banners-colecoes">
+                 <div class="titulo-prateleira">
+                     <h2> Destaques </h2>
+                </div>
+                <div class="container-center slick-colecoes">
+                    <vtex:contentPlaceHolder id="MX-Colecoes" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabs Home - LANCAMENTOS/OS MAIS DESEJADOS/OUTLET -->
+        <section class="multi-carrossel carrossel-01">
+            <div class="container abas-home">
+                <div class="container-center">
+                    <div class="abas_vitrine">
+                        <ul>
+                            <li><a href="" class="carrossel_aba_1 active">Lançamentos</a></li>
+                            <li><a href="" class="carrossel_aba_2">Os mais desejados</a></li>
+                            <li><a href="" class="carrossel_aba_3">Outlet</a></li>
+                        </ul>
+                    </div>
+                    <div class="container-prateleiras_abas">
+                        <div class="carrossel_aba carrossel_aba_1 active">
+                            <vtex:contentPlaceHolder id="Lancamentos" />
+                        </div>
+                        <div class="carrossel_aba carrossel_aba_2">
+                            <vtex:contentPlaceHolder id="Os-Mais-Desejados" />
+                        </div>
+                        <div class="carrossel_aba carrossel_aba_3">
+                            <vtex:contentPlaceHolder id="Outlet" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Tabs Home 02 - AMULETOS E PATUA/RELIGIOSOS -->
+         <section class="simple-carrossel carrossel-02 ">
+            <div class="container abas-home">
+                <div class="titulo-prateleira">
+                     <h2> Amuletos e Patuás </h2>
+                </div>
+                <div class="container-center">
+                    
+                    <div class="container-prateleiras_patua">
+
+                        <div class="carrossel_quatro carrossel_4">
+                            <div class="prat-left__img">
+                                <vtex:contentPlaceHolder id="MX-banner_Amuletos" />
+                            </div> 
+
+                            <div class="prat-right__amuletos">
+                                <vtex:contentPlaceHolder id="MX-prateleira_Amuletos" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Tabs Home 03 - Ocasioes Especiais - CASAMENTOS/NASCIMENTOS/FORMATURA/BODAS/CARTAO -->
+         <section class="ocasioes-especiais">
+            <div class="container">
+                <div class="container-center">
+                    <div class="titulo-prateleira">
+                        <h2> Ocasiões Especiais </h2>
+                        <h4> Eternize momentos inesquecíveis </h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="multi-carrossel carrossel-03">
+            <div class="container abas-home">
+                <div class="container-center">
+                    <div class="abas_vitrine_tres">
+                        <ul>
+                            <li><a href="" class="carrossel_aba_4 active">Casamento</a></li>
+                            <li><a href="" class="carrossel_aba_5">Nascimentos</a></li>
+                            <li><a href="" class="carrossel_aba_6">Formatura</a></li>
+                            <li><a href="" class="carrossel_aba_7">Bodas</a></li>
+                            <!--<li><a href="" class="carrossel_aba_8">Cartão Presente</a></li>-->
+                        </ul>
+                    </div>
+                    <div class="container-prateleiras_abas">
+                        <div class="carrossel_aba_tres carrossel_aba_4 active"><vtex:contentPlaceHolder id="Casamento" /></div>
+                        <div class="carrossel_aba_tres carrossel_aba_5"><vtex:contentPlaceHolder id="Nascimentos" /></div>
+                        <div class="carrossel_aba_tres carrossel_aba_6"><vtex:contentPlaceHolder id="Formatura" /></div>
+                        <div class="carrossel_aba_tres carrossel_aba_7"><vtex:contentPlaceHolder id="Bodas" /></div>
+                        <!--<div class="carrossel_aba_tres carrossel_aba_8"><vtex:contentPlaceHolder id="Cartão-Presente" /></div>-->
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SEÇÃO DE BANNERS - NOIVAS/INFANTIS/MASCULINO -->
+        <section>
+            <div class="container banner-departamentos">
+                <div class="titulo-prateleira">
+                     <h2> Veja também </h2>
+                </div>
+                <div class="container-center">
+                    <vtex:contentPlaceHolder id="MX-Banners-departamentos" />
+                </div>
+            </div>
+        </section>
+        
+        <!-- SEÇÃO DE BANNERS 02 - HISTORIA/REVENDEDORA -->
+        <section>
+            <div class="container banner-departamentos-02">
+                <div class="container-center">
+                
+                    <div class="banner-quem_somos">
+                        <div class="titulo-prateleira">
+                            <h2> Quem Somos </h2>
+                        </div>
+                        <vtex:contentPlaceHolder id="MX-Banner-quem-somos" />
+                    </div>
+                
+                    <div class="banner-revenda">
+                        <div class="titulo-prateleira">
+                            <h2> Revenda Digital </h2>
+                        </div>
+                          <vtex:contentPlaceHolder id="MX-Banner-revenda" />
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <!-- Instafeed -->
+        <section>
+            <div class="titulo-prateleira">
+                <div class="container section-instafeed">
+                    <div class="container-center">
+                        <h2>Joias Brasil no Instagram</h2>
+                        <p> Siga @joiasbrasiloficial e fique por dentro das novidades </p>
+                    </div>
+                    <div id="instafeed">
+                        <div class="image-insta-wrapper">
+                            <div class="img-insta">
+                                <a href="https://www.instagram.com/joiasbrasiloficial">
+                                    <img src="/arquivos/image-1.jpg?v=637502144077000000"/>
+                                </a>
+                            </div>
+                            <div class="img-insta">
+                                <a href="https://www.instagram.com/joiasbrasiloficial">
+                                    <img src="/arquivos/image-2.jpg?v=637502144077070000"/>
+                                </a>
+                            </div>
+                            <div class="img-insta">
+                                <a href="https://www.instagram.com/joiasbrasiloficial">
+                                    <img src="/arquivos/image-3.jpg?v=637502144064230000"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <vtex:template id="MX-footer" />  
+    <vtex:template id="MX-scripts" />
+    <script src="/arquivos/MX-abas-home.min.js"></script>
+
+</body>
+</html>

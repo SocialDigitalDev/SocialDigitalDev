@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+    <title> FOR FIT BOX </title>
+    <vtex:metaTags/>
+    <vtex:template id="4fit-css" />
+</head>
+
+<body>
+    <vtex:template id="4fit-header" />
+    <main>
+        <!-- Estrutura para slide principal -->
+        <figure>
+            <div class="container slide">
+                <div class="slide-principal">
+                    <vtex:contentPlaceHolder id="forfit_banner-principal" />
+                    <div class="forfit-texto_banner">
+                        <vtex:contentPlaceHolder id="4fit_texto-banner"/>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container slide-mobile">
+                <vtex:contentPlaceHolder id="forfit_banner-principal-mobile" />
+                <div class="forfit-texto_banner">
+                    <vtex:contentPlaceHolder id="4fit_texto-banner-mobile"/>
+                </div>
+            </div>
+        </figure>
+
+        <!-- Estrutura para informativo -->
+        <section>
+            <div class="container informativos">
+                <div class="container-center">
+                    <vtex.cmc:ForFitInformativo/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estrutura para banners-->
+        <section>
+            <div class="container banner-section">
+               
+                <vtex:contentPlaceHolder id="forfit_banner-alongamento" />
+                
+            </div>
+        </section>
+
+        <!-- Estrutura Como Funciona -->
+        <section>
+            <div class="container slide-prod como-funciona">
+                <div class="container-center">
+                    <div class="titulo-prateleira">
+                        <h2>COMO FUNCIONA?</h2>
+                    </div>
+                    <vtex:contentPlaceHolder id="forfit_como-funciona" />
+                    
+                    <section class="section-assinatura">
+                        <div class="container">
+                            <h1 class="title"> Como a assinatura funciona durante o mês? </h1>
+                            <div class="box-funciona">
+                                <div class="box-info-func">
+                                    <img data-src="/arquivos/assinatura-agenda.png" class="" src="/arquivos/assinatura-agenda.png" />
+                                    <p>As assinaturas são feitas até o último dia de cada mês. Ou seja, para receber a caixa de março, você deve assinar até o último dia de fevereiro. </p>
+                                </div>
+                                <div class="box-info-func">
+                                    <img data-src="/arquivos/assinatura-pagamento-icon.png" class="" src="/arquivos/assinatura-pagamento-icon.png" />
+                                    <p>A primeira cobrança é efetuada no dia escolhido da assinatura(05,15 e 25). A partir do mês seguinte, a cobrança será efetuada na data selecionada e você receberá as informações do
+            pagamento por e-mail.</p>
+                                </div>
+                            </div>
+                            <div class="box-funciona">
+                                <div class="img"><img class="" src="/arquivos/forfitbox-barra-fluxo.png"  /></div>
+                                <div class="img-mobile"><img data-src="/arquivos/forfitbox-barra-fluxo-mobile.png" /></div>
+                                <div class="for-condicoes">
+                                    <p>* Assinaturas abertas para pedidos do mês seguinte para novos assinantes</p>
+                                    <p>* Entrega dos pedidos para os assinantes que fizeram até o último dia do mês anterior!</p>
+                                    <p>* Pedidos realizados até dia 5, serão adicionados D+15 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <button class="forfit-button"><a href="/institucional/como-assinar" target="_blank">DÚVIDAS DE COMO ASSINAR? CLIQUE AQUI</a></button>
+                    
+                </div>
+            </div>
+        </section>
+
+         <!-- Economia de verdade -->
+         <section>   
+            <div class="container economia-de-verdade">
+                    <div class="titulo-prateleira">
+                        <h2>ECONOMIA DE VERDADE<br /> TODOS OS MESES</h2>
+                        <!--<button class="forfit-button"><a id="login"> Acesse e experimente! </a></button>-->
+                    </div>
+                    <vtex:contentPlaceHolder id="forfit_banner-economia" />
+            </div>
+        </section>
+        
+        <!--Produtos Avulsos -->
+        <section class="container slide-prod forfit-produtos-avulsos">
+            <div class="container-center">
+                <div class="titulo-prateleira">
+                    <h2> PRODUTOS A PRONTA ENTREGA </h2>
+                </div>
+                <div class="produtos-slider">
+                    <vtex:contentPlaceHolder id="forfit_produtos-avulsos_slider" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Duvidas -->
+        <section>
+            <div class="container perguntas-respostas">
+                <div class="container-center">
+                    <div class="titulo-prateleira">
+                        <h2>DÚVIDAS</h2>
+                    </div>
+                       <ul class="questions-faq">
+                            <vtex:contentPlaceHolder id="forfit_QuestionsAnswers" />
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--Escolha produtos  -->
+        <section class="container comecar">
+            <div class="container-center">
+                <div class="forfit-comecar">
+                    <vtex:contentPlaceHolder id="forfit_comecar" />
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <vtex:template id="4fit-footer" />
+    <vtex:template id="4fit-js" />
+</body>
+</html>

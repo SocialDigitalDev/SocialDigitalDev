@@ -1,0 +1,54 @@
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+#set($campoProduto = $product.ProductField(id))
+
+#if ($product.ListPriceMinusBestPriceInPercent > 0)
+	<div class="priceLabel">$product.ListPriceMinusBestPriceInPercent</div>
+#end
+<h1 class="lead titulo-produto__avulso>
+    <a title="$escapedName" href="$uri">
+        $product.Name
+    </a>
+</h1>   
+<a class="productImage js--lazyload has--lazyload" data-noscript="" title="$escapedName" href="$uri">
+    $product.GetImageTag(2)
+</a>
+
+<div class="data" data-id="$id">
+    
+    #if ($product.IsInStock)
+        <div class="price">
+            <a title="$escapedName" href="$uri">
+                #if ($product.HasBestPrice)
+                    <span class="oldPrice">
+                        <b>$product.ListPrice</b>
+                    </span>
+                    <span class="bestPrice">
+                        $product.BestPrice
+                    </span>
+                #else
+                    <span class="oldPrice">
+                    </span>
+                    <span class="bestPrice">
+                         $product.BestPrice
+                    </span>                    
+                #end
+                
+
+            </a>
+
+            <span class="bt-comprar bt-prod__avulsos" data-id="$idSku"> 
+                <a href="$uri">
+                    <span class="buy-icon"></span> Comprar 
+                </a>
+            </span>
+        </div>
+        
+    #else
+        <p class="outOfStock">Produto Esgotado</p> 
+    #end
+    
+</div>
+

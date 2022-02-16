@@ -1,0 +1,103 @@
+<footer class="footer">
+    <div class="container newsletter">
+        <div class="newsletter__container">
+            <div class="banner-desktop">
+                <img alt="Fundo Newsletter" src="/arquivos/Banner-Newsletter.png" />
+            </div>
+            <div class="banner-mobile">
+                <!--<img-->
+                <!--  alt="Fundo Newsletter Mobile"-->
+                <!--  src="/arquivos/Banner-Newsletter-Mobile.png?v=2"-->
+                <!--/>-->
+            </div>
+            <div class="newsletter__container__content">
+                <div class="newsletter__container__content__text">
+                    <strong>Receba novidades e descontos</strong>
+                    <p>
+                        Caadastre-se e fique por dentro das nossas novidades e descontos exclusivos!
+                    </p>
+                </div>
+                <div id="mensagem"></div>
+                <form class="newsletter__container__content__form">
+                    <input type="text" id="nome" required="required" placeholder="*Seu nome" />
+                    <input type="email" id="email" required="required" placeholder="*Email" />
+                    <button>Inscrever-se</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <ul class="footer__content">
+            <li class="footer__content__item">
+                <img alt="Piny Logo" src="/arquivos/logo-piny.png" />
+                <p>
+                    A máscara antiacne Piny é uma máscara de argila facial à base de ingredientes naturais que absorve o
+                    óleo que obstrui os poros, limpando a pele profundamente.
+                </p>
+                <div class="footer__content__item__icons">
+                    <a href="#">
+                        <vtex.cmc:face />
+                    </a>
+                    <a href="#">
+                        <vtex.cmc:insta />
+                    </a>
+                    <a href="#">
+                        <vtex.cmc:youtube />
+                    </a>
+                </div>
+            </li>
+            <li class="footer__content__item links">
+                <h2>Links rápidos</h2>
+                <div class="footer__content__item__links">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/sobre">Sobre a Piny</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="/faq">Perguntas Frequentes</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/institucional/contato">Contato</a></li>
+                        <li>
+                            <a href="/institucional/privacidade">Políticas de Privacidade</a>
+                        </li>
+                        <li><a href="/institucional/troca">Troca de Produtos</a></li>
+                        <li><a href="/institucional/entrega">Informações de entrega</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="footer__content__item instagram">
+                <h2>Instagram</h2>
+                <div id="instagram"></div>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<div class="e-copy container">
+    <p>
+        Copyright © 2021. Todos os direitos reservados. Todas as marcas e suas
+        imagens são de propriedade de seus respectivos donos. É vedada a
+        reprodução,<br />
+        total ou parcial, de qualquer conteúdo sem expressa autorização.
+    </p>
+    <div class="e-copy__images">
+        <img alt="VTEX" src="/arquivos/logo-vtex.png" />
+        <img alt="Card Flags" src="/arquivos/payment-footer.png" />
+    </div>
+</div>
+
+<div id="history" style="display: none">
+    <vtex.cmc:navigationHistory />
+</div>
+
+
+<section id="avisolgpd">
+    <div class="avisolgpd-text">
+        <span>Cookies: a gente guarda estatísticas de visitas para melhorar sua experiência de navegação. Ao continuar,
+            você concorda com nossa política de privacidade.</span>
+        <span> Para mais informações, consulte a nossa <a href="/politica-de-privacidade">Política de Privacidade.</a>
+        </span>
+    </div>
+    <button title="Concordar e fechar" class="avisolgpd-close" onclick="Avisolgpd.aceito('avisolgpd')">CONCORDAR E
+        FECHAR</button>
+</section>

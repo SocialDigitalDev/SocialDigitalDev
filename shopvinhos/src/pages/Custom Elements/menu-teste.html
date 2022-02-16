@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+    <meta charset='UTF-8'>
+    <title></title>
+    <meta name="robots" content="noindex">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+body{
+     background: #f8f8f8;
+     font-family: 'Rubik', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+
+.topnav {
+    background-color: #FA3948;
+}
+.topnav .toplinks a,
+.topnav .shoplink a {
+    color: #fff;
+    text-decoration: none;
+
+    display: block;
+    padding: 15px;
+}
+.topnav .toplinks a:hover,
+.topnav .shoplink a:hover {
+    color: #fff;
+}
+.topnav .shoplink:hover {
+    
+}
+.topnav .shoplink:hover .shoplink-top {
+     color: #fff;
+}
+.topnav .shoplink:hover a {
+    color: #333333;
+}
+.topnav li {
+    display: inline-block;
+    vertical-align: top;
+    width: 16%;
+    position: relative;
+    text-align: center;
+}
+.topnav li:hover .shopnav {
+    display: block;
+}
+
+.shopnav {
+    display: none;
+    width: 1366px;
+    background-color: #fff;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    text-align: left;
+    -webkit-border-bottom-right-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-bottomright: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.shopnav .shopnav-inner {
+    position: relative;
+}
+.shopnav .shopnav-inner .level1 {
+    border: 1px solid #c1c1c1;
+    background-color: #fff;
+    display: inline-block;
+    margin: 0;
+    padding: 80px 0 200px;
+}
+.shopnav .shopnav-inner .level1 li {
+    width: auto;
+    outline: none;
+    text-align: left;
+    padding: 0;
+    position: initial;
+    margin: 14px 0;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.shopnav .shopnav-inner .level1 li.m_integral{
+    background-color: #FA3948;
+}
+.shopnav .shopnav-inner .level1 li.m_organico {
+    background-color: #7FD540;
+}
+.shopnav .shopnav-inner .level1 li.m_gluten {
+    background-color: #AA40D4;
+}
+.shopnav .shopnav-inner .level1 li.m_zeroacucar {
+    background-color: #21C6D3;
+}
+
+.shopnav .shopnav-inner .level1 li a {
+    position: relative;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.shopnav .shopnav-inner .level1 li:hover .level2, .shopnav .shopnav-inner .level1 li.active .level2 {
+    display: block;
+}
+.shopnav .shopnav-inner .level1 li:hover a, .shopnav .shopnav-inner .level1 li.active a {
+    color: #f8f8f8;
+}
+.shopnav .shopnav-inner .level1 li:hover a:after, .shopnav .shopnav-inner .level1 li.active a:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent ghostwhite;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    margin-top: -20px;
+}
+.shopnav .shopnav-inner .level2 {
+    /*text-transform: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 170px;
+    left: 0;
+    z-index: 1;
+    color: ghostwhite;
+    display: none;*/
+
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: visible;
+    padding: 0 1rem;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+.shopnav .shopnav-inner .level1 li:hover .level2 {
+    top:0;
+    left: 170px;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    padding: 0 1rem;
+}
+
+.shopnav .shopnav-inner .level2 .col1of3 {
+    float: left;
+    min-width: 33%;
+    text-align: left;
+    color: #fff;
+}
+.shopnav .shopnav-inner .level2 .col1of3 h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+.shopnav .shopnav-inner .level2 .col1of3 ul {
+    padding-left: 0;
+}
+.shopnav .shopnav-inner .level2 .col1of3 ul li {
+    text-align: left;
+}
+.shopnav .shopnav-inner .level2 .col1of3 ul li a {
+    font-size: 1em;
+    padding-left: 0;
+    color: #FA3948;
+    line-height: 10px;
+}
+.shopnav .shopnav-inner .level2 .col1of3 ul li a:after {
+    display: none;
+}
+.shopnav .shopnav-inner .level2 .col1of3 ul li a:hover {
+    color: #FA3948;
+    text-decoration: underline;
+}
+.shopnav li {
+    display: block;
+}
+.shopnav a {
+    text-decoration: none;
+    color: initial;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 10px 0;
+    display: block;
+}
+</style>
+
+</head>
+
+<body>
+
+<ul class="topnav">
+    <li class="shoplink">
+        <a  class="shoplink-top" href="#"> Produtos </a>
+        <div class="shopnav">
+            <div class="shopnav-inner">
+                <ul class="level1">
+                    <li class="active m_integral">
+                        <a href="#">Integral</a>
+                        <div class="level2">
+                            <div class="col col1of3">
+                               
+                                <ul>
+                                    <li><a href=""> Biscoito Doce </a></li>
+                                    <li><a href=""> Tahine </a></li>
+                                    <li><a href=""> Gérmen e Fibra de Trigo </a></li>
+                                    <li><a href=""> Arroz Cateto </a></li>
+                                    <li><a href=""> Açúcar Mascavo </a></li>
+                                    <li><a href=""> Gergelim </a></li>
+                                    <li><a href=""> Aveia </a></li>
+                                    <li><a href=""> Linhaça </a></li>
+                                    <li><a href=""> Farinha de Chia </a></li>
+                                    <li><a href=""> Frutas Secas </a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col col1of3">
+                                <ul>
+                                    <li><a href=""> Mix de Frutas e Sementes </a></li>
+                                    <li><a href=""> Mix de Farinhas </a></li>
+                                    <li><a href=""> Biscoito Cookie </a></li>
+                                    <li><a href=""> Farinha de Linhaça </a></li>
+                                    <li><a href=""> Granola </a></li>
+                                    <li><a href=""> Farinha de Trigo </a></li>
+                                    <li><a href=""> Biscoito Salgado </a></li>
+                                    <li><a href=""> Chia </a></li>
+                                </ul>
+                            </div>
+                            <div class="col col1of3">
+                                <ul>
+                                    <li><a href=""> Pipoca para Micro-Ondas </a></li>
+                                    <li><a href=""> Açúcar Demerara </a></li>
+                                    <li><a href=""> Proteína de Soja </a></li>
+                                    <li><a href=""> Mix de Sementes </a></li>
+                                    <li><a href=""> Purê de Frutas </a></li>
+                                    <li><a href=""> Arroz Agulhinha/Polido </a></li>
+                                    <li><a href=""> Sal Marinho </a></li>
+                                    <li><a href=""> Mix de Cereais e Sementes </a></li>
+                                </ul>
+                            </div>    
+                        </div>
+                    </li>
+                    <li class="m_organico">
+                        <a href="#">Orgânico</a>
+                        <div class="level2">
+                            <div class="col col1of3">
+                                <h3>By Category</h3>
+                                <ul>
+                                    <li><a href=""> Alimento à Base de Arroz em Pó </a></li>
+                                    <li><a href=""> Bebida à Base de Aveia </a></li>
+                                    <li><a href=""> Amaranto </a></li>
+                                    <li><a href=""> Granola </a></li>
+                                    <li><a href=""> Quinoa </a></li>
+                                    <li><a href=""> Calda de Agave </a></li>
+                                    <li><a href=""> Bebida à Base de Arroz </a></li>
+                                    <li><a href=""> Biscoito Cookie </a></li>
+                                    <li><a href=""> Farinha de Trigo </a></li>
+                                    <li><a href=""> Alimento à Base de Aveia em Pó </a></li>
+                                    <li><a href=""> Açúcar Mascavo </a></li>
+                                    <li><a href=""> Biscoito Salgado </a></li>
+                                </ul>
+                            </div>
+                            <div class="col col1of3">
+                                <h3>By Activity</h3>
+                                <ul>
+                                    <li><a href="">Walking</a></li>
+                                    <li><a href="">Running</a></li>
+                                    <li><a href="">Climbing</a></li>
+                                    <li><a href="">Hiking</a></li>
+                                    <li><a href="">Mountaineering</a></li>
+                                    <li><a href="">Skiing</a></li>
+                                    <li><a href="">Coasteering</a></li>
+                                    <li><a href="">Canoeing</a></li>
+                                    <li><a href="">Hiking</a></li>
+                                </ul>
+                            </div>
+                            <!-- Segunda Coluna
+                            <div class="col col1of3">
+                                <h3>By Brand</h3>
+                                <ul>
+                                    <li><a href="">Arcterix</a></li>
+                                    <li><a href="">Patagonia</a></li>
+                                    <li><a href="">Lowe Alpine</a></li>
+                                    <li><a href="">Berghaus</a></li>
+                                    <li><a href="">Merrell</a></li>
+                                    <li><a href="">Rab</a></li>
+                                    <li><a href="">Northface</a></li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </li>
+                     <li class="m_gluten">
+                        <a href="#" class="">Sem Glúten</a>
+                        <div class="level2">
+                            <div class="col col1of3">
+                            <h3>By Activity</h3>
+                                <ul>
+                                    <li><a href=""> Biscoito Cookie </a></li>
+                                    <li><a href=""> Granola </a></li>
+                                    <li><a href=""> Aveia </a></li>
+                                    <li><a href=""> Pão </a></li>
+                                    <li><a href=""> Biscoito de Arroz </a></li>
+                                    <li><a href=""> Biscoito Cookie </a></li>
+                                    <li><a href=""> Pão para Hambúrguer </a></li>
+                                    <li><a href=""> Bolo </a></li>
+                                    <li><a href=""> Biscoito Salgado </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="m_zeroacucar">
+                        <a href="#" class="">Zero Açúcar</a>
+                        <div class="level2">
+                            <div class="col col1of3">
+                            <h3>By Activity</h3>
+                                <ul>
+                                    <li><a href=""> Biscoito Doce</a></li>
+                                    <li><a href=""> Biscoito Cookie</a></li>
+                                    <li><a href=""> Granola</a></li>
+                                    <li><a href=""> Adoçante</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li class="toplinks"><a href="#">Blog</a></li>
+    <li class="toplinks"><a href="#">Sobre a Jasmine</a></li>
+    <li class="toplinks"><a href="#">Contato</a></li>  
+</ul>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</body>
+
+</html>

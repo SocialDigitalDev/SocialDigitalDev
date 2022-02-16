@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <title>
+        <vtex.cmc:searchTitle />
+    </title>
+    <meta name="controller" content="Category" />
+    <vtex:metaTags />
+    <vtex:template id="pngIeFix" />
+    <vtex:template id="sfc-css" />
+</head>
+
+<body>
+    <vtex:template id="sfc-header" />
+    <main class="main-content">
+        <div class="ext breadcrumb">
+            <div class="wrap">
+                <vtex.cmc:breadCrumb />
+            </div>
+        </div>
+        <div class="ext banner position-4">
+            <div class="wrap">
+
+                <div class="jb-nomeDepartamento">
+                    <vtex.cmc:searchTitle />
+                    <vtex:contentPlaceHolder id="jb-DescricaoCurta" />
+                </div>
+                
+                <vtex:contentPlaceHolder id="banner_Size_1100x380" />
+                                           
+            </div>
+        </div>
+        <div class="ext header-category">
+            <div class="wrap">
+                <div class="col-left total-list">Total de <span class="value"></span></div>
+                <div class="col-right hover-open list-orderby">
+                    <a class="btn-orderby sub-open">Ordenar por</a>
+                    <div class="drop">
+                        <ul class="select-orderby"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ext products">
+            <div class="wrap">
+                <div class="w-25 box filters">
+                    <a class="hide show open-filters" rel="wrap-filter">Filtrar</a>
+                    <div class="row wrap-filter">
+                        <vtex.cmc:searchNavigator />
+                    </div>
+                </div>
+                <div class="w-75 box main-products">
+                    <div class="row list-products">
+                        <vtex.cmc:searchResult layout="9607a9ff-53e6-4220-8a3d-2c6ad1b007df" itemCount="20"
+                            columnCount="4" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <vtex:template id="sfc-footer" />
+    <script type="text/javascript" src="/arquivos/vtex-smartResearch.min.js"></script>
+    <vtex:template id="sfc-scripts" />
+</body>
+
+</html>

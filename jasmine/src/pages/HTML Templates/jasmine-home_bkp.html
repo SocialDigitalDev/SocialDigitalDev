@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+    <title> Jasmine </title>
+    <vtex:metaTags/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <vtex:template id="jasmine-styles"/>
+</head>
+<body id="home-page">
+    <vtex:template id="jasmine-header"/>
+    <main class="jasmine-home-main">
+        
+        <section class="slider_principal">
+            <figure>
+                <div class="banner-carousel banner-principal desktop">
+                    <vtex:contentPlaceHolder id="banner-principal-desktop"/>
+                </div>
+                <div class="banner-carousel banner-principal mobile">
+                    <vtex:contentPlaceHolder id="banner-principal-mobile"/>
+                </div>
+            </figure>
+        </section>
+
+        <section class="main_categorias">
+            <div class="wrapper">
+                <div class="categorias-section">
+                    <ul class="categorias_box">
+                        <vtex.cmc:jasminecategoriasHome/>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="main_vendidos">
+            <div class="wrapper">
+                <div class="shelf_maisVendidos">              
+                    <div class="vitrine-title">
+                        <h2>Mais vendidos</h2>
+                    </div>
+                    <div class="prod-left">
+                        <vtex:contentPlaceHolder id="banner-maisVendidos"/>
+                    </div>
+                    <div class="prod-right">
+                        <vtex:contentPlaceHolder id="shelf-maisVendidos"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main_banner"> 
+            <figure>
+                <div class="banner-meio_home">
+                    <div class="banner-estatico banner-meio desktop">
+                        <vtex:contentPlaceHolder id="banner-meio_desktop"/>
+                    </div>
+                    <div class="banner-estatico banner-final mobile">
+                        <vtex:contentPlaceHolder id="banner-meio_mobile"/>
+                    </div>
+                </div>
+            </figure>
+        </section>
+
+        <section class="main_novidades">
+            <div class="wrapper">
+                <div class="shelf_novidades">
+                    <div class="vitrine-title">
+                        <h2> Novidades </h2>
+                    </div>
+                    <div class="shelf_slide">
+                        <vtex:contentPlaceHolder id="shelf_novidades"/>   
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main_ofertas">
+            <div class="wrapper">
+                <div class="vitrine-title">
+                    <h2> Ofertas imperdíveis </h2>
+                </div>
+                <div class="shelf_slide">
+                    <vtex:contentPlaceHolder id="banners-ofertas_imperdiveis"/>   
+                </div>
+            </div>
+        </section>
+
+        <section class="main_cozinhar">
+            <div class="wrapper">
+                <div class="shelf_cozinhar">
+                    <div class="vitrine-title">
+                        <h2> Para cozinhar </h2>
+                    </div>
+                    <div class="shelf_slide">
+                        <vtex:contentPlaceHolder id="shelf_para-cozinhar"/>   
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="main_receitas">
+            <div class="wrapper">
+                <div class="shelf_receitas">
+                    <div class="vitrine-title">
+                        <h2>Receitas para cada momento</h2>
+                    </div>
+                    <div class="shelf_slide">
+                        <vtex:contentPlaceHolder id="shelf_receitas-momentos"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <vtex:template id="jasmine-footer"/>
+    <vtex:template id="jasmine-scripts"/>
+  </body>
+</html>
