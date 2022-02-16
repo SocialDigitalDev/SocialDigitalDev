@@ -1,4 +1,14 @@
 footer {
+    @include flexbox;
+    @include flex-flow(column);
+    background: var(--ice-white);
+    padding-top: 4em;
+    @include d(ipad){
+        padding-top: 1em;
+    }
+    @include d(celularLarge){
+        background: var(--color-white);
+    }
     .wrapper {
         max-width: 1600px;
         margin: 0 auto;
@@ -6,10 +16,6 @@ footer {
             max-width: 100%;
         }
     }
-    @include flexbox;
-    @include flex-flow(column);
-    background: var(--ice-white);
-    padding-top: 4em;
     .footer_newsletter {
         @include flexbox;
         @include align-items(center);
@@ -32,6 +38,7 @@ footer {
             @include d(ipad) {
                 background-image: none;
                 padding: 1em;
+                @include flex-flow(column);
             }
             h3.newsletter-titulo {
                 font-weight: 400;
@@ -58,6 +65,7 @@ footer {
                 @include d(ipad) {
                     @include flexbox;
                     @include flex-flow(column);
+                    width: 100%;
                 }
                 .btn {
                     text-decoration: none;
@@ -104,10 +112,8 @@ footer {
                         width: 25%;
                     }
                     @include d(ipad) {
-                        width: 95%;
-                    }
-                    @include d(celularLarge) {
-                        width: 90%;
+                        width: 97%;
+                        margin: 10px 0;
                     }
                 }
                 #msgSucesso {
@@ -144,7 +150,8 @@ footer {
             .footer-box {
                 margin: 10px;
                 @include d(ipad) {
-                    margin: 10px 35px;
+                    margin: 10px 5px;
+                    min-width: 300px;
                 }
                 @include d(celularLarge) {
                     max-width: 100%;
@@ -180,11 +187,14 @@ footer {
                 }
                 .footer-item {
                     font-weight: 400;
-                    font-size: 13px;
+                    font-size: 15px;
                     line-height: 40px;
                     color: var(--color-gray-letter);
                     @include d(ipadPro){
                         line-height: 30px;
+                    }
+                    @include d(ipad){
+                        font-size: 13px;
                     }
                     a {
                         color: var(--color-gray-letter);
@@ -234,15 +244,24 @@ footer {
                             @include d(ipadPro){
                                 max-width: 350px;
                             }
+                            @include d(ipad){
+                                max-width: 275px;
+                            }
                         }
                     }
                 }
             }
             .shipping-icons {
                 margin: auto;
+                @include d(celularLarge){
+                    margin-bottom: 2em;
+                }
                 img{
                     @include d(ipadPro){
                         max-width: 230px;
+                    }
+                    @include d(ipad){
+                        max-width: 175px;
                     }
                 }
             }
@@ -390,7 +409,40 @@ footer {
             @include flexbox;
             @include align-items(flex-end);
             background: var(--color-orange);
+            @include d(celularLarge){
+                @include flex-flow(column);
+                @include justify-content(space-between);
+            }
+            .user-login{
+                list-style: none;
+                .user-name__account{
+                    .link-help{
+                        .welcome{
+                            font-size: 0;
+                            em{
+                                a#login{
+                                    font-size: 15px;
+                                    color: var(--color-white);
+                                    font-style: normal;
+                                    @include flexbox;
+                                    @include align-items(center);
+                                    &:after{
+                                        content: "\e948";
+                                        font-family: 'shopmulti-icon';
+                                        font-size: 25px;
+                                        margin: 0 10px;
+                                        font-weight: 100;
+                                        color: var(--color-white);
+                                        position: relative;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .menu-saudacao{
+                width: 100%;
                 p.saudacao{
                     color: var(--color-white);
                     font-size: 30px;
@@ -542,6 +594,9 @@ footer {
         width: 100%;
         padding: 2em;
         cursor: pointer;
+        @include d(celularLarge){
+            width: 20%;
+        }
         &:before{
             content: "";
             background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.2154 11L21.7483 1.46709C22.0839 1.13146 22.0839 0.587306 21.7483 0.251721C21.4127 -0.0838641 20.8685 -0.0839071 20.5329 0.251721L11 9.78466L1.46709 0.251721C1.13146 -0.0839071 0.587306 -0.0839071 0.251721 0.251721C-0.0838641 0.587349 -0.0839071 1.1315 0.251721 1.46709L9.78462 11L0.251721 20.5329C-0.0839071 20.8686 -0.0839071 21.4127 0.251721 21.7483C0.419514 21.9161 0.63947 22 0.859427 22C1.07938 22 1.2993 21.9161 1.46713 21.7483L11 12.2154L20.5329 21.7483C20.7007 21.9161 20.9206 22 21.1406 22C21.3606 22 21.5805 21.9161 21.7483 21.7483C22.0839 21.4127 22.0839 20.8685 21.7483 20.5329L12.2154 11Z' fill='white'/%3E%3C/svg%3E");

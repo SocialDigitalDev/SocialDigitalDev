@@ -26,13 +26,15 @@ var home = {
         });
     },
     carrosselVitrineUmProduto: function() {
-        $('.helperComplement').remove();
-        $('.produtos .prod-right .vitrine-content .sm-prateleira > ul').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: false,
-            arrows: true
-        });
+        if (scre > 992){
+            $('.helperComplement').remove();
+            $('.produtos .prod-right .vitrine-content .sm-prateleira > ul').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true
+            });
+        }
     },
     categoriasGerais: function() {
         $('.section-categorias-gerais .wrapper .box-banner').each(function(){
@@ -76,7 +78,17 @@ var home = {
                             arrows: false,
                             dots: true,
                             centerMode: true,
-                            centerPadding: "100px"
+                            centerPadding: "50px"
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: true,
+                            centerMode: false
                         }
                     }
                 ]
@@ -94,6 +106,26 @@ var home = {
             });
         }
     },
+    mobileCarrosselBannersTriplos: function() {
+        if (scre <= 992){
+            $('.section-banners-triplos .wrapper').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                centerPadding: "180px",
+                arrows: false,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            centerPadding: "70px"
+                        }
+                    }
+                ]
+            })
+        }
+    },
     init: function () {
         home.bannerPrincipal();
         home.categoriasGerais();
@@ -103,6 +135,7 @@ var home = {
         home.carrosselVitrineUmProduto();
         home.countDownVitrine();
         home.mobileSeeMorePosition();
+        home.mobileCarrosselBannersTriplos();
     }
 }
 home.init();
