@@ -5,8 +5,6 @@ footer {
     padding-top: 4em;
     @include d(ipad){
         padding-top: 1em;
-    }
-    @include d(celularLarge){
         background: var(--color-white);
     }
     .wrapper {
@@ -106,9 +104,6 @@ footer {
                         background-color: var(--color-white) !important;
                     }
                     @include d(hd) {
-                        width: 35%;
-                    }
-                    @include d(ipadPro) {
                         width: 25%;
                     }
                     @include d(ipad) {
@@ -448,6 +443,9 @@ footer {
                     font-size: 30px;
                     padding: .8em;
                     font-weight: 600;
+                    @include d(celularMediumLarge){
+                        font-size: 22px;
+                    }
                 }
             }
         }

@@ -188,6 +188,7 @@ input{
 		a{
 			padding: 0 1em;
 			width: 40%;
+			font-size: 13px
 		}
 	}
 	&.flags-promo{
@@ -199,10 +200,13 @@ input{
 				@include flexbox;
 				@include justify-content(flex-end);
 				width: 35%;
-				@include d(celularLarge){
-					width: 28%;
-					padding: 0 1em;
-				}
+			}
+		}
+		a{
+			@include d(celularLarge){
+				width: 28%;
+				padding: 0 1em;
+				font-size: 12px;
 			}
 		}
 		h2{
@@ -215,9 +219,9 @@ input{
 				font-size: 20px;
 			}
 			@include d(celularLarge){
-				font-size: 15px;
+				font-size: 13px;
 				padding-right: 0;
-				min-width: 173px;
+				min-width: 150px;
 			}
 		}
 		.top-count{
@@ -577,12 +581,20 @@ body{
 					background: var(--color-orange);
 					@include t(.3s);
 					margin: 0 5px;
+					@include d(celularLarge){
+						width: 10px;
+						height: 10px;
+					}
 				}
 				&.slick-active{
 					button{
 						width: 45px;
 						height: 15px;
 						border-radius: 15px;
+						@include d(celularLarge){
+							width: 35px;
+							height: 10px;
+						}
 					}
 				}
 			}
@@ -614,6 +626,9 @@ body{
 							border: none;
 							.sm-actions{
 								bottom: -14px;
+								@include d(celularLarge){
+									bottom: -18px;
+								}
 							}
 						}
 					}
@@ -684,6 +699,9 @@ body{
 						padding: 0em;
 					}
 					.sm-product{
+						@include d(celularMediumLarge){
+							width: 155px;
+						}
 						.sm-actions{
 							bottom: -12px;
 						}

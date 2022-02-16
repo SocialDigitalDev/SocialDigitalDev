@@ -9,7 +9,7 @@
 			@content;
 		}
 	} @else if $device == celularMediumLarge {
-		@media (max-width: 376px) {
+		@media (max-width: 390px) {
 			@content;
 		}
 	} @else if $device == celularLarge {

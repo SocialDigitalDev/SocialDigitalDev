@@ -35,12 +35,20 @@ main.sm-home-main{
                                 background: var(--color-white);
                                 @include t(.3s);
                                 margin: 0 5px;
+                                @include d(celularLarge){
+                                    width: 10px;
+                                    height: 10px;
+                                }
                             }
                             &.slick-active{
                                 button{
                                     width: 45px;
                                     height: 15px;
                                     border-radius: 15px;
+                                    @include d(celularLarge){
+                                        width: 35px;
+                                        height: 10px;
+                                    }
                                 }
                             }
                         }
@@ -182,6 +190,9 @@ main.sm-home-main{
                                             min-height: initial;
                                             width: 340px;
                                         }
+                                        @include d(celularMediumLarge){
+                                            width: 295px;
+                                        }
                                         .data{
                                             @include d(celularLarge){
                                                 padding: 15px;
@@ -304,6 +315,9 @@ main.sm-home-main{
                                         @include d(ipadPro){
                                             max-width: 80px;
                                         }
+                                        @include d(celularMediumLarge){
+                                            max-width: 60px;
+                                        }
                                     }
                                 }
                                 &:nth-of-type(1){
@@ -360,6 +374,9 @@ main.sm-home-main{
                                         }
                                         @include d(celularLarge){
                                             max-width: 75px;
+                                        }
+                                        @include d(celularMediumLarge){
+                                            max-width: 55px;
                                         }
                                     }
                                     p{

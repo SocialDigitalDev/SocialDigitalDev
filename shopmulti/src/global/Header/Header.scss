@@ -3,6 +3,7 @@ header{
     @include flex-flow(column);
     position: relative;
     z-index: 9;
+    background: var(--color-white);
     .top-bar{
         width: 100%;
         text-align: center;
