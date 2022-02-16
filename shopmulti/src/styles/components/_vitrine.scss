@@ -5,6 +5,7 @@
         display: none;
     }
     @include d(celularLarge){
+        margin-top: 10px;
         &:not(.otl){
             .slick-list{
                 max-height: 450px;
@@ -163,6 +164,9 @@
                     position: relative;
                     bottom: -12px;
                     max-width: 185px;
+                    @include d(ipad){
+                        bottom: -7px;
+                    }
                     .wishlist{
                         background-color: var(--color-orange-dark);
                         height: 50px;

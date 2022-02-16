@@ -1,5 +1,8 @@
 main.sm-home-main{
     background-color: var(--ice-white);
+    @include d(ipad){
+        background-color: var(--color-white);
+    }
     section{
         figure{
             .wrapper{
@@ -54,13 +57,24 @@ main.sm-home-main{
             @include d(ipadPro){
                 padding: 0 1em;
             }
+            @include d(ipad){
+                padding: 0;
+            }
+            @include d(celularLarge){
+                overflow-x: auto;
+                margin-bottom: 1em;
+            }
             .wrapper{
                 @include flexbox;
                 @include justify-content(space-between);
                 @include align-items(center);
                 @include d(ipad){
                     @include flex-wrap(wrap);
-                    @include justify-content(initial);
+                    padding: 0;
+                }
+                @include d(celularLarge){
+                    width: 768px;
+                    padding-bottom: 1em;
                 }
                 .box-banner{
                     min-width: 150px;
@@ -108,20 +122,33 @@ main.sm-home-main{
             .wrapper{
                 @include flexbox;
                 @include justify-content(space-between);
+                @include d(ipad){
+                    @include flex-flow(column);
+                    padding: 0;
+                }
                 .prod-left{
                     padding: 1em 0;
                     background: var(--color-white);
-                    width: 60%;
+                    width: 100%;
                     margin-right: 2em;
                     padding-bottom: 2em;
                     @include d(ipadPro){
                         margin-right: 1em;
+                    }
+                    @include d(ipad){
+                        border: 1px solid var(--color-gray-nav);
+                        border-radius: 10px;
                     }
                     .vitrine-content{
                         @include flexbox;
                         @include justify-content(space-between);
                         margin-top: 4em;
                         padding: 0 1em;
+                        @include d(celularLarge){
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            margin-top: 1em;
+                        }
                         .box-banner{
                             @include t(.3s);
                             &:hover{
@@ -134,7 +161,12 @@ main.sm-home-main{
                     background: var(--color-white);
                     padding: 1em 0;
                     padding-bottom: 2em;
-                    width: 40%;
+                    width: 100%;
+                    @include d(ipad){
+                        margin-top: 1em;
+                        border: 1px solid var(--color-gray-nav);
+                        border-radius: 10px;
+                    }
                     .vitrine-content{
                         .sm-prateleira{
                             max-width: 400px;
@@ -144,7 +176,66 @@ main.sm-home-main{
                                     display: flex !important;
                                     @include justify-content(center);
                                     .sm-product{
-                                        min-height: 305px;
+                                        @include d(celularLarge){
+                                            border: none;
+                                            @include flex-flow(row);
+                                            min-height: initial;
+                                            width: 340px;
+                                        }
+                                        .data{
+                                            @include d(celularLarge){
+                                                padding: 15px;
+                                                @include flexbox;
+                                                @include flex-flow(column);
+                                            }
+                                            h3{
+                                                @include d(celularLarge){
+                                                    text-align: left;
+                                                    order: 3;
+                                                    margin-bottom: 0;
+                                                }
+                                            }
+                                            .price{
+                                                a{
+                                                    @include d(celularLarge){
+                                                        @include flexbox;
+                                                        @include align-items(center);
+                                                    }
+                                                    .newPrice{
+                                                        @include d(celularLarge){
+                                                            text-align: left;
+                                                            margin-bottom: 0;
+                                                            font-size: 13px;
+                                                            margin-right: 5px;
+                                                            font-weight: 700;
+                                                            color: var(--color-gray-dark);
+                                                        }
+                                                    }
+                                                    .installment{
+                                                        @include d(celularLarge){
+                                                            text-align: left;
+                                                            font-weight: 700;
+                                                            color: var(--color-gray-line);
+                                                        }
+                                                    }
+                                                }                                                
+                                            }
+                                        }
+                                        .sm-image{
+                                            a{
+                                                img{
+                                                    @include d(celularLarge){
+                                                        max-width: 80px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .sm-actions{
+                                            bottom: -15px;
+                                            @include d(celularLarge){
+                                                display: none;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -167,6 +258,12 @@ main.sm-home-main{
                                 @include d(hdplus){
                                     padding: 2em;
                                 }
+                                @include d(ipadPro){
+                                    padding: 3em 2em;
+                                }
+                                @include d(celularLarge){
+                                    padding: 10px;
+                                }
                                 a{
                                     @include flexbox;
                                     @include align-items(center);
@@ -180,6 +277,9 @@ main.sm-home-main{
                                         }
                                         @include d(ipadPro){
                                             font-size: 14px;
+                                        }
+                                        @include d(celularLarge){
+                                            font-size: 12px;
                                         }
                                         &:after{
                                             content: "";
@@ -196,6 +296,13 @@ main.sm-home-main{
                                             &:after{
                                                width: 100%;
                                             }
+                                        }
+                                    }
+                                    img{
+                                        max-width: 150px;
+                                        border-radius: 10px;
+                                        @include d(ipadPro){
+                                            max-width: 80px;
                                         }
                                     }
                                 }
@@ -228,14 +335,31 @@ main.sm-home-main{
                         .vitrine-content{
                             display: grid;
                             grid-template-columns: repeat(2, 1fr);
+                            @include d(ipad){
+                                grid-template-columns: repeat(4, 1fr);
+                            }
+                            @include d(celularLarge){
+                                margin-top: 1em;
+                            }
                             .box-banner{
                                 @include flexbox;
                                 @include flex-flow(column);
                                 @include align-items(center);
                                 a{
+                                    @include d(celularLarge){
+                                        @include flexbox;
+                                        @include flex-flow(column);
+                                        @include align-items(center);
+                                    }
                                     img{
                                         @include d(hdplus){
                                             max-width: 90px;
+                                        }
+                                        @include d(ipadPro){
+                                            max-width: 70px;
+                                        }
+                                        @include d(celularLarge){
+                                            max-width: 75px;
                                         }
                                     }
                                     p{
@@ -246,6 +370,9 @@ main.sm-home-main{
                                         text-align: center;
                                         @include d(hdplus){
                                             font-size: 12px;
+                                        }
+                                        @include d(celularLarge){
+                                            max-width: 80px;
                                         }
                                     }
                                 }
@@ -264,9 +391,20 @@ main.sm-home-main{
             @include d(ipadPro){
                 margin: auto 1em;
             }
+            @include d(ipad){
+                margin-right: 0;
+            }
             .wrapper{
                 @include flexbox;
                 @include justify-content(space-between);
+                @include d(ipad){
+                    padding: 0;
+                }
+                .slick-list{
+                    @include d(ipad){
+                        padding-left: 0 !important;
+                    }
+                }
                 .box-banner{
                     max-width: 100%;
                     @include d(hdplus){
@@ -279,10 +417,16 @@ main.sm-home-main{
                         @include d(hdplus){
                             margin-left: 0;
                         }
+                        @include d(celularLarge){
+                            padding-left: 0em;
+                        }
                     }
                     &:last-child{
                         @include d(hdplus){
                             margin-right: 0;
+                        }
+                        @include d(celularLarge){
+                            padding-right: 1em;
                         }
                     }
                 }

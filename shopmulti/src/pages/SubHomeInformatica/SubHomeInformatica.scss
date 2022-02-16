@@ -1,10 +1,25 @@
 .sm-subhome-informatica-main{
     background: var(--color-gray-ice);
+    @include d(ipad){
+        background: var(--color-white);
+    }
     section{
         max-width: 1600px;
         margin: auto;
         @include d(hdplus){
             margin: 0 4em;
+        }
+        @include d(ipadPro){
+            margin: 0 1em;
+        }
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(5),
+        &:nth-of-type(6),
+        &:nth-of-type(7),
+        &:nth-of-type(9),
+        &:nth-of-type(10){
+            margin-right: 0;
         }
         h1{
             text-align: left;
@@ -15,11 +30,18 @@
             position: relative;
             font-style: normal;
             font-family: Montserrat,sans-serif;
+            @include d(ipad){
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
         }
         figure{
             .wrapper{
                 .banner-subhome{
                     padding: 3em 0;
+                    @include d(ipadPro){
+                        padding: 1em 0;
+                    }
                     .box-banner{
                         @include t(.4s);
                         a{
@@ -38,8 +60,16 @@
             .wrapper{
                 @include flexbox;
                 @include justify-content(space-between);
+                .slick-list{
+                    @include d(celularLarge){
+                        padding-left: 0 !important;
+                    }
+                }
                 .box-banner{
                     @include t(.4s);
+                    @include d(celularLarge){
+                        padding-right: 1em;
+                    }
                     a{
                         img{
                             max-width: 100%;
@@ -52,12 +82,20 @@
                         @include d(hdplus){
                             margin: 0 3.5em;
                         }
+                        @include d(ipadPro){
+                            margin: 0 1.5em;
+                        }
                     }
                 }
             }
         }
         .section-categorias-subhome{
             margin: 3em 0;
+            @include d(ipad){
+                margin: 1em 0;
+                margin-bottom: 0;
+                overflow-x: auto;
+            }
             .wrapper{
                 @include flexbox;
                 @include justify-content(space-between);
@@ -66,9 +104,23 @@
                     @include d(hdplus){
                         margin: 0px 1em;
                     }
+                    @include d(ipadPro){
+                        max-width: 70px;
+                    }
                     a{
+                        @include d(ipadPro){
+                            @include flexbox;
+                            @include flex-flow(column);
+                            @include align-items(center);
+                        }
                         img{
                             max-width: 100%;
+                            @include d(ipadPro){
+                                max-width: 65px;
+                            }
+                            @include d(ipad){
+                                max-width: 85px;
+                            }
                         }
                         p{
                             text-align: center;
@@ -77,6 +129,9 @@
                             margin-top: 10px;
                             @include d(qhd){
                                 font-size: 13px;
+                            }
+                            @include d(ipadPro){
+                                font-size: 11px;
                             }
                         }
                     }
@@ -92,8 +147,25 @@
                 margin: auto 0;
                 margin-bottom: 3em;
             }
+            @include d(ipadPro){
+                margin-bottom: 1em;
+            }
+            @include d(ipad){
+                padding-top: 0;
+            }
             &.ofertas-em-destaque, &.audio-e-som{
                 margin-bottom: 0em;
+            }
+            .sm-prateleira{
+                @include d(ipad){
+                    margin-top: 1em;
+                    margin-bottom: 2em;
+                }
+                ul{
+                    li{
+                        padding-left: 0;
+                    }
+                }
             }
         }
         .vitrine-tripla{
@@ -101,6 +173,14 @@
                 margin: 2em 0;
                 margin-bottom: 0em;
             }
+            @include d(ipadPro){
+                margin: 0;
+            }
         }
+    }
+}
+.wrapper{
+    @include d(ipad){
+        padding: 0 !important;
     }
 }

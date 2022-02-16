@@ -122,7 +122,10 @@ input{
 	display: block;
 }
 .mobile{
-	display: none;
+	display: none !important;
+	@include d(celularLarge){
+		display: block !important;
+	}
 }
 .ipadShow{
 	display: none;
@@ -141,7 +144,7 @@ input{
 }
 @include d(celularLarge){
 	.desktop{
-		display: none;
+		display: none !important;
 	}
 	.mobile{
 		display: block;
@@ -171,6 +174,22 @@ input{
 			font-size: 14px;
 		}
 	}
+	@include d(ipad){
+		a{
+			text-align: right;
+			color: var(--color-gray-nav);
+			display: block;
+			padding: 0 2.5em;
+			margin: 0 auto;
+			width: 100%;
+		}
+	}
+	@include d(celularLarge){
+		a{
+			padding: 0 1em;
+			width: 40%;
+		}
+	}
 	&.flags-promo{
 		@include justify-content(center);
 		@include d(ipad){
@@ -180,6 +199,10 @@ input{
 				@include flexbox;
 				@include justify-content(flex-end);
 				width: 35%;
+				@include d(celularLarge){
+					width: 28%;
+					padding: 0 1em;
+				}
 			}
 		}
 		h2{
@@ -191,18 +214,31 @@ input{
 			@include d(ipad){
 				font-size: 20px;
 			}
+			@include d(celularLarge){
+				font-size: 15px;
+				padding-right: 0;
+				min-width: 173px;
+			}
 		}
 		.top-count{
 			width: 200px;
 			font-size: 25px;
 			margin-right: 1em;
 			font-weight: 600;
+			@include d(celularLarge){
+				width: 150px;
+				font-size: 15px;
+				margin-right: 0;
+			}
 			.qd-cp-text {
 				font-size: 0;
 				&:before{
 					content: ":";
 					font-size: 25px;
 					color: var(--color-orange);
+					@include d(celularLarge){
+						font-size: 15px;
+					}
 				}
 			}
 			.qd-cp-digits{
@@ -215,6 +251,10 @@ input{
 				padding: 10px 0;
 				border-radius: 10px;
 				color: var(--color-orange);
+				@include d(celularLarge){
+					width: 30px;
+					padding: 5px 0;
+				}
 			}
 			.days{
 				display: none;
@@ -234,6 +274,9 @@ input{
 	.prod-right{
 		.vitrine-title{
 			margin-bottom: 2em;
+			@include d(celularLarge){
+				margin-bottom: 0;
+			}
 			h2{
 				border-bottom: 2px solid var(--color-gray-nav);
 				padding: 1em 0;
@@ -295,10 +338,16 @@ body{
 	}
 }
 
-.link-help{
+.header-user-links .link-help{
 	z-index: 9;
+	@include d(celularLarge){
+		display: none;
+	}
 	&.loginOff{
 		display: block;
+		@include d(celularLarge){
+			display: none;
+		}
 	}
 	&.loginOn{
 		display: block;
@@ -475,7 +524,13 @@ body{
 	@include d(ipadPro){
 		margin: auto 1em;
 	}
+	@include d(ipad){
+		margin: auto 0;
+	}
 	.wrapper{
+		@include d(ipad){
+			padding: 0;
+		}
 		.sm-prateleira{
 			@include d(hdplus){
 				padding: 0 2.5em;
@@ -558,7 +613,7 @@ body{
 						.sm-product{
 							border: none;
 							.sm-actions{
-								bottom: -17px;
+								bottom: -14px;
 							}
 						}
 					}
@@ -591,11 +646,17 @@ body{
 		margin: 2em 4em;
 		margin-bottom: 0;
 	}
-	@include d(hdplus){
+	@include d(hd){
 		margin: 2em 1em;
 		margin-bottom: 0;
 	}
 	.wrapper{
+		@include d(ipad){
+			padding: 0 3em;
+		}
+		@include d(celularLarge){
+			padding: 0em;
+		}
 		.sm-prateleira{
 			ul{
 				@include flexbox;
@@ -604,6 +665,13 @@ body{
 					@include justify-content(space-between);
 					padding: 0 2em;
 				}
+				@include d(ipad){
+					padding: 0;
+				}
+				@include d(celularLarge){
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+				}
 				li{
 					margin-bottom: 2em;
 					@include d(hdplus){
@@ -611,6 +679,14 @@ body{
 					}
 					@include d(hd){
 						padding: 0 .85em;
+					}
+					@include d(celularLarge){
+						padding: 0em;
+					}
+					.sm-product{
+						.sm-actions{
+							bottom: -12px;
+						}
 					}
 				}
 			}
