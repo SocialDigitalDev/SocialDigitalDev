@@ -951,24 +951,9 @@ $(document).ready(function () {
 						case "Chile":
 							imgPais = "/arquivos/shopvinho-bandeira-chile.svg";
 							break;
-						case "Espanha":
-							imgPais = "/arquivos/flag-escocia.png";
+						case "Argentina":
+							imgPais = "/arquivos/shopvinho-bandeira-argentina.svg";
 							break;
-						case "Irlanda":
-							imgPais = "/arquivos/flag-irlanda.png";
-							break;
-						case "BÃƒÂ©lgica":
-							imgPais = "/arquivos/flag-belgica.png";
-							break
-						case "alemanha":
-							imgPais = "/arquivos/flag-alemanha.png";
-							break
-						case "holanda":
-							imgPais = "/arquivos/flag-holanda.png";
-							break
-						case "eua":
-							imgPais = "/arquivos/flag-estados-unidos.png";
-							break
 					}
 					$(".vinho_especificacoes .pais_prod .bandeira-pais").prepend("<img src='" + imgPais + "' alt='" + pais_txt + "'/>");
 					$(".vinho_especificacoes .pais_prod .nome-pais-prod").prepend("<p>" + pais_txt + "<p/>")
@@ -1504,6 +1489,47 @@ $(document).ready(function () {
 				}
 			});
 		},
+		variationsQuantity: function () {
+			vtexjs.catalog.getCurrentProductWithVariations().done(function(product){
+				console.log(product);
+				var qtd = product.skus[0].availablequantity;
+				if(qtd >= 3){
+					$('.produto-buy__container').append(`<p class="availableQtd">(${qtd} disponíveis)</p>`);
+				}
+				if(qtd < 3){
+
+				}
+			});			
+		},
+		
+		variationsQuantity: function () 			function batchQyde(e) {
+						if (e.skuData.SkuSellersInformation[0].AvailableQuantity >= 3){
+							$('.variations-quantity .text').remove()
+						}
+
+						if (e.skuData.SkuSellersInformation[0].AvailableQuantity < 3){
+				if (e.skuData.SkuSellersInformation[0].AvailableQuantity >= 1){
+					
+					$('.variations-quantity').html(`
+					<span class="text">
+						<strong>Está acabando!</strong> Restam apenas ${e.skuData.SkuSellersInformation[0].AvailableQuantity} peças em estoque.
+					</span>
+					`)
+					$('.sku-selector-container .Tamanho label.sku-picked').addClass('arrow-top')
+				}
+
+				if (e.skuData.SkuSellersInformation[0].AvailableQuantity < 2){
+					$('.variations-quantity').html(`
+					<span class="text">
+						<strong>Está acabando!</strong> Resta apenas ${e.skuData.SkuSellersInformation[0].AvailableQuantity} peça em estoque.
+					</span>
+					`)
+					$('.sku-selector-container .Tamanho label.sku-picked').addClass('arrow-top')
+				}
+				}
+			}
+		},
+
         countDownVitrine: function() {
 			$('.flags-promo').vtexCountdown();
 		},
@@ -1545,6 +1571,7 @@ $(document).ready(function () {
 			Shopvinho.faleConosco();
 			//Shopvinho.recarregaPagina();
 			Shopvinho.verificaWishList();
+			Shopvinho.variationsQuantity();
 			Shopvinho.countDownVitrine();
 		},
 	
