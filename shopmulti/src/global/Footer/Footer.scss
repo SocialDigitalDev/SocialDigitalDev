@@ -448,6 +448,9 @@ footer {
                     font-size: 30px;
                     padding: .8em;
                     font-weight: 600;
+                    @include d(celularMediumLarge){
+                        font-size: 22px;
+                    }
                 }
             }
         }
