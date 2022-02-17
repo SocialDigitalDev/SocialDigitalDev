@@ -202,6 +202,36 @@ $(document).ready(function () {
 				});
 			}
 		},
+		PaisesHome: function () {
+			if (scre < 980) {
+				$('.shopvinho-paises ul').slick({
+					infinite: false,
+					slidesToShow: 8,
+					slidesToScroll: 8,
+					arrows: false,
+					dots: true,
+					responsive: [
+						{
+						breakpoint: 767,
+						settings: {
+							slidesToShow: 6,
+							slidesToScroll: 6,
+						}
+					},
+					{
+						breakpoint: 640,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3,
+							arrows: false,
+							dots: false,
+							infinite: true
+						}
+					}
+					]
+				});
+			}
+		},
 		pratOfertas: function () {
 			$('.main_ofertas .shopvinho-prateleira .prateleira-horizontal > ul').slick({
 				infinite: false,
@@ -951,24 +981,9 @@ $(document).ready(function () {
 						case "Chile":
 							imgPais = "/arquivos/shopvinho-bandeira-chile.svg";
 							break;
-						case "Espanha":
-							imgPais = "/arquivos/flag-escocia.png";
+						case "Argentina":
+							imgPais = "/arquivos/shopvinho-bandeira-argentina.svg";
 							break;
-						case "Irlanda":
-							imgPais = "/arquivos/flag-irlanda.png";
-							break;
-						case "BÃƒÂ©lgica":
-							imgPais = "/arquivos/flag-belgica.png";
-							break
-						case "alemanha":
-							imgPais = "/arquivos/flag-alemanha.png";
-							break
-						case "holanda":
-							imgPais = "/arquivos/flag-holanda.png";
-							break
-						case "eua":
-							imgPais = "/arquivos/flag-estados-unidos.png";
-							break
 					}
 					$(".vinho_especificacoes .pais_prod .bandeira-pais").prepend("<img src='" + imgPais + "' alt='" + pais_txt + "'/>");
 					$(".vinho_especificacoes .pais_prod .nome-pais-prod").prepend("<p>" + pais_txt + "<p/>")
@@ -1503,7 +1518,7 @@ $(document).ready(function () {
 					});
 				}
 			});
-		},
+		},		
         countDownVitrine: function() {
 			$('.flags-promo').vtexCountdown();
 		},
@@ -1516,6 +1531,7 @@ $(document).ready(function () {
 			Shopvinho.pratMaisVendidos();
 			// Shopvinho.slidePrincipalMobile();
 			Shopvinho.CategoriasHome();
+			Shopvinho.PaisesHome();
 			Shopvinho.pratOfertas();
 			Shopvinho.kitsTabs();
 			Shopvinho.pratNovidades();
