@@ -12,6 +12,20 @@
         @include d(ipadPro){
             margin: 0 1em;
         }
+        &:nth-of-type(1) {
+            .section-banners-triplos{
+                @include d(ipadPro){
+                    margin-top: 2em;
+                }
+                @include d(ipad){
+                    margin-top: 0em;
+                    margin-right: 0;
+                }
+                @include d(celularLarge){
+                    width: 104%;
+                }
+            }
+        }
         &:nth-of-type(2),
         &:nth-of-type(3),
         &:nth-of-type(5),
@@ -19,7 +33,9 @@
         &:nth-of-type(7),
         &:nth-of-type(9),
         &:nth-of-type(10){
-            margin-right: 0;
+            @include d(ipad){
+                margin-right: 0;
+            }
         }
         h1{
             text-align: left;
@@ -175,6 +191,25 @@
             }
             @include d(ipadPro){
                 margin: 0;
+            }
+            .wrapper{
+                @include d(ipad){
+                    padding: 0;
+                }
+                .sm-prateleira{
+                    ul{
+                        li{
+                            @include d(celularLarge){
+                                margin: auto;
+                            }
+                            .sm-product{
+                                @include d(celularLarge){
+                                    width: 165px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

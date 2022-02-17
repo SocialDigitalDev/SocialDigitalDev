@@ -1,10 +1,32 @@
 .sm-subhome-livros-main{
     background: var(--color-gray-ice);
+    @include d(ipad){
+        background: var(--color-white);
+    }
     section{
         max-width: 1600px;
         margin: auto;
         @include d(hdplus){
             margin: 0 4em;
+        }
+        @include d(ipadPro){
+            margin: 0 1em;
+        }
+        &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(4){
+            @include d(ipadPro){
+                margin-top: 2em;
+            }
+            @include d(ipad){
+                margin-right: 0;
+            }
+        }
+        &:nth-of-type(3),
+        &:nth-of-type(5),
+        &:nth-of-type(6),
+        &:nth-of-type(7){
+            @include d(ipad){
+                margin:0;
+            }
         }
         h1{
             text-align: left;
@@ -15,6 +37,9 @@
             position: relative;
             font-style: normal;
             font-family: Montserrat,sans-serif;
+            @include d(ipad){
+                padding: 1em 0;
+            }
         }
         h2.subhome-title{
             font-size: 25px;
@@ -24,6 +49,9 @@
             .wrapper{
                 .banner-subhome{
                     padding: 3em 0;
+                    @include d(ipadPro){
+                        padding: 0;
+                    }
                     .box-banner{
                         @include t(.4s);
                         a{
@@ -40,11 +68,25 @@
         }
         .section-banners-triplos{
             padding-bottom: 2em;
+            @include d(ipadPro){
+                padding-bottom: 1em;
+            }
             .wrapper{
                 @include flexbox;
                 @include justify-content(space-between);
+                @include d(ipad){
+                    padding: 0;
+                }
+                .slick-list{
+                    @include d(celularLarge){
+                        padding-left: 0 !important;
+                    }
+                }
                 .box-banner{
                     @include t(.4s);
+                    @include d(celularLarge){
+                        padding-right: 1em;
+                    }
                     a{
                         img{
                             max-width: 100%;
@@ -57,15 +99,33 @@
                         @include d(hdplus){
                             margin: 0 3.5em;
                         }
+                        @include d(ipadPro){
+                            margin-left: 1em;
+                            margin-right: 0;
+                        }
+                    }
+                    &:nth-of-type(3){
+                        @include d(ipadPro){
+                            margin-left: 1em;
+                            margin-right: 0;
+                        }
                     }
                 }
             }
         }
         .section-categorias-subhome{
             margin: 3em 0;
+            @include d(ipad){
+                overflow-x: auto;
+                margin-bottom: 0;
+            }
             .wrapper{
                 @include flexbox;
                 @include justify-content(space-between);
+                @include d(ipad){
+                    padding: 0;
+                    padding-bottom: 1em;
+                }
                 .box-banner{
                     @include t(.4s);
                     @include d(hdplus){
@@ -74,6 +134,9 @@
                     a{
                         img{
                             max-width: 100%;
+                            @include d(ipad){
+                                max-width: 85px;
+                            }
                         }
                         p{
                             text-align: center;
@@ -97,6 +160,9 @@
                 margin: auto 0;
                 margin-bottom: 3em;
             }
+            @include d(ipadPro){
+                margin-bottom: 1em;
+            }
             .ficcao-cientifica{
                 margin-bottom: 0em;
             }
@@ -105,6 +171,38 @@
             @include d(hdplus){
                 margin: 2em 0;
                 margin-bottom: 0em;
+            }
+            @include d(ipadPro){
+                margin: 1em 0;
+                margin-bottom: 0em;
+            }
+            .wrapper{
+                @include d(ipad){
+                    padding: 0;
+                }
+                .sm-prateleira{
+                    ul{
+                        li{
+                            @include d(celularLarge){
+                                margin: auto;
+                                margin-bottom: 1em;
+                            }
+                            &:nth-of-type(even){
+                                @include d(celularMediumLarge){
+                                    margin-left: .3em
+                                }
+                            }
+                            .sm-product{
+                                @include d(celularLarge){
+                                    width: 165px;
+                                }
+                                @include d(celularMediumLarge){
+                                    width: 155px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

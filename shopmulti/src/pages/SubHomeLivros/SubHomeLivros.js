@@ -23,13 +23,75 @@ var subhomelivros = {
                 slidesToShow: 5,
                 slidesToScroll: 1,
                 arrows: true,
-                dots: false
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 1100,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: true,
+                            centerMode: true,
+                            centerPadding: "60px"
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: true,
+                            centerMode: false
+                        }
+                    },
+                    {
+                        breakpoint: 370,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: true,
+                            centerMode: true,
+                            centerPadding: "140px"
+                        }
+                    }
+                ]
             });
+        }
+    },
+    mobileCarrosselBannersTriplos: function() {
+        if (scre <= 767){
+            $('.section-banners-triplos .wrapper').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                centerPadding: "180px",
+                arrows: false,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            centerPadding: "70px"
+                        }
+                    }
+                ]
+            })
         }
     },
     init: function(){
         subhomelivros.categoriasSubhome();
         subhomelivros.carrosseisScreen();
+        subhomelivros.mobileCarrosselBannersTriplos();
     }
 }
 
