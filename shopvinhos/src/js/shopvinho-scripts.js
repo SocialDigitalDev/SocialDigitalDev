@@ -202,6 +202,36 @@ $(document).ready(function () {
 				});
 			}
 		},
+		PaisesHome: function () {
+			if (scre < 980) {
+				$('.shopvinho-paises ul').slick({
+					infinite: false,
+					slidesToShow: 8,
+					slidesToScroll: 8,
+					arrows: false,
+					dots: true,
+					responsive: [
+						{
+						breakpoint: 767,
+						settings: {
+							slidesToShow: 6,
+							slidesToScroll: 6,
+						}
+					},
+					{
+						breakpoint: 640,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3,
+							arrows: false,
+							dots: false,
+							infinite: true
+						}
+					}
+					]
+				});
+			}
+		},
 		pratOfertas: function () {
 			$('.main_ofertas .shopvinho-prateleira .prateleira-horizontal > ul').slick({
 				infinite: false,
@@ -1488,48 +1518,7 @@ $(document).ready(function () {
 					});
 				}
 			});
-		},
-		variationsQuantity: function () {
-			vtexjs.catalog.getCurrentProductWithVariations().done(function(product){
-				console.log(product);
-				var qtd = product.skus[0].availablequantity;
-				if(qtd >= 3){
-					$('.produto-buy__container').append(`<p class="availableQtd">(${qtd} disponíveis)</p>`);
-				}
-				if(qtd < 3){
-
-				}
-			});			
-		},
-		
-		variationsQuantity: function () 			function batchQyde(e) {
-						if (e.skuData.SkuSellersInformation[0].AvailableQuantity >= 3){
-							$('.variations-quantity .text').remove()
-						}
-
-						if (e.skuData.SkuSellersInformation[0].AvailableQuantity < 3){
-				if (e.skuData.SkuSellersInformation[0].AvailableQuantity >= 1){
-					
-					$('.variations-quantity').html(`
-					<span class="text">
-						<strong>Está acabando!</strong> Restam apenas ${e.skuData.SkuSellersInformation[0].AvailableQuantity} peças em estoque.
-					</span>
-					`)
-					$('.sku-selector-container .Tamanho label.sku-picked').addClass('arrow-top')
-				}
-
-				if (e.skuData.SkuSellersInformation[0].AvailableQuantity < 2){
-					$('.variations-quantity').html(`
-					<span class="text">
-						<strong>Está acabando!</strong> Resta apenas ${e.skuData.SkuSellersInformation[0].AvailableQuantity} peça em estoque.
-					</span>
-					`)
-					$('.sku-selector-container .Tamanho label.sku-picked').addClass('arrow-top')
-				}
-				}
-			}
-		},
-
+		},		
         countDownVitrine: function() {
 			$('.flags-promo').vtexCountdown();
 		},
@@ -1542,6 +1531,7 @@ $(document).ready(function () {
 			Shopvinho.pratMaisVendidos();
 			// Shopvinho.slidePrincipalMobile();
 			Shopvinho.CategoriasHome();
+			Shopvinho.PaisesHome();
 			Shopvinho.pratOfertas();
 			Shopvinho.kitsTabs();
 			Shopvinho.pratNovidades();
@@ -1571,7 +1561,6 @@ $(document).ready(function () {
 			Shopvinho.faleConosco();
 			//Shopvinho.recarregaPagina();
 			Shopvinho.verificaWishList();
-			Shopvinho.variationsQuantity();
 			Shopvinho.countDownVitrine();
 		},
 	

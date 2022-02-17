@@ -11475,9 +11475,9 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
     .tab-content .box-banner img {
         max-width: 130px;
     }
-    /* VOLTAR PARA 8em pós retirada da oferta do dia */
+    /* VOLTAR PARA 4em pós retirada da oferta do dia */
     .polo-wear__home .slide-mobile {
-        margin-top: 13em;
+        margin-top: 4em;
     }
 
     .informativos .slick-dots {

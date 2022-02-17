@@ -7,6 +7,7 @@
 <div class="shopvinho-product">
 	<input type="hidden" class="shopvinho-id" value="$id" />
     <input type="hidden" class="shopvinho-sku" value="$idSku" />
+	<!-- START Flags -->
 	<div class="shelf-item__flags">
 		<div class="shopvinho-installment">
 			#if ($product.NumbersOfInstallment > 1)
@@ -21,8 +22,8 @@
 		<div class="flag-promotion">
 			$product.HightLight
 		</div>
-
-        <span class="productWishlist">Salvar Favorito</span>
+        
+        <!--<span class="productWishlist">Salvar Favorito</span>-->
 		<div class="flag-percentage">
 			#if ($product.HasBestPrice)
 				<div class="flag-desconto">
@@ -31,10 +32,11 @@
 				</div>
 			#end
 		</div>
-	</div>
-	<div class="shopvinho-image">
+	</div><!-- END Flags -->
+
+	<div class="shopvinho-image js--lazyload has--lazyload" data-noscript="">
 		<a class="shopvinho-productImage shelf__product-image" title="$escapedName" href="$uri">
-			$product.GetImageTag(200,220)
+			<noscript>$product.GetImageTag(200,220)</noscript>
 		</a>
 	</div>
   

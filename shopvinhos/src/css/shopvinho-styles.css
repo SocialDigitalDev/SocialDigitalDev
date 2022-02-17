@@ -1123,27 +1123,33 @@ nav > ul > li:hover > a {
 }
 
 /* Lazy Load */
-
 .is--lazyloaded { /* Uses when element is visible */ }
 
-.has--lazyloading { /* Uses when element is loading */
-	position: absolute;
-	width: 32px;
-	height: 32px;
-    bottom: 0;
-    padding: 2px;
-    opacity: 1;
-    pointer-events: none;
-    transition: all linear .3s;
-    background-color: rgba(255,255,255,0.8);
-    background-image: url(/arquivos/shopvinho_loading.gif);
-    background-repeat: no-repeat;
-    background-position: center center;
+/* Uses when element is loading */
+.has--lazyloading {
+	height: 35px;
+	width: 35px;
+	color: rgba(90, 90, 90, 0.2);
+	position: relative;
+	display: inline-block;
+	border: 2px solid;
+	border-radius: 50%;
+	border-right-color: #DE1D49;
+	animation: rotate 1s linear infinite; 
 }
+@keyframes rotate {
+	0% {
+	  transform: rotate(0); 
+	}
+	100% {
+	  transform: rotate(360deg); 
+	} 
+}
+
 .has--lazyerror { /* Uses when element has an error */ 
 	
 }
-.has--lazyload {}
+
 
 
 
@@ -9358,13 +9364,25 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 		padding-left: 0;
 	}
 	.main_momentos-paises .menu_paises{
-		display: flex;
+		display: block;
 		flex-wrap: nowrap;
+
 	}
 	.main_momentos-paises .menu_paises li{
-		flex: 1;
+		display: block;
 	}
+	.contador_ofertas.flags-promo h2{
+		margin: 0px;
 
+	}
+	.flags-promo {
+		width: 100%;
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+	.flags-promo .flag{
+		display: block;
+	}
 	/* Ofertas */
 	.main_ofertas .prod-left{
 		display: none;
