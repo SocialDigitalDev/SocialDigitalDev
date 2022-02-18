@@ -128,6 +128,19 @@ $(document).ready(function () {
 				}, 4000);
 			}
 		},
+
+		headerHeight: function () {
+			
+			setInterval(function () {
+			
+				const headerHeight = $('header').innerHeight()
+
+				$('main').attr('style', `margin-top: ${headerHeight}px;`)
+			
+			}, 2000)
+
+		},
+
 		qtdCart: function () {
 			vtexjs.checkout.getOrderForm().done(function (orderForm) {
 				var carItems = orderForm.items.length;
@@ -166,7 +179,6 @@ $(document).ready(function () {
 				});
 			});
 		},
-
 
 		/* Busca Header */
 		BuscaHeader: function () {
@@ -282,6 +294,7 @@ $(document).ready(function () {
 			}
 			return this;
 		},
+
 		carrosselFem: function () {
 			if (scre < 980) {
 				$('.prateleira-01 #prat-2').slick({
@@ -420,7 +433,7 @@ $(document).ready(function () {
                     }
                 });
             }
-        },
+    },
 
 		//Titulos Banners Departamentos
 		bannerHoverAlt: function () {
@@ -674,6 +687,7 @@ $(document).ready(function () {
 				}
 			}
 		},
+
 		filtroCategoria: function () {
 			if ($("body").hasClass("polo-departamento") || $("body").hasClass("categoria")) {
 				$(".search-single-navigator h5").click(function () {
@@ -722,6 +736,7 @@ $(document).ready(function () {
 				})
 			}
 		},
+
 		// Nome Departamento Categoria
 		aplicaNomeCategoria: function () {
 			if ($("body").hasClass("polo-categoria") || $("body").hasClass("polo-departamento")) {
@@ -732,6 +747,7 @@ $(document).ready(function () {
 			}
 
 		},
+
 		calculaFrete: function () {
 			function formatReal(int) {
 				var tmp = int + '';
@@ -922,7 +938,7 @@ $(document).ready(function () {
                     });
                
             }
-        },
+    },
 
 		slideSimilar: function () {
 			if ($("body").hasClass("nova-pdp")) {
@@ -965,6 +981,7 @@ $(document).ready(function () {
 					});
 			}
 		},
+
 		ofertaLimitada: function () {
 			if (scre < 980) {
 					$('.oferta-limitada .polo_kits .prateleira ul, .section_four #prat-1').slick({
@@ -990,6 +1007,7 @@ $(document).ready(function () {
 					});
 			}
 		},
+
 		qtdProd: function () {
 			if ("abc" == "abc") {
 				setTimeout(function () {
@@ -1459,6 +1477,7 @@ $(document).ready(function () {
 				}
 			});
 		},
+
 		openMiniCart: function () {
 			var e = $(".header-cart a"),
 				t = $(".header-minicart, .minicart__overlay");
@@ -1483,6 +1502,7 @@ $(document).ready(function () {
 				t.removeClass("open");
 			});
 		},
+
 		addProductToMinicart: function () {
 			var _button = $('.polo-buy-button');
 
@@ -1810,6 +1830,7 @@ $(document).ready(function () {
 				});
 			}, 1000);
 		},
+
 		compraFixa: function(){
 			$(window).scroll(function(event) {
 				function compraFixa() {
@@ -1826,11 +1847,13 @@ $(document).ready(function () {
 				compraFixa();
 			});
 		},
+
 		iniciaCountdown: function() {
 			$(".oferta_do_dia .prod-right").each((function() {
 					$(this).find(".flags-promo").vtexCountdown()
 			}))
 		},
+
 		iniciaCountdownPDP: function() {
 			$(".polo-produto_content").each((function() {
 				$(this).find(".promo-flag-wrap").vtexCountdown()
@@ -1882,6 +1905,7 @@ $(document).ready(function () {
 		init: function () {
 			//Geral
 			poloWear.menuPrincipal();
+			poloWear.headerHeight();
 			//poloWear.quizSolteiro();
 			poloWear.buscaMobile();
 			poloWear.verificaLogado();
