@@ -1526,7 +1526,11 @@ $(document).ready(function () {
                 ]
             });
         },
-
+        descriptionFixer: function() {
+            var descriptionText = $('.productDescription').text();
+            var newText = descriptionText.replace('_x000d_', '<br>');
+            $('.productDescription').html(newText);
+        },
         init: function () {
             //Geral            
             codePlanet.sliderMenu();
@@ -1583,6 +1587,7 @@ $(document).ready(function () {
             codePlanet.iniciaCountdown();
             codePlanet.iniciaCountdownPDP();
             codePlanet.lpReveilonPG();
+            codePlanet.descriptionFixer();
         },
         init_ajax: function () {
             // codePlanet.menuPrincipal();
