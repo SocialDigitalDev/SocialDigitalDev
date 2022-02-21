@@ -412,9 +412,33 @@ footer {
                 list-style: none;
                 .user-name__account{
                     .link-help{
+                        @include d(ipad){
+                            margin: 10px 0;
+                        }
+                        a{
+                            color: var(--color-white);
+                            text-align: right;
+                            text-decoration: underline;
+                        }
                         .welcome{
                             font-size: 0;
+                            @include d(ipad){
+                                color: var(--color-white);
+                                font-style: normal;
+                                @include flexbox;
+                                @include align-items(center);
+                                &:after{
+                                    content: "\e948";
+                                    font-family: 'shopmulti-icon';
+                                    font-size: 25px;
+                                    margin: 0 10px;
+                                    font-weight: 100;
+                                    color: var(--color-white);
+                                    position: relative;
+                                }
+                            }
                             em{
+                                display: inline-block;
                                 a#login{
                                     font-size: 15px;
                                     color: var(--color-white);
@@ -429,7 +453,20 @@ footer {
                                         font-weight: 100;
                                         color: var(--color-white);
                                         position: relative;
+                                        @include d(ipad){
+                                            display: none;
+                                        }
                                     }
+                                }
+                            }
+                            a{
+                                color: var(--color-white);
+                                text-decoration: underline;
+                                display: block;
+                            }
+                            &.logado{
+                                @include d(ipad){
+                                    font-size: 15px;
                                 }
                             }
                         }

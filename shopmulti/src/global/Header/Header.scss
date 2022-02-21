@@ -232,6 +232,10 @@ header{
                                             color: var(--color-orange);
                                         }
                                     }
+                                    a.sair-logout{
+                                        color: var(--color-orange);
+                                        text-decoration: underline;
+                                    }
                                 }
                             }
                         }

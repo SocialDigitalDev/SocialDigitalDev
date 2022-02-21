@@ -1,0 +1,20 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'Orders';
+    - var $templateClass = 'sm-orders';
+//- Page styles
+block append styles
+
+//- Main Content
+block content
+    main
+        section
+            .container.orderPage
+                .wrapper
+                    #content.row-fluid
+                        .wrapper
+                            .col-main
+                                vtex(.cmc:orderlist)/
+block append scripts
