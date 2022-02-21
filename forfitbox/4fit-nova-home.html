@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+    <title> FOR FIT BOX </title>
+    <vtex:metaTags/>
+    <vtex:template id="4fit-css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <vtex:template id="4fit-header" />
+    <main>
+        <figure>
+            <div class="container slide">
+                <div class="slide-principal">
+                    <vtex:contentPlaceHolder id="forfit_banner-principal" />
+                </div>
+            </div>
+            
+            <div class="container slide-mobile">
+                <vtex:contentPlaceHolder id="forfit_banner-principal-mobile" />
+            </div>
+        </figure>
+
+        <section>
+            <div class="container informativos">
+                <div class="container-center">
+                    <vtex.cmc:ForFitInformativo/>
+                </div>
+            </div>
+        </section>
+        
+         <section>
+            <div class="container categorias-section">
+                <div class="container-center">
+                    <div class="titulo-prateleira">
+                        <h2> CATEGORIAS </h2>
+                    </div>
+                    <vtex:contentPlaceHolder id="forfit_categorias" />
+                </div>
+            </div>
+        </section>
+        
+        <!--<section>
+            <div class="container objetivo-section">
+                <div class="container-center">
+                    <div class="titulo-prateleira">
+                        <h2> QUAL SEU OBJETIVO </h2>
+                    </div>
+                    <vtex:contentPlaceHolder id="forfit_objetivos" />
+                </div>
+            </div>
+        </section>-->
+
+        <section class="container slide-prod produtos-avulsos">
+            <div class="container-center">
+                <div class="titulo-prateleira">
+                    <h2> PRODUTOS EM DESTAQUE </h2>
+                </div>
+                <div class="produtos-slider">
+                    <vtex:contentPlaceHolder id="forfit_produtos-destaque" />
+                </div>
+                <div class="btn ver-todos"><a href=""> Ver todos </a></div>
+            </div>
+        </section>
+
+        <section class="container marcas">
+            <div class="container-center">
+                <div class="titulo-prateleira">
+                    <h2> TOP MARCAS </h2>
+                </div>
+                <div class="marcas-slider">
+                    <vtex:contentPlaceHolder id="forfit_marcas-destaque" />
+                </div>
+            </div>
+        </section>
+
+        <section>   
+            <div class="container prateleira-produtos_home">
+                <div class="container-center">
+                    <div class="prat-left__banner">
+                        <vtex:contentPlaceHolder id="forfit-banner-Left" />
+                    </div>
+                     <div class="prat-left__banner_mobile">
+                        <vtex:contentPlaceHolder id="forfit_banner-left-mobile" />
+                    </div>
+                    <div class="prat-right_prod forfit-prateleira">
+                        <vtex:contentPlaceHolder id="forfit-prateleira-right" />
+                    </div>
+                    <div class="btn ver-todos"><a href=""> Ver todos </a></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container slide-prod">
+            <div class="container-center">
+                <div class="titulo-prateleira">
+                    <h2> AMINOÁCIDOS </h2>
+                </div>
+                <div class="produtos-slider">
+                    <vtex:contentPlaceHolder id="Prateleira - Aminoacidos" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Pré Treino -->
+        <section class="pre-treino">   
+            <div class="container prateleira-produtos_home">
+                <div class="container-center">
+                    <div class="prat-left__banner">
+                        <vtex:contentPlaceHolder id="Banner - Pre treino" />
+                    </div>
+                     <div class="prat-left__banner_mobile">
+                        <vtex:contentPlaceHolder id="Banner - Pre Treino Mobile" />
+                    </div>
+                    <div class="prat-right_prod forfit-prateleira">
+                        <vtex:contentPlaceHolder id="Prat - Pre treino" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container slide-prod">
+            <div class="container-center">
+                <div class="titulo-prateleira">
+                    <h2> OFERTAS </h2>
+                </div>
+                <div class="produtos-slider">
+                    <vtex:contentPlaceHolder id="forfit_ofertas" />
+                </div>
+                <div class="btn ver-todos"><a href=""> Ver todos </a></div>
+            </div>
+        </section>
+        
+          <section class="container banner-bottom">
+            <div class="container-center">
+                <vtex:contentPlaceHolder id="forfit_banner-bottom" />
+            </div>
+        </section>
+
+    </main>
+    <vtex:template id="4fit-footer" />
+    <vtex:template id="4fit-js" />
+</body>
+</html>

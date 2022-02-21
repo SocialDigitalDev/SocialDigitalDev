@@ -425,7 +425,7 @@ $(document).ready(function () {
         sliderMarcas: function () {
             $('.marcas-slider ul').slick({
                 infinite: false,
-                slidesToShow: 6,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 responsive: [{
                     breakpoint: 980,
