@@ -558,7 +558,7 @@ body{
 					.sm-product{
 						.sm-actions{
 							@include d(hdplus){
-								bottom: -15px;
+								bottom: -41px;
 							}
 						}
 					}
@@ -625,9 +625,9 @@ body{
 						.sm-product{
 							border: none;
 							.sm-actions{
-								bottom: -14px;
+								// bottom: -14px;
 								@include d(celularLarge){
-									bottom: -18px;
+									// bottom: -18px;
 								}
 							}
 						}
@@ -667,7 +667,7 @@ body{
 	}
 	.wrapper{
 		@include d(ipad){
-			padding: 0 3em;
+			padding: 0em;
 		}
 		@include d(celularLarge){
 			padding: 0em;
@@ -686,6 +686,7 @@ body{
 				@include d(celularLarge){
 					display: grid;
 					grid-template-columns: repeat(2, 1fr);
+					gap: 12px;
 				}
 				li{
 					margin-bottom: 2em;
@@ -703,7 +704,7 @@ body{
 							width: 155px;
 						}
 						.sm-actions{
-							bottom: -12px;
+							// bottom: -12px;
 						}
 					}
 				}

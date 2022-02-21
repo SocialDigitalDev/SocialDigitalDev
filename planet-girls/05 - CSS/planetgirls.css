@@ -8195,7 +8195,6 @@ textarea {
 
 .detalhes-prod #descricao-produto p {
     width: 100%;
-    line-height: 1.6;
     color: #666;
     float: left;
 }
@@ -14886,6 +14885,30 @@ footer.black-friday-pg .footer-social a {
 .black-friday .box-form-msg {
     color: red;
     font-weight: 600;
+}
+
+table.group.Especificacao-Produto tbody tr.even {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+table.group.Especificacao-Produto {
+    margin: 0;
+    display: flex;
+}
+
+table.group.Especificacao-Produto tbody {
+    margin: 0;
+    width: 100%;
+}
+
+.Composicao {
+    margin: 10px 0px;
+}
+
+th.name-field.Composicao {
+    margin-right: 10px;
 }
 
 @media (max-width: 1366px) {

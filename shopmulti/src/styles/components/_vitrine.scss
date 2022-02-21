@@ -100,13 +100,15 @@
                 @include align-items(center);
                 border: 1px solid var(--color-gray-line);
                 border-radius: 20px;
-                min-height: 310px;
+                min-height: 309px;
                 width: 185px;
                 overflow: hidden;
                 background: var(--color-white);
                 .sm-image {
                     position: relative;
                     margin-bottom: 10px;
+                    max-width: 100px;
+                    margin-top: 15px;
                     .flags-promo{
                         background: var(--color-yellow);
                         padding: 3px;
@@ -162,10 +164,10 @@
                     opacity: 1;
                     @include t(.4s);
                     position: relative;
-                    bottom: -12px;
+                    bottom: -39px;
                     max-width: 185px;
                     @include d(ipad){
-                        bottom: -7px;
+                        // bottom: -7px;
                     }
                     .wishlist{
                         background-color: var(--color-orange-dark);

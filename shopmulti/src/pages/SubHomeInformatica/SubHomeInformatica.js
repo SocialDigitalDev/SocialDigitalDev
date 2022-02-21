@@ -52,6 +52,17 @@ var subhomeinformatica = {
                             dots: true,
                             centerMode: false
                         }
+                    },
+                    {
+                        breakpoint: 370,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: true,
+                            centerMode: true,
+                            centerPadding: "140px"
+                        }
                     }
                 ]
             });
