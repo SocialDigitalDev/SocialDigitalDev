@@ -1150,9 +1150,6 @@ nav > ul > li:hover > a {
 	
 }
 
-
-
-
 /* Categorias */
 
 .categorias-section ul{
@@ -9366,14 +9363,12 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 	.main_momentos-paises .menu_paises{
 		display: block;
 		flex-wrap: nowrap;
-
 	}
 	.main_momentos-paises .menu_paises li{
 		display: block;
 	}
 	.contador_ofertas.flags-promo h2{
 		margin: 0px;
-
 	}
 	.flags-promo {
 		width: 100%;

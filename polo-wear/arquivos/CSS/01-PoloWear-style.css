@@ -4750,7 +4750,6 @@ a#business-toggle[data="on"]:after {
 .polo-departamento__topo {
     width: 100%;
     float: left;
-    margin-top: 10em;
 }
 
 .polo-departamento__topo .bannerDepartamento {
@@ -8953,10 +8952,6 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
         max-width: 255px;
     }
 
-    .polo-departamento__topo {
-        margin-top: 10em;
-    }
-
     .polo-departamento__topo .nomeDepartamento {
         margin-top: 8%;
     }
@@ -9385,10 +9380,6 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 
     .bread {
         padding: 20px 0;
-    }
-
-    .polo-departamento__topo {
-        margin-top: 8em;
     }
 
     a.image-zoom {
@@ -11545,10 +11536,6 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
     .header .carrinho .icon-cart::before {
         font-size: 30px;
         top: 0px;
-    }
-
-    .polo-departamento__topo {
-        margin-top: 6em;
     }
 
     .polo-departamento__topo .nomeDepartamento {
