@@ -997,29 +997,201 @@ $(document).ready(function () {
               } 
             });
         },
+        detalhesProduto: function() {
+            var buttonBuyTogether = document.querySelector('.details-prod__info-button-sugest');
+            var buttonVideo = document.querySelector('.details-prod__info-button-ingredientes');
+            var buttonCare = document.querySelector('.details-prod__info-button-care');
+            var buttonDelivery = document.querySelector('.details-prod__info-button-delivery');
 
-        campoProduto: function () {
-            //var textoDetalhes = $(".productDescription").text();
-            var textoSugestaodeUso = $(".prod-tabela .Informacoes tbody tr:nth-of-type(1) .value-field").html();
-            var textoIngredientes = $(".prod-tabela .Informacoes tbody tr:nth-of-type(2) .value-field").html();
-            //var textoNutricional = $(".prod-tabela .Informacoes tbody tr:nth-of-type(3) .value-field").html();
-            var textoModoPreparo = $(".prod-tabela .Informacoes tbody tr:nth-of-type(4) .value-field").html();
-            //$(".forfit-produto__toggle-detalhes").text(textoDetalhes);
-            $(".forfit-produto__toggle-sugestao").html(textoSugestaodeUso);
-            $(".forfit-produto__toggle-ingredientes").html(textoIngredientes);
-            //$(".forfit-produto__toggle-nutricional").html(textoNutricional);
-            //$(".forfit-produto__toggle-nutricional .tabela-nutri br").remove();
-            $(".forfit-produto__toggle-modo").html(textoModoPreparo);
+            var buyTogetherContent = document.querySelector('.Sugestao-de-Uso');
+            var buyTogetherInfo = document.querySelector('.details-prod__info-sugest');
+            
+            var characteristic = document.querySelector('.details-prod__characteristic-info');
+            var textCharacteristic = document.querySelectorAll('.Informacoes-Adicionais');
+           
+            var videoBox = document.querySelector('.details-prod__info-ingredientes');
+            var video = document.querySelectorAll('.Ingredientes');
+           
+            var careBox = document.querySelector('.details-prod__info-care');
+            var care = document.querySelectorAll('.Modo-de-Preparo');
+            
+            var deliveryBox = document.querySelector('.details-prod__info-delivery');
+            var delivery = document.querySelectorAll('.Informacoes-de-Entrega');
+            
+            var videoInfo = document.querySelector('.details-prod__info-ingredientes');
+            var careInfo = document.querySelector('.details-prod__info-care');
+            var deliveryInfo = document.querySelector('.details-prod__info-delivery');
+            var description = document.querySelector('.productDescription');
         
-            // if (!textoInformacoes) {
-            //   $(".forfit-produto__detalhes-texto:last-of-type").hide();
-            // }
+            if (description.textContent == '') {
+              description.parentNode.style.display = 'none';
+            }
+        
+            console.log(textCharacteristic, 'teste');
+        
+            if (textCharacteristic[1] != null) {
+              characteristic.innerHTML = textCharacteristic[1].innerHTML;
+            } else {
+              characteristic.parentNode.style.display = 'none';
+            }
+        
+            var descriptionAndCharacteristicsParent = document.querySelector('.details-prod__details-container');
+        
+            if (description.textContent == '' && textCharacteristic[1] != null) {
+              descriptionAndCharacteristicsParent.style.display = 'none';
+            }
+        
+            if (window.outerWidth > 1024) {
+              buttonBuyTogether.classList.add('details-prod__button-active');
+              buttonVideo.classList.add('details-prod__button-no-active');
+              buttonCare.classList.add('details-prod__button-no-active');
+              buttonDelivery.classList.add('details-prod__button-no-active');
+              buyTogetherInfo.style.display = 'block';
+              videoInfo.style.display = 'none';
+              careInfo.style.display = 'none';
+              deliveryInfo.style.display = 'none';
+        
+              if (buyTogetherContent.textContent == '') {
+                buttonBuyTogether.style.display = 'none';
+                buttonVideo.classList.add('details-prod__button-active');
+                buttonVideo.classList.remove('details-prod__button-no-active');
+                buyTogetherInfo.style.display = 'none';
+                videoInfo.style.display = 'block';
+        
+                if (video[1] == null) {
+                  buttonCare.classList.add('details-prod__button-active');
+                  buttonCare.classList.remove('details-prod__button-no-active');
+                  videoInfo.style.display = 'none';
+                  careInfo.style.display = 'block';
+        
+                  if (care[1] == null) {
+                    buttonDelivery.classList.add('details-prod__button-active');
+                    buttonDelivery.classList.remove('details-prod__button-no-active');
+                    careInfo.style.display = 'none';
+                    deliveryInfo.style.display = 'block';
+                  }
+                }
+              }
+        
+              if (video[1] != null) {
+                videoBox.innerHTML = video[1].innerHTML;
+              } else {
+                buttonVideo.style.display = 'none';
+              }
+        
+              if (care[1] != null) {
+                careBox.innerHTML = care[1].innerHTML;
+              } else {
+                buttonCare.style.display = 'none';
+              }
+        
+              if (delivery[1] != null) {
+                deliveryBox.innerHTML = delivery[1].innerHTML;
+              } else {
+                buttonDelivery.style.display = 'none';
+              }
+        
+              buttonVideo.addEventListener('click', function () {
+                buttonVideo.classList.remove('details-prod__button-no-active');
+                buttonVideo.classList.add('details-prod__button-active');
+                buttonBuyTogether.classList.remove('details-prod__button-active');
+                buttonBuyTogether.classList.add('details-prod__button-no-active');
+                buttonCare.classList.remove('details-prod__button-active');
+                buttonCare.classList.add('details-prod__button-no-active');
+                buttonDelivery.classList.add('details-prod__button-no-active');
+                buttonDelivery.classList.remove('details-prod__button-active');
+                buyTogetherInfo.style.display = 'none';
+                videoInfo.style.display = 'block';
+                careInfo.style.display = 'none';
+                deliveryInfo.style.display = 'none';
+              });
+              buttonBuyTogether.addEventListener('click', function () {
+                buttonVideo.classList.add('details-prod__button-no-active');
+                buttonVideo.classList.remove('details-prod__button-active');
+                buttonBuyTogether.classList.add('details-prod__button-active');
+                buttonBuyTogether.classList.remove('details-prod__button-no-active');
+                buttonCare.classList.remove('details-prod__button-active');
+                buttonCare.classList.add('details-prod__button-no-active');
+                buttonDelivery.classList.add('details-prod__button-no-active');
+                buttonDelivery.classList.remove('details-prod__button-active');
+                buyTogetherInfo.style.display = 'block';
+                videoInfo.style.display = 'none';
+                careInfo.style.display = 'none';
+                deliveryInfo.style.display = 'none';
+              });
+              buttonCare.addEventListener('click', function () {
+                buttonVideo.classList.add('details-prod__button-no-active');
+                buttonVideo.classList.remove('details-prod__button-active');
+                buttonBuyTogether.classList.remove('details-prod__button-active');
+                buttonBuyTogether.classList.add('details-prod__button-no-active');
+                buttonCare.classList.add('details-prod__button-active');
+                buttonCare.classList.remove('details-prod__button-no-active');
+                buttonDelivery.classList.add('details-prod__button-no-active');
+                buttonDelivery.classList.remove('details-prod__button-active');
+                buyTogetherInfo.style.display = 'none';
+                videoInfo.style.display = 'none';
+                careInfo.style.display = 'block';
+                deliveryInfo.style.display = 'none';
+              });
+              buttonDelivery.addEventListener('click', function () {
+                buttonVideo.classList.add('details-prod__button-no-active');
+                buttonVideo.classList.remove('details-prod__button-active');
+                buttonBuyTogether.classList.remove('details-prod__button-active');
+                buttonBuyTogether.classList.add('details-prod__button-no-active');
+                buttonCare.classList.remove('details-prod__button-active');
+                buttonCare.classList.add('details-prod__button-no-active');
+                buttonDelivery.classList.remove('details-prod__button-no-active');
+                buttonDelivery.classList.add('details-prod__button-active');
+                buyTogetherInfo.style.display = 'none';
+                videoInfo.style.display = 'none';
+                careInfo.style.display = 'none';
+                deliveryInfo.style.display = 'block';
+              });
+            }
+        
+            if (window.outerWidth < 1025) {
+              if (buyTogetherContent.textContent != '') {
+                buttonBuyTogether.classList.add('details-prod__button-active');
+                buyTogetherInfo.appendChild(buttonBuyTogether);
+              } else {
+                buttonBuyTogether.style.display = 'none';
+              }
+        
+              if (video[1] != null) {
+                videoBox.innerHTML = video[1].innerHTML;
+                buttonVideo.classList.add('details-prod__button-active');
+                videoBox.appendChild(buttonVideo);
+              } else {
+                buttonVideo.style.display = 'none';
+                videoBox.style.display = 'none';
+              }
+        
+              if (care[1] != null) {
+                careBox.innerHTML = care[1].innerHTML;
+                buttonCare.classList.add('details-prod__button-active');
+                careBox.appendChild(buttonCare);
+              } else {
+                buttonCare.style.display = 'none';
+                careBox.style.display = 'none';
+              }
+        
+              if (delivery[1] != null) {
+                deliveryBox.innerHTML = delivery[1].innerHTML;
+                buttonDelivery.classList.add('details-prod__button-active');
+                deliveryBox.appendChild(buttonDelivery);
+              } else {
+                buttonDelivery.style.display = 'none';
+                deliveryBox.style.display = 'none';
+              }
+            }
         },
+       
         campoTabelaNutri: function() {
             if ($("#caracteristicas").before("<div class='tabelasMain'><div class='tabelasTitle'></div><div class='tabelasCentral'><div class='tabelaNutricional active'></div><div class='tabelaAminograma'></div></div></div>"), 
             $("#caracteristicas .Informacoes-Nutricionais").length && ($("#caracteristicas .Informacoes-Nutricionais tr").each(function() {
                 var e = $(".value-field", this).html().toString();
-                e.indexOf("??") > -1 ? (e = e.split("??"), $(".value-field", this).html(e[0]), $(this).append("<td class='value-complement'>" + e[1] + "</td>")) : $(this).append("<td class='value-complement'></td>")
+                e.indexOf("??") > -1 ? (e = e.split("??"), $(".value-field", this).html(e[0]), 
+                $(this).append("<td class='value-complement'>" + e[1] + "</td>")) : $(this).append("<td class='value-complement'></td>")
             }), 
             $(".tabelaNutricional").append($("#caracteristicas .Informacoes-Nutricionais")), 
             $(".tabelasTitle").append("<span class='tableaNutriBt active'>Valores Nutricionais</span>"), 
@@ -1297,10 +1469,10 @@ $(document).ready(function () {
             code4Fit.thumbImg();
             // code4Fit.qtdCart();
             code4Fit.aviseMe();
-            code4Fit.campoProduto();
+            code4Fit.detalhesProduto();
             code4Fit.campoTabelaNutri();
             code4Fit.calculaFrete();
-            code4Fit.toggleDescricao();
+            //code4Fit.toggleDescricao();
             code4Fit.verificaLogado();    
             code4Fit.prateleirasGerais();
             code4Fit.prateleirasDireita();
