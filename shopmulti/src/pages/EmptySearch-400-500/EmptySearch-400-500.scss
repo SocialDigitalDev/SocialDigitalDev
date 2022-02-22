@@ -1,7 +1,15 @@
 section{
     .wrapper{
+        max-width: 1600px;
+        margin: auto;
         &.bread{
-            padding: 1em 2em;
+            @include d(hdplus){
+                padding: 1em 4em;
+            }
+            @include d(ipadPro){
+                padding: 1em;
+            }
+            padding: 1em 0em;
             background: var(--color-white);
             .container-center {
                 ul {
@@ -38,18 +46,32 @@ section{
                     @include align-items(center);
                     text-align: center;
                     padding: 5em 0;
+                    h1{
+                        font-size: 28px;
+                        color: var(--color-orange-clear);
+                        margin-bottom: 1em;
+                        @include d(celularLarge){
+                            font-size: 22px;
+                        }
+                    }
                     h3{
                         font-size: 20px;
-                        color: var(--color-blue-dark);
+                        color: var(--color-orange);
                         line-height: 40px;
                         font-weight: 600;
+                        @include d(celularLarge){
+                            font-size: 16px;
+                        }
                     }
                     > p{
                         font-size: 25px;
-                        color: var(--color-blue-dark);
+                        color: var(--color-orange);
                         text-transform: uppercase;
                         line-height: 30px;
                         font-weight: 600;
+                        @include d(celularLarge){
+                            font-size: 16px;
+                        }
                     }
                     .dicas{
                         background: var(--ice-white);
@@ -59,11 +81,14 @@ section{
                         p{
                             line-height: 30px;
                             font-size: 16px;
+                            @include d(celularLarge){
+                                font-size: 13px;
+                            }
                         }
                     }
                     a{
                         span.voltar-home {
-                            background: var(--color-blue-dark);
+                            background: var(--color-orange);
                             color: var(--color-white);
                             font-weight: 600;
                             text-transform: uppercase;

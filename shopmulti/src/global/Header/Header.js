@@ -99,15 +99,15 @@ var header = {
     },
     verificaLogado: function(){
         $(document).one("ajaxStop", function () {
-            $("header .ajax-content-loader, .user-login .ajax-content-loader").each(function () {
+            $("header .ajax-content-loader, footer .user-login .ajax-content-loader").each(function () {
         
                 if ($("#login", this).length) $(this).parent().addClass("loginOff"), $("body").addClass("loginOff");
                 else if (
                     ($(this).parent().addClass("loginOn"),
                         $("body").addClass("loginOn"),
-                        $(".ajax-content-loader").append(
-                            "<div class='box-welcome'><a href='/_secure/account#/orders' class='login-pedidos'>Meus Pedidos</a><a href='/_secure/account#/profile' class='login-cadastro'>Meu Cadastro</a><a class='sair-logout' href='/no-cache/user/logout'>Sair</a></div>"
-                        ),
+                        // $(".ajax-content-loader").append(
+                        //     "<div class='box-welcome'><a href='/_secure/account#/orders' class='login-pedidos'>Meus Pedidos</a><a href='/_secure/account#/profile' class='login-cadastro'>Meu Cadastro</a><a class='sair-logout' href='/no-cache/user/logout'>Sair</a></div>"
+                        // ),
                         $("body").hasClass("loginOn"))
                 ) {
                     $("p.welcome em").remove();
@@ -119,6 +119,8 @@ var header = {
                     var treatNameEmail = nameEmail.split('@');
                     var finalNameEmail = treatNameEmail[0];
                     $('.logado').text(finalNameEmail);
+                    $('header .welcome.logado').append('<a class="sair-logout" href="/no-cache/user/logout">Logout</a>');
+                    $('.menu-hamburger .link-help').append('<a class="sair-logout" href="/no-cache/user/logout">Logout</a>');
                 }
         
                 $('body').on('click', function (e) {

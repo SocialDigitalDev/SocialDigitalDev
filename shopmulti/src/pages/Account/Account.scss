@@ -1,4 +1,4 @@
-.ls-account-main{
+.sm-account-main{
     section{
         .accountPage{
             margin: auto;
@@ -7,15 +7,95 @@
             }
             .container-center{
                 .render-container{
-                    .vtex-account{
-                        .vtex-account__user-info{
-                            display: none;
-                        }
-                        .vtex-account__menu-links{
-                            a.vtex-account_menu-link{
-                                &.c-on-base{
-                                    background: var(--ice-white);
-                                    border: none;
+                    .render-provider{
+                        .vtex-account{
+                            aside.vtex-account__menu{
+                                border: 2px solid var(--color-orange);
+                                padding-top: 2em;
+                                padding-left: 1em;
+                                padding-right: 1em;
+                                border-radius: 10px;
+                                @include d(celularLarge){
+                                    margin: 0 1em;
+                                }
+                                .vtex-account__user-info{
+                                    .vtex-account__user-image{
+                                        display: none;
+                                    }
+                                    div{
+                                        @include flexbox;
+                                        @include align-items(center);
+                                        .vtex-account__user-greeting{
+                                            padding-left: 10px;
+                                            font-size: 25px;
+                                            font-weight: 600;
+                                        }
+                                        .vtex-account__user-name{
+                                            margin-left: 10px;
+                                            font-size: 25px;
+                                            font-weight: 500;
+                                        }
+                                    }
+                                }
+                                .vtex-account__menu-links{
+                                    a.vtex-account_menu-link{
+                                        &.c-on-base{
+                                            background: var(--color-orange-clear);
+                                            border: none;
+                                            color: var(--color-white);
+                                        }
+                                    }
+                                }
+                            }
+                            section.vtex-account__page{
+                                header{
+                                    .vtex-pageHeader__container{
+                                        .vtex-pageHeader__container{
+                                            .vtex-pageHeader-link__container{
+                                                margin-bottom: 10px;
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                                main.vtex-account__page-body{
+                                    article{
+                                        border-radius: 10px;
+                                        border-color: var(--color-orange);
+                                        footer{
+                                            background: var(--color-white);
+                                            border-radius: 0 0 10px 10px;
+                                            button.vtex-button{
+                                                background: var(--color-orange-clear);
+                                                color: var(--color-white);
+                                            }
+                                        }
+                                        main{
+                                            .vtex-profile-form__profile-summary{
+                                                label{
+                                                    border-bottom: 1px solid var(--color-orange-clear);
+                                                    margin-right: 2em;
+                                                }
+                                            }
+                                            form.vtex-profile-form__profile-container__wrapper{
+                                                button.vtex-button{
+                                                    background: var(--color-orange-clear);
+                                                    color: var(--color-white);
+                                                    border-color: var(--color-orange-clear);
+                                                }
+                                            }
+                                            button.vtex-button{
+                                                background: var(--color-orange-clear);
+                                                color: var(--color-white);
+                                                border-color: var(--color-orange-clear);
+                                                &.bg-disabled{
+                                                    background: var(--color-gray-line);
+                                                    color: var(--color-white);
+                                                    border-color: var(--color-gray-line);
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -27,4 +107,15 @@
             display: none;
         }
     }
+}
+footer.vtex-my-authentication-1-x-box_footer{
+    background-color: var(--color-white);
+    button.vtex-button{
+        background: var(--color-orange-clear);
+        color: var(--color-white);
+        border-color: var(--color-orange-clear);
+    }
+}
+.vtex-pageHeader__title{
+    margin-top: 10px;
 }

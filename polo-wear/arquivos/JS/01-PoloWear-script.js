@@ -135,7 +135,9 @@ $(document).ready(function () {
 			
 				const headerHeight = $('header').innerHeight()
 
-				$('main').attr('style', `margin-top: ${headerHeight}px;`)
+				if (!$('.polo-wear__produto').length == 1){
+					$('main').attr('style', `margin-top: ${headerHeight}px;`)
+				}
 			
 			}, 2000)
 

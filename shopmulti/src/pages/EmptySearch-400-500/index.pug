@@ -3,7 +3,7 @@ extends ../../layout/index.pug
 //- Template variables
 block vars
     - var $templateName = 'EmptySearch-400-500';
-    - var $templateClass = 'ls-busca-vazia';
+    - var $templateClass = 'sm-busca-vazia';
 //- Page styles
 block append styles
     link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
@@ -17,13 +17,13 @@ block content
                     li.home
                         a(href='/') Home 
                     li
-                        vtex:contentPlaceHolder(id=`ls-bread`)/  
+                        vtex:contentPlaceHolder(id=`sm-bread`)/  
     section
         .wrapper.page-erro
             .container-center
                 .conteudo-page-erro
                     h3
-                        vtex:contentPlaceHolder(id=`ls-texto-erro`)/
+                        vtex:contentPlaceHolder(id=`sm-texto-erro`)/
                     p O que acha de realizar uma nova busca? 
                     .dicas
                         p

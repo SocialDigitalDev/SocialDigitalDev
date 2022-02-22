@@ -4750,7 +4750,6 @@ a#business-toggle[data="on"]:after {
 .polo-departamento__topo {
     width: 100%;
     float: left;
-    margin-top: 10em;
 }
 
 .polo-departamento__topo .bannerDepartamento {
@@ -6129,7 +6128,7 @@ body .resultadoDepartamento+.searchResultsTime+.sub {
     line-height: 20px;
     font-size: 14px;
     border-top: 1px solid #e0e0e0;
-    padding: 30px 40px 0;
+    padding: 20px 0;
     top: -9px;
     position: relative;
 }
@@ -6759,10 +6758,21 @@ span.icon__frete {
     flex-flow: column;
 }
 
-th.name-field.Tipo-de-Produto,
-td.value-field.Tipo-de-Produto {
+.produto-all .Filtros tbody {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.produto-all .Filtros tbody tr {
+    margin: 0;
+    margin-right: 2em;
+}
+
+th.name-field,
+td.value-field {
     margin: 0;
     text-align: left;
+    display: block;
 }
 
 .produto th.name-field.Genero {
@@ -6826,6 +6836,8 @@ strong.skuListPrice {
 #caracteristicas {
     float: left;
     width: 100%;
+    display: flex;
+    flex-flow: column;
 }
 
 #caracteristicas>h4 {
@@ -6846,6 +6858,10 @@ table.Especificacoes tbody {
     float: left;
 }
 
+table.group.Especificacoes{
+    margin: 0;
+}
+
 .productDescription {
     float: left;
     width: 100%;
@@ -6859,9 +6875,9 @@ table.Especificacoes td {
 }
 
 table.Especificacoes tbody th {
-    font-weight: 500;
+    font-weight: 600;
     text-align: right;
-    color: #989898;
+    color: #000000;
     display: inline-block;
     padding: 0px 5px 0px 0px;
     font-size: 16px;
@@ -8953,10 +8969,6 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
         max-width: 255px;
     }
 
-    .polo-departamento__topo {
-        margin-top: 10em;
-    }
-
     .polo-departamento__topo .nomeDepartamento {
         margin-top: 8%;
     }
@@ -9385,10 +9397,6 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 
     .bread {
         padding: 20px 0;
-    }
-
-    .polo-departamento__topo {
-        margin-top: 8em;
     }
 
     a.image-zoom {
@@ -11545,10 +11553,6 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
     .header .carrinho .icon-cart::before {
         font-size: 30px;
         top: 0px;
-    }
-
-    .polo-departamento__topo {
-        margin-top: 6em;
     }
 
     .polo-departamento__topo .nomeDepartamento {
