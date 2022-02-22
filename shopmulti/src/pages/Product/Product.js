@@ -9,6 +9,58 @@ const eventProduct = () => {
 }
 var scre = $(window).width();
 var produto = {
+    carrosselPdp: function() {
+        $('.helperComplement').remove();
+        if (scre <= 1440) {
+            $('.vitrine-simples .wrapper .sm-prateleira > ul').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: true,
+                            centerMode: true,
+                            centerPadding: "50px"
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: true,
+                            centerMode: false
+                        }
+                    },
+                    {
+                        breakpoint: 370,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: true,
+                            centerMode: true,
+                            centerPadding: "140px"
+                        }
+                    }
+                ]
+            });
+        }
+    },
     qtdProd: function () {
         if ("abc" == "abc") {
             setTimeout(function () {
@@ -142,6 +194,7 @@ var produto = {
         produto.fixFrete();
         produto.qtdStockAvailability();
         produto.freteSameDayNextDay();
+        produto.carrosselPdp();
     }
 }
 
