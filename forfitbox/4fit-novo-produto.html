@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+    <title>
+    <vtex.cmc:productPageTitle />
+    </title>
+    <vtex:metaTags />
+    <vtex:template id="4fit-css" />
+    <vtex.cmc:productRichSnippets showFacebook="1" />
+    <link href="/files/assinar-v2.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+    <vtex.cmc:productRichSnippets showGoogle="1" />
+    <!-- Chamada do cabeçalho da loja -->
+    <vtex:template id="4fit-header" />
+    <main>
+        <!-- Estrutura Breadcrumb -->
+        <section class="produto-page__topo page-title-overlap bg-dark pt-4">
+            <div class="container-center_topo">
+                <div class="container d-lg-flex justify-content-between py-2 py-lg-3">
+
+                    <div class="produto-titulo text-left">
+                        <h1 class="nome-prod">
+                            <vtex.cmc:productName />
+                        </h1>
+                    </div>
+
+                    <div class="bread text-right">
+                        <vtex.cmc:BreadCrumb />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container produto-all">
+                <div class="container-center">
+                    <div class="produto-all__top-info rounded-lg px-4 py-3 mb-5">
+                        <div class="produto-desconto__flag">
+                            <vtex.cmc:discountHightLight/>
+                        </div>
+                        <!-- Estrutura para imagem do produto -->
+                        <div id="produtoDiv-esquerda">
+                            <figure>
+                                <div class="img-produto">
+                                    <vtex.cmc:ProductImage zoom="on" />
+                                </div>
+                            </figure>
+                        </div><!-- End Esquerda -->
+
+                        <!-- Estrutura para as principais informações do produto -->
+                        <div id="produtoDiv-direita">
+                            <div class="c-row" id="product-details-wrapper">
+                                <div class="right-col">  
+                                    <vtex.cmc:skuPrice />
+                                    <div class="wrap-subscription"></div>
+                                    <!-- START Frete -->
+                                    <div class="calc-frete">
+                                        <div class="cep">
+                                            <!-- <h3><span class="icon__frete"></span> Calcule o frete e prazo de entrega.</h3> -->
+                                            <vtex.cmc:shippingValue />
+                                            <script type="text/javascript">
+                                                $(document).ready(function () {
+                                                    ShippingValue();
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <!-- END Frete -->
+                                </div>
+                                <div class="left-col">
+                                    <span class="cod-prod">
+                                        <vtex.cmc:skuReference />
+                                    </span>
+                                    <div class="container detalhes-prod">
+                                        <!-- Descrição Curta -->
+                                        <div id="descricao-produto">
+                                            <h2 class="titulo"> Descrição </h2>
+                                            <vtex.cmc:productDescriptionShort/>
+                                            <span class="saiba_mais">
+                                                <a href="#reviews" class="link-ancora">
+                                                    Saiba mais 
+                                                </a> 
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- END Direita -->
+
+                        <!-- START Especificacoes e campos produtos -->
+                        <section class="container product_especs">
+                            <div class="container-center">
+                            </div>
+                        </section>
+                         <!-- END Especificacoes e campos produtos -->
+
+                         <!-- START Tabela Nutricional -->
+                        <section class="prod-tabela">
+                            <vtex.cmc:productSpecification />
+                        </section>
+                        <!-- END Tabela Nutricional -->
+
+                         <!-- Estrutura de detalhes do produto -->
+                        <article class="details-prod__details-container">
+                            <h2 class="details-prod__details-title">detalhes do produto</h2>
+                            <section class="details-prod__details-box">
+                                <div class="details-prod__descriptions-box">
+                                    <h3 class="details-prod__descriptions-title">descrição do produto</h3>
+                                    <vtex.cmc:ProductDescription />
+                                </div>
+                                <div class="details-prod__characteristic-box">
+                                    <h3 class="details-prod__characteristic-title">características do produto</h3>
+                                    <div class="details-prod__characteristic-info"></div>
+                                </div>
+                            </section>
+                        </article>
+
+                        <!-- Estrutura de compre junto + Especificação do produto-->
+                        <article class="details-prod__info-container">
+                            <section class="details-prod__info-button-box">
+                                <button class="details-prod__info-button-advertencia"> Advertências </button>
+                                <button class="details-prod__info-button-armazenagem"> Armazenagem </button>
+                                <button class="details-prod__info-button-beneficios"> Benefícios </button>
+                                <button class="details-prod__info-button-detalhes"> Detalhes </button>
+                                <button class="details-prod__info-button-diferenciais"> Diferenciais </button>
+                                <button class="details-prod__info-button-serve"> Para que serve </button>
+
+                                <button class="details-prod__info-button-sugest">Sugestão de Uso</button>
+                                <button class="details-prod__info-button-ingredientes">Ingredientes</button>
+                                <button class="details-prod__info-button-care">Modo de Preparo</button>
+                                <button class="details-prod__info-button-delivery">informações de entrega</button>
+                            </section>
+
+                            <section class="details-prod__info-advertencia"></section>
+                            <section class="details-prod__info-armazenagem"></section>
+                            <section class="details-prod__info-beneficios"></section>
+                            <section class="details-prod__info-detalhes"></section>
+                            <section class="details-prod__info-diferenciais"></section>
+                            <section class="details-prod__info-serve"></section>
+
+                            <section class="details-prod__info-sugest"></section>
+                            <section class="details-prod__info-ingredientes"></section>
+                            <section class="details-prod__info-care"></section>
+                            <section class="details-prod__info-delivery"></section>
+                        </article>
+                        <!-- Estrutura para detalhes do produto -->
+
+                        <article class="prod-details">
+                            <section class="details-prod__specifications">
+                                <vtex.cmc:productSpecification />
+                            </section>
+                        </article>
+                        <article class="compre-junto-info">
+                            <vtex:contentPlaceHolder id="Acessorios" />
+                        </article>
+
+
+                    </div><!-- END Shadow -->
+                </div>
+            </div><!-- END All -->
+            
+            <section>
+                <div class="container bannerChamada">
+                    <vtex:contentPlaceHolder id="Banner Fim Pagina" />
+                </div>
+            </section>
+
+            <!-- Estrutura de Quem viu, viu tbm -->
+            <section>
+                <div class="container slide-prod qvvt">
+                    <div class="container-center">
+                        <div class="titulo-prateleira">
+                            <h2>Quem viu, <b>viu também</b></h2>
+                        </div>
+                        <vtex:contentPlaceHolder id="Prateleira - QVVT" />
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <vtex.cmc:subscriptionInfo />
+    <vtex:template id="4fit-footer" />
+    <vtex:template id="4fit-js" />
+    <script type="text/javascript" src="/files/assinar-v2.js"></script>
+</body>
+</html>
