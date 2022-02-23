@@ -12,6 +12,7 @@ var produto = {
     carrosselPdp: function() {
         $('.helperComplement').remove();
         if (scre <= 1440) {
+            $('.vitrine-simples .wrapper .sm-prateleira > ul').slick('unslick');
             $('.vitrine-simples .wrapper .sm-prateleira > ul').slick({
                 slidesToShow: 5,
                 slidesToScroll: 1,
@@ -170,6 +171,20 @@ var produto = {
         vtexjs.catalog.getCurrentProductWithVariations().done(function(product){
             var qtd = product.skus[0].availablequantity;
             $('.sm-produto__buy-quant').append(`<p class="availableQtd">(${qtd} disponíveis)</p>`);
+            if (qtd > 0){
+                $('.valor-por').after('<p class="estoque em-estoque">Em estoque</p>');
+            }else{
+                $('.valor-por').after('<p class="estoque sem-estoque">Sem estoque</p>');
+            }
+        });
+    },
+    openParcelas: function() {
+        $('.other-payment-method').prepend('<p class="closeParcelas">Fechar</p>');
+        $('.open-parcelas').click(function(){
+            $('.other-payment-method-content').css('display', 'flex');
+        });
+        $('.closeParcelas').click(function(){
+            $('.other-payment-method-content').css('display', 'none');
         });
     },
     freteSameDayNextDay: function() {
@@ -195,6 +210,7 @@ var produto = {
         produto.qtdStockAvailability();
         produto.freteSameDayNextDay();
         produto.carrosselPdp();
+        produto.openParcelas();
     }
 }
 
