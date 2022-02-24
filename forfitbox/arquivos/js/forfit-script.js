@@ -463,41 +463,7 @@ $(document).ready(function () {
                 ]
             });
         },
-        slidePrateleiraProdutos: function () {
-            if ($("body").hasClass("forfit-produto")) {
-                $('.slide-prod .forfit-prateleira > ul').slick({
-                    infinite: true,
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    responsive: [{
-                        breakpoint: 1290,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1,
-                            infinite: true
-                        }
-                    },
-                    {
-                        breakpoint: 980,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1,
-                            infinite: true
-                        }
-                    },
-                    {
-                        breakpoint: 500,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1,
-                            infinite: true
-                        }
-                    }
-                    ]
-                });
-            }
-        },
-
+        
         //Slide prateleira QVVT Ofertas Busca Vazia
         slidePrateleiraBusca: function () {
             if ($("body").hasClass("forfit-produto")) {
@@ -729,7 +695,7 @@ $(document).ready(function () {
                 if (scre > 980) {
                     $('.produto-all #produtoDiv-esquerda .apresentacao #show .thumbs').slick({
                         infinite: true,
-                        vertical: true,
+                        vertical: false,
                         slidesToShow: 4,
                         slidesToScroll: 1
                     });
@@ -737,7 +703,7 @@ $(document).ready(function () {
                 } else if (scre < 980 && scre > 500) {
                     $('.produto-all #produtoDiv-esquerda .apresentacao #show .thumbs').slick({
                         infinite: true,
-                        vertical: true,
+                        vertical: false,
                         slidesToShow: 4,
                         slidesToScroll: 1,
                         vertical: false,
@@ -998,191 +964,17 @@ $(document).ready(function () {
             });
         },
         detalhesProduto: function() {
-            var buttonBuyTogether = document.querySelector('.details-prod__info-button-sugest');
-            var buttonVideo = document.querySelector('.details-prod__info-button-ingredientes');
-            var buttonCare = document.querySelector('.details-prod__info-button-care');
-            var buttonDelivery = document.querySelector('.details-prod__info-button-delivery');
-
-            var buyTogetherContent = document.querySelector('.Sugestao-de-Uso');
-            var buyTogetherInfo = document.querySelector('.details-prod__info-sugest');
-            
-            var characteristic = document.querySelector('.details-prod__characteristic-info');
-            var textCharacteristic = document.querySelectorAll('.Informacoes-Adicionais');
-           
-            var videoBox = document.querySelector('.details-prod__info-ingredientes');
-            var video = document.querySelectorAll('.Ingredientes');
-           
-            var careBox = document.querySelector('.details-prod__info-care');
-            var care = document.querySelectorAll('.Modo-de-Preparo');
-            
-            var deliveryBox = document.querySelector('.details-prod__info-delivery');
-            var delivery = document.querySelectorAll('.Informacoes-de-Entrega');
-            
-            var videoInfo = document.querySelector('.details-prod__info-ingredientes');
-            var careInfo = document.querySelector('.details-prod__info-care');
-            var deliveryInfo = document.querySelector('.details-prod__info-delivery');
-            var description = document.querySelector('.productDescription');
-        
-            if (description.textContent == '') {
-              description.parentNode.style.display = 'none';
-            }
-        
-            console.log(textCharacteristic, 'teste');
-        
-            if (textCharacteristic[1] != null) {
-              characteristic.innerHTML = textCharacteristic[1].innerHTML;
-            } else {
-              characteristic.parentNode.style.display = 'none';
-            }
-        
-            var descriptionAndCharacteristicsParent = document.querySelector('.details-prod__details-container');
-        
-            if (description.textContent == '' && textCharacteristic[1] != null) {
-              descriptionAndCharacteristicsParent.style.display = 'none';
-            }
-        
-            if (window.outerWidth > 1024) {
-              buttonBuyTogether.classList.add('details-prod__button-active');
-              buttonVideo.classList.add('details-prod__button-no-active');
-              buttonCare.classList.add('details-prod__button-no-active');
-              buttonDelivery.classList.add('details-prod__button-no-active');
-              buyTogetherInfo.style.display = 'block';
-              videoInfo.style.display = 'none';
-              careInfo.style.display = 'none';
-              deliveryInfo.style.display = 'none';
-        
-              if (buyTogetherContent.textContent == '') {
-                buttonBuyTogether.style.display = 'none';
-                buttonVideo.classList.add('details-prod__button-active');
-                buttonVideo.classList.remove('details-prod__button-no-active');
-                buyTogetherInfo.style.display = 'none';
-                videoInfo.style.display = 'block';
-        
-                if (video[1] == null) {
-                  buttonCare.classList.add('details-prod__button-active');
-                  buttonCare.classList.remove('details-prod__button-no-active');
-                  videoInfo.style.display = 'none';
-                  careInfo.style.display = 'block';
-        
-                  if (care[1] == null) {
-                    buttonDelivery.classList.add('details-prod__button-active');
-                    buttonDelivery.classList.remove('details-prod__button-no-active');
-                    careInfo.style.display = 'none';
-                    deliveryInfo.style.display = 'block';
-                  }
+            if ($("body").hasClass("nova-pdp")) {	
+                var characteristic = document.querySelector('.details-prod__characteristic-info');
+                var textCharacteristic = document.querySelectorAll('.Modo-de-preparo');
+                
+                console.log(textCharacteristic, 'teste');
+                
+                if (textCharacteristic[1] != null) {
+                    characteristic.innerHTML = textCharacteristic[1].innerHTML;
+                } else {
+                    characteristic.parentNode.style.display = 'none';
                 }
-              }
-        
-              if (video[1] != null) {
-                videoBox.innerHTML = video[1].innerHTML;
-              } else {
-                buttonVideo.style.display = 'none';
-              }
-        
-              if (care[1] != null) {
-                careBox.innerHTML = care[1].innerHTML;
-              } else {
-                buttonCare.style.display = 'none';
-              }
-        
-              if (delivery[1] != null) {
-                deliveryBox.innerHTML = delivery[1].innerHTML;
-              } else {
-                buttonDelivery.style.display = 'none';
-              }
-        
-              buttonVideo.addEventListener('click', function () {
-                buttonVideo.classList.remove('details-prod__button-no-active');
-                buttonVideo.classList.add('details-prod__button-active');
-                buttonBuyTogether.classList.remove('details-prod__button-active');
-                buttonBuyTogether.classList.add('details-prod__button-no-active');
-                buttonCare.classList.remove('details-prod__button-active');
-                buttonCare.classList.add('details-prod__button-no-active');
-                buttonDelivery.classList.add('details-prod__button-no-active');
-                buttonDelivery.classList.remove('details-prod__button-active');
-                buyTogetherInfo.style.display = 'none';
-                videoInfo.style.display = 'block';
-                careInfo.style.display = 'none';
-                deliveryInfo.style.display = 'none';
-              });
-              buttonBuyTogether.addEventListener('click', function () {
-                buttonVideo.classList.add('details-prod__button-no-active');
-                buttonVideo.classList.remove('details-prod__button-active');
-                buttonBuyTogether.classList.add('details-prod__button-active');
-                buttonBuyTogether.classList.remove('details-prod__button-no-active');
-                buttonCare.classList.remove('details-prod__button-active');
-                buttonCare.classList.add('details-prod__button-no-active');
-                buttonDelivery.classList.add('details-prod__button-no-active');
-                buttonDelivery.classList.remove('details-prod__button-active');
-                buyTogetherInfo.style.display = 'block';
-                videoInfo.style.display = 'none';
-                careInfo.style.display = 'none';
-                deliveryInfo.style.display = 'none';
-              });
-              buttonCare.addEventListener('click', function () {
-                buttonVideo.classList.add('details-prod__button-no-active');
-                buttonVideo.classList.remove('details-prod__button-active');
-                buttonBuyTogether.classList.remove('details-prod__button-active');
-                buttonBuyTogether.classList.add('details-prod__button-no-active');
-                buttonCare.classList.add('details-prod__button-active');
-                buttonCare.classList.remove('details-prod__button-no-active');
-                buttonDelivery.classList.add('details-prod__button-no-active');
-                buttonDelivery.classList.remove('details-prod__button-active');
-                buyTogetherInfo.style.display = 'none';
-                videoInfo.style.display = 'none';
-                careInfo.style.display = 'block';
-                deliveryInfo.style.display = 'none';
-              });
-              buttonDelivery.addEventListener('click', function () {
-                buttonVideo.classList.add('details-prod__button-no-active');
-                buttonVideo.classList.remove('details-prod__button-active');
-                buttonBuyTogether.classList.remove('details-prod__button-active');
-                buttonBuyTogether.classList.add('details-prod__button-no-active');
-                buttonCare.classList.remove('details-prod__button-active');
-                buttonCare.classList.add('details-prod__button-no-active');
-                buttonDelivery.classList.remove('details-prod__button-no-active');
-                buttonDelivery.classList.add('details-prod__button-active');
-                buyTogetherInfo.style.display = 'none';
-                videoInfo.style.display = 'none';
-                careInfo.style.display = 'none';
-                deliveryInfo.style.display = 'block';
-              });
-            }
-        
-            if (window.outerWidth < 1025) {
-              if (buyTogetherContent.textContent != '') {
-                buttonBuyTogether.classList.add('details-prod__button-active');
-                buyTogetherInfo.appendChild(buttonBuyTogether);
-              } else {
-                buttonBuyTogether.style.display = 'none';
-              }
-        
-              if (video[1] != null) {
-                videoBox.innerHTML = video[1].innerHTML;
-                buttonVideo.classList.add('details-prod__button-active');
-                videoBox.appendChild(buttonVideo);
-              } else {
-                buttonVideo.style.display = 'none';
-                videoBox.style.display = 'none';
-              }
-        
-              if (care[1] != null) {
-                careBox.innerHTML = care[1].innerHTML;
-                buttonCare.classList.add('details-prod__button-active');
-                careBox.appendChild(buttonCare);
-              } else {
-                buttonCare.style.display = 'none';
-                careBox.style.display = 'none';
-              }
-        
-              if (delivery[1] != null) {
-                deliveryBox.innerHTML = delivery[1].innerHTML;
-                buttonDelivery.classList.add('details-prod__button-active');
-                deliveryBox.appendChild(buttonDelivery);
-              } else {
-                buttonDelivery.style.display = 'none';
-                deliveryBox.style.display = 'none';
-              }
             }
         },
        
@@ -1218,42 +1010,57 @@ $(document).ready(function () {
                 $(".tableaNutriBt, .tabelaNutricional ").removeClass("active"), 
                 $(".tableaAminoBt, .tabelaAminograma").addClass("active")
             });
-            // usa ou não
-            // $.ajax(t).done(function(e) {
-            //     console.log(e);
-            // var t = e;
-            // $.each(t, function(e, t) {
-            //     switch (t.Id) {
-            //         case 20:
-            //             "" != t.Value && ($(".prod-beneficios").removeClass("hideElement"), 
-            //             $(".prod-beneficios").html("<span>Benefícios do produto: </span><p>" + t.Value + "</p>"));
-            //             break;
-            //         case 23:
-            //             "" != t.Value && ($(".prod-importante").removeClass("hideElement"), $(".prod-importante").html("<span>Importante</span><p>" + t.Value + "</p>"));
-            //             break;
-            //         case 30:
-            //             if ("" != t.Value)
-            //                 for ($(".prod-caracteristicas").removeClass("hideElement"), $(".prod-caracteristicas").html("<p>CaracterÃ­sticas do Produto</p><ul></ul>"), e = 0; e < t.Value.length; e++) {
-            //                     var a = t.Value[e];
-            //                     a = (a = a.toString().replace(/[^a-zA-Z ]/g, "")).replace(/\s/g, "-").toLowerCase(), $(".prod-caracteristicas ul").append("<span class='" + a + "'>" + t.Value[e] + "</span>")
-            //                 }
-            //             break;
-            //         case 22:
-            //             "" != t.Value && ($(".prod-laudo").removeClass("hideElement"), $(".prod-laudo").html("<h3>Laudo TÃ©cnico</h3><a href='" + t.Value + "'>Clique aqui para fazer o donwload do laudo tÃ©cnico</a>"));
-            //             break;
-            //         case 24:
-            //             "" != t.Value && ($(".prod-ingredientes").removeClass("hideElement"), $(".prod-ingredientes").html("<h4>Ingredientes</h4><p>" + t.Value + "</p>"));
-            //             break;
-            //         case 25:
-            //             "" != t.Value && ($(".prod-retricao").removeClass("hideElement"), $(".prod-retricao").html("<h4>RestriÃ§Ã£o Alimentar</h4><p>" + t.Value + "</p>"));
-            //             break;
-            //         case 26:
-            //             "" != t.Value && ($(".prod-recomendacao").removeClass("hideElement"), $(".prod-recomendacao").html("<h4>RecomendaÃ§Ã£o de Consumo</h4><p>" + t.Value + "</p>"))
-            //         }
-            //     })
-            // }).done(function() {
-            //     $(".hideElement").remove()
-            // })
+        },
+        caracteristicasProd: function() {
+			if ($("body").hasClass("nova-pdp")) {			
+				/* Marca */
+				var pdp_marca = $("#caracteristicas .Filtros td.Marca").text();
+				if (pdp_marca.length > 1) {
+					$(".prod_especificacoes .prod_marca").append("<p>" + pdp_marca + "<p/>")
+				} else {
+					$(".produto_especificacoes .prod_marca").remove()
+				}
+				/* Tipo de produto */
+                var pdp_tipo = $("#caracteristicas .Filtros td.Tipo-de-produto").text();
+				if (pdp_tipo.length > 1) {
+					$(".prod_especificacoes .prod_tipo").prepend("<p>" + pdp_tipo + "<p/>")
+				} else {
+					$(".produto_especificacoes .prod_tipo").remove()
+				}
+                /* Sabor */
+                var pdp_sabor = $("#caracteristicas .Filtros td.Sabor").text();
+				if (pdp_sabor.length > 1) {
+					$(".prod_especificacoes .prod_sabor").prepend("<p>" + pdp_sabor + "<p/>")
+				} else {
+					$(".produto_especificacoes .prod_sabor").remove()
+				}
+				
+			}
+		},
+
+        customProdDescription: function() {
+            var e;
+            0 < $(".value-field.Modo-de-Preparo").length && 0 < $(".value-field.Modo-de-Preparo").text().length ? $(".box-tab.fornecedor").text('*Produto com entrega exclusiva "' + $(".value-field.Modo-de-Preparo").text() + '"') : $(".box-tab.fornecedor").addClass("hide"), 0 < $(".name-field.Beneficios").length ? $(".box-tab.beneficios .box-tab-content").html($(".value-field.Beneficios").html()) : $(".box-tab.beneficios").addClass("hide"), 
+            0 < $(".name-field.Detalhes").length ? $(".box-tab.detalhes .box-tab-content").html($(".value-field.Detalhes").html()) : $(".box-tab.detalhes").addClass("hide"), 
+            0 < $(".name-field.Diferenciais").length ? $(".box-tab.diferenciais .box-tab-content").html($(".value-field.Diferencias").html()) : $(".box-tab.diferenciais").addClass("hide"), 0 < $(".name-field.Para-que-serve").length ? $(".box-tab.pra-que .box-tab-content").html($(".value-field.Para-que-serve").html()) : $(".box-tab.pra-que").addClass("hide"), 
+            0 < $(".name-field.Video-do-Produto").length ? $(".box-tab.video .box-tab-content").html($(".value-field.Video-do-Produto").html()) : $(".box-tab.video").addClass("hide"), 
+            
+            0 < $(".name-field.Advertencias").length && (e = "<div class='box-tab-content'>" + (e = $(".value-field.Advertencias").html()) + "</div>", $(".box-tab.advertencia").html('<h3 class="box-tab-title" data-aos="fade-up">Advertências</h3>' + e)), 
+
+            0 < $(".name-field.Armazenagem").length && (e = "<div class='box-tab-content' data-aos='fade-up'>" + (e = $(".value-field.Armazenagem").html()) + "</div>", $(".box-tab.armazenagem .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up">Armazenagem</h3>' + e)), 
+
+            0 < $(".name-field.Beneficios").length && (e = "<div class='box-tab-content' data-aos='fade-left'>" + (e = $(".value-field.Beneficios").html()) + "</div>", $(".box-tab.beneficios .wrapper").html('<h3 class="box-tab-title" data-aos="fade-right">Benefícios</h3>' + e)), 
+
+            0 < $(".name-field.Detalhes").length && (e = "<div class='box-tab-content'>" + (e = $(".value-field.Detalhes").html()) + "</div>", $(".box-tab.detalhes .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up">Detalhes</h3>' + e)), 
+
+            0 < $(".name-field.Para-que-serve").length && (e = "<div class='box-tab-content' data-aos='fade-up'>" + (e = $(".value-field.Para-que-serve").html()) + "</div>", 
+            $(".box-tab.pra-que .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up">Para que serve?</h3>' + e)), 
+            
+            0 < !$(".Especificacoes .name-field.Sugestao-de-Uso").length && 0 < !$(".Especificacoes .name-field.Ingredientes").length && 0 < !$(".Especificacoes .name-field.Modo-de-Preparo").length && 0 < !$(".Especificacoes .name-field.Peso").length && 0 < !$(".Especificacoes .name-field.Garantia").length && 0 < !$(".Especificacoes .name-field.Baixar-Manual-de-Montagem").length ? ($(".box-tab.espec").addClass("hide"), 
+            
+            $(".produto_informacoes_campos .left").addClass("fullWidth")) : $(".box-tab.espec .box-tab-content").append("<ul></ul>"), 0 < $(".Especificacoes .name-field.Sugestao-de-Uso").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Sugestao-de-Uso\'>Sugestao-de-Uso: <b>' + $(".Especificacoes .value-field.Sugestao-de-Uso").html() + "</b></li>"), 0 < $(".Especificacoes .name-field.Ingredientes").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Ingredientes\'>Ingredientes: <b>' + $(".Especificacoes .value-field.Ingredientes").html() + "</b></li>"), 0 < $(".Especificacoes .name-field.Modo-de-Preparo").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Modo-de-Preparo\'>Peso: <b>' + $(".Especificacoes .value-field.Peso").html() + "</b></li>"), 0 < $(".Especificacoes .name-field.Garantia").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-garantia\'>Garantia: <b>' + $(".Especificacoes .value-field.Garantia").html() + "</b></li>"), 0 < $(".Especificacoes .name-field.Baixar-Manual-de-Montagem").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-manual\'><a target=\'_blank\' href=\'' + $(".Especificacoes .value-field.Baixar-Manual-de-Montagem").html() + "'>BAIXAR MANUAL DE MONTAGEM</a></li>"), $(".produto_informacoes_campos > .left .box-tab-title").click(function() {
+                $("+ .box-tab-content", this).slideToggle(), $(this).toggleClass("active")
+            }), $(".box-tab.descricao .box-tab-title").trigger("click")
         },
         openMiniCart: function () {	
             var e = $(".carrinho"),	
@@ -1469,15 +1276,15 @@ $(document).ready(function () {
             code4Fit.thumbImg();
             // code4Fit.qtdCart();
             code4Fit.aviseMe();
-            code4Fit.detalhesProduto();
+            //code4Fit.detalhesProduto();
             code4Fit.campoTabelaNutri();
+            code4Fit.caracteristicasProd();
             code4Fit.calculaFrete();
             //code4Fit.toggleDescricao();
             code4Fit.verificaLogado();    
             code4Fit.prateleirasGerais();
             code4Fit.prateleirasDireita();
             code4Fit.sliderMarcas();
-            code4Fit.slidePrateleiraProdutos();
             code4Fit.descPrat();
             //Departamento
             code4Fit.escondeFiltrosNoDesktop();
@@ -1496,7 +1303,7 @@ $(document).ready(function () {
             code4Fit.aplicaNomeCategoria();
             code4Fit.descricaoCategoria();
             code4Fit.zoomProd();
-            code4Fit.slidePrateleiraBusca();
+            //code4Fit.slidePrateleiraBusca();
             code4Fit.filtroMobile(); 
             code4Fit.menuMobile();
             code4Fit.institucional();
@@ -1509,6 +1316,7 @@ $(document).ready(function () {
             //code4Fit.mountMinicartProducts();
             //code4Fit.removeProductFromMinicart();
             code4Fit.faleConosco();
+            code4Fit.customProdDescription();
             code4Fit.openMiniCart();
             //code4Fit.addProductToMinicart();
             // code4Fit.buscaHeader();
