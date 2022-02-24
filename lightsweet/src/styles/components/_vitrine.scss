@@ -291,7 +291,7 @@
                         font-size: 13px;
                         font-style: normal;
                         font-weight: 700;
-                        margin-bottom: 2px;
+                        margin-bottom: 0px;
                         color: var(--color-black);
                         height: 39px;
                         -webkit-line-clamp: 2;
@@ -332,7 +332,7 @@
                         float: left;
                         text-align: left;
                         .oldPrice {
-                            font-size: 20px;
+                            font-size: 16px;
                             text-decoration: line-through;
                             margin-bottom: 10px;
                             display: block;
@@ -345,6 +345,7 @@
                             font-weight: 700;
                             margin-bottom: 10px;
                             display: block;
+                            margin-top: 10px;
                             @include d(qhd){
                                 font-size: 25px;
                             }
