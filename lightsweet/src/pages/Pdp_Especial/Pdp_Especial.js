@@ -109,6 +109,7 @@ var Pdp_Especial = {
     trocaCorPDPespecial: function() {
         var url = window.location.pathname;
         var containerCenter = $('.ls-produto-especial-main section .wrapper.produto-all > .container-center');
+        var lateralOrnamento = $('.ls-produto-especial-main section .wrapper.produto-all .ornamento');
         if (url === "/achocolatado-new-choco-dark-lowcucar-210g-ls-10001232/p"){
             containerCenter.css('background-image','url(/arquivos/new-marrom.png)');
             $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-marrom)');
@@ -118,6 +119,7 @@ var Pdp_Especial = {
         }
         else if (url === "/adocante-lowcucar-plus-com-stevia-em-po-refil-1kg-ls-10000299/p") {
             containerCenter.css('background-image','url(/arquivos/new-verde.png)');
+            lateralOrnamento.css('background-image','url(/arquivos/lateral-cafe.png)');
             $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-verde)');
             $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-verde)');
             $('.valor-por, .PDP-Especial, .slick-dots').addClass('verde');
@@ -125,6 +127,7 @@ var Pdp_Especial = {
         }
         else if (url === "/adocante-culinario-lowcucar-com-stevia-1kg-ls-10000418/p") {
             containerCenter.css('background-image','url(/arquivos/new-laranja-claro.png)');
+            lateralOrnamento.css('background-image','url(/arquivos/lateral-biscoitos.png)');
             $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-laranja-claro)');
             $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-laranja-claro)');
             $('.valor-por, .PDP-Especial, .slick-dots').addClass('laranja-claro');
@@ -132,6 +135,7 @@ var Pdp_Especial = {
         }
         else if (url === "/gelatina-lowcucar-sabor-morango-refil-200g-ls-10000540/p") {
             containerCenter.css('background-image','url(/arquivos/new-vermelho.png)');
+            lateralOrnamento.css('background-image','url(/arquivos/lateral-gelatina.png)');
             $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-vermelho)');
             $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-vermelho)');
             $('.valor-por, .PDP-Especial, .slick-dots').addClass('vermelho');
@@ -139,6 +143,7 @@ var Pdp_Especial = {
         }
         else if (url === "/gli-instan-lowcucar-sabor-morango-glicose-instantanea-5x15g-ls-10000672/p") {
             containerCenter.css('background-image','url(/arquivos/new-vermelho.png)');
+            lateralOrnamento.css('background-image','url(/arquivos/lateral-morango.png)');
             $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-vermelho)');
             $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-vermelho)');
             $('.valor-por, .PDP-Especial, .slick-dots').addClass('vermelho');
@@ -146,6 +151,7 @@ var Pdp_Especial = {
         }
         else if (url === "/po-para-prep-de-sobremesa-de-leite-condensado-lowcucar-220g-ls-10001326/p") {
             containerCenter.css('background-image','url(/arquivos/new-laranja-escuro.png)');
+            lateralOrnamento.css('background-image','url(/arquivos/lateral-pudim.png)');
             $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-laranja-escuro)');
             $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-laranja-escuro)');
             $('.valor-por, .PDP-Especial, .slick-dots').addClass('laranja-escuro');

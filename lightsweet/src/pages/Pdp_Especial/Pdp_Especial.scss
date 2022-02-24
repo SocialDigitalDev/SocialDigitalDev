@@ -431,7 +431,7 @@
                 width: 260px;
                 height: 850px;
                 position: sticky;
-                top: 0;
+                top: 100px;
                 @include d(ipad){
                     display: none;
                 }
