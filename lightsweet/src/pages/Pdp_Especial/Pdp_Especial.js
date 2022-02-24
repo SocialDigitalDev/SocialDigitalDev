@@ -98,7 +98,68 @@ var Pdp_Especial = {
         $('#descricao-produto .descriptionWrap').append('<p class="seeMore">Ver Mais</p>');
         $('.seeMore').click(function(){
             $('.productDescription').toggleClass('descAberto');
+            $(this).toggleClass('descAberto');
+            if($(this).hasClass('descAberto')){
+                $(this).text('Ver Menos');
+            }else{
+                $(this).text('Ver Mais');
+            }
         });
+    },
+    trocaCorPDPespecial: function() {
+        var url = window.location.pathname;
+        var containerCenter = $('.ls-produto-especial-main section .wrapper.produto-all > .container-center');
+        var lateralOrnamento = $('.ls-produto-especial-main section .wrapper.produto-all .ornamento');
+        if (url === "/achocolatado-new-choco-dark-lowcucar-210g-ls-10001232/p"){
+            containerCenter.css('background-image','url(/arquivos/new-marrom.png)');
+            $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-marrom)');
+            $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-marrom)');
+            $('.valor-por, .valor-dividido, .PDP-Especial, .slick-dots').addClass('marrom');
+            $('.PDP-Especial tbody tr, .slick-arrow').addClass('marrom');
+        }
+        else if (url === "/adocante-lowcucar-plus-com-stevia-em-po-refil-1kg-ls-10000299/p") {
+            containerCenter.css('background-image','url(/arquivos/new-verde.png)');
+            lateralOrnamento.css('background-image','url(/arquivos/lateral-cafe.png)');
+            $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-verde)');
+            $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-verde)');
+            $('.valor-por, .PDP-Especial, .slick-dots').addClass('verde');
+            $('.PDP-Especial tbody tr, .slick-arrow').addClass('verde');
+        }
+        else if (url === "/adocante-culinario-lowcucar-com-stevia-1kg-ls-10000418/p") {
+            containerCenter.css('background-image','url(/arquivos/new-laranja-claro.png)');
+            lateralOrnamento.css('background-image','url(/arquivos/lateral-biscoitos.png)');
+            $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-laranja-claro)');
+            $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-laranja-claro)');
+            $('.valor-por, .PDP-Especial, .slick-dots').addClass('laranja-claro');
+            $('.PDP-Especial tbody tr, .slick-arrow').addClass('laranja-claro');
+        }
+        else if (url === "/gelatina-lowcucar-sabor-morango-refil-200g-ls-10000540/p") {
+            containerCenter.css('background-image','url(/arquivos/new-vermelho.png)');
+            lateralOrnamento.css('background-image','url(/arquivos/lateral-gelatina.png)');
+            $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-vermelho)');
+            $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-vermelho)');
+            $('.valor-por, .PDP-Especial, .slick-dots').addClass('vermelho');
+            $('.PDP-Especial tbody tr, .slick-arrow').addClass('vermelho');
+        }
+        else if (url === "/gli-instan-lowcucar-sabor-morango-glicose-instantanea-5x15g-ls-10000672/p") {
+            containerCenter.css('background-image','url(/arquivos/new-vermelho.png)');
+            lateralOrnamento.css('background-image','url(/arquivos/lateral-morango.png)');
+            $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-vermelho)');
+            $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-vermelho)');
+            $('.valor-por, .PDP-Especial, .slick-dots').addClass('vermelho');
+            $('.PDP-Especial tbody tr, .slick-arrow').addClass('vermelho');
+        }
+        else if (url === "/po-para-prep-de-sobremesa-de-leite-condensado-lowcucar-220g-ls-10001326/p") {
+            containerCenter.css('background-image','url(/arquivos/new-laranja-escuro.png)');
+            lateralOrnamento.css('background-image','url(/arquivos/lateral-pudim.png)');
+            $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-laranja-escuro)');
+            $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-laranja-escuro)');
+            $('.valor-por, .PDP-Especial, .slick-dots').addClass('laranja-escuro');
+            $('.PDP-Especial tbody tr, .slick-arrow').addClass('laranja-escuro');
+        }
+        else{
+            containerCenter.css('background-image','url(/arquivos/splash.png)');
+        }
     },
     TabelaNutri: function() {
         if ($("#caracteristicas").before("<div class='tabelasMain'><div class='tabelasTitle'></div><div class='tabelasCentral'><div class='tabelaNutricional active'></div><div class='tabelaAminograma'></div></div></div>"), 
@@ -125,19 +186,14 @@ var Pdp_Especial = {
         $('.slide-prod .ls-receita-pdp > ul').slick({
             slidesToShow: 2,
             slidesToScroll: 1,
-            infinite: true,
-            arrows: false,
-            dots: true,
+            infinite: false,
+            arrows: true,
             responsive: [
                 {
                     breakpoint: 1400,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true,
-                        centerMode: true,
-                        centerPadding: "30px"
+                        slidesToScroll: 1
                     }
                 }
             ]
@@ -168,6 +224,7 @@ var Pdp_Especial = {
         Pdp_Especial.fixName();
         Pdp_Especial.fixFrete();
         Pdp_Especial.fixPrecoEspecial();
+        Pdp_Especial.trocaCorPDPespecial();
     }
 
 }

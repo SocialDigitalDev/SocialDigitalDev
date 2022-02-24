@@ -8865,6 +8865,24 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
     max-width: 795px;
 }
 
+div#chat-widget-container {
+    position: relative;
+    overflow: visible;
+}
+
+div#chat-widget-container:after {
+    content: "Chat";
+    position: absolute;
+    font-size: 11px;
+    left: 29px;
+    color: #fff;
+    top: 60px;
+    background: #000;
+    padding: 3px;
+    box-shadow: 0px 3px 2px #5e5e5e;
+    border-radius: 0 0 5px 5px;
+}
+
 /* Fim order */
 
 .seletorVisualizacao {
