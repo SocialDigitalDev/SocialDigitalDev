@@ -1,0 +1,39 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'Department';
+    - var $templateClass = 'page-departament';
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content
+    section.departamento-container
+        div.wrapper
+            .container.pagDepartamento
+                .container-grid
+                    aside.filtro-sticky#sticky
+                        .filtrosDepartamento
+                            div.vitrine-title
+                                h2
+                            span.btn-filtro
+                                vtex(.cmc:searchNavigator)/
+                    .conteudo-categoria
+                        .bread
+                            vtex(.cmc:BreadCrumb)/
+                        .resultadoDepartamento
+                            .order-main-container
+                                .order-main-container__left
+                                .order-main-container__center.center-top
+                                .order-main-container-right
+                            .outlet-departamento_vitrine-produtos
+                                vtex(.cmc:searchResult layout='13da2022-5b6a-4dec-a374-b7fd78026291' itemCount='16' columnCount='16')/
+    section 
+        div.banner-departamento-end
+            vtex:contentPlaceHolder(id=`produtos-relacionados`)/
+
+
+block append scripts
+    script(type='text/javascript', src=`/arquivos/${$templateName}.js`) 
