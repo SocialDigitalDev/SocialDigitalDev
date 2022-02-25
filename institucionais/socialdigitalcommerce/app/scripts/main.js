@@ -371,6 +371,14 @@
             });
         },
 
+        previneDuplicatas: function() {
+            function mySubmitFunction(e) {
+                e.preventDefault();
+                someBug();
+                return false;
+            }
+        },
+
         init: function () {
             customScript.carregaComponentes();
             customScript.carrosselGestaoEcommerce();
@@ -381,6 +389,7 @@
             customScript.textWidthHome();
             customScript.checkboxToggleCss();
             customScript.openLPcontactModal();
+            customScript.previneDuplicatas();
             // customScript.tooltipStart();
         },
         ajax_init: function () {
