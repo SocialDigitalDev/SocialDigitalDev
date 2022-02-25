@@ -7289,7 +7289,8 @@ body .resultadoDepartamento+.searchResultsTime+.sub {
     width: 100%;
     float: left;
     color: #989898;
-    font-size: 16px
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
 #produtoDiv-esquerda {
@@ -9079,7 +9080,7 @@ tabela {
     padding: 50px 0;
     width: 100%;
 }
-/* #caracteristicas, */
+#caracteristicas,
 #caracteristicas .Especificacoes,
 #caracteristicas .Filtros{
     display: none;
@@ -9106,6 +9107,7 @@ tabela {
 /* COnfiguração campos Produtos */
 .nova-pdp .produto_informacoes_campos{
     width: 100%;
+    float: left;
     background: #343a40;
 }
 .nova-pdp .produto_informacoes_campos .left{
@@ -9120,6 +9122,7 @@ tabela {
     width: 100%;
     max-width: 1366px;
     margin: 0 auto;
+    text-align:center;
 }
 
 .nova-pdp .produto_informacoes_campos .left .box-tab{
@@ -9157,11 +9160,23 @@ tabela {
     color: #fff;
 }
 /* Seções Pdp*/
+.nova-pdp .produto_informacoes_campos .left .box-tab.advertencia{
+    background-image: url(https://a.catand.us/fitfactory/wp-content/uploads/sites/17/2021/10/close-up-of-new-dumbbells-on-a-rack-in-a-gym-T2TRKFG.jpg);
+    background: #343a40;  
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.6), rgba(0, 0, 0, 0.6)), url("https://a.catand.us/fitfactory/wp-content/uploads/sites/17/2021/10/close-up-of-new-dumbbells-on-a-rack-in-a-gym-T2TRKFG.jpg");
+    background: linear-gradient(rgba(2, 2, 2, 0.6), rgba(0, 0, 0, 0.6)), url("https://a.catand.us/fitfactory/wp-content/uploads/sites/17/2021/10/close-up-of-new-dumbbells-on-a-rack-in-a-gym-T2TRKFG.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-bottom: 0px;
+}
 .nova-pdp .produto_informacoes_campos .left .box-tab.armazenagem{
     background-image: url(https://powerlift.qodeinteractive.com/wp-content/uploads/2019/06/h4-parallax-img-5.jpg);
-    background: #343a40;  /* fallback colour. Make sure this is just one solid colour. */
-    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(0, 0, 0, 0.8)), url("https://powerlift.qodeinteractive.com/wp-content/uploads/2019/06/h4-parallax-img-5.jpg");
-    background: linear-gradient(rgba(2, 2, 2, 0.8), rgba(0, 0, 0, 0.8)), url("https://powerlift.qodeinteractive.com/wp-content/uploads/2019/06/h4-parallax-img-5.jpg"); /* The least supported option. */
+    background: #343a40; 
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.6), rgba(0, 0, 0, 0.6)), url("https://powerlift.qodeinteractive.com/wp-content/uploads/2019/06/h4-parallax-img-5.jpg");
+    background: linear-gradient(rgba(2, 2, 2, 0.6), rgba(0, 0, 0, 0.6)), url("https://powerlift.qodeinteractive.com/wp-content/uploads/2019/06/h4-parallax-img-5.jpg"); 
     background-position: 50% -83px;
     background-size: cover;
     position: static;
@@ -9172,16 +9187,16 @@ tabela {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     overflow: hidden;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     margin-bottom: 0px;
 }
 
 .nova-pdp .produto_informacoes_campos .left .box-tab.beneficios{
     background-image: url(https://powerlift.qodeinteractive.com/wp-content/uploads/2019/06/h4-parallax-img-2.jpg);
-    background: #343a40;  /* fallback colour. Make sure this is just one solid colour. */
+    background: #343a40; 
     background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(0, 0, 0, 0.8)), url("https://powerlift.qodeinteractive.com/wp-content/uploads/2019/06/h4-parallax-img-2.jpg");
-    background: linear-gradient(rgba(2, 2, 2, 0.8), rgba(0, 0, 0, 0.8)), url("https://powerlift.qodeinteractive.com/wp-content/uploads/2019/06/h4-parallax-img-2.jpg"); /* The least supported option. */
+    background: linear-gradient(rgba(2, 2, 2, 0.8), rgba(0, 0, 0, 0.8)), url("https://powerlift.qodeinteractive.com/wp-content/uploads/2019/06/h4-parallax-img-2.jpg"); 
 
     background-position: 50% 51px;
     background-size: cover;
@@ -9197,7 +9212,7 @@ tabela {
 .nova-pdp .produto_informacoes_campos .left .box-tab.pra-que{
     background-image: url(https://topfit.qodeinteractive.com/wp-content/uploads/2017/01/h1-parallax-bckr-3.jpg);
     background: -webkit-linear-gradient(rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0.6)), url("https://topfit.qodeinteractive.com/wp-content/uploads/2017/01/h1-parallax-bckr-3.jpg");
-    background: linear-gradient(rgba(25, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("https://topfit.qodeinteractive.com/wp-content/uploads/2017/01/h1-parallax-bckr-3.jpg"); /* The least supported option. */
+    background: linear-gradient(rgba(25, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("https://topfit.qodeinteractive.com/wp-content/uploads/2017/01/h1-parallax-bckr-3.jpg"); 
     background-position: 50% 51px;
     background-size: cover;
     position: static;
@@ -9250,40 +9265,46 @@ tabela {
 }
 
 .nova-pdp .produto_descricao{
+    position: relative;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #F0F0F0;
+}
+.nova-pdp .produto_descricao .coluna-descricao{
+    width: 50%;
+    margin: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: center;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
+    align-items: flex-start;
+    position: absolute;
 }
-.nova-pdp .produto_descricao .coluna-descricao{
-    width: 100%;
-    background-color: #F0F0F0;
-}
-
-
 .nova-pdp .details-prod__descriptions-box {
     width: 100%;
     padding: 40px 100px;    
     margin: 0;
    
 }
-
 .nova-pdp .details-prod__descriptions-title {
-    font-family: Lato;
-    font-size: 16px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: normal;
-    color: #303030;
-    border-bottom: solid 1px #303030;
+    width: 100%;
+    float: left;
+    font-weight: 400;
+    font-size: 28px;
+    text-align: left;
+    color: #1b1b1b;
     text-transform: uppercase;
-    width: max-content;
-    margin-bottom: 27px;
-    margin-left: 10px;
+    margin: 0 0 10px 0;
+    position: relative;
+}
+.nova-pdp .details-prod__descriptions-title::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 55px;
+    left: 0;
+    bottom: 20px;
+    background: linear-gradient(to right, #2e2e2e 0%, #171a1b 65%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 71%, rgba(22, 23, 24, .5) 71%);
 }
 .nova-pdp .productDescription {
     font-size: 16px;
@@ -9296,20 +9317,41 @@ tabela {
     color: #000;
     margin-top: 0;
 }
-
-.nova-pdp .produto_descricao .coluna_bg{
+.big_title-bg{
+    color: #FFFFFF1F;
+    font-size: 120px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 120px;
+    padding: 0;
+    position: absolute;
+    bottom: -37px;
+    left: 0;
+}
+/* Imagem */
+.nova-pdp .produto_descricao .coluna_bg .coluna_img{
+    background-position: center center;
+    width: 50%;
+    height: 500px;
     display: flex;
+    padding: 0px 0px 0px 0px;
+    background-image: url(/arquivos/forfitbox_alongamento_descricao_pdp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    float: right;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    background-size: cover;
 }
 
 .nova-pdp .produto_descricao .coluna_bg .coluna_img{
-    position: absolute;
-    width: 80%;
-    max-width: 150%;
-    top: 8%;
-    left: -10%;
-    right: -20%;
+ 
 }
-
+.nova-pdp .produto_descricao .coluna_bg .coluna_img img {
+ 
+}
 .nova-pdp .details-prod__characteristic-box {
     width: 45%;
     background-image: url(https://themegoods-vive-pzbycso8wng.stackpathdns.com/v1/wp-content/uploads/2021/09/stretched-runner.png);
