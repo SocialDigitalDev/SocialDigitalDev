@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    font-family: $roboto;
+}
+.slick-arrow{
+    &.slick-prev{
+        width: 45px;
+        height: 45px;
+        left: 0;
+        z-index: 9;
+        &:before{
+            font-size: 45px;
+        }
+    }
+    &.slick-next{
+        width: 45px;
+        height: 45px;
+        right: 0;
+        z-index: 9;
+        &:before{
+            font-size: 45px;
+        }
+    }
+}
+.slick-list{
+    margin-bottom: -5px;
+}
