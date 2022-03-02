@@ -9305,6 +9305,11 @@ tabela {
     margin-left: auto;
     background-color: #F0F0F0;
 }
+.nova-pdp .produto_descricao .container-center{
+    max-width: 100%;
+    padding: 0;
+
+}
 .nova-pdp .produto_descricao .coluna-descricao{
     width: 50%;
     margin: 0;
