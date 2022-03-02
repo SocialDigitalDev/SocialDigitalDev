@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+--------------------------------------------------------------------------------------------------------
+
+# NÃO ESQUECER DE:
+
+## 1 - npm install jquery
+## 2 - npm install react-slick
+## 3 - npm install slick-carousel
