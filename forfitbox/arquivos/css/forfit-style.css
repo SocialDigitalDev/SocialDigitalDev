@@ -6045,9 +6045,11 @@ html body.account section article span {
 .vtex-account__page-body button span,
 .vtex-account__page-body button span:hover {
     font-weight: 700 !important;
-    color: #fff
 }
-
+.forfit-minha-conta .c-link{
+    color: #323232!important;
+    font-weight: 700;
+}
 .b--action-primary {
     border-color: #1b1b1b !important;
     border-radius: 0
@@ -6067,7 +6069,6 @@ html body.account section article span {
 
 .c-on-action-primary,
 .c-on-base--inverted,
-.c-on-base span,
 .flex.items-center.justify-center.h-100.pv2.ph5,
 .flex.items-center.justify-center.h-100.pv2.ph5 span {
     color: #323232
@@ -6206,6 +6207,21 @@ html body.account section article span {
     text-transform: uppercase;
     color: #1b1b1b !important
 }
+.forfit-minha-conta footer.flex.justify-end.ph3.pb3{
+    background: transparent;
+}
+.forfit-minha-conta footer.flex.justify-end.ph3.pb3 button > div span{
+    background: black;
+    color: #fff!important;
+    padding: 10px 20px;
+}   
+
+/* Peidos */
+html body.forfit-minha-conta section article span.c-on-danger span{
+    color: #fff;
+}
+
+
 
 .modal {
     opacity: 1 !important
@@ -8616,7 +8632,8 @@ label.skuespec_Unica.skuespec_Estampa_opcao_UNICA.skuespec_Estampa_opcao_Unica:a
     width: 100%;
     line-height: 1.6;
     color: #666;
-    float: left
+    float: left;
+    margin-bottom: 0;
 }
 
 .prod-dica {
@@ -9026,23 +9043,17 @@ tabela {
     color: #fff;
 }
 .nova-pdp #descricao-produto .prod_especificacoes{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center;
+    margin-top: 20px;
 }
-.nova-pdp #descricao-produto .prod_especificacoes ul {
-  
-}
-.nova-pdp #descricao-produto .prod_especificacoes li{
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-content: center;
+.nova-pdp #descricao-produto .prod_especificacoes ul {}
 
+.nova-pdp #descricao-produto .prod_especificacoes li{
+    width: 100%;
+    float: left;
+    margin-bottom: 6px;
+}
+.nova-pdp #descricao-produto .prod_especificacoes li b{
+    margin-right: 10px;
 }
 .nova-pdp .produtos-pdp .titulo-prateleira h2,
 .nova-pdp .details-prod__details-title {
@@ -9158,6 +9169,7 @@ tabela {
 }
 .nova-pdp .box-tab-content{
     color: #fff;
+    font-size: 18px;
 }
 /* Seções Pdp*/
 .nova-pdp .produto_informacoes_campos .left .box-tab.advertencia{
@@ -9165,9 +9177,16 @@ tabela {
     background: #343a40;  
     background: -webkit-linear-gradient(rgba(29, 38, 113, 0.6), rgba(0, 0, 0, 0.6)), url("https://a.catand.us/fitfactory/wp-content/uploads/sites/17/2021/10/close-up-of-new-dumbbells-on-a-rack-in-a-gym-T2TRKFG.jpg");
     background: linear-gradient(rgba(2, 2, 2, 0.6), rgba(0, 0, 0, 0.6)), url("https://a.catand.us/fitfactory/wp-content/uploads/sites/17/2021/10/close-up-of-new-dumbbells-on-a-rack-in-a-gym-T2TRKFG.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-position: 50% -83px;
     background-size: cover;
+    position: static;
+    background-attachment: fixed;
+    background-color: transparent;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    overflow: hidden;
     padding-top: 120px;
     padding-bottom: 120px;
     margin-bottom: 0px;
@@ -9208,6 +9227,9 @@ tabela {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     overflow: hidden;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-bottom: 0;
 }
 .nova-pdp .produto_informacoes_campos .left .box-tab.pra-que{
     background-image: url(https://topfit.qodeinteractive.com/wp-content/uploads/2017/01/h1-parallax-bckr-3.jpg);
@@ -9223,6 +9245,18 @@ tabela {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     overflow: hidden;   
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-bottom: 0;
+}
+
+/* Icones */
+.nova-pdp .produto_informacoes_campos .left .wrapper h3 img{
+    width: 90px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 /****************************************************************************************************/
 .nova-pdp .prod-details {
@@ -9318,7 +9352,7 @@ tabela {
     margin-top: 0;
 }
 .big_title-bg{
-    color: #FFFFFF1F;
+    color: rgb(255 255 255 / 6%);
     font-size: 120px;
     font-weight: 700;
     text-transform: uppercase;
@@ -9570,6 +9604,53 @@ tabela {
 }
 .nova-pdp .specification {
     display: none;
+}
+
+/* Responsive Nova Pdp */
+@media only screen and (max-width: 980px){
+    .nova-pdp .produto_topo_first {
+        display: flex;
+        flex-direction: column;
+    }
+    .nova-pdp #produtoDiv-direita{
+        display: block;
+        width: 100%;
+    }
+    .nova-pdp #produtoDiv-esquerda{
+        width: 100%;
+
+    }
+    .nova-pdp .produto_descricao{
+        width: 100%;
+        display: flex;
+
+    }
+    .nova-pdp .produto_descricao .coluna-descricao{
+        width: 100%;
+        display: block;
+        float: left;
+        position: inherit;
+    }
+    .nova-pdp #descricao-produto .prod_especificacoes{
+        width: 100%;
+    }
+    .nova-pdp .produto_descricao .coluna_bg .coluna_img{
+        opacity: 0;
+        display: none;
+    }
+    .nova-pdp .details-prod__descriptions-box{
+        padding: 40px 20px;
+        width: 100%;
+        float: left;
+    }
+    .nova-pdp .produto_informacoes_campos .left .box-tab.beneficios .wrapper{
+        flex-direction: column;
+    }
+    .big_title-bg{
+        font-size: 68px;
+        bottom: -50px;
+    }
+
 }
 /*****************************************************************************************************/
 .detalhes-prod #aviso-produto {
