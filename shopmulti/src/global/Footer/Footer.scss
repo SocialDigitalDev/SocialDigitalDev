@@ -96,13 +96,10 @@ footer {
                 input#txt {
                     width: 180px;
                     height: 33px;
-                    background-color: var(--color-gray-line);
+                    background-color: var(--color-white);
                     padding: 0 0 0 20px;
                     border-radius: 5px;
                     margin: 10px 25px;
-                    &::placeholder{
-                        background-color: var(--color-white) !important;
-                    }
                     @include d(hd) {
                         width: 25%;
                     }
