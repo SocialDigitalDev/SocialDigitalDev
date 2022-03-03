@@ -3603,6 +3603,16 @@ body>.ajax-content-loader {
     padding: 12px 20px 13px 20px !important
 }
 
+/* Como Assinar Botao HEADER */
+.como_assinar{
+    background: #2ecc71;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: center;
+}
 .slide {
     width: 100%;
     float: left;
@@ -3864,8 +3874,8 @@ body>.ajax-content-loader {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: row
+    justify-content: center;
+    flex-direction: row;
 }
 
 .informativos ul li {
