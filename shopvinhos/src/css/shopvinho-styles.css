@@ -275,6 +275,36 @@ span.btn-menu-mobile {
 .link-help.loginOff p.welcome em a {
 	font-size: 12px;
 }
+.marcas-mundo-banners {
+    display: flex;
+    justify-content: space-between;
+}
+.marcas-mundo-banners .slick-list {
+    padding-left: 0 !important;
+}
+
+.marcas-mundo-banners .box-banner p{
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+	font-weight: 600;
+}
+
+.ver-todos-marcas{
+	border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    transition: all ease-in-out .5s;
+    display: flex;
+    margin: 3em auto;
+	margin-bottom: 0;
+    max-width: 179px;
+}
+.ver-todos-marcas:hover{
+	background: #000;
+	color: #fff;
+}
 
 .user-name__account .loginOn p.welcome {
 	font-size: 12px;
@@ -1530,6 +1560,7 @@ nav > ul > li:hover > a {
 }
 /* Dots Slider */
 .banner-categoria .slick-dots,
+.marcas-mundo-banners .slick-dots,
 .shopvinho-prateleira .slick-dots {
 	position: absolute;
 	bottom: -35px;
@@ -1542,7 +1573,13 @@ nav > ul > li:hover > a {
 	box-shadow: none;
 	border: 0;
 }
+
+.marcas-mundo-banners .slick-dots{
+	width: 100%;
+}
+
 .banner-categoria .slick-dots li,
+.marcas-mundo-banners .slick-dots li,
 .shopvinho-prateleira .slick-dots li {
 	width: auto;
 	margin: 0;
@@ -1554,6 +1591,7 @@ nav > ul > li:hover > a {
 /* Dots Slick */
 .banner-categoria .slick-dotted .slick-dots button,
 .banner-kits-vendidos .slick-dotted .slick-dots button,
+.marcas-mundo-banners .slick-dots button,
 .shopvinho-prateleira .slick-dotted .slick-dots button {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -1573,6 +1611,7 @@ nav > ul > li:hover > a {
 .informativos .slick-dots li :hover,
 .banner-categoria .slick-dotted .slick-dots li :hover,
 .shopvinho-prateleira .slick-dotted .slick-dots li :hover,
+.marcas-mundo-banners .slick-dots li :hover,
 .banner-kits-vendidos .slick-dotted .slick-dots li :hover,
 .tab-content .slick-dots li:hover {
 	background-color:#000;
@@ -1580,6 +1619,7 @@ nav > ul > li:hover > a {
 .informativos .slick-dots li.slick-active button,
 .banner-categoria .slick-dotted .slick-dots li.slick-active button,
 .shopvinho-prateleira .slick-dotted .slick-dots li.slick-active button,
+.marcas-mundo-banners .slick-dots li.slick-active button,
 .banner-kits-vendidos .slick-dotted .slick-dots li.slick-active button,
 .tab-content .slick-dots li.slick-active button {
 	background-color: #000;
@@ -11275,6 +11315,9 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 	.header #logo-top a {
 		width: 215px;
 		top: 10px;
+	}
+	.marcas-mundo-banners .box-banner{
+		margin-right: 1em;
 	}
 	.cuponeria .shopvinho-departamento__topo .nomeDepartamento {
 		margin-top: 186px;
