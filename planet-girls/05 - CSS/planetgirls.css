@@ -1215,10 +1215,6 @@ li.\34 8 {
     right: 300px;
 }
 
-li.itemMenu.last {
-    order: 9;
-}
-
 li.pix-text-logo {
     display: flex;
     flex-flow: column;
@@ -14128,16 +14124,11 @@ body.plante-planet {
     }
 }
 
-.c-video__content {
-    display: grid;
-    align-items: center;
-    gap: 50px;
-}
-
-@media (min-width: 1200px) {
-    .c-video__content {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.vitrineWeb {
+    position: relative;
+    margin-bottom: 2em;
+    max-width: 95%;
+    width: 100%;
 }
 
 .c-video__content-text .title {
@@ -14911,6 +14902,24 @@ th.name-field.Composicao {
     margin-right: 10px;
 }
 
+.c-video__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.c-video__content-text {
+    width: 50%;
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.c-video__content-video {
+    width: 48%;
+    margin: 0;
+}
+
 @media (max-width: 1366px) {
     .black-friday-pg.menu-fixed ul.menu-principal li.itemMenu>a {
         text-transform: none;
@@ -15056,6 +15065,20 @@ th.name-field.Composicao {
 
     .pf-faq .container-center {
         padding: 0 1em;
+    }
+    .c-video__content-text {
+        width: 100%;
+        margin: 0;
+    }
+    .c-video__content-video{
+        width: 100%;
+        margin: 0;
+    }
+    .plante-planet-produto .c-video{
+        padding: 0 0em;
+    }
+    .vitrineWeb{
+        max-width: 100%;
     }
 }
 
