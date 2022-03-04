@@ -1223,6 +1223,11 @@ li.pix-text-logo {
     font-weight: 700;
 }
 
+.colecao .planet-departamento__topo {
+    height: auto;
+    background: none;
+}
+
 img.pix-logo {
     max-width: 100px;
     margin-top: 10px;
