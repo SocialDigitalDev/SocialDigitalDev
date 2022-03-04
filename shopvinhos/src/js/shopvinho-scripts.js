@@ -135,6 +135,22 @@ $(document).ready(function () {
 				arrows: false,
 				responsive: [
 					{
+						breakpoint: 1300,
+						settings: {
+							slidesToShow: 5,
+							slidesToScroll: 5,
+							infinite: false
+						}
+					},
+					{
+						breakpoint: 1100,
+						settings: {
+							slidesToShow: 4,
+							slidesToScroll: 4,
+							infinite: false
+						}
+					},
+					{
 						breakpoint: 980,
 						settings: {
 							slidesToShow: 3,
