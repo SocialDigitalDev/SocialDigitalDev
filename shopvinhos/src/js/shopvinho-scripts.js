@@ -1469,30 +1469,30 @@ $(document).ready(function () {
         },
 		
 		verificaWishList: function () {
-			var skuId = [];
-			var localItem = localStorage.getItem('wishListActive');
-			if ($('body').hasClass('shopvinho-produto')){
-				var pdpWLlink = $('.buy-button').attr('href');
-				var splitWLlink =  pdpWLlink.split('/checkout/cart/add?sku=');
-				var splatWLlink = splitWLlink[1].split('&qty=1&seller=1&redirect=true&sc=1');
-				var pdpSkuId = splatWLlink[0];
-				$('.glis-popup-link').click(function(){
-					if ($('body').hasClass('loginOn')) {
-						$(this).addClass('wishListActive');
-						skuId.push(pdpSkuId);
-						localStorage.setItem('wishListActive', `${localItem},${skuId}`);
-					}
-				});
-			}
-			setTimeout(function(){
-				var newLocalItem = localItem.split(',').map(x=>{return parseInt(x)});
-				for (var i = 0; i <= newLocalItem.length; i++) {
-					$(`.prateleira > ul li.${newLocalItem[i]}, .prateleira-horizontal > ul li.${newLocalItem[i]}`).find('.productWishlist').addClass('wishListActive');
-					if (pdpSkuId == newLocalItem[i] && $('body').hasClass('loginOn')) {
-						$('.glis-popup-link').addClass('wishListActive');
-					}
-				}
-			}, 2000);
+			// var skuId = [];
+			// var localItem = localStorage.getItem('wishListActive');
+			// if ($('body').hasClass('shopvinho-produto')){
+			// 	var pdpWLlink = $('.buy-button').attr('href');
+			// 	var splitWLlink =  pdpWLlink.split('/checkout/cart/add?sku=');
+			// 	var splatWLlink = splitWLlink[1].split('&qty=1&seller=1&redirect=true&sc=1');
+			// 	var pdpSkuId = splatWLlink[0];
+			// 	$('.glis-popup-link').click(function(){
+			// 		if ($('body').hasClass('loginOn')) {
+			// 			$(this).addClass('wishListActive');
+			// 			skuId.push(pdpSkuId);
+			// 			localStorage.setItem('wishListActive', `${localItem},${skuId}`);
+			// 		}
+			// 	});
+			// }
+			// setTimeout(function(){
+			// 	var newLocalItem = localItem.split(',').map(x=>{return parseInt(x)});
+			// 	for (var i = 0; i <= newLocalItem.length; i++) {
+			// 		$(`.prateleira > ul li.${newLocalItem[i]}, .prateleira-horizontal > ul li.${newLocalItem[i]}`).find('.productWishlist').addClass('wishListActive');
+			// 		if (pdpSkuId == newLocalItem[i] && $('body').hasClass('loginOn')) {
+			// 			$('.glis-popup-link').addClass('wishListActive');
+			// 		}
+			// 	}
+			// }, 2000);
 			$('.prateleira > ul li, .prateleira-horizontal > ul li').each(function(){
 				var newSkuId = $(this).find('.shopvinho-sku').val();
 				$(this).addClass(`${newSkuId}`);
@@ -1521,6 +1521,58 @@ $(document).ready(function () {
 		},		
         countDownVitrine: function() {
 			$('.flags-promo').vtexCountdown();
+		},
+		marcasDoMundoTitulo: function() {
+			$('.marcas-mundo-banners .box-banner').each(function(){
+				var categTitle = $(this).find('img').attr('alt');
+				$(this).find('a').append(`<p>${categTitle}</p>`);
+			})
+		},
+		marcasDoMundoCarrossel: function() {
+			if (scre <= 1280) {
+				$('.marcas-mundo-banners').slick({
+					slidesToShow: 5,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true,
+					responsive: [
+						{
+							breakpoint: 1100,
+							settings: {
+								slidesToShow: 4,
+								slidesToScroll: 1
+							}
+						},
+						{
+							breakpoint: 992,
+							settings: {
+								slidesToShow: 3,
+								slidesToScroll: 1,
+								centerMode: true,
+								centerPadding: "100px"
+							}
+						},
+						{
+							breakpoint: 600,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 1,
+								centerMode: true,
+								centerPadding: "60px"
+							}
+						},
+						{
+							breakpoint: 400,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1,
+								centerMode: true,
+								centerPadding: "60px"
+							}
+						}
+					]
+				});
+			}
 		},
 		init: function () {
 			//Geral
@@ -1562,6 +1614,8 @@ $(document).ready(function () {
 			//Shopvinho.recarregaPagina();
 			Shopvinho.verificaWishList();
 			Shopvinho.countDownVitrine();
+			Shopvinho.marcasDoMundoTitulo();
+			Shopvinho.marcasDoMundoCarrossel();
 		},
 	
 	}
