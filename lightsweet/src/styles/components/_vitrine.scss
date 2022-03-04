@@ -21,6 +21,7 @@
     > ul {
         @include flexbox;
         @include align-items(center);
+        @include justify-content(center);
         @include d(celularLarge){
             @include flex-wrap(wrap);
             @include justify-content(center);
