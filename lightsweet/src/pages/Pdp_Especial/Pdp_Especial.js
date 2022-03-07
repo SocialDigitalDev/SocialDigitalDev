@@ -89,10 +89,12 @@ var Pdp_Especial = {
         });
     },
     fixName: function() {
-        var productName = $('.productName').text();
-        var newProductName = productName.split('-');
-        var finalProductName = newProductName[0];
-        $('.productName').html(finalProductName);
+        if (!$('body').hasClass('ls-produto-especial')){
+            var productName = $('.productName').text();
+            var newProductName = productName.split('-');
+            var finalProductName = newProductName[0];
+            $('.productName').html(finalProductName);
+        }
     },
     abreFechaDescRica: function () {
         $('#descricao-produto .descriptionWrap').append('<p class="seeMore">Ver Mais</p>');
