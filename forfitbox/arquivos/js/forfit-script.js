@@ -1014,25 +1014,25 @@ $(document).ready(function () {
         caracteristicasProd: function() {
 			if ($("body").hasClass("nova-pdp")) {			
 				/* Marca */
-				var pdp_marca = $("#caracteristicas .Filtros td.Marca").text();
-				if (pdp_marca.length > 1) {
-					$(".prod_especificacoes .prod_marca").append("<b>Marca:</b><p>" + pdp_marca + "<p/>")
+				var pdp_marca = $(".details-prod__caracteristicas #caracteristicas .Filtros td.Marca").text();
+				if (pdp_marca.length > 0) {
+					$(".prod_especificacoes .prod_marca").append("<p><b>Marca:</b>" + pdp_marca + "<p/>")
 				} else {
-					$(".produto_especificacoes .prod_marca").remove()
+					$(".prod_especificacoes .prod_marca").remove()
 				}
 				/* Tipo de produto */
-                var pdp_tipo = $("#caracteristicas .Filtros td.Tipo-de-produto").text();
-				if (pdp_tipo.length > 1) {
-					$(".prod_especificacoes .prod_tipo").prepend("<b>Tipo de produto:</b><p>" + pdp_tipo + "<p/>")
+                var pdp_tipo = $(".details-prod__caracteristicas #caracteristicas .Filtros td.Tipo-de-produto").text();
+				if (pdp_tipo.length > 0) {
+					$(".prod_especificacoes .prod_tipo").append("<p><b>Tipo de produto:</b>" + pdp_tipo + "</p>")
 				} else {
-					$(".produto_especificacoes .prod_tipo").remove()
+					$(".prod_especificacoes .prod_tipo").remove()
 				}
                 /* Sabor */
-                var pdp_sabor = $("#caracteristicas .Filtros td.Sabor").text();
-				if (pdp_sabor.length > 1) {
-					$(".prod_especificacoes .prod_sabor").prepend("<b>Sabor:</b><p>" + pdp_sabor + "<p/>")
+                var pdp_sabor = $(".details-prod__caracteristicas #caracteristicas .Filtros td.Sabor").text();
+				if (pdp_sabor.length > 0) {
+					$(".prod_especificacoes .prod_sabor").append("<p><b>Sabor:</b>" + pdp_sabor + "</p>")
 				} else {
-					$(".produto_especificacoes .prod_sabor").remove()
+					$(".prod_especificacoes .prod_sabor").remove()
 				}
 				
 			}
@@ -1042,10 +1042,12 @@ $(document).ready(function () {
             var e;
             0 < $(".value-field.Modo-de-Preparo").length && 0 < $(".value-field.Modo-de-Preparo").text().length ? $(".box-tab.fornecedor").text('*Produto com entrega exclusiva "' + $(".value-field.Modo-de-Preparo").text() + '"') : $(".box-tab.fornecedor").addClass("hide"), 0 < $(".name-field.Beneficios").length ? $(".box-tab.beneficios .box-tab-content").html($(".value-field.Beneficios").html()) : $(".box-tab.beneficios").addClass("hide"), 
             0 < $(".name-field.Detalhes").length ? $(".box-tab.detalhes .box-tab-content").html($(".value-field.Detalhes").html()) : $(".box-tab.detalhes").addClass("hide"), 
-            0 < $(".name-field.Diferenciais").length ? $(".box-tab.diferenciais .box-tab-content").html($(".value-field.Diferencias").html()) : $(".box-tab.diferenciais").addClass("hide"), 0 < $(".name-field.Para-que-serve").length ? $(".box-tab.pra-que .box-tab-content").html($(".value-field.Para-que-serve").html()) : $(".box-tab.pra-que").addClass("hide"), 
-            0 < $(".name-field.Video-do-Produto").length ? $(".box-tab.video .box-tab-content").html($(".value-field.Video-do-Produto").html()) : $(".box-tab.video").addClass("hide"), 
-            
-            0 < $(".name-field.Advertencias").length && (e = "<div class='box-tab-content' data-aos='fade-up'>" + (e = $(".value-field.Advertencias").html()) + "</div>", $(".box-tab.advertencia .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_advertencias.svg" alt="Advertências"/>Advertências</h3>' + e)), 
+            0 < $(".name-field.Diferenciais").length ? $(".box-tab.diferenciais .box-tab-content").html($(".value-field.Diferencias").html()) : $(".box-tab.diferenciais").addClass("hide"), 
+            0 < $(".name-field.Para-que-serve").length ? $(".box-tab.pra-que .box-tab-content").html($(".value-field.Para-que-serve").html()) : $(".box-tab.pra-que").addClass("hide"), 
+            0 < $(".name-field.Sugestao-de-Uso").length ? $(".box-tab.video .box-tab-content").html($(".value-field.Sugestao-de-Uso").html()) : $(".box-tab.video").addClass("hide"), 
+
+            0 < $(".name-field.Advertencias").length && (e = "<div class='box-tab-content' data-aos='fade-up'>" + (e = $(".value-field.Advertencias").html()) + "</div>", 
+            $(".box-tab.advertencia .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_advertencias.svg" alt="Advertências"/>Advertências</h3>' + e)), 
 
             0 < $(".name-field.Armazenagem").length && (e = "<div class='box-tab-content' data-aos='fade-up'>" + (e = $(".value-field.Armazenagem").html()) + "</div>", $(".box-tab.armazenagem .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_armazenagem.svg" alt="Armazenagem"/>Armazenagem</h3>' + e)), 
 
@@ -1056,11 +1058,18 @@ $(document).ready(function () {
             0 < $(".name-field.Para-que-serve").length && (e = "<div class='box-tab-content' data-aos='fade-up'>" + (e = $(".value-field.Para-que-serve").html()) + "</div>", 
             $(".box-tab.pra-que .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_praqueserve.svg" alt="Para que serve?"/>Para que serve?</h3>' + e)), 
             
-            0 < !$(".Especificacoes .name-field.Sugestao-de-Uso").length && 0 < !$(".Especificacoes .name-field.Ingredientes").length && 0 < !$(".Especificacoes .name-field.Modo-de-Preparo").length && 0 < !$(".Especificacoes .name-field.Peso").length && 0 < !$(".Especificacoes .name-field.Garantia").length && 0 < !$(".Especificacoes .name-field.Baixar-Manual-de-Montagem").length ? ($(".box-tab.espec").addClass("hide"), 
+            0 < !$(".Especificacoes .name-field.Sugestao-de-Uso").length && 0 < !$(".Especificacoes .name-field.Ingredientes").length && 0 < !$(".Especificacoes .name-field.Modo-de-Preparo").length && 0 < !$(".Especificacoes .name-field.Peso").length ? ($(".box-tab.espec").addClass("hide"), 
             
-            $(".produto_informacoes_campos .left").addClass("fullWidth")) : $(".box-tab.espec .box-tab-content").append("<ul></ul>"), 0 < $(".Especificacoes .name-field.Sugestao-de-Uso").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Sugestao-de-Uso\'>Sugestao-de-Uso: <b>' + $(".Especificacoes .value-field.Sugestao-de-Uso").html() + "</b></li>"), 0 < $(".Especificacoes .name-field.Ingredientes").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Ingredientes\'>Ingredientes: <b>' + $(".Especificacoes .value-field.Ingredientes").html() + "</b></li>"), 0 < $(".Especificacoes .name-field.Modo-de-Preparo").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Modo-de-Preparo\'>Peso: <b>' + $(".Especificacoes .value-field.Peso").html() + "</b></li>"), 0 < $(".Especificacoes .name-field.Garantia").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-garantia\'>Garantia: <b>' + $(".Especificacoes .value-field.Garantia").html() + "</b></li>"), 0 < $(".Especificacoes .name-field.Baixar-Manual-de-Montagem").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-manual\'><a target=\'_blank\' href=\'' + $(".Especificacoes .value-field.Baixar-Manual-de-Montagem").html() + "'>BAIXAR MANUAL DE MONTAGEM</a></li>"), $(".produto_informacoes_campos > .left .box-tab-title").click(function() {
-                $("+ .box-tab-content", this).slideToggle(), $(this).toggleClass("active")
-            }), $(".box-tab.descricao .box-tab-title").trigger("click")
+            $(".produto_informacoes_campos .left").addClass("fullWidth")) : $(".right .box-tab.espec .box-tab-content").append("<ul></ul>"), 
+            0 < $(".Especificacoes .name-field.Sugestao-de-Uso").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Sugestao-de-Uso\'><b>Sugestao-de-Uso:</b> <p>' + $(".Especificacoes .value-field.Sugestao-de-Uso").html() + "</p></li>"), 
+            
+            0 < $(".Especificacoes .name-field.Ingredientes").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Ingredientes\'><b>Ingredientes:</b> <p>' + $(".Especificacoes .value-field.Ingredientes").html() + "</p></li>"), 
+            
+            0 < $(".Especificacoes .name-field.Modo-de-Preparo").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Modo-de-Preparo\'><b>Modo de preparo:</b> <p>' + $(".Especificacoes .value-field.Modo-de-Preparo").html() + "</p></li>")
+
+            // $(".produto_informacoes_campos > .left .box-tab-title").click(function() {
+            //     $("+ .box-tab-content", this).slideToggle(), $(this).toggleClass("active")
+            // }), $(".box-tab.descricao .box-tab-title").trigger("click")
         },
         openMiniCart: function () {	
             var e = $(".carrinho"),	
@@ -1316,7 +1325,7 @@ $(document).ready(function () {
             //code4Fit.mountMinicartProducts();
             //code4Fit.removeProductFromMinicart();
             code4Fit.faleConosco();
-            code4Fit.customProdDescription();
+           code4Fit.customProdDescription();
             code4Fit.openMiniCart();
             //code4Fit.addProductToMinicart();
             // code4Fit.buscaHeader();
