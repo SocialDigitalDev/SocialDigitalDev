@@ -649,4 +649,11 @@ table.PDP-Especial{
             }
         }
     }
+    &.amarelo{
+        li.slick-active{
+            button{
+                background: var(--pdp-vermelho) !important;
+            }
+        }
+    }
 }
