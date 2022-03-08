@@ -7253,7 +7253,8 @@ body .resultadoDepartamento+.searchResultsTime+.sub {
 }
 
 .resultadoDepartamento .forfit-prateleira>ul>li {
-    width: 25%
+    width: 25%;
+    min-height: 452px;
 }
 
 .descricaoDetalhada .title-desc-dep {
@@ -11315,6 +11316,19 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
     background-color: #168525
 }
 
+.container.slide-prod.qvvt {
+    margin-bottom: 5em;
+}
+
+@media (max-width: 1440px){
+    .forfit-prateleira .qtdPrateleira .qtdVal{
+        width: 22px;
+    }
+    .resultadoDepartamento .forfit-prateleira>ul>li{
+        margin-bottom: 0;
+    }
+}
+
 @media only screen and (max-width:1366px) {
     .nav #brand {
         margin-top: 0;
@@ -11547,6 +11561,9 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
         text-align: center;
         width: 100%;
         margin-left: 0
+    }
+    .resultadoDepartamento .forfit-prateleira>ul>li{
+        margin-bottom: 1em;
     }
 }
 
@@ -13684,6 +13701,10 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 @media only screen and (max-width:500px) {
     .container-center {
         padding: 0 10px
+    }
+    .resultadoDepartamento .pager ul{
+        display: inline-block;
+        width: 100%;
     }
     .header {
         margin-bottom: 0;
