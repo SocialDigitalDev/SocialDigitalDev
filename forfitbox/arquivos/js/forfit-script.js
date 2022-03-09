@@ -837,6 +837,10 @@ $(document).ready(function () {
                 }, 500);
             }
         },
+        customColorDescription: function() {
+            var e;
+            0 < $(".value-field.Template").length && (e = $(".value-field.Template").html(), $(".prod-dica").addClass(e))
+        },
         breadCrumb: function () {
             $(".bread-crumb ul li").first().find("a").text("Home");
 
@@ -1283,6 +1287,7 @@ $(document).ready(function () {
             code4Fit.sliderVaiGostar();
             //code4Fit.slidePrateleiraMais();
             code4Fit.prodIndisponivel();
+            code4Fit.customColorDescription();
             //code4Fit.breadCrumb();
             code4Fit.bannerDepartamento();
             //code4Fit.bannerProduto();  
