@@ -136,7 +136,7 @@ var Pdp_Especial = {
             }
             else if (url === "/mini-wafer-lowcucar-zero-acucares-sabor-morango-22g-ls-10001487/p") {
                 containerCenter.css('background-image','url(/arquivos/new-vermelho.png)');
-                lateralOrnamento.css('background-image','url(/arquivos/lateral-gelatina.png)');
+                lateralOrnamento.css('background-image','url(/arquivos/lateral-morango.png)');
                 $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-vermelho)');
                 $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-vermelho)');
                 $('.valor-por, .PDP-Especial, .slick-dots').addClass('vermelho');
