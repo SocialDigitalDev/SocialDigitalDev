@@ -821,6 +821,17 @@ $(document).ready(function () {
                 });
             }
         },
+        prodIndisponivel: function(){
+            if ($("body").hasClass("produto")) {
+                //Caso estiver esgotado
+                setTimeout(function () {
+                    if ($(".buy-button").css("display") == "none") {
+                        //$(".opcao-produto").css("display", "none");
+                        $(".forfit-produto__buy-quant").css("display", "none");
+                    }
+                }, 500);
+            }
+        },
         breadCrumb: function () {
             $(".bread-crumb ul li").first().find("a").text("Home");
 
@@ -939,30 +950,6 @@ $(document).ready(function () {
             }
         },
 
-        toggleDescricao: function() {
-            $("body").on("click", ".forfit-produto__detalhes-texto", function () {
-              $(".forfit-produto__detalhes-texto").removeClass("info-active");
-              $(this).addClass("info-active");
-              var dataId = $(this).data("id");
-        
-              if (dataId === "sugestao") {
-                $(".forfit-produto__toggle-container section:visible").fadeOut();
-                $(".forfit-produto__toggle-sugestao").fadeIn();
-
-              } else if (dataId === "ingredientes") {
-                $(".forfit-produto__toggle-container section:visible").fadeOut();
-                $(".forfit-produto__toggle-ingredientes").fadeIn();
-
-              } else if (dataId === "nutricional") {
-                $(".forfit-produto__toggle-container section:visible").fadeOut();
-                $(".forfit-produto__toggle-nutricional").fadeIn();
-
-              } else if (dataId === "modo") {
-                $(".forfit-produto__toggle-container section:visible").fadeOut();
-                $(".forfit-produto__toggle-modo").fadeIn();
-              } 
-            });
-        },
         detalhesProduto: function() {
             if ($("body").hasClass("nova-pdp")) {	
                 var characteristic = document.querySelector('.details-prod__characteristic-info');
@@ -1289,7 +1276,6 @@ $(document).ready(function () {
             code4Fit.campoTabelaNutri();
             code4Fit.caracteristicasProd();
             code4Fit.calculaFrete();
-            //code4Fit.toggleDescricao();
             code4Fit.verificaLogado();    
             code4Fit.prateleirasGerais();
             code4Fit.prateleirasDireita();
@@ -1305,6 +1291,7 @@ $(document).ready(function () {
             code4Fit.fixFrete();
             code4Fit.sliderVaiGostar();
             //code4Fit.slidePrateleiraMais();
+            code4Fit.prodIndisponivel();
             //code4Fit.breadCrumb();
             code4Fit.bannerDepartamento();
             //code4Fit.bannerProduto();  

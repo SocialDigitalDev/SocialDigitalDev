@@ -1366,7 +1366,7 @@ button:focus {
     letter-spacing: .005em;
     color: #FFFFFF
 }
-
+/*
 h3 {
     font-style: normal;
     font-weight: 900;
@@ -1376,7 +1376,7 @@ h3 {
     letter-spacing: .005em;
     color: #FFFFFF;
     padding: 20px 0
-}
+}*/
 
 .forfit-home section#section1 {
     padding: 0;
@@ -6808,7 +6808,8 @@ a#business-toggle[data=on]:after {
 
 .filtrosDepartamento .search-single-navigator {
     display: block !important;
-    padding: 0 10px
+    padding: 0 10px;
+    position: relative;
 }
 
 .colecao .search-single-navigator {
@@ -6849,13 +6850,13 @@ a#business-toggle[data=on]:after {
     margin-bottom: 2px;
     padding: 0
 }
-
+/*
 .search-multiple-navigator h5 {
     color: #989898;
     border: 1px solid #00bd8b;
     padding: 13px 12px;
     font-weight: 500
-}
+}*/
 
 .search-multiple-navigator label {
     width: 100%;
@@ -6986,12 +6987,12 @@ a#business-toggle[data=on]:after {
 .filtrosDepartamento .menu-navegue {
     display: none
 }
-
+/*
 .filtrosDepartamento .search-single-navigator h3 {
     display: block;
     padding: 0
-}
-
+}*/
+/*
 .filtrosDepartamento .search-single-navigator h3 a {
     color: #1b1b1b;
     font-weight: 500;
@@ -6999,15 +7000,18 @@ a#business-toggle[data=on]:after {
     float: left;
     padding: 0;
     position: relative
-}
+}*/
 
 .filtrosDepartamento .search-single-navigator h5+ul,
-.filtrosDepartamento .search-single-navigator h4+ul {
+.filtrosDepartamento .search-single-navigator h4+ul,
+.filtrosDepartamento .search-single-navigator h3+ul,
+ {
     list-style-type: none
 }
 
 .filtrosDepartamento .search-single-navigator h5,
-.filtrosDepartamento .search-single-navigator h4 {
+.filtrosDepartamento .search-single-navigator h4,
+.filtrosDepartamento .search-single-navigator h3 {
     width: 100%;
     float: left;
     color: #1b1b1b;
@@ -7016,69 +7020,52 @@ a#business-toggle[data=on]:after {
     font-size: 14px;
     padding: 10px
 }
-
-.filtrosDepartamento .search-single-navigator h5.Estampa {
-    text-indent: -9999;
-    font-size: 0
-}
-
-.filtrosDepartamento .search-single-navigator h5.Estampa:before {
-    content: "Planos";
-    font-size: 14px;
-    color: #1b1b1b
-}
-
-.filtrosDepartamento .search-single-navigator h4 a {
+.filtrosDepartamento .search-single-navigator h3 a,
+.filtrosDepartamento .search-single-navigator h4 a,
+.filtrosDepartamento .search-single-navigator h5 a {
     color: #1b1b1b;
     text-decoration: none
 }
-
-.filtrosDepartamento .search-single-navigator h4::after,
-.filtrosDepartamento .search-single-navigator h5::after {
+.filtrosDepartamento .search-single-navigator h3::after
+/*.filtrosDepartamento .search-single-navigator h4::after,
+.filtrosDepartamento .search-single-navigator h5::after*/ {
     content: "+";
-    font-family: 'fontAwesome';
+    font-family: 'Raleway', sans-serif;
+    font-size: 27px;
+    font-weight: 400;
     position: absolute;
+    background: #fff;
     color: #1b1b1b;
-    right: 0;
-    top: 3px
+    border-radius: 50px;
+    right: 10px;
+    top: 3px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
 }
-
-.filtrosDepartamento .search-single-navigator h5::after {
-    content: "+";
-    font-family: 'fontAwesome';
-    position: absolute;
-    color: #1b1b1b;
-    right: 0;
-    top: 3px
-}
-
+.filtrosDepartamento .search-single-navigator h3.up-seta-dep::after,
+.filtrosDepartamento .search-single-navigator h4.up-seta-dep::after, 
 .filtrosDepartamento .search-single-navigator h5.up-seta-dep::after {
     transition: transform .3s ease-in-out;
     transform: rotate(-45deg)
 }
-
+.filtrosDepartamento .search-single-navigator h3::after,
+.filtrosDepartamento .search-single-navigator h4::after, 
 .filtrosDepartamento .search-single-navigator h5::after {
     transition: transform .3s ease
 }
-
+.filtrosDepartamento .search-single-navigator h3::after,
+.filtrosDepartamento .search-single-navigator h4::after, 
 .filtrosDepartamento .search-single-navigator h5::after {
     transform: rotate(90deg)
 }
-
-.filtrosDepartamento .search-single-navigator h5::after {
-    content: "+";
-    font-family: 'fontAwesome';
-    position: absolute;
-    color: #1b1b1b;
-    right: 0;
-    top: 3px;
-    position: absolute;
-    right: 10px;
-    top: 0;
-    margin-top: 0;
-    font-size: 18px
+.filtrosDepartamento .search-single-navigator h5::after > ul:empty{
+    display: none;
 }
-
+.label-promotion strong:empty {
+    display: none;
+}
 .filtrosDepartamento .search-single-navigator ul {
     width: 100%;
     float: left;
@@ -7720,7 +7707,9 @@ body .resultadoDepartamento+.searchResultsTime+.sub {
     cursor: pointer;
     color: #32332a
 }
-
+.container.slide-prod.qvvt {
+    margin-bottom: 5em;
+}
 .forfit-produto__buy-button a:hover {
     background: #212121
 }
@@ -11316,19 +11305,6 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
     background-color: #168525
 }
 
-.container.slide-prod.qvvt {
-    margin-bottom: 5em;
-}
-
-@media (max-width: 1440px){
-    .forfit-prateleira .qtdPrateleira .qtdVal{
-        width: 22px;
-    }
-    .resultadoDepartamento .forfit-prateleira>ul>li{
-        margin-bottom: 0;
-    }
-}
-
 @media only screen and (max-width:1366px) {
     .nav #brand {
         margin-top: 0;
@@ -11561,9 +11537,6 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
         text-align: center;
         width: 100%;
         margin-left: 0
-    }
-    .resultadoDepartamento .forfit-prateleira>ul>li{
-        margin-bottom: 1em;
     }
 }
 
@@ -13701,10 +13674,6 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 @media only screen and (max-width:500px) {
     .container-center {
         padding: 0 10px
-    }
-    .resultadoDepartamento .pager ul{
-        display: inline-block;
-        width: 100%;
     }
     .header {
         margin-bottom: 0;
