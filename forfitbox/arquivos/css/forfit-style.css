@@ -8728,7 +8728,7 @@ label.skuespec_Unica.skuespec_Estampa_opcao_UNICA.skuespec_Estampa_opcao_Unica:a
 }
 
 .calc-frete .cep fieldset .prefixo {
-    width: 80%
+    width: 75%
 }
 
 .calc-frete .cep fieldset {
@@ -9509,6 +9509,10 @@ tabela {
     width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.nova-pdp .produto_informacoes_campos .left .wrapper h3.box-tab-title{
+    color: #fff;
 }
 .nova-pdp .box-tab-content{
     color: #fff;
