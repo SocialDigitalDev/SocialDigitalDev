@@ -4759,6 +4759,37 @@ a#business-toggle[data="on"]:after {
 	bottom: -10px;
 	display: none;
 }
+/* AJUSTES DO FILTRO DE DEPARTAMENTO 10/03 */
+.resultadoDepartamento .resultado-busca-filtro{
+	display: block!important;
+}
+.filtrosDepartamento .search-single-navigator .noUl{
+	display: none;
+	padding: 0;
+}
+.filtrosDepartamento .search-single-navigator > h4.removePlus, 
+.filtrosDepartamento .search-single-navigator > h3.removePlus, 
+.filtrosDepartamento .search-single-navigator > h5.removePlus{
+	color: #FA3948;
+	background: transparent;
+    font-weight: 400;
+    width: 100%;
+    float: left;
+    padding: 0 0 0 20px;
+}
+.filtrosDepartamento .search-single-navigator > h4.removePlus a, 
+.filtrosDepartamento .search-single-navigator > h3.removePlus a, 
+.filtrosDepartamento .search-single-navigator > h5.removePlus a{
+	color: #FA3948;
+	padding: 4px 0;
+	text-transform: capitalize;
+}
+.filtrosDepartamento .search-single-navigator > h4.removePlus::after, 
+.filtrosDepartamento .search-single-navigator > h3.removePlus::after, 
+.filtrosDepartamento .search-single-navigator > h5.removePlus::after{
+	display: none;
+}
+
 ul.Gênero.even.Filtros {
 	display: none;
 }
@@ -4786,13 +4817,11 @@ ul.Gênero.even.Filtros {
 .search-multiple-navigator fieldset > div::-webkit-scrollbar-thumb,
 .filtrosDepartamento .search-single-navigator ul::-webkit-scrollbar-thumb {
 	border-radius: 10px;
-	border: 0px solid blue;
+	border: 0px solid #F83B4D;
 }
 
 .search-multiple-navigator fieldset > div::-webkit-scrollbar-thumb:hover,
-.filtrosDepartamento
-	.search-single-navigator
-	ul::-webkit-scrollbar-thumb:hover {
+.filtrosDepartamento .search-single-navigator ul::-webkit-scrollbar-thumb:hover {
 	background:#c91426;
 }
 
@@ -4866,7 +4895,8 @@ ul.Gênero.even.Filtros {
 		content: 'produtos encontrados';
 		float: left;
 		text-indent: 0;
-}*/
+}
+*/
 .resultadoDepartamento .searchResultsTime .resultado-busca-numero .value {
 	float: left;
 	font-weight: 600;
