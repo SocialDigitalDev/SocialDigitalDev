@@ -553,7 +553,7 @@ $(document).ready(function () {
 					$(this).toggleClass("aberto");
 				});
 				$(".search-single-navigator h3").click(function () {
-					$(this).toggleClass("aberto");
+					$(this).toggleClass("fechado");
 					if ($(this).next('ul').has('li').length > 0) {
 						$(this).find('a').removeAttr('href');
 						$(this).next("ul").slideToggle();
@@ -569,8 +569,18 @@ $(document).ready(function () {
 					$(this).toggleClass("aberto")
 				})
 			}
-		},
+			$(".filtrosDepartamento .search-single-navigator ul").each(function() {
+                var e = $(this).html().length;
+                0 != e && 1 != e || ($(this).addClass("noUl"), 
+					$(this).parent().addClass("removePlus"), 
+                	$(this).prev().prev(".btFilter").remove())
+            }), 
 
+            $(".filtrosDepartamento .search-single-navigator h4").each(function() {
+                0 == $("ul", this).length && ($(this).addClass("removePlus"), $(this).children(".btFilter").remove())
+            });
+		},
+	
 		// Nome Departamento Categoria
 		aplicaNomeCategoria: function () {
 			if ($("body").hasClass("jasmine-categoria") || $("body").hasClass("jasmine-departamento")) {

@@ -523,57 +523,62 @@ $(document).ready(function () {
             }
         },
         //Departamento Filtros
-        escondeFiltrosNoDesktop: function() {
-            $(".search-single-navigator ul").hide();
-            $(".search-single-navigator h5").click(function () {
-            $(this).next().slideToggle();
-            $(this).toggleClass("up-seta-dep");
-            });
-        },
+        depScroll: function(){
+            //Scroll Infinito departamento categoria
+            if ($('body').hasClass('forfit-departamento')) {
+                var ulVazia = $('forfit-departamento .search-single-navigator >ul');
+                if(!$('.search-single-navigator h3').hasClass('dropFiltro'))$('.search-single-navigator h3').addClass('dropFiltro');
+                ulVazia.each(function () {
+                    var estaUl = $(this);
+                    if (estaUl.children().length < 1) {
+                        estaUl.remove();
+                    } else {
+                        estaUl.prev().addClass('dropFiltro');
+                    }
+                });
 
-        insereDivParaToggle: function() {
-            $(".search-single-navigator").wrap('<div class="toggle__filtros"></div>');
-            $(".toggle__filtros").prepend('<p class="button__categorias">Categorias</p>');
-        
-            if (window.outerWidth <= 768) {
-                $(".toggle__filtros").hide();
+                $('forfit-departamento .search-single-navigator .dropFiltro').click(function () {
+                    $(this).next('ul').slideToggle();
+                    $(this).toggleClass('filtroAtivo');
+                });
+
+                // Paginas categoria || departamento wrapp nos h4 das marcas
+                var marcasCat = $('.search-single-navigator h4');
+                marcasCat.wrapAll('<div class="wrapperH4"><div class="boxH4"></div></div>');
+                $('.search-single-navigator >h3').click(function(){
+                    $('.boxH4').slideToggle();
+                });
+
+                // primeiro filtro aberto
+                var firstH3 = $('forfit-departamento .search-single-navigator >h3:eq(0)');
+                firstH3.addClass('filtroAtivo');
+                firstH3.next('wrapperH4').show();
+
+                // Deixa o box de filtro aberto
+                var filDepartamento = $('.search-single-navigator .filtro-ativo');
+                filDepartamento.each(function () {
+                    $(this).parent().prev().addClass('filtroAtivo');
+                    $(this).parent().show();
+                });
+                
+                //Menu mobile filtro
+                var janela = $(window).width();
+                if(janela <= 768){
+                    $('.filtCat').click(function(){
+                        $(this).toggleClass('setaDown');
+                        $('.colDeparta .menu-departamento').slideToggle();
+                    });
+
+                    $('.con-nav-filtro>p').click(function(){
+                        $(this).toggleClass('filAtivo');
+                        $('.contOrdenar').slideToggle();
+                    });
+                }
             }
-        
-            $(".menu-navegue").click(function (e) {
-                e.preventDefault();
-                $(this).parent().find(".toggle__filtros").slideToggle();
-                $(this).find(".search-navigator-tab.tab-refinar").toggleClass("up-seta-dep");
-            });
-        
         },
-
-        toggleDosFiltros: function() {
-            if (window.outerWidth <= 768) {
-            $(".search-single-navigator ul").hide();
-            $(".search-single-navigator h4, .search-single-navigator h5").click(function (e) {
-                e.preventDefault();
-                $(this).next().slideToggle();
-            });
-            }
-        },
-
-        alteraNomeDoFiltro: function() {
-            $(".search-navigator-tab.tab-refinar").text("Filtros");
-        },
-
         clonaNomeDaCategoria: function() {
             var nomeClone = $(".search-single-navigator h3:first-of-type a").text();
             $(".planet-departamento__topo .nomeDepartamento h2").text(nomeClone);
-        },
-        filtroCategoria: function() {
-            $(".filtrosDepartamento .search-single-navigator h5,.filtrosDepartamento .search-single-navigator h4").each(function (e) {
-                var qtdFiltros = $(this).next('ul').find('li').length;
-          
-                if (qtdFiltros < 1) {
-                  $(this).next('ul').remove();
-                  $(this).remove();
-                }
-            });
         },
         descPrat: function() {
             $(".priceLabel").each(function() {
@@ -832,6 +837,10 @@ $(document).ready(function () {
                 }, 500);
             }
         },
+        customColorDescription: function() {
+            var e;
+            0 < $(".value-field.Template").length && (e = $(".value-field.Template").html(), $(".nova-pdp .right").addClass(e))
+        },
         breadCrumb: function () {
             $(".bread-crumb ul li").first().find("a").text("Home");
 
@@ -1031,27 +1040,18 @@ $(document).ready(function () {
             0 < $(".name-field.Detalhes").length ? $(".box-tab.detalhes .box-tab-content").html($(".value-field.Detalhes").html()) : $(".box-tab.detalhes").addClass("hide"), 
             0 < $(".name-field.Diferenciais").length ? $(".box-tab.diferenciais .box-tab-content").html($(".value-field.Diferencias").html()) : $(".box-tab.diferenciais").addClass("hide"), 
             0 < $(".name-field.Para-que-serve").length ? $(".box-tab.pra-que .box-tab-content").html($(".value-field.Para-que-serve").html()) : $(".box-tab.pra-que").addClass("hide"), 
-            0 < $(".name-field.Sugestao-de-Uso").length ? $(".box-tab.video .box-tab-content").html($(".value-field.Sugestao-de-Uso").html()) : $(".box-tab.video").addClass("hide"), 
-
+            0 < $(".name-field.Sugestao-de-Uso").length ? $(".box-tab.video .box-tab-content").html($(".value-field.Sugestao-de-Uso").html()) : $(".box-tab.video").addClass("hide"),
             0 < $(".name-field.Advertencias").length && (e = "<div class='box-tab-content' data-aos='fade-up'>" + (e = $(".value-field.Advertencias").html()) + "</div>", 
-            $(".box-tab.advertencia .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_advertencias.svg" alt="Advertências"/>Advertências</h3>' + e)), 
-
+            $(".box-tab.advertencia .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_advertencias.svg" alt="Advertências"/>Advertências</h3>' + e)),
             0 < $(".name-field.Armazenagem").length && (e = "<div class='box-tab-content' data-aos='fade-up'>" + (e = $(".value-field.Armazenagem").html()) + "</div>", $(".box-tab.armazenagem .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_armazenagem.svg" alt="Armazenagem"/>Armazenagem</h3>' + e)), 
-
             0 < $(".name-field.Beneficios").length && (e = "<div class='box-tab-content' data-aos='fade-left' data-aos-offset='300' data-aos-easing='ease-in-sine'>" + (e = $(".value-field.Beneficios").html()) + "</div>", $(".box-tab.beneficios .wrapper").html('<h3 class="box-tab-title" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine"><img src = "/arquivos/forfitbox_beneficios.svg" alt="Benefícios"/>Benefícios</h3>' + e)), 
-
             0 < $(".name-field.Detalhes").length && (e = "<div class='box-tab-content'>" + (e = $(".value-field.Detalhes").html()) + "</div>", $(".box-tab.detalhes .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_detalhes.svg" alt="Detalhes"/>Detalhes</h3>' + e)), 
-
             0 < $(".name-field.Para-que-serve").length && (e = "<div class='box-tab-content' data-aos='fade-up'>" + (e = $(".value-field.Para-que-serve").html()) + "</div>", 
             $(".box-tab.pra-que .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_praqueserve.svg" alt="Para que serve?"/>Para que serve?</h3>' + e)), 
-            
             0 < !$(".Especificacoes .name-field.Sugestao-de-Uso").length && 0 < !$(".Especificacoes .name-field.Ingredientes").length && 0 < !$(".Especificacoes .name-field.Modo-de-Preparo").length && 0 < !$(".Especificacoes .name-field.Peso").length ? ($(".box-tab.espec").addClass("hide"), 
-            
             $(".produto_informacoes_campos .left").addClass("fullWidth")) : $(".right .box-tab.espec .box-tab-content").append("<ul></ul>"), 
             0 < $(".Especificacoes .name-field.Sugestao-de-Uso").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Sugestao-de-Uso\'><b>Sugestao-de-Uso:</b> <p>' + $(".Especificacoes .value-field.Sugestao-de-Uso").html() + "</p></li>"), 
-            
             0 < $(".Especificacoes .name-field.Ingredientes").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Ingredientes\'><b>Ingredientes:</b> <p>' + $(".Especificacoes .value-field.Ingredientes").html() + "</p></li>"), 
-            
             0 < $(".Especificacoes .name-field.Modo-de-Preparo").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Modo-de-Preparo\'><b>Modo de preparo:</b> <p>' + $(".Especificacoes .value-field.Modo-de-Preparo").html() + "</p></li>")
 
             // $(".produto_informacoes_campos > .left .box-tab-title").click(function() {
@@ -1282,16 +1282,12 @@ $(document).ready(function () {
             code4Fit.sliderMarcas();
             code4Fit.descPrat();
             //Departamento
-            code4Fit.escondeFiltrosNoDesktop();
-            code4Fit.insereDivParaToggle();
-            code4Fit.toggleDosFiltros();
-            code4Fit.alteraNomeDoFiltro();
-            code4Fit.clonaNomeDaCategoria();
-            code4Fit.filtroCategoria();
+            code4Fit.depScroll();
             code4Fit.fixFrete();
             code4Fit.sliderVaiGostar();
             //code4Fit.slidePrateleiraMais();
             code4Fit.prodIndisponivel();
+            code4Fit.customColorDescription();
             //code4Fit.breadCrumb();
             code4Fit.bannerDepartamento();
             //code4Fit.bannerProduto();  
