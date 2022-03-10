@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+  <head>
+    <vtex:metaTags/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="/arquivos/vd-styles.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+  <body>
+    <main class="vd-main" role="main">
+      <section>
+        <div id="formRightFc">
+            <h4>Preencha o formulário</h4>
+            <div id="formFC">
+                <div class="boxCampo">
+                    <label>Nome:</label>
+                    <input type="text" name="fcNome" id="fcNome" required>
+                </div>
+                <div class="boxCampo">
+                    <label>E-mail:</label>
+                    <input type="text" name="fcEmail" id="fcEmail" required>
+                </div>
+                <div class="boxCampo">
+                    <label>Telefone:</label>
+                    <input type="tel" name="fcTelefone" id="fcTelefone" class="form-contact-phone" max-length="11" required>
+                </div>
+                <div class="boxCampo">
+                    <label>Empresa:</label>
+                    <input type="text" name="fcEmpresa" id="fcEmpresa" required>
+                </div>
+                <div class="boxCampo">
+                    <label>CNPJ:</label>
+                    <input type="text" name="fcCnpj" id="fcCnpj" required>
+                </div>
+                <div class="boxCampo">
+                    <label>VTEX ID:</label>
+                    <input type="text" name="fcVtexId" id="fcVtexId" required>
+                </div>
+                <a href="javascript:void(0);" class="enviarForm">Enviar</a>
+            </div>
+        </div>
+      </section>
+    </main>
+    <vtex:template id="vd-scripts"/>
+  </body>
+</html>
