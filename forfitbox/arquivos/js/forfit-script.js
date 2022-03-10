@@ -839,7 +839,7 @@ $(document).ready(function () {
         },
         customColorDescription: function() {
             var e;
-            0 < $(".value-field.Template").length && (e = $(".value-field.Template").html(), $(".prod-dica").addClass(e))
+            0 < $(".value-field.Template").length && (e = $(".value-field.Template").html(), $(".nova-pdp .right").addClass(e))
         },
         breadCrumb: function () {
             $(".bread-crumb ul li").first().find("a").text("Home");
