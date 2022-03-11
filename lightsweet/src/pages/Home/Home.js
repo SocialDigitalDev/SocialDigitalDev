@@ -24,11 +24,11 @@ function tabsSlick() {
             {
                 breakpoint: 500,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
                     centerMode: true,
-                    centerPadding: '80px'
+                    centerPadding: '60px'
                 }
             },
             {
@@ -131,13 +131,6 @@ var home = {
             infinite: true,
             arrows: true,
             responsive: [
-                // {
-                //     breakpoint: 1300,
-                //     settings: {
-                //         slidesToShow: 4,
-                //         slidesToScroll: 4,
-                //     }
-                // },
                 {
                     breakpoint: 1100,
                     settings: {
@@ -155,10 +148,8 @@ var home = {
                 {
                     breakpoint: 500,
                     settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 2,
                         slidesToScroll: 1,
-                        centerMode: true,
-                        centerPadding: "50px",
                         dots: true,
                         arrows: false
                     }
@@ -325,65 +316,40 @@ var home = {
             $('.banners-departamentos .wrapper').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                centerMode: true,
-                centerPadding: "100px",
                 infinite: true,
                 autoplay: true,
                 dots: true,
                 arrows: false,
-                responsive: [
-                    {
-                        breakpoint: 500,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            centerMode: true,
-                            centerPadding: '60px'
-                        }
-                    }
-                ]
             });
             $('.barra-informativo .wrapper .informativo').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                centerMode: true,
-                centerPadding: "60px",
                 infinite: true,
                 autoplay: true,
                 dots: false,
-                arrows: false,
-                responsive: [
-                    {
-                        breakpoint: 400,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            centerMode: false
-                        }
-                    }
-                ]
+                arrows: true,
             });
-            $('.section-mosaico-produtos .wrapper').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: true,
-                centerPadding: "60px",
-                infinite: true,
-                autoplay: true,
-                dots: true,
-                arrows: false,
-                responsive: [
-                    {
-                        breakpoint: 400,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            centerMode: true,
-                            centerPadding: "30px"
-                        }
-                    }
-                ]
-            });
+            // $('.section-mosaico-produtos .wrapper').slick({
+            //     slidesToShow: 1,
+            //     slidesToScroll: 1,
+            //     centerMode: true,
+            //     centerPadding: "60px",
+            //     infinite: true,
+            //     autoplay: true,
+            //     dots: true,
+            //     arrows: false,
+            //     responsive: [
+            //         {
+            //             breakpoint: 400,
+            //             settings: {
+            //                 slidesToShow: 1,
+            //                 slidesToScroll: 1,
+            //                 centerMode: true,
+            //                 centerPadding: "30px"
+            //             }
+            //         }
+            //     ]
+            // });
             $('.compra-na-medida-certa .wrapper').slick({
                 slidesToShow: 2,
                 slidesToScroll: 1,

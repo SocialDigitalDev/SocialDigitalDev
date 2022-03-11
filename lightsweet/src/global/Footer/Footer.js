@@ -8,7 +8,7 @@ const bodyEvent = () => {
       console.log('is body event')
     })
 }
-
+var scre = $(window).width();
 var footer = {
 
     newsletter: function () {
@@ -75,8 +75,17 @@ var footer = {
         });
     },
 
+    abreFechaItensFooter: function(){
+        if (scre <= 980){
+            $('.footer-title').click(function(){
+                $(this).next('.footer-list').slideToggle();
+            });
+        }
+    },
+
     init:function(){
         footer.newsletter();
+        footer.abreFechaItensFooter();
     }
 
 }

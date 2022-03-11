@@ -67,10 +67,10 @@
                     position: initial;
                 }
                 @include d(celularLarge){
-                    height: 380px;
+                    max-height: 455px;
                 }
                 @include d(celularMedium){
-                    height: 300px;
+                    max-height: 300px;
                 }
                 figure{
                     .img-produto{
@@ -183,6 +183,9 @@
                                         content: "Informações Complementares";
                                         font-size: 40px;
                                         line-height: 2em;
+                                        @include d(celularLarge){
+                                            font-size: 30px;
+                                        }
                                     }
                                     &:after{
                                         content: "\e92e";
@@ -210,6 +213,9 @@
                                             @include justify-content(center);
                                             width: 100%;
                                             position: relative;
+                                            @include d(celularLarge){
+                                                width: auto;
+                                            }
                                             &:before{
                                                 content: "";
                                                 display: block;
@@ -220,6 +226,9 @@
                                                 height: 25px;
                                                 position: absolute;
                                                 left: 0;
+                                                @include d(celularLarge){
+                                                    left: -40px;
+                                                }
                                             }
                                             th{
                                                 display: none;
@@ -347,6 +356,9 @@
                     @include justify-content(center);
                     margin: 1em 0;
                     padding: 0 6em;
+                    @include d(celularLarge){
+                        padding: 0 4em;
+                    }
                     .container-center{
                         max-width: 100%;
                         .titulo-prateleira{
@@ -395,6 +407,9 @@
                     @include flexbox;
                     @include justify-content(center);
                     padding: 0 6em;
+                    @include d(celularLarge){
+                        padding: 0 3em;
+                    }
                     .container-center{
                         max-width: 100%;
                         .titulo-prateleira{
@@ -404,6 +419,9 @@
                                 color: var(--color-orange-dark);
                                 line-height: 1em;
                                 text-align: center;
+                                @include d(celularLarge){
+                                    font-size: 30px;
+                                }
                             }
                         }
                         .ls-prateleira{
