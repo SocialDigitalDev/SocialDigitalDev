@@ -12292,6 +12292,12 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 	.glis-popup-link.glis-thickbox.tb-added.qvBinded, .productWishlist {
 		top: 38%;
 	}
+	.header #logo-top{
+		left: 45%;
+	}
+	.header .header-user-links .header-icons li.wishlist{
+		opacity: 0;
+	}
 }
 .jasmine-product .productWishlist{
 	display: none;
