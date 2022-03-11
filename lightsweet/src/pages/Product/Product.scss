@@ -118,13 +118,20 @@ main.ls-produto-main {
                                     @include d(ipad){
                                         order: 2;
                                         margin-top: 15px;
+                                        @include flexbox;
+                                        @include justify-content(center);
                                     }
                                     li {
+                                        @include d(celularLarge){
+                                            margin: 0 2px;
+                                        }
                                         a {
                                             img {
                                                 max-width: 130px;
-                                                height: 130px;
                                                 border: 1px solid #A5A5A5;
+                                                @include d(celularLarge){
+                                                    max-width: 75px;
+                                                }
                                             }
                                         }
                                     }
@@ -170,6 +177,9 @@ main.ls-produto-main {
                         line-height: 30px;
                         color: var(--color-black);
                         text-transform: capitalize;
+                        @include d(celularLarge){
+                            text-align: center;
+                        }
                     }
                 }
                 .sep{
@@ -182,6 +192,9 @@ main.ls-produto-main {
                         font-size: 13px;
                         color: var(--color-gray-nav);
                         margin-bottom: 1em;
+                        @include d(celularLarge){
+                            text-align: center;
+                        }
                     }
                 }
                 .detalhes-prod {
@@ -257,6 +270,10 @@ main.ls-produto-main {
                     }
                 }
                 .plugin-preco {
+                    @include d(celularLarge){
+                        @include flexbox;
+                        @include justify-content(center);
+                    }
                     .productPrice {
                         .descricao-preco {
                             margin: 1em 0;
@@ -266,6 +283,9 @@ main.ls-produto-main {
                                 font-style: normal;
                                 font-size: 0;
                                 margin-bottom: 10px;
+                                @include d(celularLarge){
+                                    text-align: center;
+                                }
                                 strong.skuListPrice {
                                     font-size: 26px;
                                     font-weight: 700;
@@ -281,9 +301,15 @@ main.ls-produto-main {
                                     font-weight: 800;
                                     color: var(--color-blue);
                                     margin-top: 20px;
+                                    @include d(celularLarge){
+                                        color: var(--color-blue-dark);
+                                    }
                                 }
                             }
                             .valor-dividido {
+                                @include d(celularLarge){
+                                    text-align: center;
+                                }
                                 span {
                                     span {
                                         font-size: 0;
@@ -330,6 +356,7 @@ main.ls-produto-main {
                     @include d(ipad){
                         @include flex-wrap(nowrap);
                         @include align-items(center);
+                        @include justify-content(center);
                     }
                     .ls-produto__buy-quant {
                         @include d(ipadPro){
@@ -409,6 +436,7 @@ main.ls-produto-main {
                             }
                             @include d(ipad){
                                 max-width: 300px;
+                                background: var(--color-blue-dark);
                             }
                         }
                         .portal-notify-me-ref {
@@ -491,7 +519,7 @@ main.ls-produto-main {
                                 #ctl00_Conteudo_upnlContent {
                                     .content {
                                         fieldset {
-                                            border: 1px solid #81c3e9;
+                                            border: 1px solid var(--color-blue-dark);
                                             border-radius: 50px;
                                             @include flexbox;
                                             @include align-items(center);
@@ -499,7 +527,7 @@ main.ls-produto-main {
                                             width: 58%;
                                             height: 50px;
                                             @include d(ipad){
-                                                width: 100px;
+                                                width: 100%;
                                             }
                                             label.prefixo {
                                                 @include flexbox;
@@ -511,7 +539,7 @@ main.ls-produto-main {
                                                     font-size: 16px;
                                                     margin-left: 15px;
                                                     @include d(ipad){
-                                                        max-width: 130px;
+                                                        max-width: 100%;
                                                     }
                                                 }
                                             }
@@ -529,6 +557,10 @@ main.ls-produto-main {
                                                     color: var(--color-white);
                                                     font-weight: 600;
                                                     height: 50px;
+                                                    @include d(celularLarge){
+                                                        background: var(--color-blue-dark);
+                                                        margin-left: 2.8em;
+                                                    }
                                                 }
                                             }
                                             .cep-busca {
@@ -657,6 +689,9 @@ main.ls-produto-main {
                                                                 color: var(--color-white);
                                                                 font-size: 20px;
                                                                 font-weight: 600;
+                                                                @include d(celularLarge){
+                                                                    background: var(--color-blue-dark);
+                                                                }
                                                                 @include d(celularMedium){
                                                                     font-size: 16px;
                                                                 }
@@ -824,6 +859,9 @@ main.ls-produto-main {
             padding: 0 6em;
             @include d(hdplus){
                 padding:0 2em;
+            }
+            @include d(celularLarge){
+                padding:0 1em;
             }
             .ls-prateleira{
                 > ul{
@@ -1387,4 +1425,7 @@ main.ls-produto-especial-main {
 }
 .Tipo-de-Produto, .Marca, .Sabor, th.name-field.Validade{
     display: none;
+}
+.ls-produto .ls-prateleira > ul li .ls-product .ls-image a img{
+    max-width: 120px;
 }

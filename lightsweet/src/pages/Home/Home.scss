@@ -82,6 +82,27 @@ main.ls-home-main{
                     width: 100%;
                     max-width: 1000px;
                 }
+                .slick-arrow{
+                    font-size: 0;
+                    &.slick-prev{
+                        &:before{
+                            content: "\e933";
+                            font-family: "lightsweet";
+                            font-size: 20px;
+                            color: var(--color-white);
+                            display: block;
+                        }
+                    }
+                    &.slick-next{
+                        &:before{
+                            content: "\e934";
+                            font-family: "lightsweet";
+                            font-size: 20px;
+                            color: var(--color-white);
+                            display: block;
+                        }
+                    }
+                }
                 li{
                     margin: 0px;
                     position: relative;
@@ -166,6 +187,9 @@ main.ls-home-main{
                     @include flex-flow(column);
                     padding: 0 2em;
                 }
+                @include d(ipad){
+                    padding: 0;
+                }
                 .prod-left{
                     @include flexbox;
                     @include align-items(center);
@@ -176,6 +200,9 @@ main.ls-home-main{
                     }
                     @include d(ipadPro){
                         width: 100%;
+                    }
+                    @include d(ipad){
+                        display: none;
                     }
                     .box-banner{
                         @include d(ipad){
@@ -220,6 +247,9 @@ main.ls-home-main{
                                 font-size: 37px;
                                 line-height: 40px;
                             }
+                            @include d(ipad){
+                                display: none;
+                            }
                             span{
                                 display: block;
                                 color: var(--color-yellow);
@@ -256,14 +286,22 @@ main.ls-home-main{
                         padding: 0;
                         padding-left: 10px;
                     }
-                    @include d(ipadPro){
-                        display: none;
+                    @include d(ipad){
+                        width: 100%;
+                        padding: 0 !important;
+                        top: 0;
                     }
                     .container-over-gif {
                         position: absolute;
                         top: 35%;
                         width: 97%;
                         text-align: center;
+                        @include d(celularLarge){
+                            position: absolute;
+                            top: 45px;
+                            width: 100%;
+                            text-align: center;
+                        }
                         p.title-receita {
                             color: var(--color-white);
                             font-size: 94px;
@@ -273,6 +311,10 @@ main.ls-home-main{
                             line-height: 100px;
                             @include d(qhd){
                                 font-size: 85px;
+                                line-height: 90px;
+                            }
+                            @include d(ipad){
+                                font-size: 50px;
                                 line-height: 90px;
                             }
                         }
@@ -423,7 +465,7 @@ main.ls-home-main{
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 @include d(ipad){
-                    grid-template-columns: repeat(1,1fr);
+                    grid-template-columns: repeat(2,1fr);
                 }
                 ul.slick-dots{
                     @include d(ipad){
@@ -485,6 +527,9 @@ main.ls-home-main{
             }
         }
         .section-acabou-sair{
+            @include d(celularLarge){
+                margin-bottom: 0;
+            }
             .wrapper{
                 @include flexbox;
                 @include justify-content(center);
@@ -635,11 +680,18 @@ main.ls-home-main{
         }
         .novidades-por-categoria{
             .wrapper{
+                @include d(celularLarge){
+                    margin: 0;
+                    padding: 0;
+                }
                 .prateleira-tabs-titulo{
                     .tabs-prateleira{
                         @include flexbox;
                         @include justify-content(center);
                         margin: 1em 0;
+                        @include d(celularLarge){
+                            margin-top: 2em;
+                        }
                         .tabs-links{
                             font-size: 20px;
                             @include flexbox;
@@ -681,10 +733,16 @@ main.ls-home-main{
                     @include d(ipad){
                         @include flex-flow(column);
                     }
+                    .slick-list{
+                        padding-left: 0 !important;
+                    }
                     ul.slick-dots{
                         @include d(ipad){
                             @include flexbox;
                             @include justify-content(center);
+                        }
+                        @include d(ipad){
+                            margin-top: 2em;
                         }
                         li{
                             button{
