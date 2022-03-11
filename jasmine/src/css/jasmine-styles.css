@@ -9341,7 +9341,19 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 .jasmine-product .product-insertsku fieldset {
     border: none;
 }
-
+/* MacBoob Air 13'' */
+@media only screen and (max-width: 1440px) {
+	.header .wrapper,
+	.wrapper{
+		padding: 0 30px;
+	}
+	.resultadoDepartamento .prateleira ul li{
+		max-width: 270px;
+	}
+	.newsletter-footer{
+		padding: 20px 30px 50px 30px;
+	}
+}
 
 /* 
 		Responsivo Notebook  1366px
