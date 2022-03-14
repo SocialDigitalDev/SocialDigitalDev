@@ -549,6 +549,21 @@ $(document).ready(function () {
                     $('.boxH4').slideToggle();
                 });
 
+                $(".search-single-navigator h5").click(function () {
+					$(this).next("ul").slideToggle();
+					$(this).toggleClass("aberto");
+				});
+                $(".search-single-navigator ul").each(function() {
+                    var e = $(this).html().length;
+                    0 != e && 1 != e || ($(this).addClass("noUl"), 
+                        $(this).parent().addClass("removePlus"), 
+                        $(this).prev().prev(".btFilter").remove())
+                });
+                $(".filtrosDepartamento .search-single-navigator h4").each(function() {
+                    0 == $("ul", this).length && ($(this).addClass("removePlus"), 
+                    $(this).children(".btFilter").remove())
+                });
+
                 // primeiro filtro aberto
                 var firstH3 = $('forfit-departamento .search-single-navigator >h3:eq(0)');
                 firstH3.addClass('filtroAtivo');
