@@ -9560,6 +9560,13 @@ tabela {
     flex-direction: column;
     text-align: center;
 }
+.nova-pdp .right .box-tab.espec .box-tab-content ul li img{
+    margin-bottom: 20px;
+}
+.nova-pdp .right .box-tab.espec .box-tab-content ul li b {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
 /* Seções Pdp*/
 .nova-pdp .produto_informacoes_campos .left .box-tab.advertencia{
   
