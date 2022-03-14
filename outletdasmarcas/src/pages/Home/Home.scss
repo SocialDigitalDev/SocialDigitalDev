@@ -357,6 +357,12 @@ main.pg-home-main{
                 }                    
             }
         }
+        .vitrine-full{
+            .wrapper{
+                max-width: 1800px;
+                margin: auto;
+            }
+        }
         .compra-na-medida-certa{
             .wrapper{
                 @include flexbox;
