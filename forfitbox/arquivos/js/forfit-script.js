@@ -549,6 +549,21 @@ $(document).ready(function () {
                     $('.boxH4').slideToggle();
                 });
 
+                $(".search-single-navigator h5").click(function () {
+					$(this).next("ul").slideToggle();
+					$(this).toggleClass("aberto");
+				});
+                $(".search-single-navigator ul").each(function() {
+                    var e = $(this).html().length;
+                    0 != e && 1 != e || ($(this).addClass("noUl"), 
+                        $(this).parent().addClass("removePlus"), 
+                        $(this).prev().prev(".btFilter").remove())
+                });
+                $(".filtrosDepartamento .search-single-navigator h4").each(function() {
+                    0 == $("ul", this).length && ($(this).addClass("removePlus"), 
+                    $(this).children(".btFilter").remove())
+                });
+
                 // primeiro filtro aberto
                 var firstH3 = $('forfit-departamento .search-single-navigator >h3:eq(0)');
                 firstH3.addClass('filtroAtivo');
@@ -1050,9 +1065,9 @@ $(document).ready(function () {
             $(".box-tab.pra-que .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_praqueserve.svg" alt="Para que serve?"/>Para que serve?</h3>' + e)), 
             0 < !$(".Especificacoes .name-field.Sugestao-de-Uso").length && 0 < !$(".Especificacoes .name-field.Ingredientes").length && 0 < !$(".Especificacoes .name-field.Modo-de-Preparo").length && 0 < !$(".Especificacoes .name-field.Peso").length ? ($(".box-tab.espec").addClass("hide"), 
             $(".produto_informacoes_campos .left").addClass("fullWidth")) : $(".right .box-tab.espec .box-tab-content").append("<ul></ul>"), 
-            0 < $(".Especificacoes .name-field.Sugestao-de-Uso").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Sugestao-de-Uso\'><b>Sugestao-de-Uso:</b> <p>' + $(".Especificacoes .value-field.Sugestao-de-Uso").html() + "</p></li>"), 
-            0 < $(".Especificacoes .name-field.Ingredientes").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Ingredientes\'><b>Ingredientes:</b> <p>' + $(".Especificacoes .value-field.Ingredientes").html() + "</p></li>"), 
-            0 < $(".Especificacoes .name-field.Modo-de-Preparo").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Modo-de-Preparo\'><b>Modo de preparo:</b> <p>' + $(".Especificacoes .value-field.Modo-de-Preparo").html() + "</p></li>")
+            0 < $(".Especificacoes .name-field.Sugestao-de-Uso").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Sugestao-de-Uso \' data-aos="fade-up"><img src="/arquivos/forfitbox_sugestao-de-preparo.svg" alt="Sugestão de uso"><b>Sugestao de Uso</b> <p>' + $(".Especificacoes .value-field.Sugestao-de-Uso").html() + "</p></li>"), 
+            0 < $(".Especificacoes .name-field.Ingredientes").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Ingredientes\' data-aos="fade-up"><img src="/arquivos/forfitbox_ingredientes.svg" alt="Ingredientes"><b>Ingredientes</b> <p>' + $(".Especificacoes .value-field.Ingredientes").html() + "</p></li>"), 
+            0 < $(".Especificacoes .name-field.Modo-de-Preparo").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Modo-de-Preparo\' data-aos="fade-up"><img src="/arquivos/forfitbox_modo-de-preparo.svg" alt="Modo de preparo"><b>Modo de preparo</b> <p>' + $(".Especificacoes .value-field.Modo-de-Preparo").html() + "</p></li>")
 
             // $(".produto_informacoes_campos > .left .box-tab-title").click(function() {
             //     $("+ .box-tab-content", this).slideToggle(), $(this).toggleClass("active")

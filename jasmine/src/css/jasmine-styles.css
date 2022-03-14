@@ -6836,9 +6836,9 @@ h2.titulo-sessao {
 	display: none;
 }
 @media only screen and (max-width: 500px){
-.glmanager-actions .action-buy .buy-button {
-	margin-left: 0;
-}
+	.glmanager-actions .action-buy .buy-button {
+		margin-left: 0;
+	}
 }
 .giftlist.giftlistmanager{
 	background-color: #fff;
@@ -10702,10 +10702,13 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 		display: block!important;
 		padding: 0 10px;
 	}
+	.resultadoDepartamento .resultado-busca-filtro{
+		width: 100%;
+	}
 	.resultado-busca-filtro .menuMobile-button {
-		width: 220px;
-		height: 40px;
-		padding: 10px;
+		/*width: 220px; */
+		/* height: 40px; */
+		padding: 13px;
 		font-size: 13px;
 		color: #F83B4D;
 		position: relative;
@@ -10714,7 +10717,10 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 		cursor: pointer;
 		font-weight: 400;
 		margin-right: 16px;
-		text-align: center;
+		/* text-align: center; */
+		width: 40%;
+		margin: 0;
+		float: left;
 	}
 	.resultadoDepartamento .main .sub .orderBy {
 		/* width: 120px;
@@ -10729,6 +10735,7 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 		font-weight: 400;
 		margin-right: 16px;
 		text-align: center;
+		width: 50%;
 	}
 
 

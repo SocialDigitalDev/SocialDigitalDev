@@ -1931,9 +1931,9 @@ h3 {
 
 .filtrosCategoria .search-single-navigator h4::after,
 .filtrosCategoria .search-single-navigator h5::after {
-    display: none
+    display: none;
 }
-
+/*
 .search-single-navigator ul>li a:before {
     content: '\f096';
     font-size: 16px;
@@ -1946,7 +1946,7 @@ h3 {
     width: 10px;
     height: auto;
     display: inline-block
-}
+}*/
 
 .search-single-navigator ul>li a:after {
     content: "";
@@ -6775,7 +6775,7 @@ a#business-toggle[data=on]:after {
 
 .forfit-departamento .search-single-navigator>h3.dropFiltro:after,
 .forfit-departamento .search-single-navigator>h4.dropFiltro:after,
-.forfit-departamento .search-single-navigator>h5.dropFiltro:after{
+.forfit-departamento .search-single-navigator>h5:after{
     content: '+';
     font-size: 28px;
     font-weight: 400;
@@ -6786,6 +6786,24 @@ a#business-toggle[data=on]:after {
     margin-top: 9px;
     right: 10px;
 }
+.filtrosDepartamento .search-single-navigator .noUl{
+	display: none;
+	padding: 0;
+}
+.Filtros {
+    display: none;
+}
+.filtrosDepartamento .search-single-navigator > h4.removePlus::after, 
+.filtrosDepartamento .search-single-navigator > h3.removePlus::after, 
+.filtrosDepartamento .search-single-navigator > h5.removePlus::after{
+	display: none;
+}
+.filtrosDepartamento .search-single-navigator > h4.removePlus::after, 
+.filtrosDepartamento .search-single-navigator > h3.removePlus::after, 
+.filtrosDepartamento .search-single-navigator > h5.removePlus::after{
+	display: none;
+}
+
 .productClusterSearchableIds{
     display: none!important;
 }
@@ -6917,7 +6935,7 @@ a#business-toggle[data=on]:after {
 }
 
 /* Oculta MARCA e TAMANHO */
-.search-single-navigator .HideMarca {display: none....;} 
+.search-single-navigator .HideMarca {} 
 
 .search-single-navigator{
     display: block!important;
@@ -6942,7 +6960,6 @@ a#business-toggle[data=on]:after {
     border-radius: 50%;
     float: left;
     margin-right: 10px;
-    
 }
 .forfit-departamento .search-single-navigator >ul.Tamanho li a{
     width: 100%;
@@ -9560,6 +9577,13 @@ tabela {
     flex-direction: column;
     text-align: center;
 }
+.nova-pdp .right .box-tab.espec .box-tab-content ul li img{
+    margin-bottom: 20px;
+}
+.nova-pdp .right .box-tab.espec .box-tab-content ul li b {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
 /* Seções Pdp*/
 .nova-pdp .produto_informacoes_campos .left .box-tab.advertencia{
   
@@ -9729,7 +9753,7 @@ tabela {
     height: 2px;
     width: 55px;
     left: 0;
-    bottom: 20px;
+    bottom: 0px;
     background: linear-gradient(to right, #2e2e2e 0%, #171a1b 65%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 71%, rgba(22, 23, 24, .5) 71%);
 }
 .nova-pdp .productDescription {

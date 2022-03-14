@@ -177,6 +177,17 @@ $(document).ready(function () {
 							centerPadding: '40px',
 							infinite: true
 						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1,
+							arrows: false,
+							dots: false,
+							centerPadding: '40px',
+							infinite: true
+						}
 					}
 					]
 				});
