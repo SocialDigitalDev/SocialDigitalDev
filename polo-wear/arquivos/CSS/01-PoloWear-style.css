@@ -1442,7 +1442,7 @@ fieldset.refino.even.Filtros.filtro_genero {
     margin-bottom: 0 !important;
 }
 
-.polo-wear__home .slide-mobile {
+.slide-mobile {
     display: none;
 }
 
@@ -10072,7 +10072,7 @@ div#chat-widget-container:after {
         display: none;
     }
 
-    .polo-wear__home .slide-mobile {
+    .slide-mobile {
         display: block;
     }
 
