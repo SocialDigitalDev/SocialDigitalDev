@@ -27,6 +27,9 @@ footer{
                 }
             }
             .newsletter-form{
+                @include flexbox;
+                @include flex-wrap(wrap);
+                @include align-items(center);
                  @include d(ipad){
                      @include flexbox;
                      @include flex-flow(column);
@@ -38,7 +41,6 @@ footer{
                     text-decoration: none;
                     font-weight: 600;
                     font-size: 18px;
-                    display: inline-block;
                     position: relative;
                     text-align: center;
                     background-color: var(--color-black);
@@ -50,9 +52,9 @@ footer{
                     padding-right: 1em;
                     cursor: pointer;
                     margin: 0 10px;
+                    @include flexbox;
+                    @include align-items(center);
                     @include d(ipad){
-                        @include flexbox;
-                        @include align-items(center);
                         order: 4;
                         margin-top: 2em;
                     }

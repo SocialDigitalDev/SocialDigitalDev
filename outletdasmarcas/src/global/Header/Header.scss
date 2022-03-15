@@ -159,7 +159,8 @@ header{
                                     }
                                     &:hover{
                                         .menu-level-2{
-                                            display: block;
+                                            @include flexbox;
+                                            @include justify-content(space-between);
                                         }
                                     }
                                     &.destaque{
@@ -176,9 +177,11 @@ header{
                                         padding: 1em 20%;
                                         min-height: 300px;
                                         display: none;
+                                        @include d(hdplus){
+                                            padding: 1em 2em;
+                                        }
                                         .level-2{
-                                            margin: 1em;
-                                            max-width: 170px;
+                                            margin: 1em 0;
                                             .link-level-2 {
                                                 text-transform: none;
                                                 color: var(--color-gray-nav);
@@ -200,10 +203,16 @@ header{
                                             }
                                             .menu-level-3 {
                                                 position: absolute;
-                                                top: 11%;
+                                                top: 35px;
                                                 left: 30%;
                                                 width: 200px;
                                                 display: none;
+                                                min-height: 225px;
+                                                border-left: 1px solid var(--color-gray-nav);
+                                                padding-left: 1.5em;
+                                                @include d(qhd){
+                                                    left: 15%;
+                                                }
                                                 .level-3{
                                                     max-width: 155px;
                                                     margin-bottom: 1em;
@@ -240,13 +249,18 @@ header{
                                                         top: 0%;
                                                         left: 76%;
                                                         width: 200px;
+                                                        min-height: 225px;
+                                                        border-left: 1px solid var(--color-gray-nav);
+                                                        padding-left: 1.5em;
                                                         .level-4{
                                                             max-width: 155px;
-                                                            margin-bottom: 1em;
+                                                            margin-bottom: 2em;
                                                             .link-level-4{
                                                                 font-weight: 400;
                                                                 color: var(--color-black);
                                                                 text-transform: none;
+                                                                @include flexbox;
+                                                                @include align-items(center);
                                                                 &:hover{
                                                                     .link-level-3{
                                                                         text-decoration: underline;
@@ -258,6 +272,17 @@ header{
                                                 }
                                             }
                                         }
+                                    }
+                                    .item-menu-wrapper {
+                                        width: 200px;
+                                    }
+                                    .promo-img {
+                                        max-width: 245px;
+                                        margin: 0 .5em;
+                                    }
+                                    .img-promo-container {
+                                        border-left: 1px solid var(--color-gray-nav);
+                                        padding-left: 1em;
                                     }
                                 }
                             }
@@ -520,5 +545,81 @@ header{
                 }
             }
         }
+    }
+}
+a.roupas{
+    &:before{
+        content: "\e90e";
+        font-family: "outletdasmarcas";
+        font-size: 30px;
+        color: var(--color-black);
+        margin-right: 5px;
+    }
+}
+a.moda-intima{
+    &:before{
+        content: "\e910";
+        font-family: "outletdasmarcas";
+        font-size: 30px;
+        color: var(--color-black);
+        margin-right: 5px;
+    }
+}
+a.beleza{
+    &:before{
+        content: "\e904";
+        font-family: "outletdasmarcas";
+        font-size: 30px;
+        color: var(--color-black);
+        margin-right: 5px;
+    }
+}
+a.calcados{
+    &:before{
+        content: "\e90c";
+        font-family: "outletdasmarcas";
+        font-size: 30px;
+        color: var(--color-black);
+        margin-right: 5px;
+    }
+}
+a.novidades{
+    &:before{
+        content: "\e912";
+        font-family: "outletdasmarcas";
+        font-size: 30px;
+        color: var(--color-black);
+        margin-right: 5px;
+    }
+}
+a.acessorios{
+    &:before{
+        content: "\e905";
+        font-family: "outletdasmarcas";
+        font-size: 30px;
+        color: var(--color-black);
+        margin-right: 5px;
+    }
+}
+a.acessorios{
+    &:before{
+        content: "\e905";
+        font-family: "outletdasmarcas";
+        font-size: 30px;
+        color: var(--color-black);
+        margin-right: 5px;
+    }
+}
+a.marcas{
+    &:before{
+        content: "";
+        background-image: url("data:image/svg+xml,%3Csvg width='32' height='30' viewBox='0 0 32 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.7038 1.88619C15.1518 0.704604 16.8471 0.704604 17.2965 1.88619L20.1944 9.91367C20.3974 10.4457 20.914 10.7999 21.4907 10.7999H28.6122C29.9282 10.7999 30.5021 12.4378 29.4676 13.24L24.3998 17.7997C24.1728 17.9743 24.0069 18.2162 23.9259 18.4909C23.8449 18.7655 23.853 19.0588 23.949 19.3285L25.7997 27.1726C26.2505 28.4326 24.7918 29.5148 23.6886 28.7392L16.8051 24.3713C16.5694 24.2056 16.2883 24.1167 16.0002 24.1167C15.712 24.1167 15.4309 24.2056 15.1952 24.3713L8.31171 28.7392C7.20996 29.5148 5.74982 28.4312 6.2006 27.1726L8.05132 19.3285C8.14733 19.0588 8.15542 18.7655 8.07443 18.4909C7.99345 18.2162 7.82755 17.9743 7.60054 17.7997L2.53277 13.24C1.49681 12.4378 2.07359 10.7999 3.38673 10.7999H10.5082C10.7886 10.8008 11.0627 10.7166 11.2942 10.5583C11.5256 10.4001 11.7036 10.1753 11.8046 9.91367L14.7024 1.88619H14.7038Z' fill='white' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 30px;
+        height: 25px;
+        color: var(--color-black);
+        margin-right: 5px;
+        display: block;
     }
 }

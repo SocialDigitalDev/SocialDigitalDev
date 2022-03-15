@@ -57,11 +57,11 @@
 			@content;
 		}
 	} @else if $device == hdplus {
-		@media (min-width: 1440px) {
+		@media (max-width: 1440px) {
 			@content;
 		}
 	} @else if $device == fullhd {
-		@media (min-width: 1920px) {
+		@media (max-width: 1920px) {
 			@content;
 		}
 	} @else if $device == fullhdMax {
