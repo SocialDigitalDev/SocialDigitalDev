@@ -20,12 +20,11 @@ footer{
         .wrapper{
             @include d(celularLarge){
                 padding: 0;
-                padding-bottom: 1em;
             }
         }
         .newsletter-content {
             background-color: var(--color-white);    
-            background-image: url(/arquivos/ls-bg-newsletter.png);
+            background-image: url("/arquivos/ls-bg-newsletter.png");
             background-repeat: no-repeat;
             background-size: contain;
             padding: 2em 0;
@@ -45,6 +44,11 @@ footer{
                 border-radius: 0;
                 box-shadow: none;
                 top: 0;
+            }
+            @include d(celularLarge){
+                padding: 1em;
+                background-image: url("/arquivos/banner_newsletter_mobile2.png");
+                background-size: cover;
             }
             h3.newsletter-titulo{
                 font-weight: 900;
@@ -66,6 +70,9 @@ footer{
                 color: var(--color-gray-nav);
                 @include d(qhd){
                     font-size: 13px;
+                }
+                @include d(celularLarge){
+                    color: var(--color-black);
                 }
             }
             .newsletter-form{
@@ -121,6 +128,9 @@ footer{
                     }
                     @include d(celularLarge){
                         width: 38%;
+                    }
+                    @include d(celularMediumLarge){
+                        width: 100%;
                     }
                 }
                 #msgSucesso{

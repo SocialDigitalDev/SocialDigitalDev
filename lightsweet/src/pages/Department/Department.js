@@ -138,6 +138,11 @@ var depto = {
             $('.pager.bottom').appendTo('.searchResultsTime');
         }, 700);
     },
+    titleColecao: function() {
+        if ($('body').hasClass('todos-os-produtos')){
+            $('.vitrine-title h2').text('Produtos');
+        }
+    },
     init: function(){
         // depto.sidebarDepartamento();
         depto.filtroMobile();
@@ -146,6 +151,7 @@ var depto = {
         depto.abreFechaFiltroMobile();
         depto.aplicaNomeCategoria();
         depto.paginacaoDepto();
+        depto.titleColecao();
     }
 }
 

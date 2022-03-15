@@ -329,27 +329,15 @@ var home = {
                 dots: false,
                 arrows: true,
             });
-            // $('.section-mosaico-produtos .wrapper').slick({
-            //     slidesToShow: 1,
-            //     slidesToScroll: 1,
-            //     centerMode: true,
-            //     centerPadding: "60px",
-            //     infinite: true,
-            //     autoplay: true,
-            //     dots: true,
-            //     arrows: false,
-            //     responsive: [
-            //         {
-            //             breakpoint: 400,
-            //             settings: {
-            //                 slidesToShow: 1,
-            //                 slidesToScroll: 1,
-            //                 centerMode: true,
-            //                 centerPadding: "30px"
-            //             }
-            //         }
-            //     ]
-            // });
+            $('.section-mosaico-produtos .wrapper').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                infinite: true,
+                autoplay: true,
+                dots: true,
+                arrows: false,
+            });
             $('.compra-na-medida-certa .wrapper').slick({
                 slidesToShow: 2,
                 slidesToScroll: 1,
