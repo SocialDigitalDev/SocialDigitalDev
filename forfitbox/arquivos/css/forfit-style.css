@@ -2143,7 +2143,7 @@ footer {
 }
 
 .footer-pagamentos .formas-pgto {
-    width: 60%;
+    width: 100%;
     float: left;
     margin: 0
 }
@@ -8746,11 +8746,11 @@ label.skuespec_Unica.skuespec_Estampa_opcao_UNICA.skuespec_Estampa_opcao_Unica:a
 }
 
 .calc-frete .cep fieldset .prefixo {
-    width: 75%
+    width: 70%
 }
 
 .calc-frete .cep fieldset {
-    width: 70%;
+    width: 100%;
     padding: 10px 0
 }
 
