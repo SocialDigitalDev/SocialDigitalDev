@@ -482,21 +482,26 @@ header{
                 display: none;
             }
         }
-        .atendimento-wrapper{
-            display: none;
-        }
-        .user-name__account{
-            padding: 4%;
-            @include flexbox;
-            &:before{
-                content: "\e900";
-                font-family: "outletdasmarcas";
-                font-size: 25px;
-                margin-right: 10px;
+        .atendimento-login{
+            .atendimento-wrapper{
+                display: none;
             }
-            p.welcome{
-                font-size: 13px;
-                font-weight: 600;
+            .user-name__account{
+                padding: 4%;
+                @include flexbox;
+                &:before{
+                    content: "\e900";
+                    font-family: "outletdasmarcas";
+                    font-size: 25px;
+                    margin-right: 10px;
+                }
+                .link-help{
+                    display: block;
+                    p.welcome{
+                        font-size: 13px;
+                        font-weight: 600;
+                    }
+                }
             }
         }
     }
@@ -621,5 +626,23 @@ a.marcas{
         color: var(--color-black);
         margin-right: 5px;
         display: block;
+    }
+    @include d(ipad){
+        @include flexbox;
+        @include align-items(center);
+    }
+}
+.img-promo-container{
+    a.link-img{
+        &:nth-of-type(2){
+            @include d(celularLarge){
+                display: none;
+            }
+        }
+        @include d(celularLarge){
+            img{
+                max-width: 100%;
+            }
+        }  
     }
 }
