@@ -2143,7 +2143,7 @@ footer {
 }
 
 .footer-pagamentos .formas-pgto {
-    width: 60%;
+    width: 100%;
     float: left;
     margin: 0
 }
