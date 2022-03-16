@@ -54,6 +54,11 @@ const main = () => {
     if(scre <= 768){
         document.addEventListener(
             "DOMContentLoaded", () => {
+                // $('.level-2').appendTo('.menu-level-2')
+                $('.level-1').each(function(){
+                    var thisMenu = $(this).find('.menu-level-2');
+                    $(this).find('.level-2').appendTo(thisMenu);
+                });
                 new Mmenu(".menu-principal");
                 setTimeout(function(){
                     $('.atendimento-login').prependTo('#menuPrincipal');
