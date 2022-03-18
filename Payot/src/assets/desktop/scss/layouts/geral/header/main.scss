@@ -105,7 +105,7 @@
 
                 > div {
                     z-index: 99;
-                    right: 100px;
+                    right: 10%;
                     display: none;
                     padding: 20px;
                     position: absolute;
@@ -116,11 +116,9 @@
                         margin-bottom: 10px;
                         padding-bottom: 10px;
                         border-bottom: 1px solid #000;
-                    }
-                    
+                    }                    
                     li {
                         margin-bottom: 10px;
-
                         svg {
                             width: 25px;
                             margin-right: 10px;
