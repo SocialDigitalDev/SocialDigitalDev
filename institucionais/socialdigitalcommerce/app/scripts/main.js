@@ -371,6 +371,13 @@
             });
         },
 
+        ajustaForm: function(){
+            function arrumaForm(){
+                $('.form-wrapper style, .form-wrapper label').remove();
+            }
+            window.onload = arrumaForm();
+        },
+
         previneDuplicatas: function() {
             function mySubmitFunction(e) {
                 e.preventDefault();
@@ -390,6 +397,7 @@
             customScript.checkboxToggleCss();
             customScript.openLPcontactModal();
             customScript.previneDuplicatas();
+            customScript.ajustaForm();
             // customScript.tooltipStart();
         },
         ajax_init: function () {
