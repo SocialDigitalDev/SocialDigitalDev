@@ -683,6 +683,16 @@ fieldset.busca .fulltext-search-box {
     color: #fff;
     font-size: 20px;
 }
+.shopnav .shopnav-inner .level1 li.m_semlactose {
+    background-color: #fe5b3c;
+}
+
+.shopnav .shopnav-inner .level1 li.m_semlactose > a::before {
+    font-family: 'jasmine';
+    content: "\e914";
+    color: #fff;
+    font-size: 20px;
+}
 .shopnav .shopnav-inner .level1 li > a {
     position: relative;
     padding: 10px;
@@ -1846,6 +1856,7 @@ fieldset.refino.even.Filtros.filtro_genero {
 	background: #fe5b3c;
 	border-radius: 5px;
 }
+
 .categorias-section .categorias_box li picture{
 	display: none;
 }
