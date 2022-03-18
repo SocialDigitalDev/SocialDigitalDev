@@ -5,17 +5,17 @@
     @include d(celularLarge){
         &:not(.otl){
             .slick-list{
-                max-height: 450px;
-            }
-        }
-    }
-    @include d(celularMedium){
-        &:not(.otl){
-            .slick-list{
                 max-height: 100%;
             }
         }
     }
+    // @include d(celularMedium){
+    //     &:not(.otl){
+    //         .slick-list{
+    //             max-height: 100%;
+    //         }
+    //     }
+    // }
     > ul {
         @include flexbox;
         @include align-items(center);
