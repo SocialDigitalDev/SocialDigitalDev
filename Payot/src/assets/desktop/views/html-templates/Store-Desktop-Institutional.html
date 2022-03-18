@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <link rel="stylesheet" href="/arquivos/store-desktop-institucional.css" />
+</head>
+
+<body>
+    <vtex:template id="Store-Desktop-Header" />
+    
+    <main>
+        <div class="container">
+            <div class="j-banner-main">
+                <vtex:contentPlaceHolder id="Banner Principal" />
+            </div>
+
+
+            <h2 class="j-title">
+                <vtex:contentPlaceHolder id="Titulo" />
+            </h2>
+
+            <div class="j-top">
+                <div class="j-left"></div>
+                <div class="j-right">
+                    <vtex:contentPlaceHolder id="Texto" />
+                </div>
+            </div>
+        </div>
+    </main> 
+
+    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Desktop-Scripts" />
+    <vtex:template id="Store-Common-Scripts" />
+</body>
+</html>

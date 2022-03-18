@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <title>
+        <vtex:contentPlaceHolder id='Title Page - Tab' />
+    </title>
+    <vtex:template id="Store-Common-Styles" />
+    <vtex:template id="Store-Desktop-Head" />
+    <link rel="stylesheet" href="https://payottatix.vteximg.com.br/arquivos/store-desktop-wishlist.css" />
+</head>
+
+<body>
+    <vtex:template id="Store-Desktop-Header" />
+
+    <main>
+        <div class="container">
+            <div class="j-wishlist__top">
+                <div class="j-wishlist__banner">
+                    <vtex:contentPlaceHolder id="Titulo" />
+                </div>
+            </div>
+            <div class="j-wishlist__content"></div>
+        </div>
+    </main>
+
+    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Desktop-Scripts" />
+    <script src="https://payottatix.vteximg.com.br/arquivos/store-common.js"></script>
+    <script src="https://payottatix.vteximg.com.br/arquivos/store-desktop-wishlist.js"></script>
+</body>
+
+</html>

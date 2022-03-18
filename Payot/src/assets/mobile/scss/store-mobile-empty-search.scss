@@ -1,0 +1,13 @@
+@import '../../common/scss/tools/_breakpoint.scss';
+@import "../../common/scss/layouts/globals/variables.scss";
+
+.j-empty__top {
+    display: block;
+    margin-bottom: 15px;
+    
+    a {
+        display: block;
+        text-align: center;
+    }
+}
+

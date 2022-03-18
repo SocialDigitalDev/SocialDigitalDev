@@ -1,0 +1,15 @@
+@import '../../common/scss/tools/_breakpoint.scss';
+@import "../../common/scss/layouts/globals/variables.scss";
+@import "./layouts/geral/shelf/index.scss";
+
+.y-wishlist {    
+    h1,h2,h3,h4 {
+        font-size: 32px;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+}

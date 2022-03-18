@@ -1,0 +1,92 @@
+.j-newsletter{
+    background:url('https://payottatix.vteximg.com.br/arquivos/banner-newsLetter.png');
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    padding: 65px 0;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .j-top{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            &.is--hide {
+                display: none;
+            }
+            
+            &__left {
+                margin-right: 40px;
+            }
+
+            &__right {
+
+                h4{
+                    font-family: $font-bebas;
+                    font-size: 34px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: $color-white;
+                    line-height: 42px;
+                    letter-spacing: 1px;
+                }
+                p{
+                    font-family: $font-main;
+                    font-size: 15px;
+                    line-height: 19px;
+                    color: $color-white;
+                }
+            }
+        }
+        #j-form-news{
+            display: flex;
+
+            &.is--hide {
+                display: none;
+            }
+
+            fieldset{
+                border: none;
+                input{
+                    width: 248px;
+                    height: 48px;
+                    border: 2px solid $color-white;
+                    margin: 0px 20px;
+                    font-size: 14px;
+                    background-color: rgba(0,0,0, 0.80);
+                    padding:15px 17px;
+                    color: $color-white;
+                    
+                    &::placeholder {
+                        color: $color-white;
+                    }
+                }
+            }
+            button{
+                width: 155px;
+                height: 48px;
+                background: $color-black;
+                color:$color-white;
+                font-size: 22px;
+                font-weight: bold;
+                text-transform: uppercase;
+                border:none;
+                font-family: $font-bebas;
+                letter-spacing: 1px;
+            }
+        }
+        .j-newsletter__success{
+            display: none;
+            
+            &.is--active {
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+}

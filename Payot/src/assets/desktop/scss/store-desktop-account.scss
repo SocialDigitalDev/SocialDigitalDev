@@ -1,0 +1,67 @@
+@import '../../common/scss/tools/_breakpoint.scss';
+@import "../../common/scss/layouts/globals/variables.scss";
+
+
+a.myo-cancel-btn{
+    display: none!important;
+}
+
+.vtex-account__menu {
+    padding-right: 0;
+}
+
+.vtex-account__user-info {
+    background: $color-black;
+    color: $color-white;
+    padding: 16px 10px 21px;
+    align-items: center;
+}
+
+.vtex-account__menu-links a {
+    font-family: $font-main;
+    font-size: 14px;
+    font-weight: bold;
+    color: $color-black;
+    
+    &.b--action-primary {
+        border-color: $color-main;
+    }
+}
+
+.vtex-account__page {
+    header {
+        background-color: $color-black;
+
+        .vtex-pageHeader__container {
+            padding-top: 3px;
+            padding-bottom: 0;
+        }
+        
+        .vtex-pageHeader__title {
+            color: $color-white;
+            font-weight: $font-bebas;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 30px;
+        }
+    }
+}
+
+.j-newsletter {
+    display: none;
+}
+
+.c-on-base {
+    font-size: 20px;
+}
+.t-heading-1, .t-heading-2 {
+    color: $color-black;
+}
+.c-action-primary {
+    color: $color-main;
+}
+
+.c-on-base {
+   color: $color-black;
+}

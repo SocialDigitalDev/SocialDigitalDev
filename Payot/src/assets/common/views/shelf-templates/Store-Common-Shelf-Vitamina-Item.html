@@ -1,0 +1,50 @@
+#set($productId = $product.Id)
+#set($productTitle = $product.HtmlEscapedName)
+#set($productLink = $product.Uri)
+#set($productListPrice = $product.ListPrice)
+#set($productBestPrice = $product.BestPrice)
+#set($productInstallmentValue = $product.InstallmentValue)
+
+<article class="j-prod-vitamina" data-product-id="$productId">
+    <a class="j-prod-vitamina--img" title="$productTitle" href="$productLink">
+        $product.ProductField(68)
+    </a>
+    <div class="j-prod-vitamina--content">
+        <a class="j-prod-vitamina--name" title="$productTitle" href="$productLink">
+            $productTitle
+        </a>
+
+        <div class="j-prod-vitamina--description">
+            $product.DescriptionShort
+        </div>
+
+        <div class="j-prod-vitamina--price">
+            <div class="j-prod-vitamina-price-best">
+                #if ($product.BestPrice > 1)
+                Por $product.BestPrice
+                #end
+            </div>
+            
+            <div class="j-prod-vitamina-price-instalments">
+                #if ($product.NumbersOfInstallment > 1)
+                    ${product.NumbersOfInstallment}x $product.InstallmentValue
+                #end
+            </div>
+        </div>
+
+        <div class="j-prod-vitamina-buy">
+            <a class="j-prod-vitamina-buy-btn" href="$productLink">ADICIONAR AO CARRINHO</a>
+            <div class="j-prod-vitamina-buy-video is--hide">
+                <img src="https://payottatix.vteximg.com.br/arquivos/btn-ver-video.jpg" alt="Ver o Vídeo" />
+                <div class="j-popup-video is--hide">
+                    $product.ProductField(69)
+                </div>
+            </div>
+        </div>
+
+        <div class="j-prod-vitamina-specification">
+            $product.ProductField(54)
+        </div>
+
+    </div>
+</article>

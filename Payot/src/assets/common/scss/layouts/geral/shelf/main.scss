@@ -1,0 +1,297 @@
+.j-shelf {
+    margin: 15px 0;
+    >h2 {
+        display: none;
+    }
+    >ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        position: relative;
+        li {
+            width: 47%;
+            margin: 16px 1.5%;
+            padding: 0 10px;
+            background-color: #fff;
+            
+            @include breakpoint('desktop') {
+                width: 22%;
+                margin: 5px 10px;
+            }
+        }
+    }
+    &.has--shadow {
+        >ul {
+            li {
+                @include breakpoint('desktop') {
+                    box-shadow: 0 3px 6px #00000029;
+                }
+            }
+        }
+    }
+    &__item {
+        
+        @include breakpoint('mobile') {
+            padding: 0;
+            padding: 0 0 12px;
+        }
+        
+        @include breakpoint('desktop') {
+            border: 1px solid $color-white;
+
+            &:hover {
+                border-color: $color-black;
+
+                .j-shelf__item--bottom-right .j-rate,
+                .j-shelf__item-buy {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-content {
+            @include breakpoint('desktop') {
+                padding: 0 8px;
+            }
+        }
+
+        &-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                display: block;
+                img {
+                    height: auto;
+                    display: block;
+                }
+            }
+        }
+        
+        &-name {
+            overflow: hidden;
+            margin: 5px 0 10px;
+            
+            @include breakpoint('desktop') {
+                margin: 14px 0 21px;
+            }
+
+            &::after {
+                content: "";
+                height: 1px;
+                border-bottom: 1px solid $color-black;
+                display: block;
+                width: 112px;
+                
+                @include breakpoint('desktop') {
+                    width: 144;
+                }
+            }
+            
+
+            a {
+                display: block;
+                color: $color-black;
+                overflow: hidden;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+                height: 36px;
+
+                @include breakpoint('desktop') {
+                    font-size: 16px;
+                    line-height: 19px;
+                    height: 38px;
+                }
+            }
+        }
+
+        &--price {
+
+            @include breakpoint('desktop') {
+                width: 50%;
+            }
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        &-old-price {
+            color: $color-black;
+            font-size: 12px;
+            line-height: 15px;
+            text-decoration: line-through;
+            min-height: 17px;
+            width: 100%;
+
+            @include breakpoint('desktop') {
+                font-size: 18px;
+                line-height: 22px;
+                min-height: 22px;
+            }
+        }
+
+        &-new-price {
+            color: $color-main;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            margin: 5px 0;
+            width: 100%;
+
+            @include breakpoint('desktop') {
+                margin: 10px 0;
+                font-size: 22px;
+                line-height: 27px;
+            }
+        }
+
+        &-installment {
+            font-size: 16px;
+            font-weight: normal;
+            min-height: 19px;
+            line-height: 19px;
+            color: $color-black;
+            width: 100%;
+        }
+
+        &--bottom {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            
+            &-right {
+    
+                @include breakpoint('mobile') {
+                    display: none;
+                }
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .y-wishBtn {
+                    text-align: right;
+                    
+                    > div {
+                        cursor: pointer;
+                    }
+
+                    &--remove {
+                        display: none;
+                    }
+                    
+                    &.added {
+                        .y-wishBtn {
+                            
+                            &--add {
+                                display: none;
+                            }
+                            
+                            &--remove {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                .j-rate {
+                    margin-top: 46px;
+                    opacity: 0;
+                    transition: ease-in-out .7s;
+
+                    i {
+                        &::before {
+                            color: $color-yellow;
+                        }
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &-outStcok-text {
+            margin-top: 5px;
+            text-align: center;
+            font-size: 12px;
+            color: #585757;
+        }
+
+        &-buy {
+            @include breakpoint('mobile') {
+                display: none;
+            }
+
+            display: block;
+            background-color: $color-black;
+            color: $color-white;
+            text-transform: uppercase;
+            font-size: 22px;
+            line-height: 27px;
+            font-family: $font-bebas;
+            letter-spacing: 2px;
+            padding: 12px 0;
+            text-align: center;
+            opacity: 0;
+            transition: ease-in-out .7s;
+            margin-top: 12px;
+        }
+    }
+
+    .slick-arrow {
+        font-size: 0px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $color-black;
+        border-right: 0;
+        border-bottom: 0;
+        position: absolute;
+        top: 50%;
+        background: none;
+        z-index: 20;
+    }
+
+    .slick-prev {
+        transform: translateY(-50%) rotate(-45deg);
+        left: 0;
+    }
+
+    .slick-next {
+        transform: translateY(-50%) rotate(135deg);
+        right: 0;
+    }
+
+    .slick-dots {
+        display: flex !important;
+        justify-content: center;
+        width: 100%;
+        margin-top: 13px;
+        li {
+            margin: 0;
+            width: auto !important;
+            button {
+                display: block;
+                font-size: 0;
+                width: 10px;
+                height: 10px;
+                background-color: $color-white;
+                border-radius: 50%;
+                border: 1px solid $color-darkgray;
+                position: relative;
+                cursor: pointer;
+                transition: all 225ms ease;
+            }
+            &.slick-active {
+                button {
+                    border-color: $color-main
+                }
+            }
+        }
+    }
+}

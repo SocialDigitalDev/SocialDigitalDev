@@ -1,0 +1,65 @@
+.is--department {
+    .j-category {
+        &__top {
+            border-bottom: 1px solid $color-black;
+            margin-bottom: 38px;
+
+            .bread-crumb {
+                display: none;
+            }
+        }    
+    }
+}
+
+.j-category {
+
+    &__banner {
+        a {
+            display: block;
+            text-align: center;
+        }
+    }
+
+
+    &__sub {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 40px;
+        
+        &--item {
+            margin: 0 15px;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                svg {
+                    width: 60px;
+                    height: 60px;
+                    border: 1px solid $color-black;
+                    border-radius: 50%;
+                    padding: 10px;
+                    fill: $color-black;
+                    margin-bottom: 6px;
+                }
+
+                span {
+                    color: $color-black;
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+            }
+        }
+    }
+}
+
+.js--scroll-top {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+}
+
+#returnToTop {
+    display: none;
+}

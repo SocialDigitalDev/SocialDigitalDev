@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <meta name="google-site-verification" content="wFnFRVmXHRC9JYye-pbf9mkQWxmO7L5EtPj7NrUelIQ" />
+    <title>
+        <vtex:contentPlaceHolder id='Title Page - Tab' />
+    </title>
+    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <link rel="stylesheet" href="/arquivos/store-desktop-home.css" />
+</head>
+
+<body>
+    <vtex:template id="Store-Desktop-Header" />
+
+    <main class="j-main">
+        <section class="j-banner__main">
+            <div class='j-banner__slider customer is--active'>
+                <vtex:contentPlaceHolder id="Banners Slider Principal" />
+            </div>
+        </section>
+        <div class="container">
+            <section class="j-home__tabs">
+                <div class="j-home__tabs--title">
+                    <ul>
+                        <li data-tab-id="prevew">
+                            <vtex.cmc:arrowup />
+                        </li>
+                        <li data-tab-id="1">Olhos</li>
+                        <li data-tab-id="2" class="is--active">Lábios</li>
+                        <li data-tab-id="3">Pele</li>
+                        <li data-tab-id="next">
+                            <vtex.cmc:arrowdown />
+                        </li>
+                    </ul>
+                </div>
+                <div data-tab-item="1" class="j-home__tabs-item">
+                    <vtex:contentPlaceHolder id="Banner + vitrine 1" />
+                </div>
+                <div data-tab-item="2" class="j-home__tabs-item is--active">
+                    <vtex:contentPlaceHolder id="Banner + vitrine 2" />
+                </div>
+                <div data-tab-item="3" class="j-home__tabs-item">
+                    <vtex:contentPlaceHolder id="Banner + vitrine 3" />
+                </div>
+            </section>
+
+            <section class="j-home__fullBanner">
+                <vtex:contentPlaceHolder id="Full Banner" />
+            </section>
+
+            <section class="j-home__twoBanners" style="display: none;">
+                <div class="j-twoBanners__left">
+                    <vtex:contentPlaceHolder id="Banner Esquerda" />
+                </div>
+                <div class="j-twoBanners__right">
+                    <vtex:contentPlaceHolder id="Banner Direita" />
+                </div>
+            </section>
+
+            <section class="j-home__double">
+                <div class='j-home__double-slider'>
+                    <vtex:contentPlaceHolder id="Double Banners" />
+                </div>
+            </section>
+
+            <div class="yv-testimonial" style="margin-top: 100px; margin-bottom:40px" data-qty="9"></div>
+
+            <section class="j-home__shelfs novidades">
+                <vtex:contentPlaceHolder id="Vitrine Novidades" />
+            </section>
+        </div>
+    </main>
+
+    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Common-Scripts" />
+    <vtex:template id="Store-Desktop-Scripts" />
+    <script type="text/javascript" src="/arquivos/store-desktop-home.js"></script>
+    <vtex.cmc:popuphome />
+</body>
+
+</html>

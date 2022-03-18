@@ -1,0 +1,21 @@
+.brand {
+    .j-category__filter {
+        background-color: $color-blue;
+        transform: none;
+        margin-top: 20px;
+    }
+    .j-brand__banner {
+        margin-bottom: 20px;
+    }
+    .j-filter__mobile-left {
+        display: none;
+    }
+    .j-filter__mobile-right {
+        width: 100%;
+
+        .j-filter__mobile-color {
+            justify-content: center;
+            background-color: $color-blue;
+        }
+    }
+}

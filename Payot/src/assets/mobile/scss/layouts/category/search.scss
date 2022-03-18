@@ -1,0 +1,29 @@
+.is--search {
+    .j-title,
+    .j-shelf__title {
+        &::after {
+            display: none;
+        }
+        
+        span {
+            font-size: 0;
+            line-height: inherit;
+
+            strong {
+                position: static;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 19px;
+                text-transform: inherit;
+
+                em {
+                    line-height: 19px;
+                    font-style: normal;
+                    font-size: 16px;
+                    font-weight: 500;
+                    transform: inherit;
+                }
+            }
+        }
+    }
+}

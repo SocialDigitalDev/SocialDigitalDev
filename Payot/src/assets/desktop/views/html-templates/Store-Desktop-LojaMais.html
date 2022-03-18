@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <title>Payot</title>
+    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <script>
+        function addjs(cdn) {
+            var d = new Date();
+            var n = d.getTime();
+            var head = document.getElementsByTagName('head')[0];
+            if (cdn.includes('.js')) {
+                var s = document.createElement('script');
+                s.setAttribute('src', cdn + '?v=' + n)
+                head.appendChild(s);
+            }
+
+            if (cdn.includes('.css')) {
+                var s = document.createElement('link');
+                s.setAttribute('rel', 'stylesheet')
+                s.setAttribute('href', cdn + '?v=' + n)
+                head.appendChild(s);
+            }
+        }
+        addjs('https://bucket-mais.s3.amazonaws.com/private/Payot/cdn/maisLoad.js');
+        addjs('https://bucket-mais.s3.amazonaws.com/private/Payot/cdn/mais.style.css');
+    </script>
+</head>
+
+<body>
+    <vtex:template id="Store-Desktop-Header" />
+
+    <main class="j-main">
+        <div id="maisstore"></div>
+    </main>
+
+    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Common-Scripts" />
+    <vtex:template id="Store-Desktop-Scripts" />
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+#set($productId = $product.Id)
+#set($productTitle = $product.HtmlEscapedName)
+#set($productLink = $product.Uri)
+#set($productListPrice = $product.ListPrice)
+#set($productBestPrice = $product.BestPrice)
+#set($productInstallmentValue = $product.InstallmentValue)
+
+<article class="j-item-vitamina" data-product-id="$productId">
+    <a class="j-item-vitamina" title="$productTitle" href="$productLink">
+        <div class="j-item-vitamina--name">
+            $productTitle
+        </div>
+    </a>
+</article>

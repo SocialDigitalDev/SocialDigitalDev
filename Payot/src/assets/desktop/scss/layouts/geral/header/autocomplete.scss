@@ -1,0 +1,42 @@
+.ui-autocomplete {
+	background-color: $color-white;
+	padding: 10px 16px;
+	position: fixed!important;
+	max-height: calc(100vh - 120px);
+	overflow-y: auto;
+	box-shadow: 0 3px 6px rgba($color: $color-black, $alpha: 0.16);
+
+	&::-webkit-scrollbar-track {
+		background-color: $color-lightgray;
+	}
+
+	&::-webkit-scrollbar {
+		width: 3px;
+		background-color: $color-lightgray;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $color-main;
+	}
+
+	img {
+		width: 30px;
+		height: auto;
+	}
+
+	li {
+		padding: 10px 0;
+		text-transform: capitalize;
+		font-family: $font-main;
+		font-size: 14px;
+		color: $color-black;
+		line-height: 18px;
+
+		a {
+			line-height: 18px;
+			font-family: $font-main;
+			font-size: 14px;
+			color: $color-black;
+		}
+	}
+}

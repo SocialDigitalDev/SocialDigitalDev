@@ -1,0 +1,77 @@
+.j-header__menu {
+    width: 100%;
+
+    nav {
+        .j-menu {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            &__item {
+                margin: 0px 12px;
+
+                >a {
+                    font-family: $font-bebas;
+                    font-size: 20px;
+                    line-height: 27px;
+                    text-transform: uppercase;
+
+                    &.pink {
+                        color: $color-main;
+                    }
+                }
+
+                &:hover {
+                    .j-menu__item--sub {
+                        display: block;
+                    }
+                }
+
+                &--sub {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    background-color: $color-white;
+                    padding: 37px 48px;
+                    box-shadow: 0 3px 6px rgba($color: $color-black, $alpha: 0.16);
+                    z-index: 99999999999;
+                    text-transform: none;
+
+                    &-box {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-evenly;
+
+                        &-item {
+                            display: block;
+                            min-width: 20%;
+
+                            a {
+                                display: block;
+                                font-family: $font-main;
+                                font-size: 14px;
+                                line-height: 22px;
+                                color: $color-black;
+                                margin: 5px 0;
+                            }
+
+                            &-lead {
+                                display: block;
+
+                                a {
+                                    font-weight: bold;
+                                    padding: 8px 0;
+                                    margin: 0;
+                                    margin-bottom: 14px;
+                                    border-bottom: 1px solid $color-black;
+                                    width: 90%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

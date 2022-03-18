@@ -1,0 +1,91 @@
+<header class="j-header">
+    <div class="j-bottom-header" style="text-align:center;">
+        
+    </div>
+    <div class="j-main-header">
+        <div class="j-main-header__left">
+            <vtex.cmc:menuIcon />
+        </div>
+
+        <div class="j-main-header__center">
+            <a href="/" title="Payot">
+                <vtex.cmc:logo />
+            </a>
+        </div>
+
+        <div class="j-main-header__right">
+            <div class="j-search js--search">
+                <vtex.cmc:searchIcon />
+            </div>
+
+            <div class="j-minicart js--open-minicart">
+                <span class='j-minicart--icon'>
+                    <vtex.cmc:minicartIcon />
+                    <vtex.cmc:AmountItemsInCart />
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="j-header__menu">
+        <span class="j-header__menu-close js--close-menu"></span>
+
+        <div class="j-link__top">
+            <div class="j-link__top--login">
+                <div class="j-user-icon">
+                    <vtex.cmc:svgUserIcon />
+                </div>
+
+                <div class="j-user-text">
+                    <!-- <span>Olá, seja-bem vindo.</span><br />
+                    <span>
+                        <a href="/account">Faça seu login</a> ou <a href="/account">Cadastre-se</a>
+                    </span> -->
+                    <div class="welcome-vtex">
+                        <vtex.cmc:welcomeMessage/>	
+                    </div>
+                </div>
+            </div>
+
+            <div class="j-link__top--account">
+                <a href="/_secure/account/orders#/orders" class="j-link__top--account-item orders">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22.497" height="24" viewBox="0 0 22.497 24"><g transform="translate(-16.032 0.001)"><g transform="translate(16.032 -0.001)"><g transform="translate(0 0)"><path d="M38.33,5.3,27.433.034a.352.352,0,0,0-.306,0L16.231,5.3a.352.352,0,0,0-.2.317V18.387a.352.352,0,0,0,.2.317l10.9,5.261a.352.352,0,0,0,.306,0L38.33,18.7a.352.352,0,0,0,.2-.317V5.612A.352.352,0,0,0,38.33,5.3ZM27.28.741l10.088,4.87L34.444,7.023a.348.348,0,0,0-.06-.037L24.365,2.149Zm-3.709,1.8L33.645,7.409l-2.063,1L21.512,3.544ZM33.88,8.076v3.682l-1.927.93V9.007Zm3.945,10.09L27.632,23.088V11.093l2.432-1.174a.352.352,0,1,0-.306-.633l-2.477,1.2-.975-.471a.352.352,0,1,0-.306.633l.929.448V23.088L16.735,18.167V6.172L24.5,9.919a.352.352,0,0,0,.306-.633L17.192,5.612l3.492-1.686,10.561,5.1,0,.006v4.219a.352.352,0,0,0,.5.317l2.63-1.27a.351.351,0,0,0,.2-.317V7.737l3.242-1.565V18.167Z" transform="translate(-16.032 0.001)" fill="#fff"/></g></g><g transform="translate(17.533 15.996)"><g transform="translate(0)"><path d="M50.152,342.068l-1.6-.772a.352.352,0,1,0-.306.633l1.6.772a.352.352,0,0,0,.306-.633Z" transform="translate(-48.048 -341.261)" fill="#fff"/></g></g><g transform="translate(17.535 14.329)"><g transform="translate(0)"><path d="M51.669,307.207,48.6,305.725a.352.352,0,1,0-.306.633l3.069,1.481a.352.352,0,0,0,.306-.633Z" transform="translate(-48.096 -305.69)" fill="#fff"/></g></g></g></svg>
+                    <span>Pedidos</span>
+                </a>
+                <a href="/account" class="j-link__top--account-item account">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21.507" height="18.639" viewBox="0 0 21.507 18.639"><g transform="translate(-0.01 0)"><g transform="translate(0.01 0)"><g transform="translate(0 0)"><path d="M19.724,2.151H11.53a1.075,1.075,0,0,1-.9-.478L10.054.8A1.789,1.789,0,0,0,8.562,0H1.8A1.794,1.794,0,0,0,.01,1.792V16.847A1.794,1.794,0,0,0,1.8,18.639H20.157c1.21,0,1.36-.244,1.36-2.021V3.943A1.794,1.794,0,0,0,19.724,2.151Zm.089,15.772H1.8A1.075,1.075,0,0,1,.727,16.847V6.093A1.075,1.075,0,0,1,1.8,5.018H19.724A1.075,1.075,0,0,1,20.8,6.093v10.45C20.8,17.429,20.665,17.922,19.814,17.922ZM20.8,4.66c-.014-.01-.03-.018-.044-.028-.03-.021-.061-.039-.092-.059a1.755,1.755,0,0,0-.186-.1q-.054-.025-.108-.046a1.825,1.825,0,0,0-.213-.066c-.034-.009-.067-.019-.1-.025a1.779,1.779,0,0,0-.332-.033H1.8a1.779,1.779,0,0,0-.332.034c-.036.006-.067.017-.1.025a1.825,1.825,0,0,0-.213.066q-.054.022-.108.046a1.8,1.8,0,0,0-.186.1C.831,4.593.8,4.612.77,4.633c-.014.01-.03.018-.044.028V1.792A1.075,1.075,0,0,1,1.8.717h6.76a1.075,1.075,0,0,1,.9.478l.581.875a1.788,1.788,0,0,0,1.491.8h8.194A1.075,1.075,0,0,1,20.8,3.943Z" transform="translate(-0.01 0)" fill="#fff"/></g></g><g transform="translate(10.763 7.438)"><path d="M247.7,171.827a4.489,4.489,0,0,0-1.712-1.074,2.6,2.6,0,1,0-2.947,0,4.512,4.512,0,0,0-3.032,4.26h.7a3.8,3.8,0,0,1,7.6,0h.7A4.476,4.476,0,0,0,247.7,171.827Zm-3.186-1.32a1.9,1.9,0,1,1,1.9-1.9A1.9,1.9,0,0,1,244.515,170.507Z" transform="translate(-240.01 -166.002)" fill="#fff"/></g></g></svg>
+                    <span>Minha Conta</span>
+                </a>
+                <a href="/account/wishlist" class="j-link__top--account-item wishlist">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20.455" viewBox="0 0 22 20.455"><g transform="translate(0 -1.826)"><path d="M21.963,7.925c-.321-3.535-2.823-6.1-5.954-6.1a5.918,5.918,0,0,0-5.07,2.921A5.7,5.7,0,0,0,5.99,1.826C2.86,1.826.358,4.39.037,7.925a6.289,6.289,0,0,0,.187,2.318A9.941,9.941,0,0,0,3.27,15.325l7.664,6.955,7.8-6.955a9.942,9.942,0,0,0,3.046-5.083A6.3,6.3,0,0,0,21.963,7.925Zm-1.011,2.124A9.092,9.092,0,0,1,18.164,14.7l-7.225,6.446L3.838,14.7a9.1,9.1,0,0,1-2.791-4.65A5.5,5.5,0,0,1,.872,8.059l.006-.043C1.153,4.92,3.3,2.672,5.99,2.672a4.96,4.96,0,0,1,4.557,3.18l.39.924.39-.924A5.111,5.111,0,0,1,16.01,2.673c2.687,0,4.837,2.248,5.118,5.385A5.489,5.489,0,0,1,20.952,10.049Z" transform="translate(0)" fill="#fff"/><path d="M10.5,7.9a4.507,4.507,0,0,0-4.5,4.5.45.45,0,0,0,.9,0,3.606,3.606,0,0,1,3.6-3.6.45.45,0,0,0,0-.9Z" transform="translate(-3.298 -3.342)" fill="#fff"/></g></svg>
+                    <span>Favoritos</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="j-link__middle">
+            <h3 class="j-link__title">Categorias</h3>
+
+            <vtex.cmc:menu />
+
+            <h3 class="j-link__title">Atendimento</h3>
+            <p class="j-link__description">Dúvidas sobre produtos e serviço de entrega? Entre em contato conosco!</p>
+
+            <ul class="j-link__contact">
+                <li class="j-link__contact--item">(11) 2388-0444</li>
+                <li class="j-link__contact--item">lojavirtual@payot.com.br</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="j-minicart__content js--content-minicart">
+        <span class="j-minicart-close js--close-minicart">X</span>
+        <p class='j-minicart__content--title'>Carrinho</p>
+
+        <div class="j-minicart__content-js"></div>
+    </div>
+    <div class="j-main-search">
+        <vtex.cmc:searchIcon />
+        <vtex.cmc:fullTextSearchBox/>
+    </div>
+</header>

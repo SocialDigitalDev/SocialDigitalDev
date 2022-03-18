@@ -1,0 +1,236 @@
+@import '../../common/scss/tools/_breakpoint.scss';
+@import "../../common/scss/layouts/globals/variables.scss";
+
+.j-topo {
+    position: relative;
+    background-image: linear-gradient(#000, #96384e, #000);
+    
+    &__right {
+        position: absolute;
+        top: 0;
+        right: 5%;
+        max-width: 50%;
+        color: $color-white;
+    }
+    
+    .y-title {
+        font-size: 50px;
+        margin: 80px 0 15px;
+        font-family: "Bebas Neue",cursive;
+    }
+    
+    .y-description {
+        font-size: 18px;
+        line-height: 19px;
+        margin-bottom: 27px;
+        font-family: 'Montserrat'
+    }
+    
+    .y-content--countdown {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        
+        h2 {
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        #countdown {
+            text-align: center;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+            &:before {
+                width: 60px;
+                content: '';
+                height: 130px;
+                margin-right: 10px;
+                display: inline-block;
+                vertical-align: middle;
+                background: url('https://payottatix.vteximg.com.br/arquivos/ampulheta.png') no-repeat scroll 0 0 transparent;
+            }
+            
+            strong {
+                margin: 0 23px;
+                
+                span {
+                    font-size: 20px;
+                    display: block;
+                    color: $color-white;
+                }
+            }
+            
+            strong,
+            span {
+                color: #BFBFBF;
+                font-size: 100px;
+                font-size: $font-bebas;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+.j-middle {
+    position: relative;
+    margin-top: -5px;
+    background-image: linear-gradient(#000, #96384e, #000);
+    
+    &__content {
+        width: 100%;
+        padding: 30px 50px;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        font-family: 'Montserrat'
+    }
+
+    &__image {
+        margin: 70px auto 0;
+    }
+    
+    &__share {
+        display: block;
+        width: 50%;
+    
+        p {
+            font-size: 18px;
+            color: $color-white;
+            line-height: 40px;
+            display: block;
+            text-align: left;
+            font-family: 'Montserrat'
+        }
+    }
+
+    &__newsletter {
+        fieldset {
+            border: 0;
+
+            p {
+                font-size: 18px;
+                font-family: $font-main;
+                color: $color-white;
+                line-height: 40px;
+                font-family: 'Montserrat'
+            }
+
+            input {
+                width: 375px;
+                height: 47px;
+                background-color: $color-white;
+                margin-right: 23px;
+                padding: 13px;
+            }
+
+            button {
+                cursor: pointer;
+                border: 1px solid #BFBFBF;
+                display: inline-block;
+                width: 166px;
+                height: 47px;
+                line-height: 47px;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 23px;
+                font-weight: bold;
+                background: #BFBFBF;
+                color: #58212e;
+                font-family: $font-bebas;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    
+    .j-box-share__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 30%;
+        li {
+            margin: 18px 5px;
+            
+            a svg {
+                fill: #BFBFBF;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    
+    &__specification {
+        width: 50%;
+        margin-top: 80px;
+        color: $color-white;
+                
+        .y-subtitle {
+            font-size: 50px;
+            text-transform: uppercase;
+            font-family: $font-bebas;
+            letter-spacing: 2px;
+        }
+        
+        .y-subdescription {
+            margin: 34px 0 19px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+        
+        .y-bottom-list li {
+            font-size: 14px;
+            line-height: 32px;
+            list-style: disc;
+        }
+        
+        .y-btn-bottom {
+            border: 1px solid #BFBFBF;
+            margin-top: 20px;
+            display: inline-block;
+            width: 166px;
+            height: 47px;
+            line-height: 47px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 23px;
+            font-weight: bold;
+            color: #BFBFBF;
+            font-family: $font-bebas;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+body.is--black-friday{
+    .j-topo{
+        .box-banner{
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__right{
+            max-width: 40%;
+
+            .y-description{
+                display: block;
+            }
+        }
+    }
+
+    .j-topo .y-content--countdown #countdown strong, 
+    .j-topo .y-content--countdown #countdown span{
+        font-size: 80px;
+    }
+
+    .j-topo .y-content--countdown #countdown strong span{
+        font-size: 20px;
+    }
+
+    .j-middle{
+        background-color: #000;
+    }
+}

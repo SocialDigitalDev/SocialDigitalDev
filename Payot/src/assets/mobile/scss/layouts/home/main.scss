@@ -1,0 +1,119 @@
+.j-home {
+    &__tabs {
+        position: relative;
+
+        &--title {
+            position: absolute;
+            top: 0%;
+
+            ul {
+                padding-left: 8px;
+                li {
+                    font-family: $font-bebas;
+                    font-size: 39px;
+                    color: $color-black;
+                    line-height: 47px;
+                    margin: 13px 0;
+
+                    &[data-tab-id="prevew"],
+                    &[data-tab-id="next"] {
+                        margin: 0;
+                        line-height: inherit;
+                    }
+
+                    &.is--active {
+                        font-size: 54px;
+                        font-weight: bold;
+                        line-height: 66px;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &-item {
+            display: none;
+
+            &.is--active {
+                display: flex;
+            }
+            
+            .box-banner {
+                display: inline-block;
+                vertical-align: middle;
+                width: 130px;
+            }
+            
+            .j-shelf {
+                display: inline-block;
+                vertical-align: middle;
+                width: calc(100% - 130px);
+
+                &> ul {
+                    display: block;
+                    width: 100%;
+                    li {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__shelfs {
+        ul {
+            li {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.j-mosaico {
+    padding: 5px 0;
+
+    .box-banner {
+        margin: 13px 0;
+
+        a {
+            display: block;
+            text-align: center;
+
+            img{
+                margin: 0 !important;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+section.master.trustVox {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0px 10px 50px 10px;
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+
+        div#_trustvox_colt {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        #_trustvox_colt .ts-slider {
+            max-width: 600px;
+        }
+
+        #_trustvox_colt .ts-frame {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}

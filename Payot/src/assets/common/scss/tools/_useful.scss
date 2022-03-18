@@ -1,0 +1,7 @@
+@mixin position($type){
+    @if $type == 'centralize'{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

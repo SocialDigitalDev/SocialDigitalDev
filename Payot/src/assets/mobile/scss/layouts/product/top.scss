@@ -1,0 +1,346 @@
+.j-content__product {
+
+    &--wrapper__infos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &--img {
+        width: 100%;
+        
+        #show {
+            display: block;
+            
+            #include {
+                width: 100%;
+                padding-left: 0;
+        
+                #image {
+        
+                    a {
+                        &.image-zoom {
+                            display: none;
+                        }
+                    }
+
+                    .slider-mobile {                        
+                        .slick-dots {
+                            margin-top: 8px;
+                        }
+                    }
+        
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .thumbs {
+                display: none;
+            }
+        }
+    }
+
+    &--infos {
+        margin: 0;
+        
+        .j-product__name {
+            text-align: left;
+            color: $color-black;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 30px;
+            height: 60px;
+            overflow: hidden;
+            margin: 16px 0 19px;
+            font-family: $font-bebas;
+            text-transform: uppercase;
+        }
+
+        .j-rate {
+            strong {
+                display: none;
+            }
+        }
+
+        .j-box-price {
+            .sku-selector-container ul {
+                margin: 0 0 23px;
+
+                li {
+                    display: block;
+                    height: auto;
+
+                    &:first-child {
+                        color: $color-darkgray;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 13.91px;
+                        margin-right: 10px;
+                    }
+
+                    input {
+                        display: none;
+                    }
+
+                    label {
+                        border: 1px solid $color-gray;
+                        padding: 3px 7px;
+                        margin: 3px 7px;
+                        border-radius: 50%;
+                        display: inline-block;
+                    }
+                }
+            }
+            .descricao-preco {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+
+                .valor-de {
+                    font-size: 14px;
+                    color: $color-black;
+                    font-style: normal;
+                    line-height: 18px;
+                    text-decoration: line-through;
+                    width: 100%;
+
+                    strong {
+                        font-weight: normal;
+                    }
+                }
+    
+                .valor-por {
+                    display: flex;
+                    font-style: normal;
+                    font-weight: bold;
+                    align-items: center;
+                    font-size: 0;
+                    margin: 5px 0;
+                    
+                    strong {
+                        font-family: $font-main;
+                        color: $color-black;
+                        display: block;
+                        font-size: 24px;
+                        line-height: 29px;
+                        
+                        &::before {
+                            content: "Por ";
+                            line-height: 29px;
+                            font-size: 24px;
+                            font-family: $font-main;
+                            display: inline-block;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+    
+                .valor-dividido {
+                    font-style: normal;
+                    color: $color-black;
+                    font-size: 0;
+                    display: block;
+                    margin-left: 28px;
+
+                    span,strong {
+                        label {
+                            font-size: 18px;
+                            line-height: 22px;
+                            font-weight: normal;
+                            margin: 0 5px 0 0;
+                        }
+                    }
+                }
+            }
+            .economia-de {
+                display: none;
+            }
+            .preco-a-vista {
+                display: none!important;
+            }
+        }
+
+        .j-box-buy {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0 25px;
+            
+            .j-qty {
+                
+                .box-qtd {
+                    
+                    select {
+                        width: 88px;
+                        height: 32px;
+                        line-height: 32px;
+                        text-align: center;
+                        font-size: 16px;
+                        font-family: $font-main;
+                        color: $color-black;
+                        border: 1px solid $color-darkgray;
+                        border-radius: 0;
+                    }
+                }
+            }
+
+            .buy-button {
+                cursor: pointer;
+                text-align: center;
+                padding: 11px;
+                width: 216px;
+                background-color: $color-main;
+                font-size: 0;
+                margin-left: 40px;
+                
+                &::before {
+                    content: "Adicionar ao Carrinho";
+                    color: $color-black;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    font-family: $font-bebas;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &--variations {
+        .j-box-variations {
+            .js--shelf {
+                margin: 0;
+
+                h2 {
+                    display: block;
+                    font-family: $font-main;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: $color-black;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    margin: 49px 0 8px;
+                    text-align: left;
+                }
+
+                ul {
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                    margin: 0;
+                    
+                    li {
+                        width: 100%;
+                        display: block;
+                        padding: 0;
+                        margin-top: 0;
+                        margin-bottom: 0;
+
+                        .j-item-variation {
+                            display: block;
+                            text-align: center;
+
+                            &--img {
+                                text-align: center;
+                                img {
+                                    width: 88px;
+                                    display: inline-block;
+                                }
+                            }
+
+                            &--name {
+                                font-family: $font-main;
+                                font-size: 14px;
+                                font-weight: bold;
+                                line-height: 18px;
+                                height: 18px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                margin-top: 8px;
+                            }
+
+                            &--price {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .slick-dots {
+                    margin: 14px 0 32px;
+
+                    li {
+                        padding: 0 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    .j-buy {
+        .notifymetitle.notifyme-title {
+            color: $color-darkgray;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: $font-main;
+        }
+        fieldset.sku-notifyme-form.notifyme-form {
+            border: none;
+            position: relative;
+            padding-bottom: 48px;
+            
+            >p {
+                color: $color-darkgray;
+                font-size: 14px;
+                line-height: 22px;
+                margin: 15px 0px;
+            }
+            input {
+                width: 100%;
+                height: 32px;
+                border: 1px solid $color-darkgray;
+                border-radius: 0;
+                margin: 10px 0px;
+                padding: 10px;
+                color: $color-darkgray;
+                display: inline-block !important;
+
+                &#notifymeButtonOK {
+                    background-color: $color-main;
+                    color: $color-black;
+                    font-size: 17px;
+                    border: none;
+                    border-radius: 0;
+                    width: 88px;
+                    height: 39px;
+                    line-height: 39px;
+                    margin-left: 28px;
+                    text-transform: uppercase;
+                    font-family: $font-bebas;
+                    letter-spacing: 2px;
+                    padding: 0;
+                    display: inline-block !important;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .j-box-description {
+        margin-bottom: 28px;
+
+        .productDescription {
+            font-family: $font-main;
+            color: $color-black;
+            font-size: 12px;
+            font-weight: normal;
+        }
+    }
+}

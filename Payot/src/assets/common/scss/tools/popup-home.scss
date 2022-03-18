@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500&display=swap');
+    /** lead-modal */
+    .lead-modal {
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        max-width: 856px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        font-family: "Montserrat";
+        text-transform: uppercase;
+    }
+    .lead-modal-close-btn{
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 30px;
+        position: absolute;        
+        right: 10px;
+        top: 5px;
+        cursor: pointer;
+
+    }
+
+    .lead-modal-send-btn {
+        width: 250px;
+        height: 43px;
+        line-height: 43px;
+        color: #fff;
+        background-color: #fac32f;
+        font-weight: normal;
+        text-align: center;
+        font-size: 20px;
+        margin: 30px auto 0;       
+        cursor: pointer;
+    }
+    .lead-banner{
+        display: grid;
+        position: relative;
+        grid-template-columns: 50% 50%;
+        min-height:434px;
+    }
+    .lado1{
+        //background-image: url('/arquivos/ids/156321');
+        background-image: url('/arquivos/bocarosa-popup.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .lado2{
+        display: grid;
+        grid-template-columns: 100%;
+        padding: 0 10px;
+    }
+    .lado2 h3{
+        font-family: "Bebas Neue";
+        letter-spacing: 0.54px;
+        font-weight: bold;
+        font-size: 54px;
+        margin-top: 25px;
+        margin-bottom: 0px;
+
+    }
+    .lado2 p{
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 25px;
+        margin: 0 auto;
+    }
+    .lado2 input{
+        font-family: "Montserrat";
+        font-weight: bold;
+        width: 100%;
+        border: none;
+        padding: 0;
+        height: 35px;
+        line-height: 35px;
+        margin: 15px auto 0;
+        border-bottom: 1px solid #fac32f;
+        text-transform: capitalize;
+    }
+    .lado2 input:nth-child(1){    
+        text-transform: lowercase;
+    }
+    .lado2 input:nth-child(3){    
+        margin-top: 10px;
+    }
+    .lado2 input::placeholder{
+        color: #000;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    .lado2 input:focus{
+        outline: 1px solid #fac32f;
+        outline-offset: 3px;
+    }
+    /** lead-overlay */
+    .lead-overlay {
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 10;
+    }
+
+    /** JS */
+    .is-visible {
+        opacity: 1;
+        pointer-events: auto;
+        z-index: 10;
+    }
+    .lead-modal-send-btn.success, .lead-modal-send-btn.fail{
+        display: none;
+    }
+    @media(max-width: 768px){
+        .lead-modal{
+            top: 20%;
+            transform: unset;
+            width: 90%;
+        }
+        
+        .lead-modal-close-btn{
+            font-size: 30px;
+            left: 90%;  
+            z-index: 10;
+            top: -20px;
+            color: #fff;
+        }
+        .lead-banner{
+            grid-template-columns: 100%;
+        }
+        .lado1{
+            position: relative;
+            height: 538px;
+            background-color: #fac32f;
+            background-size: 70% 538px;
+            background-position: right;
+        }
+        .lado2{        
+            position: relative;
+            padding: 20px;
+        }
+        .lead-texts{
+            position: absolute;
+            top: -538px;
+            height: 538px;
+            width: 28%;
+            padding: 0 0 0 5px;
+            text-align: left;
+        }
+        .lado2 h3{
+            margin-top: 80%;
+            color: #fff;
+            font-size: 42px;
+        }
+        .lado2 p{
+            width: 100%;
+            text-align: left;
+            color: #fff;
+            font-size: 28px;
+            line-height: 34px;
+            padding: 0;
+            font-weight: 100;
+        }
+        .lado2 input{
+            width: 90%;
+            height: 35px;
+            line-height: 25px;
+            font-size: 15px;
+        }
+        .lado2 input:last-child{
+            margin-bottom: 20px;
+        }
+        .lead-modal-send-btn {
+            width: 260px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            margin: 20px auto;
+        }
+    }
+    
+    @media (max-width: 425px){
+        .lado1{
+            height: 298px;
+            background-size: 70% 298px;
+        }
+        .lado2 h3{
+            font-size: 24px;
+            line-height: 24px;
+        }
+        .lado2 p{
+            font-size: 16px;
+            line-height: 22px;
+        }
+        .lead-texts {
+            top: -298px;
+            height: 298px;
+        }
+    }
+    
+    @media (max-width: 375px){
+        .lado1{
+            height: 225px;            
+            background-size: 70% 225px;
+        }
+        .lado2 h3{
+            font-size: 16px;
+            line-height: 16px;
+        }
+        .lado2 p{
+            font-size: 12px;
+            line-height: 18px;
+        }
+        .lead-texts {
+            top: -225px;
+            height: 225px;
+        }
+    }

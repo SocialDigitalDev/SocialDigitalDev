@@ -1,0 +1,53 @@
+.bread-crumb {
+    margin: 15px 0 18px;
+    
+    ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        li {
+            margin: 0 5px;
+            display: flex;
+            align-items: center;
+            
+            a {
+                display: block;
+                color: $color-black;
+                font-size: 8px;
+                line-height: 15px;
+                font-family: $font-main;
+                text-transform: uppercase;
+            }
+
+            &::before {
+                content: '\f111';
+                font-family: 'FontAwesome';
+                display: inline-block;
+                vertical-align: middle;
+                color: $color-black;
+                margin-right: 10px;
+                font-size: 5px;
+            }
+
+            &:first-child {
+                a {
+                    font-size: 0;
+                }
+
+                &:before {
+                    display: none;
+                }
+
+                &:after {
+                    font-family: $font-main;
+                    content: 'HOME';
+                    font-size: 8px;
+                    cursor: pointer;
+                    color: $color-main;
+                    line-height: 15px;
+                }
+            }
+        }
+    }
+}

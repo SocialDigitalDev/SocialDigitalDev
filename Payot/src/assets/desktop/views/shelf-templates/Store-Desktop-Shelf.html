@@ -1,0 +1,64 @@
+#set($productId = $product.Id)
+#set($productTitle = $product.HtmlEscapedName)
+#set($productLink = $product.Uri)
+#set($productListPrice = $product.ListPrice)
+#set($productBestPrice = $product.BestPrice)
+#set($productInstallmentValue = $product.InstallmentValue)
+
+<article class="j-shelf__item has--carousel js--shelf-item" data-product-id="$productId">
+    <div class="j-shelf__item-img">
+        <a class="j-shelf__item-img__img" title="$productTitle" href="$productLink">
+			$product.GetImageTag(220,220)
+		</a>
+    </div>
+
+    <div class="j-shelf__item-content">
+        <h2 class="j-shelf__item-name" title="$productTitle">
+            <a href="$productLink">
+				$productTitle
+			</a>
+        </h2>
+
+        #if ($product.IsInStock)
+            <div class="j-shelf__item--price">
+                <p class="j-shelf__item-old-price">
+                    #if ($product.HasBestPrice)
+                        <span>De </span>$product.ListPrice
+                    #end
+                </p>
+
+                <p class="j-shelf__item-new-price">
+                    #if ($product.BestPrice > 1)
+                        $product.BestPrice
+                    #end
+                </p>
+
+                <em class="j-shelf__item-installments">
+                    #if ($product.NumbersOfInstallment > 1) ou
+                        ${product.NumbersOfInstallment}x de
+                        <span class="j-shelf__item-installment-val">$product.InstallmentValue</span>
+                    #end
+                </em>
+            </div>
+
+            <div class="j-shelf__item-buy">
+                <div class="j-shelf__item-buy--qtd">
+                    <button class="btn btn-menos">
+                        <i class="fa fa-minus-circle"></i>
+                    </button>
+                    <input type="text" class="qtd" value="1">
+                    <button class="btn btn-mais">
+                        <i class="fa fa-plus-circle"></i>
+                    </button>
+                </div>
+            
+                <a href="$productLink" class="j-shelf__item-buy--cta">
+                    ADICIONAR
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18.543" height="18" viewBox="0 0 18.543 18"><defs><style>.j-shelf__item-buy--cta .a{fill:#fff;}</style></defs><g transform="translate(-0.051 -0.051)"><path class="a" d="M91.406,81.632H77.982l-.773-1.818a.635.635,0,0,0-.439-.37l-2.49-.586a.635.635,0,0,0-.291,1.236l2.177.512,5.574,13.1a2.1,2.1,0,1,0,3.761.211h2.287a2.1,2.1,0,1,0,1.933-1.28l-7.051.01-.87-2.044h9.606a.635.635,0,0,0,.635-.635V82.267A.635.635,0,0,0,91.406,81.632Zm-1.684,12.28a.83.83,0,1,1-.83.83A.83.83,0,0,1,89.722,93.912Zm-6.151,0a.83.83,0,1,1-.83.83A.83.83,0,0,1,83.571,93.912Zm7.2-8.428H86.562a.635.635,0,1,0,0,1.27h4.209v2.582H81.26L78.522,82.9H90.771Z" transform="translate(-73.447 -78.79)"/></g></svg>
+                </a>
+            </div>
+        #else
+            <p class="j-shelf__item-outStcok-text">Produto Esgotado</p>
+        #end
+    </div>
+</article>

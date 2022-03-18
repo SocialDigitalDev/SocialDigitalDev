@@ -1,0 +1,91 @@
+@import "../../common/scss/tools/_breakpoint.scss";
+
+.j-newsletter {
+	background-image: url('https://payottatix.vteximg.com.br/arquivos/bg-newsletter-mobile@2x.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding: 11px 0 32px;
+
+	.j-top {
+		&.is--hide {
+			display: none;
+		}
+
+		h4 {
+			font-family: $font-bebas;
+			font-size: 26px;
+			line-height: 28px;
+			font-weight: bold;
+			text-align: center;
+			color: $color-white;
+		}
+		p {
+			font-family: $font-main;
+			color: $color-white;
+			font-size: 13px;
+			line-height: 16px;
+			text-align: center;
+		}
+	}
+
+	#j-form-news {
+		&.is--hide {
+			display: none;
+		}
+	}
+
+	.j-bottom {
+		padding-top: 28px;
+		form {
+			text-align: center;
+			button {
+				width: 155px;
+				height: 48px;
+				line-height: 48px;
+				text-transform: uppercase;
+				font-family: $font-bebas;
+				font-size: 22px;
+				font-weight: bold;
+				color: $color-white;
+				background-color: $color-black;
+			}
+			fieldset {
+				border: 0;
+				text-align: center;
+
+				input {
+					width: 312px;
+					height: 32px;
+					background-color: $color-black;
+					border: 1px solid $color-white;
+					padding: 8px;
+					display: block;
+					margin: 16px auto;
+					text-align: left;
+					color: $color-white;
+					font-family: $font-main;
+					font-size: 14px;
+					font-weight: normal;
+
+					&::placeholder {
+						font-family: $font-main;
+						font-size: 14px;
+						font-weight: normal;
+						color: $color-white;
+					}
+				}
+			}
+		}
+	}
+
+	&__success {
+		display: none;
+
+		&.is--active {
+			display: block;
+			margin: 20px auto 0;
+			text-align: center;
+			width: 100%;
+		}
+	}
+}

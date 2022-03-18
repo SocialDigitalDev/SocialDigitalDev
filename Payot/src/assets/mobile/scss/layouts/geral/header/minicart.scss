@@ -1,0 +1,306 @@
+.j-minicart {
+    position: relative;
+
+    .portal-totalizers-ref {
+        .cartInfoWrapper {
+            .title {
+                display: none;
+            }
+
+            .cart-info {
+                .amount-products {
+                    position: absolute;
+                    top: 7px;
+                    right: -4px;
+                    font-weight: bold;
+                    font-size: 12px;
+                    width: 15px;
+                    height: 15px;
+                    line-height: 15px;
+                    text-align: center;
+                    background-color: $color-main;
+                    border: 1px solid $color-main;
+                    border-radius: 50%;
+
+                    strong {
+                        display: none;
+                    }
+                }
+
+                .amount-items,
+                .amount-kits,
+                .total-cart {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    &.is--active {
+        &::before {
+            // content: '';
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background: rgba(0,0,0,.5);
+            display: block;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+    }
+    
+
+    &--icon {
+        cursor: pointer;
+        svg {
+            path {
+                fill: $color-black;
+            }
+        }
+    }
+
+    > img {
+        cursor: pointer;
+    }
+
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 15px 0 18px;
+    }
+
+    &-close {
+        cursor: pointer;
+        color: #966892;
+        font-size: 25px;
+        font-weight: bold;
+        margin-right: 15px;
+        display: inline-block;
+    }
+
+    &__content {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 500;
+        background-color: $color-white;
+        padding: 0 16px;
+        width: 100vw;
+        max-width: 288px;
+        height: 100vh;
+        transition: all 325ms ease-in;
+        z-index: 9999;
+        padding-top: 18px;
+
+        &-js {
+            padding-top: 19px;
+        }
+
+        &--title {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $color-black;
+            font-family: $font-main;
+            font-size: 18px;
+            display: inline-block;
+        }
+        
+        &.is--active {
+            right: 0;
+
+            &::before {
+                width: 15vw;
+                height: 100vh;
+                // content: '';
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: -15vw;
+                background: rgba(0,0,0,0.7);
+            }
+        }
+
+        &-top {
+            border-bottom: 1px solid $color-red;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            
+            p {
+                text-align: center;
+                color: #585757;
+                font-size: 12px;
+                line-height: 19.52px;
+                text-transform: uppercase;
+            }
+        }
+
+        .j-minicart-empty {
+            padding-bottom: 5px;
+
+            p {
+                margin-top: 32px;
+                text-align: left;
+                color: $color-black;
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            .j-minicart-btn {
+                background-color: #D8D8D8;
+                pointer-events: none;
+                cursor: not-allowed;
+            }
+        }
+
+        .j-minicart-items {
+            .j-minicart-items__list {
+                max-height: 70vh;
+                overflow: auto;
+                margin-bottom: 10px;
+                
+                &::-webkit-scrollbar-button {
+                    display: none;
+                }
+                
+                &::-webkit-scrollbar {
+                    width: 3px;
+                    background-color: rgba(204, 204, 204, 0.7);
+                }
+                
+                &::-webkit-scrollbar-thumb {
+                    background-color: $color-main;
+                }
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid #C4C4C4;
+
+                    &:last-child {
+                        border-bottom: none;
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                    }
+                    
+                    .j-minicart-img {
+                        width: 72px;
+                        margin-right: 8px;
+
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+
+                    .j-minicart-item {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
+
+                    .j-minicart-item__name {
+                        color: $color-black;
+                        font-size: 14px;
+                        line-height: 20px;
+                        height: 40px;
+                        overflow: hidden;
+                        margin-bottom: 8px;
+                        width: 160px;
+                    }
+
+                    .j-minicart-remove__item {
+                        display: block;
+                        margin-left: 5px;
+                        cursor: pointer;
+                        background-color: $color-white;
+                        height: 24px;
+                        border: 0;
+
+                        svg {
+                            fill: $color-darkgray;
+                        }
+                    }
+
+                    .j-minicart-item__bottom {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+
+                        .j-minicart-price {
+                            p {
+                                color: $color-main;
+                                font-size: 16px;
+                                font-weight: bold;
+                                line-height: 19px;
+                                text-align: right;
+                                font-family: $font-main;
+                            }
+                        }
+
+                        .j-minicart-qty {                            
+                            .j-minicart__form {
+
+                                select {
+                                    width: 64px;
+                                    height: 20px;
+                                    border: 1px solid $color-darkgray;
+                                    font-family: $font-bebas;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    letter-spacing: 2px;
+                                    border-radius: inherit;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .j-minicart-total {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-family: $font-main;
+                font-weight: bold;
+                font-size: 16px;
+                color: $color-black;
+                padding: 10px 16px;
+                background-color: $color-lightgray;
+            }
+        }
+
+        .j-minicart-btn {
+            text-align: center;
+            color: $color-black;
+            text-transform: uppercase;
+            font-family: $font-bebas;
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            display: block;
+            width: 100%;
+            height: 48px;
+            line-height: 48px;
+            background-color: $color-main;
+        }
+    }
+}
+
+.j-minicart__content .j-minicart-items .j-minicart-items__list li .j-minicart-remove__item svg .a{
+    fill: #707070;
+}

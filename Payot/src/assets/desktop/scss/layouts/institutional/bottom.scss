@@ -1,0 +1,60 @@
+.j-bottom {
+    &__title {
+        position: relative;
+        margin-bottom: 45px;
+        padding-left: 50px;
+        border-bottom: 2px dotted $color-red;
+        color: #083675;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 36px;
+            height: 17px;
+            background-image: url('https://payottatix.vteximg.com.br/arquivos/bone.png');
+            background-size: cover;
+            position: absolute;
+            bottom: -10.5px;
+            left: 20px;
+            transform: translateX(-50%);
+        }
+    }
+
+    .j-bottom__content {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: 100%;
+                margin-bottom: 40px;
+                display: flex;
+
+                
+
+                iframe {
+                    width: 350px;
+                    height: 200px;
+
+                   
+                }
+
+                p {
+                    color: #585757;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 16.26px;
+                    margin-bottom: 20px;
+
+                   
+                }
+            }
+
+            .j-right {
+                padding-left: 20px;
+
+                
+            }
+        }
+    }
+}

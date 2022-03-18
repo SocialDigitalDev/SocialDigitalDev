@@ -1,0 +1,18 @@
+.j-banner__main {
+  .j-banner__slider {
+    
+    width: 100%;
+
+    .box-banner {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .slick-dots {
+      transform: translateY(-30px);
+    }
+  }
+}

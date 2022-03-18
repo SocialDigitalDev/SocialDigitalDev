@@ -1,0 +1,75 @@
+#set($productId = $product.Id)
+#set($productTitle = $product.HtmlEscapedName)
+#set($productLink = $product.Uri)
+#set($productListPrice = $product.ListPrice)
+#set($productBestPrice = $product.BestPrice)
+#set($productInstallmentValue = $product.InstallmentValue)
+
+<article class="j-shelf__item has--carousel js--shelf-item" data-product-id="$productId">
+    <div class="j-shelf__item-img">
+        <a class="j-shelf__item-img__img" title="$productTitle" href="$productLink">
+			$product.GetImageTag(272,272)
+		</a>
+    </div>
+    <div class="j-shelf__item-content">
+        <h2 class="j-shelf__item-name" title="$productTitle">
+            <a href="$productLink">
+				$productTitle
+			</a>
+        </h2>
+        <div class="j-shelf__item--bottom">
+            <div class="j-shelf__item--price">
+                #if ($product.IsInStock)
+                    <p class="j-shelf__item-old-price">
+                        #if ($product.HasBestPrice)
+                            $product.ListPrice
+                        #end
+                    </p>
+        
+                    <p class="j-shelf__item-new-price">
+                        #if ($product.BestPrice > 1)
+                            $product.BestPrice
+                        #end
+                    </p>
+        
+                    <p class="j-shelf__item-installment">
+                        #if ($product.NumbersOfInstallment > 1)
+                            ${product.NumbersOfInstallment}x $product.InstallmentValue
+                        #end
+                    </p>
+                #else
+                    <p class="j-shelf__item-old-price"></p>
+                    <p class="j-shelf__item-new-price">Indisponível</p>
+                    <p class="j-shelf__item-installment"></p>
+	            #end
+            </div>
+            <div class="j-shelf__item--bottom-right">
+                
+                <div class="y-wishBtn" data-id="$productId">
+                    <div class="y-wishBtn--add">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25.813" height="24" viewBox="0 0 25.813 24"><path d="M25.77,8.983c-.377-4.147-3.312-7.156-6.986-7.156a6.944,6.944,0,0,0-5.949,3.428A6.692,6.692,0,0,0,7.029,1.826C3.356,1.826.42,4.835.043,8.982A7.379,7.379,0,0,0,.263,11.7a11.664,11.664,0,0,0,3.574,5.964l8.993,8.161,9.147-8.16A11.666,11.666,0,0,0,25.55,11.7,7.4,7.4,0,0,0,25.77,8.983Zm-1.186,2.492a10.668,10.668,0,0,1-3.271,5.453l-8.477,7.563L4.5,16.929a10.675,10.675,0,0,1-3.274-5.456A6.447,6.447,0,0,1,1.023,9.14l.007-.05c.323-3.633,2.845-6.271,6-6.271A5.819,5.819,0,0,1,12.376,6.55l.457,1.084L13.29,6.55a6,6,0,0,1,5.5-3.73c3.153,0,5.676,2.638,6,6.318A6.44,6.44,0,0,1,24.584,11.474Z" transform="translate(0 -1.826)"/><path d="M11.282,7.9A5.289,5.289,0,0,0,6,13.187a.528.528,0,1,0,1.057,0,4.231,4.231,0,0,1,4.226-4.226.528.528,0,1,0,0-1.057Z" transform="translate(-2.83 -4.693)"/></svg>
+                    </div>
+                    <div class="y-wishBtn--remove">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25.813" height="24" viewBox="0 0 25.813 24"><path d="M25.77,8.983c-.377-4.147-3.312-7.156-6.986-7.156a6.944,6.944,0,0,0-5.949,3.428A6.692,6.692,0,0,0,7.029,1.826C3.356,1.826.42,4.835.043,8.982A7.379,7.379,0,0,0,.263,11.7a11.664,11.664,0,0,0,3.574,5.964l8.993,8.161,9.147-8.16A11.666,11.666,0,0,0,25.55,11.7,7.4,7.4,0,0,0,25.77,8.983Z" transform="translate(0 -1.826)" fill="#ff002b"/><path d="M11.282,7.9A5.289,5.289,0,0,0,6,13.187a.528.528,0,1,0,1.057,0,4.231,4.231,0,0,1,4.226-4.226.528.528,0,1,0,0-1.057Z" transform="translate(-2.83 -4.693)" fill="#fff"/></svg>
+                    </div>
+                </div>
+                
+                <div class="j-rate">
+                    <!-- Inicio Yourviews -->
+                        <!-- Estrelas que carregam a nota do produto nas prateleiras, de preferência manter próximo ao nome do produto  -->
+                        <div class="yv-review-quickreview" value="$product.Id"></div>
+                    <!-- Final Yourviews -->
+                </div>
+
+                <!-- Trustvox -->
+                <div class="trustvox-showcase" style="text-align: center">
+                    <div data-trustvox-product-code="$product.Id"></div>
+                </div>
+                <!-- /Trustvox -->
+            </div>
+        </div>
+    </div>
+    #if ($product.IsInStock)
+        <a class="j-shelf__item-buy" href="$productLink">ADICIONAR AO CARRINHO</a>
+    #end
+</article>

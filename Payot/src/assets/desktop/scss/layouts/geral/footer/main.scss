@@ -1,0 +1,172 @@
+.j-footer {
+    padding: 0 0 40px 0;
+    background-color: $color-black;
+    color: $color-white;
+
+    .j-footer__top {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 40px;
+        flex-direction: column;
+
+        &-left {
+            transform: translate(-40px, -90px);
+            height: 70px;
+            width: 15%;
+            
+            svg {
+                margin: 0 auto;
+                width: 100px;
+                display: block;
+                border: 4px solid #fafafa;
+                border-radius: 50%;
+                transition: .7s all ease-in-out;
+                will-change: scroll-position;
+                background: #fafafa;
+                width: 130px;
+            }
+        }
+
+        &-middle {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            >div{
+                width: 33%;
+            }
+            h4 {
+                font-family: $font-main;
+                font-size: 12px;
+                text-transform: uppercase;
+                line-height: 40px;
+                
+                a{
+                    color: $color-white;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                color: $color-white;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 40px;
+            
+                span,
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: $color-white;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 40px;
+                }
+
+                &:nth-child(4),
+                &:nth-child(5) {
+                    span,
+                    a { 
+                        svg {
+                            fill: $color-white;
+                            border: 1px solid $color-white;
+                            border-radius: 50%;
+                            margin-right: 16px;
+        
+                            path {
+                                fill: $color-white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .j-payment-list{
+                >li{
+                    ul{
+                        display: flex;
+                        li{
+                            margin-right: 10px;
+                        }
+                    }   
+                }
+            }
+            .j-sub__item {
+                >div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-right: 40px;
+                }
+                h4 {
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    font-size: 12px;
+                    margin: 33px 0 18px;
+                    line-height: inherit;
+                }
+                ul {
+                    display: flex;
+                    li {
+                        margin: 0px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+            .atendimento{
+                ul{
+                    display: flex;
+                    justify-content: start;
+
+                    li{
+                        margin-right: 20px;
+
+                        a{
+                            display: inline-block;
+                            align-items: unset;
+
+                            h5{
+                                display: block;
+                                text-transform: uppercase;
+                                font-size: 12px;
+                                line-height: 28px;
+                            }
+    
+                            svg{
+                                display: block;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+            }
+            .phone{
+                margin-top: 30px;
+                font-size: 12px;
+
+                svg, span{
+                    display: inline-block;
+                    vertical-align: top;
+                    font-weight: 600;
+                    line-height: 20px;
+                }
+
+                svg{
+                    margin-right: 15px;
+                }
+            }
+            .social{
+                ul{
+                    display: flex;
+                    justify-content: start;
+
+                    li{
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

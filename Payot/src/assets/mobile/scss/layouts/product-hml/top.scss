@@ -1,0 +1,662 @@
+.j-content__product {
+
+    &--wrapper__infos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &--img {
+        width: 100%;
+        margin-bottom: 20px;
+
+        #image {
+
+            a {
+                &.image-zoom {
+                    display: none;
+                }
+            }
+
+            .slider-mobile {                        
+                .slick-dots {
+                    margin-top: 15px;
+                }
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+        #show {
+            display: block;
+
+            #include {
+                width: 100%;
+                padding-left: 0;
+
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            .thumbs {
+                display: none;
+            }
+        }
+    }
+
+    &--infos {
+        margin: 0;
+
+        .j-product__name {
+            text-align: left;
+            color: $color-black;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 32px;
+            font-family: $font-bebas;
+            text-transform: uppercase;
+        }
+
+        .j-rate {
+            strong {
+                display: none;
+            }
+        }
+
+        #yv-review-quickreview {
+            margin-top: 10px;
+
+            .yv-bootstrap {
+                font-size: 8px!important;
+
+                strong {
+                    display: none;
+                }
+            }
+        }
+
+        .j-box-price {
+            
+            .sku-selector-container ul {
+                margin: 0 0 23px;
+
+                li {
+                    display: block;
+                    height: auto;
+
+                    &:first-child {
+                        color: $color-darkgray;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 13.91px;
+                        margin-right: 10px;
+                    }
+
+                    input {
+                        display: none;
+                    }
+
+                    label {
+                        border: 1px solid $color-gray;
+                        padding: 3px 7px;
+                        margin: 3px 7px;
+                        border-radius: 50%;
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .descricao-preco {
+                display: block;
+                position: relative;
+
+                .valor-de {
+                    font-size: 14px;
+                    color: $color-black;
+                    font-style: normal;
+                    line-height: 22px;
+                    text-decoration: line-through;
+                    font-family: 'Montserrat';
+                    font-weight: 600;
+
+                    strong {
+                        font-weight: 600;
+                    }
+                }
+    
+                .valor-por {
+                    display: flex;
+                    font-style: normal;
+                    font-weight: bold;
+                    align-items: center;
+                    font-size: 0;
+                    margin: 5px 0;
+                    
+                    strong {
+                        font-family: $font-main;
+                        color: $color-black;
+                        display: block;
+                        font-size: 24px;
+                        line-height: 29px;
+                        
+                        &::before {
+                            content: "Por ";
+                            line-height: 29px;
+                            font-size: 24px;
+                            font-family: $font-main;
+                            display: inline-block;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+    
+                .valor-dividido {
+                    font-style: normal;
+                    color: $color-black;
+                    font-size: 0;
+                    display: block!important;
+                    position: absolute;
+                    bottom: 3px;
+                    left: 60%;
+
+                    span,strong {
+                        label {
+                            font-size: 18px;
+                            line-height: 22px;
+                            font-weight: normal;
+                            margin: 0 5px 0 0;
+                        }
+                    }
+                }
+            }
+            
+            .economia-de {
+                display: none;
+            }
+
+            .preco-a-vista {
+                display: none!important;
+            }
+        }
+
+        .j-box-share {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 20px;
+
+            &__list {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                li {
+                    margin-right: 8px;
+                }
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 18px;
+                font-family: $font-main;
+                color: $color-black;
+                margin-right: 10px;
+            }
+
+            .btn-wishlist {
+                display: block;
+                margin-left: 45px;
+                cursor: pointer;
+
+                .remover {
+                    display: none;
+                }
+
+                &.added {
+                    .adicionar {
+                        display: none;
+                    }
+
+                    .remover {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        
+
+        .j-sku-selection {
+            overflow: scroll;
+            
+            ul {
+                display: flex;
+                justify-content: space-between;
+                overflow: auto;
+
+                li {
+                    order: 2;
+                    margin: 10px 10px 15px 0;
+                    opacity: 0.4;
+                    a {
+                        width: 84px;
+                        height: 75px;
+                        display: flex;
+                        overflow: hidden;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    img {
+                        max-width: unset;
+                    }
+                    label {
+                        font-size: 12px;
+                        font-family: 'Montserrat';
+                        font-weight: bold;
+                        text-align: left;
+                        margin-top: 6px;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .j-box-buy {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: center;
+            margin: 20px 0;
+            
+            .j-qty {
+                
+                .box-qtd {
+                                        
+                    select {
+                        width: 64px;
+                        height: 39px;
+                        line-height: 32px;
+                        text-align: center;
+                        font-size: 16px;
+                        font-family: "Montserrat",sans-serif;
+                        color: #000;
+                        border: 1px solid #fb4f93;
+                        -webkit-border-radius: 0;
+                        border-radius: 0;
+                    }
+                }
+            }
+
+            .buy-button {
+                cursor: pointer;
+                text-align: center;
+                padding: 10px 5px;
+                width: 212px;
+                background-color: $color-main;
+                font-size: 0;
+                height: 39px;
+                
+                &::before {
+                    content: "Adicionar ao Carrinho";
+                    color: #000;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    font-family: "Bebas Neue",cursive;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    display: block;
+                }
+            }
+            
+        }
+        .j-freight {
+            display: flex;
+            justify-content: center;
+
+            span {
+                font-size: 17px;
+                font-family: 'Bebas Neue';
+                border: 1px solid;
+                padding: 7px 10px;
+                cursor: pointer;
+                width: 286px;
+                height: 39px;
+                display: block;
+                text-align: center;
+            }
+        }
+        .j-box-freight {
+            border: 1px solid #00000040;
+            display: none;
+
+            .content {
+
+                fieldset {
+                    border: none;
+                    padding: 15px 10px;
+
+                    .quantity {
+                        display: none;
+                    }
+
+                    .prefixo {
+                        font-size: 0px;
+
+                        &:before {
+                            content: 'CALCULE O FRETE E PRAZO';
+                            display: block;
+                            color: $color-black;
+                            font-size: 14px;
+                            line-height: 18px;
+                            font-weight: normal;
+                            margin-bottom: 5px;
+                            font-family: $font-main;
+                        }
+                    }
+
+                    .lnkExterno {
+                        display: none;
+                    }
+
+                    input {
+                        max-width: 232px;
+                        border: 1px solid $color-darkgray;
+                        background-color: $color-white;
+                        color: $color-black;
+                        font-size: 14px;
+                        line-height: 8px;
+                        padding: 8px 9px;
+
+                        &::placeholder {
+                            color: #D8D8D8;
+                        }
+
+                        &[type="button"] {
+                            display: inline-block;
+                            color: $color-white;
+                            background-color: $color-black;
+                            font-size: 23px;
+                            font-weight: bold;
+                            line-height: 34px;
+                            height: 34px;
+                            width: 75px;
+                            margin-left: 8px;
+                            text-transform: uppercase;
+                            font-family: $font-bebas;
+                            letter-spacing: 2px;
+                            border: none;
+                            padding: 0;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        
+            p {
+              color: $color-main;
+              font-weight: bold;
+              font-size: 13px;
+            }
+        
+            a {
+              color: $color-black;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 13.91px;
+              margin: 5px 0;
+            }
+        
+            h1 {
+              display: none;
+            }
+        
+            > p {
+              a {
+                text-decoration: underline;
+              }
+            }
+        
+            #popupCalculoFreteWrapper {
+              display: none;
+            }
+        
+            #calculoFrete {
+              h1 {
+                line-height: 12px;
+                a {
+                  &:before {
+                    content: "EM ESTOQUE: Vendido e entregue por: ";
+                    color: #807f7f;
+                    font-family: $font-main;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 13.91px;
+                  }
+                }
+              }
+        
+              h2,
+              .close {
+                display: none;
+              }
+            }
+        
+            .freight-values table {
+              margin: 15px;
+              padding-top: 15px;
+              width: 472px;
+
+              tr {
+                  text-align: left;
+
+                  th {
+                      font-family: $font-main;
+                      font-size: 16px;
+                      line-height: 17px;
+                      color: $color-black;
+                      padding-bottom: 8px;
+                  }
+
+                  td {
+                      padding: 15px 0;
+                      font-family: $font-main;
+                      font-size: 14px;
+                      line-height: 18px;
+                      color: $color-black;
+                  }
+              }
+            }
+        }
+    }
+
+    
+
+    .j-buy {
+        margin-left: 10px;
+
+        .notifymetitle.notifyme-title {
+            color: $color-darkgray;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: $font-main;
+        }
+        
+        fieldset {
+            border: none;
+            position: relative;
+            
+            >p {
+                color: $color-darkgray;
+                font-size: 14px;
+                line-height: 22px;
+                margin: 15px 0px;
+            }
+            input {
+                width: 80%;
+                height: 35px;
+                border: 1.5px solid $color-darkgray;
+                border-radius: 0;
+                margin: 10px 0px;
+                padding: 10px;
+                color: $color-darkgray;
+                max-width: 344px;
+                display: inline-block !important;
+
+                &#notifymeButtonOK {
+                    background-color: $color-main;
+                    color: $color-black;
+                    font-size: 17px;
+                    border: none;
+                    border-radius: none;
+                    width: 88px;
+                    height: 39px;
+                    line-height: 39px;
+                    text-transform: uppercase;
+                    font-family: $font-bebas;
+                    letter-spacing: 2px;
+                    padding: 0;
+                    display: inline-block !important;
+                    right: 0;
+                    bottom: 0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .j-box-description {
+        margin-bottom: 28px;
+        margin: 0 20px;
+
+        h2 {
+            color: $color-main;
+            font-family: $font-main;
+            font-size: 20px;
+            margin: 30px 0;
+
+            &::after {
+                background-color: #707070;
+                content: "";
+                display: inline-block;
+                height: 1px;
+                position: relative;
+                vertical-align: middle;
+                width: 50%;
+                margin-left: 20px;
+            }
+        }
+
+
+        .productDescription {
+            font-family: $font-main;
+            color: $color-black;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+    .j-box-compre-junto {
+        margin-bottom: 28px;
+
+        h2 {
+            color: #FB4F93;
+            font-family: "Montserrat",sans-serif;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .shelf-products {
+            #divTitulo {
+                display: none;
+            }
+            .buy-together-content {
+
+                table {
+                    width: 100%;
+                }
+
+                tr {
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    display: none;
+
+                    &:nth-child(1) {
+                        display: block;
+                    }
+                }
+                td {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 120px;
+                        max-width: unset;
+                    }
+                }
+
+                td h3 {
+                    font-size: 14px;
+                    font-family: 'Montserrat';
+                    text-align: left;
+                    width: 144px;
+                    font-weight: 500;
+                }
+                td.plus, 
+                td.equal {
+                    font-size: 44px;
+                    color: #FB4F93;
+                    font-weight: bold;
+                    text-align: center;
+                    margin: 5px 0;
+                }
+                .more {
+                    display: none;
+                }
+                .buy {
+                    font-size: 0;
+                    flex-direction: column;
+
+                    .compre-por {
+                        display:block;
+                        font-size:16px;
+                        text-align:center;
+                        width: 100%;
+                    }
+                    .price {
+                        display:block;
+                        font-size:24px; 
+                        text-align:center;
+                        width:100%;
+                        font-weight:bold;
+                        margin-bottom: 15px;
+                    }
+                    .comprar-junto {
+                        width: 286px;
+                        font-size: 17px;
+                        background: #FB4F93;
+                        text-align: center;
+                        padding: 7px 10px;
+                        text-transform: uppercase;
+                        font-family: 'Bebas Neue';
+                        height: 39px;
+    
+                        a {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

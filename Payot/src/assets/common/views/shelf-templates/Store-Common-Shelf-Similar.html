@@ -1,0 +1,20 @@
+#set($productId = $product.Id)
+#set($productTitle = $product.HtmlEscapedName)
+#set($productLink = $product.Uri)
+#set($productListPrice = $product.ListPrice)
+#set($productBestPrice = $product.BestPrice)
+#set($productInstallmentValue = $product.InstallmentValue)
+
+<article class="j-item-variation" data-product-id="$productId">
+    <a class="j-item-variation" title="$productTitle" href="$productLink">
+        <div class="j-item-variation--img">
+            $product.GetImageTag(104,104)
+        </div>
+        <div class="j-item-variation--name">
+            $productTitle
+        </div>
+        <div class="j-item-variation--price">
+            $product.BestPrice
+        </div>
+    </a>
+</article>

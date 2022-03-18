@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <link rel="stylesheet" href="https://payottatix.vteximg.com.br/arquivos/store-desktop-category.css" />
+</head>
+
+<body id="topo">
+    <vtex:template id="Store-Desktop-Header" />
+
+    <main>
+        <div class="j-category__top">
+            <div class="j-category__banner">
+                <vtex:contentPlaceHolder id="Banner da categoria" />
+            </div>
+            <div class="container">
+                <div class="j-category__filter">
+                    <div class="j-category__searchNavigator">
+                        <div class="menu-departamento">
+                            <vtex:contentPlaceHolder id="Links" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="j-category__bottom">
+
+            <div class="j-category__grid">
+                <div class="container">
+                    <vtex.cmc:searchResult layout="b36bd6af-2098-4529-98e9-fcea88099f7f" itemCount="20"
+                        columnCount="20" />
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="js--scroll-top">
+        <a href="#topo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                <rect width="32" height="32" fill="#707070" opacity="0.6" />
+                <path d="M32.954,314.685l14.718,13.8-14.2,13.428" transform="translate(-312.044 56.313) rotate(-90)"
+                    fill="none" stroke="#fff" stroke-width="4" /></svg>
+        </a>
+    </div>
+
+    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Common-Scripts" />
+    <vtex:template id="Store-Desktop-Scripts" />
+    <script src="https://payottatix.vteximg.com.br/arquivos/store-desktop-category.js"></script>
+
+</body>
+
+</html>

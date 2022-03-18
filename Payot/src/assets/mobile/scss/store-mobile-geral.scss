@@ -1,0 +1,55 @@
+@import '../../common/scss/tools/_breakpoint.scss';
+@import "../../common/scss/layouts/globals/variables.scss";
+@import './layouts/geral/header/index.scss';
+@import './layouts/geral/footer/index.scss';
+@import "./layouts/geral/newsletter/main.scss";
+@import './layouts/geral/breadcrumb/main.scss';
+@import "./layouts/geral/shelf/index.scss";
+
+.j-popup-video {
+    position: fixed;
+    border-radius: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    font-size: 0;
+    width: 90%;
+    
+    &.is--hide {
+        display: none;
+    }
+
+    &::before {
+        content: "FECHAR";
+        font-size: 20px;
+        display:block;
+        text-align: right;
+        padding-right: 23px;
+        color: $color-white;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-family: $font-bebas;
+        cursor: pointer;
+    }
+    
+    &::after {
+        content: "X";
+        font-size: 20px;
+        color: $color-main;
+        font-family: $font-bebas;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#ajaxBusy{
+    display: none !important;
+}

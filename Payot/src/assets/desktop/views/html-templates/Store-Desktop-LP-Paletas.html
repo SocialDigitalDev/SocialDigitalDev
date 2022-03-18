@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <link rel="stylesheet" href="/arquivos/lp-paletas-sombra-rosesforus.css" />
+    <vtex:contentPlaceHolder id="title" />
+</head>
+
+<body id="topo">
+    <vtex:template id="Store-Desktop-Header" />
+
+        <main>            
+        <div>
+            <div>
+                <vtex:contentPlaceHolder id="Banner da LP" />
+            </div>
+            <div class="container">
+                <vtex:contentPlaceHolder id="Titulo da LP" />
+                <section class="d-flex produtos-destaque-lp">
+                    <ul>
+                        
+                    </ul>
+                </section>
+                <section class="container box-texto-info">
+                    <vtex:contentPlaceHolder id="Texto Informativo" />
+                    <div class="img-atributos">
+                        <img src="/arquivos/attr-hipoalergico.svg" alt="Hipoalérgico"/>
+                        <img src="/arquivos/attr-derm-testado.svg" alt="Dermatologicamente Testado"/>
+                        <img src="/arquivos/attr-no-test-animais.svg" alt="Não Testamos em Animais"/>
+                        <img src="/arquivos/attr-vegano.svg" alt="Vegano"/>
+                    </div>
+                </section>
+            </div>
+            <section class="d-flex lp-paletas-banner-slider">
+                <article class="j-banner__slider">
+                    <vtex:contentPlaceHolder id="Imagens Roses for Us right" />
+                </article>
+                <article>
+                    <vtex:contentPlaceHolder id="Imagem Roses for Us left" />
+                </article>
+            </section>
+            <section class="d-flex lp-paletas-banner-slider">
+                <article>
+                    <vtex:contentPlaceHolder id="Imagem Its Brown right" />
+                </article>
+                <article class="j-banner__slider">
+                    <vtex:contentPlaceHolder id="Imagens Its Brown left" />
+                </article>
+            </section>
+            <section class="container">
+                <article class="box-lp-detalhes">
+                    <vtex:contentPlaceHolder id="Conteudo Detalhes" />
+                </article>
+            </section>
+            <div class="div-ig-lp">
+                <h2>QUEM TAMBÉM USA</h2>
+                <section class="box-instagram">
+                    <article class="container j-lp__instagram">
+                        <vtex:contentPlaceHolder id="Vitrine Instagram" />
+                    </article>
+                </section>
+            </div>
+            <section class="container box-yt">
+                <article>
+                    <vtex:contentPlaceHolder id="Video YT" />
+                </article>
+            </section>
+            <section class="j-lp__shelf container">
+                <vtex:contentPlaceHolder id="Titulo Vitrine Footer" />
+                <vtex:contentPlaceHolder id="Vitrine Footer-LP" />
+            </section>
+        </div>
+    </main>
+
+    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Common-Scripts" />
+    <vtex:template id="Store-Desktop-Scripts" />
+    <script src="/arquivos/lp-paletas-sombra-rosesforus.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:template id="Store-Mobile-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <link rel="stylesheet" href="https://payottatix.vteximg.com.br/arquivos/store-mobile-category.css" />
+</head>
+
+<body>
+    <vtex:template id="Store-Mobile-Header" />
+
+    <main>            
+        <div class="j-category__top">
+            <div class="j-category__banner">
+                <vtex:contentPlaceHolder id="Banner da categoria" />
+            </div>
+
+            <div class="container">
+                <div class="j-category__filter">
+                    <vtex.cmc:breadCrumb />
+                </div>
+            </div>
+        </div>
+        
+        <div class="j-category__bottom">
+
+            <div class="j-category__option-filter is--hide">
+                <div class="js--open-filter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26.666" height="27.825" viewBox="0 0 26.666 27.825"><g transform="translate(37.333) rotate(90)"><g transform="translate(0 29.217)"><path d="M26.666,354.9H23.579a4.031,4.031,0,0,0-7.738,0H1.159a1.159,1.159,0,0,0,0,2.319H15.841a4.031,4.031,0,0,0,7.738,0h3.087a1.159,1.159,0,0,0,0-2.319Zm-6.956,2.9a1.739,1.739,0,1,1,1.739-1.739A1.741,1.741,0,0,1,19.71,357.8Z" transform="translate(0 -352)"/></g><g transform="translate(0 10.667)"><path d="M26.666,13.565H23.579a4.031,4.031,0,0,0-7.738,0H1.159a1.159,1.159,0,1,0,0,2.319H15.841a4.031,4.031,0,0,0,7.738,0h3.087a1.159,1.159,0,0,0,0-2.319Zm-6.956,2.9a1.739,1.739,0,1,1,1.739-1.739A1.741,1.741,0,0,1,19.71,16.464Z" transform="translate(0 -10.667)"/></g><g transform="translate(0 19.942)"><path d="M26.666,184.232H11.985a4.031,4.031,0,0,0-7.738,0H1.159a1.159,1.159,0,0,0,0,2.319H4.247a4.031,4.031,0,0,0,7.738,0H26.666a1.159,1.159,0,0,0,0-2.319Zm-18.55,2.9a1.739,1.739,0,1,1,1.739-1.739A1.741,1.741,0,0,1,8.116,187.131Z" transform="translate(0 -181.334)"/></g></g></svg> Filtrar
+                </div>
+                <div class="js--content-filter">
+                    <span class="js--close--filter"></span>
+                    
+                    <div class="js--content-filter__item">
+                        <vtex.cmc:searchNavigator />
+                    </div>
+                </div>
+            </div>
+
+            <div class="j-category__grid">
+                <div class="container">
+                    <vtex.cmc:searchResult layout="b36bd6af-2098-4529-98e9-fcea88099f7f" itemCount="20" columnCount="20" />
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <vtex:template id="Store-Mobile-Footer" />
+    <vtex:template id="Store-Common-Scripts" />
+    <vtex:template id="Store-Mobile-Scripts" />
+    <script src="https://payottatix.vteximg.com.br/arquivos/store-mobile-category.js"></script>
+</body>
+</html>

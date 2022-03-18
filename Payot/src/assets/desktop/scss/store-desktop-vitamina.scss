@@ -1,0 +1,609 @@
+@import '../../common/scss/tools/_breakpoint.scss';
+@import "../../common/scss/layouts/globals/variables.scss";
+
+
+.j-vitamina {
+    &__title {
+        display: inline-block;
+        padding: 0 9px;
+        border-bottom: 3px solid $color-yellow;
+        margin-top: 34px;
+        margin-left: 120px;
+
+        h1 {
+            font-family: $font-bebas;
+            color: $color-black;
+            font-size: 80px;
+            font-weight: bold;
+        }
+    }
+
+    &__banner {
+        position: relative;
+
+        &--description {
+            position: absolute;
+            top: 55px;
+            left: 88px;
+            width: 488px;
+            height: 472px;
+            padding: 8px 16px;
+            background-color: rgba($color: $color-white, $alpha: 0.77);
+
+            p {
+                font-family: $font-main;
+                font-size: 14px;
+                color: $color-black;
+                line-height: 18px;
+                margin: 18px 0;
+            }
+        }
+    }
+
+    &__middle {
+        margin: 15px 0 55px;
+
+
+        &--titles {
+            ul {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+
+                li {
+                    width: auto;
+    
+                    .j-item-vitamina {
+                        border-top: 3px solid $color-white;
+                        padding: 0 6px;
+    
+                        &:hover {
+                            border-color: $color-yellow;
+                        }
+    
+                        a {
+                            font-family: $font-bebas;
+                            font-size: 18px;
+                            line-height: 19px;
+                            color: $color-black;
+                            text-align: center;
+                            letter-spacing: 2px;
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        background: url("https://payottatix.vteximg.com.br/arquivos/lateral-vitamina-c.jpg") no-repeat top left;
+        padding-bottom: 300px;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 340px;
+            height: 284px;
+            background: url("https://payottatix.vteximg.com.br/arquivos/Laranja.jpg") no-repeat bottom right;
+            position: absolute;
+            right: -10px;
+            bottom: 0;
+        }
+
+        .j-shelf-vitamina {
+            h2 {
+                display: none;
+            }
+
+            .j-prod-vitamina {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &--img {
+                    width: 45%;
+                    display: block;
+                    text-align: center;
+
+                    img {
+                        display: inline-block;
+                    }
+                }
+
+                &--content {
+                    width: 55%;
+                }
+
+                &--name {
+                    font-family: $font-bebas;
+                    color: $color-yellow;
+                    font-size: 51px;
+                    font-weight: bold;
+                    line-height: 61px;
+                    height: 61px;
+                    overflow: hidden;
+                    text-transform: uppercase;
+                    border-bottom: 3px solid $color-black;
+                    margin-bottom: 53px;
+                    display: block;
+                }
+
+                &--description {
+                    margin-bottom: 18px;
+                    font-size: 18px;
+                    font-family: $font-main;
+                    line-height: 22px;
+                    color: $color-black;
+                }
+
+                &--price {
+                    display: block;
+                }
+
+                &-price {
+                    display: block;
+
+                    &-best {
+                        display: block;
+                        font-family: $font-main;
+                        font-size: 35px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                    &-instalments {
+                        display: block;
+                        font-family: $font-main;
+                        font-size: 18px;
+                        line-height: 40px;
+                    }
+                }
+
+                &-buy {
+                    padding: 32px 0 48px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    &-btn {
+                        width: 264px;
+                        height: 47px;
+                        line-height: 47px;
+                        font-family: $font-bebas;
+                        font-size: 23px;
+                        letter-spacing: 2px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        background-color: $color-yellow;
+                        display: inline-block;
+                        text-align: center;
+                    }
+
+                    &-video {
+                        margin-left: 48px;
+                    }
+                }
+
+                &-specification {
+                    border-top: 3px solid $color-yellow;
+                    
+                    >div {
+                        margin-top: 25px;
+                        font-size: 0;
+                    
+                        ul {
+                            li {
+                                font-family: $font-bebas;
+                                font-size: 24px;
+                                letter-spacing: 2px;
+                                line-height: 34px;
+                                text-transform: uppercase;
+                                color: $color-black;
+
+                                p {
+                                    font-size: 24px;
+                                    line-height: 34px;
+                                    
+                                    strong {
+                                        color: $color-yellow;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .slick-arrow {
+                font-size: 0px;
+                display: block;
+                width: 20px;
+                height: 20px;
+                border: 2px solid $color-black;
+                border-right: 0;
+                border-bottom: 0;
+                position: absolute;
+                top: 50%;
+                background: none;
+                z-index: 20;
+            }
+
+            .slick-prev {
+                transform: translateY(-50%) rotate(-45deg);
+                left: 15px;
+            }
+
+            .slick-next {
+                transform: translateY(-50%) rotate(135deg);
+                right: 15px;
+            }
+
+            .slick-dots {
+                display: flex !important;
+                justify-content: center;
+                width: 100%;
+                margin-top: 13px;
+
+                li {
+                    margin: 0;
+                    width: auto !important;
+
+                    button {
+                        display: block;
+                        font-size: 0;
+                        width: 10px;
+                        height: 10px;
+                        background-color: $color-white;
+                        border-radius: 50%;
+                        border: 1px solid $color-darkgray;
+                        position: relative;
+                        cursor: pointer;
+                        transition: all 225ms ease;
+                    }
+
+                    &.slick-active {
+                        button {
+                            border-color: $color-main
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.acnederm{
+    .j-vitamina{
+        &__title{
+            border-bottom: 3px solid #00856A;
+        }
+
+        &__middle{
+            &--titles{
+                ul{
+                    li{
+                        .j-item-vitamina:hover{
+                            border-color: #00856A;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__bottom{
+            background: url("https://payottatix.vteximg.com.br/arquivos/lateral-acnederm.jpg") no-repeat top left;
+
+            &::after {
+                background: url("https://payottatix.vteximg.com.br/arquivos/planta.png") no-repeat bottom right;
+                content: "";
+                display: block;
+                width: 340px;
+                height: 284px;
+                position: absolute;
+                right: -10px;
+                bottom: 0;
+            }
+
+            .j-shelf-vitamina {
+                .j-prod-vitamina {
+    
+                    &--name {
+                        color: #00856A;
+                    }
+    
+                    &-buy {
+    
+                        &-btn {
+                            background-color: #00856A;
+                        }
+                    }
+    
+                    &-specification {
+                        border-top: 3px solid #00856A;
+                        
+                        >div {
+                            ul {
+                                li {
+                                    p {
+                                        strong {
+                                            color: #00856A;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .slick-arrow {
+                    background: url(/arquivos/arrow-icon.png) no-repeat scroll 0 0 transparent !important;
+                    font-size: 0px;
+                    display: block;
+                    width: 86px;
+                    height: 86px;
+                    position: absolute;
+                    top: 50%;
+                    z-index: 20;
+                    border: none !important;
+                }
+    
+                .slick-prev {
+                    transform: translateY(-50%) rotate(-180deg);
+                }
+    
+                .slick-next {
+                    transform: translateY(-50%) rotate(0deg);
+                }
+            }
+        }
+    }
+}
+
+body.mascara-cilios{
+    .j-vitamina{
+        &__title{
+            border-bottom: 3px solid #A957A4;
+        }
+
+        &__middle{
+            &--titles{
+                ul{
+                    li{
+                        .j-item-vitamina:hover{
+                            border-color: #A957A4;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__bottom{
+            background: url("https://payottatix.vteximg.com.br/arquivos/lateral-mascara-cilios.png") no-repeat top left;
+
+            &::after {
+                background: none;
+                content: none;
+            }
+
+            .j-shelf-vitamina {
+                .j-prod-vitamina {
+    
+                    &--name {
+                        color: #A957A4;
+                    }
+    
+                    &-buy {
+    
+                        &-btn {
+                            background-color: #A957A4;
+                            color: #fff;
+                        }
+                    }
+    
+                    &-specification {
+                        border-top: 3px solid #A957A4;
+                        
+                        >div {
+                            ul {
+                                li {
+                                    p {
+                                        strong {
+                                            color: #A957A4;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .slick-arrow {
+                    background: url(/arquivos/arrow-icon.png) no-repeat scroll 0 0 transparent !important;
+                    font-size: 0px;
+                    display: block;
+                    width: 86px;
+                    height: 86px;
+                    position: absolute;
+                    top: 50%;
+                    z-index: 20;
+                    border: none !important;
+                }
+    
+                .slick-prev {
+                    transform: translateY(-50%) rotate(-180deg);
+                }
+    
+                .slick-next {
+                    transform: translateY(-50%) rotate(0deg);
+                }
+            }
+        }
+    }
+}
+
+body.maternite{
+    .j-vitamina{
+        &__title{
+            border-bottom: 3px solid #FC93B1;
+        }
+
+        &__middle{
+            &--titles{
+                ul{
+                    li{
+                        .j-item-vitamina:hover{
+                            border-color: #FC93B1;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__bottom{
+            background: url("https://payottatix.vteximg.com.br/arquivos/lateral-maternite.png") no-repeat top left;
+
+            &::after {
+                background: none;
+                content: none;
+            }
+
+            .j-shelf-vitamina {
+                .j-prod-vitamina {
+    
+                    &--name {
+                        color: #FC93B1;
+                    }
+    
+                    &-buy {
+    
+                        &-btn {
+                            background-color: #FC93B1;
+                            color: #fff;
+                        }
+                    }
+    
+                    &-specification {
+                        border-top: 3px solid #FC93B1;
+                        
+                        >div {
+                            ul {
+                                li {
+                                    p {
+                                        strong {
+                                            color: #FC93B1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .slick-arrow {
+                    background: url(/arquivos/arrow-icon.png) no-repeat scroll 0 0 transparent !important;
+                    font-size: 0px;
+                    display: block;
+                    width: 86px;
+                    height: 86px;
+                    position: absolute;
+                    top: 50%;
+                    z-index: 20;
+                    border: none !important;
+                }
+    
+                .slick-prev {
+                    transform: translateY(-50%) rotate(-180deg);
+                }
+    
+                .slick-next {
+                    transform: translateY(-50%) rotate(0deg);
+                }
+            }
+        }
+    }
+}
+
+body.ale-de-souza{
+    .j-vitamina{
+        &__title{
+            border-bottom: 3px solid #414041;
+        }
+
+        &__middle{
+            &--titles{
+                ul{
+                    li{
+                        .j-item-vitamina:hover{
+                            border-color: #414041;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__bottom{
+            background: none;
+
+            &::after {
+                background: none;
+                content: none;
+            }
+
+            .j-shelf-vitamina {
+                .j-prod-vitamina {
+    
+                    &--name {
+                        color: #414041;
+                    }
+    
+                    &-buy {
+    
+                        &-btn {
+                            background-color: #414041;
+                            color: #fff;
+                        }
+                    }
+    
+                    &-specification {
+                        border-top: 3px solid #414041;
+                        
+                        >div {
+                            ul {
+                                li {
+                                    p {
+                                        strong {
+                                            color: #414041;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .slick-arrow {
+                    background: url(/arquivos/arrow-icon.png) no-repeat scroll 0 0 transparent !important;
+                    font-size: 0px;
+                    display: block;
+                    width: 86px;
+                    height: 86px;
+                    position: absolute;
+                    top: 50%;
+                    z-index: 20;
+                    border: none !important;
+                }
+    
+                .slick-prev {
+                    transform: translateY(-50%) rotate(-180deg);
+                }
+    
+                .slick-next {
+                    transform: translateY(-50%) rotate(0deg);
+                }
+            }
+        }
+    }
+}

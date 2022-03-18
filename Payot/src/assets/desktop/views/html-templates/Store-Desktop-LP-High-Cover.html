@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <link rel="stylesheet" href="/arquivos/lp-high-cover.css" />
+</head>
+
+<body id="topo">
+    <vtex:template id="Store-Desktop-Header" />
+
+        <main>            
+        <div>
+            <div>
+                <vtex:contentPlaceHolder id="Banner da categoria" />
+            </div>
+            <div class="container">
+                <vtex:contentPlaceHolder id="Titulo da LP" />
+                <section class="d-flex img-products d-block">
+                    <article class="col-img-product d-block">
+                        <div class="col-2 miniaturas">
+                            <ul>
+                                <li><img src="/arquivos/img-principal-produto.png" alt="Imagem High Cover"/></li>
+                                <li><img src="/arquivos/img-principal-produto.png" alt="Imagem High Cover"/></li>
+                                <li><img src="/arquivos/img-principal-produto.png" alt="Imagem High Cover"/></li>
+                                <li><img src="/arquivos/img-principal-produto.png" alt="Imagem High Cover"/></li>
+                                <li><img src="/arquivos/img-principal-produto.png" alt="Imagem High Cover"/></li>
+                            </ul>
+                        </div>
+                        <div class="col-10 img-principal">
+                            <img src="/arquivos/img-principal-produto.png" alt="Imagem High Cover"/>
+                        </div>
+                    </article>
+                    <article class="col-info-product d-block">
+                        <div class="col-10 d-block">
+                            <h2 class="title-cor">BAUNILHA LIGHT 1</h2>
+                            <ul class="avaliacoes-high-cover d-flex">
+                                <li class="av-1 ava-true"></li>
+                                <li class="av-2 ava-true"></li>
+                                <li class="av-3 ava-true"></li>
+                                <li class="av-4 ava-true"></li>
+                                <li class="av-5 ava-false"></li>
+                            </ul>
+                            <p class="preco-de"></p>
+                            <p class="preco-por"></p>
+                            <p class="parcelamento"></p>
+                            <div class="buy-box">
+                                <span class="add-menos"></span><input type="tel" id="qtd" value="1" min="1"/><span class="add-mais"></span>
+                                <span class="buy-buttom-lp-high-cover">ADICIONAR AO CARRINHO</span>
+                                <input type="hidden" id="idSku"/>
+                            </div>
+                            <ul class="especificacoes-high-cover d-flex">
+                                <li><img src="/arquivos/Grupo 223.png" alt="Especificações High Cover"/><span>Sem Fragrância</span></li>
+                                <li><img src="/arquivos/Grupo 224.png" alt="Especificações High Cover"/><span>sem glúten</span></li>
+                                <li><img src="/arquivos/Grupo 225.png" alt="Especificações High Cover"/><span>Vitamina E</span></li>
+                                <li><img src="/arquivos/Grupo 226.png" alt="Especificações High Cover"/><span>Ultra HD</span></li>
+                                <li><img src="/arquivos/Grupo 230.png" alt="Especificações High Cover"/><span>Hipoalergênico</span></li>
+                                <li><img src="/arquivos/Grupo 229.png" alt="Especificações High Cover"/><span>Sem parabenos</span></li>
+                                <li><img src="/arquivos/Grupo 228.png" alt="Especificações High Cover"/><span>vegano</span></li>
+                                <li><img src="/arquivos/Grupo 227.png" alt="Especificações High Cover"/><span>Dermatologicamente Testado</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-2">
+                            <ul>
+                                <li class="sku-color select"><span class="color-0-high-cover thumb-152155137"></span></li>
+                                <li class="sku-color"><span class="color-1-high-cover thumb-152155150"></span></li>
+                                <li class="sku-color"><span class="color-2-high-cover thumb-152155163"></span></li>
+                                <li class="sku-color"><span class="color-3-high-cover thumb-152155179"></span></li>
+                                <li class="sku-color"><span class="color-4-high-cover thumb-152155197"></span></li>
+                                <li class="sku-color"><span class="color-5-high-cover thumb-152155211"></span></li>
+                            </ul>
+                        </div>
+                    </article>
+                </section>
+                <section>
+                    <vtex:contentPlaceHolder id="Imagem Conteudo" />
+                </section>
+            </div>
+            <section class="information" style="display: none;">
+                <div class="container">
+                    <div class="information-col">
+                        <h2>INFORMAÇÕES</h2>
+                        <h2 class="sombra-title">DETALHES</h2>
+                        <div>
+                            <p class="info">Cor: </p>
+                            <p class="content-info cor">Chocolate</p>
+                        </div>
+                        <div>
+                            <p class="info">Produto: </p>
+                            <p class="content-info produto">Corretivo</p>
+                        </div>
+                        <div>
+                            <p class="info">Ação ou Benefício: </p>
+                            <p class="content-info acao-beneficio"></p>
+                        </div>
+                        <div>
+                            <p class="info">Modo de Uso: </p>
+                            <p class="content-info modo-de-uso"></p>
+                        </div>
+                    </div>
+                    <div class="information-col">
+                        <div>
+                            <p class="info">Volume da embalagem: </p>
+                            <p class="content-info volume">6ml</p>
+                        </div>
+                        <div>
+                            <p class="info">Composição: </p>
+                            <p class="content-info composicao"></p>
+                        </div>
+                        <div>
+                            <p class="info">Indicação: </p>
+                            <p class="content-info indicacao"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="js--scroll-top">
+        <a href="#topo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="#707070" opacity="0.6"/><path d="M32.954,314.685l14.718,13.8-14.2,13.428" transform="translate(-312.044 56.313) rotate(-90)" fill="none" stroke="#fff" stroke-width="4"/></svg>
+        </a>
+    </div>
+
+    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Common-Scripts" />
+    <vtex:template id="Store-Desktop-Scripts" />
+    <script src="/arquivos/lp-high-cover.js"></script>
+
+</body>
+</html>

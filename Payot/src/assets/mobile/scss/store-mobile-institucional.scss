@@ -1,0 +1,30 @@
+p {
+    margin: 10px 0;
+}
+
+h2 {
+    position: relative;
+    z-index: 99;
+    background-color: #FFF;
+    padding-right: 20px;
+}
+
+h2,
+h3 {
+    margin: 30px 0;
+}
+
+main{
+    padding: 5% 0;
+}
+
+.minha-troca{
+    .j-title, .j-shelf__title{
+        display: none !important;
+    }
+
+    iframe{
+        max-width: 100%;
+    }
+}
+

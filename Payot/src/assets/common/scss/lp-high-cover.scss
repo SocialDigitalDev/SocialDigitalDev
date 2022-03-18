@@ -1,0 +1,390 @@
+.d-flex {
+    display: flex;
+}
+.lp-high-cover .box-banner img {
+    width: 100%;
+}
+.lp-high-cover h1 {
+    font: normal normal bold 70px/80px Bebas Neue;
+    text-align: center;
+    margin: 20px;
+}
+
+.col-img-product .miniaturas img {
+    width: 75px;
+    cursor: pointer;
+}
+
+article.col-img-product {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.img-principal img {
+    width: 400px;
+    margin: 0px 20px;
+}
+
+ul.avaliacoes-high-cover {
+    display: flex;
+}
+
+ul.especificacoes-high-cover.d-flex {flex-wrap: wrap;width: 100%;margin-top: 30px;}
+
+li {
+    flex-direction: column;
+}
+
+ul.especificacoes-high-cover.d-flex li {
+    display: flex;
+    text-align: center;
+    width: 110px;
+    padding: 5px 5px;
+    align-items: center;
+}
+
+ul.especificacoes-high-cover.d-flex img {
+    width: 58px;
+}
+
+article.col-info-product {
+    width: 50%;
+    display: flex;
+}
+
+ul.especificacoes-high-cover.d-flex li span {
+    font-size: 10px;
+}
+
+.col-info-product p.preco-de {
+    text-align: left;
+    text-decoration: line-through;
+    letter-spacing: 0.18px;
+    color: #000000;
+    font-size: 18px;
+    min-height: 20px;
+}
+
+.col-info-product p.preco-por {
+    text-align: left;
+    font: normal normal bold 24px/40px Montserrat;
+    letter-spacing: 0.24px;
+    min-height: 20px;
+}
+
+.col-info-product p.parcelamento {
+    text-align: left;
+    letter-spacing: 0.18px;
+    color: #000000;
+    font-size: 18px;
+    min-height: 20px;
+}
+
+span.buy-buttom-lp-high-cover {
+    background: #FB4F93;
+    padding: 5px 50px;
+    margin: 10px;
+    font-size: 23px;
+    font: normal normal 23px/18px Bebas Neue;
+    left: 70px;
+    position: relative;
+    cursor: pointer;
+}
+
+li.ava-true:after {
+    font-family: 'FontAwesome';
+    content: '\f005';
+    color: #fb4f93;
+}
+li.ava-false:after {
+    font-family: 'FontAwesome';
+    content: '\f006';
+    color: #fb4f93;
+}
+.buy-box input#qtd {
+    width: 20px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-right: none;
+    border-left: none;
+    text-align: center;
+}
+
+.lp-high-cover .buy-box {
+    padding: 10px;
+}
+
+.buy-box span.add-mais {
+    height: 25px;
+    width: 25px;
+    border: 1px solid #966892;
+    display: block;
+    float: left;
+    border-left: none;
+}
+
+.buy-box span.add-menos {
+    height: 25px;
+    width: 25px;
+    border: 1px solid #966892;
+    display: block;
+    float: left;
+    border-right: none;
+}
+
+.buy-box span.add-mais:after {
+    font-family: 'FontAwesome';
+    content: '\f067';
+    margin: 10px;
+    position: relative;
+    top: -1px;
+    font-size: 7px;
+    color: #966892
+}
+
+.buy-box span.add-menos:after {
+    font-family: 'FontAwesome';
+    content: '\f068';
+    margin: 10px;
+    position: relative;
+    top: -1px;
+    font-size: 7px;
+    color: #966892
+}
+
+li.sku-color {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 1px 0px;
+    cursor: pointer;
+}
+
+.col-info-product .col-10 { 
+    width: 80%;
+}
+
+.col-info-product .col-2 {
+    width: 20%;
+    top: -20px;
+    position: relative;
+}
+
+li.sku-color .color-1-high-cover {
+    background: #E0A897;
+    /* border: 1px solid #707070; */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+}
+
+li.sku-color .color-2-high-cover {
+    background: #CC8871;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+}
+
+li.sku-color .color-3-high-cover {
+    background: #D19C8C;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+}
+
+li.sku-color .color-4-high-cover {
+    background: #F1D0C7;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+}
+
+li.sku-color .color-5-high-cover {
+    background: #EA9580;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+}
+
+li.sku-color .color-6-high-cover {
+    background: #FFDAB3;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+}
+li.sku-color.select {
+    padding: 3px;
+    background: none;
+    border: 1px solid #bebebe;
+    right: 5px;
+    top: -5px;
+    position: relative;
+}
+.sku-color img {
+    max-width: 50px;
+}
+.miniaturas ul li {
+    margin-top: 5px;
+}
+.title-cor {
+    font: normal normal bold 34px/34px Bebas Neue;
+}
+
+.information {
+    display: block!important;
+    background-color: #f3f3f3;
+}
+.information .container {
+    display: flex;
+    padding: 70px 0;
+}
+
+.information-col {
+    width: 50%;
+}
+.information .info, .information p.content-info {
+    display: inline-block;
+}
+.information h2 {
+    padding-bottom: 20px;
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+.information .info {
+    color: #fb5094;
+    font-size: 18px;
+    font-weight: bolder;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.information .content-info {
+    color: #000;
+    font-size: 18px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+h2.sombra-title {
+    position: absolute;
+    margin-top: -85px;
+    font-size: 70px;
+    margin-left: -40px;
+    opacity: 0.1;
+}
+
+@media (max-width: 700px) {
+    .d-block {
+        width: 100%!important;
+        display: block!important;
+    }
+    .lp-high-cover h1 {
+        font: normal normal bold 30px Bebas Neue;
+        text-align: center;
+    }
+    .lp-high-cover .img-principal {
+        display: none;
+    }
+
+    article.col-info-product {
+        margin-top: 0;
+        width: 100%;
+    }
+    .col-info-product {
+        flex-direction: column-reverse;
+       display: flex!important;
+    }
+    .col-info-product .col-10 {
+        margin-top: 20px;
+    }
+    .col-info-product .col-2 {
+        width: 100%;
+        top: 20px;
+    }
+    .col-info-product .col-2 ul {
+        display: flex;
+        overflow: scroll;
+        width: 100%;
+    }
+    li.sku-color {
+        margin: 1px 10px;
+    }
+    ul.especificacoes-high-cover.d-flex li {
+        width: 80px;
+    }
+    h2.title-more-mobile {
+        text-align: left;
+        font: normal normal bold 14px/18px Montserrat;
+        padding-bottom: 10px;
+    }
+    .col-info-product p.preco-de {
+        text-decoration: line-through;
+        font-size: 10px;
+        font-family: 'Montserrat';
+    }
+    .col-info-product p.preco-por, .col-info-product p.parcelamento {
+        float: left;
+    }
+    .col-info-product .buy-box {
+        clear: both;
+    }
+    h2.title-more-mobile {
+        text-align: left;
+        font: normal normal bold 14px/18px Montserrat;
+        padding-bottom: 10px;
+    }
+    
+    span.buy-buttom-lp-high-cover {
+        padding: 5px 15px;
+    }
+    
+    p.parcelamento {top: 10px;position: relative;padding-left: 30px;}
+    .col-img-product .miniaturas img {
+        width: 100%;
+    }
+    .miniaturas {
+        overflow: scroll;
+    }
+    .miniaturas ul {
+        display: flex;
+        width: 410%;
+    }
+    .miniaturas ul li {
+        overflow: scroll;
+    }
+    li.sku-color.select {
+        top: 0;
+    }
+    .sel-qtd {
+        padding: 7px;
+        width: 70px;
+    }
+    .title-cor {
+        font: normal normal bold 24px/31px Bebas Neue;
+    }
+    .information-col {
+        width: 100%;
+    }
+    .information .container {
+        display: block;
+        padding: 70px 0;
+    }
+    .information h2 {
+        font-size: 20px;
+    }
+    h2.sombra-title {
+        position: absolute;
+        margin-top: -63px;
+        font-size: 50px;
+        margin-left: -10px;
+        opacity: 0.1;
+    }
+
+}

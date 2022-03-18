@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <meta name="google-site-verification" content="wFnFRVmXHRC9JYye-pbf9mkQWxmO7L5EtPj7NrUelIQ" />
+    <vtex:contentPlaceHolder id="Title page"/> 
+    <vtex:template id="Store-Mobile-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <link rel="stylesheet" href="/arquivos/store-mobile-home.css" />
+</head>
+
+<body>
+    <vtex:template id="Store-Mobile-Header" />
+
+    <main>
+        <section class="j-banner__main">
+            <div class="j-banner__slider">
+                <vtex:contentPlaceHolder id="Banners Slider Principal" />
+            </div>
+        </section>
+
+        <section class="j-home__tabs">
+            <div class="j-home__tabs--title">
+                <ul>
+                    <li data-tab-id="prevew">
+                        <vtex.cmc:arrowup />
+                    </li>
+                    <li data-tab-id="1">Olhos</li>
+                    <li data-tab-id="2" class="is--active">Lábios</li>
+                    <li data-tab-id="3">Pele</li>
+                    <li data-tab-id="next">
+                        <vtex.cmc:arrowdown />
+                    </li>
+                </ul>
+            </div>
+            <div data-tab-item="1" class="j-home__tabs-item">
+                <vtex:contentPlaceHolder id="banner 1" />
+                <vtex:contentPlaceHolder id="Vitrine 1" />
+            </div>
+            <div data-tab-item="2" class="j-home__tabs-item is--active">
+                <vtex:contentPlaceHolder id="banner 2" />
+                <vtex:contentPlaceHolder id="Vitrine 2" />
+            </div>
+            <div data-tab-item="3" class="j-home__tabs-item">
+                <vtex:contentPlaceHolder id="banner 3" />
+                <vtex:contentPlaceHolder id="Vitrine 3" />
+            </div>
+        </section>
+
+        <section class="j-mosaico">
+            <section class="j-mosaico__slider">
+                <vtex:contentPlaceHolder id="Banners Mosaico" />
+            </section>
+        </section>
+        
+        <div class="yv-testimonial" style="margin-top: 60px !important; margin-bottom:40px !important" data-qty="9"></div>
+
+        <section class='j-home__shelfs'>
+            <vtex:contentPlaceHolder id="Vitrine 4" />
+        </section>
+    </main>
+
+    <vtex:template id="Store-Mobile-Footer" />
+    <vtex:template id="Store-Common-Scripts" />
+    <vtex:template id="Store-Mobile-Scripts" />
+    <script type="text/javascript" src="/arquivos/store-mobile-home.js"></script> 
+    <vtex.cmc:popuphome />
+
+</body>
+</html>

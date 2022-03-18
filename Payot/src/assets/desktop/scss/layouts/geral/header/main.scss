@@ -1,0 +1,252 @@
+.j-main-header {
+    background-color: $color-white;
+
+    &__items {
+        display: flex;
+
+        .j-main-header__left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 40%;
+
+            .j-store__logo {
+                @include position('centralize');
+
+                a {
+                    padding: 29px 0px 25px;
+
+                    svg {
+                        width: 172px;
+                    }
+                }
+            }
+
+            .j-main-search {
+                width: 280px;
+                height: 34.5px;
+                border-bottom: 1px solid #000;
+
+                .busca {
+                    border: none;
+                    width: 100%;
+                    position: relative;
+
+                    &:before {
+                        content: '\f002';
+                        width: 22px;
+                        height: 22px;
+                        font-size: 22px;
+                        display: block;
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        color: $color-black;
+                    }
+
+                    legend,
+                    label,
+                    select {
+                        display: none;
+                    }
+
+                    input {
+                        width: 90%;
+                        border: none;
+                        font-size: 18px;
+                        padding-left: 10px;
+
+                        &.btn-buscar {
+                            width: 10%;
+                            padding-left: 0px;
+                            color: transparent;
+                            font-size: 0;
+                            background-color: transparent;
+                            border: none;
+                            cursor: pointer;
+                            height: 26px;
+                            display: block;
+                            position: absolute;
+                            right: 10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .j-main-header__middle {
+            width: 55%;
+            display: flex;
+            align-items: center;
+        }
+
+        .j-main-header__right {
+            width: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .j-user-login { 
+                cursor: pointer;
+                margin: 0px 10px;
+
+                path {
+                    fill: #000;
+                }
+
+                > span {
+                    svg {
+                        width: 20px;
+                    }
+                }
+
+                > div {
+                    z-index: 99;
+                    right: 100px;
+                    display: none;
+                    padding: 20px;
+                    position: absolute;
+                    border: 1px solid #000;
+                    background-color: #fff;
+
+                    p {
+                        margin-bottom: 10px;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #000;
+                    }
+                    
+                    li {
+                        margin-bottom: 10px;
+
+                        svg {
+                            width: 25px;
+                            margin-right: 10px;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                .welcome-vtex{
+                    a#login{
+                        display: block;
+                    }
+                }
+
+                &:hover {
+                    > div {
+                        display: block;
+                    }
+                }
+            }
+
+            .j-minicart {
+                margin: 0px 35px;
+
+                .j-minicart--icon {
+                    svg {
+                        width: 20px;
+                    }
+
+                    .portal-totalizers-ref {
+                        .cartInfoWrapper {
+                            .title {
+                                display: none;
+                            }
+
+                            .cart-info {
+                                .amount-products {
+                                    position: absolute;
+                                    top: 4px;
+                                    left: -25px;
+                                    font-weight: bold;
+                                    font-size: 18px;
+                                    width: 20px;
+                                    text-align: right;
+
+                                    strong {
+                                        display: none;
+                                    }
+                                }
+
+                                .amount-items,
+                                .amount-kits,
+                                .total-cart {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                    }
+
+                    &::after {
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 100%;
+                        background: #fb4f93;
+                        position: absolute;
+                        top: 0px;
+                        right: -5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.j-bottom-header {
+    display: block;
+    height: 34px;
+
+    a {
+        display: block;
+        text-align: center;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}
+.j-faixa {
+    background-color: #000;
+    position: relative;
+    height: 5;
+}
+
+.j-faixa__range {
+    background: #FB4F93;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+    z-index: 9;
+    height: 100%;
+}
+
+.j-faixa p {
+    position: relative;
+    z-index: 9;
+    padding: 8px 0;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 1024px) {
+    .j-faixa p {
+        font-size: 12px
+    }
+}

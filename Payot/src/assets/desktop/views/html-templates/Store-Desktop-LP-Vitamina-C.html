@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <link rel="stylesheet" href="/arquivos/store-desktop-vitamina.css" />
+</head>
+
+<body id="topo">
+    <vtex:template id="Store-Desktop-Header" />
+
+    <main>            
+        <div class="j-vitamina__top">
+
+            <div class="container">
+                <div class="j-vitamina__title">
+                    <h1>
+                        <vtex:contentPlaceHolder id="Título topo" />
+                    </h1>
+                </div>
+            </div>
+
+            <div class="j-vitamina__banner">
+                <vtex:contentPlaceHolder id="Banner topo" />
+
+                <div class="container">
+                    <div class="j-vitamina__banner--description">
+                        <vtex:contentPlaceHolder id="Texto do Banner" />
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+            
+        <div class="j-vitamina__middle">
+            <div class="container">
+                <div class="j-vitamina__middle--titles">
+                    <vtex:contentPlaceHolder id="Lista de Titulos" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="j-vitamina__bottom">
+            <div class="container">
+                <vtex:contentPlaceHolder id="Produtos" />
+            </div>
+        </div>
+    </main>
+
+    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Common-Scripts" />
+    <vtex:template id="Store-Desktop-Scripts" />
+    <script src="/arquivos/store-desktop-vitamina.js"></script>
+
+</body>
+</html>

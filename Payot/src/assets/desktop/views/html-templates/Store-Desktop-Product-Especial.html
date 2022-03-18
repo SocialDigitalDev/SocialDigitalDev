@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <link rel="stylesheet" href="https://payottatix.vteximg.com.br/arquivos/store-desktop-product.css" />
+</head>
+
+<body>
+    <vtex:template id="Store-Desktop-Header" />
+    <vtex:contentPlaceHolder id="Cor de Fundo da Pagina" />
+    <main>
+        <div class="container">
+            <vtex.cmc:breadCrumb />
+            <div class="j-content__product">
+                <div class="j-content__product--wrapper__infos">
+                    <div class="j-content__product--img">
+                        <vtex:contentPlaceHolder id="Imagem Produto 1" />
+                    </div>
+                    <div class="j-content__product--infos">
+                        <h1 class="j-product__name">
+                            <vtex.cmc:productName />
+                        </h1>
+
+                        <div class="j-rate">
+                            <!-- Inicio Yourviews -->
+                                <!-- Âncora na página do produto (De Preferência sempre manter próximo ao nome do produto)  -->
+                                <div id="yv-review-quickreview"></div>
+                            <!-- Final Yourviews -->
+                        </div>
+
+                        <div class="j-box-price">
+                            <vtex.cmc:skuRichSelection changeImage="1" />
+                            <vtex.cmc:skuPrice/>
+                        </div>
+                        
+                        <div class="j-box-buy">
+                            <div class="j-qty">
+
+                            </div>
+                            <div class="j-buy">
+                                <vtex.cmc:BuyButton />
+                            </div>
+                        </div>
+
+                        <div class="j-box-description">
+                            <vtex.cmc:ProductDescription />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="j-details">
+            <vtex:contentPlaceHolder id="Imagem Produto 2" />
+            <div class="container">
+                <h3 class="j-shelf__title">
+                    <span>
+                        detalhes
+                        <strong>informações</strong>
+                    </span>
+                </h3>
+                <vtex.cmc:productSpecification/>
+            </div>
+        </div>
+    </main>
+
+    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Common-Scripts" />
+    <vtex:template id="Store-Desktop-Scripts" />
+    <script type="text/javascript" src="https://payottatix.vteximg.com.br/arquivos/store-desktop-product.js"></script>
+</body>
+</html>

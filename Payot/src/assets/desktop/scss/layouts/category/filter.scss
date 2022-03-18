@@ -1,0 +1,80 @@
+.j-category {
+
+    &__filter {
+
+        .menu-navegue {
+            display: none;
+        }
+
+        .j-category__searchNavigator {
+
+            .menu-departamento {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 21px 0 16px;
+
+                h3,
+                h5 {
+                    display: none;
+                }
+
+                h4 {
+                    font-family: $font-bebas;
+                    font-size: 34px;
+                    line-height: 42px;
+                    color: $color-black;
+                    display: flex;
+                    text-transform: uppercase;
+                    align-items: center;
+
+                    &::after {
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        background: #000;
+                        display: block;
+                        margin: 0px 35px;
+                        border-radius: 100%;
+                    }
+
+                    &:last-of-type::after {
+                        display: none;
+                    }
+                }
+
+                ul {
+                    display: none;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+
+                    &.productClusterSearchableIds {
+                        display: none;
+                    }
+
+                    &::-webkit-scrollbar-button {
+                        display: none;
+                    }
+
+                    &::-webkit-scrollbar {
+                        width: 3px;
+                        background-color: rgba(204, 204, 204, 0.7);
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: $color-black;
+                    }
+
+                    li {
+                        a {
+                            display: block;
+                            font-size: 14px;
+                            margin: 10px 0;
+                            color: $color-black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

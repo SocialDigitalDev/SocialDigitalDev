@@ -1,0 +1,28 @@
+.j-product__rates {
+    .avaliacao {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .media {
+        width: 50%;
+    }
+    #ulPubliqueResenha {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+    }
+    .user-review {
+        h4 {
+            color: #585757;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 16.52px;
+        }
+    }
+}
+
+.trustvox-container{
+    margin-bottom: 20px;
+}

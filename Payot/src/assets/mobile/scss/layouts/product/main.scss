@@ -1,0 +1,21 @@
+.j-subtitle {
+    display: none;
+}
+
+.j-shelf {
+    .j-subtitle {
+        display: block;
+    }
+}
+
+.j-box-variations {
+    .sku-selector-container ul {
+        &::before {
+            content: "Selecione a variação";
+            color: #002F6C;
+            font-size: 24px;
+            margin: 20px 0;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <link rel="stylesheet" href="/arquivos/lp-bia-todo-dia.css?v=05-11-2021-v3" />
+    <vtex:contentPlaceHolder id="title" />
+    <style>
+        .miniaturas ul li{
+            width: 70px !important;
+            height: auto !important;
+        }
+
+        .slick-arrow {
+            font-size: 0px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000;
+            border-right: 0;
+            border-bottom: 0;
+            position: absolute;
+            background: none;
+            z-index: 20;
+            left: 20%;
+        }
+
+        .slick-prev {
+            transform: translateY(-50%) rotate(45deg);
+            top: 0;
+        }
+
+        .slick-next {
+            transform: translateY(-50%) rotate(-135deg);
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body id="topo">
+    <vtex:template id="Store-Desktop-Header" />
+
+        <main>            
+        <div>
+            <div>
+                <vtex:contentPlaceHolder id="Banner da categoria" />
+            </div>
+            <div class="container">
+                <vtex:contentPlaceHolder id="Titulo da LP" />
+                <section class="d-flex img-products d-block">
+                    <article class="col-img-product d-block">
+                        <div class="col-2 miniaturas">
+                            <ul>
+                                <li><img src="https://payottatix.vteximg.com.br/arquivos/ids/156706-1000-1000/789-66095-4553-9_1.jpg" alt="Imagem Kit Todo Dia"/></li>
+                                <li><img src="https://payottatix.vteximg.com.br/arquivos/ids/156706-1000-1000/789-66095-4553-9_1.jpg" alt="Imagem Kit Todo Dia"/></li>
+                                <li><img src="https://payottatix.vteximg.com.br/arquivos/ids/156706-1000-1000/789-66095-4553-9_1.jpg" alt="Imagem Kit Todo Dia"/></li>
+                                <li><img src="https://payottatix.vteximg.com.br/arquivos/ids/156706-1000-1000/789-66095-4553-9_1.jpg" alt="Imagem Kit Todo Dia"/></li>
+                                <li><img src="https://payottatix.vteximg.com.br/arquivos/ids/156706-1000-1000/789-66095-4553-9_1.jpg" alt="Imagem Kit Todo Dia"/></li>
+                            </ul>
+                        </div>
+                        <div class="col-10 img-principal">
+                            <img src="https://payottatix.vteximg.com.br/arquivos/ids/156706-1000-1000/789-66095-4553-9_1.jpg" alt="Imagem Kit Todo Dia"/>
+                        </div>
+                    </article>
+                    <article class="col-info-product d-block">
+                        <div class="col-12 d-block">
+                            <h2 class="title-cor">KIT COLEÇÕES BIA TODO DIA</h2>
+                            <p class="preco-de"></p>
+                            <p class="preco-por"></p>
+                            <p class="parcelamento"></p>
+                            <div class="buy-box">
+                                <span class="add-menos"></span><input type="tel" id="qtd" value="1" min="1"/><span class="add-mais"></span>
+                                <span class="buy-buttom-lp-bia-todo-dia">ADICIONAR AO CARRINHO</span>
+                                <input type="hidden" id="idSku" />
+                            </div>
+                            <ul class="especificacoes-bia-todo-dia d-flex">
+                                <li><img src="/arquivos/espec-1-pm.png" alt="Especificações Kit Todo Dia"/><span>Alta pigmentação</span></li>
+                                <li><img src="/arquivos/espec-2-pm.png" alt="Especificações Kit Todo Dia"/><span>Cores Vibrantes</span></li>
+                                <li><img src="/arquivos/espec-3-pm.png" alt="Especificações Kit Todo Dia"/><span>Fácil Aplicação</span></li>
+                                <li><img src="/arquivos/espec-4-pm.png" alt="Especificações Kit Todo Dia"/><span>Ótima fixação</span></li>
+                                <li><img src="/arquivos/espec-5-pm.png" alt="Especificações Kit Todo Dia"/><span>Não escorre</span></li>
+                                <li><img src="/arquivos/espec-6-pm.png" alt="Especificações Kit Todo Dia"/><span>Acabamento perfeito</span></li>
+                                <li><img src="/arquivos/espec-7-pm.png" alt="Especificações Kit Todo Dia"/><span>Cobertura impecável</span></li>
+                                <li><img src="/arquivos/espec-8-pm.png" alt="Especificações Kit Todo Dia"/><span>Aplicador diferenciado</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-2" style="margin-top:30px;">
+                            <ul>
+                                <li class="sku-color select"><span class="color-0-high-cover thumb-170778015"></span></li>
+                                <li class="sku-color"><span class="color-2-high-cover thumb-170778038"></span></li>
+                                <li class="sku-color"><span class="color-3-high-cover thumb-170778049"></span></li>
+                                <li class="sku-color"><span class="color-4-high-cover thumb-170778060"></span></li>
+                                <li class="sku-color"><span class="color-5-high-cover thumb-170778071"></span></li>
+                            </ul>
+                        </div>
+                    </article>
+                </section>
+                <section>
+                    <vtex:contentPlaceHolder id="Imagem Conteudo" />
+                </section>
+            </div>
+            <section class="information" style="display: none;">
+                <div class="container">
+                    <div class="information-col">
+                        <h2>INFORMAÇÕES</h2>
+                        <h2 class="sombra-title">DETALHES</h2>
+                        <div>
+                            <p class="info">Cor: </p>
+                            <p class="content-info cor">5 Cores</p>
+                        </div>
+                        <div>
+                            <p class="info">Produto: </p>
+                            <p class="content-info produto">Corretivo</p>
+                        </div>
+                        <div>
+                            <p class="info">Ação ou Benefício: </p>
+                            <p class="content-info acao-beneficio"></p>
+                        </div>
+                        <div>
+                            <p class="info">Modo de Uso: </p>
+                            <p class="content-info modo-de-uso"></p>
+                        </div>
+                    </div>
+                    <div class="information-col">
+                        <div>
+                            <p class="info">Volume da embalagem: </p>
+                            <p class="content-info volume">6ml</p>
+                        </div>
+                        <div>
+                            <p class="info">Composição: </p>
+                            <p class="content-info composicao"></p>
+                        </div>
+                        <div>
+                            <p class="info">Indicação: </p>
+                            <p class="content-info indicacao"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="js--scroll-top">
+        <a href="#topo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="#707070" opacity="0.6"/><path d="M32.954,314.685l14.718,13.8-14.2,13.428" transform="translate(-312.044 56.313) rotate(-90)" fill="none" stroke="#fff" stroke-width="4"/></svg>
+        </a>
+    </div>
+
+    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Common-Scripts" />
+    <vtex:template id="Store-Desktop-Scripts" />
+    <script src="/arquivos/lp-bia-todo-dia.js?v=29-11-2021-v4"></script>
+
+</body>
+</html>

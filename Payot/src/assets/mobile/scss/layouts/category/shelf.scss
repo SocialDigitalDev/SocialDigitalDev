@@ -1,0 +1,35 @@
+.j-shelf {
+    border-top: 1px solid $color-black;
+    padding-top: 16px;
+    
+    .j-shelf__item-brand {
+        a {
+            display: block;
+            color: #585757;
+            font-size: 10px;
+            font-weight: 400;
+            font-style: italic;
+            text-decoration: underline;
+            margin: 15px 0;
+        }
+    }
+
+    .j-shelf__item {
+        margin-bottom: 10px;
+        border: 1px solid #eee;
+        padding: 10px 10px 20px 10px;
+    }
+
+    .j-shelf__item-buy {
+        cursor: pointer;
+        text-align: center;
+        padding: 8px 5px;
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 9px;
+        background-color: $color-red;
+    }
+}

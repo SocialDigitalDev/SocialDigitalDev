@@ -1,0 +1,89 @@
+<div class="j-cookieAlert" style="display: none;">
+    <p>Utilizamos cookies para personalizar conteúdo e anúncios, fornecer recursos de mídia social e analisar nosso tráfego. Também compartilhamos informações sobre o uso do nosso site com nossos parceiros de mídia social, publicidade e análise. Ao clicar em Concordar e Fechar, você concorda com o uso de cookies e o processamento associado de suas informações.</p>
+    <button>Concordar e Fechar</button>
+</div>
+
+<style>
+    .j-cookieAlert {
+        display: flex;
+        bottom: 15px;
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 99%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 99999999;
+        padding: 26px 50px;
+        border-radius: 5px;
+        background: rgba(0,0,0,.8);
+    }
+    .j-cookieAlert p {
+        color: #fff;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 300;
+        font-family: 'Roboto', sans-serif;
+        z-index: 99999;
+        text-align: justify;
+    }
+    .j-cookieAlert button {
+        width: 275px;
+        height: 36px;
+        color: #000;
+        font-size: 14px;
+        font-weight: 100;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px;
+        cursor: pointer;
+        margin-left: 10px;
+        z-index: 99999;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        background: #fff;
+        border-radius: 2px;
+    }
+    @media only screen and (max-width: 600px) {
+        .j-cookieAlert {
+            flex-direction: column;
+        }
+
+        .j-cookieAlert > * {
+            margin: 10px 0px;
+        }
+    }
+</style>
+
+<script>
+    $('document').ready(function(){
+        show();
+    })
+    function verify(){
+        var cookie = localStorage.getItem('acceptCookie');
+
+        if(cookie != null){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    function show() {
+        var cookieEl = document.querySelector('.j-cookieAlert');
+        if(verify()){
+            cookieEl.style.display = "flex";
+        }
+        $('.j-cookieAlert button').on('click', function(){
+            hide();
+        });
+    }
+    
+    function hide() {
+        var cookieEl = document.querySelector('.j-cookieAlert');
+        cookieEl.style.display = "none";
+
+        localStorage.setItem('acceptCookie', 'true');
+    }
+</script>
