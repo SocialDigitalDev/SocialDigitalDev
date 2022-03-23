@@ -113,6 +113,7 @@ $(document).ready(function () {
                                 "<li class='header-user__name'><span class='icon-user'></span>Olá, " + (nome || email) + "</li>" +
                                 "<li class='orders'><a href='/account/orders'>Meus Pedidos</a></li>" +
                                 "<li class='login'><a href='/account'>Minha Conta</a></li>" +
+                                "<li class='assina'><a href='/_secure/account#/subscriptions'>Clube de Assinatura</a></li>" +
                                 "<li class='sair'><span class='icon-exit'></span><a href='/no-cache/user/logout'>Sair</a></span></li>" +
                                 "</ul>");
                         } else {
