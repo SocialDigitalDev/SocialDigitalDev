@@ -2621,7 +2621,7 @@ body.loginOff .user-name__account:after {
     font-size: 14px;
     transition: all .5s ease-in-out;
     top: 8px;
-    position: absolute;
+    /* position: absolute; */
     right: 30px
 }
 
@@ -3602,7 +3602,9 @@ body>.ajax-content-loader {
     padding: 0;
     padding: 12px 20px 13px 20px !important
 }
-
+.header .container .container-center .header-user-links>div{
+    margin: 0 10px 0 0;
+}
 /* Como Assinar Botao HEADER */
 .como_assinar{
     /* display: block!important; */
@@ -3613,13 +3615,23 @@ body>.ajax-content-loader {
     flex-wrap: nowrap;
     text-align: center;
     position: relative;
-    margin: 0 30px 0 0;
+    margin: 0 10px 0 0;
+    padding: 0 10px;
 }
 .como_assinar a{
-    color: rgba(51, 217, 178, 1);
+    background: rgba(51, 217, 178, 1);
+    color: #2E2E2E;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 0px;
+    transition: all ease-in-out .5s;
+}
+.como_assinar a:hover {
+    background: rgb(43, 199, 163);
 }
 .como_assinar a svg{
     width: 30px;
+    display: none;
 }
 /*
 .como_assinar::before{
@@ -6824,7 +6836,15 @@ a#business-toggle[data=on]:after {
         display: none;
 }
 
-    
+/* Banner AAssinatura */
+.render-route-subscriptions-portal-embedded-router::before{
+    width: 100%;
+    content: " ";
+    background-image: url(/https://forfitbox.vteximg.com.br/arquivos/forfitbox-barra-fluxo.png);
+    position: absolute;
+    left: -16px;
+    top: -6px;
+}
 /* Filtros Departamentos */
 
 .search-single-navigator {
@@ -8409,9 +8429,13 @@ table.Especificacoes tbody td {
     padding: 0 30px;
     margin: 30px 0 0 0
 }
-
+.nova-pdp .right > .box-tab.espec.hide{
+    display: none!important;
+    padding: 0;
+}
 .hide {
-    display: none
+    display: none!important;
+    padding:0;
 }
 
 .forfit-produto #produtoDiv-direita .product-container {
@@ -12792,7 +12816,8 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
     }
     .header-principal__menu #brand {
         margin: 0 auto;
-        width: 100%
+        width: 100%;
+        text-align: center
     }
     .menu-topo .header-user {
         background: url(/arquivos/bg-mobile-top-menu.jpg) no-repeat center center;
@@ -12889,17 +12914,22 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
         font-weight: 100
     }
     .header-user .orders {
-        border-right: 1px solid #989898
+        border-right: 1px solid #fff
+    }
+    .header-user .assina{
+        border-left: 1px solid #fff;
     }
     .header-user .orders,
-    .header-user .login {
-        width: 50%;
-        flex: 0 0 50%;
-        max-width: 50%;
-        border-bottom: 1px solid #989898;
-        border-top: 1px solid #989898;
+    .header-user .login,
+    .header-user .assina {
+        width: 33%;
+        flex: 0 0 33%;
+        max-width: 33%;
+        border-bottom: 1px solid #fff;
+        border-top: 1px solid #fff;
         line-height: initial;
-        text-align: center
+        text-align: center;
+        padding: 20px;
     }
     .header-user .orders a:before {
         content: "\e905";
@@ -12919,11 +12949,23 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
         margin-right: 20px;
         font-weight: 100
     }
+    .header-user .assina a:before{
+        font-family: "4fitbox";
+        content: "\e944";
+        color: #ffffff;
+        font-size: 22px;
+        margin-right: 20px;
+        font-weight: 100;
+        float: left;
+    }
     .header-user .sair {
         text-align: center;
         width: 100%;
-        padding: 4px 0;
+        padding: 10px 0;
         margin-bottom: 2px
+    }
+    .como_assinar{
+        display: none;
     }
     .menu-topo .menu-principal {
         width: 100%;
@@ -12949,7 +12991,7 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
     .menu-topo .menu-principal li.itemMenu a {
         width: 100%;
         float: left;
-        padding: 15px;
+        padding: 20px;
         color: #FFFFFF;
         font-weight: 400;
         font-size: 18px;
@@ -14102,10 +14144,14 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
     #resize #menu li.orders {
         border-right: 0
     }
+    .header-user .assina{
+        border-left: 0;
+    }
     #resize #menu li.orders,
     #resize #menu li.login,
     .header-user .orders,
-    .header-user .login {
+    .header-user .login,
+    .header-user .assina {
         width: 100%;
         flex: 0 0 100%;
         max-width: 100%;
@@ -14113,7 +14159,7 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
         border-top: 0 solid #989898;
         line-height: initial;
         text-align: center;
-        padding: 10px 0
+        padding: 20px 0;
     }
     .menu-topo ul.header-user li.header-user__name {
         margin-bottom: 20px
