@@ -1,0 +1,57 @@
+/*modal*/
+.ext-modal {
+    position: fixed;
+    z-index: 20000000;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow-y: auto;    
+    background: rgba(0,0,0,0.75);
+}
+.wrap-modal {
+    display: table;
+    height: 100%;
+    width: 100%;
+
+    .inner-modal {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 30px;
+    }
+
+    .dialog {
+        position: relative;
+        margin: 0 auto;
+        box-sizing: border-box;
+        background: #fff;       
+        border-radius: $radius;
+        overflow: hidden;
+    }
+
+    .link-close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        border-radius: 50%;
+        position: absolute;     
+        background:#000;
+        right: 10px;
+        top: 10px;
+        width: 30px;
+        height: 30px;       
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        line-height:1;
+        text-shadow: none;
+        color: #fff !important;
+
+        &:after {
+            content: "\000D7";
+        }
+    }
+    
+}
+

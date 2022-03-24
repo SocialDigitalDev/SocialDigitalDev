@@ -1,0 +1,21 @@
+@media (max-width: $screen-tb) {   
+ 	.forfit-produto #produtoDiv-direita #product-details-wrapper {
+	    width: auto !important;
+	    padding-right: 0 !important;
+	    position: relative;
+	}
+	#produtoDiv-direita{
+	    .left-col {
+	        @include row;	        	        
+	    }
+	    .right-col  {
+	        @include row;	        
+	        position:initial !important;
+	        margin-bottom: 30px; 
+	    }
+	}
+}
+
+@media (max-width: $screen-mb) {
+    
+}
