@@ -5065,10 +5065,16 @@ body>.ajax-content-loader {
 }
 
 .prat-action {
-    display: flex;
-    width: 100%;
+    text-align: center;
+    width: 60%;
     margin-top: 20px;
-    float: left
+    /* float: left; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .forfit-prateleira>ul li .data .forfit-buy,
@@ -5078,7 +5084,8 @@ body>.ajax-content-loader {
 }
 
 .forfit-prateleira>ul li .data .forfit-buy a,
-.forfit-prateleira>ul li .data .add a {
+.forfit-prateleira>ul li .data .add a,
+.forfit-prateleira>ul li .prat-action a{
     color: #fff;
     width: 100%;
     padding: 10px 0;
@@ -5095,7 +5102,8 @@ body>.ajax-content-loader {
 }
 
 .forfit-prateleira>ul li .data .forfit-buy a::before,
-.forfit-prateleira>ul li .data .add a::before {
+.forfit-prateleira>ul li .data .add a::before,
+.forfit-prateleira>ul li .prat-action a::before {
     position: relative;
     display: inline-block;
     color: #fff;
@@ -5245,7 +5253,8 @@ body>.ajax-content-loader {
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    color: #989898
+    color: #989898;
+    margin-bottom: 20px;
 }
 
 .forfit-prateleira .price .valBoleto {
