@@ -21,13 +21,13 @@ $(document).ready(function () {
 
 				$.each(PoloMenu, function (i, field) {
 
-					menu.append('<li class="itemMenu cat' + field.id + ' cat-index-' + i + '"><a href="' + field.url + '?PS=40&O=OrderByBestDiscountDESC" title="' + field.name + '">' + field.name + '</a><div class="box-subMenu"><div class="container-center"><ul class="subCategoria"></ul></div></div></li>');
+					menu.append('<li class="itemMenu cat' + field.id + ' cat-index-' + i + '"><a href="' + field.url + '?PS=40&O=OrderByReleaseDateDESC" title="' + field.name + '">' + field.name + '</a><div class="box-subMenu"><div class="container-center"><ul class="subCategoria"></ul></div></div></li>');
 
 					$(PoloMenu[i].children).each(function (ii, el) {
 						var subCatId = PoloMenu[i].children[ii].id;
 						var subCatNome = PoloMenu[i].children[ii].name;
 						var subCatUrl = PoloMenu[i].children[ii].url;
-						$('.cat-index-' + i).find('.subCategoria').append('<li id="' + subCatId + '" class="subItem"><a href="' + subCatUrl + '?PS=40&O=OrderByBestDiscountDESC" class="linkBy">' + subCatNome + '</a></li>');
+						$('.cat-index-' + i).find('.subCategoria').append('<li id="' + subCatId + '" class="subItem"><a href="' + subCatUrl + '?PS=40&O=OrderByReleaseDateDESC" class="linkBy">' + subCatNome + '</a></li>');
 					});
 
 				});
@@ -1750,7 +1750,7 @@ $(document).ready(function () {
 											use o cupom e ganhe <strong>10% Off</strong>
 										</p>
 										<p class="cupom">CONVICTO</p>
-										<a class="link" href="/264?PS=40&map=productClusterIds&O=OrderByBestDiscountDESC">Acesse a coleção</a>
+										<a class="link" href="/264?PS=40&map=productClusterIds&O=OrderByReleaseDateDESC">Acesse a coleção</a>
 									</div>
 								`
 							} else if (answer2 >= answer1 + answer3 + answer4 && answer2 != answer1 && answer2 != answer3 && answer2 != answer4) {
@@ -1764,7 +1764,7 @@ $(document).ready(function () {
 											use o cupom e ganhe <strong>10% Off</strong>
 										</p>
 										<p class="cupom">CONTRARIADO</p>
-										<a class="link" href="/268?PS=40&map=productClusterIds&O=OrderByBestDiscountDESC">Acesse a coleção</a>
+										<a class="link" href="/268?PS=40&map=productClusterIds&O=OrderByReleaseDateDESC">Acesse a coleção</a>
 									</div>
 								`
 							} else if (answer3 >= answer1 + answer2 + answer4 && answer3 != answer1 && answer3 != answer2 && answer3 != answer4) {
@@ -1778,7 +1778,7 @@ $(document).ready(function () {
 											use o cupom e ganhe <strong>10% Off</strong>
 										</p>
 										<p class="cupom">OTIMISTA</p>
-										<a class="link" href="/265?PS=40&map=productClusterIds&O=OrderByBestDiscountDESC">Acesse a coleção</a>
+										<a class="link" href="/265?PS=40&map=productClusterIds&O=OrderByReleaseDateDESC">Acesse a coleção</a>
 									</div>
 								`
 							} else if (answer4 >= answer1 + answer2 + answer3 && answer4 != answer1 && answer4 != answer2 && answer4 != answer3) {
@@ -1792,7 +1792,7 @@ $(document).ready(function () {
 											use o cupom e ganhe <strong>10% Off</strong>
 										</p>
 										<p class="cupom">SOZINHONUNCA</p>
-										<a class="link" href="/266?PS=40&map=productClusterIds&O=OrderByBestDiscountDESC">Acesse a coleção</a>
+										<a class="link" href="/266?PS=40&map=productClusterIds&O=OrderByReleaseDateDESC">Acesse a coleção</a>
 									</div>
 								`
 							} else if (answer1 == answer2 || answer1 == answer3 || answer1 == answer4 || answer2 == answer3 || answer2 == answer4 || answer3 == answer4) {
@@ -1806,7 +1806,7 @@ $(document).ready(function () {
 											use o cupom e ganhe <strong>10% Off</strong>
 										</p>
 										<p class="cupom">CONFUSO</p>
-										<a class="link" href="/267?PS=40&map=productClusterIds&O=OrderByBestDiscountDESC">Acesse a coleção</a>
+										<a class="link" href="/267?PS=40&map=productClusterIds&O=OrderByReleaseDateDESC">Acesse a coleção</a>
 									</div>
 								`
 							}
