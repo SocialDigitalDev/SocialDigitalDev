@@ -60,6 +60,7 @@ header.header{
                 @include justify-content(space-between);
                 @include align-items(center);
                 .logo-social{
+                    max-width: 160px;
                     @include mq(r980){
                         order: 2;
                         margin-left: 20%;
