@@ -1,0 +1,60 @@
+/* ==========================================================================
+   VARIABLE
+   ========================================================================== */
+/*font weight*/
+$sLight:300;
+$sRegular:400;
+$sSemibold:600;
+$sBold:700;
+
+/*colors*/
+$base: #000;
+$primaryColor:#2C005E;
+$secondaryColor:#3654E3;
+
+
+$button: #212121;
+$buttonHover:#000;
+
+$border:#ddd;
+$text: #888;
+$light:#f3f3f3;
+
+/*radius*/
+$radius:6px;
+$radius2:3px;
+
+$container:1520px;
+$containerSmall:1280px;
+
+$column: 10px;
+$bleed: 50px;
+$gap: 15px;
+
+/*media*/
+$screen-tv:1600px; //monitor
+$screen-dk:1440px; //notebook
+$screen-tb:1024px; //tablet
+$screen-mb:492px; //mobile
+
+@mixin row {	
+	float: none;
+	clear: both;
+	width: 100%;
+	box-sizing:border-box;
+}
+.c-row {clear:both; float:none}
+.c-row:before { display: table; content: ""}
+.c-row:after { clear: both; display: table; content: ""}
+
+body{
+	&.noScroll {
+		position: fixed;
+	    //overflow: hidden;
+	    top: 0px;
+	    right: 0px;
+	    bottom: 0px;
+	    width: 100%;
+	    height: 100%;
+	}
+}
