@@ -1,0 +1,29 @@
+<!-- INSERIR NOS E-MAILS TRANSACIONAIS DE ORDER SHIPPED E ORDER INVOICED TODA NOVA LOJA -->
+
+<!-- INSERIR EM ORDER SHIPPED INIT -->
+<tr>
+    <td style=" text-align: center !important;">
+        <h2 style="margin: 0; font-size: 20px; line-height: 24px; font-weight: 700; box-sizing: border-box;color:#707070;text-align:center; margin:50px 0;">CÓDIGO DE RASTREIO</h2>
+        {{#if package}}
+            {{#if package.trackingNumber}}
+                <h2 style="margin: 0; font-size: 20px; line-height: 24px; font-weight: 300; box-sizing: border-box;color:#707070;text-align:center; margin:50px 0;">{{package.trackingNumber}}</h2>
+                <p>Você pode consultar o número de rastreamento <a href="https://rastreamento.correios.com.br/app/index.php">clicando aqui</a></p>
+            {{/if}}
+            {{#if package.trackingUrl}}
+                <h2 style="margin: 0; font-size: 20px; line-height: 24px; font-weight: 300; box-sizing: border-box;color:#707070;text-align:center; margin:50px 0;"><a href="">{{package.trackingUrl}}</a></h2>
+            {{/if}}
+        {{/if}}
+    </td>
+</tr>
+<!-- INSERIR EM ORDER SHIPPED END -->
+
+
+<!-- INSERIR EM INVOICED INIT -->
+<tr>
+  <td>
+      <h2 style="text-align:center; margin: 1em 0;">Chave de acesso da sua nota fiscal:</h2>
+      <p style="text-align:center;">{{package.invoiceKey}}</p>
+      <p style="text-align:center;">Utilize a chave da Nota Fiscal para consultar o documento <a href="https://www.nfe.fazenda.gov.br/portal/consultaRecaptcha.aspx?tipoConsulta=resumo&tipoConteudo=7PhJ+gAVw2g=">clicando aqui</a></p>
+  </td>
+</tr>
+<!-- INSERIR EM INVOICED END -->
