@@ -60,7 +60,7 @@
     border: none;
     outline: none;
     opacity: 0;
-    visibility: hidden;
+   /* visibility: hidden;*/
     background: #fff;
     -webkit-transform: translateY(1rem);
             transform: translateY(1rem);
@@ -92,7 +92,7 @@
     border: none;
     outline: none;
     opacity: 0;
-    visibility: hidden;
+    /*visibility: hidden;*/
     background: none;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -292,12 +292,13 @@
     .header .navbar.active {
         left: 0rem;
         opacity: 1;
-        visibility: visible;
+       visibility: visible;
     }
     .header .menu {
         width: 95%;
         height: auto;
         margin: 2rem 0;
+        background: #fff;
     }
     .header .menu > .menu-item{
         display: block;
@@ -327,6 +328,16 @@
         padding: 1rem 1.25rem;
         color: #000;
     }
+    .header .menu > .menu-item.m-end:hover > a {
+        color: #000;
+    }
+    .header .menu > .menu-item.m-end{
+        background: #fff;
+        margin: 0;
+    }
+    .header .menu > .menu-item.m-end > a:after{
+        display: none;
+    }
     .header .menu > .menu-item > a .expand::before, 
     .header .menu > .menu-item > a .expand::after {
         background: transparent;
@@ -351,6 +362,9 @@
                 box-shadow: none;
         -webkit-transform: translateY(0px);
                 transform: translateY(0px);
+    }
+    .header .menu > .menu-item > .sub-menu:active {
+        -webkit-transition: opacity 1s ease-out;
     }
     .header .menu > .menu-item > .sub-menu > .menu-item > a {
         padding: 0.625rem 2rem;
