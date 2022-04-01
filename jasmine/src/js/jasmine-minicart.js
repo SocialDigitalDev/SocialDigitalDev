@@ -64,7 +64,7 @@ var minicart = {
             .then(function () {
                 var r = vtexjs.checkout.orderForm.items[t].quantity;
                 e > r
-                    ? Swal.fire({ type: "info", title: "VocÃª jÃ¡ possui o limite deste produto no carrinho", showConfirmButton: false, timer: 100 }).then(function () {
+                    ? Swal.fire({ type: "info", title: "VocÃƒÂª jÃƒÂ¡ possui o limite deste produto no carrinho", showConfirmButton: false, timer: 100 }).then(function () {
                           minicart.toggleMinicartTimeout();
                       })
                     : Swal.fire({ type: "success", title: "Quantidade atualizada no carrinho", showConfirmButton: false, timer: 100 }).then(function () {
@@ -76,8 +76,18 @@ var minicart = {
         var t = vtexjs.checkout.orderForm.items.length,
             e = (vtexjs.checkout.orderForm.items.length, 0);
             var total;           
-            if (vtexjs.checkout.orderForm && vtexjs.checkout.orderForm.totalizers && vtexjs.checkout.orderForm.totalizers && vtexjs.checkout.orderForm.totalizers[0] && vtexjs.checkout.orderForm.totalizers && vtexjs.checkout.orderForm.totalizers[0].value){
+            if (vtexjs.checkout.orderForm && 
+                vtexjs.checkout.orderForm.totalizers && 
+                vtexjs.checkout.orderForm.totalizers && 
+                vtexjs.checkout.orderForm.totalizers[0] && 
+                vtexjs.checkout.orderForm.totalizers && 
+                vtexjs.checkout.orderForm.totalizers[0].value && 
+                vtexjs.checkout.orderForm.totalizers[1] && 
+                vtexjs.checkout.orderForm.totalizers[1].id === "Discounts" && 
+                vtexjs.checkout.orderForm.totalizers[1].value){
                 total = vtexjs.checkout.orderForm.totalizers[0].value + vtexjs.checkout.orderForm.totalizers[1].value; 
+            }else if (vtexjs.checkout.orderForm && vtexjs.checkout.orderForm.totalizers && vtexjs.checkout.orderForm.totalizers && vtexjs.checkout.orderForm.totalizers[0] && vtexjs.checkout.orderForm.totalizers) {
+                total = vtexjs.checkout.orderForm.totalizers[0].value;
             }else{
                 $(".header-cart--info-value").html("R$ 00,00"), $(".header-minicart-value").html("R$ 00,00");
             }
