@@ -2,8 +2,8 @@
   "name": "shopmulti",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:vtex-developers/vtex-boilerplate.git",
-  "author": "Rodrigo Reis <br.rodrigoreis@gmail.com>",
+  "repository": "https://github.com/SocialDigitalDev/SocialDigitalDev",
+  "author": "Social Digital Commerce <marketing@socialdigitalcommerce.com.br>",
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.10.2",
@@ -35,7 +35,7 @@
     "webpack-glob-entry": "^2.1.1"
   },
   "scripts": {
-    "dev": "webpack --config ./webpack/webpack.dev.js --watch --mode development --env.STORE_NAME=shopmulti",
+    "dev": "webpack --config ./webpack/webpack.dev.js --watch --mode development --env.STORE_NAME=lojashopmulti",
     "build": "webpack --config ./webpack/webpack.prod.js  --mode production"
   },
   "devDependencies": {
