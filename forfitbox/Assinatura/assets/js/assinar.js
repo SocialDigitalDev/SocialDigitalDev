@@ -19,6 +19,7 @@
 			linkInfo: 'Como funciona a assinatura?',
 			shippingDay: [5, 15, 25],
 			plan: [
+				{'frequency':'2','periodicity':'week', 'text':'Quinzenal - A cada 2 semanas'},
 				{'frequency':'1','periodicity':'month', 'text':'Mensal - Todo mês'},
 				{'frequency':'2','periodicity':'month', 'text':'Bimestral - A cada 2 mêses'}
 			],
