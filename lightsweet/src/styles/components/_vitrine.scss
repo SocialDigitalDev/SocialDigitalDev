@@ -4,6 +4,26 @@
     > h2{
         display: none;
     }
+    .flag-desconto{
+        position: absolute;
+        z-index: 9;
+        left: 5px;
+        top: 15px;
+        .porcentagem{
+            background: #7D0704;
+            color: #fff;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            font-weight: 700;
+            @include d(celularLarge){
+                font-size: 15px;
+            }
+            &:after{
+                content: "%";
+            }
+        }
+    }
     @include d(celularLarge){
         &:not(.otl){
             .slick-list{
