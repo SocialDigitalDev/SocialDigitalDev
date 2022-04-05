@@ -14568,3 +14568,15 @@ img.img-categoria-pf {
         padding: 9px 20px;
     }
 }
+
+/* LP Casas Bahia */
+
+.casasbahia.landing-page main .container {
+    margin-top: 3em;
+}
+
+.casasbahia.landing-page main .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 3em;
+}
