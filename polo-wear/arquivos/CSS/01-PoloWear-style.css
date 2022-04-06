@@ -14591,7 +14591,7 @@ img.img-categoria-pf {
     display: none;
 }
 .casasbahia .prat-right_Look {
-    width: 100%;
+    width: 50%;
     margin-left: 2em;
 }
 .casasbahia .prat-right_Look h1 {
@@ -14662,5 +14662,8 @@ img.img-categoria-pf {
     }
     .casasbahia .quatro-banners {
         grid-template-columns: repeat(1,1fr);
+    }
+    .casasbahia .container.slide-mobile.last {
+        margin-top: 2em;
     }
 }
