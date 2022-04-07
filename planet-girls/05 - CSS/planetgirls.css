@@ -15117,3 +15117,160 @@ th.name-field.Composicao {
         bottom: initial;
     }
 }
+
+/* LP - Casas Bahia */
+
+.casasbahia.landing-page .box-banner, .casasbahia.landing-page .banner-full video {
+    background: none;
+}
+.casasbahia .container-full {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.casasbahia .prat-left__bannervip {
+    margin: 0;
+    width: 50%;
+}
+.casasbahia .prat-right_Look h1{
+    font-size: 40px;
+    max-width: 500px;
+}
+.casasbahia .prat-right_Look p {
+    font-size: 20px;
+    max-width: 500px;
+    margin: 1.5em;
+    font-weight: 500;
+}
+.casasbahia .banner-categoria .container-center {
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.casasbahia.landing-page .banner-categoria .box-banner {
+    flex: initial;
+    margin: 1em 10px;
+    margin-bottom: 5em;
+}
+.casasbahia .banner-categoria .box-banner a {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.casasbahia .banner-categoria .box-banner a p {
+    margin-top: 1em;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.casasbahia .banner-categoria .box-banner:last-child a p {
+    font-weight: 800;
+    color: #e5006d;
+}
+.casasbahia .banner-promocionais .container-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 100%;
+    padding: 0 1em;
+}
+.casasbahia .banner-promocionais .container-center .box-banner a p {
+    font-size: 50px;
+    font-family: 'Bebas neue', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    background: #EF3DC2;
+    color: #fff;
+    max-width: 321px;
+    margin: auto;
+    border-radius: 18px;
+    transition: .3s all ease;
+    margin-top: 0.5em;
+}
+.casasbahia .banner-promocionais .container-center .box-banner a p:hover{
+    opacity: .7;
+}
+.casasbahia .texto-promocional .container-center {
+    text-align: center;
+    margin: 3em auto;
+    max-width: 1320px;
+}
+.casasbahia .texto-promocional .container-center h2 {
+    font-size: 40px;
+    color: #E3116E;
+    margin-bottom: 1em;
+}
+.casasbahia .texto-promocional .container-center p {
+    font-size: 22px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 1em;
+    line-height: 33px;
+}
+.casasbahia.landing-page .banner-categoria .box-banner a img,
+.casasbahia.landing-page .banner-promocionais .box-banner a img {
+    transition: .3s all ease;
+}
+.casasbahia.landing-page .banner-categoria .box-banner:hover a img,
+.casasbahia.landing-page .banner-promocionais .box-banner:hover a img {
+    transform: scale(1.02);
+    box-shadow: none;
+}
+@media (max-width: 1440px){
+    .casasbahia.landing-page .banner-promocionais .box-banner:nth-of-type(2){
+        margin: 0 2em;
+    }
+}
+@media (max-width: 1100px){
+    .casasbahia .prat-right_Look h1 {
+        font-size: 30px;
+        max-width: 400px;
+    }
+    .casasbahia .prat-right_Look p{
+        font-size: 16px;
+        max-width: 400px;
+    }
+}
+@media (max-width: 500px){
+    .casasbahia .container-full{
+        flex-flow: column;
+    }
+    .casasbahia .prat-left__bannervip{
+        width: 100%;
+    }
+    .casasbahia .prat-right_Look h1{
+        max-width: 100%;
+        padding: 0 1em;
+    }
+    .casasbahia .prat-right_Look p {
+        font-size: 16px;
+        max-width: 100%;
+        padding: 0 0.5em;
+    }
+    .casasbahia .prat-right_Look {
+        margin-top: 2em;
+    }
+    .casasbahia .slick-dots{
+        bottom: 30px;
+    }
+    .casasbahia .slick-list {
+        padding-left: 0 !important;
+    }
+    .casasbahia .banner-promocionais .slick-dots {
+        bottom: -40px;
+    }
+    .casasbahia .texto-promocional .container-center h2{
+        font-size: 25px;
+        margin-top: 1em;
+    }
+    .casasbahia .texto-promocional .container-center p{
+        font-size: 17px;
+        line-height: 25px;
+    }
+    .casasbahia .banner-promocionais .container-center .box-banner a p{
+        font-size: 35px;
+        max-width: 240px;
+    }
+    .casasbahia .banner-categoria .slick-dots li button{
+        border: 1px solid #e5007e;
+    }
+}

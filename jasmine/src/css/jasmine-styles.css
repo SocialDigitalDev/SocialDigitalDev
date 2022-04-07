@@ -226,7 +226,7 @@ span.btn-menu-mobile {
 }
 .header #logo-top a svg {
     width: 7.5rem;
-    height: 2rem; 
+    height: 3rem; 
 	display: flex;
 }
 .header .nav {
@@ -3117,6 +3117,9 @@ footer a:hover {
 .inner-footer .footer-logo{
 	width: 100%;
 	margin-bottom: 20px;
+}
+.inner-footer .footer-logo svg{
+	max-width: 170px;
 }
 .footer-items {
 	padding: 10px 20px;
@@ -11668,7 +11671,8 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 	.header #logo-top,
 	.header #logo-top a {
 		width: 215px;
-		top: 10px;
+		top: 3px;
+		left: 45%;
 	}
 	.cuponeria .jasmine-departamento__topo .nomeDepartamento {
 		margin-top: 186px;

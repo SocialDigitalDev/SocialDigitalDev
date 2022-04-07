@@ -14568,3 +14568,102 @@ img.img-categoria-pf {
         padding: 9px 20px;
     }
 }
+
+/* LP Casas Bahia */
+
+.casasbahia.landing-page main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.casasbahia.landing-page main .container {
+    margin-top: 2em;
+}
+
+.casasbahia main .vip-section .container {
+    margin: 4em 0;
+    margin-top: 5em;
+}
+.casasbahia .slide-principal.last {
+    margin-bottom: 3em;
+}
+.casasbahia.landing-page .polo-alt-title{
+    display: none;
+}
+.casasbahia .prat-right_Look {
+    width: 50%;
+    margin-left: 2em;
+}
+.casasbahia .prat-right_Look h1 {
+    max-width: 400px;
+    margin: 0;
+    margin-bottom: 1em;
+    font-size: 40px;
+}
+.casasbahia .container-full {
+    display: flex;
+    align-items: center;
+}
+.casasbahia .prat-right_Look p {
+    font-size: 22px;
+    max-width: 575px;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+.casasbahia .prat-right_Look p:last-child {
+    margin-bottom: 0;
+    margin-top: 2em;
+}
+.casasbahia .quatro-banners {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 35px;
+}
+.casasbahia .box-banner:hover a img {
+    transform: scale(1.02);
+}
+.casasbahia .box-banner a img {
+    transition: .3s all ease;
+}
+@media (max-width: 1366px){
+    .casasbahia.landing-page main {
+        padding: 0 2em;
+    }
+}
+@media (max-width: 500px){
+    .casasbahia .container-full {
+        flex-flow: column;
+        margin-top: 2em;
+    }
+    .casasbahia .prat-right_Look {
+        width: 100%;
+        margin-left: 0em;
+    }
+    .casasbahia main .vip-section .container {
+        margin: 2em 0;
+    }
+    .casasbahia .prat-left__bannervip{
+        margin-bottom: 1em;
+    }
+    .casasbahia .prat-right_Look h1 {
+        font-size: 34px;
+        max-width: 100%;
+        margin-bottom: 0.5em;
+    }
+    .casasbahia .prat-right_Look p {
+        font-size: 19px;
+    }
+    .casasbahia .prat-right_Look p:last-child {
+        margin-bottom: 0;
+        margin-top: 1em;
+    }
+    .casasbahia.landing-page main .container {
+        margin-top: 0em;
+    }
+    .casasbahia .quatro-banners {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .casasbahia .container.slide-mobile.last {
+        margin-top: 2em;
+    }
+}

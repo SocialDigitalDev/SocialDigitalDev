@@ -805,7 +805,7 @@ $(document).ready(function () {
                 });
             }
             if (scre < 500) {
-                $('.banner-categoria .container-center').slick({
+                $('.planet-home .banner-categoria .container-center').slick({
                     slidesToScroll: 1,
                     slidesToShow: 1,
                     infinite: true,
@@ -1531,6 +1531,41 @@ $(document).ready(function () {
             var newText = descriptionText.replace('_x000d_', '<br>');
             $('.productDescription').html(newText);
         },
+        
+        // LP Casas Bahia
+
+        LPnomeCategoria: function(){
+            $('.casasbahia .banner-categoria .container-center .box-banner').each(function(){
+                var categTitle = $(this).find('img').attr('alt');
+                $(this).find('a').append(`<p>${categTitle}</p>`);
+            });
+        },
+
+        LPbotaoConfira: function(){
+            $('.casasbahia .banner-promocionais .container-center .box-banner a').append('<p>Confira</p>');
+        },
+
+        LPcarrosselCategoria: function(){
+            if (scre < 500) {
+                $('.casasbahia .banner-categoria .container-center').slick({
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                    arrows: false
+                });
+            }
+            if (scre < 500) {
+                $('.casasbahia .banner-promocionais .container-center').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                    arrows: false
+                });
+            }
+        },
+
         init: function () {
             //Geral            
             codePlanet.sliderMenu();
@@ -1588,6 +1623,9 @@ $(document).ready(function () {
             codePlanet.iniciaCountdownPDP();
             codePlanet.lpReveilonPG();
             codePlanet.descriptionFixer();
+            codePlanet.LPnomeCategoria();
+            codePlanet.LPbotaoConfira();
+            codePlanet.LPcarrosselCategoria();
         },
         init_ajax: function () {
             // codePlanet.menuPrincipal();

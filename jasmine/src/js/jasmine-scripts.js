@@ -430,19 +430,6 @@ $(document).ready(function () {
 					});
 			}
 		},
-		carregaPercentual: function() {
-			$(".porcentagem").each(function () {
-				var valor = $(this).html();
-				valor = valor.replace(" %", "");
-				valor = valor.replace(",", ".");
-				valor = valor.replace("<br>", "");
-				valor = valor.replace("OFF", "");
-				valor = valor.replace("%", "");
-				valor = Number(valor);
-				valor = Math.round(valor);
-				$(this).html(valor);
-			});
-		},
 		discountPercentage: function() {
             if ($(".skuListPrice").length) {
                 var e = limpa_valor_dinheiro($(".skuListPrice").html()),
@@ -1400,7 +1387,6 @@ $(document).ready(function () {
 			Jasmine.pratNovidades();
 			Jasmine.pratParaCozinhar();
 			Jasmine.receitasMomentos();
-			Jasmine.carregaPercentual();
 			Jasmine.discountPercentage();
 			Jasmine.openMiniCart();
 			//Jasmine.aplicaNomeCategoria();
@@ -1430,5 +1416,18 @@ $(document).ready(function () {
 function limpa_valor_dinheiro(e) {
     return parseInt(e.replace(/R\$|\.|\,/g, "").trim())
 }
+function carregaPercentual() {
+	$(".porcentagem").each(function () {
+		var valor = $(this).html();
+		valor = valor.replace(" %", "");
+		valor = valor.replace(",", ".");
+		valor = valor.replace("<br>", "");
+		valor = valor.replace("OFF", "");
+		valor = valor.replace("%", "");
+		valor = Number(valor);
+		valor = Math.round(valor);
+		$(this).html(valor);
+	});
+}
 
-
+setTimeout(carregaPercentual, 2500);
