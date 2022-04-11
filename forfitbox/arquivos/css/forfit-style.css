@@ -2207,7 +2207,8 @@ footer {
 }
 
 .footer-02 .footer-logos .social {
-    text-align: right
+    text-align: right;
+    margin-left: 20px;
 }
 
 .ft-title {
@@ -5544,7 +5545,13 @@ footer .footer-01 .footer-01-05:first-child {
 
 .footer-02 ul {
     list-style: none;
-    display: flex
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 20px; */
 }
 
 footer .footer-02 .footer-02-01 {
