@@ -139,6 +139,9 @@
                     min-height: 280px;
                     padding: 0 5px;
                 }
+                @include d(celularMedium){
+                    min-height: 300px;
+                }
                 .ls-image {
                     position: relative;
                     margin-bottom: 10px;
@@ -384,6 +387,9 @@
                             }
                             @include d(hd){
                                 font-size: 9px;
+                            }
+                            @include d(celularMedium){
+                                font-size: 8px;
                             }
                         }
                     }

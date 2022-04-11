@@ -111,8 +111,8 @@ header{
                     margin: 0 auto;
                 }
                 @include d(celularMedium){
-                    width: 45%;
-                    margin-left: -1.6em;
+                    width: 100%;
+                    margin-left: 0em;
                 }
                 .item-logo{
                     @include d(ipad){
