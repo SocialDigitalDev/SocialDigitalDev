@@ -12330,3 +12330,31 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 .jasmine-product .productWishlist{
 	display: none;
 }
+
+/* VTEX DAY */
+
+.texto-vtex-day {
+    text-align: center;
+    padding: 4em 1em;
+}
+.texto-vtex-day h1 {
+    font-size: 40px;
+}
+.texto-vtex-day h2 {
+    margin-top: 2em;
+}
+.social, .hibrido {
+    margin: 0;
+    max-width: 200px;
+}
+.social {
+    padding-right: 2em;
+    margin-right: 1em;
+    border-right: 3px solid #ccc;
+}
+.img-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-top: 3em;
+}
