@@ -12332,7 +12332,9 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 }
 
 /* VTEX DAY */
-
+.logo {
+    max-width: 300px;
+}
 .texto-vtex-day {
     text-align: center;
     padding: 4em 1em;
@@ -12357,4 +12359,7 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
     justify-content: center;
     align-items: center;
 	margin-top: 3em;
+}
+section.banner-vtex-day {
+    margin-bottom: 3em;
 }
