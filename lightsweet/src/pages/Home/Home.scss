@@ -354,7 +354,7 @@ main.ls-home-main{
         }
         .section-degustar, .section-outras-delicias{
             .wrapper{
-                @include d(celularMedium){
+                @include d(celularMediumLarge){
                     padding: 0;
                 }
             }
@@ -543,7 +543,7 @@ main.ls-home-main{
                 @include d(ipad){
                     @include flex-flow(column);
                 }
-                @include d(celularMedium){
+                @include d(celularMediumLarge){
                     padding: 0;
                 }
                 ul.slick-dots{

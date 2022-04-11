@@ -31,7 +31,7 @@
             }
         }
     }
-    @include d(celularMedium){
+    @include d(celularMediumLarge){
         &:not(.otl){
             .slick-list{
                 max-height: 100%;
@@ -139,7 +139,7 @@
                     min-height: 280px;
                     padding: 0 5px;
                 }
-                @include d(celularMedium){
+                @include d(celularMediumLarge){
                     min-height: 300px;
                 }
                 .ls-image {
@@ -388,7 +388,7 @@
                             @include d(hd){
                                 font-size: 9px;
                             }
-                            @include d(celularMedium){
+                            @include d(celularMediumLarge){
                                 font-size: 8px;
                             }
                         }
