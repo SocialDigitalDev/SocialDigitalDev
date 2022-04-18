@@ -31,7 +31,7 @@
             }
         }
     }
-    @include d(celularMedium){
+    @include d(celularMediumLarge){
         &:not(.otl){
             .slick-list{
                 max-height: 100%;
@@ -139,6 +139,9 @@
                     min-height: 280px;
                     padding: 0 5px;
                 }
+                @include d(celularMediumLarge){
+                    min-height: 300px;
+                }
                 .ls-image {
                     position: relative;
                     margin-bottom: 10px;
@@ -200,9 +203,6 @@
                     @include t(.4s);
                     position: absolute;
                     bottom: -20px;
-                    @include d(celularLarge){
-                        bottom: -20px;
-                    }
                     .wishlist{
                         background-color: var(--color-blue-dark);
                         height: 50px;
@@ -234,37 +234,30 @@
                         text-align: center;
                         overflow: visible;
                         @include t(.3s);
-                        margin-right: 2em;
                         @include d(ipad){
                             margin: 0;
                         }
                         a {
                             background-color: var(--color-blue-dark);
                             color: var(--color-white);
-                            height: 50px;
-                            width: 50px;
-                            border-radius: 50%;
-                            display: block;
-                            @include d(qhd){
-                                height: 40px;
-                                width: 40px;
-                            }
+                            border-radius: 10px;
+                            padding: 0 10px;
+                            @include flexbox;
+                            @include align-items(center);
+                            padding: 0 2em;
+                            @include t(.3s);
                             @include d(celularLarge){
-                                height: 40px;
-                                width: 40px;
+                                font-size: 12px;
                             }
                             &:before{
                                 content: '\e930';
                                 font-family: "lightsweet";
                                 line-height: 46px;
                                 font-size: 22px;
-                                @include d(qhd){
-                                    line-height: 36px;
-                                    font-size: 17px;
-                                }
+                                margin-right: 10px;
                                 @include d(celularLarge){
-                                    line-height: 35px;
-                                    font-size: 20px;
+                                    line-height: 30px;
+                                    font-size: 15px;
                                 }
                             }
                         }
@@ -385,14 +378,19 @@
                             @include d(hd){
                                 font-size: 9px;
                             }
+                            @include d(celularMediumLarge){
+                                font-size: 8px;
+                            }
                         }
                     }
                 }
             }
             &:hover{
                 .ls-actions {
-                    .ls-buy, .quickView, .wishlist{
-                        transform: scale(1.2);
+                    .ls-buy{
+                        a{
+                            background: rgb(8, 163, 15);
+                        }
                         @include d(ipad){
                             transform: none;
                         }

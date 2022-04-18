@@ -352,6 +352,13 @@ main.ls-home-main{
                 }
             }
         }
+        .section-degustar, .section-outras-delicias{
+            .wrapper{
+                @include d(celularMediumLarge){
+                    padding: 0;
+                }
+            }
+        }
         .banner-desconto {
             .descontos-wrapper{
                 position: relative;
@@ -535,6 +542,9 @@ main.ls-home-main{
                 @include justify-content(center);
                 @include d(ipad){
                     @include flex-flow(column);
+                }
+                @include d(celularMediumLarge){
+                    padding: 0;
                 }
                 ul.slick-dots{
                     @include d(ipad){

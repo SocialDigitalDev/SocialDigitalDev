@@ -37,8 +37,7 @@ function tabsSlick() {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
-                    centerMode: true,
-                    centerPadding: '60px'
+                    centerMode: false
                 }
             }
         ]
@@ -157,10 +156,8 @@ var home = {
                 {
                     breakpoint: 400,
                     settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 2,
                         slidesToScroll: 1,
-                        centerMode: true,
-                        centerPadding: "25px",
                         dots: true,
                         arrows: false
                     }
