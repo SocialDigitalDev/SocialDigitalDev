@@ -991,7 +991,7 @@ $(document).ready(function () {
         },
        
         campoTabelaNutri: function() {
-            if ($("#caracteristicas").before("<div class='tabelasMain'><div class='tabelasTitle'></div><div class='tabelasCentral'><div class='tabelaNutricional active'></div><div class='tabelaAminograma'></div></div></div>"), 
+            if ($("#caracteristicas").before("<div class='tabelasMain'><div class='tabelasTitle'></div><div class='tabelasCentral'><div class='tabelaNutricional active'></div></div></div>"), 
             $("#caracteristicas .Informacoes-Nutricionais").length && ($("#caracteristicas .Informacoes-Nutricionais tr").each(function() {
                 var e = $(".value-field", this).html().toString();
                 e.indexOf("??") > -1 ? (e = e.split("??"), $(".value-field", this).html(e[0]), 
@@ -1003,25 +1003,8 @@ $(document).ready(function () {
                 var e = $(".value-field.Informacao-Nutricional-Tabela-Nutricional").html();
                 $(".tabelaNutricional").append("<p><b>Informação Nutricional:</b>" + e + "</p>")
             }
-            if ($("#caracteristicas .Aminograma").length && ($("#caracteristicas .Aminograma tr").each(function() {
-                var e = $(".value-field", this).html().toString();
-                e.indexOf("??") > -1 ? (e = e.split("??"), 
-                $(".value-field", this).html(e[0]), 
-                $(this).append("<td class='value-complement'>" + e[1] + "</td>")) : $(this).append("<td class='value-complement'></td>")
-            }), 
-            $(".tabelaAminograma").append($("#caracteristicas .Aminograma")), 
-            $(".tabelasTitle").append("<span class='tableaAminoBt'>Aminograma</span>"), 
-            $(".value-field.Informacao-Nutricional-Tabela-Nutricional").length)) {
-            e = $(".value-field.Informacao-Nutricional-Tabela-Aminograma").html();
-            $(".tabelaAminograma").append("<p><b>Informação Nutricional:</b>" + e + "</p>")
-            }
-            jQuery(document).on("click", ".tableaNutriBt", function() {
-                $(".tableaAminoBt, .tabelaAminograma").removeClass("active"), $(".tableaNutriBt, .tabelaNutricional ").addClass("active")
-            }), 
-            jQuery(document).on("click", ".tableaAminoBt", function() {
-                $(".tableaNutriBt, .tabelaNutricional ").removeClass("active"), 
-                $(".tableaAminoBt, .tabelaAminograma").addClass("active")
-            });
+    
+            
         },
         caracteristicasProd: function() {
 			if ($("body").hasClass("nova-pdp")) {			
@@ -1052,22 +1035,53 @@ $(document).ready(function () {
 
         customProdDescription: function() {
             var e;
-            0 < $(".value-field.Modo-de-Preparo").length && 0 < $(".value-field.Modo-de-Preparo").text().length ? $(".box-tab.fornecedor").text('*Produto com entrega exclusiva "' + $(".value-field.Modo-de-Preparo").text() + '"') : $(".box-tab.fornecedor").addClass("hide"), 0 < $(".name-field.Beneficios").length ? $(".box-tab.beneficios .box-tab-content").html($(".value-field.Beneficios").html()) : $(".box-tab.beneficios").addClass("hide"), 
-            0 < $(".name-field.Detalhes").length ? $(".box-tab.detalhes .box-tab-content").html($(".value-field.Detalhes").html()) : $(".box-tab.detalhes").addClass("hide"), 
-            0 < $(".name-field.Diferenciais").length ? $(".box-tab.diferenciais .box-tab-content").html($(".value-field.Diferencias").html()) : $(".box-tab.diferenciais").addClass("hide"), 
-            0 < $(".name-field.Para-que-serve").length ? $(".box-tab.pra-que .box-tab-content").html($(".value-field.Para-que-serve").html()) : $(".box-tab.pra-que").addClass("hide"), 
-            0 < $(".name-field.Sugestao-de-Uso").length ? $(".box-tab.video .box-tab-content").html($(".value-field.Sugestao-de-Uso").html()) : $(".box-tab.video").addClass("hide"),
+                       
+            //Advertencias
+            0 < $(".name-field.Advertencias").length ? $(".box-tab.advertencia .box-tab-content").html($(".value-field.Advertencias").html()) : $(".box-tab.advertencia").addClass("hide"), 
+
             0 < $(".name-field.Advertencias").length && (e = "<div class='box-tab-content' data-aos='fade-up'>" + (e = $(".value-field.Advertencias").html()) + "</div>", 
             $(".box-tab.advertencia .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_advertencias.svg" alt="Advertências"/>Advertências</h3>' + e)),
+
+            //Armazenagem
+            0 < $(".name-field.Armazenagem").length ? $(".box-tab.beneficios .box-tab-content").html($(".value-field.Armazenagem").html()) : $(".box-tab.armazenagem").addClass("hide"), 
+
             0 < $(".name-field.Armazenagem").length && (e = "<div class='box-tab-content' data-aos='fade-up'>" + (e = $(".value-field.Armazenagem").html()) + "</div>", $(".box-tab.armazenagem .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_armazenagem.svg" alt="Armazenagem"/>Armazenagem</h3>' + e)), 
+
+            //Beneficios
+            0 < $(".name-field.Beneficios").length ? $(".box-tab.beneficios .box-tab-content").html($(".value-field.Beneficios").html()) : $(".box-tab.beneficios").addClass("hide"), 
+        
             0 < $(".name-field.Beneficios").length && (e = "<div class='box-tab-content' data-aos='fade-left' data-aos-offset='300' data-aos-easing='ease-in-sine'>" + (e = $(".value-field.Beneficios").html()) + "</div>", $(".box-tab.beneficios .wrapper").html('<h3 class="box-tab-title" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine"><img src = "/arquivos/forfitbox_beneficios.svg" alt="Benefícios"/>Benefícios</h3>' + e)), 
-            0 < $(".name-field.Detalhes").length && (e = "<div class='box-tab-content'>" + (e = $(".value-field.Detalhes").html()) + "</div>", $(".box-tab.detalhes .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_detalhes.svg" alt="Detalhes"/>Detalhes</h3>' + e)), 
+
+            //Detalhes
+            0 < $(".name-field.Detalhes").length ? $(".box-tab.detalhes .box-tab-content").html($(".value-field.Detalhes").html()) : $(".box-tab.detalhes").addClass("hide"), 
+
+            0 < $(".name-field.Detalhes").length && (e = "<div class='box-tab-content'>" + (e = $(".value-field.Detalhes").html()) + "</div>", $(".box-tab.detalhes .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_detalhes.svg" alt="Detalhes"/>Detalhes</h3>' + e)),
+
+            //Diferenciais
+            0 < $(".name-field.Diferenciais").length ? $(".box-tab.diferenciais .box-tab-content").html($(".value-field.Diferencias").html()) : $(".box-tab.diferenciais").addClass("hide"), 
+
+            //Pra que serve
+            0 < $(".name-field.Para-que-serve").length ? $(".box-tab.pra-que .box-tab-content").html($(".value-field.Para-que-serve").html()) : $(".box-tab.pra-que").addClass("hide"), 
+
             0 < $(".name-field.Para-que-serve").length && (e = "<div class='box-tab-content' data-aos='fade-up'>" + (e = $(".value-field.Para-que-serve").html()) + "</div>", 
             $(".box-tab.pra-que .wrapper").html('<h3 class="box-tab-title" data-aos="fade-up"><img src = "/arquivos/forfitbox_praqueserve.svg" alt="Para que serve?"/>Para que serve?</h3>' + e)), 
-            0 < !$(".Especificacoes .name-field.Sugestao-de-Uso").length && 0 < !$(".Especificacoes .name-field.Ingredientes").length && 0 < !$(".Especificacoes .name-field.Modo-de-Preparo").length && 0 < !$(".Especificacoes .name-field.Peso").length ? ($(".box-tab.espec").addClass("hide"), 
+
+            //Modo de preparo
+            0 < $(".name-field.Modo-de-Preparo").length ? $(".box-tab.Modo-de-Preparo .box-tab-content").html($(".value-field.Modo-de-Preparo").html()) : $(".box-tab.Modo-de-Preparo").addClass("hide"), 
+
+           
+            
+            //Sugestao de uso
+            0 < $(".name-field.Sugestao-de-Uso").length ? $(".box-tab.video .box-tab-content").html($(".value-field.Sugestao-de-Uso").html()) : $(".box-tab.video").addClass("hide"),
+            
+        
+            0 < !$(".Especificacoes .name-field.Sugestao-de-Uso").length && 0 < !$(".Especificacoes .name-field.Ingredientes").length && 0 < !$(".Especificacoes .name-field.Modo-de-Preparo").length && 0 < !$(".Especificacoes .name-field.Peso").length ? ($(".box-tab.espec, .nova-pdp .right").addClass("hide"), 
+
             $(".produto_informacoes_campos .left").addClass("fullWidth")) : $(".right .box-tab.espec .box-tab-content").append("<ul></ul>"), 
             0 < $(".Especificacoes .name-field.Sugestao-de-Uso").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Sugestao-de-Uso \' data-aos="fade-up"><img src="/arquivos/forfitbox_sugestao-de-preparo.svg" alt="Sugestão de uso"><b>Sugestao de Uso</b> <p>' + $(".Especificacoes .value-field.Sugestao-de-Uso").html() + "</p></li>"), 
+            
             0 < $(".Especificacoes .name-field.Ingredientes").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Ingredientes\' data-aos="fade-up"><img src="/arquivos/forfitbox_ingredientes.svg" alt="Ingredientes"><b>Ingredientes</b> <p>' + $(".Especificacoes .value-field.Ingredientes").html() + "</p></li>"), 
+            
             0 < $(".Especificacoes .name-field.Modo-de-Preparo").length && $(".box-tab.espec .box-tab-content ul").append('<li class=\'espec-Modo-de-Preparo\' data-aos="fade-up"><img src="/arquivos/forfitbox_modo-de-preparo.svg" alt="Modo de preparo"><b>Modo de preparo</b> <p>' + $(".Especificacoes .value-field.Modo-de-Preparo").html() + "</p></li>")
 
             // $(".produto_informacoes_campos > .left .box-tab-title").click(function() {
@@ -1291,6 +1305,7 @@ $(document).ready(function () {
             //code4Fit.detalhesProduto();
             code4Fit.campoTabelaNutri();
             code4Fit.caracteristicasProd();
+            code4Fit.customProdDescription();
             code4Fit.calculaFrete();
             code4Fit.verificaLogado();    
             code4Fit.prateleirasGerais();
@@ -1324,7 +1339,7 @@ $(document).ready(function () {
             //code4Fit.mountMinicartProducts();
             //code4Fit.removeProductFromMinicart();
             code4Fit.faleConosco();
-           code4Fit.customProdDescription();
+            
             code4Fit.openMiniCart();
             //code4Fit.addProductToMinicart();
             // code4Fit.buscaHeader();
