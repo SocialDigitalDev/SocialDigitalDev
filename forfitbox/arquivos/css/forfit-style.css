@@ -2196,9 +2196,9 @@ footer {
 
 .footer-02 .footer-logos {
     overflow: hidden;
-    display: flex;
+    /*display: flex;
     align-items: flex-end;
-    flex-flow: row
+    flex-flow: row*/
 }
 
 .footer-02 .footer-logos .vtex {
@@ -9435,6 +9435,9 @@ label.skuespec_Unica.skuespec_Estampa_opcao_UNICA.skuespec_Estampa_opcao_Unica:a
     text-transform: unset
 }
 
+.tabelasCentral>div>table.Informacoes-Nutricionais:nth-child(2){
+    display: none;
+}
 tabela {
     float: right
 }
