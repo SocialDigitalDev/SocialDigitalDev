@@ -1,0 +1,177 @@
+/* LP Casas Bahia */
+
+.casasbahia.landing-page main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.casasbahia.landing-page main .container {
+    margin-top: 2em;
+    max-width: 1440px;
+    padding: 0;
+}
+
+.casasbahia main .vip-section .container {
+    margin: 4em auto;
+    margin-top: 5em;
+}
+.casasbahia .slide-principal.last {
+    margin-bottom: 3em;
+}
+.casasbahia.landing-page .polo-alt-title{
+    display: none;
+}
+.casasbahia .prat-right_Look {
+    width: 50%;
+    margin-left: 2em;
+}
+.casasbahia .prat-right_Look h1 {
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 1em;
+    font-size: 35px;
+}
+.casasbahia .container-full {
+    display: flex;
+    align-items: center;
+}
+.casasbahia .prat-right_Look p {
+    font-size: 22px;
+    max-width: 575px;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+.casasbahia .prat-right_Look p:last-child {
+    margin-bottom: 0;
+    margin-top: 2em;
+}
+.casasbahia .quatro-banners {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 35px;
+}
+.casasbahia .box-banner:hover a img {
+    transform: scale(1.02);
+}
+.casasbahia .box-banner a img {
+    transition: .3s all ease;
+}
+.casasbahia .categorias-wrapper .box-banner {
+    padding: 0.5em;
+    background: var(--color-white);
+}
+.casasbahia .box-banner p {
+    text-align: center;
+    color: #599583;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.casasbahia .box-banner p:before{
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='27' viewBox='0 0 25 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.1897 27C9.16264 25.17 8.43768 23.3593 8.10083 21.4075C7.94706 20.5199 7.75483 19.6357 7.51501 18.7657C7.35391 18.1798 7.46009 17.7386 7.85369 17.2533C9.23587 15.5539 10.5521 13.805 11.9252 12.0985C12.2876 11.6467 12.2474 11.3679 11.7421 11.1191C11.0922 10.7979 10.4423 10.4767 9.79423 10.152C6.53925 8.52666 3.3813 6.76015 0.768893 4.22598C0.468658 3.9348 0.201377 3.61008 0 3.17419C3.63027 4.13421 7.26055 5.096 11.1013 6.11073C10.5393 4.97423 10.0121 4.04068 9.60933 3.05948C9.21207 2.0924 8.94296 1.07591 8.59329 0.0100051C8.8679 0.0100051 8.95394 -0.0147013 8.98689 0.0135346C10.1256 0.998262 11.3375 1.91769 12.3737 2.99419C13.7394 4.41481 14.9678 5.95719 16.2529 7.45017C16.8992 8.20018 17.8585 8.34666 18.7152 7.80311C19.1546 7.52429 19.5738 7.21722 20.015 6.94192C20.4965 6.64015 21.183 6.72309 21.5766 7.12898C22.6805 8.27254 23.7789 9.42138 24.8773 10.5685C24.9158 10.6091 24.9286 10.6744 25 10.8261C24.1945 10.4132 23.4952 10.0073 22.7537 9.69492C22.4681 9.57492 22.0526 9.57492 21.7578 9.67904C20.9688 9.95787 20.2017 10.3038 19.4475 10.6638C19.1528 10.8049 18.8745 11.0238 18.6621 11.2673C17.6186 12.4656 16.6117 13.6938 15.5609 14.885C15.3742 15.0968 15.0557 15.2168 14.7792 15.3333C14.4479 15.4727 14.0854 15.545 13.7485 15.6756C12.7819 16.048 12.2968 16.6957 12.1156 17.7369C11.5993 20.6822 10.9494 23.6064 10.3489 26.5394C10.3215 26.6682 10.2629 26.79 10.1897 27Z' fill='%23599583'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin-right: 5px;
+}
+.casasbahia .categorias-section .categorias-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.casasbahia .banner-duplo .slide-principal {
+    display: flex;
+    justify-content: space-between;
+}
+.desconto-50off-section .titulo-prateleira h2 {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.casasbahia .desconto-50off-section .desconto-50offprodutos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3em;
+}
+@media (max-width: 1366px){
+    .casasbahia.landing-page main {
+        max-width: 100%;
+        padding: 0 2em;
+    }
+    .casasbahia.landing-page main .container{
+        max-width: 100%;
+    }
+    .casasbahia .box-banner a img {
+        transition: .3s all ease;
+        max-width: 100%;
+        height: auto;
+    }
+    .casasbahia .categorias-wrapper .box-banner{
+        margin: 10px;
+    }
+    .casasbahia .banner-duplo .box-banner {
+        margin: 0 1em;
+    }
+    .casasbahia .desconto-50off-section .desconto-50offprodutos .box-banner {
+        margin: 0 1em;
+    }
+}
+@media (max-width: 500px){
+    .casasbahia.landing-page main {
+        padding: 0 1em;
+    }
+    .casasbahia .container-full {
+        flex-flow: column;
+        margin-top: 2em;
+    }
+    .casasbahia .prat-right_Look {
+        width: 100%;
+        margin-left: 0em;
+    }
+    .casasbahia main .vip-section .container {
+        margin: 2em 0;
+    }
+    .casasbahia .prat-left__bannervip{
+        margin-bottom: 1em;
+    }
+    .casasbahia .prat-right_Look h1 {
+        font-size: 34px;
+        max-width: 100%;
+        margin-bottom: 0.5em;
+    }
+    .casasbahia .prat-right_Look p {
+        font-size: 19px;
+    }
+    .casasbahia .prat-right_Look p:last-child {
+        margin-bottom: 0;
+        margin-top: 1em;
+    }
+    .casasbahia.landing-page main .container {
+        margin-top: 0em;
+    }
+    .casasbahia .quatro-banners {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .casasbahia .container.slide-mobile.last {
+        margin-top: 2em;
+    }
+    .casasbahia .owl-stage{
+        display: flex;
+    }
+    .casasbahia .banner-duplo .box-banner{
+        margin-top: 1em;
+    }
+    .desconto-50off-section .titulo-prateleira h2{
+        margin-top: 1em;
+    }
+    .desconto-50off-section .titulo-prateleira h2 {
+        margin-top: 1em;
+        font-size: 25px;
+    }
+}
