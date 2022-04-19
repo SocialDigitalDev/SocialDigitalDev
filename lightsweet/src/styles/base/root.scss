@@ -139,6 +139,7 @@ input{
 	@include flexbox;
 	@include align-items(center);
 	color: var(--color-blue-dark);
+	position: relative;
 	h2{
 		text-align: center;
 		font-size: 32px;
@@ -162,10 +163,11 @@ input{
 		text-align: center;
 		width: 100%;
 		display: block;
-		margin-top: 65px;
+		margin-top: 0px;
 		font-size: 39px;
 		text-align: center;
 		left: 0;
+		top: 55px;
 		// @include d(celularLarge){
 		// 	width: 15%;
 		// }

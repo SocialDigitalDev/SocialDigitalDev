@@ -193,17 +193,17 @@ var produto = {
                         arrows: false
                     }
                 },
-                {
-                    breakpoint: 400,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        centerMode: true,
-                        centerPadding: "25px",
-                        dots: true,
-                        arrows: false
-                    }
-                },
+                // {
+                //     breakpoint: 400,
+                //     settings: {
+                //         slidesToShow: 2,
+                //         slidesToScroll: 1,
+                //         centerMode: true,
+                //         centerPadding: "25px",
+                //         dots: true,
+                //         arrows: false
+                //     }
+                // },
                 {
                     breakpoint: 350,
                     settings: {

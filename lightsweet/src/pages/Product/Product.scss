@@ -541,6 +541,9 @@ main.ls-produto-main {
                                                     @include d(ipad){
                                                         max-width: 100%;
                                                     }
+                                                    @include d(celularMedium){
+                                                        max-width: 165px;
+                                                    }
                                                 }
                                             }
                                             .quantity {
@@ -1428,4 +1431,7 @@ main.ls-produto-especial-main {
 }
 .ls-produto .ls-prateleira > ul li .ls-product .ls-image a img{
     max-width: 120px;
+}
+.PDP-Especial{
+    display: none !important;
 }
