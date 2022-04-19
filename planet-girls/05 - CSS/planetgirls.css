@@ -2314,7 +2314,7 @@ span.search-icon:before {
     background: rgba(255 255 255 / 95%);
     width: 100%;
     min-height: 360px;
-    z-index: 1000;
+    z-index: 99999999999;
     display: none;
     box-shadow: 0 4px 4px rgb(38 36 37 / 25%);
     box-shadow: 0 5px 8px 0 rgb(0 0 0 / 25%);
