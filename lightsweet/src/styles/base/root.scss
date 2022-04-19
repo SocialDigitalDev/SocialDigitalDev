@@ -290,8 +290,11 @@ body{
 	width: 100%;
 	padding: 0 2em;
 	min-height: initial;
-	@include d(ipad){
+	@include d(hd){
 		padding: 0 1em;
+	}
+	@include d(celularLarge){
+		padding: 0 .5em;
 	}
 }
 #vtexIdUI-global-loader{
@@ -413,5 +416,10 @@ body{
 				}
 			}
 		}
+	}
+}
+@media(prefers-color-scheme: dark) {
+	body {
+	  	background-color: #fff!important;
 	}
 }
