@@ -167,10 +167,16 @@ input{
 		font-size: 39px;
 		text-align: center;
 		left: 0;
-		top: 55px;
-		// @include d(celularLarge){
-		// 	width: 15%;
-		// }
+		top: 80px;
+		@include d(hdplus){
+			top: 75px;
+		}
+		@include d(qhd){
+			top: 65px;
+		}
+		@include d(celularLarge){
+			top: 55px;
+		}
 	}
 }
 
