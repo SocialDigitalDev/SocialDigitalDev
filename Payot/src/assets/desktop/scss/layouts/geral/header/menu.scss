@@ -19,6 +19,9 @@
                     &.pink {
                         color: $color-main;
                     }
+                    & span {
+                        color: $color-main;
+                    }
                 }
 
                 &:hover {
