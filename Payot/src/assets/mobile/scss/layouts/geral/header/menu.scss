@@ -189,7 +189,7 @@
             }
         }
 
-        &:nth-child(5) {
+        &:nth-child(4) {
             > a {
                 background: url("https://payottatix.vteximg.com.br/arquivos/menu-icon-mobile-boca-rosa.png") no-repeat center left;
             }
@@ -203,7 +203,13 @@
             line-height: 19px;
             padding: 20px 20px 20px 39px;
             text-transform: capitalize;
+            
+            & span {
+                color: $color-main;
+            }
         }
+
+      
 
         &--sub {
             display: none;
