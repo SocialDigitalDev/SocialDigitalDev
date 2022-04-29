@@ -360,6 +360,45 @@ main.ls-home-main{
             }
         }
         .banner-desconto {
+            .slick-arrow{
+                font-size: 0;
+                &.slick-prev{
+                    position: absolute;
+                    left: 0;
+                    top: 45%;
+                    z-index: 9;
+                    font-size: 0;
+                    cursor: pointer;
+                    background: hsla(0,0%,100%,.37);
+                    padding: 10px 13px;
+                    border-radius: 50%;
+                    &:before{
+                        content: "\e933";
+                        font-family: "lightsweet";
+                        font-size: 20px;
+                        color: var(--color-blue-dark);
+                        display: block;
+                    }
+                }
+                &.slick-next{
+                    position: absolute;
+                    right: 0;
+                    top: 45%;
+                    z-index: 9;
+                    font-size: 0;
+                    cursor: pointer;
+                    background: hsla(0,0%,100%,.37);
+                    padding: 10px 13px;
+                    border-radius: 50%;
+                    &:before{
+                        content: "\e934";
+                        font-family: "lightsweet";
+                        font-size: 20px;
+                        color: var(--color-blue-dark);
+                        display: block;
+                    }
+                }
+            }
             .descontos-wrapper{
                 position: relative;
                 height: 624px;
