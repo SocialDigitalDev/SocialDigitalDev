@@ -59,6 +59,12 @@ function carregaPercentual() {
 
 setTimeout(carregaPercentual, 2500);
 
+setTimeout(function () {
+    $('.pages .page-number, .pages .first, .pages .previous, .pages next, .pages .last').click(function () {
+        location.reload(true);
+    });
+}, 1000);
+
 const main = () => {
     header()
     footer()

@@ -143,6 +143,24 @@ var depto = {
             $('.vitrine-title h2').text('Produtos');
         }
     },
+    corrigeFiltro: function() {
+        $('.search-single-navigator').append('<div class="categorias-wrap"></div>');
+        $('.categorias-wrap').before('<h2 class="title-categorias">Mais Categorias</h2>');
+        $('.title-categorias').click(function(){
+            $('.categorias-wrap').slideToggle();
+            $(this).toggleClass('aberto');
+        });
+        $('.search-single-navigator h3').each(function(){
+            if ($(this).next().children().length <= 0) {
+                $(this).appendTo('.categorias-wrap');
+            }
+        });
+        $('.search-single-navigator ul').each(function(){
+            if ($(this).children().length <= 0){
+                $(this).remove();
+            }
+        });
+    },
     init: function(){
         // depto.sidebarDepartamento();
         depto.filtroMobile();
@@ -152,6 +170,7 @@ var depto = {
         depto.aplicaNomeCategoria();
         depto.paginacaoDepto();
         depto.titleColecao();
+        depto.corrigeFiltro();
     }
 }
 
