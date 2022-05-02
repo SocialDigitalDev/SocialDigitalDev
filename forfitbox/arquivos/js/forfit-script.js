@@ -1224,7 +1224,9 @@ $(document).ready(function () {
 
                 var varN = $('#fcNome').val();
                 var varE = $('#fcEmail').val();
+                var varC = $('#fcCpf').val();
                 var varT = $('#fcTelefone').val();
+                var varP = $('#fcPedido').val();
                 var varM = $('#fcMsg').val();
                 var varA =$("#form-contact-assunto").val();
 
@@ -1249,10 +1251,16 @@ $(document).ready(function () {
                     $('#fcNome').before('<div class="box-form-msg">Preencha o campo Nome</div>');
                 } else if (varE == '') {
                     $('#fcEmail').css('border', '1px solid #e74c3c');
-                    $('#fcEmail').before('<div class="box-form-msg">Preencha o campo E-mail</div>');
-                } else if (varT == '') {
+                    $('#fcEmail').before('<div class="box-form-msg">Preencha o campo E-mail</div>'); 
+                } else if (varC == '') {
+                    $('#fcCpf').css('border', '1px solid #e74c3c');
+                    $('#fcCpf').before('<div class="box-form-msg">Preencha o campo CPF</div>');
+                }else if (varT == '') {
                     $('#fcTelefone').css('border', '1px solid #e74c3c');
                     $('#fcTelefone').before('<div class="box-form-msg">Preencha o campo Telefone</div>');
+                }else if (varP == '') {
+                    $('#fcPedido').css('border', '1px solid #e74c3c');
+                    $('#fcPedido').before('<div class="box-form-msg">Preencha o campo Pedido</div>');
                 } else if (varA == '') {
                     $('#form-contact-assunto').css('border', '1px solid #e74c3c');
                     $('#form-contact-assunto').before('<div class="box-form-msg">Escolha um assunto/div>');
@@ -1267,7 +1275,9 @@ $(document).ready(function () {
                     var datos = {};
                     datos.nome = varN;
                     datos.email = varE;
+                    datos.cpf = varC;
                     datos.telefone = varT;
+                    datos.pedido = varP;
                     datos.assunto = varA;
                     datos.mensagem = varM;
                     $.ajax({

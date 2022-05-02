@@ -1,0 +1,43 @@
+<p class="fale-conosco">Dúvidas? Preencha o formulário abaixo, em breve retornaremos o contato</p>
+<div id="formRightFc">
+    <h4>Formulário de contato:</h4>
+    <div id="formFC">
+        <div class="boxCampo">
+            <label>Digite seu nome:</label>
+            <input type="text" name="fcNome" id="fcNome">
+        </div>
+        <div class="boxCampo">
+            <label>E-Mail</label>
+            <input type="text" name="fcEmail" id="fcEmail">
+        </div>
+        <div class="boxCampo">
+            <label>CPF <small> (Somente números) </small> </label>
+            <input type="number" name="fcCpf" id="fcCpf" class="form-contact-cpf">
+        </div>
+        <div class="boxCampo">
+            <label>Telefone</label>
+            <input type="tel" name="fcTelefone" id="fcTelefone" class="form-contact-phone">
+        </div>
+        <div class="boxCampo">
+            <label>Número do pedido</label>
+            <input type="number" name="fcPedido" id="fcPedido" class="form-contact-pedido">
+        </div>
+        <div class="boxCampo">
+		    <label> Assunto </label>
+            <select id="form-contact-assunto" placeholder="Assunto" name="form-contact-assunto">
+                <option value="0">Selecione uma das opções</option>
+                <option value="Entrega"> Entrega </option>
+                <option value="Status"> Status do Pedido </option>
+                <option value="Trocas"> Trocas e Devoluções </option>        
+                <option value="Cancelamento"> Cancelamento de Pedido </option>
+                <option value="Atendimento"> Atendimento </option>
+                <option value="Outros">Outros</option>
+            </select>
+        </div>
+        <div class="boxCampo">
+            <label> Mensagem </label>
+            <textarea rows="5" name="fcMsg" id="fcMsg"></textarea>
+        </div>
+        <a href="javascript:void(0);" class="enviarForm">Enviar mensagem</a>
+    </div>
+</div>
