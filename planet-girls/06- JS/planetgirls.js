@@ -723,21 +723,14 @@ $(document).ready(function () {
 
                 // Prod
                 $(".produto-all #produtoDiv-direita .planet-produto__buy-button .buy-button").click(function (event) {
-                    //event.preventDefault();
+                    event.preventDefault();
                     var hrefCart = $(this).attr("href");
-                    var qtd = $(this).parent().parent().parent().find(".qtdPrateleira .qtdVal").val();
-
+                    var qtd = $('.qtdPrateleira .qtdVal').val();
                     if (qtd == "") {
                         qtd = "1";
                     }
 
-                    if (hrefCart == "javascript:alert('Por favor, selecione o modelo desejado.');") {
-                        alert('Por favor, selecione o modelo desejado.');
-                    } else {
-
-                        var res = hrefCart.replace("qty=1", "qty=" + qtd);
-                        //console.log(res);
-                        var hrefCart = $(this, ".btn-add-buy-button-asynchronous").attr("href");
+                        var hrefCart = $(".produto-all #produtoDiv-direita .planet-produto__buy-button .buy-button").attr("href");
                         var resUTL = hrefCart.split("sku=").pop().split("&qty=").shift();
                         setTimeout(function () {
                             vtexjs.checkout.getOrderForm().then(function () {
@@ -747,18 +740,18 @@ $(document).ready(function () {
                                     seller: 1
                                 };
                                 vtexjs.checkout.addToCart([item]).done(function (orderForm) {
-
+                                    $(".header-minicart").addClass("open"),
+                                        setTimeout(function () {
+                                            $(".header-minicart").removeClass("open");
+                                        }, 5e3);
+                                    });
                                     vtexjs.checkout.getOrderForm().done(function (e) {
                                         var qtdCart = e.items.length;
                                         $(".info-cart .qtd-cart").html(qtdCart);
                                     });
-                                    //$(".final-compra-externo, .final-compra-interno").fadeToggle();
                                 });
                             });
                         });
-                    }
-                });
-
             }
         },
 
@@ -1587,12 +1580,9 @@ $(document).ready(function () {
             codePlanet.prateleirasVerao2022();
             codePlanet.descPrat();
             codePlanet.fixFrete();
-            //codePlanet.slideOfertas();
-            //codePlanet.slidePrateleiraMais();
             codePlanet.breadCrumb();
             codePlanet.thumbImg();
             codePlanet.qtdProd();
-            //codePlanet.parcProd();  
             codePlanet.descricaoCategoria();
             codePlanet.zoomProd();
             codePlanet.slidePrateleiraBusca();
@@ -1605,11 +1595,9 @@ $(document).ready(function () {
             codePlanet.formRevendedora();
             codePlanet.openMiniCart();
             codePlanet.orderCustom();
-            //Departamento
             codePlanet.escondeFiltrosNoDesktop();
             codePlanet.insereDivParaToggle();
             codePlanet.alteraNomeDoFiltro();
-            //Paginacao
             codePlanet.clonaSecionadorDeExibidos();
             codePlanet.clonaPaginadores();
             codePlanet.trocaNumeroDeResultados();
@@ -1628,7 +1616,6 @@ $(document).ready(function () {
             codePlanet.LPcarrosselCategoria();
         },
         init_ajax: function () {
-            // codePlanet.menuPrincipal();
             codePlanet.menuMobile();
             codePlanet.variantesCompraRapida();
         }

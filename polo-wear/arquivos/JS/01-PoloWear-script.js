@@ -1039,7 +1039,7 @@ $(document).ready(function () {
 				}, 200);
 
 				// Prod
-				$(".produto-all #produtoDiv-direita .01-PoloWear-produto__buy-button .buy-button").click(function (event) {
+				$(".produto-all .01-PoloWear-produto__buy-button .buy-button").click(function (event) {
 					event.preventDefault();
 					var hrefCart = $(this).attr("href");
 					var qtd = $(this).parent().parent().parent().find(".qtdPrateleira .qtdVal").val();
@@ -1048,60 +1048,31 @@ $(document).ready(function () {
 						qtd = "1";
 					}
 
-					if (hrefCart == "javascript:alert('Por favor, selecione o modelo desejado.');") {
-						//alert('Por favor, selecione o modelo desejado.');
-
-						Swal.fire({
-							icon: 'warning',
-							title: 'Por favor, selecione o modelo desejado.',
-							toast: 'true',
-							position: 'bottom-end',
-							showConfirmButton: false,
-							showCloseButton: 'true',
-							timerProgressBar: 'true',
-							timer: '3000'
-						})
-					} else {
-						var res = hrefCart.replace("qty=1", "qty=" + qtd);
-						//console.log(res);
-						var hrefCart = $(this, ".btn-add-buy-button-asynchronous").attr("href");
-						var resUTL = hrefCart.split("sku=").pop().split("&qty=").shift();
-						setTimeout(function () {
-							vtexjs.checkout.getOrderForm().then(function () {
-								item = {
-									id: resUTL,
-									quantity: qtd,
-									seller: 1
-								};
-								vtexjs.checkout.addToCart([item]).done(function (orderForm) {
-									// Swal.fire({ 
-									//     toast: "true", 
-									//     position:"bottom-end", 
-									//     icon: "success", 
-									//     timerProgressBar:"true", 
-									//     showCloseButton: "true", 
-									//     showConfirmButton: false,
-									//     title: "Produto adicionado ao carrinho", 
-									//     timer: "2000"});
-									// //$(".buy-button").addClass("loading");
-									// vtexjs.checkout.getOrderForm().done(function (e) {
-									//     var qtdCart = e.items.length;
-									//     $(".info-cart .qtd-cart").html(qtdCart);
-									// });
-									// //$(".final-compra-externo, .final-compra-interno").fadeToggle();
-									$(".header-minicart").addClass("open"),
-										setTimeout(function () {
-											$(".header-minicart").removeClass("open");
-										}, 5e3);
+					var res = hrefCart.replace("qty=1", "qty=" + qtd);
+					//console.log(res);
+					var hrefCart = $(".produto-all .01-PoloWear-produto__buy-button .buy-button").attr("href");
+					var resUTL = hrefCart.split("sku=").pop().split("&qty=").shift();
+					setTimeout(function () {
+						vtexjs.checkout.getOrderForm().then(function () {
+							item = {
+								id: resUTL,
+								quantity: 1,
+								seller: 1
+							};
+							vtexjs.checkout.addToCart([item]).done(function (orderForm) {
+								$(".header-minicart").addClass("open"),
+									setTimeout(function () {
+										$(".header-minicart").removeClass("open");
+									}, 5e3);
 								});
-
+								vtexjs.checkout.getOrderForm().done(function(e) {
+									var qtdCart = e.items.length;
+									$(".info-cart .qtd-cart").html(qtdCart);
+								});
 							});
-						});
-					}
+							
+					});
 				});
-				// jQuery(document).on("click", ".closeCart", function (e) {
-				//      $(".forfit-produto .buy-button").removeClass("loading");
-				// }),
 			}
 		},
 

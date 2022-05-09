@@ -64,7 +64,7 @@ var minicart = {
             .then(function () {
                 var r = vtexjs.checkout.orderForm.items[t].quantity;
                 e > r
-                    ? Swal.fire({ type: "info", title: "Você já possui o limite deste produto no carrinho", showConfirmButton: false, timer: 100 }).then(function () {
+                    ? Swal.fire({ type: "info", title: "VocÃª jÃ¡ possui o limite deste produto no carrinho", showConfirmButton: false, timer: 100 }).then(function () {
                           minicart.toggleMinicartTimeout();
                       })
                     : Swal.fire({ type: "success", title: "Quantidade atualizada no carrinho", showConfirmButton: false, timer: 100 }).then(function () {
@@ -75,11 +75,27 @@ var minicart = {
     mountCart: function () {
         var t = vtexjs.checkout.orderForm.items.length,
             e = (vtexjs.checkout.orderForm.items.length, 0);
+            var total;           
+            if (vtexjs.checkout.orderForm && 
+                vtexjs.checkout.orderForm.totalizers && 
+                vtexjs.checkout.orderForm.totalizers && 
+                vtexjs.checkout.orderForm.totalizers[0] && 
+                vtexjs.checkout.orderForm.totalizers && 
+                vtexjs.checkout.orderForm.totalizers[0].value && 
+                vtexjs.checkout.orderForm.totalizers[1] && 
+                vtexjs.checkout.orderForm.totalizers[1].id === "Discounts" && 
+                vtexjs.checkout.orderForm.totalizers[1].value){
+                total = vtexjs.checkout.orderForm.totalizers[0].value + vtexjs.checkout.orderForm.totalizers[1].value; 
+            }else if (vtexjs.checkout.orderForm && vtexjs.checkout.orderForm.totalizers && vtexjs.checkout.orderForm.totalizers && vtexjs.checkout.orderForm.totalizers[0] && vtexjs.checkout.orderForm.totalizers) {
+                total = vtexjs.checkout.orderForm.totalizers[0].value;
+            }else{
+                $(".header-cart--info-value").html("R$ 00,00"), $(".header-minicart-value").html("R$ 00,00");
+            }
         if (t > 0) for (var r = 0; r < t; r++) e += vtexjs.checkout.orderForm.items[r].quantity;
         if (0 == vtexjs.checkout.orderForm.totalizers.length) 0 == (i = vtexjs.checkout.orderForm.value) && (i = 0);
         else var i = vtexjs.checkout.orderForm.totalizers[0].value;
         $(".quantity-price").html(minicart.formatPrice(i / 100)), $(".carrinho .qtd-cart").text(e), $(".header-minicart-badge").text(e), $(".header-minicart-itens").text(e > 1 ? "itens" : "item"), $(".list-prod").remove();
-        for (r = 0; r < t; r++)
+        for (r = 0; r < t; r++){
             $(
                 '<div class="list-prod" dataProdId="' +
                     vtexjs.checkout.orderForm.items[r].productId +
@@ -99,12 +115,18 @@ var minicart = {
                     vtexjs.checkout.orderForm.items[r].name +
                     '</h4>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t\t<div class="list-prod-price">\n\t\t\t\t\t<div class="list-prod-qtd updating">\n\t\t\t\t\t\t<p class="qtd-remove">-</p>\n\t\t\t\t\t\t<p class="qtd-value">' +
                     vtexjs.checkout.orderForm.items[r].quantity +
-                    '</p>\n\t\t\t\t\t\t<p class="qtd-adiciona">+</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="list-prod-total">\n\t\t\t\t\t\t<p>' +
+                    '</p>\n\t\t\t\t\t\t<p class="qtd-adiciona">+</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="list-prod-total">\n\t\t\t\t\t\t<p>' +   
                     minicart.formatPrice((vtexjs.checkout.orderForm.items[r].listPrice * vtexjs.checkout.orderForm.items[r].quantity) / 100) +
                     "</p>\n\t\t\t\t\t\t<p>" +
-                    minicart.formatPrice((vtexjs.checkout.orderForm.items[r].price * vtexjs.checkout.orderForm.items[r].quantity) / 100) +
+                    minicart.formatPrice((vtexjs.checkout.orderForm.items[r].sellingPrice * vtexjs.checkout.orderForm.items[r].quantity) / 100) +
                     '</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<span class="list-prod-remove"></span>\n\t\t</div>'
             ).appendTo(".header-minicart-list");
+            if (vtexjs.checkout.orderForm.items[r].listPrice == vtexjs.checkout.orderForm.items[r].sellingPrice){
+                $('.header-minicart-list .list-prod-total p:first-of-type').hide();
+            }else{
+                $('.header-minicart-list .list-prod-total p:first-of-type').show();
+            }
+        }    
         $(".list-prod-qtd").removeClass("updating"),
             vtexjs.checkout.orderForm &&
             vtexjs.checkout.orderForm.totalizers &&
@@ -112,7 +134,7 @@ var minicart = {
             vtexjs.checkout.orderForm.totalizers[0] &&
             vtexjs.checkout.orderForm.totalizers &&
             vtexjs.checkout.orderForm.totalizers[0].value
-                ? ($(".header-cart--info-value").html(minicart.formatPrice(vtexjs.checkout.orderForm.totalizers[0].value / 100)), $(".header-minicart-value").html(minicart.formatPrice(vtexjs.checkout.orderForm.totalizers[0].value / 100)))
+                ? ($(".header-cart--info-value").html(minicart.formatPrice(total / 100)), $(".header-minicart-value").html(minicart.formatPrice(total / 100)))
                 : ($(".header-cart--info-value").html("R$ 00,00"), $(".header-minicart-value").html("R$ 00,00"));
     },
     controlers: function () {
@@ -145,45 +167,9 @@ var minicart = {
                 vtexjs.checkout.orderForm.items[o].quantity < e ? $(".list-prod").eq(o).find(".list-prod-qtd").addClass("limit") : $(".list-prod").eq(o).find(".list-prod-qtd").removeClass("limit");
             });
     },
-    // verificaValorFreteGratis: function(){
-    //     return setTimeout((function() {
-    //         var subTotal = vtexjs.checkout.orderForm.totalizers;
-    //         // console.log(subTotal);
-    //         var newSubTotal = subTotal[0].value;      
-    //             if (newSubTotal < 30000) {
-    //                 function numberWithCommas(x) {
-    //                     return x.toString().replace(/\B(?=(\d{2})+(?!\d))/g, ',');
-    //                 }
-    //                 var hundredPercent = 30000;
-    //                 var totalPercent = Math.floor((newSubTotal / hundredPercent) * 100);
-    //                 var sum = hundredPercent - newSubTotal;
-    //                 var newSum = numberWithCommas(sum);
-    //                 $('.free-shipping-bar').text(`Faltam R$${newSum} para você ganhar Frete Grátis`);
-    //                 $('.color-bar').css('width', `${totalPercent}%`);
-    //                 console.log(`Faltam R$${newSum} para você ganhar Frete Grátis`);
-    //                 console.log(`Percentual ${totalPercent}% de barra`);   
-    //             }else if (newSubTotal >= 30000) {
-    //                 $('.color-bar').css('width', '100%');
-    //                 $('.free-shipping-bar').text('Você já tem Frete Grátis');
-    //                 console.log('Você já tem Frete Grátis');
-    //             }else{
-    //                 $('.color-bar').css('width', '0%');
-    //                 $('.free-shipping-bar').text('Faltam R$300,00 para você ganhar Frete Grátis');
-    //             }
-    //     }
-    //     ), 3000),
-    //     this
-    // },
-    // verificaAdicaoSubtracaoCart: function(){
-    //     $(document).on("click", ".qtd-remove, .qtd-adiciona", (function() {
-    //         minicart.verificaValorFreteGratis();
-    //     }
-    //     ))
-    // },
     miniCartInit: function () {
         vtexjs.checkout.getOrderForm().done(function (t) {
             minicart.mountCart(), minicart.isEmptyCart(), minicart.controlers(), minicart.update();
-            // minicart.verificaValorFreteGratis(), minicart.verificaAdicaoSubtracaoCart();
         });
     },
 };

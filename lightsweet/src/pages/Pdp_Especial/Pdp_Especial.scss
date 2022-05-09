@@ -207,6 +207,9 @@
                                         @include flex-flow(column);
                                         @include align-items(center);
                                         width: 100%;
+                                        @include d(celularLarge){
+                                            margin-top: 2em;
+                                        }
                                         tr{
                                             @include flexbox;
                                             @include align-items(center);
@@ -243,6 +246,7 @@
                                                 line-height: 35px;
                                                 @include d(celularLarge){
                                                     font-size: 15px;
+                                                    padding: .5em 0;
                                                 }
                                             }
                                         }
@@ -258,6 +262,9 @@
                 .plugin-preco{
                     order: 2;
                     margin-top: 2em;
+                    @include d(celularLarge){
+                        margin-top: 0;
+                    }
                     .productPrice{
                         .descricao-preco{
                             text-align: center;
@@ -357,7 +364,7 @@
                     margin: 1em 0;
                     padding: 0 6em;
                     @include d(celularLarge){
-                        padding: 0 4em;
+                        padding: 0em;
                     }
                     .container-center{
                         max-width: 100%;
