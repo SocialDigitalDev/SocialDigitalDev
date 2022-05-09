@@ -361,7 +361,7 @@ header{
                             @include flexbox();
                             @include justify-content(center);
                             .level-1{
-                                margin: 0 2em;
+                                margin: 0 1em;
                                 padding: 1.7em 20px;
                                 font-weight: 600;
                                 position: relative;
@@ -386,6 +386,177 @@ header{
                                         color: var(--color-blue);
                                     }
                                 }
+                                &.oferta-especial{
+                                    // display: block !important;
+                                    background: #e9028f;
+                                    .flags-promo{
+                                        display: none;
+                                    }
+                                    .flag-contador {
+                                        line-height: 21px;
+                                        @include flexbox;
+                                        @include flex-flow(column);
+                                        @include align-items(center);
+                                        .flag{
+                                            @include flexbox;
+                                            @include align-items(center);
+                                            position: relative;
+                                            top: -3px;
+                                            &:before{
+                                                content: "";
+                                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Capa_1' x='0px' y='0px' width='97.16px' height='97.16px' viewBox='0 0 97.16 97.16' style='enable-background:new 0 0 97.16 97.16;fill: red;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath d='M48.58,0C21.793,0,0,21.793,0,48.58s21.793,48.58,48.58,48.58s48.58-21.793,48.58-48.58S75.367,0,48.58,0z M48.58,86.823 c-21.087,0-38.244-17.155-38.244-38.243S27.493,10.337,48.58,10.337S86.824,27.492,86.824,48.58S69.667,86.823,48.58,86.823z'/%3E%3Cpath d='M73.898,47.08H52.066V20.83c0-2.209-1.791-4-4-4c-2.209,0-4,1.791-4,4v30.25c0,2.209,1.791,4,4,4h25.832 c2.209,0,4-1.791,4-4S76.107,47.08,73.898,47.08z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                                                background-repeat: no-repeat;
+                                                background-size: contain;
+                                                display: block;
+                                                width: 15px;
+                                                height: 15px;
+                                                margin-right: 5px;
+                                            }
+                                        }
+                                        .top-count{
+                                            .days{
+                                                .qd-cp-digits{
+                                                    color: red;
+                                                    font-size: 28px;
+                                                }
+                                                .qd-cp-text{
+                                                    color: red;
+                                                    font-size: 0;
+                                                    &:before{
+                                                        content: "d";
+                                                        font-size: 15px;
+                                                        margin-left: -4px;
+                                                    }
+                                                }
+                                            }
+                                            .hours{
+                                                .qd-cp-digits{
+                                                    color: red;
+                                                    font-size: 28px;
+                                                }
+                                                .qd-cp-text{
+                                                    color: red;
+                                                    font-size: 0;
+                                                    &:before{
+                                                        content: "h";
+                                                        font-size: 15px;
+                                                        margin-left: -4px;
+                                                    }
+                                                }
+                                            }
+                                            .minutes{
+                                                .qd-cp-digits{
+                                                    color: red;
+                                                    font-size: 28px;
+                                                }
+                                                .qd-cp-text{
+                                                    color: red;
+                                                    font-size: 0;
+                                                    &:before{
+                                                        content: "m";
+                                                        font-size: 15px;
+                                                        margin-left: -4px;
+                                                    }
+                                                }
+                                            }
+                                            .seconds{
+                                                .qd-cp-digits{
+                                                    color: red;
+                                                    font-size: 28px;
+                                                }
+                                                .qd-cp-text{
+                                                    color: red;
+                                                    font-size: 0;
+                                                    &:before{
+                                                        content: "s";
+                                                        font-size: 15px;
+                                                        margin-left: -4px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .menu-level-2{
+                                        width: 275px;
+                                        left: -67%;
+                                        background: transparent;
+                                        .ls-prateleira{
+                                            margin: 0;
+                                            margin-top: 10px;
+                                            > ul{
+                                                li{
+                                                    .ls-product{
+                                                        &.hover{
+                                                            background: var(--color-white);
+                                                            .ls-actions{
+                                                                .ls-produto__buy-quant{
+                                                                    .qtdPrateleira{
+                                                                        span{
+                                                                            text-decoration: none;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        .ls-image{
+                                                            margin: 0 auto;
+                                                            a{
+                                                                padding: 0px 20px;
+                                                                img{
+                                                                    max-width: 190px;
+                                                                    margin: auto;
+                                                                    display: block;
+                                                                }
+                                                            }
+                                                        }
+                                                        .data{
+                                                            width: 100%;
+                                                            h3{
+                                                                height: 45px;
+                                                                margin-bottom: 10px;
+                                                                a{
+                                                                    color: var(--color-black);
+                                                                }
+                                                            }
+                                                            .price{
+                                                                .newPrice{
+                                                                    margin-bottom: 35px;
+                                                                }
+                                                            }
+                                                        }
+                                                        .ls-actions{
+                                                            .ls-buy{
+                                                                a{
+                                                                    @include flexbox;
+                                                                    color: var(--color-white);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:hover{
+                                        a{
+                                            color: var(--color-white);
+                                        }
+                                        .menu-level-2:not(.inside){
+                                            width: 275px;
+                                            left: -30%;
+                                            li{
+                                                padding: 0px 0px;
+                                                &:hover{
+                                                    text-decoration: none;
+                                                    background: var(--color-white);
+                                                }
+                                            }
+                                            .ls-product{
+                                                border: none;
+                                            }
+                                        }
+                                    }
+                                }
                                 .menu-level-2{
                                     opacity: 0;
                                     transition: all .1s ease-in-out;
@@ -404,7 +575,7 @@ header{
                                     top: 54px; 
                                     left:0; 
                                     padding:5px; 
-                                    width:240px; 
+                                    width:240px;
                                     border-radius:0 0 10px 10px; 
                                     float: left;
                                     background: var(--color-white);

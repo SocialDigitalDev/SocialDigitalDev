@@ -1,9 +1,11 @@
 import './utils/bootstrap/index'
 import header from './Header/Header'
 import footer from './Footer/Footer'
+import './utils/vtex-countdown'
 import './utils/roundValues'
 import './utils/variantesCompraRapida'
 import './utils/mmenu'
+import './utils/ofertaEspecial'
 import './Global.scss'
 
 var scre = $(window).width();
