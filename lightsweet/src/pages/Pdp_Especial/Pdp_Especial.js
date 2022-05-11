@@ -150,7 +150,7 @@ var Pdp_Especial = {
                 $('.valor-por, .PDP-Especial, .slick-dots').addClass('amarelo');
                 $('.PDP-Especial tbody tr, .slick-arrow').addClass('amarelo');
             }
-            else if (url === "/brownie-zero-adicao-de-acucares-ls-10001499/p") {
+            else if (url === "/mistura-para-bolo-sabor-chocolate-sem-gluten-150g-ls-10001571/p") {
                 containerCenter.css('background-image','url(/arquivos/new-marrom.png)');
                 $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-marrom)');
                 $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-marrom)');
