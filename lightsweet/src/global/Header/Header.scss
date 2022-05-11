@@ -480,6 +480,7 @@ header{
                                         width: 275px;
                                         left: -67%;
                                         background: transparent;
+                                        display: none;
                                         .ls-prateleira{
                                             margin: 0;
                                             margin-top: 10px;
@@ -519,8 +520,12 @@ header{
                                                                 }
                                                             }
                                                             .price{
+                                                                .oldPrice{
+                                                                    line-height: 20px;
+                                                                }
                                                                 .newPrice{
                                                                     margin-bottom: 35px;
+                                                                    line-height: 20px;
                                                                 }
                                                             }
                                                         }
@@ -544,6 +549,7 @@ header{
                                         .menu-level-2:not(.inside){
                                             width: 275px;
                                             left: -30%;
+                                            display: block;
                                             li{
                                                 padding: 0px 0px;
                                                 &:hover{

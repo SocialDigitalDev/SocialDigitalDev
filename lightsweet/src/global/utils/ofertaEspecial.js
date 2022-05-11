@@ -9,7 +9,7 @@ var ofertaEspecial = {
                 $('.departamento .flag-contador .flag').css('font-size', '0');
             }
             setTimeout(function(){
-                $('.departamento .vitrine-title h2').text('Oferta Especial');
+                $('.departamento.oferta-especial .vitrine-title h2').text('Oferta Especial');
             }, 2000);
         }
         window.onload = carregaOfertaEspecial();
