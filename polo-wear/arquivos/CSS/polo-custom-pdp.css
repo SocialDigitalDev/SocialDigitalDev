@@ -1,0 +1,91 @@
+.header{
+    box-shadow: none;
+}
+.custom-pdp .polo-produto_imagem{
+    height: auto;
+}
+.custom-pdp .container.bread {
+    background: none;
+    padding: 0;
+}
+.produto-all .container-center {
+    padding: 0;
+}
+.grid-image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2em 8em;
+    background: #f7f7f7;
+}
+.image-content {
+    border: 1px solid #e3e3e3;
+    margin: 0.5em 1em;
+    margin-bottom: 1.5em;
+    margin-top: 0;
+    background: #fff;
+}
+.custom-pdp .polo-produto_infos{
+    padding: 2em;
+    border: 1px solid #e3e3e3;
+}
+.custom-pdp .produto-all{
+    margin-top: 0;
+}
+.custom-pdp .polo-produto_infos .polo-produto_content .nome-prod .productName {
+    letter-spacing: 0px;
+    font-weight: 600;
+}
+.custom-pdp .polo-produto_infos .polo-produto_content .cod-prod .skuReference{
+    font-size: 15px;
+    font-weight: 400;
+    color: #ccc;
+}
+.custom-pdp .polo-produto_infos .polo-produto_content .cod-prod .skuReference:before{
+    font-weight: 300;
+    font-size: 15px;
+}
+.custom-pdp .polo-produto_content .plugin-preco .productPrice .descricao-preco .skuBestPrice{
+    font-size: 45px;
+    font-weight: 500;
+}
+.custom-pdp em.valor-dividido.price-installments {
+    font-size: 21px;
+    font-style: normal;
+    color: #888;
+    font-weight: 300;
+}
+.custom-pdp .Tamanho li.specification{
+    border: none;
+}
+.custom-pdp .sku-selector-container {
+    margin: 1em 0;
+    margin-bottom: 2em;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    padding: 15px 0;
+}
+.custom-pdp .polo-hover-content .polo-variations .polo-tamanhos li, .custom-pdp .Tamanho .skuList label {
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    position: relative;
+}
+.custom-pdp .calc-frete .cep fieldset{
+    border: 1px solid #e3e3e3;
+}
+.custom-pdp .calc-frete .cep .frete-calcular .bt{
+    font-weight: 400;
+    background: #000000;
+    font-size: 14px;
+}
+.custom-pdp .calc-frete .cep .cep-busca{
+    left: 0;
+}
+.custom-pdp .calc-frete{
+    padding: 1.5em 0;
+    border-top: 1px solid #e3e3e3;
+    margin-top: 2em;
+}
+.custom-pdp .polo-produto_infos .polo-produto_content{
+    height: 700px;
+}
