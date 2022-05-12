@@ -1,0 +1,306 @@
+.ls-lp-vale-compra-main{
+    @include d(ipad){
+        background: #f7f7f7;
+    }
+    section{
+        .wrapper{
+            max-width: 1310px;
+            margin: 0 auto;
+            .texto-principal{
+                p{
+                    text-align: center;
+                    margin: 2em auto;
+                    font-size: 25px;
+                    line-height: 35px;
+                    @include d(celularLarge){
+                        font-size: 16px;
+                    }
+                }
+            }
+            .lp-texto-inicio{
+                h2{
+                    font-weight: 400;
+                    text-align: center;
+                    font-size: 25px;
+                    line-height: 35px;
+                    margin-bottom: 2em;
+                    @include d(celularLarge){
+                        font-size: 16px;
+                    }
+                }
+            }
+            .img-e-conteudo{
+                @include flexbox;
+                @include justify-content(space-between);
+                @include align-items(center);
+                @include d(ipad){
+                    @include flex-flow(column);
+                }
+                .img-content{
+                    width: 50%;
+                    @include d(ipad){
+                        width: 100%;
+                    }
+                    img.step{
+                        max-width: 100%;
+                        @include d(ipad){
+                            width: 100%;
+                        }
+                    }
+                }
+                .text-block-content{
+                    width: 50%;
+                    @include d(ipad){
+                        width: 100%;
+                    }
+                    .upper-empty-block{
+                        width: 100%;
+                        @include d(ipad){
+                            display: none !important;
+                        }
+                    }
+                    p{
+                        max-width: 300px;
+                        font-size: 25px;
+                        line-height: 35px;
+                        margin: 0 auto;
+                        list-style:disc outside none;
+                        display:list-item; 
+                        @include d(ipad){
+                            max-width: 100%;
+                            text-align: center;
+                            list-style: none;
+                            margin: 2em 0;
+                        }
+                    }
+                    .lower-empty-block{
+                        width: 100%;
+                        @include d(ipad){
+                            display: none !important;
+                        }
+                    }
+                }
+                &.passo-2, &.passo-4, &.passo-6{
+                    .text-block-content{
+                        @include d(ipad){
+                            order: 1;
+                        }
+                        .upper-empty-block{
+                            background-image: url("data:image/svg+xml,%3Csvg width='210' height='181' viewBox='0 0 210 181' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 8C0 12.4183 3.58172 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8ZM8 173H6.5C6.5 173.828 7.17157 174.5 8 174.5V173ZM194 173C194 177.418 197.582 181 202 181C206.418 181 210 177.418 210 173C210 168.582 206.418 165 202 165C197.582 165 194 168.582 194 173ZM6.5 8V173H9.5V8H6.5ZM8 174.5H202V171.5H8V174.5Z' fill='black'/%3E%3C/svg%3E");
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            display: block;
+                            height: 190px;
+                            background-position: 100% 0;
+                            position: relative;
+                            bottom: 20px;
+                            left: 13px;
+                        }
+                        .lower-empty-block{
+                            display: block;
+                            height: 255px;
+                        }
+                    }
+                    .img-content{
+                        @include d(ipad){
+                            order: 2;
+                        }
+                    }
+                }
+                &.passo-3, &.passo-5{
+                    .text-block-content{
+                        @include d(ipad){
+                            order: 1;
+                        }
+                        .upper-empty-block{
+                            background-image: url("data:image/svg+xml,%3Csvg width='210' height='181' viewBox='0 0 210 181' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 8C0 12.4183 3.58172 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8ZM8 173H6.5C6.5 173.828 7.17157 174.5 8 174.5V173ZM194 173C194 177.418 197.582 181 202 181C206.418 181 210 177.418 210 173C210 168.582 206.418 165 202 165C197.582 165 194 168.582 194 173ZM6.5 8V173H9.5V8H6.5ZM8 174.5H202V171.5H8V174.5Z' fill='black'/%3E%3C/svg%3E");
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            display: block;
+                            height: 190px;
+                            background-position: 100% 0;
+                            position: relative;
+                            bottom: 20px;
+                            left: -25px;
+                            -webkit-transform: scaleX(-1);
+                            transform: scaleX(-1);
+                            @include d(hd){
+                                left: -15px;
+                            }
+                        }
+                        .lower-empty-block{
+                            display: block;
+                            height: 190px;
+                        }
+                    }
+                    .img-content{
+                        @include d(ipad){
+                            order: 2;
+                        }
+                    }
+                }
+                &.passo-1{
+                    .text-block-content{
+                        @include d(ipad){
+                            order: 1;
+                        }
+                        p{
+                            @include d(celularLarge){
+                                font-size: 16px;
+                            }
+                            &:before{
+                                @include d(celularLarge){
+                                    content: "1. ";
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                    .img-content{
+                        @include d(ipad){
+                            order: 2;
+                        }
+                    }
+                }
+                &.passo-2{
+                    .text-block-content{
+                        p{
+                            @include d(celularLarge){
+                                font-size: 16px;
+                            }
+                            &:before{
+                                @include d(celularLarge){
+                                    content: "2. ";
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.passo-3{
+                    .upper-empty-block{
+                        bottom: 70px !important;
+                        @include d(ipadPro){
+                            bottom: 105px;
+                        }
+                    }
+                    p{
+                        @include d(celularLarge){
+                            font-size: 16px;
+                        }
+                        &:before{
+                            @include d(celularLarge){
+                                content: "3. ";
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                &.passo-4{
+                    .upper-empty-block{
+                        @include d(ipadPro){
+                            bottom: 55px;
+                        }
+                    }
+                    p{
+                        @include d(celularLarge){
+                            font-size: 16px;
+                        }
+                        &:before{
+                            @include d(celularLarge){
+                                content: "4. ";
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                &.passo-5{
+                    .upper-empty-block{
+                        @include d(ipadPro){
+                            bottom: 70px;
+                        }
+                    }
+                    p{
+                        @include d(celularLarge){
+                            font-size: 16px;
+                        }
+                        &:before{
+                            @include d(celularLarge){
+                                content: "5. ";
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                &.passo-6{
+                    .upper-empty-block{
+                        bottom: 60px !important;
+                        @include d(ipadPro){
+                            bottom: 105px;
+                        }
+                    }
+                    p{
+                        @include d(celularLarge){
+                            font-size: 16px;
+                        }
+                        &:before{
+                            @include d(celularLarge){
+                                content: "6. ";
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                &.passo-last{
+                    .text-block-content{
+                        width: 50%;
+                        @include d(celularLarge){
+                            width: 100%;
+                            padding: 0 1em;
+                        }
+                        p{
+                            margin-top: 3em;
+                            @include d(celularLarge){
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .great-empty-block{
+                        background-image: url("data:image/svg+xml,%3Csvg width='210' height='181' viewBox='0 0 210 181' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 8C0 12.4183 3.58172 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8ZM8 173H6.5C6.5 173.828 7.17157 174.5 8 174.5V173ZM194 173C194 177.418 197.582 181 202 181C206.418 181 210 177.418 210 173C210 168.582 206.418 165 202 165C197.582 165 194 168.582 194 173ZM6.5 8V173H9.5V8H6.5ZM8 174.5H202V171.5H8V174.5Z' fill='black'/%3E%3C/svg%3E");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        display: block;
+                        height: 190px;
+                        width: 50%;
+                        background-position: 100% 0;
+                        position: relative;
+                        bottom: 20px;
+                        left: -25px;
+                        -webkit-transform: scaleX(-1);
+                        transform: scaleX(-1);
+                        @include d(ipadPro){
+                            bottom: 70px;
+                        }
+                        @include d(ipad){
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+            .last-text{
+                text-align: center;
+                margin: 0 auto;
+                margin-top: 6em;
+                font-size: 22px;
+                max-width: 500px;
+                line-height: 35px;
+                font-weight: 600;
+                padding: 0 1em;
+                @include d(ipad){
+                    margin-top: 0;
+                    margin-bottom: 2em;
+                }
+            }
+        }
+    }
+}
