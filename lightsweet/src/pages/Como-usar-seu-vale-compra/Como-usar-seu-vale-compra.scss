@@ -1,7 +1,4 @@
 .ls-lp-vale-compra-main{
-    @include d(ipad){
-        background: #f7f7f7;
-    }
     section{
         .wrapper{
             max-width: 1310px;
@@ -285,6 +282,14 @@
                             display: none !important;
                         }
                     }
+                }
+            }
+            .gif-wrapper{
+                @include flexbox;
+                @include justify-content(center);
+                padding: 0 2em;
+                img.funny-gif{
+                    max-width: 100%;
                 }
             }
             .last-text{
