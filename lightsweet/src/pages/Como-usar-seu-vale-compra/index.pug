@@ -1,0 +1,86 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'vale-compra';
+    - var $templateClass = 'ls-lp-vale-compra';
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content
+    section
+        div.banner-principal.desktop
+            vtex:contentPlaceHolder(id=`Banner Principal - Desktop`)/
+        div.banner-principal.mobile
+            vtex:contentPlaceHolder(id=`Banner Principal - Mobile`)/
+
+    section
+        div.wrapper
+            div.texto-principal
+                p O vale-compra é um código de 16 letras, tem <b>validade de um ano</b>, é nominal, intransferível e só pode ser utilizado caso você esteja logado na sua conta, no momento da finalização do seu pedido.
+                p Ele funciona como um meio de pagamento, pode ser utilizado enquanto houver saldo e, caso você tenha mais de um vale, você pode usar mais de um no seu pedido, não é legal?
+
+    section
+        div.wrapper
+            div.lp-texto-inicio
+                h2 Veja abaixo o <b>passo a passo</b> para utilização:
+            div.img-e-conteudo.passo-1
+                div.img-content
+                    img.step(src=`/arquivos/vale-compra-passo-1.png`)/
+                div.text-block-content
+                    div.upper-empty-block
+                    p Inclua os produtos que deseja no carrinho
+                    div.lower-empty-block
+
+            div.img-e-conteudo.passo-2
+                div.text-block-content
+                    div.upper-empty-block
+                    p Clique em finalizar o pedido para preencher os dados de entrega e pagamento
+                    div.lower-empty-block
+                div.img-content
+                    img.step(src=`/arquivos/vale-compra-passo-2.png`)/
+
+            div.img-e-conteudo.passo-3
+                div.img-content
+                    img.step(src=`/arquivos/vale-compra-passo-3.png`)/
+                div.text-block-content
+                    div.upper-empty-block
+                    p Inclua suas informações pessoais e endereço de entrega
+                    div.lower-empty-block
+
+            div.img-e-conteudo.passo-4
+                div.text-block-content
+                    div.upper-empty-block
+                    p Inclua aqui o seu vale-compras.
+                    div.lower-empty-block
+                div.img-content
+                    img.step(src=`/arquivos/vale-compra-passo-4.png`)/
+
+            div.img-e-conteudo.passo-5
+                div.img-content
+                    img.step(src=`/arquivos/vale-compra-passo-5.png`)/
+                div.text-block-content
+                    div.upper-empty-block
+                    p Caso o valor do pedido ultrapasse o crédito disponível no vale, inclua as informações do meio de pagamento desejado
+                    div.lower-empty-block
+
+            div.img-e-conteudo.passo-6
+                div.text-block-content
+                    div.upper-empty-block
+                    p Inclua aqui o seu vale-compras.
+                    div.lower-empty-block
+                div.img-content
+                    img.step(src=`/arquivos/vale-compra-passo-6.png`)/
+            
+            div.img-e-conteudo.passo-last
+                div.text-block-content
+                    div.upper-empty-block
+                    p Prontinho, agora é só esperar seu produto chegar até você!
+                    div.lower-empty-block
+                div.great-empty-block
+
+
+block append scripts
+    script(type='text/javascript', src=`/arquivos/${$templateName}.js`) 

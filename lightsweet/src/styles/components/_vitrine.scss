@@ -150,6 +150,7 @@
                         background: var(--color-yellow);
                         padding: 3px;
                         text-align: center;
+                        display: none;
                         @include d(celularLarge){
                             font-size: 12px;
                             padding: 5px;

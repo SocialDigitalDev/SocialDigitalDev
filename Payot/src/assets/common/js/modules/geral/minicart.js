@@ -73,6 +73,16 @@ const Methods = {
     setInfos() {
         const items = vtexjs.checkout.orderForm.items;
         const minicart = document.querySelector('.j-minicart__content-js');
+        var subtotal;
+        var shipping = "Não calculado";
+        if (vtexjs.checkout.orderForm.totalizers[0]){
+            subtotal = Methods._convertCurrency(vtexjs.checkout.orderForm.totalizers[0].value);
+        }
+        if (vtexjs.checkout.orderForm.totalizers[1] && vtexjs.checkout.orderForm.totalizers[1].id === 'Shipping' && vtexjs.checkout.orderForm.totalizers[1].value > 0){
+            shipping = Methods._convertCurrency(vtexjs.checkout.orderForm.totalizers[1].value);
+        }else if(vtexjs.checkout.orderForm.totalizers[1].value <= 0){
+            shipping = "Frete Grátis";
+        }
         const totalPrice = Methods._convertCurrency(vtexjs.checkout.orderForm.value);
         let wrapper;
 
@@ -141,6 +151,14 @@ const Methods = {
             wrapper += `
                         </ul>
                             <div class="j-minicart-total">
+                                <p class="minicart-subtotal">
+                                    <span>Subtotal</span>
+                                    <span class='js--minicart-subtotal'>${subtotal}</span>
+                                </p>
+                                <p class="minicart-frete">
+                                    <span>Frete</span>
+                                    <span class='js--minicart-shipping'>${shipping}</span>
+                                </p>
                                 <p>
                                     <span>Total</span>
                                     <strong class='js--minicart-total'> ${totalPrice} </strong>

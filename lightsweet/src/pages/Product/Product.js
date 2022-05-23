@@ -132,6 +132,13 @@ var produto = {
                     }
                 },
                 {
+                    breakpoint: 1300,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
                     breakpoint: 1100,
                     settings: {
                         slidesToShow: 3,
@@ -170,6 +177,13 @@ var produto = {
             infinite: true,
             arrows: true,
             responsive: [
+                {
+                    breakpoint: 1300,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4,
+                    }
+                },
                 {
                     breakpoint: 1100,
                     settings: {
@@ -217,10 +231,120 @@ var produto = {
             ]
         });
     },
+    compreJunto: function () {
+        if ($("body").hasClass("ev-produto")) {
+
+            // Clique bootao Comprar Junto
+            setTimeout(function () {
+                $('.btn-batch-buy').off('click').click(function (event) {
+                    event.preventDefault();
+                    var hrefCart = $('.info-prod .comprar-prod .bt-comprar a').attr("href");
+                    var qtd = 1;
+                    var res = hrefCart.replace(/qty=1/, "qty=" + qtd);
+                    var idSkuCJ = $('.slideCompreJunto .slick-active .buy-product-checkbox').attr('rel');
+                    alert(idSkuCJ);
+
+                    // //var resUTL = res.substring(res.lastIndexOf("sku=")+1,res.lastIndexOf("&qty="));
+                    var resUTL = res.split("sku=").pop().split("&qty=").shift();
+                    alert(resUTL);
+
+                    setTimeout(function () {
+                        vtexjs.checkout.getOrderForm().then(function () {
+                            item = {
+                                id: resUTL,
+                                quantity: 1,
+                                seller: 1
+                            };
+                            itemDois = {
+                                id: idSkuCJ,
+                                quantity: 1,
+                                seller: 1
+                            };
+                            vtexjs.checkout.addToCart([item, itemDois]).done(function (orderForm) {
+                                alert('foi');
+                            });
+                        })
+                    });
+                });
+            }, 1500);
+
+            function currencyFormatted(value, str_cifrao) {
+                return str_cifrao + ' ' + value.formatMoney(2, ',', '.');
+            }
+
+            Number.prototype.formatMoney = function (c, d, t) {
+                var n = this,
+                    c = isNaN(c = Math.abs(c)) ? 2 : c,
+                    d = d == undefined ? "." : d,
+                    t = t == undefined ? "," : t,
+                    s = n < 0 ? "-" : "",
+                    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+                    j = (j = i.length) > 3 ? j % 3 : 0;
+                return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+            };
+
+            $('.ls-prateleira>ul').on('setPosition', function (event, slick, direction) {
+                var precoCJ = $('.slideCompreJunto .slick-initialized .slick-slide.slick-active .prodData .price .bestPrice').text();
+                precoCJ = precoCJ.trim();
+                precoCJ = precoCJ.replace('R$ ', '');
+                precoCJ = precoCJ.replace(',', '.');
+                var preco = $('.prodFixo .skuBestPrice').text();
+                preco = preco.trim();
+                preco = preco.replace('R$ ', '');
+                preco = preco.replace(',', '.');
+                precoFinal = parseFloat(preco) + parseFloat(precoCJ);
+                precoFinal = currencyFormatted(precoFinal, 'R$');
+                //console.log(precoFinal);
+                $('.selected-value').text(precoFinal);
+
+            });
+
+
+
+            var prodCompreJunto = $('.prodCompreJunt .ls-prateleira >ul');
+            var boxCompre = $('.prodCompreJunt');
+
+            if (prodCompreJunto.length > 0) {
+                boxCompre.css('display', 'block');
+            } else {
+                boxCompre.css('display', 'none');
+            };
+
+            // Slide compre junto
+            $('#image img').clone().prependTo('.prodFixo').wrapAll('<div class="imgCompre"></div>'); //Clone imagem
+            $('.productPrice').clone().appendTo('.prodFixo'); //Clona preco
+
+            $('.prodFixo').after('<div class="juntoAction"><p><img src="/arquivos/plus-bup.png" /></p></div>');
+            $('.slideCompreJunto .ls-prateleira>ul').after('<div class="juntoAction"><p><img src="/arquivos/equal-bup.png" /></p></div>');
+
+            // Pega field que seleciona cada produto e colocar dentro da LI prodData
+            var prodCheck = $('.slideCompreJunto .buy-product-checkbox');
+
+            prodCheck.each(function () {
+                var idCheck = $(this);
+
+                $('.slideCompreJunto .ls-prateleira .data').each(function () {
+                    if ($(this).attr('data-id') == idCheck.attr('rel')) {
+                        idCheck.prependTo($(this));
+                    }
+                });
+            });
+
+            $('.slideCompreJunto fieldset').remove(); // Remove fieldset vazio 
+
+            $('.slideCompreJunto .ls-prateleira>ul').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: false
+            });
+
+        }
+    },
     init: function(){
         produto.TabelaNutri();
         produto.ajustaTabelaNutri();
         produto.sliderReceitas();
+        produto.compreJunto();
         produto.quemViuViuTb();
         produto.qtdProd();
         produto.fixFrete();

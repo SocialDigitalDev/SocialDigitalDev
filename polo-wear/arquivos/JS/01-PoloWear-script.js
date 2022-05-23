@@ -1834,43 +1834,45 @@ $(document).ready(function () {
 		},
 
 		variationsQuantity: function () {
-			$('.sku-selector-container').append('<div class="variations-quantity">')
+			if ($('body').hasClass('produto')) {
+				$('.sku-selector-container').append('<div class="variations-quantity">')
 
-			$(document).ready(function () {
-				var batch = new Vtex.JSEvents.Listener('batch', batchQyde)
-				skuEventDispatcher.addListener(skuDataReceivedEventName, batch)
-			})
-			
-			$('.sku-selector-container .Tamanho .input-dimension-Tamanho').each(function(){
-				$(this).on('click', function(){
-					$('.sku-selector-container .Tamanho label').removeClass('arrow-top')
+				$(document).ready(function () {
+					var batch = new Vtex.JSEvents.Listener('batch', batchQyde)
+					skuEventDispatcher.addListener(skuDataReceivedEventName, batch)
 				})
-			})
+				
+				$('.sku-selector-container .Tamanho .input-dimension-Tamanho').each(function(){
+					$(this).on('click', function(){
+						$('.sku-selector-container .Tamanho label').removeClass('arrow-top')
+					})
+				})
 
-			function batchQyde(e) {
-						if (e.skuData.SkuSellersInformation[0].AvailableQuantity >= 3){
-							$('.variations-quantity .text').remove()
-						}
+				function batchQyde(e) {
+							if (e.skuData.SkuSellersInformation[0].AvailableQuantity >= 3){
+								$('.variations-quantity .text').remove()
+							}
 
-						if (e.skuData.SkuSellersInformation[0].AvailableQuantity < 3){
-				if (e.skuData.SkuSellersInformation[0].AvailableQuantity >= 1){
-					
-					$('.variations-quantity').html(`
-					<span class="text">
-						<strong>Está acabando!</strong> Restam apenas ${e.skuData.SkuSellersInformation[0].AvailableQuantity} peças em estoque.
-					</span>
-					`)
-					$('.sku-selector-container .Tamanho label.sku-picked').addClass('arrow-top')
-				}
+							if (e.skuData.SkuSellersInformation[0].AvailableQuantity < 3){
+					if (e.skuData.SkuSellersInformation[0].AvailableQuantity >= 1){
+						
+						$('.variations-quantity').html(`
+						<span class="text">
+							<strong>Está acabando!</strong> Restam apenas ${e.skuData.SkuSellersInformation[0].AvailableQuantity} peças em estoque.
+						</span>
+						`)
+						$('.sku-selector-container .Tamanho label.sku-picked').addClass('arrow-top')
+					}
 
-				if (e.skuData.SkuSellersInformation[0].AvailableQuantity < 2){
-					$('.variations-quantity').html(`
-					<span class="text">
-						<strong>Está acabando!</strong> Resta apenas ${e.skuData.SkuSellersInformation[0].AvailableQuantity} peça em estoque.
-					</span>
-					`)
-					$('.sku-selector-container .Tamanho label.sku-picked').addClass('arrow-top')
-				}
+					if (e.skuData.SkuSellersInformation[0].AvailableQuantity < 2){
+						$('.variations-quantity').html(`
+						<span class="text">
+							<strong>Está acabando!</strong> Resta apenas ${e.skuData.SkuSellersInformation[0].AvailableQuantity} peça em estoque.
+						</span>
+						`)
+						$('.sku-selector-container .Tamanho label.sku-picked').addClass('arrow-top')
+					}
+					}
 				}
 			}
 		},
