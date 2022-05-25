@@ -7272,6 +7272,37 @@ th.giftlist-header-member {
 	margin: 30px 0 0 0;
 }
 
+/* 
+	KitLook
+
+*/
+
+.shopvinho-kitlook .wrapper-kitlook #top-right{
+	background-color:#f5f5f5;
+	display: flex;
+	flex-direction: column;
+
+}
+#selecione-kit{
+	color:#000;
+	font-size: 24px;
+}
+.kit{
+	display: flex;
+	margin: 0 20px;
+}
+.kit .kit-info{
+	display: flex;
+	padding-bottom: 20px;
+    border-bottom: 1px solid rgba(171, 171, 171, 0.2);
+}
+.kit .kit-info .kit-image{
+	width: 20%;
+}
+.kit .kit-info .tpl-right{}
+
+
+
 /* FRETE */
 .calc-frete {
 	width: 80%;

@@ -9936,6 +9936,9 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 		padding: 20px 8px;
 		margin: 0;
 	}
+	.header-user-links li a.lista-desejos{
+		display: none;
+	}
     .header .carrinho .icon-cart::before {
         content: "\e918";
         float: left;
@@ -10325,17 +10328,19 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 	}
 
 	.slide-mobile .slick-next:before {
-		content: "\e905" !important;
+		content: "\e901";
 		font-family: "jasmine";
-		font-size: 24px;
-		font-weight: 700;
+		font-size: 30px;
+		font-weight: 100;
+		color: #F83B4D;
 	}
 
 	.slide-mobile .slick-prev:before {
-		content: "\e906" !important;
+		content: "\e900";
 		font-family: "jasmine";
-		font-size: 24px;
-		font-weight: 700;
+		font-size: 30px;
+		font-weight: 100;
+		color: #F83B4D;
 	}
 
 	.slide-mobile .box-banner img {
@@ -11470,9 +11475,10 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 		border: 1px solid #000;
 	}
 	.slide-mobile .slick-arrow {
-		background: rgb(0 0 0 / 58%);
-		padding: 10px;
-		border-radius: 25px;
+		padding: 0px;
+		border-radius: 10px;
+		background: white;
+		margin: 0;
 	}
 	.desktop {
 		display: none;
