@@ -1,0 +1,52 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'Kitlook';
+    - var $templateClass = 'ls-kit-look';
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content       
+    section
+        div.wrapper.produto-receita
+            h1.nome-prod
+                    vtex(.cmc:productName)/
+            div.receita-dados
+                div.receita_ingredientes
+                    div.detalhes-prods
+                        div#descricao-produto.desc-prod
+                                h2.titulo Ingredientes
+                                vtex(.cmc:ProductDescription)/
+                div.receita_video
+                    figure
+                        div.img-produto
+                            vtex(.cmc:ProductImage)/
+                
+    section.produtos-da-receita
+        div.wrapper.slide-prod.pdp-prod-receitas
+            div.container-center
+                div.titulo-prateleira
+                    h2
+                        | Produtos da receita
+                vtex:contentPlaceHolder(id=`Similares`)/
+    section.receitas
+        div.wrapper.slide-prod.pdp-receitas
+            div.veja-receitas
+                div.container-center
+                    div.titulo-prateleira
+                        h2
+                            | Veja outras receitas
+                    vtex:contentPlaceHolder(id=`pdp-receitas`)/
+    section.prod-relacionados
+        div.wrapper.slide-prod.qvvt
+            div.container-center
+                div.titulo-prateleira
+                    h2
+                        | Produtos relacionados
+                vtex:contentPlaceHolder(id=`ls-qvvt`)/
+
+block append scripts
+    script(type='text/javascript', src=`/arquivos/${$templateName}.js`) 

@@ -371,11 +371,16 @@ header{
                                 }
                                 @include d(ipadPro){
                                     margin: 0 1em;
+                                    padding: 0.5em 20px;
+                                    @include flexbox;
+                                    @include align-items(center);
                                 }
                                 a{ 
                                     color: #fff;
                                     @include d(ipadPro){
                                         font-size: 13px;
+                                        line-height: 22px;
+                                        text-align: center;
                                     }
                                 }
                                 &:hover{
