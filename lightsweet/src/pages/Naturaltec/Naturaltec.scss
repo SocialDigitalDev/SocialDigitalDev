@@ -1,0 +1,413 @@
+// HEADER CUSTOM
+html{
+    scroll-behavior: smooth;
+}
+.split-body{
+    max-width: 1366px;
+    width: 100%;
+    @include flexbox;
+    @include align-items(flex-start);
+    .side-bar-links{
+        position: sticky;
+        top: 0;
+        width: 110px;
+        height: 1024px;
+        @include flexbox;
+        @include flex-flow(column);
+        @include justify-content(space-between);
+        padding: 26px 9px;
+        border: 1px solid var(--color-blue-dark);
+        .alimentos-link{
+            a{
+                @include flexbox;
+                @include flex-flow(column);
+                @include align-items(center);
+                text-align: center;
+                font-size: 16px;
+                color: var(--color-blue-dark);
+                &:before{
+                    content: "\e903";
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                    font-family: "naturaltech-icons";
+                    color: var(--color-blue-dark);
+                }
+            }
+            &.active{
+                a{
+                    color: var(--color-white);
+                    background: var(--color-blue-dark);
+                }
+            }
+        }
+        .acucares-link{
+            a{
+                @include flexbox;
+                @include flex-flow(column);
+                @include align-items(center);
+                text-align: center;
+                font-size: 16px;
+                color: var(--color-blue-dark);
+                &:before{
+                    content: "\e900";
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                    font-family: "naturaltech-icons";
+                    color: var(--color-blue-dark);
+                }
+            }
+            &.active{
+                a{
+                    color: var(--color-white);
+                    background: var(--color-blue-dark);
+                }
+            }
+        }
+        .adocantes-liquidos-link{
+            a{
+                @include flexbox;
+                @include flex-flow(column);
+                @include align-items(center);
+                text-align: center;
+                font-size: 16px;
+                color: var(--color-blue-dark);
+                &:before{
+                    content: "\e902";
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                    font-family: "naturaltech-icons";
+                    color: var(--color-blue-dark);
+                }
+            }
+            &.active{
+                a{
+                    color: var(--color-white);
+                    background: var(--color-blue-dark);
+                }
+            }
+        }
+        .adocantes-culinarios-link{
+            a{
+                @include flexbox;
+                @include flex-flow(column);
+                @include align-items(center);
+                text-align: center;
+                font-size: 16px;
+                color: var(--color-blue-dark);
+                &:before{
+                    content: "\e901";
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                    font-family: "naturaltech-icons";
+                    color: var(--color-blue-dark);
+                }
+            }
+            &.active{
+                a{
+                    color: var(--color-white);
+                    background: var(--color-blue-dark);
+                }
+            }
+        }
+        .biscoitos-link{
+            a{
+                @include flexbox;
+                @include flex-flow(column);
+                @include align-items(center);
+                text-align: center;
+                font-size: 16px;
+                color: var(--color-blue-dark);
+                &:before{
+                    content: "\e904";
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                    font-family: "naturaltech-icons";
+                    color: var(--color-blue-dark);
+                }
+            }
+            &.active{
+                a{
+                    color: var(--color-white);
+                    background: var(--color-blue-dark);
+                }
+            }
+        }
+        .bolos-link{
+            a{
+                @include flexbox;
+                @include flex-flow(column);
+                @include align-items(center);
+                text-align: center;
+                font-size: 16px;
+                color: var(--color-blue-dark);
+                &:before{
+                    content: "\e905";
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                    font-family: "naturaltech-icons";
+                    color: var(--color-blue-dark);
+                }
+            }
+            &.active{
+                a{
+                    color: var(--color-white);
+                    background: var(--color-blue-dark);
+                }
+            }
+        }
+        .chocolates-link{
+            a{
+                @include flexbox;
+                @include flex-flow(column);
+                @include align-items(center);
+                text-align: center;
+                font-size: 16px;
+                color: var(--color-blue-dark);
+                &:before{
+                    content: "\e907";
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                    font-family: "naturaltech-icons";
+                    color: var(--color-blue-dark);
+                }
+            }
+            &.active{
+                a{
+                    color: var(--color-white);
+                    background: var(--color-blue-dark);
+                }
+            }
+        }
+        .chas-link{
+            a{
+                @include flexbox;
+                @include flex-flow(column);
+                @include align-items(center);
+                text-align: center;
+                font-size: 16px;
+                color: var(--color-blue-dark);
+                &:before{
+                    content: "\e906";
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                    font-family: "naturaltech-icons";
+                    color: var(--color-blue-dark);
+                }
+            }
+            &.active{
+                a{
+                    color: var(--color-white);
+                    background: var(--color-blue-dark);
+                }
+            }
+        }
+        .refrescos-link{
+            a{
+                @include flexbox;
+                @include flex-flow(column);
+                @include align-items(center);
+                text-align: center;
+                font-size: 16px;
+                color: var(--color-blue-dark);
+                &:before{
+                    content: "\e908";
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                    font-family: "naturaltech-icons";
+                    color: var(--color-blue-dark);
+                }
+            }
+            &.active{
+                a{
+                    color: var(--color-white);
+                    background: var(--color-blue-dark);
+                }
+            }
+        }
+        .sobremesas-link{
+            a{
+                @include flexbox;
+                @include flex-flow(column);
+                @include align-items(center);
+                text-align: center;
+                font-size: 16px;
+                color: var(--color-blue-dark);
+                &:before{
+                    content: "\e909";
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                    font-family: "naturaltech-icons";
+                    color: var(--color-blue-dark);
+                }
+            }
+            &.active{
+                a{
+                    color: var(--color-white);
+                    background: var(--color-blue-dark);
+                }
+            }
+        }
+    }
+    .main-content{
+        max-width: 1256px;
+        header{
+            .wrapper{
+                @include flexbox;
+                @include align-items(center);
+                @include justify-content(left);
+                .welcome-message{
+                    h2{
+                        font-size: 25px;
+                        font-weight: 500;
+                        font-family: 'Inter', sans-serif;
+                    }
+                }
+                #logo-top{
+                    margin-left: 15%;
+                }
+                ul{
+                    margin-left: auto;
+                    .header-cart{
+                        span.icon-cart{
+                            cursor: pointer;
+                            &:before{
+                                content:"";
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50' fill='none'%3E%3Cpath d='M0.00354974 1.775C0.00354974 1.30424 0.190558 0.852762 0.523436 0.519885C0.856313 0.187008 1.30779 0 1.77855 0L3.33345 0C5.9143 0 7.3982 1.67915 8.2573 3.35475C8.84305 4.5014 9.2655 5.9001 9.61695 7.1142L46.1642 7.1142C46.7127 7.11436 47.2538 7.24164 47.7448 7.48604C48.2359 7.73044 48.6637 8.08532 48.9946 8.52282C49.3255 8.96032 49.5504 9.46855 49.6519 10.0076C49.7533 10.5467 49.7285 11.1019 49.5793 11.6298L44.2685 30.356C43.8461 31.8418 42.9506 33.1492 41.718 34.08C40.4854 35.0109 38.9829 35.5144 37.4383 35.5142L19.4079 35.5142C17.8504 35.5147 16.3359 35.0031 15.0979 34.0582C13.8598 33.1133 12.9667 31.7875 12.5563 30.285L10.2772 21.9248C10.2642 21.8873 10.2523 21.8494 10.2417 21.8112L6.5817 9.39685L6.2267 8.2005C5.8717 6.9722 5.5593 5.8859 5.0907 4.97355C4.52625 3.87305 4.00795 3.55355 3.3299 3.55355H1.775C1.30424 3.55355 0.852762 3.36654 0.519885 3.03366C0.187008 2.70079 0 2.24931 0 1.77855L0.00354974 1.775ZM13.6639 20.8527L15.9821 29.3585C16.1876 30.1094 16.6343 30.7719 17.2533 31.244C17.8723 31.7161 18.6293 31.9717 19.4079 31.9713L37.4418 31.9713C38.2138 31.9705 38.9644 31.7182 39.58 31.2524C40.1956 30.7867 40.6427 30.133 40.8534 29.3904L46.1642 10.6642L10.6642 10.6642L13.6639 20.8491V20.8527ZM24.8642 44.3856C24.8642 45.7979 24.3032 47.1524 23.3045 48.151C22.3059 49.1496 20.9515 49.7107 19.5392 49.7107C18.1269 49.7107 16.7725 49.1496 15.7739 48.151C14.7752 47.1524 14.2142 45.7979 14.2142 44.3856C14.2142 42.9734 14.7752 41.6189 15.7739 40.6203C16.7725 39.6217 18.1269 39.0606 19.5392 39.0606C20.9515 39.0606 22.3059 39.6217 23.3045 40.6203C24.3032 41.6189 24.8642 42.9734 24.8642 44.3856ZM21.3142 44.3856C21.3142 43.9149 21.1272 43.4634 20.7943 43.1305C20.4614 42.7977 20.01 42.6106 19.5392 42.6106C19.0684 42.6106 18.617 42.7977 18.2841 43.1305C17.9512 43.4634 17.7642 43.9149 17.7642 44.3856C17.7642 44.8564 17.9512 45.3079 18.2841 45.6408C18.617 45.9736 19.0684 46.1606 19.5392 46.1606C20.01 46.1606 20.4614 45.9736 20.7943 45.6408C21.1272 45.3079 21.3142 44.8564 21.3142 44.3856ZM42.6142 44.3856C42.6142 45.7979 42.0532 47.1524 41.0545 48.151C40.0559 49.1496 38.7015 49.7107 37.2892 49.7107C35.8769 49.7107 34.5225 49.1496 33.5239 48.151C32.5252 47.1524 31.9642 45.7979 31.9642 44.3856C31.9642 42.9734 32.5252 41.6189 33.5239 40.6203C34.5225 39.6217 35.8769 39.0606 37.2892 39.0606C38.7015 39.0606 40.0559 39.6217 41.0545 40.6203C42.0532 41.6189 42.6142 42.9734 42.6142 44.3856ZM39.0642 44.3856C39.0642 43.9149 38.8772 43.4634 38.5443 43.1305C38.2114 42.7977 37.76 42.6106 37.2892 42.6106C36.8184 42.6106 36.367 42.7977 36.0341 43.1305C35.7012 43.4634 35.5142 43.9149 35.5142 44.3856C35.5142 44.8564 35.7012 45.3079 36.0341 45.6408C36.367 45.9736 36.8184 46.1606 37.2892 46.1606C37.76 46.1606 38.2114 45.9736 38.5443 45.6408C38.8772 45.3079 39.0642 44.8564 39.0642 44.3856Z' fill='black'/%3E%3C/svg%3E");
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                width: 40px;
+                                height: 40px;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .main-category-banners{
+            .wrapper{
+                padding-right: 0;
+                .category-banners{
+                    @include flexbox;
+                    .box-banner{
+                        margin-top: 25px;
+                        margin-right: 20px;
+                        a{
+                            img{
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .category-alimentos{
+            .wrapper{
+                padding-right: 0;
+            }
+        }
+    }
+}
+.natural-tech{
+    .vitrine-title{
+        h2{
+            color: var(--color-black);
+            font-style: normal;
+            font-size: 50px;
+            font-weight: 400;
+        }
+        &:after{
+            display: none;
+        }
+    }
+    .ls-prateleira{
+        ul{
+            @include justify-content(flex-start);
+            li{
+                .ls-product{
+                    min-height: 357px;
+                    border: 1px solid var(--color-blue-dark);
+                    width: 235px;
+                    .ls-actions{
+                        padding: 0 0em;
+                        margin-bottom: 0;
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .split-vitrine{
+        @include flexbox;
+        @include align-items(center);
+        .vitrine-left{
+            width: 100%;
+        }
+        .vitrine-right{
+            overflow-x: auto;
+        }
+    }
+    .category-acucares-tabs, .category-chas-tabs, .category-biscoitos, .category-chocolates{
+        .wrapper{
+            padding-right: 0;
+        }
+    }
+    .category-acucares-tabs, .category-chas-tabs{
+        .wrapper{
+            .tabs-selector{
+                @include flexbox;
+                @include justify-content(space-between);
+                @include align-items(flex-end);
+                width: 100%;
+                padding-right: 2em;
+                padding-left: .5em;
+                margin-top: 3em;
+                max-height: 36px;
+                .tab{
+                    @include flexbox;
+                    width: 100%;
+                    border: 1px solid var(--color-blue-dark);
+                    padding: .5em 0;
+                    cursor: pointer;
+                    p{
+                        margin: auto;
+                        color: var(--color-blue-dark);
+                    }
+                    &:nth-of-type(1){
+                        border-right: none;
+                        border-radius: 20px 0 0 0;
+                    }
+                    &:nth-of-type(2){
+                        border-left: none;
+                        border-right: none;
+                    }
+                    &:nth-of-type(3){
+                        border-left: none;
+                        border-radius: 0 20px 0 0;
+                    }
+                    &.active{
+                        border-radius: 20px 20px 0 0;
+                        background: var(--color-blue-dark);
+                        padding: 1em 0;
+                        p{
+                            color: var(--color-white);
+                        }
+                    }
+                }
+            }
+            .vitrines-from-tabs{
+                > div{
+                    overflow-x: auto;
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .vitrine-full{
+        overflow-x: auto;
+    }
+}

@@ -1,6 +1,7 @@
 @import url("https://use.fontawesome.com/releases/v5.12.1/css/all.css");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 // Font Family
 $montserrat: "Montserrat", sans-serif;
@@ -11,6 +12,14 @@ $fontawesome: "Font Awesome 5 Free";
     font-family: 'lightsweet';
     src:url(/arquivos/lightsweet.css);
     src:url(/arquivos/lightsweet.css#iefix) format('embedded-opentype'), url(/arquivos/lightsweet.woff.css) format('woff');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: 'naturaltech-icons';
+    src:url(/arquivos/naturaltech-icons.css);
+    src:url(/arquivos/naturaltech-icons.css#iefix) format('embedded-opentype'), url(/arquivos/naturaltech-icons.woff.css) format('woff');
     font-weight:normal;
     font-style:normal;
 }
