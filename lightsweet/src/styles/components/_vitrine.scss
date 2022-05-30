@@ -6,7 +6,7 @@
     }
     .flag-desconto{
         position: absolute;
-        z-index: 9;
+        z-index: 8;
         left: 5px;
         top: 15px;
         .porcentagem{
@@ -368,12 +368,12 @@
                         margin-bottom: 0px;
                         color: var(--color-black);
                         height: 39px;
-                        -webkit-line-clamp: 2;
-                        -webkit-box-orient: vertical;
                         overflow: hidden;
                         text-overflow: ellipsis;
                         line-height: 1.4;
-                        display: block;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
                         @include d(qhd){
                             font-size: 11px;
                             height: 30px;

@@ -17,6 +17,9 @@ html{
         @include justify-content(space-between);
         padding: 26px 9px;
         border: 1px solid var(--color-blue-dark);
+        @include d(hd){
+            height: 768px;
+        }
         .alimentos-link{
             a{
                 @include flexbox;
@@ -31,12 +34,32 @@ html{
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
+                    @include d(hd){
+                        font-size: 35px;
+                    }
+                }
+                @include d(hd){
+                    font-size: 13px;
                 }
             }
             &.active{
+                position: relative;
+                background: var(--color-blue-dark);
+                width: 130px;
+                left: -1em;
+                padding: 1em;
+                border-radius: 0 10px 10px 0;
+                box-shadow: 0 6px 5px #d0d0d0;
+                padding-top: 1.5em;
+                @include d(hd){
+                    width: 122px;
+                }
                 a{
                     color: var(--color-white);
                     background: var(--color-blue-dark);
+                    &:before{
+                        color: var(--color-white);
+                    }
                 }
             }
         }
@@ -54,12 +77,32 @@ html{
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
+                    @include d(hd){
+                        font-size: 35px;
+                    }
+                }
+                @include d(hd){
+                    font-size: 13px;
                 }
             }
             &.active{
+                position: relative;
+                background: var(--color-blue-dark);
+                width: 130px;
+                left: -1em;
+                padding: 1em;
+                border-radius: 0 10px 10px 0;
+                box-shadow: 0 6px 5px #d0d0d0;
+                padding-top: 1.5em;
+                @include d(hd){
+                    width: 122px;
+                }
                 a{
                     color: var(--color-white);
                     background: var(--color-blue-dark);
+                    &:before{
+                        color: var(--color-white);
+                    }
                 }
             }
         }
@@ -77,12 +120,32 @@ html{
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
+                    @include d(hd){
+                        font-size: 35px;
+                    }
+                }
+                @include d(hd){
+                    font-size: 13px;
                 }
             }
             &.active{
+                position: relative;
+                background: var(--color-blue-dark);
+                width: 130px;
+                left: -1em;
+                padding: 1em;
+                border-radius: 0 10px 10px 0;
+                box-shadow: 0 6px 5px #d0d0d0;
+                padding-top: 1.5em;
+                @include d(hd){
+                    width: 122px;
+                }
                 a{
                     color: var(--color-white);
                     background: var(--color-blue-dark);
+                    &:before{
+                        color: var(--color-white);
+                    }
                 }
             }
         }
@@ -100,12 +163,32 @@ html{
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
+                    @include d(hd){
+                        font-size: 35px;
+                    }
+                }
+                @include d(hd){
+                    font-size: 13px;
                 }
             }
             &.active{
+                position: relative;
+                background: var(--color-blue-dark);
+                width: 130px;
+                left: -1em;
+                padding: 1em;
+                border-radius: 0 10px 10px 0;
+                box-shadow: 0 6px 5px #d0d0d0;
+                padding-top: 1.5em;
+                @include d(hd){
+                    width: 122px;
+                }
                 a{
                     color: var(--color-white);
                     background: var(--color-blue-dark);
+                    &:before{
+                        color: var(--color-white);
+                    }
                 }
             }
         }
@@ -123,12 +206,32 @@ html{
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
+                    @include d(hd){
+                        font-size: 35px;
+                    }
+                }
+                @include d(hd){
+                    font-size: 13px;
                 }
             }
             &.active{
+                position: relative;
+                background: var(--color-blue-dark);
+                width: 130px;
+                left: -1em;
+                padding: 1em;
+                border-radius: 0 10px 10px 0;
+                box-shadow: 0 6px 5px #d0d0d0;
+                padding-top: 1.5em;
+                @include d(hd){
+                    width: 122px;
+                }
                 a{
                     color: var(--color-white);
                     background: var(--color-blue-dark);
+                    &:before{
+                        color: var(--color-white);
+                    }
                 }
             }
         }
@@ -146,12 +249,32 @@ html{
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
+                    @include d(hd){
+                        font-size: 35px;
+                    }
+                }
+                @include d(hd){
+                    font-size: 13px;
                 }
             }
             &.active{
+                position: relative;
+                background: var(--color-blue-dark);
+                width: 130px;
+                left: -1em;
+                padding: 1em;
+                border-radius: 0 10px 10px 0;
+                box-shadow: 0 6px 5px #d0d0d0;
+                padding-top: 1.5em;
+                @include d(hd){
+                    width: 122px;
+                }
                 a{
                     color: var(--color-white);
                     background: var(--color-blue-dark);
+                    &:before{
+                        color: var(--color-white);
+                    }
                 }
             }
         }
@@ -169,12 +292,32 @@ html{
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
+                    @include d(hd){
+                        font-size: 35px;
+                    }
+                }
+                @include d(hd){
+                    font-size: 13px;
                 }
             }
             &.active{
+                position: relative;
+                background: var(--color-blue-dark);
+                width: 130px;
+                left: -1em;
+                padding: 1em;
+                border-radius: 0 10px 10px 0;
+                box-shadow: 0 6px 5px #d0d0d0;
+                padding-top: 1.5em;
+                @include d(hd){
+                    width: 122px;
+                }
                 a{
                     color: var(--color-white);
                     background: var(--color-blue-dark);
+                    &:before{
+                        color: var(--color-white);
+                    }
                 }
             }
         }
@@ -192,12 +335,32 @@ html{
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
+                    @include d(hd){
+                        font-size: 35px;
+                    }
+                }
+                @include d(hd){
+                    font-size: 13px;
                 }
             }
             &.active{
+                position: relative;
+                background: var(--color-blue-dark);
+                width: 130px;
+                left: -1em;
+                padding: 1em;
+                border-radius: 0 10px 10px 0;
+                box-shadow: 0 6px 5px #d0d0d0;
+                padding-top: 1.5em;
+                @include d(hd){
+                    width: 122px;
+                }
                 a{
                     color: var(--color-white);
                     background: var(--color-blue-dark);
+                    &:before{
+                        color: var(--color-white);
+                    }
                 }
             }
         }
@@ -215,12 +378,32 @@ html{
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
+                    @include d(hd){
+                        font-size: 35px;
+                    }
+                }
+                @include d(hd){
+                    font-size: 13px;
                 }
             }
             &.active{
+                position: relative;
+                background: var(--color-blue-dark);
+                width: 130px;
+                left: -1em;
+                padding: 1em;
+                border-radius: 0 10px 10px 0;
+                box-shadow: 0 6px 5px #d0d0d0;
+                padding-top: 1.5em;
+                @include d(hd){
+                    width: 122px;
+                }
                 a{
                     color: var(--color-white);
                     background: var(--color-blue-dark);
+                    &:before{
+                        color: var(--color-white);
+                    }
                 }
             }
         }
@@ -238,18 +421,41 @@ html{
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
+                    @include d(hd){
+                        font-size: 35px;
+                    }
+                }
+                @include d(hd){
+                    font-size: 13px;
                 }
             }
             &.active{
+                position: relative;
+                background: var(--color-blue-dark);
+                width: 130px;
+                left: -1em;
+                padding: 1em;
+                border-radius: 0 10px 10px 0;
+                box-shadow: 0 6px 5px #d0d0d0;
+                padding-top: 1.5em;
+                @include d(hd){
+                    width: 122px;
+                }
                 a{
                     color: var(--color-white);
                     background: var(--color-blue-dark);
+                    &:before{
+                        color: var(--color-white);
+                    }
                 }
             }
         }
     }
     .main-content{
         max-width: 1256px;
+        @include d(hd){
+            max-width: 1170px;
+        }
         header{
             .wrapper{
                 @include flexbox;
@@ -258,7 +464,7 @@ html{
                 .welcome-message{
                     h2{
                         font-size: 25px;
-                        font-weight: 500;
+                        font-weight: 400;
                         font-family: 'Inter', sans-serif;
                     }
                 }
@@ -293,8 +499,10 @@ html{
                         margin-top: 25px;
                         margin-right: 20px;
                         a{
-                            img{
-
+                            h3{
+                                text-align: center;
+                                font-weight: 400;
+                                margin-top: 5px;
                             }
                         }
                     }
@@ -332,7 +540,55 @@ html{
                         padding: 0 0em;
                         margin-bottom: 0;
                         position: absolute;
-                        bottom: 0;
+                        bottom: -1px;
+                        .ls-produto__buy-quant{
+                            .qtdPrateleira{
+                                border-radius: 15px 0 0 18px;
+                                border-right: 0;
+                                width: 110px;
+                                padding: 5px 15px;
+                                input.qtdVal{
+                                    max-width: 30px;
+                                    font-size: 25px;
+                                }
+                                .btnAcr{
+                                    position: relative;
+                                    top: 2px;
+                                    right: 5px;
+                                    &:before{
+                                        font-size: 29px;
+                                    }
+                                }
+                                .btnDec{
+                                    position: relative;
+                                    left: 5px;
+                                    &:before{
+                                        font-size: 29px;
+                                    }
+                                }
+                            }
+                        }
+                        .ls-buy{
+                            width: 130px;
+                            position: absolute;
+                            right: 0;
+                            a{
+                                border-radius: 10px 15px 15px 10px;
+                            }
+                        }
+                    }
+                    .data{
+                        h3{
+                            font-size: 13px;
+                            height: 40px;
+                            font-weight: 500;
+                        }
+                        .price{
+                            .installment{
+                                font-size: 11px;
+                                font-weight: 500;
+                            }
+                        }
                     }
                 }
             }
@@ -342,7 +598,7 @@ html{
         @include flexbox;
         @include align-items(center);
         .vitrine-left{
-            width: 100%;
+            width: 80%;
         }
         .vitrine-right{
             overflow-x: auto;
@@ -410,4 +666,18 @@ html{
     .vitrine-full{
         overflow-x: auto;
     }
+}
+.header-cart.carrinho {
+    position: relative;
+}
+.info-cart {
+    position: absolute;
+    top: -5px;
+    left: 32%;
+}
+.qtd-cart {
+    background: var(--color-blue-dark);
+    padding: 1px 5px;
+    color: var(--color-white);
+    border-radius: 5px;
 }
