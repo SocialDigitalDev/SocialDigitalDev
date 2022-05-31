@@ -11,7 +11,7 @@ html{
         position: sticky;
         top: 0;
         width: 110px;
-        height: 1024px;
+        height: 730px;
         @include flexbox;
         @include flex-flow(column);
         @include justify-content(space-between);
@@ -26,11 +26,11 @@ html{
                 @include flex-flow(column);
                 @include align-items(center);
                 text-align: center;
-                font-size: 16px;
+                font-size: 13px;
                 color: var(--color-blue-dark);
                 &:before{
                     content: "\e903";
-                    font-size: 40px;
+                    font-size: 30px;
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
@@ -69,11 +69,11 @@ html{
                 @include flex-flow(column);
                 @include align-items(center);
                 text-align: center;
-                font-size: 16px;
+                font-size: 13px;
                 color: var(--color-blue-dark);
                 &:before{
                     content: "\e900";
-                    font-size: 40px;
+                    font-size: 30px;
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
@@ -112,11 +112,11 @@ html{
                 @include flex-flow(column);
                 @include align-items(center);
                 text-align: center;
-                font-size: 16px;
+                font-size: 13px;
                 color: var(--color-blue-dark);
                 &:before{
                     content: "\e902";
-                    font-size: 40px;
+                    font-size: 30px;
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
@@ -155,11 +155,11 @@ html{
                 @include flex-flow(column);
                 @include align-items(center);
                 text-align: center;
-                font-size: 16px;
+                font-size: 13px;
                 color: var(--color-blue-dark);
                 &:before{
                     content: "\e901";
-                    font-size: 40px;
+                    font-size: 30px;
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
@@ -198,11 +198,11 @@ html{
                 @include flex-flow(column);
                 @include align-items(center);
                 text-align: center;
-                font-size: 16px;
+                font-size: 13px;
                 color: var(--color-blue-dark);
                 &:before{
                     content: "\e904";
-                    font-size: 40px;
+                    font-size: 30px;
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
@@ -241,11 +241,11 @@ html{
                 @include flex-flow(column);
                 @include align-items(center);
                 text-align: center;
-                font-size: 16px;
+                font-size: 13px;
                 color: var(--color-blue-dark);
                 &:before{
                     content: "\e905";
-                    font-size: 40px;
+                    font-size: 30px;
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
@@ -284,11 +284,11 @@ html{
                 @include flex-flow(column);
                 @include align-items(center);
                 text-align: center;
-                font-size: 16px;
+                font-size: 13px;
                 color: var(--color-blue-dark);
                 &:before{
                     content: "\e907";
-                    font-size: 40px;
+                    font-size: 30px;
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
@@ -327,11 +327,11 @@ html{
                 @include flex-flow(column);
                 @include align-items(center);
                 text-align: center;
-                font-size: 16px;
+                font-size: 13px;
                 color: var(--color-blue-dark);
                 &:before{
                     content: "\e906";
-                    font-size: 40px;
+                    font-size: 30px;
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
@@ -370,11 +370,11 @@ html{
                 @include flex-flow(column);
                 @include align-items(center);
                 text-align: center;
-                font-size: 16px;
+                font-size: 13px;
                 color: var(--color-blue-dark);
                 &:before{
                     content: "\e908";
-                    font-size: 40px;
+                    font-size: 30px;
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
@@ -413,11 +413,11 @@ html{
                 @include flex-flow(column);
                 @include align-items(center);
                 text-align: center;
-                font-size: 16px;
+                font-size: 13px;
                 color: var(--color-blue-dark);
                 &:before{
                     content: "\e909";
-                    font-size: 40px;
+                    font-size: 30px;
                     margin-bottom: 15px;
                     font-family: "naturaltech-icons";
                     color: var(--color-blue-dark);
@@ -453,6 +453,7 @@ html{
     }
     .main-content{
         max-width: 1256px;
+        padding-right: 2em;
         @include d(hd){
             max-width: 1170px;
         }

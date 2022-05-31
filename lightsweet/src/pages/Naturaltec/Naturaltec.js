@@ -291,10 +291,21 @@ var Naturaltec = {
             $(this).find('a').append(`<h3 class="title-alt">${title}</h3>`);
         });
     },
+    closeMiniCart: function(){
+        $('.minicart__overlay').click(function(){
+            $(this).removeClass('open');
+            $('.header-minicart').removeClass('open');
+        });
+        $('.continueToBuy').click(function(){
+            $(this).removeClass('open');
+            $('.header-minicart').removeClass('open');
+        });
+    },
     init: function(){
         Naturaltec.tabSelector();
         Naturaltec.sideBarSelector();
         Naturaltec.categBannerNames();
+        Naturaltec.closeMiniCart();
     }
 
 }
