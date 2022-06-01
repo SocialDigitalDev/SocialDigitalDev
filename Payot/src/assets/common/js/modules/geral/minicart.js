@@ -77,11 +77,11 @@ const Methods = {
         var shipping = "Não calculado";
         if (vtexjs.checkout.orderForm.totalizers[0]){
             subtotal = Methods._convertCurrency(vtexjs.checkout.orderForm.totalizers[0].value);
-        }
-        if (vtexjs.checkout.orderForm.totalizers[1] && vtexjs.checkout.orderForm.totalizers[1].id === 'Shipping' && vtexjs.checkout.orderForm.totalizers[1].value > 0){
-            shipping = Methods._convertCurrency(vtexjs.checkout.orderForm.totalizers[1].value);
-        }else if(vtexjs.checkout.orderForm.totalizers[1].value <= 0){
-            shipping = "Frete Grátis";
+            if (vtexjs.checkout.orderForm.totalizers[1] && vtexjs.checkout.orderForm.totalizers[1].id === 'Shipping' && vtexjs.checkout.orderForm.totalizers[1].value > 0){
+                shipping = Methods._convertCurrency(vtexjs.checkout.orderForm.totalizers[1].value);
+            }else if(vtexjs.checkout.orderForm.totalizers[1].value <= 0){
+                shipping = "Frete Grátis";
+            }
         }
         const totalPrice = Methods._convertCurrency(vtexjs.checkout.orderForm.value);
         let wrapper;

@@ -1,0 +1,115 @@
+extends ../../layout/index.pug
+
+//- Template variables
+block vars
+    - var $templateName = 'Naturaltec';
+    - var $templateClass = 'ls-naturaltec';
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`/arquivos/${$templateName}.css`, media='all')/
+
+//- Main Content
+block content       
+    
+    div.split-body
+        div.side-bar-links
+            div.alimentos-link
+                a(href=`#alimentos`) Alimentos
+            div.acucares-link
+                a(href=`#acucares`) Açúcares
+            div.adocantes-liquidos-link
+                a(href=`#acucares`) Adoçantes Líquidos
+            div.adocantes-culinarios-link
+                a(href=`#acucares`) Adoçantes Culinários
+            div.biscoitos-link
+                a(href=`#biscoitos`) Biscoitos
+            div.bolos-link
+                a(href=`#bolos`) Bolos
+            div.chocolates-link
+                a(href=`#chocolates`) Chocolates
+            div.chas-link
+                a(href=`#chas`) Chás
+            div.refrescos-link
+                a(href=`#chas`) Refrescos
+            div.sobremesas-link
+                a(href=`#chas`) Sobremesas
+        div.main-content
+            vtex:template(id=`ls-header-naturaltec`)/
+            section.main-banner
+                div.wrapper
+                    div.banner-full-principal
+                        vtex:contentPlaceHolder(id=`Banner Principal - Ipad Pro`)/
+            section.main-category-banners
+                div.wrapper
+                    div.category-banners
+                        vtex:contentPlaceHolder(id=`Banners de Categoria Principais`)/
+            section.category-alimentos#alimentos
+                div.wrapper
+                    div.vitrine-title
+                        h2 Alimentos
+                    div.split-vitrine
+                        div.vitrine-left
+                            vtex:contentPlaceHolder(id=`Banner Esquerda - Alimentos`)/
+                        div.vitrine-right
+                            vtex:contentPlaceHolder(id=`Prateleira Direita - Alimentos`)/
+            section.category-acucares-tabs#acucares
+                div.wrapper
+                    div.tabs-selector
+                        div.tab.acucares
+                            p Açúcares
+                        div.tab.adocante-liquido
+                            p Adoçante Líquido
+                        div.tab.adocantes-culinarios
+                            p Adoçantes Culinários
+                    div.vitrines-from-tabs
+                        div.vitrine-acucares
+                            vtex:contentPlaceHolder(id=`Prateleira Açúcares`)/
+                        div.vitrine-adocante-liquido
+                            vtex:contentPlaceHolder(id=`Prateleira Adoçante Líquido`)/
+                        div.vitrine-adocantes-culinarios
+                            vtex:contentPlaceHolder(id=`Prateleira Adoçantes Culinários`)/
+            section.category-biscoitos#biscoitos
+                div.wrapper
+                    div.vitrine-title
+                        h2 Biscoitos
+                    div.vitrine-full-banner
+                        div.banner-full
+                            vtex:contentPlaceHolder(id=`Banner Full - Biscoitos`)/
+                        div.vitrine-full
+                            vtex:contentPlaceHolder(id=`Prateleira Full - Biscoitos`)/
+            section.category-alimentos#bolos
+                div.wrapper
+                    div.vitrine-title
+                        h2 Bolos
+                    div.split-vitrine
+                        div.vitrine-left
+                            vtex:contentPlaceHolder(id=`Prateleira Esquerda - Bolos`)/
+                        div.vitrine-right
+                            vtex:contentPlaceHolder(id=`Prateleira Direita - Bolos`)/
+            section.category-chocolates#chocolates
+                div.wrapper
+                    div.vitrine-title
+                        h2 Chocolates
+                    div.vitrine-full-banner
+                        div.banner-full
+                            vtex:contentPlaceHolder(id=`Banner Full - Chocolates`)/
+                        div.vitrine-full
+                            vtex:contentPlaceHolder(id=`Prateleira Full - Chocolates`)/
+            section.category-acucares-tabs#chas
+                div.wrapper
+                    div.tabs-selector
+                        div.tab.chas
+                            p Chás
+                        div.tab.refrescos
+                            p Refrescos
+                        div.tab.sobremesas
+                            p Sobremesas
+                    div.vitrines-from-tabs
+                        div.vitrine-chas
+                            vtex:contentPlaceHolder(id=`Prateleira Chás`)/
+                        div.vitrine-refrescos
+                            vtex:contentPlaceHolder(id=`Prateleira Refrescos`)/
+                        div.vitrine-sobremesas
+                            vtex:contentPlaceHolder(id=`Prateleira Sobremesas`)/
+block append scripts
+    script(type='text/javascript', src=`/arquivos/${$templateName}.js`) 
