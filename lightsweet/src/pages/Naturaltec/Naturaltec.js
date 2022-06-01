@@ -108,14 +108,10 @@ var Naturaltec = {
             $(this).addClass('active');
             $('.tab.refrescos').removeClass('active');
             $('.tab.chas').removeClass('active');
+            $('.tab.sobremesas').addClass('active');
             $('.vitrine-chas').removeClass('active');
             $('.vitrine-refrescos').removeClass('active');
             $('.vitrine-sobremesas').addClass('active');
-            $('.tab.chas').removeClass('active');
-            $('.tab.sobremesas').removeClass('active');
-            $('.vitrine-chas').removeClass('active');
-            $('.vitrine-refrescos').addClass('active');
-            $('.vitrine-sobremesas').removeClass('active');
             $('.alimentos-link').removeClass('active');
             $('.adocantes-liquidos-link').removeClass('active');
             $('.adocantes-culinarios-link').removeClass('active');

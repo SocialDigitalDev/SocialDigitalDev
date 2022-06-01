@@ -524,6 +524,7 @@ html{
             font-style: normal;
             font-size: 50px;
             font-weight: 400;
+            margin-bottom: .5em;
         }
         &:after{
             display: none;
@@ -599,7 +600,7 @@ html{
         @include flexbox;
         @include align-items(center);
         .vitrine-left{
-            width: 80%;
+            width: 305px;
         }
         .vitrine-right{
             overflow-x: auto;
@@ -658,7 +659,9 @@ html{
                     overflow-x: auto;
                     display: none;
                     &.active{
-                        display: block;
+                        display: flex;
+                        @include align-items(center);
+                        @include justify-content(space-between);
                     }
                 }
             }
@@ -681,4 +684,61 @@ html{
     padding: 1px 5px;
     color: var(--color-white);
     border-radius: 5px;
+}
+.texto-antes, .texto-depois {
+    max-width: 335px;
+    min-height: 357px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    padding: 1em;
+    border-radius: 10px;
+    h3{
+        margin-bottom: 1em;
+        font-size: 18px;
+    }
+    p{
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+.vitrine-acucares{
+    .texto-antes{
+        background: #DFFEDA;
+    }
+    .texto-depois{
+        background: #C3EDFF;
+    }
+}
+.vitrine-adocante-liquido{
+    .texto-antes{
+        background: #DFFEDA;
+    }
+    .texto-depois{
+        background: #E7FCEE;
+    }
+}
+.vitrine-adocantes-culinarios{
+    .texto-antes{
+        background: #FFEDDF;
+    }
+    .texto-depois{
+        background: #C3EDFF;
+    }
+}
+#bolos, .category-chocolates{
+    .wrapper{
+        .split-vitrine{
+            .vitrine-left{
+                width: 410px;
+            }
+        }
+    }
+}
+#acucares{
+    .wrapper{
+        .vitrines-from-tabs{
+            padding-right: 2em;
+        }
+    }
 }
