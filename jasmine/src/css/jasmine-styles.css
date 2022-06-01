@@ -9936,7 +9936,7 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 		padding: 20px 8px;
 		margin: 0;
 	}
-	.header-user-links li a.lista-desejos{
+	.header-user-links ul.header-icons li.wishlist{
 		display: none;
 	}
     .header .carrinho .icon-cart::before {
@@ -11611,7 +11611,7 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 		padding: 0 10px;
 	}
 	.header-user-links {
-		margin: 0 10px 0 0;
+		margin: 14px 10px 0 0;
 	}
 	fieldset.busca .fulltext-search-box{
 		width: 100%;
@@ -11678,7 +11678,7 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 	.header #logo-top a {
 		width: 215px;
 		top: 3px;
-		left: 45%;
+		left: 47%;
 	}
 	.cuponeria .jasmine-departamento__topo .nomeDepartamento {
 		margin-top: 186px;
