@@ -293,8 +293,7 @@ var Naturaltec = {
             $('.header-minicart').removeClass('open');
         });
         $('.continueToBuy').click(function(){
-            $(this).removeClass('open');
-            $('.header-minicart').removeClass('open');
+            $('.header-minicart, .minicart__overlay').removeClass('open');
         });
     },
     init: function(){
