@@ -375,6 +375,7 @@
         opacity: 1;
         visibility: visible;
         left: 2em;
+        top: 6px;
         margin:0;
     }
 }
