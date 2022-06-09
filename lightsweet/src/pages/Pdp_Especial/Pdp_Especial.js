@@ -114,44 +114,68 @@ var Pdp_Especial = {
             var containerCenter = $('.ls-produto-especial-main section .wrapper.produto-all > .container-center');
             var lateralOrnamento = $('.ls-produto-especial-main section .wrapper.produto-all .ornamento');
             if (url === "/creme-de-avela-com-cacau-lowcucar-zero-acucares-150g-ls-10001192/p"){
-                containerCenter.css('background-image','url(/arquivos/new-marrom.png)');
+                if(scre < 500){
+                    containerCenter.css('background-image','url(/arquivos/new-marrom-mobile.png)');
+                }else{
+                    containerCenter.css('background-image','url(/arquivos/new-marrom.png)');
+                }
                 $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-marrom)');
                 $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-marrom)');
                 $('.valor-por, .valor-dividido, .PDP-Especial, .slick-dots').addClass('marrom');
                 $('.PDP-Especial tbody tr, .slick-arrow').addClass('marrom');
             }
             else if (url === "/bolo-integral-com-cacau-magro-400g-ls-10001414/p") {
-                containerCenter.css('background-image','url(/arquivos/new-marrom.png)');
+                if(scre < 500){
+                    containerCenter.css('background-image','url(/arquivos/new-marrom-mobile.png)');
+                }else{
+                    containerCenter.css('background-image','url(/arquivos/new-marrom.png)');
+                }
                 $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-marrom)');
                 $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-marrom)');
                 $('.valor-por, .valor-dividido, .PDP-Especial, .slick-dots').addClass('marrom');
                 $('.PDP-Especial tbody tr, .slick-arrow').addClass('marrom');
             }
             else if (url === "/chocolate-ao-leite-zero-adicao-de-acucares-22g-ls-10001506/p") {
-                containerCenter.css('background-image','url(/arquivos/new-marrom.png)');
+                if(scre < 500){
+                    containerCenter.css('background-image','url(/arquivos/new-marrom-mobile.png)');
+                }else{
+                    containerCenter.css('background-image','url(/arquivos/new-marrom.png)');
+                }
                 $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-marrom)');
                 $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-marrom)');
                 $('.valor-por, .valor-dividido, .PDP-Especial, .slick-dots').addClass('marrom');
                 $('.PDP-Especial tbody tr, .slick-arrow').addClass('marrom');
             }
             else if (url === "/mini-wafer-lowcucar-zero-acucares-sabor-morango-22g-ls-10001487/p") {
-                containerCenter.css('background-image','url(/arquivos/new-vermelho.png)');
                 lateralOrnamento.css('background-image','url(/arquivos/lateral-morango.png)');
+                if(scre < 500){
+                    containerCenter.css('background-image','url(/arquivos/new-vermelho-mobile.png)');
+                }else{
+                    containerCenter.css('background-image','url(/arquivos/new-vermelho.png)');
+                }
                 $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-vermelho)');
                 $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-vermelho)');
                 $('.valor-por, .PDP-Especial, .slick-dots').addClass('vermelho');
                 $('.PDP-Especial tbody tr, .slick-arrow').addClass('vermelho');
             }
             else if (url === "/gli-instan-lowcucar-sabor-guarana-glicose-instantanea-5x15g-ls-10000674/p") {
-                containerCenter.css('background-image','url(/arquivos/v2-amarelo.png)');
                 lateralOrnamento.css('background-image','url(/arquivos/new-guarana.png)');
+                if(scre < 500){
+                    containerCenter.css('background-image','url(/arquivos/v2-amarelo-mobile.png)');
+                }else{
+                    containerCenter.css('background-image','url(/arquivos/v2-amarelo.png)');
+                }
                 $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-amarelo)');
                 $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-amarelo)');
                 $('.valor-por, .PDP-Especial, .slick-dots').addClass('amarelo');
                 $('.PDP-Especial tbody tr, .slick-arrow').addClass('amarelo');
             }
             else if (url === "/mistura-para-bolo-sabor-chocolate-sem-gluten-150g-ls-10001571/p") {
-                containerCenter.css('background-image','url(/arquivos/new-marrom.png)');
+                if (scre < 500){
+                    containerCenter.css('background-image','url(/arquivos/new-marrom-mobile.png)');
+                }else{
+                    containerCenter.css('background-image','url(/arquivos/new-marrom.png)');
+                }
                 $('.productName, .skuBestPrice, .valor-dividido, .skuListPrice, h4.PDP-Especial, .titulo-prateleira h2').css('color', 'var(--pdp-marrom)');
                 $('.ls-produto__buy-button a, li.receita').css('background', 'var(--pdp-marrom)');
                 $('.valor-por, .valor-dividido, .PDP-Especial, .slick-dots').addClass('marrom');

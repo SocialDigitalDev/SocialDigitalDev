@@ -135,7 +135,6 @@
                             align-items: center;
                             justify-content: center;
                             padding: 21px 0 16px;
-
                             >div {
                                 width: 100%;
                                 padding: 0 20px;
@@ -212,6 +211,42 @@
                                         font-size: 14px;
                                         margin: 10px 0;
                                         color: $color-black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.outlet{
+    .j-category__bottom{
+        .j-category__grid{
+            .sub{
+                .resultado-busca-filtro{
+                    .js--content-filter__item{
+                        .menu-departamento{
+                            flex-flow: column;
+                            &:before{
+                                content: "Categorias";
+                                font-family: "Bebas Neue";
+                                font-size: 25px;
+                                color: #FB4F93;
+                            }
+                            .js--filter--price{
+                                order: 1;
+                            }
+                            .search-single-navigator{
+                                order: 2;
+                                h3{
+                                    a{
+                                        font-size: 13px;
+                                        padding-left: 0;
+                                        &:before{
+                                            display: none;
+                                        }
                                     }
                                 }
                             }

@@ -29,7 +29,17 @@ setTimeout(function(){
                     quantity: qtd,
                     seller: "1" 
                 };
-                vtexjs.checkout.addToCart([item]).done(function (orderForm) {
+                var params = window.location.search;
+                vtexjs.checkout.addToCart([item]).then(function(orderForm){
+                    if (params !== undefined){
+                        var urlParams = window.location.search;
+                        var newParams = urlParams.split('?utm_source=');
+                        var lastParams = newParams[1].split('&utm_campaign=');
+                        var source = lastParams[0];
+                        var campaign = lastParams[1];
+                        vtexjs.checkout.sendAttachment('marketingData', { utmSource: source, utmCampaign: campaign });
+                    }
+                }).done(function (orderForm) {
                     $(".header-minicart").addClass("open"),
                     setTimeout(function () {
                         $(".header-minicart").removeClass("open");
