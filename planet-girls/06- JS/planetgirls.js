@@ -1482,13 +1482,8 @@ $(document).ready(function () {
             });
         },
         iniciaCountdown: function() {
-            $(".oferta_do_dia .prod-right").each((function() {
-                $(this).find(".flags-promo").vtexCountdown()
-            }))
-        },
-        iniciaCountdownPDP: function() {
-            $("#produtoDiv-direita").each((function() {
-                $(this).find(".flags-promo").vtexCountdown()
+            $(".promo-relampago").each((function() {
+                $(this).find(".contador-regressivo-wrapper").vtexCountdown()
             }))
         },
 
@@ -1608,7 +1603,6 @@ $(document).ready(function () {
             codePlanet.addVideo();
             codePlanet.yasminShelf();
             codePlanet.iniciaCountdown();
-            codePlanet.iniciaCountdownPDP();
             codePlanet.lpReveilonPG();
             codePlanet.descriptionFixer();
             codePlanet.LPnomeCategoria();
