@@ -10273,9 +10273,20 @@ tabela {
 .nova-pdp .specification {
     display: none;
 }
-
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
 /* Responsive Nova Pdp */
 @media only screen and (max-width: 980px){
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
     .nova-pdp .produto_topo_first {
         display: flex;
         flex-direction: column;
