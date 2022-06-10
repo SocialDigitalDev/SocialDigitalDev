@@ -10291,6 +10291,7 @@ tabela {
     .nova-pdp .produto_descricao{
         width: 100%;
         display: flex;
+        flex-direction: column;
 
     }
     .nova-pdp .produto_descricao .coluna-descricao{
