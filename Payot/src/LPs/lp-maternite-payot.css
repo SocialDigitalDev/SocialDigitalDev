@@ -49,11 +49,11 @@ img{
     max-width: 100%;
     height: auto;
 }
-.btn_more{
-    background:#000;
-    padding: 10px 50px;
+.btn_more {
+    background: #C34E62;
+    padding: 15px 50px;
     color: #fff;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
     border-radius: 5px;
     margin-top: 20px;
@@ -175,6 +175,9 @@ img{
 .products-list {
     margin: 50px 0;
 }
+.tabs-section {
+    margin-bottom: 0;
+}
 .first .wrapper,
 .second .wrapper {
     display: flex;
@@ -291,6 +294,7 @@ img{
 }
 .tabs-section .tabs-container .tabs-block .tabs .tab .text p{
     margin-bottom: 0;
+    color: #fff;
 }
 .tabs label {
 	width: 100%;
@@ -319,11 +323,12 @@ img{
 	flex-grow: 1;
 	width: 100%;
 	height: 100%;
-	display: none;
+	display: flex;
+    align-items: center;
 	padding: 0;
 	color: #000;
-	background-color: #E9E9E9;
-    border-radius: 40px;
+	background-color: #C34E62;
+    border-radius: 50px;
 }
 .tabs .tab.tab_bg_first,
 .tabs .tab.tab_bg_second {
@@ -363,6 +368,7 @@ img{
 .imgTab{
     width: 49%;
     float: left;
+    margin-bottom: -3px;
 }
 .txtTab{
     width: 51%;
@@ -393,6 +399,7 @@ img{
 }
 .txtTab li span.icon img{
     max-width: 64px;
+    width: 100%;
 }
 .txtTab li.last{
     display: block;
@@ -423,13 +430,12 @@ img{
     justify-content: center;
     align-items: center;
     padding: 50px;
-    border: 2px solid #000;
+    border: 2px solid #C34E62;
     border-radius: 0px 140px 0px 140px;
 }
 .video_info .txt_video{
-    width: 50%;
+    width: 35%;
     margin-right: 50px;
-    
 }
 .video_info .content_video{
     width: 50%;
@@ -447,13 +453,118 @@ video {
     justify-content: space-between;
     align-items: center;
 }
-
+.j-shelf__item-new-price{
+    color: #c34e62;
+}
 .vitrine-produtos-lp h2 {
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
+    color: #c34e62;
+    margin-bottom: 2em;
 }
 
+.right.call-txt p {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: .5em;
+    color: #C34E62;
+    max-width: 558px;
+}
+
+.right.call-txt p span.blue-text {
+    color: #2CB9BC;
+}
+.prop {
+    max-height: 200px;
+}
+
+.propriedades {
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.video_info .txt_video h2 {
+    font-size: 28px;
+    max-width: 415px;
+    color: #c34e62;
+    font-weight: 700;
+}
+.txt_video p {
+    font-size: 21px;
+    font-weight: 500;
+    max-width: 300px;
+}
+.grid-2-columns .right-column {
+    max-width: 60%;
+}
+.j-shelf .slick-dots {
+    justify-content: left;
+    align-items: center;
+}
+.j-shelf .slick-dots li{
+    padding: 0;
+}
+.j-shelf .slick-dots li.slick-active button {
+    border: none;
+    background: #c34e62;
+}
+.j-shelf .slick-dots li button {
+    border: none;
+    width: 90px;
+    height: 5px;
+    border-radius: 0;
+    background-color: #D9D9D9;
+}
+.j-shelf .slick-arrow{
+    position: relative;
+    top: initial;
+    border: none;
+    transform: none;
+    width: 52px;
+    height: 30px;
+    cursor: pointer;
+}
+.j-shelf .slick-prev{
+    margin-right: 10px;
+}
+.custom-arrow{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.j-shelf .slick-prev:before{
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='62' height='40' viewBox='0 0 62 40' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M62 20C62 19.4107 61.7667 18.8456 61.3515 18.4289C60.9363 18.0122 60.3731 17.7781 59.7859 17.7781H7.56305L21.4989 3.79783C21.7047 3.59125 21.868 3.346 21.9794 3.07608C22.0909 2.80617 22.1482 2.51687 22.1482 2.22472C22.1482 1.93256 22.0909 1.64327 21.9794 1.37335C21.868 1.10344 21.7047 0.858188 21.4989 0.651604C21.293 0.44502 21.0486 0.281149 20.7796 0.169347C20.5107 0.0575442 20.2224 0 19.9313 0C19.6401 0 19.3518 0.0575442 19.0829 0.169347C18.8139 0.281149 18.5695 0.44502 18.3636 0.651604L0.650488 18.4269C0.444293 18.6333 0.280699 18.8785 0.169078 19.1484C0.0574562 19.4184 0 19.7077 0 20C0 20.2923 0.0574562 20.5816 0.169078 20.8516C0.280699 21.1215 0.444293 21.3667 0.650488 21.5731L18.3636 39.3484C18.5695 39.555 18.8139 39.7189 19.0829 39.8307C19.3518 39.9425 19.6401 40 19.9313 40C20.2224 40 20.5107 39.9425 20.7796 39.8307C21.0486 39.7189 21.293 39.555 21.4989 39.3484C21.7047 39.1418 21.868 38.8966 21.9794 38.6266C22.0909 38.3567 22.1482 38.0674 22.1482 37.7753C22.1482 37.4831 22.0909 37.1938 21.9794 36.9239C21.868 36.654 21.7047 36.4088 21.4989 36.2022L7.56305 22.2219H59.7859C60.3731 22.2219 60.9363 21.9878 61.3515 21.5711C61.7667 21.1544 62 20.5893 62 20Z' fill='%23c34e62'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 52px;
+    height: 30px;
+}
+.j-shelf .slick-next:before{
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='62' height='40' viewBox='0 0 62 40' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-3.8147e-06 20C-3.8147e-06 20.5893 0.233273 21.1544 0.648502 21.5711C1.06374 21.9878 1.62691 22.2219 2.21414 22.2219L54.437 22.2219L40.5011 36.2022C40.2953 36.4088 40.132 36.654 40.0206 36.9239C39.9091 37.1938 39.8518 37.4831 39.8518 37.7753C39.8518 38.0674 39.9091 38.3567 40.0206 38.6266C40.132 38.8966 40.2953 39.1418 40.5011 39.3484C40.707 39.555 40.9514 39.7189 41.2204 39.8307C41.4893 39.9425 41.7776 40 42.0687 40C42.3599 40 42.6482 39.9425 42.9171 39.8307C43.1861 39.7189 43.4305 39.555 43.6364 39.3484L61.3495 21.5731C61.5557 21.3667 61.7193 21.1215 61.8309 20.8516C61.9425 20.5816 62 20.2923 62 20C62 19.7077 61.9425 19.4184 61.8309 19.1484C61.7193 18.8785 61.5557 18.6333 61.3495 18.4269L43.6364 0.651604C43.4305 0.445019 43.1861 0.281147 42.9171 0.169346C42.6482 0.0575409 42.3599 0 42.0687 0C41.7776 0 41.4893 0.0575409 41.2204 0.169346C40.9514 0.281147 40.707 0.445019 40.5011 0.651604C40.2953 0.858189 40.132 1.10344 40.0206 1.37335C39.9091 1.64327 39.8518 1.93256 39.8518 2.22472C39.8518 2.51687 39.9091 2.80616 40.0206 3.07608C40.132 3.34599 40.2953 3.59124 40.5011 3.79783L54.437 17.7781L2.21414 17.7781C1.62691 17.7781 1.06374 18.0122 0.648502 18.4289C0.233273 18.8456 -3.8147e-06 19.4107 -3.8147e-06 20Z' fill='%23c34e62'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 52px;
+    height: 30px;
+}
+.tabs-block .tabs .tab {
+    order: 1;
+}
+.j-shelf .slick-list {
+    margin-left: -1.3em;
+}
+.saiba-mais {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 @media (min-width: 768px) {
 
 	body {
@@ -593,9 +704,9 @@ video {
 .content-button-close {
     padding: 13px 30px;
     background: white;
-    color: #0B1847;
+    color: #C34E62;
     border-radius: 60px;
-    border: 2px solid #0B1847;
+    border: 2px solid #C34E62;
     cursor: pointer;
     font-size: 0.7em;
     display: block;
@@ -608,7 +719,7 @@ video {
   
 .btn-modal:hover,
 .content-button-close:hover {
-    background: #0B1847;
+    background: #C34E62;
     color: white;
 }
 .close {
@@ -674,7 +785,14 @@ video {
 .prateleira-maternite .wrapper h2{
     text-align: center;
 }
-@media only screen and (max-width: 1366px){
+@media (max-width: 1500px){
+    .first .wrapper, 
+    .vitrine-produtos-lp .wrapper,
+    .video_info{
+        padding: 0 2em;
+    }
+}
+@media only screen and (max-width: 1400px){
     .wrapper,
     .first .wrapper, .second .wrapper{
         padding: 0 2em;
@@ -690,12 +808,125 @@ video {
         text-align: center;
     }
 }
-@media only screen and (max-width: 1280px){
+@media only screen and (max-width: 1300px){
     .imgTab{
         width: 50%;
     }
     .txtTab{
         width: 47%;
         padding: 10px;
+        padding-left: 3em;
+    }
+}
+@media (max-width: 500px){
+    .j-header{
+        box-shadow: 0px 2px 9px #ccc;
+    }
+    .first, .second, .text-marquee, .tabs-section, .products-list{
+        margin: 1em 0;
+    }
+    .first{
+        margin-bottom: 2em;
+    }
+    .first .wrapper{
+        flex-flow: column;
+        padding: 0 1em;
+    }
+    .right.call-txt p{
+        font-size: 42px;
+        line-height: 40px;
+    }
+    .prop {
+        max-height: 160px;
+    }
+    .btn_more{
+        font-size: 16px;
+        padding: 15px 45px;
+        display: flex;
+    }
+    .right{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+    .right .btn_more{    
+        max-width: 225px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .call-img .first {
+        margin-left: 1.5em;
+    }
+    .video_info .wrapper{
+        flex-flow: column;
+        border-radius: 0px 80px 0px 80px;
+        padding: 35px 15px;
+    }
+    .video_info .txt_video {
+        width: 100%;
+        margin-right: 0px;
+    }
+    .video_info .content_video {
+        width: 100%;
+    }
+    .video_info .txt_video h2{
+        font-size: 21px;
+        margin-bottom: .8em;
+        text-align: center;
+    }
+    .txt_video p{
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    .video_info .content_video iframe {
+        border-radius: 0px;
+        max-height: 210px;
+    }
+    .tabs{
+        flex-flow: column;
+    }
+    .tabs .tab{
+        flex-flow: column;
+    }
+    .imgTab {
+        width: 100%;
+    }
+    .txtTab {
+        width: 100%;
+        padding: 10px 25px;
+    }
+    .tabs-container {
+        padding: 2rem 1em;
+    }
+    .vitrine-produtos-lp h2{
+        font-size: 25px;
+        margin-bottom: 0em;
+    }
+    .vitrine-produtos-lp .left-column {
+        display: none;
+    }
+    .grid-2-columns .right-column {
+        max-width: 100%;
+    }
+    .j-shelf .slick-list {
+        margin-left: 0;
+    }
+    .j-shelf .slick-dots{
+        justify-content: center;
+    }
+    .j-shelf .slick-dots li button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    .j-shelf .slick-dots li {
+        padding: 0 10px;
+    }
+    .vitrine-produtos-lp .j-shelf__item-name{
+        margin-bottom: 0;
+    }
+    .j-shelf>ul li{
+        margin: 0;
     }
 }
