@@ -298,14 +298,13 @@
                                         width: 100%;
                                     }
                                     h3.blue{
-                                        font-size: 30px;
+                                        font-size: 0px;
                                         color: var(--color-blue-dark);
                                         margin: 1em 0;
                                         padding: 0em;
                                         width: 50%;
                                         @include d(ipad){
                                             padding: 0 15px;
-                                            font-size: 20px;
                                         }
                                         @include d(celularLarge){
                                             padding: 0px;
@@ -340,21 +339,35 @@
                                         }
                                     }
                                 }
-                                .passo-2{
-                                    padding: 0 1em;
-                                    background: var(--color-blue);
-                                    color: var(--color-white);
-                                    border-radius: 15px;
+                                .passo-1{
                                     .blue{
-                                        color: var(--color-white) !important;
-                                        @include d(celularLarge){
-                                            color: var(--color-blue-dark) !important;
+                                        &:before{
+                                            content: "Ingredientes";
+                                            font-size: 30px;
+                                            @include d(celularLarge){
+                                                font-size: 20px;
+                                            }
                                         }
                                     }
+                                }
+                                .passo-2{
+                                    padding-left: 4em;
+                                    color: var(--color-black);
+                                    border-left: 1px solid #ccc;
                                     @include d(celularLarge){
-                                        padding: 0em;
-                                        background: var(--color-white);
-                                        color: var(--color-black);
+                                        border: none;
+                                        padding: 0;
+                                        margin-top: 1em;
+                                    }
+                                    .blue{
+                                        color: var(--color-blue-dark) !important;
+                                        &:before{
+                                            content: "Modo de Preparo";
+                                            font-size: 30px;
+                                            @include d(celularLarge){
+                                                font-size: 20px;
+                                            }
+                                        }
                                     }
                                 }
                             }
