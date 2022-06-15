@@ -31,7 +31,7 @@ setTimeout(function(){
                 };
                 var params = window.location.search;
                 vtexjs.checkout.addToCart([item]).then(function(orderForm){
-                    if (params !== undefined){
+                    if (params !== ""){
                         var urlParams = window.location.search;
                         var newParams = urlParams.split('?utm_source=');
                         var lastParams = newParams[1].split('&utm_campaign=');
