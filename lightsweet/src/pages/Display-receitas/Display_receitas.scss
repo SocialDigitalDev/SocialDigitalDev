@@ -102,6 +102,12 @@
                                     @include d(celularLarge){
                                         width: 60%;
                                     }
+                                    h3{
+                                        max-width: 175px;
+                                        @include d(celularLarge){
+                                            max-width: 100%;
+                                        }
+                                    }
                                 }
                                 .ls-actions{
                                     @include d(celularLarge){
