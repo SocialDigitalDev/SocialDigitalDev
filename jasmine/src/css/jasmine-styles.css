@@ -12369,3 +12369,180 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 section.banner-vtex-day {
     margin-bottom: 3em;
 }
+
+/* COMPRE JUNTO */
+.slideCompreJunto table > tbody > tr > td{
+	border-top: 0!important;
+}
+.buy-together-content>h4 {
+    color: #989898;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    font-size: 0px;
+    /* margin: 50px 0px 60px 0px; */
+}/*
+.buy-together-content>h4::before {
+    content: "Aproveite";
+    display: inline-block;
+    font-size: 32px;
+}
+.buy-together-content>h4::after {
+    content: " e Compre Junto";
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0px 0px 0px 10px;
+}*/
+.apresentacao .slick-initialized .slick-slide {
+    float: left;
+}
+.apresentacao .slick-track {
+    float: left;
+    margin: 20px 0px 0px 0px;
+}
+.buy-together-content .itemA>a,
+.buy-together-content .itemB>a {
+    float: left;
+    /* width: 50%; */
+}
+.buy-together-content .itemA h3,
+.buy-together-content .itemB h3 {
+    float: left;
+    color: #989898;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+    line-height: 120%;
+    text-align: center;
+    width: 100%;
+    width: 50%;
+    /* padding: 50px 20px 0px 20px; */
+}
+.buy-together-content td {
+    float: left;
+}
+.buy-together-content td.itemA {
+    width: 33%;
+	display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.buy-together-content td.itemB {
+    width: 33%;
+	display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.buy-together-content td.plus {
+    width: 30px;
+}
+.buy-together-content td.equal {
+    width: 30px;
+    text-align: center;
+}
+.buy-together-content td.buy {
+    width: calc(45% - 360px);
+}
+.buy-together-content tr .plus {
+    width: 40px;
+    height: 40px;
+    background: #27ae60;
+    color: #fff;
+    font-weight: bold;
+    font-size: 37px;
+    text-align: center;
+    vertical-align: top;
+    line-height: 20px;
+    /* float: left; */
+    
+    border-radius: 40px;
+    margin: 30px 30px;
+    display: inline-block;
+}
+.comprar-junto a {
+    width: 100%;
+    height: 50px;
+    line-height: 49px;
+    float: left;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background: #27ae60;
+    margin-top: 20px;
+	border-radius: 10px;
+}
+.buy-together-content .buy {
+    font-size: 20px;
+}
+.buy-together-content .buy strong {
+    color: #27ae60;
+}
+.comprar-junto a::before {
+	content: "\e918";
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-family: "jasmine";
+
+    font-size: 28px;
+    font-weight: 100;
+    margin-right: 15px;
+    margin-top: -1px;
+    vertical-align: top;
+}
+.buy-together-content .more {
+    display: none;
+}
+.buy-together-content tr .equal {
+    width: 40px;
+    height: 40px;
+    background: #27ae60;
+    color: #fff;
+    font-weight: bold;
+    font-size: 37px;
+    text-align: center;
+    vertical-align: top;
+    line-height: 20px;
+    /* float: left; */
+    
+    border-radius: 40px;
+    margin: 30px 30px;
+    display: inline-block;
+}
+.buy-together-content tr {
+    margin: 0px 0px 60px 0px;
+    float: left;
+    width: 100%;
+}
+.buy-together-content .itemA h3 a,
+.buy-together-content .itemB h3 a {
+	font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+@media only screen and (max-width: 980px){
+	.buy-together-content td.itemA,
+	.buy-together-content td.itemB,
+	.buy-together-content td.buy{
+		width: 100%;
+		flex-direction: column;
+	}
+	.buy-together-content tr .plus,
+	.buy-together-content tr .equal{
+		background: #dfdfdf;
+		width: 100%;
+		margin: 0;
+
+	}
+}
