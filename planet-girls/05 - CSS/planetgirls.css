@@ -15283,7 +15283,7 @@ th.name-field.Composicao {
 }
 .contador-regressivo-wrapper {
     position: absolute;
-    top: 25%;
+    top: 35%;
     right: 15%;
 }
 .contador-regressivo .top-count {
@@ -15297,10 +15297,19 @@ th.name-field.Composicao {
 .contador-regressivo .top-count .qd-cp-timeinfo {
     display: flex;
     flex-flow: column;
-    margin: 0 1em;
+    margin: 0;
 }
 .contador-regressivo .top-count .qd-cp-timeinfo .qd-cp-digits span {
     color: #fff;
+}
+.contador-regressivo .top-count .minutes .qd-cp-digits:before,
+.contador-regressivo .top-count .minutes .qd-cp-digits:after {
+    content: ":";
+    color: #f07;
+    padding: 0 10px;
+}
+.contador-regressivo .top-count .days .qd-cp-digits{
+    display: none;
 }
 .contador-regressivo p.flag {
     display: none;
@@ -15310,13 +15319,14 @@ th.name-field.Composicao {
     letter-spacing: 1px;
     text-shadow: 1px 2px 4px #ff64b1;
     font-size: 25px;
+    display: none !important;
 }
 @media (max-width: 1500px){
     .contador-regressivo .top-count .qd-cp-timeinfo span {
         font-size: 45px;
     }
     .contador-regressivo-wrapper {
-        top: 20%;
+        top: 30%;
     }
     .contador-regressivo .top-count .qd-cp-timeinfo .qd-cp-text {
         font-size: 18px;
@@ -15326,16 +15336,13 @@ th.name-field.Composicao {
     .contador-regressivo .top-count .qd-cp-timeinfo span {
         font-size: 40px;
     }
-    .contador-regressivo-wrapper {
-        top: 18%;
-    }
 }
 @media (max-width: 1100px){
     .contador-regressivo .top-count .qd-cp-timeinfo span {
         font-size: 35px;
     }
     .contador-regressivo-wrapper {
-        top: 12%;
+        top: 25%;
         right: 10%;
     }
     .contador-regressivo .top-count .qd-cp-timeinfo{
@@ -15384,20 +15391,23 @@ th.name-field.Composicao {
         font-size: 13px;
     }
     .contador-regressivo .top-count .qd-cp-timeinfo {
-        margin: 0 0.2em;
+        margin: 0;
     }
     .contador-regressivo .top-count{
         margin-right: 1em;
     }
     .contador-regressivo-wrapper{
-        top: 25%;
+        top: 40%;
     }
 }
 @media (max-width: 400px){
     .contador-regressivo .top-count .qd-cp-timeinfo {
-        margin: 0 1px;
+        margin: 0;
     }
-    .contador-regressivo-wrapper{
-        top: 22%;
+    .contador-regressivo-wrapper {
+        top: 35%;
+    }
+    .contador-regressivo .top-count .minutes .qd-cp-digits:before, .contador-regressivo .top-count .minutes .qd-cp-digits:after{
+        padding: 0 5px;
     }
 }
