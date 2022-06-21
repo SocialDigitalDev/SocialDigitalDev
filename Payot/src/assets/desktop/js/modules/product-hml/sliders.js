@@ -1,8 +1,9 @@
 const Methods = {
     init() {
+        Methods.similarProducts();
         Methods.thumbSlider();
         Methods.productsSlider();
-
+        
         $('.j-content__product--infos .j-box-variations .sku-selector-container ul li input').live('change', function () {
             $("#show > ul.thumbs").slick('unslick');
 
@@ -10,6 +11,15 @@ const Methods = {
                 Methods.thumbSlider();
             }, 150);
         });
+    },
+
+    similarProducts() {
+        $('.j-content__product--variations .j-shelf > ul').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false
+         });
     },
 
     thumbSlider() {
