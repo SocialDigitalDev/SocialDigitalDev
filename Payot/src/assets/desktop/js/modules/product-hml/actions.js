@@ -230,9 +230,12 @@ const Methods = {
             var valorTotal = $(this).text();
             valorTotal = valorTotal.split('Valor total: ');
             valorTotal = valorTotal[1].split(' Comprando');
-            $(this).find('.comprar-junto').before('<span class="compre-por">Compre por:</span><span class="price">'+valorTotal[0].trim()+'</span>');
+            $('#divCompreJunto tbody tr td.buy span.price').html('');
+            setTimeout(function(){
+                $(this).find('.comprar-junto').before('<span class="compre-por">Compre por:</span><span class="price">'+valorTotal[0].trim()+'</span>');
+            }, 2000);
         })
-    }
+    },
 };
 
 export default {

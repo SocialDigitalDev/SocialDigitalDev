@@ -726,7 +726,7 @@
                     display: none;
                 }
                 .buy {
-                    font-size: 0;
+                    font-size: 16px;
 
                     .compre-por {
                         display:block;
@@ -749,7 +749,8 @@
                         padding: 7px 10px;
                         text-transform: uppercase;
                         font-family: 'Bebas Neue';
-    
+                        margin-top: 0.5em;
+                        margin-left: 15px;
                         a {
                             color: #000;
                         }
@@ -758,4 +759,38 @@
             }
         }
     }
+}
+.j-content__product--variations {
+    .j-shelf {
+        > h2{
+            display: flex;
+            font-size: 20px;
+            color: #fb4f93;
+            text-transform: uppercase;
+            align-items: center;
+            &:after{
+                content: "";
+                width: 60%;
+                height: 1px;
+                background: #000;
+                display: block;
+                margin-left: 1em;
+            }
+        }
+        > ul{
+            li{
+                .j-item-variation {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+.j-content__product .j-box-compre-junto .shelf-products .buy-together-content td.itemA, 
+.j-content__product .j-box-compre-junto .shelf-products .buy-together-content td.itemB{
+    width: 25%;
+}
+.j-content__product .j-box-compre-junto .shelf-products .buy-together-content td.buy{
+    width: 40%;
 }
