@@ -9,6 +9,7 @@ const Methods = {
         Methods.freightReturn();
         Methods.notifyme();
         Methods.getSkuVariations();
+        Methods.fixSimilars();
         Methods.selectSkus();
         Methods.priceCompreJunto();
     },
@@ -203,6 +204,14 @@ const Methods = {
         });
         $('.j-freight span').on('click', function(){
             $('.j-box-freight').toggle();    
+        });
+    },
+
+    fixSimilars(){
+        $('.j-content__product--variations .j-shelf > ul li').each(function(){
+            if (!$.trim($(this).find('.j-item-variation--img.thumb').html()) == '') {
+                $(this).find('.j-item-variation--img:not(.thumb)').hide();
+            }
         });
     },
 

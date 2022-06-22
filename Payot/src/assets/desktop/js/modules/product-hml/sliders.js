@@ -14,11 +14,13 @@ const Methods = {
     },
 
     similarProducts() {
+        $('.j-content__product--variations .j-shelf > ul .helperComplement').remove();
         $('.j-content__product--variations .j-shelf > ul').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
             arrows: true,
-            dots: false
+            dots: false,
+            infinite: true
          });
     },
 

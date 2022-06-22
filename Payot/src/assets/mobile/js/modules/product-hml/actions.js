@@ -8,6 +8,7 @@ const Methods = {
         Methods.shareItems();
         Methods.specification();
         Methods.freightReturn();
+        Methods.fixSimilars();
         Methods.notifyme();
         Methods.getSkuVariations();
         Methods.selectSkus();
@@ -121,7 +122,13 @@ const Methods = {
             $(this).attr('href', share);
         });
     },
-
+    fixSimilars(){
+        $('.j-content__product--variations .j-shelf > ul li').each(function(){
+            if (!$.trim($(this).find('.j-item-variation--img.thumb').html()) == '') {
+                $(this).find('.j-item-variation--img:not(.thumb)').hide();
+            }
+        });
+    },
     replaceFreightContent() {
         const tr = document.querySelector('.freight-values thead tr');
         let th = document.createElement('th');
@@ -253,8 +260,10 @@ const Methods = {
             var valorTotal = $(this).text();
             valorTotal = valorTotal.split('Valor total: ');
             valorTotal = valorTotal[1].split(' Comprando');
-            
-            $(this).find('.comprar-junto').before('<span class="compre-por">Compre os 2 produtos:</span><span class="price">Por '+valorTotal[0].trim()+'</span>');
+            $('#divCompreJunto tbody tr td.buy span.price').html('');
+            setTimeout(function(){
+                $(this).find('.comprar-junto').before('<span class="compre-por">Compre os 2 produtos:</span><span class="price">Por '+valorTotal[0].trim()+'</span>');
+            }, 2000);
         })
     }
 
