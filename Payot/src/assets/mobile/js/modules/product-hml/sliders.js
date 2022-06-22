@@ -2,6 +2,7 @@ const Methods = {
     init() {
         Methods.sliderImage();
         Methods.sliderShelf();
+        Methods.similarProducts();
     },
 
     sliderImage() {
@@ -16,9 +17,10 @@ const Methods = {
         });
     },
 
+    
     sliderShelf() {
-        const images = $('.js--shelf > ul');
-
+        const images = $('.j-product__shelf .js--shelf > ul');
+        
         $('.js--shelf > ul li.helperComplement').remove();
 
         images.slick({
@@ -28,6 +30,16 @@ const Methods = {
             autoplay: true,
             autoplaySpeed: 2000,
         });
+    },
+    similarProducts() {
+        $('.j-content__product--variations .j-shelf > ul .helperComplement').remove();
+        $('.j-content__product--variations .j-shelf > ul').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            infinite: true
+         });
     }
 };
 

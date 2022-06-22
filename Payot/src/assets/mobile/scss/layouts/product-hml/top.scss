@@ -565,7 +565,7 @@
     }
     .j-box-compre-junto {
         margin-bottom: 28px;
-
+        text-align: center;
         h2 {
             color: #FB4F93;
             font-family: "Montserrat",sans-serif;
@@ -624,9 +624,10 @@
                     display: none;
                 }
                 .buy {
-                    font-size: 0;
-                    flex-direction: column;
-
+                    font-size: 16px;
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 2em;
                     .compre-por {
                         display:block;
                         font-size:16px;
@@ -650,13 +651,29 @@
                         text-transform: uppercase;
                         font-family: 'Bebas Neue';
                         height: 39px;
-    
+                        margin: auto;
+                        margin-top: 1em;
                         a {
                             color: #000;
                         }
                     }
                 }
             }
+        }
+    }
+}
+.j-content__product--variations {
+    .j-shelf {
+        > h2{
+            display: flex;
+            font-size: 18px;
+            color: #fb4f93;
+            text-transform: uppercase;
+            align-items: center;
+            justify-content: center;
+        }
+        > ul{
+            padding: 0 1em;
         }
     }
 }
