@@ -2555,7 +2555,7 @@ fieldset.sku-notifyme-form.notifyme-form {
 	width: 100%;
 	bottom: 0;
 	left: 0;
-	opacity: 0;
+	opacity: 1;/* Ocultar no Hover = 0*/
 	transform: translateY(6px);
 	transition: 0.2s;
 	-ms-transition: 0.4s ease-in-out;
@@ -2565,6 +2565,11 @@ fieldset.sku-notifyme-form.notifyme-form {
 	transition: 0.4s ease-in-out;
 	background: rgb(255 255 255 / 60%);
 	padding: 0;
+}
+.prateleira-cozinhar .jasmine-prateleira ul li .jasmine-hover-content{
+	opacity:1;
+	transform: translateY(0px);
+    bottom: 0;
 }
 .jasmine-variations {
 	display: flex;
