@@ -12376,6 +12376,9 @@ section.banner-vtex-day {
 }
 
 /* COMPRE JUNTO */
+.hide{
+	display: none;
+} 
 .slideCompreJunto table > tbody > tr > td{
 	border-top: 0!important;
 }
@@ -12482,6 +12485,7 @@ hr.buy-together{
 .compreJunto__comprar-junto{
 	display: flex;
 }
+.compreJunto__comprar-junto a,
 .comprar-junto a {
     /* width: 100%;
     height: 50px; */
@@ -12672,9 +12676,18 @@ hr.buy-together{
 .compreJunto__buy-text{
 	margin-bottom: 20px;
 }
+.compreJunto__produto-compreJunto{
+	display: none;
+}
 .compreJunto__buy-text--bold_second{
 	font-size: 28px;
 	color: #27ae60;
+}
+.compreJunto__buy-text--bold_second:before{
+	content:"R$";
+	font-size: 28px;
+	color: #27ae60;
+	margin-right: 4px;
 }
 @media only screen and (max-width: 980px){
 	.buy-together-content td.itemA,

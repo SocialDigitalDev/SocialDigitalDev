@@ -1372,176 +1372,85 @@ $(document).ready(function () {
 				}
 			});
 		},
-		compreJunto: function () {
-            if ($("body").hasClass("jasmine-produto")) {
-
-                // Clique bootao Comprar Junto
-                setTimeout(function () {
-                    $('.btn-batch-buy').off('click').click(function (event) {
-                        event.preventDefault();
-                        var hrefCart = $('.jasmine-produto__buy-button a').attr("href");
-                        var qtd = 1;
-                        var res = hrefCart.replace(/qty=1/, "qty=" + qtd);
-                        var idSkuCJ = $('.slideCompreJunto .slick-active .buy-product-checkbox').attr('rel');
-                        alert(idSkuCJ);
-
-                        // //var resUTL = res.substring(res.lastIndexOf("sku=")+1,res.lastIndexOf("&qty="));
-                        var resUTL = res.split("sku=").pop().split("&qty=").shift();
-                        alert(resUTL);
-
-                        setTimeout(function () {
-                            vtexjs.checkout.getOrderForm().then(function () {
-                                item = {
-                                    id: resUTL,
-                                    quantity: 1,
-                                    seller: 1
-                                };
-                                itemDois = {
-                                    id: idSkuCJ,
-                                    quantity: 1,
-                                    seller: 1
-                                };
-                                vtexjs.checkout.addToCart([item, itemDois]).done(function (orderForm) {
-                                    alert('foi');
-                                });
-                            })
-                        });
-                    });
-                }, 1500);
-
-                function currencyFormatted(value, str_cifrao) {
-                    return str_cifrao + ' ' + value.formatMoney(2, ',', '.');
-                }
-
-                Number.prototype.formatMoney = function (c, d, t) {
-                    var n = this,
-                        c = isNaN(c = Math.abs(c)) ? 2 : c,
-                        d = d == undefined ? "." : d,
-                        t = t == undefined ? "," : t,
-                        s = n < 0 ? "-" : "",
-                        i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
-                        j = (j = i.length) > 3 ? j % 3 : 0;
-                    return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
-                };
-
-                $('.slideCompreJunto .jasmine-prateleira>ul').on('setPosition', function (event, slick, direction) {
-                    var precoCJ = $('.slideCompreJunto .slick-initialized .slick-slide.slick-active .prodData .price .bestPrice').text();
-                    precoCJ = precoCJ.trim();
-                    precoCJ = precoCJ.replace('R$ ', '');
-                    precoCJ = precoCJ.replace(',', '.');
-                    var preco = $('.prodFixo .skuBestPrice').text();
-                    preco = preco.trim();
-                    preco = preco.replace('R$ ', '');
-                    preco = preco.replace(',', '.');
-                    precoFinal = parseFloat(preco) + parseFloat(precoCJ);
-                    precoFinal = currencyFormatted(precoFinal, 'R$');
-                    //console.log(precoFinal);
-                    $('.selected-value').text(precoFinal);
-
-                });
-
-                var prodCompreJunto = $('.prodCompreJunt .jasmine-prateleira >ul');
-                var boxCompre = $('.prodCompreJunt');
-
-                if (prodCompreJunto.length > 0) {
-                    boxCompre.css('display', 'block');
-                } else {
-                    boxCompre.css('display', 'none');
-                };
-
-                // Slide compre junto
-                $('#image img').clone().prependTo('.prodFixo').wrapAll('<div class="imgCompre"></div>'); //Clone imagem
-                $('.productPrice').clone().appendTo('.prodFixo'); //Clona preco
-
-                $('.prodFixo').after('<div class="juntoAction"><p><img src="/arquivos/plus-bup.png" /></p></div>');
-                $('.slideCompreJunto .jasmine-prateleira>ul').after('<div class="juntoAction"><p><img src="/arquivos/equal-bup.png" /></p></div>');
-
-                // Pega field que seleciona cada produto e colocar dentro da LI prodData
-                var prodCheck = $('.slideCompreJunto .buy-product-checkbox');
-
-                prodCheck.each(function () {
-                    var idCheck = $(this);
-
-                    $('.slideCompreJunto .jasmine-prateleira .data').each(function () {
-                        if ($(this).attr('data-id') == idCheck.attr('rel')) {
-                            idCheck.prependTo($(this));
-                        }
-                    });
-                });
-
-                $('.slideCompreJunto fieldset').remove(); // Remove fieldset vazio 
-
-                $('.slideCompreJunto .jasmine-prateleira>ul').slick({
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: false
-                });
-
-            }
-        },
 		buyTogether: function() {
-            $(".product-buy-together #divCompreJunto").html().length || $(".product-buy-together").addClass("hide"), {
+            $(".product-buy-together #divCompreJunto").html().length ? $(".product-buy-together").removeClass("hide") : $(".product-buy-together").addClass("hide");
+            let e = {
                 init: function() {
                     this.getProductA(), this.getProductB(), this.getPrices(), this.produtoCompreJunto(), this.setPrice()
                 },
                 getProductA: function() {
                     let e = document.querySelector(".itemA");
-                    if (!e) return;
-                    let a = e.querySelector("a").getAttribute("href"),
-                        t = e.querySelector("a > img").getAttribute("src"),
-                        o = e.querySelector("h3 > a").innerHTML,
-                        r = "";
-                    r += '<div class="compreJunto__wrapper">', r += `<a class="compreJunto__image" href="${a}">\n        <img src="${this.changeImageSize(t)}" alt="${o}"/>\n </a>`, r += `<h3 class="compreJunto__prod-title">\n <a href="${a}">${o}</a>\n</h3>`, r += '<div class="compreJunto__price">\n <small class="compreJunto-bestPrice"></small>\n        </div>', r += "</div>", this.render(".compreJunto__itemA", r)
+                    var a, t, o, s;
+                    e && (a = e.querySelector("a").getAttribute("href"), s = e.querySelector("a > img").getAttribute("src"), t = e.querySelector("h3 > a").innerHTML, o = "", s = this.changeImageSize(s), this.render(".compreJunto__itemA", o = (o = (o += '<div class="compreJunto__wrapper">') + `<a class="compreJunto__image" href="${a}">
+				<img src="${s}" alt="${t}"/>
+				</a>` + `<h3 class="compreJunto__prod-title">
+				<a href="${a}">${t}</a>
+				</h3>`) + `<div class="compreJunto__price">
+				<small class="compreJunto-bestPrice"></small>
+				</div>` + "</div>"))
                 },
                 getProductB: function() {
-                    let e = document.querySelectorAll(".itemB");
+                    var e = document.querySelectorAll(".itemB");
                     [].forEach.call(e, e => {
                         e.parentNode.querySelector(".buy").textContent.split("Valor total:")[1].trim().split(" ")[1], e.querySelector(".itemA");
-                        let a = e.querySelector("a").getAttribute("href"),
+                        var a = e.querySelector("a").getAttribute("href"),
                             t = e.querySelector("a > img").getAttribute("src"),
-                            o = e.querySelector("h3 > a").innerHTML,
-                            r = "";
-                        r += '<div class="compreJunto__wrapper">', r += `<a class="compreJunto__image" href="${a}">\n          <img src="${this.changeImageSize(t)}" alt="${o}"/>\n</a>`, r += `<h3 class="compreJunto__prod-title">\n <a href="${a}">${o}</a>\n </h3>`, r += '<div class="compreJunto__price">\n<small class="compreJunto-secondProd"></small>\n          </div>', r += "</div>", this.render(".compreJunto__itemB", r)
+                            e = e.querySelector("h3 > a").innerHTML,
+                            o = "",
+                            t = this.changeImageSize(t);
+                        this.render(".compreJunto__itemB", (o += '<div class="compreJunto__wrapper">') + `<a class="compreJunto__image" href="${a}">
+					<img src="${t}" alt="${e}"/>
+					</a>` + `<h3 class="compreJunto__prod-title">
+					<a href="${a}">${e}</a>
+					</h3>` + `<div class="compreJunto__price">
+					<small class="compreJunto-secondProd"></small>
+					</div>` + "</div>")
                     })
                 },
                 setPrice: function() {
-                    $(".skuBestPrice").text().replace("R$", "").trim(), $(".compreJunto__buy .compreJunto__buy-text--bold").text()
+                    $(".skuBestPrice").text().replace("R$", "").trim(), $(".compreJunto__buy .compreJunto__buy-text--bold_second").text()
                 },
                 getPrices: function() {
-                    let e = document.querySelectorAll("td.buy");
+                    var e = document.querySelectorAll("td.buy");
                     [].forEach.call(e, e => {
-                        console.log(e);
-                        let a = e.querySelectorAll("strong")[0].textContent,
+                        var a = e.querySelectorAll("strong")[0].textContent,
                             t = e.querySelectorAll("strong")[1].textContent,
                             o = e.textContent.split("Valor total:")[1].trim().split(" ")[1],
-                            r = e.querySelector(".comprar-junto a").getAttribute("href"),
+                            e = e.querySelector(".comprar-junto a").getAttribute("href"),
                             s = "";
-                        s += `<div class="compreJunto__buy">\n <p class="compreJunto__buy-text">\n <span class="compreJunto__buy-text--bold">\n Compre os 2 itens\n </span> por <span class="compreJunto__buy-text--bold_second">R$ ${o}</span>\n </p>`, s += `<p class="compreJunto__installments ${parseInt(a)<=1?"transparent":""}" >\n                ou até ${a} de ${t} sem juros\n </p>`, s += `<p class="comprar-junto compreJunto__comprar-junto">\n <a href="${r}">COMPRAR JUNTO</a>\n  </p>`, s += "</div>", this.render(".compreJunto__buy-wrapper", s)
+                        this.render(".compreJunto__buy-wrapper", s + `<div class="compreJunto__buy">
+								<p class="compreJunto__buy-text">
+								<span class="compreJunto__buy-text--bold">Compre os 2 itens</span> por <span class="compreJunto__buy-text--bold_second">${o}</span>
+								</p>` + `<p class="compreJunto__installments">
+								ou até ${a} de ${t} sem juros
+							</p>` + `<p class="compreJunto__comprar-junto">
+								<a href="${e}">COMPRAR JUNTO</a>
+							</p>` + "</div>")
                     })
                 },
                 render: function(e, a) {
                     document.querySelector(e).innerHTML += a
                 },
                 changeImageSize: function(e) {
-                    return e.split("90-90").join("150-150")
+                    return e.split("90-90").join("450-450")
                 },
                 produtoCompreJunto: function() {
                     $(".compreJunto__itemB").slick({
-                        infinite: false,
+                        infinite: true,
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         asNavFor: ".compreJunto__buy-wrapper"
-                    }), 
-					$(".compreJunto__buy-wrapper").slick({
-                        infinite: false,
+                    }), $(".compreJunto__buy-wrapper").slick({
+                        infinite: true,
                         slidesToShow: 1,
                         arrows: false,
                         slidesToScroll: 1,
-                        fade: false,
+                        fade: true,
                         asNavFor: ".compreJunto__itemB"
                     })
                 }
-            }.init()
+            };
+            e.init()
         },
     
 
@@ -1579,7 +1488,6 @@ $(document).ready(function () {
 			Jasmine.faleConosco();
 			Jasmine.recarregaPagina();
 			// Jasmine.verificaWishList();
-			//Jasmine.compreJunto();
 			Jasmine.buyTogether();
 		},
 	
