@@ -35,7 +35,7 @@ var materniteLp = {
         }
     },
     init: function() {
-        materniteLp.vitrineProdutos();
+        // materniteLp.vitrineProdutos();
         materniteLp.moveSlickArrowToSlickDots();
     }
 }
