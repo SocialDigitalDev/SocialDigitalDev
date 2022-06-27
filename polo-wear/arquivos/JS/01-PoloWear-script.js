@@ -58,6 +58,11 @@ $(document).ready(function () {
 				$('.cat5 .subCategoria').append(`<div class="menu-img"><img class="menu" src="/arquivos/menunovo-calcados.png" /><img class="menu" src="/arquivos/menunovo-perfumes1.png" /></div>`);
 				//Menu Acessorios
 				$('.cat6 .subCategoria').append(`<div class="menu-img"><img class="menu" src="/arquivos/menunovo-acessorios.png" /><img class="menu" src="/arquivos/menunovo-perfumes2.png" /></div>`);
+				$('.cat6619 ul .menuColuna').append(`
+					<li id="OculosTemp" class="subItem">
+						<a href="https://www.poloeyewear.com.br/" class="linkBy" rel="nofollow">Óculos</a>
+					</li>	
+					`);
 			}, 1500);
 		},
 
