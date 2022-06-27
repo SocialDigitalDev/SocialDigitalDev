@@ -2555,7 +2555,7 @@ fieldset.sku-notifyme-form.notifyme-form {
 	width: 100%;
 	bottom: 0;
 	left: 0;
-	opacity: 0;
+	opacity: 1;/* Ocultar no Hover = 0*/
 	transform: translateY(6px);
 	transition: 0.2s;
 	-ms-transition: 0.4s ease-in-out;
@@ -2565,6 +2565,11 @@ fieldset.sku-notifyme-form.notifyme-form {
 	transition: 0.4s ease-in-out;
 	background: rgb(255 255 255 / 60%);
 	padding: 0;
+}
+.prateleira-cozinhar .jasmine-prateleira ul li .jasmine-hover-content{
+	opacity:1;
+	transform: translateY(0px);
+    bottom: 0;
 }
 .jasmine-variations {
 	display: flex;
@@ -12371,6 +12376,9 @@ section.banner-vtex-day {
 }
 
 /* COMPRE JUNTO */
+.hide{
+	display: none;
+} 
 .slideCompreJunto table > tbody > tr > td{
 	border-top: 0!important;
 }
@@ -12477,6 +12485,7 @@ hr.buy-together{
 .compreJunto__comprar-junto{
 	display: flex;
 }
+.compreJunto__comprar-junto a,
 .comprar-junto a {
     /* width: 100%;
     height: 50px; */
@@ -12667,9 +12676,18 @@ hr.buy-together{
 .compreJunto__buy-text{
 	margin-bottom: 20px;
 }
+.compreJunto__produto-compreJunto{
+	display: none;
+}
 .compreJunto__buy-text--bold_second{
 	font-size: 28px;
 	color: #27ae60;
+}
+.compreJunto__buy-text--bold_second:before{
+	content:"R$";
+	font-size: 28px;
+	color: #27ae60;
+	margin-right: 4px;
 }
 @media only screen and (max-width: 980px){
 	.buy-together-content td.itemA,
