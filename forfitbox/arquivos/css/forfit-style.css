@@ -6943,7 +6943,7 @@ a#business-toggle[data=on]:after {
     width: 250px;
     float: left;
     margin-top: 20px;
-    margin-right: 30px;
+    margin-right: 6px;
 }
 .resultadoCategoria{
     width:calc(100% - 300px);
