@@ -58,6 +58,11 @@ $(document).ready(function () {
 				$('.cat5 .subCategoria').append(`<div class="menu-img"><img class="menu" src="/arquivos/menunovo-calcados.png" /><img class="menu" src="/arquivos/menunovo-perfumes1.png" /></div>`);
 				//Menu Acessorios
 				$('.cat6 .subCategoria').append(`<div class="menu-img"><img class="menu" src="/arquivos/menunovo-acessorios.png" /><img class="menu" src="/arquivos/menunovo-perfumes2.png" /></div>`);
+				$('.cat6619 ul .menuColuna').append(`
+					<li id="OculosTemp" class="subItem">
+						<a href="https://www.poloeyewear.com.br/" class="linkBy" rel="nofollow">Óculos</a>
+					</li>	
+					`);
 			}, 1500);
 		},
 
@@ -119,6 +124,12 @@ $(document).ready(function () {
 						$(this).find("ul").first().slideToggle();
 						$(this).toggleClass("aberto");
 					});
+					$('.cat6619 .subCategoria').append(`
+						<li id="OculosTemp" class="subItem">
+							<a href="https://www.poloeyewear.com.br/" class="linkBy" rel="nofollow">Óculos</a>
+						</li>	
+					`);
+					
 
 					$(".menu-topo .menu-principal").append("<div class='menu-atendimento'><li class='atendimento'>Atendimento:</li>" +
 						"<li class='telefone'><a href='http://api.whatsapp.com/send?1=pt_BR&phone=55111234567' target='_blank' rel='noopener'>(11) 1234-5678</a></li>" +

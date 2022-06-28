@@ -450,7 +450,7 @@ video {
 
 .grid-2-columns {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 .j-shelf__item-new-price{
@@ -698,6 +698,10 @@ video {
     align-content: center;
     justify-content: center;
     align-items: center;
+}
+
+.lp-maternite .j-shelf > ul li{
+    width: 100%;
 }
 /* Modal */
 

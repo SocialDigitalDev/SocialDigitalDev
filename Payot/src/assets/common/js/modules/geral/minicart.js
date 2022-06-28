@@ -164,7 +164,7 @@ const Methods = {
                                     <strong class='js--minicart-total'> ${totalPrice} </strong>
                                 </p>
     
-                                <a class='j-minicart-btn' href="/checkout/#/checkout">Finalizar compra</a>
+                                <a class='j-minicart-btn' href="/checkout/#/cart">Finalizar compra</a>
                             </div>
                         </div>
                     `;
