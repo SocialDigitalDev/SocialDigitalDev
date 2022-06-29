@@ -14,14 +14,16 @@ const Methods = {
     },
 
     similarProducts() {
-        $('.j-content__product--variations .j-shelf > ul .helperComplement').remove();
-        $('.j-content__product--variations .j-shelf > ul').slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: false,
-            infinite: true
-         });
+        if ($('.j-box-variations .j-shelf > ul li').length > 4){
+            $('.j-content__product--variations .j-shelf > ul .helperComplement').remove();
+            $('.j-content__product--variations .j-shelf > ul').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                infinite: true
+            });
+        }
     },
 
     thumbSlider() {
