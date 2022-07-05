@@ -21,7 +21,7 @@
 			shippingDay: [5, 15, 25],
 			plan: [
               	{'frequency':'2','periodicity':'week' , 'text':'Quinzenal - A cada 2 semanas'},
-				{'frequency':'1','periodicity':'month', 'text':'Mensal - Todo mÃªs'},
+				{'frequency':'1','periodicity':'month', 'text':'Mensal - Todo mês'},
 				{'frequency':'2','periodicity':'month', 'text':'Bimestral - A cada 2 meses'}
 			],
 			after: 'modal',
@@ -53,7 +53,7 @@
 					_qtyAvulso = 0,
 					_qtyAssinar = 0;
 
-					//VERFICA SE Ã‰ APENAS AVULSO
+					//VERFICA SE É APENAS AVULSO
 					console.log(_avulso.text())
 
 					if (_avulso.length) {
