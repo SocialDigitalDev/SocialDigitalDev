@@ -88,6 +88,17 @@
             padding-top: 0;
             height: auto;
             margin: 0em auto 0;
+            .vitrine-title{
+                h2{
+                    font-family: 'Dancing Script', cursive;
+                    font-size: 54px;
+                    font-style: normal;
+                    margin: .5em 0;
+                }
+                &:after{
+                    top: 75px;
+                }
+            }
         }
         .box-banner {
             text-align: center;
@@ -400,6 +411,28 @@
                         @include d(celularSmall){
                             max-width: 100%;
                         }
+                        @include d(celularLarge){
+                            .main{
+                                @include flexbox;
+                                @include flex-flow(column);
+                                .sub {
+                                    order: 1;
+                                    &:nth-child(6){
+                                        display: none;
+                                    }
+                                }
+                                .banner-departamento-promo{
+                                    order: 2;
+                                    width: 100%;
+                                }
+                                .resultItemsWrapper{
+                                    order: 3;
+                                }
+                                .searchResultsTime{
+                                    order: 4;
+                                }
+                            }
+                        }
                     }
                     .filtro-sticky.active {
                         float: left;
@@ -457,7 +490,7 @@
                                                 color: var(--color-white);
                                                 @include d(celularLarge){
                                                     margin: 0px 3px;
-                                                    font-size: 10px;
+                                                    font-size: 14px;
                                                 }
                                                 &.pgCurrent{
                                                     color: var(--color-blue-dark);
@@ -476,14 +509,20 @@
                                             color: var(--color-white);
                                             font-weight: 700;
                                             @include d(qhd){
-                                                font-size: 10px;
+                                                font-size: 16px;
+                                            }
+                                            @include d(celularLarge){
+                                                font-size: 14px;
                                             }
                                         }
                                         .value {
                                             color: var(--color-blue-dark);
                                             font-weight: 900;
                                             @include d(qhd){
-                                                font-size: 10px;
+                                                font-size: 16px;
+                                            }
+                                            @include d(celularLarge){
+                                                font-size: 14px;
                                             }
                                         }
                                     }
@@ -495,6 +534,7 @@
                                     @include align-items(center);
                                     padding: 0 3em;
                                     margin: 10px 0;
+                                    padding-right: .8em;
                                     @include d(qhd){
                                         padding: 0 1.5em;
                                     }
@@ -513,16 +553,29 @@
                                             width: 135px;
                                             height: 40px;
                                             padding: 9px;
-                                            font-size: 13px;
-                                            color: var(--color-white);
+                                            font-size: 16px;
+                                            color: var(--color-blue-dark);
                                             position: relative;
-                                            background-color: var(--color-blue-dark);
-                                            border: 2px solid var(--color-blue-dark);
                                             border-radius: 10px;
                                             cursor: pointer;
-                                            font-weight: 600;
+                                            font-weight: 400;
                                             margin-right: 16px;
                                             text-align: center;
+                                            text-transform: uppercase;
+                                            @include flexbox;
+                                            @include align-items(center);
+                                        }
+                                        &:before{
+                                            @include d(ipad){
+                                                content: "";
+                                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='23' viewBox='0 0 24 23' fill='none'%3E%3Cpath d='M22.7031 10.5243H14.768C14.4618 9.10439 13.181 8.04639 11.6776 8.04639C10.1741 8.04639 8.89333 9.10439 8.58707 10.5243H0.846934C0.457143 10.5243 0.150879 10.8306 0.150879 11.2204C0.150879 11.6102 0.457143 11.9165 0.846934 11.9165H8.58707C8.89333 13.3364 10.1741 14.3944 11.6776 14.3944C13.181 14.3944 14.4618 13.3364 14.768 11.9165H22.7031C23.0929 11.9165 23.3991 11.6102 23.3991 11.2204C23.3991 10.8584 23.065 10.5243 22.7031 10.5243ZM11.6776 13.0023C10.7031 13.0023 9.89565 12.1949 9.89565 11.2204C9.89565 10.2459 10.7031 9.4385 11.6776 9.4385C12.652 9.4385 13.4594 10.2459 13.4594 11.2204C13.4594 12.1949 12.652 13.0023 11.6776 13.0023Z' fill='%2327AAE1'/%3E%3Cpath d='M3.35419 6.34802C4.85767 6.34802 6.13841 5.29002 6.44467 3.87007H22.6767C23.0665 3.87007 23.3727 3.5638 23.3727 3.17401C23.3727 2.78422 23.0665 2.47796 22.6767 2.47796H6.44467C6.13841 1.058 4.85767 0 3.35419 0C1.60013 0 0.180176 1.44779 0.180176 3.17401C0.180176 4.90023 1.60013 6.34802 3.35419 6.34802ZM3.35419 1.39211C4.32866 1.39211 5.13609 2.19953 5.13609 3.17401C5.13609 4.14849 4.32866 4.95591 3.35419 4.95591C2.37971 4.95591 1.57229 4.14849 1.57229 3.17401C1.57229 2.19953 2.37971 1.39211 3.35419 1.39211Z' fill='%2327AAE1'/%3E%3Cpath d='M20.1973 16.1485C18.6938 16.1485 17.4409 17.2065 17.1068 18.5986H0.846934C0.457143 18.5986 0.150879 18.9048 0.150879 19.2946C0.150879 19.6844 0.457143 19.9907 0.846934 19.9907H17.1068C17.413 21.4106 18.6938 22.4965 20.1973 22.4965C21.9513 22.4965 23.3713 21.0765 23.3713 19.3225C23.3713 17.5684 21.9235 16.1485 20.1973 16.1485ZM20.1973 21.0765C19.2228 21.0765 18.4154 20.2691 18.4154 19.2946C18.4154 18.3202 19.2228 17.5127 20.1973 17.5127C21.1717 17.5127 21.9792 18.3202 21.9792 19.2946C21.9792 20.2691 21.1717 21.0765 20.1973 21.0765Z' fill='%2327AAE1'/%3E%3C/svg%3E");
+                                                background-repeat: no-repeat;
+                                                background-size: contain;
+                                                width: 24px;
+                                                height: 23px;
+                                                display: block;
+                                                margin-right: 1em;
+                                            }
                                         }
                                     }
                                     .filterBy,
@@ -545,6 +598,10 @@
                                             cursor: pointer;
                                             font-weight: 600;
                                             border-radius: 10px;
+                                            @include d(celularLarge){
+                                                font-weight: 400;
+                                                border: 1px solid var(--color-blue-dark);
+                                            }
                                         }
                                     }
                                     .change-view-exb{
@@ -593,7 +650,7 @@
                                         width: 100%;
                                         li{
                                             @include t(.3s);
-                                            width: 16%;
+                                            width: 16.66%;
                                             margin: 2em 0;
                                             padding: 0px;
                                             &.receita{
@@ -625,13 +682,16 @@
                                             }
                                             .ls-product{
                                                 @include d(celularLarge){
-                                                    min-height: 300px;
+                                                    min-height: 360px;
                                                 }
                                                 .data{
                                                     h3{
                                                         @include d(qhd){
                                                             height: 32px;
                                                             font-size: 11px;
+                                                        }
+                                                        @include d(celularLarge){
+                                                            -webkit-line-clamp: 3;
                                                         }
                                                     }
                                                     .price{
@@ -690,14 +750,14 @@ ul.productClusterSearchableIds {
     .flag-desconto{
         position: absolute;
         z-index: 8;
-        left: 5px;
-        top: 15px;
+        left: 0px;
+        top: 12px;
         .porcentagem{
-            background: #7D0704;
+            background: #43AAA9;
             color: #fff;
             padding: 10px;
             font-size: 18px;
-            border-radius: 10px;
+            border-radius: 0 0 10px 0;
             font-weight: 700;
             @include d(celularLarge){
                 font-size: 15px;
@@ -818,15 +878,13 @@ ul.productClusterSearchableIds {
                 position: relative;
                 overflow: hidden;
                 margin: 0 auto;
+                border: none;
                 @include d(qhd){
                     min-height: 330px;
                 }
                 @include d(celularLarge){
-                    min-height: 280px;
                     padding: 0 5px;
-                }
-                @include d(celularMediumLarge){
-                    min-height: 300px;
+                    max-width: 180px;
                 }
                 .ls-image {
                     position: relative;
@@ -882,11 +940,10 @@ ul.productClusterSearchableIds {
                     }
                 }
                 .ls-cta-comprar{
-                    display: block !important;
                     position: absolute;
                     bottom: 0;
                     width: 100%;
-                    z-index: 9;
+                    z-index: 8;
                     .ls-cover-buy{
                         background: var(--color-blue-dark);
                         color: var(--color-white);
@@ -912,8 +969,9 @@ ul.productClusterSearchableIds {
                     bottom: 0;
                     margin-top: .5em;
                     padding: 0;
+                    margin-bottom: 0;
                     @include d(celularLarge){
-                        flex-flow: column;
+                        flex-flow: row;
                     }
                     .wishlist{
                         background-color: var(--color-blue-dark);
@@ -946,6 +1004,9 @@ ul.productClusterSearchableIds {
                         display: block !important;
                         width: 100%;
                         padding: 0 1em;
+                        @include d(celularLarge){
+                            width: 65%;
+                        }
                         .qtdPrateleira{
                             @include flexbox;
                             @include align-items(center);
@@ -954,6 +1015,7 @@ ul.productClusterSearchableIds {
                             margin-right: 10px;
                             padding: 5px;
                             border-radius: 10px;
+                            border: none;
                             @include d(celularLarge){
                                 height: 30px;
                                 margin-right: 0px;
@@ -973,7 +1035,7 @@ ul.productClusterSearchableIds {
                                 text-align: center;
                                 font-size: 25px;
                                 @include d(celularLarge){
-                                    max-width: 90%;
+                                    max-width: 70%;
                                 }
                             }
                             .btnAcr{
@@ -1012,8 +1074,8 @@ ul.productClusterSearchableIds {
                             width: 100%;
                             font-size: 0;
                             @include d(celularLarge){
-                                border-radius: 0 0 10px 10px;
-                                height: 35px;
+                                border-radius: 10px 0 10px 10px;
+                                height: 46px;
                             }
                             &:before{
                                 content: '';
@@ -1023,6 +1085,15 @@ ul.productClusterSearchableIds {
                                 display: block;
                                 width: 27px;
                                 height: 25px;
+                                margin-right: 0;
+                                @include d(celularLarge){
+                                    margin-right: 0;
+                                }
+                            }
+                            &.added{
+                                &:before{
+                                    display: none;
+                                }
                             }
                         }
                     }
@@ -1083,6 +1154,9 @@ ul.productClusterSearchableIds {
                         @include d(qhd){
                             font-size: 14px !important;
                             height: 39px !important;
+                        }
+                        @include d(celularLarge){
+                            height: 60px !important;
                         }
                     }
                     .campo-validade{
@@ -1411,4 +1485,55 @@ ul.productClusterSearchableIds {
 }
 .ls-department .receita{
     display: none !important;
+}
+
+// ANIMAÇÃO DE PRODUTO ADICIONADO AO CARRINHO.
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #27aae1;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+  
+.checkmark {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px #27aae1;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+  
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+  
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #27aae1;
+    }
 }

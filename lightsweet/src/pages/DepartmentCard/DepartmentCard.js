@@ -117,7 +117,7 @@ var depto = {
     },
     abreFechaFiltroMobile: function() {
         if (scre <= 768) {
-            $('.resultado-busca-filtro').prepend('<div class="menuMobile-button">Filtrar Por</div>');
+            $('.resultado-busca-filtro').prepend('<div class="menuMobile-button">Filtrar</div>');
             $('.filtro-sticky').prepend('<p class="menuMobile-close">X</p>');
             $('.menuMobile-button').click(function(){
                 $('.filtro-sticky').addClass('filtroSticky-open');
@@ -132,6 +132,9 @@ var depto = {
         var categoria = vtxctx.categoryName;
         $(".nomeDepartamento h1").prepend(categoria);
         $(".banner-departamento-promo .vitrine-title h2").prepend(categoria);
+        if (scre <= 500) {
+            $(".banner-departamento-promo").prependTo('.departamento-container .main');
+        }
     },
     paginacaoDepto: function() {
         setTimeout(function(){
@@ -161,6 +164,11 @@ var depto = {
             }
         });
     },
+    abreQtd: function() {
+        $('.ls-cover-buy').click(function(){
+            $(this).parent().slideToggle();
+        });
+    },
     init: function(){
         // depto.sidebarDepartamento();
         depto.filtroMobile();
@@ -171,6 +179,7 @@ var depto = {
         depto.paginacaoDepto();
         depto.titleColecao();
         depto.corrigeFiltro();
+        depto.abreQtd();
     }
 }
 
