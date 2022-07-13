@@ -14130,6 +14130,10 @@ span.pink-text {
     justify-content: center;
 }
 
+.vtex-profile-form__toggle-business-btn__wrapper{
+    display: none !important;
+}
+
 .form-email .enviarForm {
     background: #efea17;
     color: #000;

@@ -13806,6 +13806,10 @@ li.\31 0\/2021 {
     margin-bottom: 40px;
 }
 
+.vtex-profile-form__toggle-business-btn__wrapper{
+    display: none !important
+}
+
 .quiz-solteiro .modalQuiz .result .text-resultado .icon-star {
     width: 50px;
     margin-left: 5px;
