@@ -1456,6 +1456,7 @@ $(document).ready(function () {
         },
     	iniciaContador: function(){
 			$('.contador-regressivo-wrapper').vtexCountdown();
+			$('.contador-regressivo-wrapper').append('<a href="/biov" class="cta-top-bar" id="ctaTopBar">Eu quero</a>');
 		},
 		init: function () {
 			//Geral

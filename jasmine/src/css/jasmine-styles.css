@@ -12363,6 +12363,26 @@ section.promo-relampago {
     color: #fff;
     padding: 0.4em;
     border-bottom: 1px solid #fff;
+	background: #21c6d3;
+}
+.promo-relampago .contador-regressivo a#ctaTopBar {
+    transition: .3s all ease;
+    width: 100px;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 25px;
+    color: #21c6d3;
+    margin-left: 1em;
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    text-transform: uppercase;
+}
+.promo-relampago .contador-regressivo a#ctaTopBar:hover {
+    background: #7fd540;
+    color: #fff;
+    border: 1px solid #7fd540;
 }
 .contador-regressivo-wrapper p.flag {
     display: none;
