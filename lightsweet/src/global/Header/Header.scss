@@ -79,9 +79,8 @@ header{
             @include align-items(center);
             @include justify-content(space-between);
             padding: 0;
-            @include d(hdplus){
-                padding: 0px 0;
-            }
+            max-width: 1330px;
+            margin: 0 auto;
             .btn-menu-mobile{
                 display: none;
                 @include d(ipad){
@@ -180,6 +179,9 @@ header{
                         background-position: center;
                         border-radius: 5px;
                         @include d(hdplus){
+                            padding: 24px;
+                        }
+                        @include d(celularLarge){
                             padding: 20px;
                         }
                     }
@@ -188,12 +190,13 @@ header{
             .busca-mobile-ico{
                 &.desktop{
                     display: block;
+                    margin-right: -5%;
                 }
                 &.mobile{
                     display: none;
                 }
                 .busca-topo__busca-container{
-                    width: 916px;
+                    width: 900px;
                     background: transparent;
                     margin: 0;
                     @include d(hdplus){
@@ -203,7 +206,7 @@ header{
                         width: 300px;
                     }
                     .busca{
-                        max-width: 760px;
+                        max-width: 574px;
                         margin: auto;
                         text-align: center;
                         border: none;
@@ -214,7 +217,7 @@ header{
                         border: 1px solid #D9D9D9;
                         align-items: center;
                         @include d(hdplus){
-                            height: 40px;
+                            height: 49px;
                         }
                         @include d(ipadPro){
                             max-width: 300px;
@@ -333,7 +336,7 @@ header{
         .menu-bar{
             display: flex;
             flex-wrap: wrap;
-            max-width: 1260px;
+            max-width: 1330px;
             width: 100%;
             position: absolute;
             left: 50%;
@@ -362,21 +365,25 @@ header{
                             @include justify-content(center);
                             .level-1{
                                 margin: 0 1em;
-                                padding: 1.7em 20px;
+                                padding: 1.52em 14px;
                                 font-weight: 600;
                                 position: relative;
                                 transition: all ease-in-out .4s;
-                                @include d(hdplus){
-                                    padding: 1.5em 20px;
+                                @include d(qhd){
+                                    padding: 1.57em 10px;
                                 }
                                 @include d(ipadPro){
                                     margin: 0 1em;
-                                    padding: 0.5em 20px;
+                                    padding: 0.5em 10px;
                                     @include flexbox;
                                     @include align-items(center);
                                 }
-                                a{ 
+                                > a{ 
                                     color: #fff;
+                                    font-size: 20px;
+                                    @include d(qhd){
+                                        font-size: 18px;
+                                    }
                                     @include d(ipadPro){
                                         font-size: 13px;
                                         line-height: 22px;
@@ -392,6 +399,7 @@ header{
                                 &.oferta-especial{
                                     // display: block !important;
                                     background: #ff0000;
+                                    border-radius: 10px;
                                     .flags-promo{
                                         display: none;
                                     }
@@ -527,7 +535,7 @@ header{
                                                                     line-height: 20px;
                                                                 }
                                                                 .newPrice{
-                                                                    margin-bottom: 35px;
+                                                                    margin-bottom: 20px;
                                                                     line-height: 20px;
                                                                 }
                                                             }
@@ -581,8 +589,8 @@ header{
                                 &:hover .menu-level-2:not(.inside){
                                     opacity: 1;
                                     transition: all .4s ease-in-out;
-                                    top: 54px; 
-                                    left:0; 
+                                    top: 50px; 
+                                    left:0;
                                     padding:5px; 
                                     width:240px;
                                     border-radius:0 0 10px 10px; 
@@ -708,6 +716,9 @@ header{
                     background-position: center;
                     border-radius: 5px;
                     @include d(hdplus){
+                        padding: 24px;
+                    }
+                    @include d(celularLarge){
                         padding: 20px;
                     }
                 }
