@@ -14381,6 +14381,7 @@ img.img-categoria-pf {
     color: #fff;
 }
 
+
 @media (max-width: 1366px) {
     .black-friday-pg.menu-fixed ul.menu-principal li.itemMenu>a {
         text-transform: none;
@@ -14669,5 +14670,134 @@ img.img-categoria-pf {
     }
     .casasbahia .container.slide-mobile.last {
         margin-top: 2em;
+    }
+}
+
+/* CONTADOR REGRESSIVO */
+
+.contador-regressivo-wrapper p.flag {
+    background: none;
+    color: #000;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.contador-regressivo-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 18%;
+    margin-top: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contador-regressivo {
+    position: relative;
+}
+
+img.bg-contador-imagem {
+    margin-bottom: -5px;
+}
+
+.qd-cp-timeinfo {
+    display: flex;
+    flex-flow: column;
+    margin: 0 1em;
+}
+
+.top-count {
+    display: flex;
+}
+
+.qd-cp-digits span {
+    font-size: 30px;
+    font-weight: 600
+}
+
+.days {
+    display: none;
+}
+
+.qd-cp-text {
+    font-size: 0;
+}
+
+.hours .qd-cp-text:before {
+    content: "Hor";
+    font-size: 13px;
+}
+
+.minutes .qd-cp-text:before {
+    content: "Min";
+    font-size: 13px;
+}
+
+.seconds .qd-cp-text:before {
+    content: "Seg";
+    font-size: 13px;
+}
+
+.contador-regressivo-wrapper p.flag:after {
+    content: ":";
+}
+
+.contador-regressivo-wrapper.oferta-do-dia p.flag,
+.contador-regressivo-wrapper.oferta-do-dia .top-count span {
+    color: #fff;
+}
+
+/* FIM CONTADOR REGRESSIVO */
+
+@media (max-width: 1400px){
+    .contador-regressivo-wrapper p.flag{
+        font-size: 16px;
+    }
+    .qd-cp-digits span{
+        font-size: 25px;
+    }
+}
+@media (max-width: 500px){
+    img.bg-contador-imagem {
+        margin-bottom: 0px;
+    } 
+    .qd-cp-timeinfo{
+        margin: 0 5px;
+    }
+    .contador-regressivo-wrapper{
+        flex-flow: column;
+        justify-content: flex-start;
+        margin-right: 15px;
+    }
+    .contador-regressivo-wrapper p.flag{
+        font-size: 12px;
+        padding-bottom: 0;
+    }
+    .hours .qd-cp-text:before,
+    .minutes .qd-cp-text:before,
+    .seconds .qd-cp-text:before {
+        font-size: 10px;
+    }
+    .qd-cp-digits span{
+        font-size: 20px;
+    }
+    .contador-regressivo-wrapper p.flag:after {
+        display: none;
+    }
+    .contador-regressivo-wrapper.oferta-do-dia{
+        justify-content: center;
+    }
+}
+@media (max-width: 400px){
+    .qd-cp-digits span{
+        font-size: 15px;
+    }
+    .contador-regressivo-wrapper{
+        margin-right: 5px;
     }
 }

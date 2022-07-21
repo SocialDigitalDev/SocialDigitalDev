@@ -1887,6 +1887,10 @@ $(document).ready(function () {
 				}
 			}
 		},
+
+		novoContadorRegressivo: function(){
+			$('.contador-regressivo-wrapper').vtexCountdown();
+		},
 		
 		init: function () {
 			//Geral
@@ -1928,6 +1932,7 @@ $(document).ready(function () {
 			poloWear.iniciaCountdown();
 			poloWear.iniciaCountdownPDP();
 			poloWear.variationsQuantity();
+			poloWear.novoContadorRegressivo();
 		},
 		init_ajax: function () {
 			poloWear.menuMobile();
