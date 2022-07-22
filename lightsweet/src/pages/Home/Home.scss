@@ -57,15 +57,13 @@ main.ls-home-main{
         }
         .barra-informativo{
             background-color: var(--color-blue);
-            height: 100px;
-            padding: 12px 0;
+            height: auto;
+            padding: 5px 0;
             margin: 0 0 30px;
             @include d(hdplus){
-                height: auto;
                 padding: 10px 0;
             }
             @include d(celularLarge){
-                height: auto;
                 padding: 0;
                 margin: 0;
             }

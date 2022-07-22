@@ -103,11 +103,31 @@ var Display_receitas = {
             console.log(prodArray);
             if (prodArray.length) {
                 vtexjs.checkout.addToCart(prodArray).done(function (a) {
+                    if (params !== ""){
+                        var urlParams = window.location.search;
+                        var newParams = urlParams.split('?utm_source=');
+                        var lastParams = newParams[1].split('&utm_campaign=');
+                        var source = lastParams[0];
+                        var campaign = lastParams[1];
+                        vtexjs.checkout.sendAttachment('marketingData', { utmSource: source, utmCampaign: campaign });
+                    }
                     $(".header-minicart").addClass("open"),
                     setTimeout(function () {
                         $(".header-minicart").removeClass("open");
                     }, 5e3);
                 });
+            }
+        });
+    },
+    mostraBannersLowMagro: function() {
+        vtexjs.catalog.getCurrentProductWithVariations().done(function(product){
+            var prodName = product.name;
+            if (prodName === "Bolo de Milho sem Glúten sem Lactose" || prodName === "Curau Fit de Leite de Coco com Paçoca" || prodName === "Torta de Frango"){
+                $('.magro').show();
+                $('.lowcucar').hide();
+            }else if (prodName === "Brigadeirão Zero Açúcar" || prodName === "Pavê de Amendoim" || prodName === "Torta de Paçoca") {
+                $('.lowcucar').show();
+                $('.magro').hide();
             }
         });
     },
@@ -117,6 +137,7 @@ var Display_receitas = {
         Display_receitas.ajustaReceitaEmPassos();
         Display_receitas.sliderReceitas();
         Display_receitas.comprarTodosProdutos();
+        Display_receitas.mostraBannersLowMagro();
     }
 
 }

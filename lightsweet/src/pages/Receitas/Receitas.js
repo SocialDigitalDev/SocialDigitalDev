@@ -21,7 +21,7 @@ var Receitas = {
                 filter: '.filter'
             },
             load: {
-                filter: '.doces, .drinks, .cafes, .sucos, .vitaminas'
+                filter: 'all'
             }
         });
     },

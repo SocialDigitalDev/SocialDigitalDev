@@ -1,0 +1,689 @@
+/*
+    Landing Page Lancamento Retinol Payot 2022
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1;
+}
+ol, ul, li {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+h2{
+    width: 100%;
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+h2 strong{
+    color: #000;
+}
+strong{
+    color: #6638B6;
+}
+p{
+    line-height: 26px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.btn_more{
+    background:#6638b6;
+    padding: 10px 50px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 20px;
+    float: left;
+    transition: all ease-in-out .5s;
+    cursor: pointer;
+}
+.btn_more:hover{
+    box-shadow: 0 8px 25px -8px #6638b6;
+}
+.left {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.right {
+    float:right;
+    position: relative;
+    width: 100%;
+}
+.lp-linha-retinol .container.slide-home_principal{
+    width: 100%;
+    max-width: 100%;
+}
+.lp-linha-retinol .container.slide-home_principal .slide-principal img{
+    width: 100%;
+}
+.wrapper {
+    /* position: relative; */
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    max-width: 1440px;
+}
+
+.main_categorias{
+    margin-top: 32px;
+}
+.categorias-section ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.categorias-section .info_list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    text-align: left;
+    margin: 0 0.375rem;
+    background: #F9F9F9;
+    border-radius: 4px;
+    width: 25%;
+}
+
+.categorias-section .info_list li:nth-child(1){
+    border: 1px solid #6638B6;
+    border-radius: 0px 10px 10px 10px;
+
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(102, 56, 182, 0.2);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(102, 56, 182, 0.2);
+    box-shadow: 5px 5px 0px 0px rgba(102, 56, 182, 0.2);
+}
+
+.categorias-section .info_list li:nth-child(2){
+    border: 1px solid #6638B6;
+    -webkit-border-radius: 10px 0px 10px 10px;
+    -moz-border-radius: 10px 0px 10px 10px;
+    border-radius: 10px 0px 10px 10px;
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(102, 56, 182, 0.2);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(102, 56, 182, 0.2);
+    box-shadow: 5px 5px 0px 0px rgba(102, 56, 182, 0.2);
+}
+
+.categorias-section .info_list li:nth-child(3){
+    border: 1px solid #6638B6;
+    -webkit-border-radius: 10px 10px 0px 10px;
+    -moz-border-radius: 10px 10px 0px 10px;
+    border-radius: 10px 10px 0px 10px;
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(102, 56, 182, 0.2);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(102, 56, 182, 0.2);
+    box-shadow: 5px 5px 0px 0px rgba(102, 56, 182, 0.2);
+}
+
+.categorias-section .info_list li:nth-child(4){
+    border: 1px solid #6638B6;
+    -webkit-border-radius: 10px 10px 10px 0px;
+    -moz-border-radius: 10px 10px 10px 0px;
+    border-radius: 10px 10px 10px 0px;
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(102, 56, 182, 0.2);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(102, 56, 182, 0.2);
+    box-shadow: 5px 5px 0px 0px rgba(102, 56, 182, 0.2);
+}
+.categorias-section .info_list li > span.icon {
+    margin: 0 10px 0 0;
+    background: #fff;
+    min-width: 60px;
+    height: 74px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.categorias-section .info_list li .text strong{
+    display: flex;
+    font-size: 22px;
+}
+.categorias-section .info_list li .text span {
+    font-size: 16px;
+}
+.first,
+.second,
+.text-marquee,
+.tabs-section,
+.products-list {
+    margin: 50px 0;
+}
+.first .wrapper,
+.second .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.call-img .first{
+    position: relative;
+}
+.first .call-img .second{
+    right: 28%;
+    bottom: -4%;
+    z-index: 2;
+    position: absolute;
+    margin: 0;
+}
+.first .right.call-txt ul,
+.second .left.call-txt ul{
+   display: block;
+   margin: 30px 0;
+}
+
+.first .right.call-txt ul li,
+.second .left.call-txt ul li{
+    display: flex;
+    align-items: center;
+    /* flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center; */
+
+    margin-bottom: 20px;
+}
+.first .right.call-txt ul li span,
+.second .left.call-txt ul li span{
+    display: inline-block;
+    background-color: #6638B6;
+    min-width: 60px;
+    height: 60px;
+    /* line-height: 60px; */
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50px;
+    margin-right: 20px;
+    padding-top: 15px;
+}
+
+.second .right{
+    width: 50%;
+}
+.second .left.call-txt{
+    padding-right: 60px;
+}
+.second .call-img .second{
+    left: -14%;
+    bottom: -13%!important;
+    z-index: 2;
+    position: absolute;
+    margin: 0;
+}
+.text-marquee{
+    margin: 20px 0;
+    color: #000;
+    background-color: #E7E3EF;
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+.text-marquee marquee{
+    padding: 20px 0;
+}
+.text-marquee marquee span{
+    margin: 0 20px;
+    text-transform: uppercase;
+    color: #6638B6;
+}
+.text_info {
+    color: #000;
+    background-color: #E7E3EF;
+    display: flex;
+    width: 100%;
+    padding: 40px 0;
+}
+.text_info p{
+    padding: 40px 0;
+    text-align: center;
+    line-height: 30px;
+    font-size: 22px;
+    margin-bottom: 0;
+}
+/* Tabs */
+ .tabs-container {
+	padding: 2rem;
+}
+
+.tabs-block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tabs {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+    justify-content: flex-end;
+}
+.tabs-section .tabs-container .tabs-block .tabs .tab .text p{
+    margin-bottom: 0;
+}
+.tabs label {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 4rem;
+	margin-right: 30px;
+	cursor: pointer;
+	background-color: #997CCC;
+	color: #fff;
+	font-family: Roboto, sans-serif;
+	font-size: 1.2rem;
+	font-weight: 700;
+	transition: background-color ease 0.3s;
+
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.tabs .tab {
+	flex-grow: 1;
+	width: 100%;
+	height: 100%;
+	display: none;
+	padding: 0;
+	color: #000;
+	background-color: #E7E3EF;
+    border-radius: 40px;
+}
+.tabs .tab.tab_bg_first{
+    background-image: url(/arquivos/lp-retinol-tabs-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.tabs .tab.tab_bg_second {
+    background-image: url(/arquivos/modelo_folheto_retinol_2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.tabs .tab > *:not(:last-child) {
+	/*margin-bottom: 0.8rem;*/
+}
+
+.tabs [type=radio] {
+	display: none;
+}
+
+.tabs [type=radio]:checked + label {
+	background-color: #6638B6;
+	color: #fff;
+
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.tabs [type=radio]:checked + label + .tab {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.imgTab{
+    width: 49%;
+    float: left;
+}
+.txtTab{
+    width: 51%;
+    float: left;
+    padding: 40px;
+}
+/*
+.tab.tab_bg_second .txtTab{
+    width: 55%;
+    float: left;
+    padding: 40px;
+}*/
+.txtTab ul{
+    list-style-type: none;
+}
+
+.txtTab li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.txtTab li span.icon{
+    margin-right: 20px;
+}
+.txtTab li span.icon img{
+    max-width: 64px;
+}
+.txtTab li.last{
+    display: block;
+    background: #fff;
+    border-radius: 38px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0;
+    -webkit-box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+    box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+}
+.tab.tab_bg_second .txtTab li.last{
+    margin-top: 53px;
+}
+.txtTab li.last span.icon{display: none;}
+
+.txtTab li.last p{
+    margin-bottom: 0;
+}
+.video_info{
+    background-color: #E7E3EF;
+    padding: 40px 0;
+}
+.video_info .wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.video_info .txt_video{
+    width: 25%;
+    margin-right: 50px;
+}
+.video_info .content_video{
+    width: 50%;
+}
+video {
+    width: 100%;
+    height: auto;
+}
+.video_info .content_video  iframe{
+    border-radius: 20px;
+}
+  
+@media (min-width: 768px) {
+
+	body {
+		font-size: 1.125rem;
+	}
+
+	.tabs-container {
+		padding: 4rem 4rem;
+	}
+
+	.tabs label {
+		order: 1;
+		width: auto;
+	}
+
+	.tabs .tab {
+		order: 9;
+	}
+
+	.tabs [type=radio]:checked + label {
+		border-bottom: none;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.tabs {
+		width: 100%;
+	}
+}
+
+/* Products*/
+.titulo-product h2{
+    justify-content: center;
+}
+.cards {
+    margin-top: 25px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.card {
+    position: relative;
+    border-radius: 1em;
+    width: 20%;
+    /* height: 290px; */
+    background-color: #FFF;
+    overflow: hidden;
+    margin: 10px 10px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.card .card-header {
+    /* position: absolute; */
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 45%;
+}
+.card .card-header .card-image {
+    height: 55%;
+}
+.card .card-header.bg1 {
+    background-color: #f6f6f6;
+}
+.card .card-header.bg2 {
+    background-color: #f6f6f6;
+}
+.card .card-header.bg3 {
+    background-color: #f6f6f6;
+}
+.card .card-content {
+    /* position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    height: 55%; */
+    padding: 0 3%;
+}
+.card .card-content .card-title {
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+.card .card-content .card-text {
+    /* position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    transform: translate(0, -50%); */
+    color: #AAA;
+    font-size: 0.85em;
+}
+.card .card-content .card-more {
+    /* position: absolute;
+    right: 10%;
+    bottom: 5%; */
+    text-decoration: none;
+
+    font-size: 0.9em;
+    color: #fff;
+    font-weight: bold;
+}
+.card .card-content .card-more:hover {
+    color: #fff;
+    box-shadow: 0 8px 25px -8px #6638b6;
+}
+.card:hover {
+    -webkit-transform: translate(0, -2%);
+    -moz-transform: translate(0, -2%);
+    transform: translate(0, -2%);
+}
+
+.prateleira-retinol{
+    padding: 40px 0;
+}
+.prateleira-retinol .produtos-retinol .j-shelf ul{
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+/* Modal */
+
+.content-button-close {
+    padding: 13px 30px;
+    background: white;
+    color: #0B1847;
+    border-radius: 60px;
+    border: 2px solid #0B1847;
+    cursor: pointer;
+    font-size: 0.7em;
+    display: block;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    text-align: center;
+    width: 200px;
+    margin: 60px auto 0 auto;
+}
+  
+.btn-modal:hover,
+.content-button-close:hover {
+    background: #0B1847;
+    color: white;
+}
+.close {
+    position: absolute;
+    top: -7px;
+    right: -4px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    font-weight: 900;
+    color: white;
+    cursor: pointer;
+    border: 0;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
+}
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 50;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.7s;
+}
+.elegant-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    padding: 20px;
+    /* height: 450px; */
+    margin-left: -300px;
+    margin-top: -240px;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-out;
+    transform: translateY(45px);
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
+}
+.active {
+    visibility: visible;
+    opacity: 1;
+    transition: all .2s;
+}
+.active + .elegant-modal {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.products-list .titulo-product h2,
+.prateleira-retinol .wrapper h2{
+    text-align: center;
+}
+@media only screen and (max-width: 1366px){
+    .wrapper,
+    .first .wrapper, .second .wrapper{
+        padding: 0 2em;
+    }
+    .tabs-section .wrapper{
+        padding: 0;
+    }
+    .txtTab{
+        width: 48%;
+    }
+    .products-list .titulo-product h2,
+    .prateleira-retinol .wrapper h2{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 1280px){
+    .imgTab{
+        width: 50%;
+    }
+    .txtTab{
+        width: 47%;
+        padding: 10px;
+    }
+}

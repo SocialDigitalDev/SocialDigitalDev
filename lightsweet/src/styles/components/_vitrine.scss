@@ -130,18 +130,15 @@
                 @include align-items(center);
                 border: 2px solid var(--color-blue-dark);
                 border-radius: 20px;
-                min-height: 370px;
+                min-height: 410px;
                 max-width: 295px;
                 position: relative;
                 @include d(qhd){
-                    min-height: 290px;
+                    min-height: 355px;
                 }
                 @include d(celularLarge){
-                    min-height: 280px;
+                    min-height: 370px;
                     padding: 0 5px;
-                }
-                @include d(celularMediumLarge){
-                    min-height: 300px;
                 }
                 .ls-image {
                     position: relative;
@@ -203,7 +200,7 @@
                     width: 100%;
                     opacity: 1;
                     @include t(.4s);
-                    position: relative;
+                    position: absolute;
                     bottom: 0;
                     margin-bottom: 1em;
                     margin-top: .5em;
@@ -354,6 +351,7 @@
                     text-align: left;
                     width: 85%;
                     padding: 0.5em 0;
+                    padding-top: 6px;
                     float: left;
                     max-width: 310px;
                     @include d(ipadPro){
@@ -362,9 +360,9 @@
                     }
                    
                     h3 {
-                        font-size: 13px;
+                        font-size: 14px;
                         font-style: normal;
-                        font-weight: 700;
+                        font-weight: 400;
                         margin-bottom: 0px;
                         color: var(--color-black);
                         height: 39px;
@@ -375,8 +373,8 @@
                         -webkit-line-clamp: 2;
                         -webkit-box-orient: vertical;
                         @include d(qhd){
-                            font-size: 11px;
-                            height: 30px;
+                            font-size: 14px;
+                            height: 38px;
                         }
                     }
                     .campo-validade{
@@ -405,6 +403,7 @@
                         width: 100%;
                         float: left;
                         text-align: left;
+                        margin-top: 6px;
                         .oldPrice {
                             font-size: 16px;
                             text-decoration: line-through;
@@ -427,17 +426,11 @@
                         .installment {
                             display: block;
                             color: var(--color-black);
-                            font-weight: 700;
+                            font-weight: 600;
                             font-size: 13px;
                             font-style: normal;
                             @include d(qhd){
-                                font-size: 10px;
-                            }
-                            @include d(hd){
-                                font-size: 9px;
-                            }
-                            @include d(celularMediumLarge){
-                                font-size: 8px;
+                                font-size: 12px;
                             }
                         }
                     }

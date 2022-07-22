@@ -199,9 +199,10 @@ span.btn-menu-mobile {
 }
 .header {
 	background-color: #F83B4D;
-    height: 3.75rem;
+    /* height: 3.75rem; */
     display: flex;
     justify-content: space-between;
+	flex-flow: column;
 }
 .header .wrapper{
     position: relative;
@@ -9852,7 +9853,7 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 	/* Inicio topo */
 	.header .wrapper,
 	.header {
-		height: 120px;
+		height: 148px;
 		padding: 0;
 		box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
 	}
@@ -12342,6 +12343,118 @@ body .vtexIdUI .payment-confirmation-modal .payment-confirmation-message {
 	display: none;
 }
 
+.vtex-profile-form__toggle-business-btn__wrapper{
+	display: none;
+}
+
+/* CONTADOR */
+section.promo-relampago {
+    width: 100%;
+}
+.contador-regressivo{
+	display: flex;
+    width: 100%;
+}
+.contador-regressivo-wrapper {
+	display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    color: #fff;
+    padding: 0.4em;
+    border-bottom: 1px solid #fff;
+	background: #21c6d3;
+}
+.promo-relampago .contador-regressivo a#ctaTopBar {
+    transition: .3s all ease;
+    width: 100px;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 25px;
+    color: #21c6d3;
+    margin-left: 1em;
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    text-transform: uppercase;
+}
+.promo-relampago .contador-regressivo a#ctaTopBar:hover {
+    background: #7fd540;
+    color: #fff;
+    border: 1px solid #7fd540;
+}
+.contador-regressivo-wrapper p.flag {
+    display: none;
+}
+.promo-relampago .contador-regressivo a {
+    width: 100%;
+}
+.contador-regressivo-wrapper > * {
+    margin: 0;
+}
+.chamada-promo{
+	margin-right: 1em;
+}
+.chamada-promo p.oferta-especial {
+    font-size: 21px;
+    font-weight: 700;
+	display: flex;
+    align-items: center;
+}
+.qd-cp-timeinfo {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 55px;
+}
+.qd-cp-digits {
+    font-weight: 700;
+    font-size: 25px;
+}
+.qd-cp-text {
+    font-size: 13px;
+}
+.minutes.qd-cp-timeinfo .qd-cp-text {
+    font-size: 0;
+}
+.minutes.qd-cp-timeinfo .qd-cp-text:before {
+    content: "min";
+	font-size: 13px;
+}
+.seconds.qd-cp-timeinfo .qd-cp-text {
+    font-size: 0;
+}
+.seconds.qd-cp-timeinfo .qd-cp-text:before {
+    content: "seg";
+	font-size: 13px;
+}
+.chamada-promo p.oferta-especial:before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Capa_1' x='0px' y='0px' viewBox='0 0 490 490' style='enable-background:new 0 0 490 490;fill: %23fff;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath d='M245,0C109.5,0,0,109.5,0,245s109.5,245,245,245s245-109.5,245-245S380.5,0,245,0z M245,449.3 c-112.6,0-204.3-91.7-204.3-204.3S132.4,40.7,245,40.7S449.3,132.4,449.3,245S357.6,449.3,245,449.3z'/%3E%3Cpath d='M290.9,224.1h-25v-95.9c0-11.5-9.4-20.9-20.9-20.9s-20.9,9.4-20.9,20.9V245c0,11.5,9.4,20.9,20.9,20.9h45.9 c11.5,0,20.9-9.4,20.9-20.9S302.3,224.1,290.9,224.1z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+	width: 30px;
+    height: 30px;
+    display: block;
+    margin-right: 10px;
+}
+@media (max-width: 500px){
+	.contador-regressivo-wrapper{
+		flex-wrap: wrap;
+	}
+	.chamada-promo{
+		margin-right: 1em;
+		margin-left: 1em;
+		width: 100%;
+	}
+	.chamada-promo p.oferta-especial{
+		font-size: 16px;
+		text-align: center;
+		justify-content: center;
+	}
+}
 /* VTEX DAY */
 .logo {
     max-width: 300px;

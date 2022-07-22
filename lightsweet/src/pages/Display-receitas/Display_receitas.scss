@@ -628,3 +628,15 @@ table.Dados-Receita{
         background: #08a30f;
     }
 }
+.banner-receita.desktop {
+    margin-top: 2em;
+}
+.magro, .lowcucar {
+    display: none;
+}
+.Dados-Receita {
+    width: 100%;
+}
+.display-receitas .ls-prateleira > ul li .ls-product .ls-actions{
+    position: relative;
+}
