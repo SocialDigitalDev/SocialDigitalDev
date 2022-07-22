@@ -1,0 +1,23 @@
+<div class="form-product">
+    <div class="form__body">
+        <div class="form__cols">
+            <div class="form__col form__col--size-4">
+                <div class="form__actions">
+                    <div class="quantity js-quantity">
+                        <a href="#" class="js-quantity-btn js-quantity-btn--down" data-number="-1"><i class="ico-down">-</i></a>
+                        <input type="text" class="quantity__field" name="field-quantity" id="field-quantity" value="01" />
+                        <a href="#" class="js-quantity-btn js-quantity-btn--up" data-number="1"><i class="ico-up">+</i></a>
+                        <span class="quantity__hint">Qtd</span>
+                    </div>
+                    
+                    <div class="product-buy-button">
+                        <vtex.cmc:BuyButton/>
+                    </div>
+                </div><!-- /.form__actions -->
+            </div>
+        </div>
+    </div><!-- /.form__body -->
+    <div class="form__inner">
+        <vtex.cmc:shippingValue/>
+    </div><!-- /.form__inner -->
+</div><!-- /.form-product -->
